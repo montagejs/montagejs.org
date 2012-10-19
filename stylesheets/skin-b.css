@@ -1,0 +1,41 @@
+/* Skeleton Skin
+ * A Skin is just a custom styling on top of the Montage Skeleton Theme 
+ */
+
+
+/* Action ------------------------------- */
+.skinB .montage-button,
+.skinB .montage-inputRange-thumb,
+.skinB .montage-progress-bar {
+    color: hsl(0,0%,40%);
+    text-shadow: 0 1px 0px hsla(0,0%,100%,.7);
+    font-weight: bold;
+    border-color: hsl(0,0%,60%);
+    box-shadow: inset 0 1px 0px hsla(0,0%,100%,.8),
+                inset 0 -3px 10px hsla(0,0%,0%,.15),
+                0 2px 4px hsla(0,0%,0%,.15);
+    background-color: hsl(0,0%,96%);
+    background-image: -webkit-linear-gradient(top, hsla(0,0%,100%,.4), hsla(0,0%,100%,.9) 50%, hsla(0,0%,100%,0) 50% ), url(../images/metal.png);
+    background-image:    -moz-linear-gradient(top, hsla(0,0%,100%,.4), hsla(0,0%,100%,.9) 50%, hsla(0,0%,100%,0) 50% ), url(../images/metal.png);
+    background-image:     -ms-linear-gradient(top, hsla(0,0%,100%,.4), hsla(0,0%,100%,.9) 50%, hsla(0,0%,100%,0) 50% ), url(../images/metal.png);
+    background-image:      -o-linear-gradient(top, hsla(0,0%,100%,.4), hsla(0,0%,100%,.9) 50%, hsla(0,0%,100%,0) 50% ), url(../images/metal.png);
+    background-image:         linear-gradient(top, hsla(0,0%,100%,.4), hsla(0,0%,100%,.9) 50%, hsla(0,0%,100%,0) 50% ), url(../images/metal.png);
+}
+
+.skinB .montage-button:hover,
+.skinB .montage-inputRange-thumb:hover {
+    background-color: hsl(0,0%,100%);
+}
+.skinB .montage-button:active,
+.skinB .montage-inputRange-thumb:active {
+    background-color: hsl(0,0%,90%);
+}
+
+/* Track ------------------------------- */
+.skinB .montage-inputRange,
+.skinB .montage-progress {
+    border-color: hsl(0,0%,50%);
+    box-shadow: inset 0 1px 2px hsla(0,0%,0%,.2), 
+                0 1px 0px hsla(0,0%,100%,.7);
+    background-color: hsl(0,0%,65%);
+}

@@ -1,0 +1,322 @@
+/* @override http://localhost:8082/montage/stylesheets/base.css */
+
+/* Globals ----------------------------------------- */
+
+body {
+    margin: 0;
+    color: hsl(0,0%,25%);
+    font: 13px/1.231 'Open Sans', sans-serif;
+	background-color: hsl(200,0%,90%);
+}
+
+a {
+    text-decoration: none;
+    color: hsl(220,80%,50%);
+}
+a:hover {
+    color: hsl(220,80%,60%);
+}
+a:active {
+    color: hsl(220,80%,40%);
+}
+
+.pushed {
+    padding: 50px;
+    border-top: 1px solid hsl(0,0%,0%);
+    border-bottom: 1px solid hsl(0,0%,0%);
+    background-color: hsl(0,0%,26%);
+    background-image: -webkit-radial-gradient(center 30%, hsla(0,0%,20%,.5), hsla(0,0%,0%,.5) ), url(../images/noise.png);
+    background-image:    -moz-radial-gradient(center 30%, hsla(0,0%,20%,.5), hsla(0,0%,0%,.5) ), url(../images/noise.png);
+    background-image:     -ms-radial-gradient(center 30%, hsla(0,0%,20%,.5), hsla(0,0%,0%,.5) ), url(../images/noise.png);
+    background-image:      -o-radial-gradient(center 30%, hsla(0,0%,20%,.5), hsla(0,0%,0%,.5) ), url(../images/noise.png);
+    background-image:         radial-gradient(center 30%, hsla(0,0%,20%,.5), hsla(0,0%,0%,.5) ), url(../images/noise.png);
+}
+
+.bar {
+    padding: 20px;
+    background-color: hsl(0,0%,85%);
+    background-image: url(../images/metal.png);
+    border-top: 1px dashed hsl(0,0%,90%);
+    border-bottom: 1px dashed hsl(0,0%,65%);
+    text-align: center;
+}
+
+.highlight {
+    color: hsl(200,100%,50%);
+}
+
+
+
+/* Overwrites ----------------------------------------- */
+
+.montage-toggle {
+    display: inline-block;
+}
+
+
+
+/* Sections ----------------------------------------- */
+
+section {
+    padding: 60px 40px;
+    border-top: 1px dashed hsl(0,0%,98%);
+    border-bottom: 1px dashed hsl(0,0%,65%);
+}
+
+article {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.5em;
+    text-shadow: 0px 1px 0px hsla(0,0%,100%,.8);
+}
+
+.title {
+    font-size: 24px;
+    margin: 0;
+}
+.sub-title {
+    margin-bottom: 0;
+}
+
+@media all and (max-width: 800px) {
+
+    section {
+        padding: 40px 25px;
+    }
+
+}
+
+
+section:target {
+    -webkit-animation: wiggle .2s ease-in-out;
+       -moz-animation: wiggle .2s ease-in-out;
+        -ms-animation: wiggle .2s ease-in-out;
+         -o-animation: wiggle .2s ease-in-out;
+            animation: wiggle .2s ease-in-out;
+}
+
+@-webkit-keyframes wiggle { 50% { -webkit-transform: translate3d(0,-10px,0); } }
+   @-moz-keyframes wiggle { 50% {    -moz-transform: translate3d(0,-10px,0); } }
+    @-ms-keyframes wiggle { 50% {     -ms-transform: translate3d(0,-10px,0); } }
+     @-o-keyframes wiggle { 50% {      -o-transform: translate3d(0,-10px,0); } }
+        @keyframes wiggle { 50% {         transform: translate3d(0,-10px,0); } }
+
+
+
+/* More ----------------------------------------- */
+
+.more {
+    margin-top: 20px;
+}
+
+.more-button {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 0 15px;
+    line-height: 36px;
+    border-radius: 40px;
+    font-size: 14px;
+    font-weight: bold;
+    color: hsl(0,0%,15%);
+    border: 1px dashed hsl(0,0%,70%);
+}
+.more-button:hover {
+    color: hsl(0,0%,15%);
+    background-color: hsl(0,0%,95%);
+}
+.more-button:active {
+    color: hsl(0,0%,15%);
+    background-color: hsl(0,0%,86%);
+}
+
+@media all and (max-width: 800px) {
+
+    .more-button {
+        margin-top: 10px;
+    }
+
+}
+
+
+/* Columns ----------------------------------------- */
+
+.cols {
+    font-size: 0; /* removes white-space but */
+}
+.cols > .col {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 4%;
+    font-size: 16px;
+}
+.cols > .col:nth-child(even) {
+    margin-right: 0;
+}
+
+.col-1-2 {
+    width: 48%;
+}
+.col-1-3 {
+    width: 33%;
+}
+.col-2-3 {
+    width: 63%;
+}
+
+
+@media all and (max-width: 800px) {
+
+.cols > .col {
+    display: block;
+    vertical-align: top;
+}
+.col-1-2,
+.col-1-3,
+.col-2-3  {
+    width: 100%;
+    margin-right: 0;
+}
+
+}
+
+
+
+
+
+/*
+ * Content 
+ */
+
+
+
+/* Header ----------------------------------------- */
+
+header {
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header .tagline {
+    margin-top: 50px;
+    font-weight: normal;
+    color: hsl(0,0%,45%);
+    text-shadow: 0px 1px 2px hsla(0,0%,0%,.5);
+}
+
+header .logo {
+    height: 231px;
+}
+
+@media all and (max-width: 800px) {
+
+header .logo {
+    height: 180px;
+}
+
+}
+
+
+
+/* Links ----------------------------------------- */
+
+.links .link {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 0 20px;
+    line-height: 50px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 0px -1px 0px hsla(0,0%,0%,.4);
+    color: white;
+    border: 2px solid hsl(200,100%,20%);
+    background-color: hsl(200,100%,45%);
+    box-shadow: inset 0px 1px 0px hsla(0,0%,100%,.5),
+                inset 0px -1px 1px hsla(0,0%,0%,.2),
+                0px 1px 0px hsla(0,0%,100%,.5);
+    background-image: -webkit-linear-gradient(top, hsl(210,100%,60%), hsl(210,100%,40%) );
+    background-image:    -moz-linear-gradient(top, hsl(210,100%,60%), hsl(210,100%,40%) );
+    background-image:     -ms-linear-gradient(top, hsl(210,100%,60%), hsl(210,100%,40%) );
+    background-image:      -o-linear-gradient(top, hsl(210,100%,60%), hsl(210,100%,40%) );
+    background-image:         linear-gradient(top, hsl(210,100%,60%), hsl(210,100%,40%) );
+}
+
+.links .link:hover {
+    background-image: -webkit-linear-gradient(top, hsl(210,100%,65%), hsl(210,100%,45%) );
+    background-image:    -moz-linear-gradient(top, hsl(210,100%,65%), hsl(210,100%,45%) );
+    background-image:     -ms-linear-gradient(top, hsl(210,100%,65%), hsl(210,100%,45%) );
+    background-image:      -o-linear-gradient(top, hsl(210,100%,65%), hsl(210,100%,45%) );
+    background-image:         linear-gradient(top, hsl(210,100%,65%), hsl(210,100%,45%) );
+}
+.links .link:active {
+    background-image: -webkit-linear-gradient(top, hsl(210,100%,55%), hsl(210,100%,35%) );
+    background-image:    -moz-linear-gradient(top, hsl(210,100%,55%), hsl(210,100%,35%) );
+    background-image:     -ms-linear-gradient(top, hsl(210,100%,55%), hsl(210,100%,35%) );
+    background-image:      -o-linear-gradient(top, hsl(210,100%,55%), hsl(210,100%,35%) );
+    background-image:         linear-gradient(top, hsl(210,100%,55%), hsl(210,100%,35%) );
+}
+
+.links .link:before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 50px;
+    vertical-align: top;
+    margin-right: 10px;
+}
+
+.links .fork:before {
+    background: url(../images/git.svg) no-repeat center;
+}
+.links .download:before {
+    background: url(../images/download.svg) no-repeat center;
+}
+
+@media all and (max-width: 800px) {
+    .links .link {
+        display: inline-block;
+        margin: 0 4px;
+        padding: 0 16px;
+        line-height: 50px;
+        font-size: 16px;
+    }
+}
+
+
+
+/* Menu ----------------------------------------- */
+
+/*.menu {
+    display: inline-block;
+    text-align: center;
+}
+.menu li {
+    display: inline-block;
+}
+
+.menu a {
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 24px;
+    text-shadow: 0 1px 0 hsla(0,0%,100%,.6);
+}
+
+@media all and (max-width: 1200px) {
+    .menu {
+        display: block;
+    }
+}*/
+
+
+/* Footer ----------------------------------------- */
+
+footer {
+    padding: 20px;
+    text-align: center;
+    text-shadow: 0px 1px 0px hsla(0,0%,100%,.6);
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    
+    <title>Montage - HTML5 framework</title>
+    
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:400,700'>
+    <link rel="stylesheet" href="stylesheets/normalize.css">
+    <link rel="stylesheet" href="stylesheets/base.css">
+    <link rel="stylesheet" href="stylesheets/skin-a.css">
+    <link rel="stylesheet" href="stylesheets/skin-b.css">
+    
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <script src="./node_modules/montage/montage.js" data-auto-package></script>
+    <script type="text/montage-serialization">
+        {
+            "intro": {
+                "prototype": "ui/intro.reel",
+                "properties": {
+                    "element": {"#": "intro"}
+                }
+            },
+            
+            "features": {
+                "prototype": "ui/features.reel",
+                "properties": {
+                    "element": {"#": "features"}
+                }
+            },
+
+            "themes": {
+                "prototype": "ui/themes.reel",
+                "properties": {
+                    "element": {"#": "themes"}
+                }
+            },
+
+            "misc": {
+                "prototype": "ui/misc.reel",
+                "properties": {
+                    "element": {"#": "misc"}
+                }
+            },
+
+            "misc": {
+                "prototype": "ui/misc.reel",
+                "properties": {
+                    "element": {"#": "misc"}
+                }
+            },
+
+            "apps": {
+                "prototype": "ui/apps.reel",
+                "properties": {
+                    "element": {"#": "apps"}
+                }
+            },
+
+            "tools": {
+                "prototype": "ui/tools.reel",
+                "properties": {
+                    "element": {"#": "tools"}
+                }
+            },
+
+            "next": {
+                "prototype": "ui/next.reel",
+                "properties": {
+                    "element": {"#": "next"}
+                }
+            }
+        }
+    </script>
+    
+  </head>
+<body>
+  
+    <header class="pushed">
+        <h1><img class="logo" src="images/logo-montage.png" alt="Montage" /></h1>
+        <h2 class="tagline">An <strong class="highlight">HTML5 framework</strong> for building modern Web Apps.</h2>
+    </header>
+    
+    <nav class="bar links">
+        <a class="link fork" href="https://github.com/montagejs/montage">Fork</a> <a class="link download" href="https://github.com/montagejs/montage/zipball/master">Download</a>
+    </nav>
+    
+    <section data-montage-id="intro"></section>
+    <section data-montage-id="features"></section>
+    <section data-montage-id="themes"></section>
+    <section data-montage-id="misc"></section>
+    <section data-montage-id="apps"></section>
+    <section data-montage-id="tools"></section>
+    <section data-montage-id="next"></section>
+    
+    <footer class="bar">Inofficial <a href="https://github.com/montagejs/montage">Montage</a> fan-page by <a href="https://github.com/simurai">simurai</a></footer>
+    
+    <!-- Github ribbon -->
+    <a href="https://github.com/montagejs/montage"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+    
+</body>
+</html>

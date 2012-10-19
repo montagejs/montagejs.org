@@ -1,0 +1,7 @@
+/* Misc ----------------------------------------- */
+
+@media all and (max-width: 800px) {
+    .misc .col:nth-child(2) .title {
+        margin-top: 50px;
+    }
+}
