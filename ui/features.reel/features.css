@@ -11,12 +11,12 @@
     text-align: center;
 }
 
-.features .montage-inputNumber {
+.features .montage-InputNumber {
     text-align: center;
     width: 100px;
     font-size: 14px;
 }
-.features .montage-inputRange {
+.features .montage-InputRange {
     width: 200px;
 }
 

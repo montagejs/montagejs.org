@@ -4,9 +4,9 @@
 
 
 /* Action ------------------------------- */
-.skinA .montage-button,
-.skinA .montage-inputRange-thumb,
-.skinA .montage-progress-bar {
+.skinA .montage-Button,
+.skinA .montage-InputRange-thumb,
+.skinA .montage-Progress-bar {
     color: #fff;
     font-weight: bold;
     border-color: #407fbf;
@@ -19,16 +19,16 @@
     background-image:      -o-linear-gradient(top, hsl(210,100%,70%), hsl(210,100%,50%) );
     background-image:         linear-gradient(top, hsl(210,100%,70%), hsl(210,100%,50%) );
 }
-.skinA .montage-button:hover,
-.skinA .montage-inputRange-thumb:hover {
+.skinA .montage-Button:hover,
+.skinA .montage-InputRange-thumb:hover {
     background-image: -webkit-linear-gradient(top, hsl(210,100%,75%), hsl(210,100%,55%) );
     background-image:    -moz-linear-gradient(top, hsl(210,100%,75%), hsl(210,100%,55%) );
     background-image:     -ms-linear-gradient(top, hsl(210,100%,75%), hsl(210,100%,55%) );
     background-image:      -o-linear-gradient(top, hsl(210,100%,75%), hsl(210,100%,55%) );
     background-image:         linear-gradient(top, hsl(210,100%,75%), hsl(210,100%,55%) );
 }
-.skinA .montage-button:active,
-.skinA .montage-inputRange-thumb:active {
+.skinA .montage-Button:active,
+.skinA .montage-InputRange-thumb:active {
     background-image: -webkit-linear-gradient(top, hsl(210,100%,65%), hsl(210,100%,45%) );
     background-image:    -moz-linear-gradient(top, hsl(210,100%,65%), hsl(210,100%,45%) );
     background-image:     -ms-linear-gradient(top, hsl(210,100%,65%), hsl(210,100%,45%) );
@@ -39,7 +39,7 @@
 
 /* Track ------------------------------- */
 .skinA .montage-inputRange,
-.skinA .montage-progress {
+.skinA .montage-Progress {
     border-color: hsl(0,0%,60%);
     box-shadow: inset 0 1px 2px hsla(0,0%,0%,.1), 
                 0 1px 0px hsla(0,0%,100%,.6);

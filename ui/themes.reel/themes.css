@@ -40,16 +40,16 @@
     color: hsl(200,100%,45%);
 }
 
-.themes .montage-button {
+.themes .montage-Button {
     font-family: "Lucida Grande", Lucida, sans-serif;
 }
 
-.themes .montage-inputRange {
+.themes .montage-InputRange {
     width: 100%;
     margin: 30px 0;
 }
 
-.themes .montage-progress {
+.themes .montage-Progress {
     width: 100%;
 }
 

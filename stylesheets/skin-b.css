@@ -4,9 +4,9 @@
 
 
 /* Action ------------------------------- */
-.skinB .montage-button,
-.skinB .montage-inputRange-thumb,
-.skinB .montage-progress-bar {
+.skinB .montage-Button,
+.skinB .montage-InputRange-thumb,
+.skinB .montage-Progress-bar {
     color: hsl(0,0%,40%);
     text-shadow: 0 1px 0px hsla(0,0%,100%,.7);
     font-weight: bold;
@@ -22,18 +22,18 @@
     background-image:         linear-gradient(top, hsla(0,0%,100%,.4), hsla(0,0%,100%,.9) 50%, hsla(0,0%,100%,0) 50% ), url(../images/metal.png);
 }
 
-.skinB .montage-button:hover,
-.skinB .montage-inputRange-thumb:hover {
+.skinB .montage-Button:hover,
+.skinB .montage-InputRange-thumb:hover {
     background-color: hsl(0,0%,100%);
 }
-.skinB .montage-button:active,
-.skinB .montage-inputRange-thumb:active {
+.skinB .montage-Button:active,
+.skinB .montage-InputRange-thumb:active {
     background-color: hsl(0,0%,90%);
 }
 
 /* Track ------------------------------- */
-.skinB .montage-inputRange,
-.skinB .montage-progress {
+.skinB .montage-InputRange,
+.skinB .montage-Progress {
     border-color: hsl(0,0%,50%);
     box-shadow: inset 0 1px 2px hsla(0,0%,0%,.2), 
                 0 1px 0px hsla(0,0%,100%,.7);
