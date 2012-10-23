@@ -1,0 +1,1 @@
+Currently this folder is just used to serve the images found in the [Montage Docs](https://github.com/montagejs/montagejs.org/wiki).
