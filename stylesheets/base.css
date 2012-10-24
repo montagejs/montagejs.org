@@ -6,7 +6,7 @@ body {
     margin: 0;
     color: hsl(0,0%,25%);
     font: 13px/1.231 'Open Sans', sans-serif;
-	background-color: hsl(200,0%,90%);
+	background-color: hsl(200,0%,92%);
 }
 
 a {
@@ -34,10 +34,10 @@ a:active {
 
 .bar {
     padding: 20px;
-    background-color: hsl(0,0%,85%);
+    background-color: hsl(0,0%,90%);
     background-image: url(../images/metal.png);
-    border-top: 1px dashed hsl(0,0%,90%);
-    border-bottom: 1px dashed hsl(0,0%,65%);
+    border-top: 1px solid hsl(0,0%,95%);
+    border-bottom: 1px solid hsl(0,0%,75%);
     text-align: center;
 }
 
@@ -59,8 +59,8 @@ a:active {
 
 section {
     padding: 60px 40px;
-    border-top: 1px dashed hsl(0,0%,98%);
-    border-bottom: 1px dashed hsl(0,0%,65%);
+    border-top: 1px solid hsl(0,0%,98%);
+    border-bottom: 1px solid hsl(0,0%,82%);
 }
 
 article {
@@ -327,8 +327,9 @@ header .logo {
 
 /* Footer ----------------------------------------- */
 
-footer {
+.footer {
     padding: 20px;
     text-align: center;
-    text-shadow: 0px 1px 0px hsla(0,0%,100%,.6);
+    /text-shadow: 0px 1px 0px hsla(0,0%,100%,.6);
+    /background: hsl(0,0%,80%);
 }
