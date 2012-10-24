@@ -32,6 +32,18 @@ a:active {
     background-image:         radial-gradient(center 30%, hsla(0,0%,20%,.5), hsla(0,0%,0%,.5) ), url(../images/noise.png);
 }
 
+.pushed .link {
+    color: hsl(200,100%,50%);
+}
+
+.pushed .link:hover {
+    color: hsl(200,100%,70%);
+}
+
+.pushed .link:active {
+    color: hsl(200,100%,30%);
+}
+
 .bar {
     padding: 20px;
     background-color: hsl(0,0%,90%);
