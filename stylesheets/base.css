@@ -276,6 +276,9 @@ header .logo {
 .links .download:before {
     background: url(../images/download.svg) no-repeat center;
 }
+.links .docs:before {
+    background: url(../images/docs.svg) no-repeat center;
+}
 
 @media all and (max-width: 800px) {
     .links .link {
@@ -284,6 +287,15 @@ header .logo {
         padding: 0 16px;
         line-height: 50px;
         font-size: 16px;
+    }
+}
+
+@media all and (max-width: 440px) {
+    .links .link {
+        margin-bottom: 10px;
+    }
+    .links .link:last-child {
+        margin-bottom: 0;
     }
 }
 
