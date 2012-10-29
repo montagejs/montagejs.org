@@ -1,0 +1,11 @@
+/* Social Buttons ----------------------------------------- */
+
+.social {
+  padding: 20px 40px;
+  text-align: center;
+}
+
+.social .button-group {
+    display: inline-block;
+    margin: 5px 30px;
+}
