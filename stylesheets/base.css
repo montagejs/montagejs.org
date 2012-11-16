@@ -337,6 +337,13 @@ header .logo {
 }*/
 
 
+.themes .logo {
+    width: 200px;
+    margin-left: 60px;
+    border-radius: 50%;
+    border: 2px dashed hsl(0,0%,80%);
+}
+
 
 /* Social Buttons ----------------------------------------- */
 

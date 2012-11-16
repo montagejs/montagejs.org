@@ -53,13 +53,6 @@
     width: 100%;
 }
 
-.themes .logo {
-    width: 200px;
-    margin-left: 60px;
-    border-radius: 50%;
-    border: 2px dashed hsl(0,0%,80%);
-}
-
 @media all and (max-width: 800px) {
     
     .themes .logo {
