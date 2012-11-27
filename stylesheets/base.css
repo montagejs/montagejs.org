@@ -1,5 +1,3 @@
-/* @override http://localhost:8082/montage/stylesheets/base.css */
-
 /* Globals ----------------------------------------- */
 
 body {
@@ -46,11 +44,15 @@ a:active {
 
 .bar {
     padding: 20px;
-    background-color: hsl(0,0%,90%);
-    background-image: url(../images/metal.png);
     border-top: 1px solid hsl(0,0%,95%);
     border-bottom: 1px solid hsl(0,0%,75%);
     text-align: center;
+    background-color: hsl(0,0%,80%);
+    background-image: -webkit-linear-gradient(top, hsl(0,0%,85%), hsl(0,0%,75%) );
+    background-image:    -moz-linear-gradient(top, hsl(0,0%,85%), hsl(0,0%,75%) );
+    background-image:     -ms-linear-gradient(top, hsl(0,0%,85%), hsl(0,0%,75%) );
+    background-image:      -o-linear-gradient(top, hsl(0,0%,85%), hsl(0,0%,75%) );
+    background-image:         linear-gradient(top, hsl(0,0%,85%), hsl(0,0%,75%) );
 }
 
 .highlight {
