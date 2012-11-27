@@ -101,22 +101,6 @@ article {
 }
 
 
-section:target {
-    -webkit-animation: wiggle .2s ease-in-out;
-       -moz-animation: wiggle .2s ease-in-out;
-        -ms-animation: wiggle .2s ease-in-out;
-         -o-animation: wiggle .2s ease-in-out;
-            animation: wiggle .2s ease-in-out;
-}
-
-@-webkit-keyframes wiggle { 50% { -webkit-transform: translate3d(0,-10px,0); } }
-   @-moz-keyframes wiggle { 50% {    -moz-transform: translate3d(0,-10px,0); } }
-    @-ms-keyframes wiggle { 50% {     -ms-transform: translate3d(0,-10px,0); } }
-     @-o-keyframes wiggle { 50% {      -o-transform: translate3d(0,-10px,0); } }
-        @keyframes wiggle { 50% {         transform: translate3d(0,-10px,0); } }
-
-
-
 /* More ----------------------------------------- */
 
 .more {
