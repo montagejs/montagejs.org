@@ -325,6 +325,13 @@ header .logo {
                       -webkit-linear-gradient(top, hsl(0,0%,97%), hsl(0,0%,90%) );
 }
 
+/* Misc ----------------------------------------- */
+
+@media all and (max-width: 800px) {
+    .misc .col:nth-child(2) .title {
+        margin-top: 50px;
+    }
+}
 
 /* Social Buttons ----------------------------------------- */
 
