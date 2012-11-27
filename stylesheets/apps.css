@@ -69,6 +69,10 @@
     font-size: 14px;
 }
 
+.gallery-more-links {
+    font-size: 12px;
+}
+
 @media all and (max-width: 800px) {
     .gallery-item {
         display: block;
