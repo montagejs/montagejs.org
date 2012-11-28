@@ -4,11 +4,9 @@ require 'rubygems'
 require 'gollum'
 require 'mustache'
 
-DIR = File.dirname(__FILE__)
-
-WIKI_DIR = File.join(DIR, 'montage.wiki')
-OUT_DIR = File.join(DIR, '..')
-TEMPLATE = File.read(File.join(DIR, 'template.mustache'))
+WIKI_DIR = ENV['WIKI_DIR']
+OUT_DIR = ENV['OUT_DIR']
+TEMPLATE = File.read(ENV['TEMPLATE_FILE'])
 
 LINKS_RE = Regexp.new('"https://github.com/montagejs/montage/wiki/([^"]+)"')
 
