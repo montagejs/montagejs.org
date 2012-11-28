@@ -19,6 +19,12 @@ $THIS_DIR/generate.rb
 # get wiki commit hash
 hash=`git --git-dir="$WIKI_DIR/.git/" rev-parse --short HEAD`
 
+if [ "$1" == "--no-commit" ]
+then
+  echo "Not committing"
+  exit 0;
+fi
+
 # commit
 git checkout gh-pages
 mv $OUT_DIR/*.html $DOCS_DIR
