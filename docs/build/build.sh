@@ -9,6 +9,7 @@ export DOCS_DIR="$THIS_DIR/.."
 export TEMPLATE_FILE="$THIS_DIR/template.mustache"
 
 # setup
+rm -rf $WIKI_DIR
 git clone git@github.com:montagejs/montage.wiki.git $WIKI_DIR
 gem install --no-rdoc --no-ri --install-dir $GEM_PATH gollum
 
