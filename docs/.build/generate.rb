@@ -7,7 +7,7 @@ require 'mustache'
 DIR = File.dirname(__FILE__)
 
 WIKI_DIR = File.join(DIR, 'montage.wiki')
-OUT_DIR = File.join(DIR, 'out')
+OUT_DIR = File.join(DIR, '..')
 TEMPLATE = File.read(File.join(DIR, 'template.mustache'))
 
 LINKS_RE = Regexp.new('"https://github.com/montagejs/montage/wiki/([^"]+)"')
@@ -28,5 +28,4 @@ wiki.pages().each { |page|
     File.open(filename, 'w') {|f| f.write(doc) }
   }
 }
-
 
