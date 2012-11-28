@@ -15,10 +15,13 @@ gem install --no-rdoc --no-ri --install-dir $GEM_PATH gollum
 # generate docs
 $THIS_DIR/generate.rb
 
-# commit
 # get wiki commit hash
 hash=`git --git-dir="$WIKI_DIR/.git/" rev-parse --short HEAD`
+
+# commit
+git checkout gh-pages
 mv $OUT_DIR/*.html $DOCS_DIR
-cd $DOCS_DIR
-git add *.html
+git add $DOCS_DIR/*.html
 git commit -m "Update docs to wiki version $hash"
+
+git checkout -
