@@ -308,6 +308,13 @@ header .logo {
     border: 2px dashed hsl(0,0%,80%);
 }
 
+/* Misc ----------------------------------------- */
+
+@media all and (max-width: 800px) {
+    .misc .col:nth-child(2) .title {
+        margin-top: 50px;
+    }
+}
 
 /* Tools ----------------------------------------- */
 
