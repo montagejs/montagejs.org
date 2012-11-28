@@ -1,0 +1,52 @@
+/* These Styles only get used on sub-pages ----------------------------------------- */
+
+
+/* Header ----------------------------------------- */
+
+.header-pages {
+    padding: 0px;
+    text-align: left;
+}
+
+.header-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.header-pages .logo {
+    height: 32px;
+    vertical-align: middle;
+}
+
+/* Nav ----------------------------------------- */
+
+.nav {
+    margin: 0 0 0 20px;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0; /* Removes inline-block gap */
+}
+
+.nav-item {
+    display: inline-block;
+    font-size: 20px;
+    margin: 0;
+    padding: 20px;
+    color: hsl(196,0%,50%);
+    text-shadow: 0 1px 2px hsla(0,0%,0%,.5);
+    background: hsla(0,0%,100%,.05);
+    border-left: 1px solid hsla(0,0%,100%,.08);
+    border-right: 1px solid hsla(0,0%,0%,.3);
+}
+
+.nav-item:hover {
+    color: hsl(196,0%,60%);
+    background: hsla(0,0%,100%,.1);
+}
+
+.nav-item:active,
+.nav-item.active {
+    color: hsl(196,100%,50%);
+    background: hsla(0,0%,0%,.1);
+    border-color: transparent;
+}
