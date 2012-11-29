@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    
+    <title>Hello-Montage - Montage Docs</title>
+    
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:400,700'>
+    <link rel="stylesheet" href="../stylesheets/normalize.css">
+    <link rel="stylesheet" href="../stylesheets/base.css">
+    <link rel="stylesheet" href="../stylesheets/pages.css">
+        
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->    
+</head>
+<body>
+  
+    <header class="header header-pages pushed">
+        <div class="header-container">
+            <a href="/"><img class="logo" src="../images/logo-pages.png" alt="Montage"></a>
+            <nav class="nav">
+                <a class="nav-item" href="/apps">Apps</a>
+                <a class="nav-item active" href="/docs">Docs</a>
+            </nav>
+        </div>
+    </header>
+    
+    <section id="docs" class="docs">
+        <article>
+            <div class="markdown-body">
+                  <h1>Hello Montage</h1>
+            
+            <p>In this tutorial you create a simple Montage application that uses the Montage <a href="http://montagejs.github.com/montage/samples/sink/#dynamicText">DynamicText</a> component to display a text string in a <code>&lt;div/&gt;</code> element. The purpose of the tutorial is to introduce you to the parts that make up a Montage application.</p>
+            
+            <p>To complete this tutorial, you should have already followed the steps in the Montage <a href="https://github.com/montagejs/montage/wiki/Quick-Start">Quick Start</a>.</p>
+            
+            <h2>Create the project folder and index page</h2>
+            
+            <p>The main HTML page of every Montage application must include the Montage loader script, which bootstraps the framework and your application.</p>
+            
+            <ol>
+            <li>In your Montage ~/Projects folder create a new folder called “hello”.</li>
+            <li>Create a new file named index.html.</li>
+            <li>Copy and paste the following text into index.html.</li>
+            </ol><div class="highlight"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
+            <span class="nt">&lt;html&gt;</span>
+            <span class="nt">&lt;head&gt;</span>
+                <span class="nt">&lt;title&gt;</span>Hello Montage<span class="nt">&lt;/title&gt;</span>
+                <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"../montage/montage.js"</span> <span class="na">data-auto-package</span><span class="nt">&gt;&lt;/script&gt;</span>
+                <span class="nt">&lt;/head&gt;</span>
+            <span class="nt">&lt;body&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">data-montage-id=</span><span class="s">"title"</span><span class="nt">&gt;&lt;/div&gt;</span>
+            <span class="nt">&lt;/body&gt;</span>
+            <span class="nt">&lt;/html&gt;</span>
+            </pre></div>
+            
+            <p>This HTML includes the Montage loader script (montage.js). The presence of the <code>data-auto-package</code> attribute is a convenience that frees you from having to manually create a package.json file. The <code>&lt;div&gt;</code> element in the HTML body has a <code>data-montage-id</code> attribute whose value identifies the element to Montage during deserialization.</p>
+            
+            <h2>Create a Montage serialization block</h2>
+            
+            <p>A serialization block is a JSON structure that declares serialized versions of Montage components and objects used by the application. A serialization can also describe data bindings between components in the same serialization block, and declare event listeners. The JSON structure is contained by a <code>&lt;script&gt;</code> element of type “text/montage-serialization”. For more information about the serialization format, see <a href="https://github.com/montagejs/montage/wiki/Montage-serialization-format">Montage serialization format</a>.</p>
+            
+            <p>Add a serialization block to the document:
+            </p><div class="highlight"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
+            <span class="nt">&lt;html&gt;</span>
+            <span class="nt">&lt;head&gt;</span>
+                <span class="nt">&lt;title&gt;</span>Hello Montage<span class="nt">&lt;/title&gt;</span>
+                <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"../montage/montage.js"</span> <span class="na">data-auto-package</span><span class="nt">&gt;&lt;/script&gt;</span>
+                <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/montage-serialization"</span><span class="nt">&gt;</span>
+                <span class="p">{</span>
+            
+                <span class="p">}</span>
+                <span class="nt">&lt;/script&gt;</span>
+                <span class="nt">&lt;/head&gt;</span>
+            <span class="nt">&lt;body&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">data-montage-id=</span><span class="s">"title"</span><span class="nt">&gt;&lt;/div&gt;</span>
+            <span class="nt">&lt;/body&gt;</span>
+            <span class="nt">&lt;/html&gt;</span>
+            </pre></div>
+            
+            <h2>Add a DynamicText component to the serialization block</h2>
+            
+            <p>Next you’ll add a serialized <a href="http://montagejs.github.com/montage/samples/sink/#dynamicText">DynamicText</a> component to the Montage serialization block, and associate it with the <code>&lt;div&gt;</code> element. Each Montage component in a serialization is represented as a JSON object that contains a member named <code>prototype</code>. This property is a string whose value compactly specifies two pieces of data: the prototype’s module ID (it’s URL, so to speak), and the names of the exported prototype. The name of the prototype (DynamicText) is inferred from the last path segment of the module ID (dynamic-text), according to some simple naming conventions.</p>
+            
+            <p>Modify the serialization as follows:
+            </p><div class="highlight"><pre><span class="nt">&lt;script</span> <span class="na">type=</span><span class="s">"text/montage-serialization"</span><span class="nt">&gt;</span>
+            {
+                "title": {
+                    "prototype": "montage/ui/dynamic-text.reel"
+                }
+            }
+            <span class="nt">&lt;/script&gt;</span>
+            </pre></div>
+            
+            <p>Notes:</p>
+            
+            <ul>
+            <li>The “title” label assigned to the serialized DynamicText object is only used internally by Montage during the deserialization process. It does not translate into a property or instance name.</li>
+            </ul><h2>Specify the component’s initial property values</h2>
+            
+            <p>You can specify initial values for a serialized component by adding a <code>properties</code> object to the JSON object. Every Montage component has an <code>element</code> property that identifies the DOM element that it controls. The DynamicText component’s <code>value</code> property specifies the text string the component should display.</p>
+            
+            <p>The JSON serialization format includes a extension that allows you to reference DOM elements by their <code>data-montage-id</code> values. This is called an “element reference” object and it has the following form:</p>
+            
+            <p><code>"element": {"#": "elementID"}</code></p>
+            
+            <p>At runtime, the deserializer assigns to “element” a reference to the HTMLElement whose <code>data-montage-id</code> is <code>elementID</code>.</p>
+            
+            <p>To specify the DynamicText component’s DOM element and initial text value, modify the serialization as follows:
+            </p><div class="highlight"><pre><span class="nt">&lt;script</span> <span class="na">type=</span><span class="s">"text/montage-serialization"</span><span class="nt">&gt;</span>
+            {
+                "title": {
+                    "prototype": "montage/ui/dynamic-text.reel",
+                    "properties": {
+                        "element": {"#": "title"},
+                        "value": "Hello, Montage!"
+                    }
+                }
+            }
+            <span class="nt">&lt;/script&gt;</span>
+            </pre></div>
+            
+            <h2>Test in a browser</h2>
+            
+            <p>Save your changes and point your web browser at the project’s index.html page (for example, <a href="http://localhost:8081/hello/index.html">http://localhost:8081/hello/index.html</a>). You should see something like the following:</p>
+            
+            <p><img src="https://a248.e.akamai.net/camo.github.com/a2254be84262b66512751dff1a6eb40325362a0e/687474703a2f2f6d6f6e746167656a732e6f72672f646f63732f696d672f68656c6c6f2d6d6f6e746167652e706e67" alt="Hello, Montage!"></p>
+                </div>
+        </article>
+    </section>
+
+    <section id="next" class="next">
+        <article>
+            <h3 class="title">More help?</h3>
+            <div class="cols">
+                <div class="col col-1-2">
+                    <p>Can't find what you are looking for? Get in touch, we're more than happy in helping answer your questions.
+                    </p>
+                </div>
+                <aside class="col col-1-2">
+                    <p><strong>Have feedback or ideas?</strong> Let us know by creating a new <a href="https://github.com/montagejs/montage/issues" target="_blank">issue</a>, join us in <a href="http://webchat.freenode.net/?channels=montage" target="_blank">IRC</a> or post questions to our <a href="https://groups.google.com/forum/?fromgroups#!forum/montagejs" target="_blank">Google Group</a>. We're also on <a href="https://twitter.com/montage_js" target="_blank">Twitter</a> and <a href="https://plus.google.com/116915300739108010954/" target="_blank">Google+</a>.
+                    </p>
+                </aside>
+            </div>
+        </article>
+    </section>
+
+    
+    <section id="social" class="social">
+        <article>
+            
+            <div class="button-group github">
+                <iframe src="http://ghbtns.com/github-btn.html?user=montagejs&repo=montage&type=watch&count=true"
+                  allowtransparency="true" frameborder="0" scrolling="0" width="90px" height="20px"></iframe>
+                <iframe src="http://ghbtns.com/github-btn.html?user=montagejs&repo=montage&type=fork&count=true"
+                  allowtransparency="true" frameborder="0" scrolling="0" width="90px" height="20px"></iframe>
+            </div>
+            
+            
+            <div class="button-group twitter">
+                <a href="https://twitter.com/share" class="twitter-share-button" data-via="montage_js" data-count="none">Tweet</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                <a href="https://twitter.com/montage_js" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @montage_js</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </div>
+            
+            <div class="button-group g-plus">
+                <!-- Place this tag in your head or just before your close body tag. -->
+                <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+                  {parsetags: 'explicit'}
+                </script>
+                <!-- Place this tag where you want the +1 button to render. -->
+                <div class="g-plusone" data-size="medium" data-annotation="inline" data-width="200"></div>
+                <!-- Place this render call where appropriate. -->
+                <script type="text/javascript">gapi.plusone.go();</script>
+            </div>
+            
+        </article>
+    </section>
+        
+    
+    <footer class="footer">
+        2012 montagejs.org - <a href="https://github.com/montagejs/montagejs.org">Contributions</a> to this page are welcomed.
+    </footer>
+        
+    
+    <!-- Google -->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-35717912-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    
+</body>
+</html>
