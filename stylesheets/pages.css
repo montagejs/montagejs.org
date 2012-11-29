@@ -18,6 +18,7 @@
     vertical-align: middle;
 }
 
+
 /* Nav ----------------------------------------- */
 
 .nav {
@@ -49,4 +50,26 @@
     color: hsl(196,100%,50%);
     background: hsla(0,0%,0%,.1);
     border-color: transparent;
+}
+
+
+/* Apps page ----------------------------------------- */
+
+.apps .note {
+    max-width: 900px;
+    margin: 50px auto 0 auto;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.apps a {
+    color: hsl(196,100%,50%);
+}
+
+.apps a:hover {
+    color: hsl(196,100%,60%);
+}
+
+.apps a:active {
+    color: hsl(196,100%,40%);
 }
