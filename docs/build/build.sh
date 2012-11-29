@@ -30,7 +30,10 @@ fi
 # get wiki commit hash
 hash=`git --git-dir="$WIKI_DIR/.git/" rev-parse --short HEAD`
 
-git checkout gh-pages
+echo
+echo "Checking out gh-pages for commit"
+echo
+git checkout -B gh-pages origin/gh-pages
 mv $OUT_DIR/*.html $DOCS_DIR
 git add $DOCS_DIR/*.html
 git commit -m "Update docs to wiki commit $hash"
