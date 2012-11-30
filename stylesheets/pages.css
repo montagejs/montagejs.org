@@ -5,6 +5,14 @@
 .header-pages {
     padding: 0px 50px;
     text-align: left;
+    border-top: 1px solid hsl(0,0%,20%);
+    border-bottom: 1px solid hsl(0,0%,20%);
+    background-color: hsl(0,0%,28%);
+    background-image: -webkit-linear-gradient(top, hsl(0,0%,32%), hsl(0,0%,22%) );
+    background-image:    -moz-linear-gradient(top, hsl(0,0%,32%), hsl(0,0%,22%) );
+    background-image:     -ms-linear-gradient(top, hsl(0,0%,32%), hsl(0,0%,22%) );
+    background-image:      -o-linear-gradient(top, hsl(0,0%,32%), hsl(0,0%,22%) );
+    background-image:         linear-gradient(top, hsl(0,0%,32%), hsl(0,0%,22%) );
 }
 
 .header-container {
@@ -66,7 +74,8 @@
         display: block;
         margin: 0;
         text-align: center;
-        background: hsla(0,0%,100%,.05);
+        border-top: 1px solid hsla(0,0%,0%,.1);
+        background: hsla(0,0%,0%,.1);
     }
     .nav-item {
         padding: 8px 12px;
