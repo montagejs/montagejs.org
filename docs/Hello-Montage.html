@@ -37,6 +37,8 @@
 
 <p>To complete this tutorial, you should have already followed the steps in the Montage <a href="Quick-Start.html">Quick Start</a>.</p>
 
+<p>This tutorial walks you through the files that <code>minit</code> creates for you, so that you'll be familiar with the structure of a montage application.</p>
+
 <h2>Create the project folder and index page<a class="anchor" id="Create-the-project-folder-and-index-page" href="#Create-the-project-folder-and-index-page"></a>
 </h2>
 
@@ -50,7 +52,7 @@
 <span class="nt">&lt;html&gt;</span>
 <span class="nt">&lt;head&gt;</span>
     <span class="nt">&lt;title&gt;</span>Hello Montage<span class="nt">&lt;/title&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"../montage/montage.js"</span> <span class="na">data-auto-package</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"./node_modules/montage/montage.js"</span> <span class="na">data-auto-package</span><span class="nt">&gt;&lt;/script&gt;</span>
     <span class="nt">&lt;/head&gt;</span>
 <span class="nt">&lt;body&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">data-montage-id=</span><span class="s">"title"</span><span class="nt">&gt;&lt;/div&gt;</span>
@@ -58,7 +60,7 @@
 <span class="nt">&lt;/html&gt;</span>
 </pre></div>
 
-<p>This HTML includes the Montage loader script (montage.js). The presence of the <code>data-auto-package</code> attribute is a convenience that frees you from having to manually create a package.json file. The <code>&lt;div&gt;</code> element in the HTML body has a <code>data-montage-id</code> attribute whose value identifies the element to Montage during deserialization.</p>
+<p>This HTML includes a reference to the Montage loader script (montage.js) which we will add in a minute. The presence of the <code>data-auto-package</code> attribute is a convenience that frees you from having to manually create a package.json file. The <code>&lt;div&gt;</code> element in the HTML body has a <code>data-montage-id</code> attribute whose value identifies the element to Montage during deserialization.</p>
 
 <h2>Create a Montage serialization block<a class="anchor" id="Create-a-Montage-serialization-block" href="#Create-a-Montage-serialization-block"></a>
 </h2>
@@ -70,7 +72,7 @@
 <span class="nt">&lt;html&gt;</span>
 <span class="nt">&lt;head&gt;</span>
     <span class="nt">&lt;title&gt;</span>Hello Montage<span class="nt">&lt;/title&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"../montage/montage.js"</span> <span class="na">data-auto-package</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"./node_module/montage/montage.js"</span> <span class="na">data-auto-package</span><span class="nt">&gt;&lt;/script&gt;</span>
     <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/montage-serialization"</span><span class="nt">&gt;</span>
     <span class="p">{</span>
 
@@ -127,7 +129,24 @@
 <span class="nt">&lt;/script&gt;</span>
 </pre></div>
 
-<h2>Test in a browser<a class="anchor" id="Test-in-a-browser" href="#Test-in-a-browser"></a>
+<h2>Create the package.json file and add montage to the app.<a class="anchor" id="Create-the-package.json-file-and-add-montage-to-the-app." href="#Create-the-package.json-file-and-add-montage-to-the-app."></a>
+</h2>
+
+<ol>
+<li>Create a new file named <code>package.json</code> </li>
+<li>Copy and paste the following into that file:
+<div class="highlight"><pre><span class="p">{</span>
+    "<span class="n">name</span>"<span class="p">:</span> "<span class="n">hello</span><span class="o">-</span><span class="n">world</span>"<span class="p">,</span>
+    "<span class="n">version</span>"<span class="p">:</span> "0<span class="p">.</span>0<span class="p">.</span>1"<span class="p">,</span>
+    "<span class="n">dependencies</span>"<span class="p">:</span> <span class="p">{</span>
+        "<span class="n">montage</span>"<span class="p">:</span> "<span class="o">*</span>"
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</li>
+<li>Save that file (in the same folder as index.html.</li>
+<li>From terminal run `<code>npm install</code> in that folder to install Montage.</li>
+</ol><h2>Test in a browser<a class="anchor" id="Test-in-a-browser" href="#Test-in-a-browser"></a>
 </h2>
 
 <p>Save your changes and point your web browser at the project’s index.html page (for example, <a href="http://localhost:8081/hello/index.html">http://localhost:8081/hello/index.html</a>). You should see something like the following:</p>
