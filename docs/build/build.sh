@@ -6,8 +6,6 @@ THIS_DIR=`dirname "${BASH_SOURCE[0]}"`
 export GEM_PATH="$THIS_DIR/gems"
 
 export WIKI_DIR="$THIS_DIR/montage.wiki"
-export OUT_DIR="$THIS_DIR/out"
-export DOCS_DIR="$THIS_DIR/.."
 export TEMPLATE_FILE="$THIS_DIR/template.mustache"
 
 # setup
@@ -25,8 +23,4 @@ mv "$OUT_DIR/Home.html" "$OUT_DIR/index.html"
 
 # get wiki commit hash
 wiki_hash=`git --git-dir="$WIKI_DIR/.git/" rev-parse --short HEAD`
-
-mv $OUT_DIR/*.html "$DOCS_DIR"
-git add $DOCS_DIR/*.html
-
 echo "wiki: $wiki_hash " >> "$ROOT_DIR/COMMIT_MESSAGE"
