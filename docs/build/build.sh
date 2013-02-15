@@ -27,8 +27,10 @@ fi
 
 # commit
 
+# get master commit hash
+master_hash=`git rev-parse --short HEAD`
 # get wiki commit hash
-hash=`git --git-dir="$WIKI_DIR/.git/" rev-parse --short HEAD`
+wiki_hash=`git --git-dir="$WIKI_DIR/.git/" rev-parse --short HEAD`
 
 echo
 echo "Checking out gh-pages for commit"
@@ -36,6 +38,6 @@ echo
 git checkout -B gh-pages origin/gh-pages
 mv $OUT_DIR/*.html $DOCS_DIR
 git add $DOCS_DIR/*.html
-git commit -m "Update docs to wiki commit $hash"
+git commit -m "Update to master $master_hash, wiki $wiki_hash"
 
 git checkout -
