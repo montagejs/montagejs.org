@@ -11,15 +11,21 @@ export TEMPLATE_FILE="$THIS_DIR/template.mustache"
 # setup
 rm -rf $WIKI_DIR
 git clone git@github.com:montagejs/montage.wiki.git "$WIKI_DIR"
+
 echo
-echo "Installing ruby gems. This may take several minutes..."
-gem install --verbose --no-rdoc --no-ri --install-dir "$GEM_PATH" gollum
+if [ -d $GEM_PATH ]
+then
+    echo "$GEM_PATH exists. Assuming gems are already installed."
+else
+    echo "Installing ruby gems. This may take several minutes..."
+    gem install --verbose --no-rdoc --no-ri --install-dir "$GEM_PATH" gollum
+fi
 
 # generate docs
 "$THIS_DIR/generate.rb"
 
 # Home needs to be index for serving
-mv "$OUT_DIR/Home.html" "$OUT_DIR/index.html"
+mv "$OUT_DIR/docs/Home.html" "$OUT_DIR/docs/index.html"
 
 # get wiki commit hash
 wiki_hash=`git --git-dir="$WIKI_DIR/.git/" rev-parse --short HEAD`

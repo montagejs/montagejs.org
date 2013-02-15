@@ -5,6 +5,8 @@ set -e
 export ROOT_DIR=`dirname "${BASH_SOURCE[0]}"`
 export OUT_DIR=`mktemp -d -t montagejs_org_build`
 
+echo "Output directory is $OUT_DIR"
+
 rm -f COMMIT_MESSAGE
 master_hash=`git rev-parse --short HEAD`
 echo "Update to master $master_hash" >> COMMIT_MESSAGE
@@ -16,7 +18,6 @@ cd "$ROOT_DIR"
 if [ "$1" == "--no-commit" ]
 then
     echo "Not committing"
-    echo "Build files in $OUT_DIR"
     exit 0;
 fi
 
