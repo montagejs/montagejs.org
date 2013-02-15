@@ -7,7 +7,7 @@ export TEMP_DIR=`mktemp -d -t montagejs_org_temp`
 export OUT_DIR=`mktemp -d -t montagejs_org_output`
 
 echo "Output directory is $OUT_DIR"
-echo "Temp directory is $temp_DIR"
+echo "Temp directory is $TEMP_DIR"
 echo
 
 master_hash=`git rev-parse --short HEAD`
@@ -37,11 +37,13 @@ cp -r "$OUT_DIR"/* $ROOT_DIR
 
 git add "$ROOT_DIR"
 
-git commit --file="$TEMP_DIR/COMMIT_MESSAGE"
+# Commit exits with non-zero status if there are no changes. "|| :" swallows
+# this exit status so that the rest of the script continues.
+git commit --file="$TEMP_DIR/COMMIT_MESSAGE" || :
 
 git checkout -
 
-rm -rf $OUT_DIR
-rm -rf $TEMP_DIR
+rm -r $OUT_DIR
+rm -r $TEMP_DIR
 
 echo "Done."
