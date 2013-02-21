@@ -113,7 +113,7 @@
      <span class="nx">alert</span><span class="p">(</span><span class="s2">"Got 'mousedown' event during bubble phase."</span><span class="p">);</span>
 <span class="p">}</span>
 <span class="kd">var</span> <span class="nx">loginBtn</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"#loginBtn"</span><span class="p">);</span>
-<span class="nx">loginBtn</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"mouseup"</span><span class="p">,</span> <span class="nx">listenerObj</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span> <span class="c1">// useCapture = true</span>
+<span class="nx">loginBtn</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"mousedown"</span><span class="p">,</span> <span class="nx">listenerObj</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span> <span class="c1">// useCapture = true</span>
 </pre></div>
 
 <p>You can further specialize the event handler name by adding an <code>identifier</code> to the event target. The event manager includes this string, with its first letter capitalized, in the method name it composes. In the following example, the string “__login__” is assigned to the <code>loginBtn</code>‘s <code>identifier</code> property, so the event listener defines a <code>handleLoginMousedown()</code> function.</p>

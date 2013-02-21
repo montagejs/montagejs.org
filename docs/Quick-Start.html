@@ -33,77 +33,48 @@
 <h1>Quick Start<a class="anchor" id="Quick-Start" href="#Quick-Start"></a>
 </h1>
 
-<h2>Requirements<a class="anchor" id="Requirements" href="#Requirements"></a>
-</h2>
-
-<p>To get started with Montage, you will need the following:</p>
-
-<ul>
-<li>(optional) An account on <a href="http://github.com">GitHub</a>, and public SSH key. For details on installing GIT and creating your key, see the setup guides for <a href="http://help.github.com/mac-set-up-git/">Mac</a> and <a href="http://help.github.com/win-set-up-git/">Windows</a>.</li>
-<li>A GIT client.</li>
-<li>Node.js and npm from <a href="http://nodejs.org">Node.js</a>
-</li>
-<li>A local web server to serve the Montage framework and applications. Montage applications can only be served from an HTTP address, not from a local file URL.</li>
-<li>A recent stable release of Chrome or Safari.</li>
-</ul><h2>Quick setup<a class="anchor" id="Quick-setup" href="#Quick-setup"></a>
-</h2>
-
-<p>If you’re already familiar with using Git, using npm, are familiar with GitHub, and able to configure a local web server (preferably Apache), then this section will get you started with Montage right away.</p>
+<p>If you don't have it already, download Node which includes the <code>npm</code> command: <a href="http://nodejs.org/download/">http://nodejs.org/download/</a>.</p>
 
 <ol>
-<li>In a terminal window, create a new folder for the minit tool (eg. ~/montage-tools) and a new projects folder (eg. ~/Projects or ~/Sites/Projects).
-<div class="highlight"><pre>$ <span class="n">mkdir</span> <span class="n">montage</span><span class="o">-</span><span class="n">tools</span>
-$ <span class="n">mkdir</span> <span class="n">Projects</span>
+<li>
+<p>Install <code>minit</code>, the Montage Initializer
+</p>
+<div class="highlight"><pre><span class="nv">$ </span>npm install -g minit
 </pre></div>
 </li>
-<li>Clone montagejs/minit.git into ~/montage-tools
-<div class="highlight"><pre>$ <span class="n">cd</span> <span class="n">montage</span><span class="o">-</span><span class="n">tools</span>
-<span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="p">@</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="p">:</span><span class="n">montagejs</span><span class="o">/</span><span class="n">minit</span>
-<span class="n">Cloning</span> <span class="n">into</span> <span class="s">'minit'</span><span class="p">...</span>
-<span class="n">remote</span><span class="p">:</span> <span class="n">Counting</span> <span class="n">objects</span><span class="p">:</span> 97<span class="p">,</span> <span class="n">done</span><span class="p">.</span>
-<span class="n">remote</span><span class="p">:</span> <span class="n">Compressing</span> <span class="n">objects</span><span class="p">:</span> 100<span class="c">% (63/63), done.</span>
-<span class="n">remote</span><span class="p">:</span> <span class="n">Total</span> 97 <span class="p">(</span><span class="n">delta</span> 34<span class="p">),</span> <span class="n">reused</span> 84 <span class="p">(</span><span class="n">delta</span> 21<span class="p">)</span>
-<span class="n">Receiving</span> <span class="n">objects</span><span class="p">:</span> 100<span class="c">% (97/97), 26.53 KiB, done.</span>
-<span class="n">Resolving</span> <span class="n">deltas</span><span class="p">:</span> 100<span class="c">% (34/34), done.</span>
+<li>
+<p>Create your first app
+</p>
+<div class="highlight"><pre><span class="nv">$ </span>minit create:app --name hello
+<span class="nv">$ </span><span class="nb">cd </span>hello/
+<span class="nv">$ </span>ls
+README.md
+assets/
+index.html
+node_modules/
+package.json
+run-tests.html
+<span class="nb">test</span>/
+testacular.conf.js
+ui/
 </pre></div>
 </li>
-<li>Use minit to create our first application (eg. first-app)
-<div class="highlight"><pre>$ <span class="n">cd</span> <span class="p">.</span><span class="o">./</span><span class="n">Projects</span>
-$ <span class="p">.</span><span class="o">./</span><span class="n">montage</span><span class="o">-</span><span class="n">tools</span><span class="o">/</span><span class="n">minit</span><span class="o">/</span><span class="n">minit</span> <span class="n">app</span> <span class="n">first</span><span class="o">-</span><span class="n">app</span>
-<span class="n">Inside</span> <span class="n">the</span> <span class="s">'first-app/'</span> <span class="n">directory</span> <span class="n">run</span><span class="p">:</span>
-<span class="n">npm</span> <span class="n">install</span>
-
-<span class="n">Template</span> <span class="n">expansion</span> <span class="n">successful</span>!
+<li>
+<p>Navigate to the directory in your browser. If you don't have a localhost webserver, you can create a temporary one by running
+</p>
+<div class="highlight"><pre><span class="nv">$ </span>python -m SimpleHTTPServer
 </pre></div>
+
+<p>and navigating to <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a></p>
 </li>
-<li>Add the montage framework to first-app
-<div class="highlight"><pre>$ <span class="n">npm</span> <span class="n">install</span>
-<span class="n">npm</span> <span class="n">http</span> <span class="n">GET</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">registry</span><span class="p">.</span><span class="n">npmjs</span><span class="p">.</span><span class="n">org</span><span class="o">/</span><span class="n">montage</span>
-<span class="n">npm</span> <span class="n">http</span> 304 <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">registry</span><span class="p">.</span><span class="n">npmjs</span><span class="p">.</span><span class="n">org</span><span class="o">/</span><span class="n">montage</span>
-<span class="n">montage</span><span class="p">@</span>0<span class="p">.</span>12<span class="p">.</span>1 <span class="n">node_modules</span><span class="o">/</span><span class="n">montage</span>
-</pre></div>
-</li>
-<li>Configure your local web server to serve the ~/Projects folder over HTTP. For a suggested Apache httpd.conf file configuration, see <a href="https://github.com/montagejs/montage/blob/master/etc/apache-montage.conf">apache-montage.conf</a>.</li>
-<li>Verify your setup by browsing to <a href="http://localhost:8081/first-app/index.html">http://localhost:8081/first-app/index.html</a>.</li>
-</ol><p>The page will show "Hello, World".</p>
+</ol><p>The server is needed because Montage uses XHR to load files, which cannot be done on the file:// protocol.</p>
 
-<p>If you successfully ran the first-app, check out the <a href="https://github.com/montagejs/montagejs.org/wiki/Hello-Montage">Hello Montage</a> tutorial, where you'll be introduced to the parts of a montage application.</p>
-
-<h3>Local web server configuration tips<a class="anchor" id="Local-web-server-configuration-tips" href="#Local-web-server-configuration-tips"></a>
-</h3>
-
-<p>In general, it’s recommended that
-1. you create a projects folder,
-2. clone the Montage repository into that folder, and
-3. configure your web server’s document root to the point to the Montage distribution folder (montage), or create a virtual directory that points to the same location.</p>
-
-<p>It’s also recommended that you disable caching on your web server during development; this ensures that any changes made to your project’s files on disk are reflected in the browser when you reload the project in your web browser. If you are running an Apache web server, you can also apply the recommended <a href="https://github.com/montagejs/montage/blob/master/etc/apache-montage.conf">httpd.conf</a> settings configuration to your projects folder. The <code>"no-cache"</code> HTTP header setting is important as it lets you iterate on your HTML, CSS and JavaScript files without having to worry about cached versions.</p>
-
-<h3>Next steps<a class="anchor" id="Next-steps" href="#Next-steps"></a>
-</h3>
+<h2>Next steps<a class="anchor" id="Next-steps" href="#Next-steps"></a>
+</h2>
 
 <ul>
-<li>For a basic introduction to Montage development, see the <a href="https://github.com/montagejs/montagejs.org/wiki/Hello-Montage">Hello Montage</a> tutorial.</li>
+<li>Find out more about Montage components in <a href="Exploring-components.html">Exploring the component</a>.</li>
+<li>For a basic introduction to Montage development, see the <a href="Hello-Montage.html">Hello Montage</a> tutorial. You can jump straight to the <strong>Specify the component’s initial property values</strong> section</li>
 <li>Experiment with Montage in the browser using <a href="http://montagejs.github.com/montage/samples/mfiddle/">MFiddle</a>.</li>
 </ul>
 

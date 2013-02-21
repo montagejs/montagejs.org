@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    
+    <title>git subtree - Montage Docs</title>
+    
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:400,700'>
+    <link rel="stylesheet" href="../stylesheets/normalize.css">
+    <link rel="stylesheet" href="../stylesheets/base.css">
+    <link rel="stylesheet" href="../stylesheets/pages.css">
+        
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->    
+</head>
+<body>
+  
+    <header class="header header-pages pushed">
+        <div class="header-container">
+            <a href="/"><img class="logo" src="../images/logo-pages.png" alt="Montage"></a>
+            <nav class="nav">
+                <a class="nav-item" href="/apps">Apps</a>
+                <a class="nav-item active" href="/docs">Docs</a>
+            </nav>
+        </div>
+    </header>
+    
+    <section id="docs" class="docs">
+        <article>
+            <div class="markdown-body">
+
+<h1>git subtree<a class="anchor" id="git-subtree" href="#git-subtree"></a>
+</h1>
+
+<p>Git subtrees are like submodules, but better and easier for everyone involved. They allow you to import code from a different repository but instead of adding a <em>reference</em> to your repository, they add the <strong>actual code</strong> <em>and commit saying where the code came from</em>.</p>
+
+<p>The great thing about subtrees is if you do not care about merging or splitting them, they <strong>do not affect you</strong>. You can treat the whole repository as you would normally. If the above describes you, you can stop reading now. </p>
+
+<h2>Installing<a class="anchor" id="Installing" href="#Installing"></a>
+</h2>
+
+<p>If you use OSX and homebrew, then <code>brew install git</code> will install the subtree command along with git.</p>
+
+<p>Otherwise it is a single script you can download:</p>
+
+<ol>
+<li>Download <a href="https://raw.github.com/git/git/master/contrib/subtree/git-subtree.sh">https://raw.github.com/git/git/master/contrib/subtree/git-subtree.sh</a> </li>
+<li>Make executable: <code>chmod a+x git-subtree.sh</code>
+</li>
+<li>Rename to git-subtree: <code>mv git-subtree.sh git-subtree</code>
+</li>
+<li>Move to a directory on your <code>PATH</code>
+</li>
+</ol><h2>Using<a class="anchor" id="Using" href="#Using"></a>
+</h2>
+
+<p>Each section below has a description and example for each command, and a list of the subtrees in each of the montagejs repositories with the command that you can copy and paste. See the Adding section for an example of what a subtree looks like.</p>
+
+<h3>Merging/pulling<a class="anchor" id="Merging/pulling" href="#Merging/pulling"></a>
+</h3>
+
+<p>This will merge updates from the other repository while keeping any changes made to the subtree locally (for example deleted files).</p>
+
+<p></p><div class="highlight"><pre>git subtree pull --squash --prefix<span class="o">=</span><span class="nv">$dir$ </span>git@github.com:<span class="nv">$repo$.</span>git <span class="nv">$commitOrTag$ </span>-m <span class="s2">"Update $name$ to $version$"</span>
+</pre></div>
+
+<h4>Montage ↢ Mr<a class="anchor" id="Montage-↢-Mr" href="#Montage-%E2%86%A2-Mr"></a>
+</h4>
+
+<p></p><div class="highlight"><pre>git subtree pull --squash --prefix<span class="o">=</span>packages/mr git@github.com:montagejs/mr.git <span class="nv">$version</span> -m <span class="s2">"Update Mr to $version$"</span>
+</pre></div>
+
+<h4>Mr ↢ Q<a class="anchor" id="Mr-↢-Q" href="#Mr-%E2%86%A2-Q"></a>
+</h4>
+
+<p></p><div class="highlight"><pre>git subtree pull --squash --prefix<span class="o">=</span>packages/q git@github.com:kriskowal/q.git <span class="nv">$version</span> -m <span class="s2">"Update Q to $version"</span>
+</pre></div>
+
+<h3>Splitting<a class="anchor" id="Splitting" href="#Splitting"></a>
+</h3>
+
+<p>Splitting allows you take take changes to the subtree from your repository and commit them to the other one. </p>
+
+<p>TODO: Write after splitting for the first time</p>
+
+<h3>Adding<a class="anchor" id="Adding" href="#Adding"></a>
+</h3>
+
+<p>This will add all the files in <code>repo</code> at <code>commit</code> under <code>dir</code>, and will create 2 commits</p>
+
+<p></p><div class="highlight"><pre>git subtree add --squash --prefix<span class="o">=</span><span class="nv">$dir$ </span>git@github.com:<span class="nv">$repo$.</span>git <span class="nv">$commitOrTag$ </span>-m <span class="s2">"Add $name$ $version$ as a subtree"</span>
+</pre></div>
+
+<p></p><div class="highlight"><pre><span class="n">commit</span> 25303<span class="n">c2f71a7437f6cb4d8f2e277a2c0aca6040c</span>
+<span class="n">Author</span><span class="p">:</span> <span class="n">Stuart</span> <span class="n">Knightley</span> <span class="o">&lt;</span><span class="n">stuart</span><span class="p">@</span><span class="n">example</span><span class="p">.</span><span class="n">com</span><span class="o">&gt;</span>
+<span class="n">Date</span><span class="p">:</span>   <span class="n">Tue</span> <span class="n">Jan</span> 8 16<span class="p">:</span>49<span class="p">:</span>33 2013 <span class="o">+</span>0000
+
+    <span class="n">Squashed</span> <span class="s">'packages/mr/'</span> <span class="n">content</span> <span class="n">from</span> <span class="n">commit</span> <span class="n">fb221b7</span>
+    
+    <span class="n">git</span><span class="o">-</span><span class="n">subtree</span><span class="o">-</span><span class="n">dir</span><span class="p">:</span> <span class="n">packages</span><span class="o">/</span><span class="n">mr</span>
+    <span class="n">git</span><span class="o">-</span><span class="n">subtree</span><span class="o">-</span><span class="n">split</span><span class="p">:</span> <span class="n">fb221b7322e581ab63aa5a8bdbf8ae5579c6b06c</span>
+
+<span class="n">commit</span> <span class="n">f3cf33549b20e42da24bd55c211af8307092341a</span>
+<span class="n">Merge</span><span class="p">:</span> 3<span class="n">e6a9e2</span> 25303<span class="n">c2</span>
+<span class="n">Author</span><span class="p">:</span> <span class="n">Stuart</span> <span class="n">Knightley</span> <span class="o">&lt;</span><span class="n">stuart</span><span class="p">@</span><span class="n">example</span><span class="p">.</span><span class="n">com</span><span class="o">&gt;</span>
+<span class="n">Date</span><span class="p">:</span>   <span class="n">Tue</span> <span class="n">Jan</span> 8 16<span class="p">:</span>49<span class="p">:</span>33 2013 <span class="o">+</span>0000
+
+    <span class="n">Add</span> <span class="n">Mr</span> <span class="n">v0</span><span class="p">.</span>12<span class="p">.</span>0 <span class="n">as</span> <span class="n">a</span> <span class="n">subtree</span>
+</pre></div>
+
+                </div>
+        </article>
+    </section>
+
+    <section id="next" class="next">
+        <article>
+            <h3 class="title">More help?</h3>
+            <div class="cols">
+                <div class="col col-1-2">
+                    <p>Can't find what you are looking for? Get in touch, we're more than happy in helping answer your questions.
+                    </p>
+                </div>
+                <aside class="col col-1-2">
+                    <p><strong>Have feedback or ideas?</strong> Let us know by creating a new <a href="https://github.com/montagejs/montage/issues" target="_blank">issue</a>, join us in <a href="http://webchat.freenode.net/?channels=montage" target="_blank">IRC</a> or post questions to our <a href="https://groups.google.com/forum/?fromgroups#!forum/montagejs" target="_blank">Google Group</a>. We're also on <a href="https://twitter.com/montage_js" target="_blank">Twitter</a> and <a href="https://plus.google.com/116915300739108010954/" target="_blank">Google+</a>.
+                    </p>
+                </aside>
+            </div>
+        </article>
+    </section>
+
+    
+    <section id="social" class="social">
+        <article>
+            
+            <div class="button-group github">
+                <iframe src="http://ghbtns.com/github-btn.html?user=montagejs&repo=montage&type=watch&count=true"
+                  allowtransparency="true" frameborder="0" scrolling="0" width="90px" height="20px"></iframe>
+                <iframe src="http://ghbtns.com/github-btn.html?user=montagejs&repo=montage&type=fork&count=true"
+                  allowtransparency="true" frameborder="0" scrolling="0" width="90px" height="20px"></iframe>
+            </div>
+            
+            
+            <div class="button-group twitter">
+                <a href="https://twitter.com/share" class="twitter-share-button" data-via="montage_js" data-count="none">Tweet</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                <a href="https://twitter.com/montage_js" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @montage_js</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </div>
+            
+            <div class="button-group g-plus">
+                <!-- Place this tag in your head or just before your close body tag. -->
+                <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+                  {parsetags: 'explicit'}
+                </script>
+                <!-- Place this tag where you want the +1 button to render. -->
+                <div class="g-plusone" data-size="medium" data-annotation="inline" data-width="200"></div>
+                <!-- Place this render call where appropriate. -->
+                <script type="text/javascript">gapi.plusone.go();</script>
+            </div>
+            
+        </article>
+    </section>
+        
+    
+    <footer class="footer">
+        2012 montagejs.org - <a href="https://github.com/montagejs/montagejs.org">Contributions</a> to this page are welcomed.
+    </footer>
+        
+    
+    <!-- Google -->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-35717912-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    
+</body>
+</html>
