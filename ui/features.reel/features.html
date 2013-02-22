@@ -1,70 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
     <title></title>
-    <link rel="stylesheet" href="features.css">
-    <script type="text/montage-serialization">
-        {
-            "owner": {
-                "prototype": "ui/features.reel",
-                "properties": {
-                    "element": {
-                        "#": "component"
-                    }
-                }
-            },
-
-            "number": {
-                "prototype": "montage/ui/input-number.reel",
-                "properties": {
-                    "element": {"#": "number"},
-                    "min": 0,
-                    "max": 100
-                },
-                "bindings": {
-                    "value": {
-                        "<->": "@range.value",
-                        "converter": {"@": "owner"}
-                    }
-                }                
-            },
-
-            "range": {
-                "prototype": "montage/ui/input-range.reel",
-                "properties": {
-                    "element": {"#": "range"},
-                    "minValue": 0,
-                    "maxValue": 100,
-                    "value": 50
-                }
-            },
-
-            "numberValue": {
-                "prototype": "montage/ui/dynamic-text.reel",
-                "properties": {
-                    "element": {"#": "numberValue"}
-                },
-                "bindings": {
-                    "value": {
-                        "<-": "@number.value",
-                        "converter": {"@": "owner"}
-                    }
-                }
-            },
-            "rangeValue": {
-                "prototype": "montage/ui/dynamic-text.reel",
-                "properties": {
-                    "element": {"#": "rangeValue"}
-                },
-                "bindings": {
-                    "value": {
-                        "<-": "@number.value",
-                        "converter": {"@": "owner"}                         
-                    }
-                }
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="features.css" />
+    <script type="text/montage-serialization">{"owner":{"prototype":"ui/features.reel","properties":{"element":{"#":"component"}}},"number":{"prototype":"montage/ui/input-number.reel","properties":{"element":{"#":"number"},"min":0,"max":100},"bindings":{"value":{"<->":"@range.value","converter":{"@":"owner"}}}},"range":{"prototype":"montage/ui/input-range.reel","properties":{"element":{"#":"range"},"minValue":0,"maxValue":100,"value":50}},"numberValue":{"prototype":"montage/ui/dynamic-text.reel","properties":{"element":{"#":"numberValue"}},"bindings":{"value":{"<-":"@number.value","converter":{"@":"owner"}}}},"rangeValue":{"prototype":"montage/ui/dynamic-text.reel","properties":{"element":{"#":"rangeValue"}},"bindings":{"value":{"<-":"@number.value","converter":{"@":"owner"}}}}}</script>
 
 </head>
 <body>

@@ -1,16 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     
     <title>git subtree - Montage Docs</title>
     
-    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:400,700'>
-    <link rel="stylesheet" href="../stylesheets/normalize.css">
-    <link rel="stylesheet" href="../stylesheets/base.css">
-    <link rel="stylesheet" href="../stylesheets/pages.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" />
+    <link rel="stylesheet" href="../stylesheets/normalize.css" />
+    <link rel="stylesheet" href="../stylesheets/base.css" />
+    <link rel="stylesheet" href="../stylesheets/pages.css" />
         
     <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->    
 </head>
@@ -18,7 +18,7 @@
   
     <header class="header header-pages pushed">
         <div class="header-container">
-            <a href="/"><img class="logo" src="../images/logo-pages.png" alt="Montage"></a>
+            <a href="/"><img class="logo" src="../images/logo-pages.png" alt="Montage" /></a>
             <nav class="nav">
                 <a class="nav-item" href="/apps">Apps</a>
                 <a class="nav-item active" href="/docs">Docs</a>
@@ -92,9 +92,9 @@
 <p></p><div class="highlight"><pre>git subtree add --squash --prefix<span class="o">=</span><span class="nv">$dir$ </span>git@github.com:<span class="nv">$repo$.</span>git <span class="nv">$commitOrTag$ </span>-m <span class="s2">"Add $name$ $version$ as a subtree"</span>
 </pre></div>
 
-<p></p><div class="highlight"><pre><span class="n">commit</span> 25303<span class="n">c2f71a7437f6cb4d8f2e277a2c0aca6040c</span>
+<p></p><div class="highlight"><pre><span class="n">commit</span> <span class="mi">25303</span><span class="n">c2f71a7437f6cb4d8f2e277a2c0aca6040c</span>
 <span class="n">Author</span><span class="p">:</span> <span class="n">Stuart</span> <span class="n">Knightley</span> <span class="o">&lt;</span><span class="n">stuart</span><span class="p">@</span><span class="n">example</span><span class="p">.</span><span class="n">com</span><span class="o">&gt;</span>
-<span class="n">Date</span><span class="p">:</span>   <span class="n">Tue</span> <span class="n">Jan</span> 8 16<span class="p">:</span>49<span class="p">:</span>33 2013 <span class="o">+</span>0000
+<span class="n">Date</span><span class="p">:</span>   <span class="n">Tue</span> <span class="n">Jan</span> <span class="mi">8</span> <span class="mi">16</span><span class="p">:</span><span class="mi">49</span><span class="p">:</span><span class="mi">33</span> <span class="mi">2013</span> <span class="o">+</span><span class="mi">0000</span>
 
     <span class="n">Squashed</span> <span class="s">'packages/mr/'</span> <span class="n">content</span> <span class="n">from</span> <span class="n">commit</span> <span class="n">fb221b7</span>
     
@@ -102,11 +102,11 @@
     <span class="n">git</span><span class="o">-</span><span class="n">subtree</span><span class="o">-</span><span class="n">split</span><span class="p">:</span> <span class="n">fb221b7322e581ab63aa5a8bdbf8ae5579c6b06c</span>
 
 <span class="n">commit</span> <span class="n">f3cf33549b20e42da24bd55c211af8307092341a</span>
-<span class="n">Merge</span><span class="p">:</span> 3<span class="n">e6a9e2</span> 25303<span class="n">c2</span>
+<span class="n">Merge</span><span class="p">:</span> <span class="mf">3e6</span><span class="n">a9e2</span> <span class="mi">25303</span><span class="n">c2</span>
 <span class="n">Author</span><span class="p">:</span> <span class="n">Stuart</span> <span class="n">Knightley</span> <span class="o">&lt;</span><span class="n">stuart</span><span class="p">@</span><span class="n">example</span><span class="p">.</span><span class="n">com</span><span class="o">&gt;</span>
-<span class="n">Date</span><span class="p">:</span>   <span class="n">Tue</span> <span class="n">Jan</span> 8 16<span class="p">:</span>49<span class="p">:</span>33 2013 <span class="o">+</span>0000
+<span class="n">Date</span><span class="p">:</span>   <span class="n">Tue</span> <span class="n">Jan</span> <span class="mi">8</span> <span class="mi">16</span><span class="p">:</span><span class="mi">49</span><span class="p">:</span><span class="mi">33</span> <span class="mi">2013</span> <span class="o">+</span><span class="mi">0000</span>
 
-    <span class="n">Add</span> <span class="n">Mr</span> <span class="n">v0</span><span class="p">.</span>12<span class="p">.</span>0 <span class="n">as</span> <span class="n">a</span> <span class="n">subtree</span>
+    <span class="n">Add</span> <span class="n">Mr</span> <span class="n">v0</span><span class="p">.</span><span class="mf">12.0</span> <span class="n">as</span> <span class="n">a</span> <span class="n">subtree</span>
 </pre></div>
 
                 </div>
@@ -134,29 +134,25 @@
         <article>
             
             <div class="button-group github">
-                <iframe src="http://ghbtns.com/github-btn.html?user=montagejs&repo=montage&type=watch&count=true"
-                  allowtransparency="true" frameborder="0" scrolling="0" width="90px" height="20px"></iframe>
-                <iframe src="http://ghbtns.com/github-btn.html?user=montagejs&repo=montage&type=fork&count=true"
-                  allowtransparency="true" frameborder="0" scrolling="0" width="90px" height="20px"></iframe>
+                <iframe src="http://ghbtns.com/github-btn.html?user=montagejs&amp;repo=montage&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="90px" height="20px"></iframe>
+                <iframe src="http://ghbtns.com/github-btn.html?user=montagejs&amp;repo=montage&amp;type=fork&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="90px" height="20px"></iframe>
             </div>
             
             
             <div class="button-group twitter">
                 <a href="https://twitter.com/share" class="twitter-share-button" data-via="montage_js" data-count="none">Tweet</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                <script>!function(e,t,n){var r,i=e.getElementsByTagName(t)[0];e.getElementById(n)||(r=e.createElement(t),r.id=n,r.src="//platform.twitter.com/widgets.js",i.parentNode.insertBefore(r,i))}(document,"script","twitter-wjs")</script>
                 <a href="https://twitter.com/montage_js" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @montage_js</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                <script>!function(e,t,n){var r,i=e.getElementsByTagName(t)[0];e.getElementById(n)||(r=e.createElement(t),r.id=n,r.src="//platform.twitter.com/widgets.js",i.parentNode.insertBefore(r,i))}(document,"script","twitter-wjs")</script>
             </div>
             
             <div class="button-group g-plus">
-                <!-- Place this tag in your head or just before your close body tag. -->
-                <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
-                  {parsetags: 'explicit'}
-                </script>
-                <!-- Place this tag where you want the +1 button to render. -->
+                
+                <script src="https://apis.google.com/js/plusone.js">"explicit"</script>
+                
                 <div class="g-plusone" data-size="medium" data-annotation="inline" data-width="200"></div>
-                <!-- Place this render call where appropriate. -->
-                <script type="text/javascript">gapi.plusone.go();</script>
+                
+                <script>gapi.plusone.go()</script>
             </div>
             
         </article>
@@ -168,17 +164,8 @@
     </footer>
         
     
-    <!-- Google -->
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-35717912-1']);
-      _gaq.push(['_trackPageview']);
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
+    
+    <script>var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-35717912-1"]),_gaq.push(["_trackPageview"]),function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script>
     
 </body>
 </html>
