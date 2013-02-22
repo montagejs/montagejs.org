@@ -46,6 +46,12 @@ cd "$OUT_DIR"
 npm install
 cd -
 
+if [ "$1" == "--no-build" ]
+then
+    echo "Not building"
+    exit 0;
+fi
+
 ## Build ###
 
 mop "$OUT_DIR"
