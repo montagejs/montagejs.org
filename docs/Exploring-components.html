@@ -1,36 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+
     <title>Exploring components - Montage Docs</title>
-    
-    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:400,700'>
-    <link rel="stylesheet" href="../stylesheets/normalize.css">
-    <link rel="stylesheet" href="../stylesheets/base.css">
-    <link rel="stylesheet" href="../stylesheets/pages.css">
-        
-    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->    
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" />
+    <link rel="stylesheet" href="../stylesheets/normalize.css" />
+    <link rel="stylesheet" href="../stylesheets/base.css" />
+    <link rel="stylesheet" href="../stylesheets/pages.css" />
+    <link rel="stylesheet" href="../stylesheets/solarized.css" />
+
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
-<body>
-  
+<body class="docs">
+
     <header class="header header-pages pushed">
         <div class="header-container">
-            <a href="/"><img class="logo" src="../images/logo-pages.png" alt="Montage"></a>
+            <a href="/"><img class="logo" src="../images/logo-pages.png" alt="Montage" /></a>
             <nav class="nav">
                 <a class="nav-item" href="/apps">Apps</a>
                 <a class="nav-item active" href="/docs">Docs</a>
+                <a class="nav-item" href="/apis">APIs</a>
             </nav>
         </div>
     </header>
-    
-    <section id="docs" class="docs">
+
+    <section id="docs">
         <article>
             <div class="markdown-body">
 
-<p>One of the great features of Montage is encapsulated components. This means that the structure (html), appearance (css) and behavior (js) are all self-contained in a directory. These directories end with a <code>.reel</code> extension, just like a regular file, to indicate that it is an isolated unit.</p>
+<ol>
+<li><a href="Quick-Start.html">Quick Start</a></li>
+<li><strong>Exploring Components</strong></li>
+<li><a href="Hello-Montage.html">Hello Montage</a></li>
+</ol><hr /><p>Components make up the view portion of a Montage application.</p>
+
+<p>While Montage itself includes a variety of pre-built user interface components, a custom Montage application employs the same component mechanism to help build and organize its interface.</p>
+
+<p>Montage components are modular and encapsulated; the structure (HTML), appearance (CSS) and behavior (JavaScript) that power the component are all contained in the same directory. These directories end with a <code>.reel</code> extension, just like a regular file, to indicate that it is an isolated unit.</p>
+
+<p>This modularity means that wherever a component is used, the same HTML will dictate how is is structured, the same CSS will dictate how it looks, and the same JavaScript will dictate how it behaves. Since a component is self-contained, it's easy to work on, rename, or even remove a single component without having to find bits and pieces of it scattered across different directories.</p>
 
 <p>Inside the directory from the <a href="Quick-Start.html">Quick Start</a> guide run the minit command to create a new component</p>
 
@@ -41,9 +53,9 @@ name-tag.reel created.
 name-tag.css   name-tag.html  name-tag.js
 </pre></div>
 
-<p>The first thing to notice is that we put all our components in the <code>ui</code> directory. This convention allows you to use any Montage package and know exactly where the components are.</p>
+<p>The first thing to notice is that we put all our components in the <code>ui</code> directory. This convention allows you to use any Montage package and easily locate the components it provides.</p>
 
-<p>Lets step through the files, and some of the notable features in each of them.</p>
+<p>Let's step through the files, and some of the notable features in each of them.</p>
 
 <h2>HTML<a class="anchor" id="HTML" href="#HTML"></a>
 </h2>
@@ -71,7 +83,7 @@ name-tag.css   name-tag.html  name-tag.js
 </li>
 <li>the serialization is just JSON, with some enforced semantics</li>
 <li>
-<code>owner</code> is a special label in the serialization that refers to the current component. It's the equivalent of <code>this</code> in Javascript</li>
+<code>owner</code> is a special label in the serialization that refers to the current component. It's the equivalent of <code>this</code> in Javascript.</li>
 <li>within the serialization you can use <code>{"#": "montage-id"}</code> to refer to elements in the body</li>
 <li>although not shown here, you can also use <code>{"@": "label"}</code> to refer to another object by its label in the serialization</li>
 </ul><p></p><div class="highlight"><pre><span class="nt">&lt;body&gt;</span>
@@ -80,7 +92,9 @@ name-tag.css   name-tag.html  name-tag.js
 <span class="nt">&lt;/body&gt;</span>
 </pre></div>
 
-<p>Each template has one element that contains all the structure for the template. The <code>data-montage-id</code> attribute uniquely identifies elements (<a href="#id">why data-montage-id?</a>). If you look back at the serialization you'll notice that we're assigning <code>name-tag</code> as this component's element.</p>
+<p>While each template is a complete and valid document, only one element serves as the root element of the component being described. The serialization identifies the element with the <code>data-montage-id</code> of <code>name-tag</code> as this component's root element using the <code>{"#": "name-tag"}</code> reference.</p>
+
+<p>This means that when we use a NameTag component in a Montage application the only portion of its template that will be rendered is the <code>name-tag</code> element. This also explains why we do not use the document unique HTML id attribute to identify the element. (<a href="#id">why data-montage-id?</a>).</p>
 
 <h2>CSS<a class="anchor" id="CSS" href="#CSS"></a>
 </h2>
@@ -108,7 +122,16 @@ name-tag.css   name-tag.html  name-tag.js
 
 <p>The file exports a single object with a CamelCased version of the reel name, which inherits from Component. <code>Montage.create()</code> is a special version of Ecmascript 5's <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Object/create">Object.create()</a> that has some extensions that we'll explore later.</p>
 
-<p><span id="id"><strong>Why data-montage-id?</strong></span> The <code>id</code> attribute seems like an ideal candidate for identifying an element, however there are some issues. We don't use <code>id</code> because our components are reusable, and so when they are inserted into a document multiple times there would be multiple elements with the same id, which is invalid HTML5. <strong>Why not remove the id when inserting?</strong> Although you should always use classes to style your document, we don't want to prevent ids being used for styling, either for performance or legacy reasons. This means we can't use the id attribute. Instead we use a <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#custom-data-attribute">custom data- attribute</a>, <code>data-montage-id</code>. When the <a href="https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/shadow/index.html">Shadow DOM</a> gets more mature and is implemented it might be possible to revert back to using id, as each template will be isolated in the document.</p>
+<p>In use the NameTag Component will be rendered in a document using its element from its included template, styled using its included CSS, and given instructions on how to act from its included JavaScript.</p>
+
+<h1>All Together Now<a class="anchor" id="All-Together-Now" href="#All-Together-Now"></a>
+</h1>
+
+<p>No component is an island; they are assembled to present the User Interface of your Montage application.</p>
+
+<p>With your name tag component in hand say <a href="Hello-Montage.html">Hello to Montage</a></p>
+
+<hr /><p><span id="id"><strong>Why data-montage-id?</strong></span> The <code>id</code> attribute seems like an ideal candidate for identifying an element, however there are some issues. We don't use <code>id</code> because our components are reusable, and so when they are inserted into a document multiple times there would be multiple elements with the same id, which is invalid HTML5. <strong>Why not remove the id when inserting?</strong> Although you should always use classes to style your document, we don't want to prevent ids being used for styling, either for performance or legacy reasons. This means we can't use the id attribute. Instead we use a <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#custom-data-attribute">custom data- attribute</a>, <code>data-montage-id</code>. When the <a href="https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/shadow/index.html">Shadow DOM</a> gets more mature and is implemented it might be possible to revert back to using id, as each template will be isolated in the document.</p>
 
                 </div>
         </article>
@@ -130,56 +153,43 @@ name-tag.css   name-tag.html  name-tag.js
         </article>
     </section>
 
-    
+
     <section id="social" class="social">
         <article>
-            
+
             <div class="button-group github">
-                <iframe src="http://ghbtns.com/github-btn.html?user=montagejs&repo=montage&type=watch&count=true"
-                  allowtransparency="true" frameborder="0" scrolling="0" width="90px" height="20px"></iframe>
-                <iframe src="http://ghbtns.com/github-btn.html?user=montagejs&repo=montage&type=fork&count=true"
-                  allowtransparency="true" frameborder="0" scrolling="0" width="90px" height="20px"></iframe>
+                <iframe src="http://ghbtns.com/github-btn.html?user=montagejs&amp;repo=montage&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="90px" height="20px"></iframe>
+                <iframe src="http://ghbtns.com/github-btn.html?user=montagejs&amp;repo=montage&amp;type=fork&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="90px" height="20px"></iframe>
             </div>
-            
-            
+
+
             <div class="button-group twitter">
                 <a href="https://twitter.com/share" class="twitter-share-button" data-via="montage_js" data-count="none">Tweet</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                <script>!function(e,t,n){var r,i=e.getElementsByTagName(t)[0];e.getElementById(n)||(r=e.createElement(t),r.id=n,r.src="//platform.twitter.com/widgets.js",i.parentNode.insertBefore(r,i))}(document,"script","twitter-wjs")</script>
                 <a href="https://twitter.com/montage_js" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @montage_js</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                <script>!function(e,t,n){var r,i=e.getElementsByTagName(t)[0];e.getElementById(n)||(r=e.createElement(t),r.id=n,r.src="//platform.twitter.com/widgets.js",i.parentNode.insertBefore(r,i))}(document,"script","twitter-wjs")</script>
             </div>
-            
+
             <div class="button-group g-plus">
-                <!-- Place this tag in your head or just before your close body tag. -->
-                <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
-                  {parsetags: 'explicit'}
-                </script>
-                <!-- Place this tag where you want the +1 button to render. -->
+                
+                <script src="https://apis.google.com/js/plusone.js">"explicit"</script>
+                
                 <div class="g-plusone" data-size="medium" data-annotation="inline" data-width="200"></div>
-                <!-- Place this render call where appropriate. -->
-                <script type="text/javascript">gapi.plusone.go();</script>
+                
+                <script>gapi.plusone.go()</script>
             </div>
-            
+
         </article>
     </section>
-        
-    
+
+
     <footer class="footer">
-        2012 montagejs.org - <a href="https://github.com/montagejs/montagejs.org">Contributions</a> to this page are welcomed.
+        2013 montagejs.org - <a href="https://github.com/montagejs/montagejs.org">Contributions</a> to this page are welcomed.
     </footer>
-        
+
+
     
-    <!-- Google -->
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-35717912-1']);
-      _gaq.push(['_trackPageview']);
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
-    
+    <script>var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-35717912-1"]),_gaq.push(["_trackPageview"]),function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script>
+
 </body>
 </html>

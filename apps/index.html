@@ -1,81 +1,126 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+
     <title>Montage Apps</title>
-    
-    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:400,700'>
-    <link rel="stylesheet" href="../stylesheets/normalize.css">
-    <link rel="stylesheet" href="../stylesheets/base.css">
-    <link rel="stylesheet" href="../stylesheets/pages.css">
-        
-    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->    
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" />
+    <link rel="stylesheet" href="../stylesheets/normalize.css" />
+    <link rel="stylesheet" href="../stylesheets/base.css" />
+    <link rel="stylesheet" href="../stylesheets/pages.css" />
+
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 <body>
-  
+
     <header class="header-pages">
         <div class="header-container">
-            <a href="/"><img class="logo" src="../images/logo-pages.png" alt="Montage"></a>
+            <a href="/"><img class="logo" src="../images/logo-pages.png" alt="Montage" /></a>
             <nav class="nav">
                 <a class="nav-item active" href="/apps">Apps</a>
+                <a class="nav-item" href="/docs">Docs</a>
+                <a class="nav-item" href="/apis">APIs</a>
             </nav>
         </div>
     </header>
-    
-	<section id="apps" class="apps pushed">
+
+    <section id="intro" class="intro">
+        <article>
+            <h3 class="title">Made with Montage</h3>
+            <div class="cols">
+                <div class="col col-1-2">
+                    <p>The following case study will get you some insights how a Montage app was built and what impact it had.</p>
+                </div>
+                <aside class="col col-1-2">
+                </aside>
+            </div>
+        </article>
+    </section>
+
+    <section id="scratchpad" class="case">
+        <article>
+            <h3 class="title">Scratchpad <span class="case-optimized">(Chrome)</span></h3>
+            <div class="cols">
+                <div class="col col-1-2">
+                    <a class="case-thumb" href="https://chrome.google.com/webstore/detail/kjebfhglflhjjjiceimfkgicifkhjlnm" target="_blank">
+                        <img class="case-img" src="../images/apps/scratchpad@2x.jpg" alt="Scratchpad" />
+                    </a>
+                </div>
+                <aside class="col col-1-2">
+                    <img class="case-icon" src="../images/apps/scratchpad-icon.png" alt="icon" />
+                    <p><strong>Scratchpad 3.0</strong> is the first shipping Montage application. It is a Note taking Chrome application developed for Google that synchronizes with Google Drive. This version added a few features, an updated visual design, removed the Closure framework and was almost completely re- implemented with Montage.</p>
+                    <p>Thanks to Montage’s modular structure and HTML5 Templates, the skeleton of the app was in place in one day, which allowed the 5 person team to work in parallel from the very beginning, including CSS styling. The project was feature complete in 5 dev-months. About 75% of the application was re-implemented with a 25% reduction in code size.</p>
+                    <p>
+                        <a class="case-launch button--action" href="https://chrome.google.com/webstore/detail/kjebfhglflhjjjiceimfkgicifkhjlnm" target="_blank">Install</a>
+                    </p>
+                </aside>
+            </div>
+        </article>
+    </section>
+
+    <section id="TipsTricks" class="case">
+        <article>
+            <h3 class="title">Tips &amp; Tricks <span class="case-optimized">(Chrome OS)</span></h3>
+            <div class="cols">
+                <aside class="col col-1-2">
+                    <img class="case-icon" src="../images/apps/TipsTricks-icon.png" alt="icon" />
+                    <p>The second Montage project done for Google is the <strong>Tips &amp; Tricks</strong> application which is the first user experience on a Chrome device. This is a hosted application with a custom Loader. It uses Montage Flow component and was coded in 4.5 dev-months, including UI explorations.</p>
+                    <p>Clicking on one topic brings more details in a light box without loosing the linear exploration with cues on the sides. The topic detail navigation is presented using Montage’s Flow component which allows to place any component on a custom 3D bezier path. Thanks to Flow’s frustum culling algorithm, components that are not visible are not rendered, allowing the content to be loaded lazily, improving application load time.</p>
+                    <p>
+                        <a class="case-launch button--action" href="http://gweb-gettingstartedguide.appspot.com/" target="_blank">Launch</a>
+                    </p>
+                </aside>
+                <div class="col col-1-2">
+                    <a class="case-thumb" href="http://gweb-gettingstartedguide.appspot.com/" target="_blank">
+                        <img class="case-img" src="../images/apps/TipsTricks@2x.jpg" alt="Tips&amp;Tricks" />
+                    </a>
+                </div>
+            </div>
+        </article>
+    </section>
+
+	<section id="gallery" class="gallery pushed">
 	    <article>
-	        <h3 class="title">Made with Montage</h3>
-	        <p>A gallery of Apps and demos built with Montage.</p>
-	        <ul class="gallery">
+	        <h3 class="title">Gallery</h3>
+	        <p>More Apps and demos built with Montage.</p>
+	        <ul class="gallery-list">
 	            <li class="gallery-item">
-	                <a href="https://chrome.google.com/webstore/detail/kjebfhglflhjjjiceimfkgicifkhjlnm" target="_blank">
-	                    <figure class="gallery-thumb"><img class="gallery-img" src="../images/apps/scratchpad.jpg" alt="Scratchpad" /></figure>
-	                    <figcaption class="gallery-description">Scratchpad (Chrome)</figcaption>
-	                </a>
-	            </li>
-	            <li class="gallery-item">
-	                <a href="http://montagejs.github.com/montage/samples/paparazzi/" target="_blank">
-	                    <figure class="gallery-thumb"><img class="gallery-img" src="../images/apps/paparazzi.jpg" alt="Paparazzi" /></figure>
-	                    <figcaption class="gallery-description">Paparazzi (Desktop)</figcaption>
+	                <a href="popcorn/" target="_blank">
+	                    <figure class="gallery-thumb"><img class="gallery-img" src="../images/apps/popcorn.jpg" alt="Popcorn" /></figure>
+	                    <figcaption class="gallery-description">Popcorn (Tablets) <a class="gallery-item-source" href="https://github.com/montagejs/popcorn" target="_blank">Source</a></figcaption>
 	                </a>
 	            </li>
 	            <li class="gallery-item">
 	                <a href="http://montagejs.github.com/montage/samples/calculator/" target="_blank">
 	                    <figure class="gallery-thumb"><img class="gallery-img" src="../images/apps/calculator.jpg" alt="Calculator" /></figure>
-	                    <figcaption class="gallery-description">Calculator (Phones + Tablets)</figcaption>
+	                    <figcaption class="gallery-description">Calculator (Mobile) <a class="gallery-item-source" href="https://github.com/montagejs/calculator" target="_blank">Source</a></figcaption>
 	                </a>
 	            </li>
 	            <li class="gallery-item">
-	                <a href="http://montagejs.github.com/montage/samples/popcorn/" target="_blank">
-	                    <figure class="gallery-thumb"><img class="gallery-img" src="../images/apps/popcorn.jpg" alt="MovieShow" /></figure>
-	                    <figcaption class="gallery-description">MovieShow (Tablets)</figcaption>
+	                <a href="http://montagejs.github.com/montage/samples/paparazzi/" target="_blank">
+	                    <figure class="gallery-thumb"><img class="gallery-img" src="../images/apps/paparazzi.jpg" alt="Paparazzi" /></figure>
+	                    <figcaption class="gallery-description">Paparazzi (Desktop) <a class="gallery-item-source" href="https://github.com/montagejs/paparazzi" target="_blank">Source</a></figcaption>
 	                </a>
 	            </li>
 	            <li class="gallery-item">
 	                <a href="http://montagejs.github.com/montage/samples/carconfigurator/" target="_blank">
 	                    <figure class="gallery-thumb"><img class="gallery-img" src="../images/apps/carconfigurator.jpg" alt="Car Configurator" /></figure>
-	                    <figcaption class="gallery-description">Car Configurator</figcaption>
-	                </a>
-	            </li>
-	            <li class="gallery-item">
-	                <a href="http://gweb-gettingstartedguide.appspot.com/" target="_blank">
-	                    <figure class="gallery-thumb"><img class="gallery-img" src="../images/apps/TipsTricks.jpg" alt="Tips&amp;Tricks" /></figure>
-	                    <figcaption class="gallery-description">Tips&amp;Tricks (Chrome OS)</figcaption>
+	                    <figcaption class="gallery-description">Car Configurator <a class="gallery-item-source" href="https://github.com/montagejs/carconfigurator" target="_blank">Source</a></figcaption>
 	                </a>
 	            </li>
 	            <li class="gallery-item">
 	                <a href="http://montagejs.github.com/montage/samples/photofx/" target="_blank">
 	                    <figure class="gallery-thumb"><img class="gallery-img" src="../images/apps/photoFX.jpg" alt="photoFX" /></figure>
-	                    <figcaption class="gallery-description">photoFX (Desktop)</figcaption>
+	                    <figcaption class="gallery-description">photoFX (Desktop) <a class="gallery-item-source" href="https://github.com/montagejs/photofx" target="_blank">Source</a></figcaption>
 	                </a>
 	            </li>
 	            <li class="gallery-item">
 	                <a href="http://todomvc.com/labs/architecture-examples/montage/" target="_blank">
 	                    <figure class="gallery-thumb"><img class="gallery-img" src="../images/apps/ToDoMVC.jpg" alt="TodoMVC" /></figure>
-	                    <figcaption class="gallery-description">TodoMVC</figcaption>
+	                    <figcaption class="gallery-description">TodoMVC <a class="gallery-item-source" href="https://github.com/montagejs/todo-mvc" target="_blank">Source</a></figcaption>
 	                </a>
 	            </li>
 	            <li class="gallery-item">
@@ -85,90 +130,42 @@
 	                </a>
 	            </li>
 	            <li class="gallery-item">
-	                <a href="http://montagejs.github.com/mfiddle/" target="_blank">
-	                    <figure class="gallery-thumb"><img class="gallery-img" src="../images/apps/mfiddle.jpg" alt="Mfiddle" /></figure>
-	                    <figcaption class="gallery-description">Mfiddle (Desktop)</figcaption>
-	                </a>
-	            </li>
-	            <li class="gallery-item">
 	                <a href="http://montagejs.github.com/montage/samples/temp-converter/" target="_blank">
 	                    <figure class="gallery-thumb"><img class="gallery-img" src="../images/apps/temp-converter.jpg" alt="Temp Converter" /></figure>
-	                    <figcaption class="gallery-description">Temp Converter (WebKit)</figcaption>
+	                    <figcaption class="gallery-description">Temp Converter (WebKit) <a class="gallery-item-source" href="https://github.com/montagejs/temp-converter" target="_blank">Source</a></figcaption>
 	                </a>
 	            </li>
 	        </ul>
 	        <p class="note"><strong>Note:</strong> Most of these applications are running in development mode so you can view their source. These applications can be made ready for production with <a href="https://github.com/montagejs/mop" target="_blank">Mop, the Montage optimizer</a> which will bundle and minimize the resources into shards.</p>
 	    </article>
 	</section>
-	
- 	
+
+
 
     <section id="next" class="next">
         <article>
             <h3 class="title">Create Montage Apps</h3>
             <div class="cols">
                 <div class="col col-1-2">
-                    <p>For more infos how to create your own Montage Apps, head over to the <a href="https://github.com/montagejs/montage/wiki">Montage Docs</a>. With the <a href="https://github.com/montagejs/minit">Minit tool</a> you can kickstart your application by generating all files and basic structure. Or to start from scratch have a look at this <a href="https://github.com/montagejs/montage/wiki/Hello-Montage">Hello World</a> tutorial.
+                    <p>For more infos how to create your own Montage Apps, head over to the <a href="http://montagejs.org/docs/">Montage Docs</a>. With the <a href="https://github.com/montagejs/minit">Minit</a> (Montage Initializer) tool you can  <a href="http://montagejs.org/docs/Quick-Start.html">kickstart</a> your application by generating all files and basic structure.
                     </p>
                 </div>
                 <aside class="col col-1-2">
-                    <p><strong>Have feedback or ideas?</strong> Let us know by creating a new <a href="https://github.com/montagejs/montage/issues" target="_blank">issue</a>, join us in <a href="http://webchat.freenode.net/?channels=montage" target="_blank">IRC</a> or post questions to our <a href="https://groups.google.com/forum/?fromgroups#!forum/montagejs" target="_blank">Google Group</a>. We're also on <a href="https://twitter.com/montage_js" target="_blank">Twitter</a> and <a href="https://plus.google.com/116915300739108010954/" target="_blank">Google+</a>.
+                    <p><strong>Already created a Montage application?</strong> Let us know on <a href="http://webchat.freenode.net/?channels=montage" target="_blank">IRC</a> or <a href="https://twitter.com/montage_js" target="_blank">Twitter</a> and we might feature it in the gallery.
                     </p>
+                    <p>Also, get in touch if you struggle somewhere. We're eager to hear about your pain points so we can improve the framework.</p>
                 </aside>
             </div>
         </article>
     </section>
 
-    
-    <section id="social" class="social">
-        <article>
-            
-            <div class="button-group github">
-                <iframe src="http://ghbtns.com/github-btn.html?user=montagejs&repo=montage&type=watch&count=true"
-                  allowtransparency="true" frameborder="0" scrolling="0" width="90px" height="20px"></iframe>
-                <iframe src="http://ghbtns.com/github-btn.html?user=montagejs&repo=montage&type=fork&count=true"
-                  allowtransparency="true" frameborder="0" scrolling="0" width="90px" height="20px"></iframe>
-            </div>
-            
-            
-            <div class="button-group twitter">
-                <a href="https://twitter.com/share" class="twitter-share-button" data-via="montage_js" data-count="none">Tweet</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                <a href="https://twitter.com/montage_js" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @montage_js</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-            </div>
-            
-            <div class="button-group g-plus">
-                <!-- Place this tag in your head or just before your close body tag. -->
-                <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
-                  {parsetags: 'explicit'}
-                </script>
-                <!-- Place this tag where you want the +1 button to render. -->
-                <div class="g-plusone" data-size="medium" data-annotation="inline" data-width="200"></div>
-                <!-- Place this render call where appropriate. -->
-                <script type="text/javascript">gapi.plusone.go();</script>
-            </div>
-            
-        </article>
-    </section>
-        
-    
     <footer class="footer">
-        2012 montagejs.org - <a href="https://github.com/montagejs/montagejs.org">Contributions</a> to this page are welcomed.
+        2013 montagejs.org - <a href="https://github.com/montagejs/montagejs.org">Contributions</a> to this page are welcomed.
     </footer>
-        
+
+
     
-    <!-- Google -->
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-35717912-1']);
-      _gaq.push(['_trackPageview']);
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
-    
+    <script>var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-35717912-1"]),_gaq.push(["_trackPageview"]),function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script>
+
 </body>
 </html>

@@ -1,157 +1,273 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+
     <title>Hello Montage - Montage Docs</title>
-    
-    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:400,700'>
-    <link rel="stylesheet" href="../stylesheets/normalize.css">
-    <link rel="stylesheet" href="../stylesheets/base.css">
-    <link rel="stylesheet" href="../stylesheets/pages.css">
-        
-    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->    
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" />
+    <link rel="stylesheet" href="../stylesheets/normalize.css" />
+    <link rel="stylesheet" href="../stylesheets/base.css" />
+    <link rel="stylesheet" href="../stylesheets/pages.css" />
+    <link rel="stylesheet" href="../stylesheets/solarized.css" />
+
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
-<body>
-  
+<body class="docs">
+
     <header class="header header-pages pushed">
         <div class="header-container">
-            <a href="/"><img class="logo" src="../images/logo-pages.png" alt="Montage"></a>
+            <a href="/"><img class="logo" src="../images/logo-pages.png" alt="Montage" /></a>
             <nav class="nav">
                 <a class="nav-item" href="/apps">Apps</a>
                 <a class="nav-item active" href="/docs">Docs</a>
+                <a class="nav-item" href="/apis">APIs</a>
             </nav>
         </div>
     </header>
-    
-    <section id="docs" class="docs">
+
+    <section id="docs">
         <article>
             <div class="markdown-body">
 
-<h1>Hello Montage<a class="anchor" id="Hello-Montage" href="#Hello-Montage"></a>
-</h1>
+<ol>
+<li><a href="Quick-Start.html">Quick Start</a></li>
+<li><a href="Exploring-components.html">Exploring Components</a></li>
+<li><strong>Hello Montage</strong></li>
+</ol><hr /><p>Having come this far we have generated the default welcome application using <code>minit</code> and created a custom <code>NameTag</code> component for us to use.</p>
 
-<p>In this tutorial you create a simple Montage application that uses the Montage <a href="http://montagejs.github.com/montage/samples/sink/#dynamicText">DynamicText</a> component to display a text string in a <code>&lt;div/&gt;</code> element. The purpose of the tutorial is to introduce you to the parts that make up a Montage application.</p>
+<p>Now we'll learn how to assemble components into a useful user interface, surfacing and synchronizing data between objects and user interface, and observing and reacting the user interface for events.</p>
 
-<p>To complete this tutorial, you should have already followed the steps in the Montage <a href="Quick-Start.html">Quick Start</a>.</p>
-
-<p>This tutorial walks you through the files that <code>minit</code> creates for you, so that you'll be familiar with the structure of a montage application.</p>
-
-<h2>Create the project folder and index page<a class="anchor" id="Create-the-project-folder-and-index-page" href="#Create-the-project-folder-and-index-page"></a>
+<h2>Reveal the Main Component<a class="anchor" id="Reveal-the-Main-Component" href="#Reveal-the-Main-Component"></a>
 </h2>
 
-<p>The main HTML page of every Montage application must include the Montage loader script, which bootstraps the framework and your application.</p>
+<p>The default welcome application has a quick introduction to Montage that will help get us started. The content you see at <a href="http://localhost:8000">localhost:8000</a>, or wherever you may be serving this application from, starts inside the <code>index.html</code> being served.</p>
 
-<ol>
-<li>In your Montage ~/Projects folder create a new folder called “hello”.</li>
-<li>Create a new file named index.html.</li>
-<li>Copy and paste the following text into index.html.</li>
-</ol><p></p><div class="highlight"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-<span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Hello Montage<span class="nt">&lt;/title&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"./node_modules/montage/montage.js"</span> <span class="na">data-auto-package</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;/head&gt;</span>
-<span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">data-montage-id=</span><span class="s">"title"</span><span class="nt">&gt;&lt;/div&gt;</span>
-<span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
+<p>That <code>index.html</code> uses a Montage <code>loader</code> component to specify that when ready it should load the <code>Welcome</code> component immediately.</p>
+
+<p>By convention, Montage applications start with a <code>Main</code> component, which minit happens to have generated for us.</p>
+
+<p>Let's start by revealing that <code>Main</code> component as a child of the <code>Welcome</code> component located at <code>ui/welcome.reel/welcome.html</code></p>
+
+<p>Replace the following serialization text:
+</p><div class="highlight"><pre>"<span class="n">main</span>"<span class="p">:</span> <span class="p">{</span>
+
+<span class="p">}</span>
 </pre></div>
 
-<p>This HTML includes a reference to the Montage loader script (montage.js) which we will add in a minute. The presence of the <code>data-auto-package</code> attribute is a convenience that frees you from having to manually create a package.json file. The <code>&lt;div&gt;</code> element in the HTML body has a <code>data-montage-id</code> attribute whose value identifies the element to Montage during deserialization.</p>
-
-<h2>Create a Montage serialization block<a class="anchor" id="Create-a-Montage-serialization-block" href="#Create-a-Montage-serialization-block"></a>
-</h2>
-
-<p>A serialization block is a JSON structure that declares serialized versions of Montage components and objects used by the application. A serialization can also describe data bindings between components in the same serialization block, and declare event listeners. The JSON structure is contained by a <code>&lt;script&gt;</code> element of type “text/montage-serialization”. For more information about the serialization format, see <a href="Montage-serialization-format.html">Montage serialization format</a>.</p>
-
-<p>Add a serialization block to the document:
-</p><div class="highlight"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-<span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Hello Montage<span class="nt">&lt;/title&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"./node_modules/montage/montage.js"</span> <span class="na">data-auto-package</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/montage-serialization"</span><span class="nt">&gt;</span>
-    <span class="p">{</span>
-
+<p>with this new text:
+</p><div class="highlight"><pre>"<span class="n">main</span>"<span class="p">:</span> <span class="p">{</span>
+    "<span class="n">prototype</span>"<span class="p">:</span> "<span class="n">ui</span><span class="o">/</span><span class="n">main</span><span class="p">.</span><span class="n">reel</span>"<span class="p">,</span>
+    "<span class="k">properties</span>"<span class="p">:</span> <span class="p">{</span>
+        "<span class="n">element</span>"<span class="p">:</span> <span class="p">{</span>"#"<span class="p">:</span> "<span class="n">main</span>"<span class="p">}</span>
     <span class="p">}</span>
-    <span class="nt">&lt;/script&gt;</span>
-    <span class="nt">&lt;/head&gt;</span>
-<span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">data-montage-id=</span><span class="s">"title"</span><span class="nt">&gt;&lt;/div&gt;</span>
-<span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
+<span class="p">}</span>
 </pre></div>
 
-<h2>Add a DynamicText component to the serialization block<a class="anchor" id="Add-a-DynamicText-component-to-the-serialization-block" href="#Add-a-DynamicText-component-to-the-serialization-block"></a>
-</h2>
+<p>Refreshing the page should now show the main component as a child of our welcome component. That's composition; that's how we build Montage applications by assembling the patchwork of components that serve as our visual user interface.</p>
 
-<p>Next you’ll add a serialized <a href="http://montagejs.github.com/montage/samples/sink/#dynamicText">DynamicText</a> component to the Montage serialization block, and associate it with the <code>&lt;div&gt;</code> element. Each Montage component in a serialization is represented as a JSON object that contains a member named <code>prototype</code>. This property is a string whose value compactly specifies two pieces of data: the prototype’s module ID (it’s URL, so to speak), and the names of the exported prototype. The name of the prototype (DynamicText) is inferred from the last path segment of the module ID (dynamic-text), according to some simple naming conventions.</p>
-
-<p>Modify the serialization as follows:
-</p><div class="highlight"><pre><span class="nt">&lt;script</span> <span class="na">type=</span><span class="s">"text/montage-serialization"</span><span class="nt">&gt;</span>
-{
-    "title": {
-        "prototype": "montage/ui/dynamic-text.reel"
-    }
-}
-<span class="nt">&lt;/script&gt;</span>
-</pre></div>
-
-<p>Notes:</p>
-
-<ul>
-<li>The “title” label assigned to the serialized DynamicText object is only used internally by Montage during the deserialization process. It does not translate into a property or instance name.</li>
-</ul><h2>Specify the component’s initial property values<a class="anchor" id="Specify-the-component’s-initial-property-values" href="#Specify-the-component%E2%80%99s-initial-property-values"></a>
-</h2>
-
-<p>You can specify initial values for a serialized component by adding a <code>properties</code> object to the JSON object. Every Montage component has an <code>element</code> property that identifies the DOM element that it controls. The DynamicText component’s <code>value</code> property specifies the text string the component should display.</p>
-
-<p>The JSON serialization format includes a extension that allows you to reference DOM elements by their <code>data-montage-id</code> values. This is called an “element reference” object and it has the following form:</p>
-
-<p><code>"element": {"#": "elementID"}</code></p>
-
-<p>At runtime, the deserializer assigns to “element” a reference to the HTMLElement whose <code>data-montage-id</code> is <code>elementID</code>.</p>
-
-<p>To specify the DynamicText component’s DOM element and initial text value, modify the serialization as follows:
-</p><div class="highlight"><pre><span class="nt">&lt;script</span> <span class="na">type=</span><span class="s">"text/montage-serialization"</span><span class="nt">&gt;</span>
-{
-    "title": {
-        "prototype": "montage/ui/dynamic-text.reel",
-        "properties": {
-            "element": {"#": "title"},
-            "value": "Hello, Montage!"
-        }
-    }
-}
-<span class="nt">&lt;/script&gt;</span>
-</pre></div>
-
-<h2>Create the package.json file and add montage to the app.<a class="anchor" id="Create-the-package.json-file-and-add-montage-to-the-app." href="#Create-the-package.json-file-and-add-montage-to-the-app."></a>
-</h2>
+<p>Now let's add the <code>NameTag</code> component we created earlier to the <code>Main</code> component's template at <code>ui/main.reel/main.html</code></p>
 
 <ol>
-<li>Create a new file named <code>package.json</code> </li>
-<li>Copy and paste the following into that file:
-<div class="highlight"><pre><span class="p">{</span>
-    "<span class="n">name</span>"<span class="p">:</span> "<span class="n">hello</span><span class="o">-</span><span class="n">world</span>"<span class="p">,</span>
-    "<span class="n">version</span>"<span class="p">:</span> "0<span class="p">.</span>0<span class="p">.</span>1"<span class="p">,</span>
-    "<span class="n">dependencies</span>"<span class="p">:</span> <span class="p">{</span>
-        "<span class="n">montage</span>"<span class="p">:</span> "<span class="o">*</span>"
+<li>
+<p>Add a placeholder element for the NameTag component
+</p>
+<div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">data-montage-id=</span><span class="s">"main"</span> <span class="na">class=</span><span class="s">"Main"</span><span class="nt">&gt;</span>Hello <span class="nt">&lt;span</span> <span class="na">data-montage-id=</span><span class="s">"nameTag"</span><span class="nt">&gt;&lt;/span&gt;&lt;/div&gt;</span>
+</pre></div>
+</li>
+<li>
+<p>Add serialization entry for the NameTag component that links the component to its placeholder
+</p>
+<div class="highlight"><pre>"<span class="n">nameTag</span>"<span class="p">:</span> <span class="p">{</span>
+    "<span class="n">prototype</span>"<span class="p">:</span> "<span class="n">ui</span><span class="o">/</span><span class="n">name</span><span class="o">-</span><span class="n">tag</span><span class="p">.</span><span class="n">reel</span>"<span class="p">,</span>
+    "<span class="k">properties</span>"<span class="p">:</span> <span class="p">{</span>
+        "<span class="n">element</span>"<span class="p">:</span> <span class="p">{</span>"#"<span class="p">:</span> "<span class="n">nameTag</span>"<span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </li>
-<li>Save that file (in the same folder as index.html.</li>
-<li>From terminal run `<code>npm install</code> in that folder to install Montage.</li>
-</ol><h2>Test in a browser<a class="anchor" id="Test-in-a-browser" href="#Test-in-a-browser"></a>
+<li>
+<p>Pretty up the NameTag component in <code>ui/name-tag.reel/name-tag.css</code>
+</p>
+<div class="highlight"><pre><span class="na">.NameTag</span> <span class="err">{</span>
+    <span class="nl">color:</span> <span class="nf">green</span><span class="err">;</span>
+<span class="err">}</span>
+</pre></div>
+</li>
+<li>
+<p>Make the NameTag component a span and give some visible content in <code>ui/name-tag.reel/name-tag.html</code>
+</p>
+<div class="highlight"><pre><span class="nt">&lt;span</span> <span class="na">data-montage-id=</span><span class="s">"name-tag"</span> <span class="na">class=</span><span class="s">"NameTag"</span><span class="nt">&gt;</span>Name<span class="nt">&lt;/span&gt;</span>
+</pre></div>
+</li>
+<li><p>Refresh the browser and enjoy the pretty green name tag.</p></li>
+</ol><p>We now have a pretty respectable component tree. But we're just getting started.</p>
+
+<h2>Declarative Bindings<a class="anchor" id="Declarative-Bindings" href="#Declarative-Bindings"></a>
 </h2>
 
-<p>Save your changes and point your web browser at the project’s index.html page (for example, <a href="http://localhost:8081/hello/index.html">http://localhost:8081/hello/index.html</a>). You should see something like the following:</p>
+<p>We didn't instruct our application exactly how to create our components nor how to insert them. We relied on a powerful technique known as declarative programming where we specified the intent of what we wanted, trusting Montage to interpret that intent and do the right thing.</p>
 
-<p><img src="http://montagejs.org/docs/img/hello-montage.png" alt="Hello, Montage!"></p>
+<p>Just as we've declaratively assembled our visual component tree we can also declaratively connect parts of it to an underlying model. Though we'll let our components serve as the model for the sake of example.</p>
+
+<ol>
+<li>
+<p>Add a name property to the <code>NameTag</code> component's implementation at <code>ui/name-tag.reel/name-tag.js</code>
+</p>
+<div class="highlight"><pre><span class="n">exports</span><span class="p">.</span><span class="n">NameTag</span> <span class="p">=</span> <span class="n">Montage</span><span class="p">.</span><span class="n">create</span><span class="p">(</span><span class="n">Component</span><span class="p">,</span> <span class="o">/**</span> <span class="p">@</span><span class="n">lends</span> <span class="n">module</span><span class="p">:</span>"<span class="n">ui</span><span class="o">/</span><span class="n">name</span><span class="o">-</span><span class="n">tag</span><span class="p">.</span><span class="n">reel</span>"<span class="p">.</span><span class="n">NameTag</span># <span class="o">*/</span> <span class="p">{</span>
+
+    <span class="n">name</span><span class="p">:</span> <span class="p">{</span>
+        <span class="n">value</span><span class="p">:</span> "<span class="n">Alice</span>"
+    <span class="p">}</span>
+
+<span class="p">});</span>
+</pre></div>
+</li>
+<li><p>Add a Montage provided <code>DynamicText</code> component to the <code>NameTag</code> component's template at <code>ui/name-tag.reel/name-tag.html</code></p></li>
+</ol><p>HTML
+</p><div class="highlight"><pre><span class="nt">&lt;span</span> <span class="na">data-montage-id=</span><span class="s">"name-tag"</span> <span class="na">class=</span><span class="s">"NameTag"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">data-montage-id=</span><span class="s">"name"</span><span class="nt">&gt;&lt;/span&gt;</span>
+<span class="nt">&lt;/span&gt;</span>
+</pre></div>
+
+<p>Serialization
+</p><div class="highlight"><pre><span class="s">"name"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s">"prototype"</span><span class="o">:</span> <span class="s">"montage/ui/dynamic-text.reel"</span><span class="p">,</span>
+    <span class="s">"properties"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s">"element"</span><span class="o">:</span> <span class="p">{</span><span class="s">"#"</span><span class="o">:</span> <span class="s">"name"</span><span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s">"bindings"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s">"value"</span><span class="o">:</span> <span class="p">{</span><span class="s">"&lt;-"</span><span class="o">:</span> <span class="s">"@owner.name"</span><span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>Here we have specified that the <code>value</code> property of the <code>DynamicText</code> component we create will be the same as the owner's <code>name</code> property. Anytime the <code>owner.name</code> property changes, so will the value we see in the rendered view.</p>
+
+<p>Refreshing the page should show a nice green Alice.</p>
+
+<p>Bindings are among the pinnacle of declarative bliss. After declaring that binding between these two properties we don't need to do anything to make it happen or to keep it happening.</p>
+
+<p>Let's see the binding keep working.</p>
+
+<h2>Driving Changes Through Bindings<a class="anchor" id="Driving-Changes-Through-Bindings" href="#Driving-Changes-Through-Bindings"></a>
+</h2>
+
+<p>We want to provide some interface for changing that name; here's where we start architecting our application. Montage provides an <code>InputText</code> component but first we need to determine where to put it. When our application is small the decision may be easy, as an application grows it's important to keep components, and all other objects, loosely coupled and highly cohesive to aid in determining where responsibilities live.</p>
+
+<p>For our purposes we want <code>NameTag</code> to be a read-only component, so we'll make editing the job of our <code>Main</code> component.</p>
+
+<ol>
+<li>Insert an <code>InputText</code> component as a child of the <code>Main</code> component.</li>
+</ol><p>HTML
+</p><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">data-montage-id=</span><span class="s">"main"</span> <span class="na">class=</span><span class="s">"Main"</span><span class="nt">&gt;</span>
+    Hello <span class="nt">&lt;span</span> <span class="na">data-montage-id=</span><span class="s">"nameTag"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">data-montage-id=</span><span class="s">"nameInput"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+<p>Serialization
+</p><div class="highlight"><pre><span class="s">"nameInput"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s">"prototype"</span><span class="o">:</span> <span class="s">"montage/ui/input-text.reel"</span><span class="p">,</span>
+    <span class="s">"properties"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s">"element"</span><span class="o">:</span> <span class="p">{</span><span class="s">"#"</span><span class="o">:</span> <span class="s">"nameInput"</span><span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s">"bindings"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s">"value"</span><span class="o">:</span> <span class="p">{</span><span class="s">"&lt;-&gt;"</span><span class="o">:</span> <span class="s">"@nameTag.name"</span><span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>Now we've bound the value property of the slider to be the same as the nameTag's name property. We've also made this a two-way binding as indicated by the double headed arrow; changes on either side of this binding propagate to the other side.</p>
+
+<p>In addition to deciding where components should live, there's a decision to be made about which side to establish a binding on, but especially when two-way bindings are concerned it's a finer point that can be explored later.</p>
+
+<ol>
+<li>Refresh and give it a try. As you type the name tag should update live.</li>
+</ol><h2>Listening for Events<a class="anchor" id="Listening-for-Events" href="#Listening-for-Events"></a>
+</h2>
+
+<p>Components can emit events in the same sense that DOM elements emit events. A Montage <code>Button</code> component, for example, dispatches an <code>action</code> event with itself as the target. This event is synthesized from a sequence of mouse or touch events that the button component itself observes on its own element.</p>
+
+<p>Let's add a <code>Button</code> and handle its <code>action</code> event.</p>
+
+<ol>
+<li>Add the <code>Button</code> component to the <code>Main</code> component's template at <code>ui/main.reel/main.html</code>
+</li>
+</ol><p>HTML
+</p><div class="highlight"><pre><span class="nt">&lt;button</span> <span class="na">data-montage-id=</span><span class="s">"greetButton"</span><span class="nt">&gt;&lt;/button&gt;</span>
+</pre></div>
+
+<p>Serialization
+</p><div class="highlight"><pre><span class="s">"greetButton"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s">"prototype"</span><span class="o">:</span> <span class="s">"montage/ui/button.reel"</span><span class="p">,</span>
+    <span class="s">"properties"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s">"element"</span><span class="o">:</span> <span class="p">{</span><span class="s">"#"</span><span class="o">:</span> <span class="s">"greetButton"</span><span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s">"bindings"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s">"label"</span><span class="o">:</span> <span class="p">{</span><span class="s">"&lt;-"</span><span class="o">:</span> <span class="s">"@nameTag.name"</span><span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s">"listeners"</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s">"type"</span><span class="o">:</span> <span class="s">"action"</span><span class="p">,</span>
+            <span class="s">"listener"</span><span class="o">:</span> <span class="p">{</span><span class="s">"@"</span><span class="o">:</span> <span class="s">"owner"</span><span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+For the sake of showing off bindings we use one here to bind the <code>label</code> of the greetingButton to be the same as the <code>nameTag.name</code> property. But this is old hat by now.
+
+<p>The serialization unit of interest here is <code>listeners</code>. This block is an array of listener entries, each one specifying the event <code>type</code> being observed by name and the <code>listener</code> interested in handling the event. Of course, many different listeners can be registered here and they can also provide a <code>useCapture</code> property in their entry to specify that the event should be handled in the capture phase of distribution.</p>
+
+<ol>
+<li><p>Refreshing at this point will render a button with the expected label. Behold the joy of code-free declarative binding by changing the name in the <code>nameInput</code> and see it reflected in both the <code>nameTag</code> and the <code>greetButton</code> component instances.</p></li>
+<li><p>Now to make the button do something, let's add some code to the <code>listener</code> object we specified, the <code>Main</code> component, inside <code>ui/main.reel/main.js</code></p></li>
+</ol><p></p><div class="highlight"><pre><span class="nx">exports</span><span class="p">.</span><span class="nx">Main</span> <span class="o">=</span> <span class="nx">Montage</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">Component</span><span class="p">,</span> <span class="cm">/** @lends module:"ui/main.reel".Main# */</span> <span class="p">{</span>
+
+    <span class="nx">handleGreetButtonAction</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">value</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="s2">"Hello "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">templateObjects</span><span class="p">.</span><span class="nx">nameTag</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+<span class="p">});</span>
+</pre></div>
+
+<p>While the standard JavaScript <code>addEventListener</code> either expects a function reference or an <code>eventHandler</code> object that implements a <code>handleEvent</code> method Montage helps direct an event to a more specific handler method on a listener if implemented.</p>
+
+<p>In this case we've implemented <code>handleGreetButtonAction</code> which describes the fact that this method will handle <code>action</code> events emitted from a target with an identifier of <code>greetButton</code> during the bubble phase of event distribution.</p>
+
+<p>This is the most specific handler possible, less specific alternatives would have been:</p>
+
+<ul>
+<li><code>handleAction</code></li>
+<li><code>handleEvent</code></li>
+</ul><p>This reduces the need for inspecting each event in a generic <code>handleEvent</code> method to determine what the event was and how it should be handled.</p>
+
+<p>The <code>templateObjects</code> property exposes all the objects that were defined in a component's template. It's a convenient way to access any object in the template by its <code>label</code>.</p>
+
+<p>Reaching into another component starts to suggest that we should start to consider formalizing the model we're working with (a person? an identity?) and expose it somewhere that all concerned components can access it easily. But that's a lesson for another day.</p>
+
+<ol>
+<li>Refresh the browser and click on the <code>greetButton</code>. If everything worked as expected it should simply alert the name that's in the <code>nameTag</code> component.</li>
+</ol><h2>Take Off the Training Wheels<a class="anchor" id="Take-Off-the-Training-Wheels" href="#Take-Off-the-Training-Wheels"></a>
+</h2>
+
+<p>As well as it's served us, it's time to ditch the welcome component.</p>
+
+<ol>
+<li>
+<p>Inside the <code>index.html</code> remove the explicit loading of the <code>Welcome</code> component.
+</p>
+<div class="highlight"><pre>"<span class="n">owner</span>"<span class="p">:</span> <span class="p">{</span>
+    "<span class="n">prototype</span>"<span class="p">:</span> "<span class="n">montage</span><span class="o">/</span><span class="n">ui</span><span class="o">/</span><span class="n">loader</span><span class="p">.</span><span class="n">reel</span>"
+<span class="p">}</span>
+</pre></div>
+</li>
+<li><p>Refresh the browser and notice how we stopped using the <code>Welcome</code> component as a decorative frame around the <code>Main</code> component.</p></li>
+</ol><hr /><p>There still more to learn of course as you've just scratched the surface of what Montage provides. Hopefully it's already clear how simple things are made simple with a declarative framework that embraces components and bindings.</p>
 
                 </div>
         </article>
@@ -173,56 +289,43 @@
         </article>
     </section>
 
-    
+
     <section id="social" class="social">
         <article>
-            
+
             <div class="button-group github">
-                <iframe src="http://ghbtns.com/github-btn.html?user=montagejs&repo=montage&type=watch&count=true"
-                  allowtransparency="true" frameborder="0" scrolling="0" width="90px" height="20px"></iframe>
-                <iframe src="http://ghbtns.com/github-btn.html?user=montagejs&repo=montage&type=fork&count=true"
-                  allowtransparency="true" frameborder="0" scrolling="0" width="90px" height="20px"></iframe>
+                <iframe src="http://ghbtns.com/github-btn.html?user=montagejs&amp;repo=montage&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="90px" height="20px"></iframe>
+                <iframe src="http://ghbtns.com/github-btn.html?user=montagejs&amp;repo=montage&amp;type=fork&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="90px" height="20px"></iframe>
             </div>
-            
-            
+
+
             <div class="button-group twitter">
                 <a href="https://twitter.com/share" class="twitter-share-button" data-via="montage_js" data-count="none">Tweet</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                <script>!function(e,t,n){var r,i=e.getElementsByTagName(t)[0];e.getElementById(n)||(r=e.createElement(t),r.id=n,r.src="//platform.twitter.com/widgets.js",i.parentNode.insertBefore(r,i))}(document,"script","twitter-wjs")</script>
                 <a href="https://twitter.com/montage_js" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @montage_js</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                <script>!function(e,t,n){var r,i=e.getElementsByTagName(t)[0];e.getElementById(n)||(r=e.createElement(t),r.id=n,r.src="//platform.twitter.com/widgets.js",i.parentNode.insertBefore(r,i))}(document,"script","twitter-wjs")</script>
             </div>
-            
+
             <div class="button-group g-plus">
-                <!-- Place this tag in your head or just before your close body tag. -->
-                <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
-                  {parsetags: 'explicit'}
-                </script>
-                <!-- Place this tag where you want the +1 button to render. -->
+                
+                <script src="https://apis.google.com/js/plusone.js">"explicit"</script>
+                
                 <div class="g-plusone" data-size="medium" data-annotation="inline" data-width="200"></div>
-                <!-- Place this render call where appropriate. -->
-                <script type="text/javascript">gapi.plusone.go();</script>
+                
+                <script>gapi.plusone.go()</script>
             </div>
-            
+
         </article>
     </section>
-        
-    
+
+
     <footer class="footer">
-        2012 montagejs.org - <a href="https://github.com/montagejs/montagejs.org">Contributions</a> to this page are welcomed.
+        2013 montagejs.org - <a href="https://github.com/montagejs/montagejs.org">Contributions</a> to this page are welcomed.
     </footer>
-        
+
+
     
-    <!-- Google -->
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-35717912-1']);
-      _gaq.push(['_trackPageview']);
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
-    
+    <script>var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-35717912-1"]),_gaq.push(["_trackPageview"]),function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script>
+
 </body>
 </html>

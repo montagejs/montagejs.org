@@ -1,81 +1,79 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+
     <title>Quick Start - Montage Docs</title>
-    
-    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:400,700'>
-    <link rel="stylesheet" href="../stylesheets/normalize.css">
-    <link rel="stylesheet" href="../stylesheets/base.css">
-    <link rel="stylesheet" href="../stylesheets/pages.css">
-        
-    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->    
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" />
+    <link rel="stylesheet" href="../stylesheets/normalize.css" />
+    <link rel="stylesheet" href="../stylesheets/base.css" />
+    <link rel="stylesheet" href="../stylesheets/pages.css" />
+    <link rel="stylesheet" href="../stylesheets/solarized.css" />
+
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
-<body>
-  
+<body class="docs">
+
     <header class="header header-pages pushed">
         <div class="header-container">
-            <a href="/"><img class="logo" src="../images/logo-pages.png" alt="Montage"></a>
+            <a href="/"><img class="logo" src="../images/logo-pages.png" alt="Montage" /></a>
             <nav class="nav">
                 <a class="nav-item" href="/apps">Apps</a>
                 <a class="nav-item active" href="/docs">Docs</a>
+                <a class="nav-item" href="/apis">APIs</a>
             </nav>
         </div>
     </header>
-    
-    <section id="docs" class="docs">
+
+    <section id="docs">
         <article>
             <div class="markdown-body">
 
-<h1>Quick Start<a class="anchor" id="Quick-Start" href="#Quick-Start"></a>
-</h1>
+<ol>
+<li><strong>Quick Start</strong></li>
+<li><a href="Exploring-components.html">Exploring Components</a></li>
+<li><a href="Hello-Montage.html">Hello Montage</a></li>
+</ol><hr /><p>This guide is also available as a video for <a href="http://www.youtube.com/watch?v=JfT1ML200JI">Mac OS X</a>, <a href="http://www.youtube.com/watch?v=HDOItFcfopY">Windows</a> or <a href="http://www.youtube.com/watch?v=OcLN-zP3A00">Ubuntu Linux</a>.</p>
 
-<p>If you don't have it already, download Node which includes the <code>npm</code> command: <a href="http://nodejs.org/download/">http://nodejs.org/download/</a>.</p>
+<p>If you don't have it already, <a href="http://nodejs.org/download/">download and install Node.js</a></p>
+
+<p>While Montage itself does not rely on Node.js, it does rely on the Node Package Management (NPM) system for fulfilling dependencies throughout development. Additionally, tools and utilities are written in JavaScript and executed using Node.js so it's useful to have installed.</p>
+
+<p>Once node and its included npm commandline tool are installed:</p>
 
 <ol>
 <li>
 <p>Install <code>minit</code>, the Montage Initializer
 </p>
-<div class="highlight"><pre><span class="nv">$ </span>npm install -g minit
+<div class="highlight"><pre><span class="nv">$ </span>sudo npm install -g minit
 </pre></div>
 </li>
 <li>
 <p>Create your first app
 </p>
 <div class="highlight"><pre><span class="nv">$ </span>minit create:app --name hello
-<span class="nv">$ </span><span class="nb">cd </span>hello/
-<span class="nv">$ </span>ls
-README.md
-assets/
-index.html
-node_modules/
-package.json
-run-tests.html
-<span class="nb">test</span>/
-testacular.conf.js
-ui/
+<span class="nv">$ </span><span class="nb">cd </span>hello
 </pre></div>
 </li>
 <li>
-<p>Navigate to the directory in your browser. If you don't have a localhost webserver, you can create a temporary one by running
+<p>Serve up your new application for development (or use your own web server)
 </p>
 <div class="highlight"><pre><span class="nv">$ </span>python -m SimpleHTTPServer
 </pre></div>
 
-<p>and navigating to <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a></p>
+<p>and navigate a browser to <a href="http://localhost:8000">http://localhost:8000/</a></p>
 </li>
-</ol><p>The server is needed because Montage uses XHR to load files, which cannot be done on the file:// protocol.</p>
+</ol><p>The server is needed because Montage uses XHR to load files during development, which cannot be done on the file:// protocol.</p>
 
 <h2>Next steps<a class="anchor" id="Next-steps" href="#Next-steps"></a>
 </h2>
 
 <ul>
-<li>Find out more about Montage components in <a href="Exploring-components.html">Exploring the component</a>.</li>
-<li>For a basic introduction to Montage development, see the <a href="Hello-Montage.html">Hello Montage</a> tutorial. You can jump straight to the <strong>Specify the component’s initial property values</strong> section</li>
-<li>Experiment with Montage in the browser using <a href="http://montagejs.github.com/montage/samples/mfiddle/">MFiddle</a>.</li>
+<li><p>Find out more about Montage components in <a href="Exploring-components.html">Exploring components</a>.</p></li>
+<li><p>Experiment with Montage on your own in the browser using <a href="http://montagejs.github.com/montage/samples/mfiddle/">MFiddle</a>.</p></li>
 </ul>
 
                 </div>
@@ -98,56 +96,43 @@ ui/
         </article>
     </section>
 
-    
+
     <section id="social" class="social">
         <article>
-            
+
             <div class="button-group github">
-                <iframe src="http://ghbtns.com/github-btn.html?user=montagejs&repo=montage&type=watch&count=true"
-                  allowtransparency="true" frameborder="0" scrolling="0" width="90px" height="20px"></iframe>
-                <iframe src="http://ghbtns.com/github-btn.html?user=montagejs&repo=montage&type=fork&count=true"
-                  allowtransparency="true" frameborder="0" scrolling="0" width="90px" height="20px"></iframe>
+                <iframe src="http://ghbtns.com/github-btn.html?user=montagejs&amp;repo=montage&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="90px" height="20px"></iframe>
+                <iframe src="http://ghbtns.com/github-btn.html?user=montagejs&amp;repo=montage&amp;type=fork&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="90px" height="20px"></iframe>
             </div>
-            
-            
+
+
             <div class="button-group twitter">
                 <a href="https://twitter.com/share" class="twitter-share-button" data-via="montage_js" data-count="none">Tweet</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                <script>!function(e,t,n){var r,i=e.getElementsByTagName(t)[0];e.getElementById(n)||(r=e.createElement(t),r.id=n,r.src="//platform.twitter.com/widgets.js",i.parentNode.insertBefore(r,i))}(document,"script","twitter-wjs")</script>
                 <a href="https://twitter.com/montage_js" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @montage_js</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                <script>!function(e,t,n){var r,i=e.getElementsByTagName(t)[0];e.getElementById(n)||(r=e.createElement(t),r.id=n,r.src="//platform.twitter.com/widgets.js",i.parentNode.insertBefore(r,i))}(document,"script","twitter-wjs")</script>
             </div>
-            
+
             <div class="button-group g-plus">
-                <!-- Place this tag in your head or just before your close body tag. -->
-                <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
-                  {parsetags: 'explicit'}
-                </script>
-                <!-- Place this tag where you want the +1 button to render. -->
+                
+                <script src="https://apis.google.com/js/plusone.js">"explicit"</script>
+                
                 <div class="g-plusone" data-size="medium" data-annotation="inline" data-width="200"></div>
-                <!-- Place this render call where appropriate. -->
-                <script type="text/javascript">gapi.plusone.go();</script>
+                
+                <script>gapi.plusone.go()</script>
             </div>
-            
+
         </article>
     </section>
-        
-    
+
+
     <footer class="footer">
-        2012 montagejs.org - <a href="https://github.com/montagejs/montagejs.org">Contributions</a> to this page are welcomed.
+        2013 montagejs.org - <a href="https://github.com/montagejs/montagejs.org">Contributions</a> to this page are welcomed.
     </footer>
-        
+
+
     
-    <!-- Google -->
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-35717912-1']);
-      _gaq.push(['_trackPageview']);
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
-    
+    <script>var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-35717912-1"]),_gaq.push(["_trackPageview"]),function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script>
+
 </body>
 </html>

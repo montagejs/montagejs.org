@@ -1,32 +1,34 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+
     <title>Spec: RichTextEditor - Montage Docs</title>
-    
-    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:400,700'>
-    <link rel="stylesheet" href="../stylesheets/normalize.css">
-    <link rel="stylesheet" href="../stylesheets/base.css">
-    <link rel="stylesheet" href="../stylesheets/pages.css">
-        
-    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->    
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" />
+    <link rel="stylesheet" href="../stylesheets/normalize.css" />
+    <link rel="stylesheet" href="../stylesheets/base.css" />
+    <link rel="stylesheet" href="../stylesheets/pages.css" />
+    <link rel="stylesheet" href="../stylesheets/solarized.css" />
+
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
-<body>
-  
+<body class="docs">
+
     <header class="header header-pages pushed">
         <div class="header-container">
-            <a href="/"><img class="logo" src="../images/logo-pages.png" alt="Montage"></a>
+            <a href="/"><img class="logo" src="../images/logo-pages.png" alt="Montage" /></a>
             <nav class="nav">
                 <a class="nav-item" href="/apps">Apps</a>
                 <a class="nav-item active" href="/docs">Docs</a>
+                <a class="nav-item" href="/apis">APIs</a>
             </nav>
         </div>
     </header>
-    
-    <section id="docs" class="docs">
+
+    <section id="docs">
         <article>
             <div class="markdown-body">
 
@@ -102,7 +104,7 @@ set the background color for the current selected text.</p>
 <p>bold [boolean]:
     [boolean] editor.bold
 returns true if the current selected text is bold.
-editor.bold = true | false<br>
+editor.bold = true | false<br />
 add or remove the bold attribute to the selected text.</p>
 
 <p>If the selected text contains some text in bold and some not, the return value of editor.bold is depending of the browser’s implementation.</p>
@@ -158,7 +160,7 @@ returns true when the editor his the active element, else return false.</p>
 <p>italic [boolean]:
     [boolean] editor.italic
 returns true if the current selected text is italic.
-editor.italic = true | false<br>
+editor.italic = true | false<br />
 add or remove the italic attribute to the selected text.</p>
 
 <p>If the selected text contains some italic text and some not, the return value of editor.italic is depending of the browser’s implementation.</p>
@@ -182,7 +184,7 @@ set the list style for the current selected text.</p>
 <p>overlays [Array]:
     [Array] editor.overlays
 returns an array of overlay components.
-editor.overlays = [Array] | null<br>
+editor.overlays = [Array] | null<br />
 set the content to true to make the editor readonly</p>
 
 <p>Overlays are extension that can be displayed on top of the editor based on the context. </p>
@@ -212,7 +214,7 @@ set the content to true to make the editor readonly</p>
 <p>readOnly [boolean]:
     [boolean] editor.readOnly
 returns true if the content is read only, else return false.
-editor.readOnly = true | false<br>
+editor.readOnly = true | false<br />
 set the content to true to make the editor readonly</p>
 
 <p>When the editor is set to read only, the user is not able to modify the content. However it still possible to set the content programmatically with editor.value or editor.textValue.</p>
@@ -220,7 +222,7 @@ set the content to true to make the editor readonly</p>
 <p>sanitizer [object]: 
     [object] editor.sanitizer
 returns the sanitizer object.
-editor.sanitizer = [object] | null<br>
+editor.sanitizer = [object] | null<br />
 set the sanitizer object</p>
 
 <p>The editor by default install it’s own sanitizer. Only set the sanitizer if you want to provide your own or disable it.</p>
@@ -254,7 +256,7 @@ add or remove the underline attribute to the selected text.</p>
 <p>undoManager [object]:
     [object] editor.undoManager
 returns the Montage Undo Manager associated with the component or null.
-editor.undoManager = [object] | null<br>
+editor.undoManager = [object] | null<br />
 associate a Montage Undo Manager with the editor.</p>
 
 <p>As the RichTextEditor is based on content editable, it is automatically incorporated with the native Undo Manager provided by the browser. However it’s possible to also use the Montage Undo Manager. If you decide to use the Montage Undo manager, you should intercept the browser undo and redo keyboard shortcut in order to keep both the native and the Montage Undo Manager in sync.</p>
@@ -586,56 +588,43 @@ and a link popup (montage/lab/lib/ui/rich-text-linkpopup.reel)</p>
         </article>
     </section>
 
-    
+
     <section id="social" class="social">
         <article>
-            
+
             <div class="button-group github">
-                <iframe src="http://ghbtns.com/github-btn.html?user=montagejs&repo=montage&type=watch&count=true"
-                  allowtransparency="true" frameborder="0" scrolling="0" width="90px" height="20px"></iframe>
-                <iframe src="http://ghbtns.com/github-btn.html?user=montagejs&repo=montage&type=fork&count=true"
-                  allowtransparency="true" frameborder="0" scrolling="0" width="90px" height="20px"></iframe>
+                <iframe src="http://ghbtns.com/github-btn.html?user=montagejs&amp;repo=montage&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="90px" height="20px"></iframe>
+                <iframe src="http://ghbtns.com/github-btn.html?user=montagejs&amp;repo=montage&amp;type=fork&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="90px" height="20px"></iframe>
             </div>
-            
-            
+
+
             <div class="button-group twitter">
                 <a href="https://twitter.com/share" class="twitter-share-button" data-via="montage_js" data-count="none">Tweet</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                <script>!function(e,t,n){var r,i=e.getElementsByTagName(t)[0];e.getElementById(n)||(r=e.createElement(t),r.id=n,r.src="//platform.twitter.com/widgets.js",i.parentNode.insertBefore(r,i))}(document,"script","twitter-wjs")</script>
                 <a href="https://twitter.com/montage_js" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @montage_js</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                <script>!function(e,t,n){var r,i=e.getElementsByTagName(t)[0];e.getElementById(n)||(r=e.createElement(t),r.id=n,r.src="//platform.twitter.com/widgets.js",i.parentNode.insertBefore(r,i))}(document,"script","twitter-wjs")</script>
             </div>
-            
+
             <div class="button-group g-plus">
-                <!-- Place this tag in your head or just before your close body tag. -->
-                <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
-                  {parsetags: 'explicit'}
-                </script>
-                <!-- Place this tag where you want the +1 button to render. -->
+                
+                <script src="https://apis.google.com/js/plusone.js">"explicit"</script>
+                
                 <div class="g-plusone" data-size="medium" data-annotation="inline" data-width="200"></div>
-                <!-- Place this render call where appropriate. -->
-                <script type="text/javascript">gapi.plusone.go();</script>
+                
+                <script>gapi.plusone.go()</script>
             </div>
-            
+
         </article>
     </section>
-        
-    
+
+
     <footer class="footer">
-        2012 montagejs.org - <a href="https://github.com/montagejs/montagejs.org">Contributions</a> to this page are welcomed.
+        2013 montagejs.org - <a href="https://github.com/montagejs/montagejs.org">Contributions</a> to this page are welcomed.
     </footer>
-        
+
+
     
-    <!-- Google -->
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-35717912-1']);
-      _gaq.push(['_trackPageview']);
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
-    
+    <script>var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-35717912-1"]),_gaq.push(["_trackPageview"]),function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script>
+
 </body>
 </html>
