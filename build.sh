@@ -11,11 +11,12 @@ export DEPLOY_DIR="$ROOT_DIR/deploy"
 
 rm -rf "$OUT_DIR"
 mkdir -p "$OUT_DIR"
-rm -rf "$DEPLOY_DIR"
 
 echo "Output directory is $OUT_DIR"
 echo "Temp directory is $TEMP_DIR"
 echo
+
+### Generate ###
 
 master_hash=`git rev-parse --short HEAD`
 echo "Update to master $master_hash" >> "$TEMP_DIR/COMMIT_MESSAGE"
@@ -45,8 +46,18 @@ cd "$OUT_DIR"
 npm install
 cd -
 
+## Build ###
+
 mop "$OUT_DIR"
-mv "$OUT_DIR/builds/montagejs.org@"* "$DEPLOY_DIR"
+
+### Deploy ###
+
+rm -rf "$DEPLOY_DIR"
+git clone --single-branch --branch gh-pages git@github.com:montagejs/montagejs.org.git "$DEPLOY_DIR"
+# clean out the deploy dir ready for the new content
+rm -rf "$DEPLOY_DIR"/*
+
+mv "$OUT_DIR/builds/montagejs.org@"*/* "$DEPLOY_DIR"
 
 if [ "$1" == "--no-commit" ]
 then
@@ -54,25 +65,19 @@ then
     exit 0;
 fi
 
-exit 0;
+### Commit ###
 
-# commit
+cd "$DEPLOY_DIR"
 
-echo
-echo "Checking out gh-pages for commit"
-echo
-
-git checkout -B gh-pages origin/gh-pages
-
-git add "$ROOT_DIR"
+# remove tracked files that have been deleted
+git add --update
+# add new files
+git add .
 
 # Commit exits with non-zero status if there are no changes. "|| :" swallows
 # this exit status so that the rest of the script continues.
 git commit --file="$TEMP_DIR/COMMIT_MESSAGE" || :
 
-git checkout -
-
-rm -rf $OUT_DIR
 rm -rf $TEMP_DIR
 
 echo "Done."
