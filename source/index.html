@@ -4,22 +4,22 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    
+
     <title>Montage - HTML5 framework</title>
-    
+
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:400,700'>
     <link rel="stylesheet" href="stylesheets/normalize.css">
     <link rel="stylesheet" href="stylesheets/base.css">
     <link rel="stylesheet" href="stylesheets/index.css">
-    
+
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    
+
     <script src="node_modules/montage/montage.js"></script>
     <script type="text/montage-serialization">
         {
-            
+
             "features": {
                 "prototype": "ui/features.reel",
                 "properties": {
@@ -36,28 +36,28 @@
 
         }
     </script>
-    
+
   </head>
 <body>
-  
+
     <header class="header-index pushed">
         <h1><img class="logo" src="images/logo-montage.png" alt="Montage" /></h1>
         <h2 class="tagline">An <strong class="highlight">HTML5 framework</strong> for building modern Web Apps.</h2>
     </header>
-    
+
     <nav class="bar links">
         <a class="link download" href="https://github.com/montagejs/montage/wiki/Quick-Start">Quick Start</a>
         <a class="link fork" href="https://github.com/montagejs/montage">Fork</a>
-        <a class="link docs" href="https://github.com/montagejs/montage/wiki">Docs</a>
+        <a class="link docs" href="docs/">Docs</a>
     </nav>
-    
+
     <section id="intro" class="intro">
         <article>
             <h3 class="title">Introducing Montage</h3>
             <div class="cols">
                 <div class="col col-1-2">
                     <p>The Montage framework lets you develop rich HTML5 applications optimized for today and tomorrow’s range of connected devices. You can build rich client-side UI’s, sharing packages and modules with your NodeJS server. Montage opens a new world of opportunity for web developers.</p>
-                    
+
                 </div>
                 <aside class="col col-1-2">
                     <p>Some features</p>
@@ -71,15 +71,15 @@
             </div>
         </article>
     </section>
-    
+
     <section id="features" class="features" style="min-height:1050px;">
         <article>
             <h3 class="title">Features</h3>
-            
+
             <h3 class="sub-title">2-way Data Binding</h3>
-            
+
             <div data-montage-id="features"></div>
-            
+
             <div class="cols">
                 <div class="col col-1-2">
                     <h3 class="sub-title">Components and templates</h3>
@@ -97,19 +97,19 @@
                     <h3 class="sub-title">Component draw cycle</h3>
                     <p>To maximize application performance, Montage uses a deferred drawing model in which DOM updates and queries are batched together, limiting the number of DOM reflows. These features are implemented through a series of component method callbacks that the framework invokes. Learn more about <a href="https://github.com/montagejs/montage/wiki/Component-draw-cycle" target="_blank">component draw cycle</a>.</p>
                 </div>
-                                
+
             </div>
-            
+
             <nav class="more">Learn more:
                 <a class="more-button" href="https://github.com/montagejs/montage/wiki" target="_blank">Docs</a>
                 <a class="more-button" href="http://montagejs.github.com/montage/samples/sink/" target="_blank">Kitchen Sink</a>
                 <a class="more-button" href="http://montagejs.github.com/montage/samples/mfiddle/" target="_blank">M Fiddle</a>
             </nav>
-            
-            
+
+
         </article>
     </section>
-    
+
 
     <section id="themes" class="themes" style="min-height:500px;">
     	<article>
@@ -177,7 +177,7 @@
 	        </ul>
 	    </article>
 	</section>
-	
+
  	<section id="tools" class="tools">
         <article>
             <h3 class="title">Tools</h3>
@@ -211,25 +211,25 @@
         </article>
     </section>
 
-    
+
     <section id="social" class="social">
         <article>
-            
+
             <div class="button-group github">
                 <iframe src="http://ghbtns.com/github-btn.html?user=montagejs&repo=montage&type=watch&count=true"
                   allowtransparency="true" frameborder="0" scrolling="0" width="90px" height="20px"></iframe>
                 <iframe src="http://ghbtns.com/github-btn.html?user=montagejs&repo=montage&type=fork&count=true"
                   allowtransparency="true" frameborder="0" scrolling="0" width="90px" height="20px"></iframe>
             </div>
-            
-            
+
+
             <div class="button-group twitter">
                 <a href="https://twitter.com/share" class="twitter-share-button" data-via="montage_js" data-count="none">Tweet</a>
                 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
                 <a href="https://twitter.com/montage_js" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @montage_js</a>
                 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
             </div>
-            
+
             <div class="button-group g-plus">
                 <!-- Place this tag in your head or just before your close body tag. -->
                 <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
@@ -240,20 +240,20 @@
                 <!-- Place this render call where appropriate. -->
                 <script type="text/javascript">gapi.plusone.go();</script>
             </div>
-            
+
         </article>
     </section>
-        
-    
+
+
     <footer class="footer">
         2012 montagejs.org - <a href="https://github.com/montagejs/montagejs.org">Contributions</a> to this page are welcomed.
     </footer>
-    
-    
+
+
     <!-- Github ribbon -->
     <a href="https://github.com/montagejs/montage"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
-    
-    
+
+
     <!-- Google -->
     <script type="text/javascript">
       var _gaq = _gaq || [];
@@ -265,6 +265,6 @@
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
     </script>
-    
+
 </body>
 </html>
