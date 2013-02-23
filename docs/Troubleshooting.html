@@ -11,10 +11,11 @@
     <link rel="stylesheet" href="../stylesheets/normalize.css" />
     <link rel="stylesheet" href="../stylesheets/base.css" />
     <link rel="stylesheet" href="../stylesheets/pages.css" />
+    <link rel="stylesheet" href="../stylesheets/solarized.css" />
         
     <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->    
 </head>
-<body>
+<body class="docs">
   
     <header class="header header-pages pushed">
         <div class="header-container">
@@ -26,7 +27,7 @@
         </div>
     </header>
     
-    <section id="docs" class="docs">
+    <section id="docs">
         <article>
             <div class="markdown-body">
 
@@ -100,7 +101,7 @@
 <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">8081</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">buttonerror</span><span class="o">/</span><span class="p">.</span>
 </pre></div>
 
-<p>If you provide an invalid module ID in a serialization, then the console will report a 404 error “Can’t XHR <em>module-id</em>“. For example, consider the following serialization that defines a Textfield component but the module ID is misspelled as “montage/ui/textfld.reel”.
+<p>If you provide an invalid module ID in a serialization, then the console will report a 404 error “Can’t XHR _module-id_“. For example, consider the following serialization that defines a Textfield component but the module ID is misspelled as “montage/ui/textfld.reel”.
 </p>
 <div class="highlight"><pre><span class="p">{</span>
 "<span class="n">emailInput</span>"<span class="p">:</span> <span class="p">{</span>
