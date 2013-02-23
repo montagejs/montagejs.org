@@ -20,6 +20,12 @@ a:active {
     color: hsl(220,80%,40%);
 }
 
+::-moz-selection { background: hsl(60, 86%, 88%); text-shadow: none; }
+::selection { background: hsl(60, 86%, 88%); text-shadow: none; }
+
+.pushed ::-moz-selection { background: hsl(0,0%,10%); text-shadow: none; }
+.pushed ::selection { background: hsl(0,0%,10%); text-shadow: none; }
+
 
 /* Sections ----------------------------------------- */
 
