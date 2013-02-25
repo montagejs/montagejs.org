@@ -104,10 +104,6 @@ article {
     background-image:         linear-gradient(top, hsl(0,0%,90%), hsl(0,0%,86%) );
 }
 
-.highlight {
-    color: hsl(200,100%,50%);
-}
-
 
 /* Columns ----------------------------------------- */
 
