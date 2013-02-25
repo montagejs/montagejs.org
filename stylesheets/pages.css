@@ -122,6 +122,9 @@
     margin: .3em 0;
 }
 
+.docs .highlight ::-moz-selection { background: hsl(50,5%,50%); color: white; text-shadow: none; }
+.docs .highlight ::selection { background: hsl(50,5%,50%); color: white; text-shadow: none; }
+
 .docs .highlight pre { 
     margin: 0;
     padding: 20px;
