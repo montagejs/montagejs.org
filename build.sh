@@ -4,7 +4,7 @@ set -e -x
 
 # export ROOT_DIR=`dirname "${BASH_SOURCE[0]}"`
 export ROOT_DIR=`pwd`
-export TEMP_DIR=`mktemp -d -t montagejs_org_temp`
+export TEMP_DIR=`mktemp -d montagejs_org_temp.XXXXXX`
 export SOURCE_DIR="$ROOT_DIR/source"
 export OUT_DIR="$ROOT_DIR/generated"
 export DEPLOY_DIR="$ROOT_DIR/deploy"
