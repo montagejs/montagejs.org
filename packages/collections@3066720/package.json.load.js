@@ -1,1 +1,0 @@
-montageDefine("3066720","package.json",{exports:{name:"collections",version:"0.1.15",hash:"3066720",directories:{lib:"./"},mappings:{},production:!0,useScriptInjection:!0}})

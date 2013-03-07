@@ -31,7 +31,17 @@
         <article>
             <div class="markdown-body">
 
-<p>One of the great features of Montage is encapsulated components. This means that the structure (html), appearance (css) and behavior (js) are all self-contained in a directory. These directories end with a <code>.reel</code> extension, just like a regular file, to indicate that it is an isolated unit.</p>
+<ol>
+<li><a href="Quick-Start.html">Quick Start</a></li>
+<li><strong>Exploring Components</strong></li>
+<li><a href="Hello-montage.html">Hello Montage</a></li>
+</ol><hr /><p>Components make up the view portion of a Montage application.</p>
+
+<p>While Montage itself includes a variety of pre-built user interface components, a custom Montage application employs the same component mechanism to help build and organize its interface.</p>
+
+<p>Montage components are modular and encapsulated; the structure (HTML), appearance (CSS) and behavior (JavaScript) that power the component are all contained in the same directory. These directories end with a <code>.reel</code> extension, just like a regular file, to indicate that it is an isolated unit.</p>
+
+<p>This modularity means that wherever a component is used, the same HTML will dictate how is is structured, the same CSS will dictate how it looks, and the same JavaScript will dictate how it behaves. Since a component is self-contained, it's easy to work on, rename, or even remove a single component without having to find bits and pieces of it scattered across different directories.</p>
 
 <p>Inside the directory from the <a href="Quick-Start.html">Quick Start</a> guide run the minit command to create a new component</p>
 
@@ -42,9 +52,9 @@ name-tag.reel created.
 name-tag.css   name-tag.html  name-tag.js
 </pre></div>
 
-<p>The first thing to notice is that we put all our components in the <code>ui</code> directory. This convention allows you to use any Montage package and know exactly where the components are.</p>
+<p>The first thing to notice is that we put all our components in the <code>ui</code> directory. This convention allows you to use any Montage package and easily locate the components it provides.</p>
 
-<p>Lets step through the files, and some of the notable features in each of them.</p>
+<p>Let's step through the files, and some of the notable features in each of them.</p>
 
 <h2>HTML<a class="anchor" id="HTML" href="#HTML"></a>
 </h2>
@@ -72,7 +82,7 @@ name-tag.css   name-tag.html  name-tag.js
 </li>
 <li>the serialization is just JSON, with some enforced semantics</li>
 <li>
-<code>owner</code> is a special label in the serialization that refers to the current component. It's the equivalent of <code>this</code> in Javascript</li>
+<code>owner</code> is a special label in the serialization that refers to the current component. It's the equivalent of <code>this</code> in Javascript.</li>
 <li>within the serialization you can use <code>{"#": "montage-id"}</code> to refer to elements in the body</li>
 <li>although not shown here, you can also use <code>{"@": "label"}</code> to refer to another object by its label in the serialization</li>
 </ul><p></p><div class="highlight"><pre><span class="nt">&lt;body&gt;</span>
@@ -81,7 +91,9 @@ name-tag.css   name-tag.html  name-tag.js
 <span class="nt">&lt;/body&gt;</span>
 </pre></div>
 
-<p>Each template has one element that contains all the structure for the template. The <code>data-montage-id</code> attribute uniquely identifies elements (<a href="#id">why data-montage-id?</a>). If you look back at the serialization you'll notice that we're assigning <code>name-tag</code> as this component's element.</p>
+<p>While each template is a complete and valid document, only one element serves as the root element of the component being described. The serialization identifies the element with the <code>data-montage-id</code> of <code>name-tag</code> as this component's root element using the <code>{"#": "name-tag"}</code> reference.</p>
+
+<p>This means that when we use a NameTag component in a Montage application the only portion of its template that will be rendered is the <code>name-tag</code> element. This also explains why we do not use the document unique HTML id attribute to identify the element. (<a href="#id">why data-montage-id?</a>).</p>
 
 <h2>CSS<a class="anchor" id="CSS" href="#CSS"></a>
 </h2>
@@ -109,7 +121,16 @@ name-tag.css   name-tag.html  name-tag.js
 
 <p>The file exports a single object with a CamelCased version of the reel name, which inherits from Component. <code>Montage.create()</code> is a special version of Ecmascript 5's <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Object/create">Object.create()</a> that has some extensions that we'll explore later.</p>
 
-<p><span id="id"><strong>Why data-montage-id?</strong></span> The <code>id</code> attribute seems like an ideal candidate for identifying an element, however there are some issues. We don't use <code>id</code> because our components are reusable, and so when they are inserted into a document multiple times there would be multiple elements with the same id, which is invalid HTML5. <strong>Why not remove the id when inserting?</strong> Although you should always use classes to style your document, we don't want to prevent ids being used for styling, either for performance or legacy reasons. This means we can't use the id attribute. Instead we use a <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#custom-data-attribute">custom data- attribute</a>, <code>data-montage-id</code>. When the <a href="https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/shadow/index.html">Shadow DOM</a> gets more mature and is implemented it might be possible to revert back to using id, as each template will be isolated in the document.</p>
+<p>In use the NameTag Component will be rendered in a document using its element from its included template, styled using its included CSS, and given instructions on how to act from its included JavaScript.</p>
+
+<h1>All Together Now<a class="anchor" id="All-Together-Now" href="#All-Together-Now"></a>
+</h1>
+
+<p>No component is an island; they are assembled to present the User Interface of your Montage application.</p>
+
+<p>With your name tag component in hand say <a href="Hello-Montage.html">Hello to Montage</a></p>
+
+<hr /><p><span id="id"><strong>Why data-montage-id?</strong></span> The <code>id</code> attribute seems like an ideal candidate for identifying an element, however there are some issues. We don't use <code>id</code> because our components are reusable, and so when they are inserted into a document multiple times there would be multiple elements with the same id, which is invalid HTML5. <strong>Why not remove the id when inserting?</strong> Although you should always use classes to style your document, we don't want to prevent ids being used for styling, either for performance or legacy reasons. This means we can't use the id attribute. Instead we use a <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#custom-data-attribute">custom data- attribute</a>, <code>data-montage-id</code>. When the <a href="https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/shadow/index.html">Shadow DOM</a> gets more mature and is implemented it might be possible to revert back to using id, as each template will be isolated in the document.</p>
 
                 </div>
         </article>

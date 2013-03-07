@@ -31,10 +31,15 @@
         <article>
             <div class="markdown-body">
 
-<h1>Quick Start<a class="anchor" id="Quick-Start" href="#Quick-Start"></a>
-</h1>
+<ol>
+<li><strong>Quick Start</strong></li>
+<li><a href="Exploring-components.html">Exploring Components</a></li>
+<li><a href="Hello-montage.html">Hello Montage</a></li>
+</ol><hr /><p>If you don't have it already, <a href="http://nodejs.org/download/">download and install Node.js</a></p>
 
-<p>If you don't have it already, download Node which includes the <code>npm</code> command: <a href="http://nodejs.org/download/">http://nodejs.org/download/</a>.</p>
+<p>While Montage itself does not rely on Node.js, it does rely on the Node Package Management (NPM) system for fulfilling dependencies throughout development. Additionally, tools and utilities are written in JavaScript and executed using Node.js so it's useful to have installed.</p>
+
+<p>Once node and its included npm commandline tool are installed:</p>
 
 <ol>
 <li>
@@ -51,12 +56,12 @@
 </pre></div>
 </li>
 <li>
-<p>Navigate to the directory in your browser. If you don't have a localhost webserver, you can create a temporary one by running
+<p>Serve up your new application for development (or use your own web server)
 </p>
 <div class="highlight"><pre><span class="nv">$ </span>python -m SimpleHTTPServer
 </pre></div>
 
-<p>and navigating to <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a></p>
+<p>and navigate a browser to <a href="http://localhost:8000">http://localhost:8000/</a></p>
 </li>
 </ol><p>The server is needed because Montage uses XHR to load files during development, which cannot be done on the file:// protocol.</p>
 
@@ -64,9 +69,8 @@
 </h2>
 
 <ul>
-<li>Find out more about Montage components in <a href="Exploring-components.html">Exploring the component</a>.</li>
-<li>For a basic introduction to Montage development, see the <a href="Hello-Montage.html">Hello Montage</a> tutorial. You can jump straight to the <strong>Specify the component’s initial property values</strong> section</li>
-<li>Experiment with Montage in the browser using <a href="http://montagejs.github.com/montage/samples/mfiddle/">MFiddle</a>.</li>
+<li><p>Find out more about Montage components in <a href="Exploring-components.html">Exploring components</a>.</p></li>
+<li><p>Experiment with Montage on your own in the browser using <a href="http://montagejs.github.com/montage/samples/mfiddle/">MFiddle</a>.</p></li>
 </ul>
 
                 </div>
