@@ -69,7 +69,7 @@ popd
 
 "$OUT_DIR/node_modules/.bin/mop" "$OUT_DIR"
 
-for a in `find $OUT_DIR/apps -depth 1 -type d`; do
+for a in `find $OUT_DIR/apps -mindepth 1 -maxdepth 1 -type d`; do
     "$OUT_DIR/node_modules/.bin/mop" "$a"
     # move to the montagejs.org build directory
     mv "$a/builds/"*@* "$OUT_DIR/builds/montagejs.org/apps/"`basename $a`
@@ -78,7 +78,7 @@ done
 ### Deploy ###
 
 rm -rf "$DEPLOY_DIR"
-git clone --single-branch --branch gh-pages git@github.com:montagejs/montagejs.org.git "$DEPLOY_DIR"
+git clone --branch gh-pages git@github.com:montagejs/montagejs.org.git "$DEPLOY_DIR"
 # clean out the deploy dir ready for the new content
 rm -rf "$DEPLOY_DIR"/*
 
