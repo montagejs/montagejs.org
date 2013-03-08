@@ -4,5 +4,8 @@
     "private": true,
     "dependencies": {
         "montage": "*"
+    },
+    "devDependencies": {
+        "mop": "*"
     }
 }
