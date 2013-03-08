@@ -70,7 +70,7 @@ popd
 "$OUT_DIR/node_modules/.bin/mop" "$OUT_DIR"
 
 for a in `find $OUT_DIR/apps -depth 1 -type d`; do
-    mop "$a"
+    "$OUT_DIR/node_modules/.bin/mop" "$a"
     # move to the montagejs.org build directory
     mv "$a/builds/"*@* "$OUT_DIR/builds/montagejs.org/apps/"`basename $a`
 done
