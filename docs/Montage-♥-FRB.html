@@ -120,6 +120,23 @@ or
 
 <p>Calls <code>handler.handleArrayRangeChange</code> with <code>plus</code>, <code>minus</code>, and <code>index</code>.</p>
 
+<h2>How do I change a private value and dispatch the change on an affected public property?<a class="anchor" id="How-do-I-change-a-private-value-and-dispatch-the-change-on-an-affected-public-property?" href="#How-do-I-change-a-private-value-and-dispatch-the-change-on-an-affected-public-property?"></a>
+</h2>
+
+<p>Before
+</p><div class="highlight"><pre><span class="nx">myObject</span><span class="p">.</span><span class="nx">dispatchPropertyChange</span><span class="p">(</span><span class="s2">"affectedProperty"</span><span class="p">,</span> <span class="s2">"anotherAffectProperty"</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">myObject</span><span class="p">.</span><span class="nx">_underlyingProperty</span> <span class="o">=</span> <span class="nx">newValue</span><span class="p">;</span>
+<span class="p">});</span>
+</pre></div>
+
+<p>After
+</p><div class="highlight"><pre><span class="nx">myObject</span><span class="p">.</span><span class="nx">dispatchBeforeOwnPropertyChange</span><span class="p">(</span><span class="s2">"affectedProperty"</span><span class="p">,</span> <span class="nx">myObject</span><span class="p">.</span><span class="nx">affectedProperty</span><span class="p">);</span>
+<span class="nx">myObject</span><span class="p">.</span><span class="nx">dispatchBeforeOwnPropertyChange</span><span class="p">(</span><span class="s2">"anotherAffectedPropert"</span><span class="p">,</span> <span class="nx">myObject</span><span class="p">.</span><span class="nx">anotherAffectedProperty</span><span class="p">);</span>
+<span class="nx">myObject</span><span class="p">.</span><span class="nx">_underlyingProperty</span> <span class="o">=</span> <span class="nx">newValue</span><span class="p">;</span>
+<span class="nx">myObject</span><span class="p">.</span><span class="nx">dispatchOwnPropertyChange</span><span class="p">(</span><span class="s2">"affectedProperty"</span><span class="p">,</span> <span class="nx">myObject</span><span class="p">.</span><span class="nx">affectedProperty</span><span class="p">);</span>
+<span class="nx">myObject</span><span class="p">.</span><span class="nx">dispatchOwnPropertyChange</span><span class="p">(</span><span class="s2">"anotherAffectedProperty"</span><span class="p">,</span> <span class="nx">myObject</span><span class="p">.</span><span class="nx">anotherAffectedProperty</span><span class="p">);</span>
+</pre></div>
+
                 </div>
         </article>
     </section>
