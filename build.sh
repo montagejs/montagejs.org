@@ -76,6 +76,8 @@ for a in `find $OUT_DIR/apps -mindepth 1 -maxdepth 1 -type d`; do
 done
 
 cp -r "$OUT_DIR/docs/kitchen-sink" "$OUT_DIR/builds/montagejs.org/docs/kitchen-sink"
+# remove gitignore so that montage gets commited to gh-pages
+rm "$OUT_DIR/builds/montagejs.org/docs/kitchen-sink/.gitignore"
 
 ### Deploy ###
 
