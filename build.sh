@@ -75,6 +75,8 @@ for a in `find $OUT_DIR/apps -mindepth 1 -maxdepth 1 -type d`; do
     mv "$a/builds/"*@* "$OUT_DIR/builds/montagejs.org/apps/"`basename $a`
 done
 
+cp -r "$OUT_DIR/docs/kitchen-sink" "$OUT_DIR/builds/montagejs.org/docs/kitchen-sink"
+
 ### Deploy ###
 
 rm -rf "$DEPLOY_DIR"
