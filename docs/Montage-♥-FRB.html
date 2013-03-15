@@ -44,13 +44,13 @@
 <p>When the path changes <code>myObject.handleChange(notification)</code> will be called</p>
 
 <p>After
-</p><div class="highlight"><pre><span class="nx">myMontageObject</span><span class="p">.</span><span class="nx">addPathChangeListener</span><span class="p">(</span><span class="s2">"path"</span><span class="p">,</span> <span class="nx">handler</span><span class="p">,</span> <span class="nx">opt_methodName</span><span class="p">)</span>
+</p><div class="highlight"><pre><span class="nx">aMontageObject</span><span class="p">.</span><span class="nx">addPathChangeListener</span><span class="p">(</span><span class="s2">"path"</span><span class="p">,</span> <span class="nx">handler</span><span class="p">,</span> <span class="nx">opt_methodName</span><span class="p">)</span>
 </pre></div>
 or
 <div class="highlight"><pre><span class="nx">Montage</span><span class="p">.</span><span class="nx">addPathChangeListener</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">myObject</span><span class="p">,</span> <span class="s2">"path"</span><span class="p">,</span> <span class="nx">handler</span><span class="p">,</span> <span class="nx">opt_methodName</span><span class="p">)</span>
 </pre></div>
 
-<p><code>myMontageObject</code> is an object that has <code>Montage</code> in its prototype chain: <code>Montage.isPrototypeOf(myMontageObject) === true</code> holds.</p>
+<p><code>aMontageObject</code> is an object that has <code>Montage</code> in its prototype chain: <code>Montage.isPrototypeOf(aMontageObject) === true</code> holds.</p>
 
 <p>When the value at the path changes (not the content of the value), the first function in this list gets called with the <code>newValue</code>, <code>path</code>, and <code>myObject</code>.</p>
 
@@ -66,7 +66,7 @@ or
 </pre></div>
 
 <p>After
-</p><div class="highlight"><pre><span class="nx">myMontageObject</span><span class="p">.</span><span class="nx">addPathChangeListener</span><span class="p">(</span><span class="s2">"path"</span><span class="p">,</span> <span class="nx">handler</span><span class="p">,</span> <span class="s2">"handleMethodName"</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
+</p><div class="highlight"><pre><span class="nx">aMontageObject</span><span class="p">.</span><span class="nx">addPathChangeListener</span><span class="p">(</span><span class="s2">"path"</span><span class="p">,</span> <span class="nx">handler</span><span class="p">,</span> <span class="s2">"handleMethodName"</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
 </pre></div>
 or
 <div class="highlight"><pre><span class="nx">Montage</span><span class="p">.</span><span class="nx">addPathChangeListener</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">myObject</span><span class="p">,</span> <span class="s2">"path"</span><span class="p">,</span> <span class="nx">handler</span><span class="p">,</span> <span class="s2">"handleMethodName"</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
@@ -83,7 +83,7 @@ or
 </pre></div>
 
 <p>After
-</p><div class="highlight"><pre><span class="nx">myMontageObject</span><span class="p">.</span><span class="nx">defineBinding</span><span class="p">(</span><span class="s2">"myProperty"</span><span class="p">,</span> <span class="p">{</span><span class="s2">"&lt;-&gt;"</span><span class="o">:</span> <span class="s2">"foo.bar"</span><span class="p">,</span> <span class="nx">source</span><span class="o">:</span> <span class="nx">anotherObject</span><span class="p">});</span>
+</p><div class="highlight"><pre><span class="nx">aMontageObject</span><span class="p">.</span><span class="nx">defineBinding</span><span class="p">(</span><span class="s2">"myProperty"</span><span class="p">,</span> <span class="p">{</span><span class="s2">"&lt;-&gt;"</span><span class="o">:</span> <span class="s2">"foo.bar"</span><span class="p">,</span> <span class="nx">source</span><span class="o">:</span> <span class="nx">anotherObject</span><span class="p">});</span>
 </pre></div>
 or
 <div class="highlight"><pre><span class="kd">var</span> <span class="nx">Bindings</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"montage/core/bindings"</span><span class="p">).</span><span class="nx">Bindings</span><span class="p">;</span>
@@ -102,7 +102,7 @@ or
 </pre></div>
 
 <p>After
-</p><div class="highlight"><pre><span class="nx">myMontageObject</span><span class="p">.</span><span class="nx">defineBinding</span><span class="p">(</span><span class="s2">"myProperty"</span><span class="p">,</span> <span class="p">{</span><span class="s2">"&lt;-"</span><span class="o">:</span> <span class="s2">"foo.bar"</span><span class="p">,</span> <span class="nx">source</span><span class="o">:</span> <span class="nx">anotherObject</span><span class="p">});</span>
+</p><div class="highlight"><pre><span class="nx">aMontageObject</span><span class="p">.</span><span class="nx">defineBinding</span><span class="p">(</span><span class="s2">"myProperty"</span><span class="p">,</span> <span class="p">{</span><span class="s2">"&lt;-"</span><span class="o">:</span> <span class="s2">"foo.bar"</span><span class="p">,</span> <span class="nx">source</span><span class="o">:</span> <span class="nx">anotherObject</span><span class="p">});</span>
 </pre></div>
 or
 <div class="highlight"><pre><span class="kd">var</span> <span class="nx">Bindings</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"montage/core/bindings"</span><span class="p">).</span><span class="nx">Bindings</span><span class="p">;</span>
@@ -112,7 +112,7 @@ or
 <h2>How do I watch changes to an array at the end of a property path so I know what's added and removed?<a class="anchor" id="How-do-I-watch-changes-to-an-array-at-the-end-of-a-property-path-so-I-know-what's-added-and-removed?" href="#How-do-I-watch-changes-to-an-array-at-the-end-of-a-property-path-so-I-know-what's-added-and-removed?"></a>
 </h2>
 
-<p></p><div class="highlight"><pre><span class="nx">myMontageObject</span><span class="p">.</span><span class="nx">addRangeAtPathChangeListener</span><span class="p">(</span><span class="s2">"array"</span><span class="p">,</span> <span class="nx">handler</span><span class="p">,</span> <span class="s2">"handleArrayRangeChange"</span><span class="p">);</span>
+<p></p><div class="highlight"><pre><span class="nx">aMontageObject</span><span class="p">.</span><span class="nx">addRangeAtPathChangeListener</span><span class="p">(</span><span class="s2">"array"</span><span class="p">,</span> <span class="nx">handler</span><span class="p">,</span> <span class="s2">"handleArrayRangeChange"</span><span class="p">);</span>
 </pre></div>
 or
 <div class="highlight"><pre><span class="nx">Montage</span><span class="p">.</span><span class="nx">addRangeAtPathChangeListener</span><span class="p">(</span><span class="nx">myObject</span><span class="p">,</span> <span class="s2">"array"</span><span class="p">,</span> <span class="nx">handler</span><span class="p">,</span> <span class="s2">"handleArrayRangeChange"</span><span class="p">);</span>

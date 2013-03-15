@@ -66,16 +66,28 @@
 <p></p><div class="highlight"><pre>git subtree pull --squash --prefix<span class="o">=</span><span class="nv">$dir$ </span>git@github.com:<span class="nv">$repo$.</span>git <span class="nv">$commitOrTag$ </span>-m <span class="s2">"Update $name$ to $version$"</span>
 </pre></div>
 
-<h4>Montage ↢ Mr<a class="anchor" id="Montage-↢-Mr" href="#Montage-%E2%86%A2-Mr"></a>
+<h4>Mr ↣ Montage<a class="anchor" id="Mr-↣-Montage" href="#Mr-%E2%86%A3-Montage"></a>
 </h4>
 
 <p></p><div class="highlight"><pre>git subtree pull --squash --prefix<span class="o">=</span>packages/mr git@github.com:montagejs/mr.git <span class="nv">$version</span> -m <span class="s2">"Update Mr to $version$"</span>
 </pre></div>
 
-<h4>Mr ↢ Q<a class="anchor" id="Mr-↢-Q" href="#Mr-%E2%86%A2-Q"></a>
+<h4>Q ↣ Mr<a class="anchor" id="Q-↣-Mr" href="#Q-%E2%86%A3-Mr"></a>
 </h4>
 
 <p></p><div class="highlight"><pre>git subtree pull --squash --prefix<span class="o">=</span>packages/q git@github.com:kriskowal/q.git <span class="nv">$version</span> -m <span class="s2">"Update Q to $version"</span>
+</pre></div>
+
+<h4>Popcorn ↣ montagejs.org<a class="anchor" id="Popcorn-↣-montagejs.org" href="#Popcorn-%E2%86%A3-montagejs.org"></a>
+</h4>
+
+<p></p><div class="highlight"><pre>git subtree pull --squash --prefix<span class="o">=</span><span class="nb">source</span>/apps/popcorn git@github.com:montagejs/popcorn.git master -m <span class="s2">"Update Popcorn to master"</span>
+</pre></div>
+
+<h4>Kitchen sink ↣ montagejs.org<a class="anchor" id="Kitchen-sink-↣-montagejs.org" href="#Kitchen-sink-%E2%86%A3-montagejs.org"></a>
+</h4>
+
+<p></p><div class="highlight"><pre>git subtree pull --squash --prefix<span class="o">=</span><span class="nb">source</span>/docs/kitchen-sink git@github.com:montagejs/kitchen-sink.git master -m <span class="s2">"Update Kitchen sink to master"</span>
 </pre></div>
 
 <h3>Splitting<a class="anchor" id="Splitting" href="#Splitting"></a>
