@@ -19,3 +19,14 @@ You can run `build.sh` with these arguments:
 * `--no-build` – will generate the wiki pages, but will not Mop the site into the deploy directory
 * `--no-commit` – will generate the deploy directory, but won't commit the changes
 
+## Updating Apps and Kitchen Sink
+
+To get the changes from an App or Kitchen Sink, run the following:
+
+### Popcorn
+`git subtree pull --squash --prefix=source/apps/popcorn git@github.com:montagejs/popcorn.git master -m "Update Popcorn to master"`
+
+### Kitchen Sink
+`git subtree pull --squash --prefix=source/docs/kitchen-sink git@github.com:montagejs/kitchen-sink.git master -m "Update Kitchen sink to master"`
+
+More [infos](https://github.com/montagejs/montage/wiki/git-subtree) about using `subtree`.
