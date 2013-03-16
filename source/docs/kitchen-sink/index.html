@@ -54,58 +54,76 @@ POSSIBILITY OF SUCH DAMAGE.
           background-color: #ddd;
         }
         
-        #montage-loader {
-            padding: 50px;
-            text-align: center;
+        .montage-loader {
+            position: relative;
+            width: 240px;
+            margin: 100px auto 50px auto;
         }
         
         .montage-app-bootstrapping .main,
         .montage-app-loading .main,
-        .montage-app-loaded #montage-loader {
+        .montage-app-loaded .montage-loader {
             display: none;
         }
         
-        .montage-app-bootstrapping #montage-loader,
-        .montage-app-loading #montage-loader {
+        .montage-app-bootstrapping .montage-loader,
+        .montage-app-loading .montage-loader {
             display: block;
         }
         
         .montage-loader-logo {
-            width: 200px;
+            width: 100%;
         }
+        
         
         .montage-loader-spinner {
             margin: 30px auto;
-            width: 60px;
-            height: 60px;
+            width: 40px;
+            height: 20px;
             -moz-box-sizing: border-box;
             box-sizing: border-box;
-            border-radius: 60px;
-            background: hsl(0,0%,50%);
-            border: 26px solid hsl(0,0%,80%);
-            border-top-width: 4px;
-            -webkit-animation: spin 2.4s linear infinite;
-               -moz-animation: spin 2.4s linear infinite;
-                -ms-animation: spin 2.4s linear infinite;
-                 -o-animation: spin 2.4s linear infinite;
-                    animation: spin 2.4s linear infinite;
+            border-radius: 20px;
+            background-color: hsl(0,0%,80%);
+            background-size: 10px 40px;
+            background-image: -webkit-linear-gradient( left, hsl(0,0%,70%) 50%, hsla(0,0%,0%,0) 50% );
+            background-image:    -moz-linear-gradient( left, hsl(0,0%,70%) 50%, hsla(0,0%,0%,0) 50% );
+            background-image:     -ms-linear-gradient( left, hsl(0,0%,70%) 50%, hsla(0,0%,0%,0) 50% );
+            background-image:      -o-linear-gradient( left, hsl(0,0%,70%) 50%, hsla(0,0%,0%,0) 50% );
+            background-image:         linear-gradient( left, hsl(0,0%,70%) 50%, hsla(0,0%,0%,0) 50% );
+            -webkit-animation: spin 1s linear infinite;
+               -moz-animation: spin 1s linear infinite;
+                -ms-animation: spin 1s linear infinite;
+                 -o-animation: spin 1s linear infinite;
+                    animation: spin 1s linear infinite;
         }
         
-        @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-           @-moz-keyframes spin { 100% {    -moz-transform: rotate(360deg); } }
-            @-ms-keyframes spin { 100% {     -ms-transform: rotate(360deg); } }
-             @-o-keyframes spin { 100% {      -o-transform: rotate(360deg); } }
-                @keyframes spin { 100% {         transform: rotate(360deg); } }
+        @-webkit-keyframes spin { 100% { background-position: 40px 0px; } }
+           @-moz-keyframes spin { 100% { background-position: 40px 0px; } }
+            @-ms-keyframes spin { 100% { background-position: 40px 0px; } }
+             @-o-keyframes spin { 100% { background-position: 40px 0px; } }
+                @keyframes spin { 100% { background-position: 40px 0px; } }
         
     </style>
 
 </head>
 <body>
 
-    <div id="montage-loader">
+    <div class="montage-loader">
         <img class="montage-loader-logo" src="assets/image/montage-logo.png" />
         <div class="montage-loader-spinner"></div>
     </div>
+    
+    <!-- Google -->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-35717912-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
 
 </body>
 </html>
