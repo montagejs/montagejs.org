@@ -1,21 +1,16 @@
-This is the repo for the [montagejs.org](http://montagejs.org) website.
+Montage Kitchen Sink
+===============
 
-## Contributing
-If you find any bugs or want to contribute, feel free to create an issue or send a pull request.
+This application depends on the Montage framework which isn't included in the repository. There are two easy ways to
+install the Montage framework so that it can be loaded by this application.
 
-## Building and deploying
+If you have npm installed already simply type
+```
+npm install
+```
 
-Run `./build.sh`. It will take its time installing gems to compile the wiki
-into HTML. In the end the `deploy` directory contains the gh-pages of this
-repo, with a new commit containing any updates.
-
-Before you push make sure you have committed your changes and then built, so
-that the gh-pages commit message has the correct commit hash.
-
-To deploy, change into the deploy directory and run `git push origin gh-pages`
-
-You can run `build.sh` with these arguments:
-
-* `--no-build` – will generate the wiki pages, but will not Mop the site into the deploy directory
-* `--no-commit` – will generate the deploy directory, but won't commit the changes
-
+If do not have npm you can use assist.sh script. This will download montage as a sibling to your application's directory
+and create a symlink in the node_modules directory of the application.
+```
+./assist.sh link montage
+```
