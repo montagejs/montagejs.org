@@ -1,4 +1,4 @@
-/* These Styles only get used on sub-pages only */
+/* These Styles only get used on sub-pages */
 
 /* Header ----------------------------------------- */
 
@@ -104,6 +104,20 @@
 
 .apps a:active {
     color: hsl(196,100%,40%);
+}
+
+.apps .gallery-item-source {
+    display: inline-block;
+    padding: 0 8px;
+    line-height: 1.5;
+    color: hsl(0,0%,70%);
+    font-size: 12px;
+    border-radius: 20px;
+    background: hsl(0,0%,30%);
+}
+
+.apps .gallery-item-source:hover {
+    background: hsl(200,100%,25%);
 }
 
 
