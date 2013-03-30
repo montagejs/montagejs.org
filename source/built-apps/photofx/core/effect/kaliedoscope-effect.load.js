@@ -1,0 +1,1 @@
+montageDefine("a005228","core/effect/kaliedoscope-effect",{dependencies:["montage","core/effect/effect"],factory:function(e,t,n){var r=e("montage").Montage,i=e("core/effect/effect").Effect;t.KaliedoscopeEffect=r.create(i,{applyEffect:{value:function(){console.log("kaliedoscope")}}})}})
