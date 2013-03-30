@@ -1,0 +1,1 @@
+var Montage=require("montage").Montage,Effect=require("core/effect/effect").Effect;exports.SepiaEffect=Montage.create(Effect,{applyEffect:{value:function(e,t){var n=0,r;for(n=0;n<t;n+=4)r=(e[n]+e[n+1]+e[n+2])/3,e[n]=r+10,e[n+1]=r,e[n+2]=r}}})
