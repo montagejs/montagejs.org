@@ -1,0 +1,51 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <script type="text/montage-serialization">{"owner":{"prototype":"shuriken/effect/effect","properties":{"profiles":{"GLSL":{"techniques":{"swirl":{"pass 0":{"x-shader/x-fragment":{"#":"filter-swirl-fs"},"x-shader/x-vertex":{"#":"filter-swirl-vs"}}}}}}}}}</script>
+
+    </head>
+
+<body>
+
+<script id="filter-swirl-fs" type="x-shader/x-fragment">
+    #ifdef GL_ES
+    precision highp float;
+    #endif
+
+    uniform sampler2D uSampler;
+    uniform float uTime;
+
+    varying vec2 vTexCoord;
+
+    void main(void)
+    {
+        float speed = 15.0;
+        float magnitude = 0.025;
+        vec2 wavyCoord;
+        wavyCoord.s = vTexCoord.s + (sin(uTime+vTexCoord.t*speed) * magnitude);
+        wavyCoord.t = vTexCoord.t + (cos(uTime+vTexCoord.s*speed) * magnitude);
+        gl_FragColor = texture2D(uSampler, wavyCoord);
+    }
+</script>
+
+<script id="filter-swirl-vs" type="x-shader/x-vertex">
+    attribute vec3 aPosition;
+    attribute vec2 aTexCoord;
+
+    uniform mat4 uModelViewMatrix;
+    uniform mat4 uProjMatrix;
+
+    varying vec2 vTexCoord;
+
+    void main(void) {
+        vTexCoord = aTexCoord;
+        gl_Position = uProjMatrix * uModelViewMatrix * vec4(aPosition, 1.0);
+    }
+</script>
+
+</body>
+
+</html>

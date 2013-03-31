@@ -1,0 +1,1 @@
+var Montage=require("montage/core/core").Montage,Component=require("montage/ui/component").Component,FilterPreview=exports.FilterPreview=Montage.create(Component,{src:{value:null},image:{value:null},filter:{value:null}})
