@@ -1,0 +1,1 @@
+var Montage=require("montage").Montage,Converter=require("core/converter/converter").Converter;exports.UpperCaseConverter=Montage.create(Converter,{_convert:{value:function(e){return e&&typeof e=="string"?e.toUpperCase?e.toUpperCase():e:e}},convert:{value:function(e){return this._convert(e)}},revert:{value:function(e){return this._convert(e)}}})

@@ -1,0 +1,1 @@
+montageDefine("87344ee","spec/sorted-array-map-spec",{dependencies:["../sorted-array-map","./dict","./map","./listen/map-changes"],factory:function(e,t,n){var r=e("../sorted-array-map"),i=e("./dict"),s=e("./map"),o=e("./listen/map-changes");describe("SortedArrayMap",function(){i(r),s(r,[1,2,3]),o(r)})}})
