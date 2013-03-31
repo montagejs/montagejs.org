@@ -1,0 +1,61 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <script type="text/montage-serialization">{"owner":{"prototype":"shuriken/effect/effect","properties":{"profiles":{"GLSL":{"techniques":{"bulge":{"pass 0":{"x-shader/x-fragment":{"#":"filter-bulge-fs"},"x-shader/x-vertex":{"#":"filter-bulge-vs"}}}}}}}}}</script>
+
+    </head>
+
+<body>
+
+<script id="filter-bulge-fs" type="x-shader/x-fragment">
+    #ifdef GL_ES
+    precision highp float;
+    #endif
+
+    uniform sampler2D uSampler;
+
+    varying vec2 vTexCoord;
+
+    void main(void)
+    {
+        float radius = 0.4;
+        float strength = 1.0;
+        vec2 center = vec2(0.5, 0.5);
+
+        vec2 coord = vTexCoord - center;
+        float distance = length(coord);
+        if (distance < radius) {
+            float percent = distance / radius;
+            if (strength > 0.0) {
+                coord *= mix(1.0, smoothstep(0.0, radius / distance, percent), strength * 0.75);
+            } else {
+                coord *= mix(1.0, pow(percent, 1.0 + strength * 0.75) * radius / distance, 1.0 - percent);
+            }
+        }
+        coord += center;
+
+        gl_FragColor = texture2D(uSampler, coord);
+    }
+</script>
+
+<script id="filter-bulge-vs" type="x-shader/x-vertex">
+    attribute vec3 aPosition;
+    attribute vec2 aTexCoord;
+
+    uniform mat4 uModelViewMatrix;
+    uniform mat4 uProjMatrix;
+
+    varying vec2 vTexCoord;
+
+    void main(void) {
+        vTexCoord = aTexCoord;
+        gl_Position = uProjMatrix * uModelViewMatrix * vec4(aPosition, 1.0);
+    }
+</script>
+
+</body>
+
+</html>

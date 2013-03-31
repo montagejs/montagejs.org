@@ -1,0 +1,1 @@
+var Montage=require("montage").Montage,Component=require("ui/component").Component,NativeInputText=require("ui/native/input-text.reel").InputText;exports.InputText=Montage.create(NativeInputText,{hasTemplate:{value:!0},willPrepareForDraw:{value:function(){NativeInputText.willPrepareForDraw.call(this),this.element.classList.add("montage-InputText")}}})
