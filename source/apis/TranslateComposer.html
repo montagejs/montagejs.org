@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: TranslateComposer</title>
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" />
+    <link rel="stylesheet" href="stylesheets/normalize.css" />
+    <link rel="stylesheet" href="stylesheets/base.css" />
+    <link rel="stylesheet" href="stylesheets/pages.css" />
+    <link rel="stylesheet" href="stylesheets/solarized.css" />
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <script src="scripts/search.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body class="docs">
+
+    <header class="header header-pages pushed">
+        <div class="header-container">
+            <a href="/"><img class="logo" src="images/logo-pages.png" alt="Montage" /></a>
+            <nav class="nav">
+                <a class="nav-item" href="http://montagejs.org/apps">Apps</a>
+                <a class="nav-item" href="http://montagejs.org/docs">Docs</a>
+                <a class="nav-item active" href="http://montagejs.org/apis">APIs</a>
+            </nav>
+        </div>
+    </header>
+
+    <!--<h1 class="page-title">TranslateComposer</h1>-->
+
+    <section id="docs">
+
+
+
+
+<header>
+    <h2>
+    TranslateComposer
+    </h2>
+
+</header>
+
+<article>
+
+        <dl>
+            <dt>Extends</dt>
+            <dd><a href="Composer.html">Composer</a> </dd>
+        </dl>
+
+    <div class="container-overview">
+
+
+
+
+<dt>
+    <h4 class="name" id="TranslateComposer"></h4>
+
+
+</dt>
+<dd>
+
+
+    <div class="description markdown-body">
+        <p>Provides translateX and translateY properties that are updated when the
+    user clicks/touches and drags on the given element. Should be used wherever
+    a user interacts with an element by dragging it.</p>
+
+    </div>
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/composer/translate-composer.js, line 41
+    </li></ul></dd>
+
+
+
+
+
+
+
+</dl>
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+        <h3 class="subsection-title">Properties</h3>
+
+        <dl>
+
+<dt>
+    <h4 class="name" id="allowFloats"><span class="type-signature"></span>allowFloats<span class="type-signature"> :Boolean</span></h4>
+
+
+</dt>
+<dd>
+
+    <div class="description">
+        <p>Allow (@link translateX} and translateY to be floats.</p>
+
+    </div>
+
+
+
+<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy"><li>false</li></ul></dd>
+
+
+
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/composer/translate-composer.js, line 123
+    </li></ul></dd>
+
+
+
+
+
+
+
+</dl>
+
+
+
+</dd>
+
+
+
+
+<dt>
+    <h4 class="name" id="axis"><span class="type-signature"></span>axis<span class="type-signature"> :String</span></h4>
+
+
+</dt>
+<dd>
+
+    <div class="description">
+        <p>Which axis translation is restricted to.</p>
+<pre><code>    Can be &quot;vertical&quot;, &quot;horizontal&quot; or &quot;both&quot;.</code></pre>
+
+    </div>
+
+
+
+<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy"><li>"both"</li></ul></dd>
+
+
+
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/composer/translate-composer.js, line 320
+    </li></ul></dd>
+
+
+
+
+
+
+
+</dl>
+
+
+
+</dd>
+
+
+
+
+<dt>
+    <h4 class="name" id="component"><span class="type-signature"></span>component<span class="type-signature"> :<a href="Component.html">Component</a></span></h4>
+
+
+</dt>
+<dd>
+
+    <div class="description">
+        <p>The Montage component that the composer will listen for mouse events on.</p>
+
+    </div>
+
+
+
+<dl class="details">
+
+
+
+
+
+
+
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="Composer.html#component">Composer#component</a>
+    </li></dd>
+
+
+
+
+
+
+
+
+
+
+
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy"><li>null</li></ul></dd>
+
+
+
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/composer/composer.js, line 52
+    </li></ul></dd>
+
+
+
+
+
+
+
+</dl>
+
+
+
+</dd>
+
+
+
+
+<dt>
+    <h4 class="name" id="element"><span class="type-signature"></span>element<span class="type-signature"> :<a href="Component.html">Component</a></span></h4>
+
+
+</dt>
+<dd>
+
+    <div class="description">
+        <p>The DOM element that the composer will listen for events on. If no element is specified then the composer will use the element associated with its &lt;code&gt;component&lt;/code&gt; property.</p>
+
+    </div>
+
+
+
+<dl class="details">
+
+
+
+
+
+
+
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="Composer.html#element">Composer#element</a>
+    </li></dd>
+
+
+
+
+
+
+
+
+
+
+
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy"><li>null</li></ul></dd>
+
+
+
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/composer/composer.js, line 70
+    </li></ul></dd>
+
+
+
+
+
+
+
+</dl>
+
+
+
+</dd>
+
+
+
+
+<dt>
+    <h4 class="name" id="hasMomentum"><span class="type-signature"></span>hasMomentum<span class="type-signature"> :Boolean</span></h4>
+
+
+</dt>
+<dd>
+
+    <div class="description">
+        <p>Whether to keep translating after the user has releases the cursor.</p>
+
+    </div>
+
+
+
+<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy"><li>true</li></ul></dd>
+
+
+
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/composer/translate-composer.js, line 420
+    </li></ul></dd>
+
+
+
+
+
+
+
+</dl>
+
+
+
+</dd>
+
+
+
+
+<dt>
+    <h4 class="name" id="invertAxis"><span class="type-signature"></span>invertAxis<span class="type-signature"> :Boolean</span></h4>
+
+
+</dt>
+<dd>
+
+    <div class="description">
+        <p>Invert direction of translation on both axes.</p>
+<pre><code>    This inverts the effect of cursor motion on both axes. For example
+    if set to true moving the mouse up will increase the value of
+    translateY instead of decreasing it.
+
+    Depends on invertXAxis and invertYAxis.</code></pre>
+
+    </div>
+
+
+
+<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy"><li>false</li></ul></dd>
+
+
+
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/composer/translate-composer.js, line 350
+    </li></ul></dd>
+
+
+
+
+
+
+
+</dl>
+
+
+
+</dd>
+
+
+
+
+<dt>
+    <h4 class="name" id="invertXAxis"><span class="type-signature"></span>invertXAxis<span class="type-signature"> :Boolean</span></h4>
+
+
+</dt>
+<dd>
+
+    <div class="description">
+        <p>Invert direction of translation along the X axis.</p>
+<pre><code>    This inverts the effect of left/right cursor motion on translateX.</code></pre>
+
+    </div>
+
+
+
+<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy"><li>false</li></ul></dd>
+
+
+
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/composer/translate-composer.js, line 370
+    </li></ul></dd>
+
+
+
+
+
+
+
+</dl>
+
+
+
+</dd>
+
+
+
+
+<dt>
+    <h4 class="name" id="invertYAxis"><span class="type-signature"></span>invertYAxis<span class="type-signature"> :Boolean</span></h4>
+
+
+</dt>
+<dd>
+
+    <div class="description">
+        <p>Invert direction of translation along the Y axis.</p>
+<pre><code>    This inverts the effect of up/down cursor motion on translateX.</code></pre>
+
+    </div>
+
+
+
+<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy"><li>false</li></ul></dd>
+
+
+
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/composer/translate-composer.js, line 388
+    </li></ul></dd>
+
+
+
+
+
+
+
+</dl>
+
+
+
+</dd>
+
+
+
+
+<dt>
+    <h4 class="name" id="lazyLoad"><span class="type-signature"></span>lazyLoad<span class="type-signature"></span></h4>
+
+
+</dt>
+<dd>
+
+    <div class="description">
+        <p>This property controls when a composer&#39;s &lt;code&gt;load()&lt;/code&gt; method is called, which is where the composer create event listeners. If <code>false</code>
+the composer&#39;s &lt;code&gt;load()&lt;/code&gt; method is called immediately as part of the next draw
+cycle after &lt;code&gt;addComposer()&lt;/code&gt; has been called on its associated component.  If
+<code>true</code>, the loading of the composer is delayed until its associated component
+has had its &lt;code&gt;prepareForActivationEvents()&lt;/code&gt; called. Delaying the creation of event listeners until necessary can improve performance.</p>
+
+    </div>
+
+
+
+<dl class="details">
+
+
+
+
+
+
+
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="Composer.html#lazyLoad">Composer#lazyLoad</a>
+    </li></dd>
+
+
+
+
+
+
+
+
+
+
+
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy"><li>false</li></ul></dd>
+
+
+
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/composer/composer.js, line 88
+    </li></ul></dd>
+
+
+
+
+
+
+
+</dl>
+
+
+
+</dd>
+
+
+
+
+<dt>
+    <h4 class="name" id="maxTranslateX"><span class="type-signature"></span>maxTranslateX<span class="type-signature"> :number|null</span></h4>
+
+
+</dt>
+<dd>
+
+    <div class="description">
+        <p>The maximum value translateX can take. If set to null then
+        there is no maximum.</p>
+
+    </div>
+
+
+
+<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy"><li>null</li></ul></dd>
+
+
+
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/composer/translate-composer.js, line 239
+    </li></ul></dd>
+
+
+
+
+
+
+
+</dl>
+
+
+
+</dd>
+
+
+
+
+<dt>
+    <h4 class="name" id="maxTranslateY"><span class="type-signature"></span>maxTranslateY<span class="type-signature"> :number|null</span></h4>
+
+
+</dt>
+<dd>
+
+    <div class="description">
+        <p>The maximum value translateY can take. If set to null then
+        there is no maximum.</p>
+
+    </div>
+
+
+
+<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy"><li>null</li></ul></dd>
+
+
+
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/composer/translate-composer.js, line 292
+    </li></ul></dd>
+
+
+
+
+
+
+
+</dl>
+
+
+
+</dd>
+
+
+
+
+<dt>
+    <h4 class="name" id="minTranslateX"><span class="type-signature"></span>minTranslateX<span class="type-signature"> :number|null</span></h4>
+
+
+</dt>
+<dd>
+
+    <div class="description">
+        <p>The minimum value translateX can take. If set to null then
+        there is no minimum.</p>
+
+    </div>
+
+
+
+<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy"><li>null</li></ul></dd>
+
+
+
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/composer/translate-composer.js, line 213
+    </li></ul></dd>
+
+
+
+
+
+
+
+</dl>
+
+
+
+</dd>
+
+
+
+
+<dt>
+    <h4 class="name" id="minTranslateY"><span class="type-signature"></span>minTranslateY<span class="type-signature"> :number|null</span></h4>
+
+
+</dt>
+<dd>
+
+    <div class="description">
+        <p>The minimum value translateY can take. If set to null then
+        there is no minimum.</p>
+
+    </div>
+
+
+
+<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy"><li>null</li></ul></dd>
+
+
+
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/composer/translate-composer.js, line 266
+    </li></ul></dd>
+
+
+
+
+
+
+
+</dl>
+
+
+
+</dd>
+
+
+
+
+<dt>
+    <h4 class="name" id="needsFrame"><span class="type-signature"></span>needsFrame<span class="type-signature"> :boolean</span></h4>
+
+
+</dt>
+<dd>
+
+    <div class="description">
+        <p>This property should be set to &#39;true&#39; when the composer wants to have its &lt;code&gt;frame()&lt;/code&gt; method executed during the next draw cycle.Setting this property to &#39;true&#39; will cause Montage to schedule a new draw cycle if one has not already been.</p>
+
+    </div>
+
+
+
+<dl class="details">
+
+
+
+
+
+
+
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="Composer.html#needsFrame">Composer#needsFrame</a>
+    </li></dd>
+
+
+
+
+
+
+
+
+
+
+
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy"><li>false</li></ul></dd>
+
+
+
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/composer/composer.js, line 101
+    </li></ul></dd>
+
+
+
+
+
+
+
+</dl>
+
+
+
+</dd>
+
+
+
+
+<dt>
+    <h4 class="name" id="pointerSpeedMultiplier"><span class="type-signature"></span>pointerSpeedMultiplier<span class="type-signature"> :Number</span></h4>
+
+
+</dt>
+<dd>
+
+    <div class="description">
+        <p>How many pixels to translate by for each pixel of cursor movement.</p>
+
+    </div>
+
+
+
+<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy"><li>1</li></ul></dd>
+
+
+
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/composer/translate-composer.js, line 94
+    </li></ul></dd>
+
+
+
+
+
+
+
+</dl>
+
+
+
+</dd>
+
+
+
+
+<dt>
+    <h4 class="name" id="startTranslateSpeed"><span class="type-signature"></span>startTranslateSpeed<span class="type-signature"> :Number</span></h4>
+
+
+</dt>
+<dd>
+
+    <div class="description">
+        <p>How fast the cursor has to be moving before translating starts. Only
+        applied when another component has claimed the pointer.</p>
+
+    </div>
+
+
+
+<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy"><li>500</li></ul></dd>
+
+
+
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/composer/translate-composer.js, line 403
+    </li></ul></dd>
+
+
+
+
+
+
+
+</dl>
+
+
+
+</dd>
+
+
+
+
+<dt>
+    <h4 class="name" id="translateX"><span class="type-signature"></span>translateX<span class="type-signature"> :Number</span></h4>
+
+
+</dt>
+<dd>
+
+    <div class="description">
+        <p>Amount of translation in the X (left/right) direction. Can be inverted with
+        invertXAxis, and restricted to a range with
+        minTranslateX and maxTranslateX.</p>
+
+    </div>
+
+
+
+<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy"><li>0</li></ul></dd>
+
+
+
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/composer/translate-composer.js, line 146
+    </li></ul></dd>
+
+
+
+
+
+
+
+</dl>
+
+
+
+</dd>
+
+
+
+
+<dt>
+    <h4 class="name" id="translateY"><span class="type-signature"></span>translateY<span class="type-signature"> :Number</span></h4>
+
+
+</dt>
+<dd>
+
+    <div class="description">
+        <p>Amount of translation in the Y (up/down) direction. Can be inverted with
+        invertYAxis, and restricted to a range with
+        minTranslateY and maxTranslateY.</p>
+
+    </div>
+
+
+
+<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy"><li>0</li></ul></dd>
+
+
+
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/composer/translate-composer.js, line 180
+    </li></ul></dd>
+
+
+
+
+
+
+
+</dl>
+
+
+
+</dd>
+
+
+        </dl>
+
+
+
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+
+<dt>
+    <h4 class="name" id="unload"><span class="type-signature"></span>unload<span class="signature">()</span><span class="type-signature"></span></h4>
+
+
+</dt>
+<dd>
+
+
+    <div class="description markdown-body">
+        <p>Called when a component removes a composer.  Any event listeners that the composer needs to remove should
+        be removed in this method and any additional cleanup should be performed.</p>
+
+    </div>
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+
+
+
+
+
+
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="Composer.html#unload">Composer#unload</a>
+    </li></dd>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/composer/composer.js, line 170
+    </li></ul></dd>
+
+
+
+
+
+
+
+</dl>
+
+
+
+
+
+
+
+
+
+</dd>
+
+        </dl>
+
+
+
+
+
+</article>
+
+
+
+
+
+    </section>
+
+    <nav class="docs">
+        <h2>Search</h2><input id="index-search" type="search" placeholder="search for"><details open><summary>Types</summary><ul><li><a href="Application.html">Application</a></li><li><a href="ArrayController.html">ArrayController</a></li><li><a href="BindingDescriptor.html">BindingDescriptor</a></li><li><a href="BitField.html">BitField</a></li><li><a href="Button.html">Button</a></li><li><a href="BytesConverter.html">BytesConverter</a></li><li><a href="ChangeEventDispatchingArray.html">ChangeEventDispatchingArray</a></li><li><a href="CheckInput.html">CheckInput</a></li><li><a href="Component.html">Component</a></li><li><a href="Composer.html">Composer</a></li><li><a href="Condition.html">Condition</a></li><li><a href="Converter.html">Converter</a></li><li><a href="CurrencyConverter.html">CurrencyConverter</a></li><li><a href="DateConverter.html">DateConverter</a></li><li><a href="DateValidator.html">DateValidator</a></li><li><a href="DefaultLocalizer.html">DefaultLocalizer</a></li><li><a href="Deserializer.html">Deserializer</a></li><li><a href="DynamicElement.html">DynamicElement</a></li><li><a href="DynamicText.html">DynamicText</a></li><li><a href="EditableText.html">EditableText</a></li><li><a href="Enum.html">Enum</a></li><li><a href="EventManager.html">EventManager</a></li><li><a href="Exception.html">Exception</a></li><li><a href="Gate.html">Gate</a></li><li><a href="InputText.html">InputText</a></li><li><a href="InvertConverter.html">InvertConverter</a></li><li><a href="KeyComposer.html">KeyComposer</a></li><li><a href="KeyManager.html">KeyManager</a></li><li><a href="Localizer.html">Localizer</a></li><li><a href="Logger.html">Logger</a></li><li><a href="LowerCaseConverter.html">LowerCaseConverter</a></li><li><a href="MediaController.html">MediaController</a></li><li><a href="MessageFormat.html">MessageFormat</a></li><li><a href="MessageLocalizer.html">MessageLocalizer</a></li><li><a href="Montage.html">Montage</a></li><li><a href="MontageWindow.html">MontageWindow</a></li><li><a href="MutableEvent.html">MutableEvent</a></li><li><a href="NativeControl.html">NativeControl</a></li><li><a href="NewLineToBrConverter.html">NewLineToBrConverter</a></li><li><a href="NumberConverter.html">NumberConverter</a></li><li><a href="NumberValidator.html">NumberValidator</a></li><li><a href="ObjectController.html">ObjectController</a></li><li><a href="PressComposer.html">PressComposer</a></li><li><a href="PropertyChangeBindingListener.html">PropertyChangeBindingListener</a></li><li><a href="Repetition.html">Repetition</a></li><li><a href="RootComponent.html">RootComponent</a></li><li><a href="Serializer_.html">Serializer</a></li><li><a href="Slot.html">Slot</a></li><li><a href="State.html">State</a></li><li><a href="StateChart.html">StateChart</a></li><li><a href="Substitution.html">Substitution</a></li><li><a href="SwipeComposer.html">SwipeComposer</a></li><li><a href="Template_.html">Template</a></li><li><a href="TranslateComposer.html">TranslateComposer</a></li><li><a href="TrimConverter.html">TrimConverter</a></li><li><a href="UndoManager.html">UndoManager</a></li><li><a href="UpperCaseConverter.html">UpperCaseConverter</a></li><li><a href="Uuid_.html">Uuid</a></li><li><a href="Validator.html">Validator</a></li></ul></details><details><summary>Externals</summary><ul><li><a href="external-Array.html">Array</a></li><li><a href="external-Element.html">Element</a></li><li><a href="external-Function.html">Function</a></li><li><a href="external-Object.html">Object</a></li><li><a href="external-RegExp.html">RegExp</a></li><li><a href="external-String.html">String</a></li></ul></details><details><summary>Events</summary><ul><li><a href="PressComposer.html#event:longPress">longPress</a></li><li><a href="PressComposer.html#event:press">press</a></li><li><a href="PressComposer.html#event:pressCancel">pressCancel</a></li><li><a href="PressComposer.html#event:pressStart">pressStart</a></li></ul></details><details><summary>Tutorials</summary><ul><li><a href="tutorial-README.html">README</a></li></ul></details><details><summary>Global</summary><ul><li><a href="global.html#_bezierTubeBoundingSphere">_bezierTubeBoundingSphere</a></li><li><a href="global.html#_computeRotationValuesToXAxis">_computeRotationValuesToXAxis</a></li><li><a href="global.html#_rayRectangleIntersection">_rayRectangleIntersection</a></li><li><a href="global.html#_rayRectangleIntersectionPosition">_rayRectangleIntersectionPosition</a></li><li><a href="global.html#_sphereIntersection">_sphereIntersection</a></li><li><a href="global.html#linearScrollingVector">linearScrollingVector</a></li><li><a href="global.html#relative">relative</a></li><li><a href="global.html#resolve">resolve</a></li><li><a href="global.html#test">test</a></li></ul></details>
+    </nav>
+
+    <section id="next" class="next">
+        <article>
+            <h3 class="title">More help?</h3>
+            <div class="cols">
+                <div class="col col-1-2">
+                    <p>Can't find what you are looking for? Get in touch, we're more than happy in helping answer your questions.
+                    </p>
+                </div>
+                <aside class="col col-1-2">
+                    <p><strong>Have feedback or ideas?</strong> Let us know by creating a new <a href="https://github.com/montagejs/montage/issues" target="_blank">issue</a>, join us in <a href="http://webchat.freenode.net/?channels=montage" target="_blank">IRC</a> or post questions to our <a href="https://groups.google.com/forum/?fromgroups#!forum/montagejs" target="_blank">Google Group</a>. We're also on <a href="https://twitter.com/montage_js" target="_blank">Twitter</a> and <a href="https://plus.google.com/116915300739108010954/" target="_blank">Google+</a>.
+                    </p>
+                </aside>
+            </div>
+        </article>
+    </section>
+
+
+    <section id="social" class="social">
+        <article>
+
+            <div class="button-group github">
+                <iframe src="http://ghbtns.com/github-btn.html?user=montagejs&repo=montage&type=watch&count=true"
+                  allowtransparency="true" frameborder="0" scrolling="0" width="90px" height="20px"></iframe>
+                <iframe src="http://ghbtns.com/github-btn.html?user=montagejs&repo=montage&type=fork&count=true"
+                  allowtransparency="true" frameborder="0" scrolling="0" width="90px" height="20px"></iframe>
+            </div>
+
+
+            <div class="button-group twitter">
+                <a href="https://twitter.com/share" class="twitter-share-button" data-via="montage_js" data-count="none">Tweet</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                <a href="https://twitter.com/montage_js" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @montage_js</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </div>
+
+            <div class="button-group g-plus">
+                <!-- Place this tag in your head or just before your close body tag. -->
+                <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+                  {parsetags: 'explicit'}
+                </script>
+                <!-- Place this tag where you want the +1 button to render. -->
+                <div class="g-plusone" data-size="medium" data-annotation="inline" data-width="200"></div>
+                <!-- Place this render call where appropriate. -->
+                <script type="text/javascript">gapi.plusone.go();</script>
+            </div>
+
+        </article>
+    </section>
+
+
+    <footer class="footer">
+        2013 montagejs.org - <a href="https://github.com/montagejs/montagejs.org">Contributions</a> to this page are welcomed.
+    </footer>
+
+    <script>
+        var codes = document.getElementsByTagName('code');
+        if (codes) {
+            Array.prototype.forEach.call(codes, function(element) {
+                if(element.classList.contains("lang-javascript")) {
+                    element.classList.add("prettyprint");
+                }
+            });
+        }
+        prettyPrint(); </script>
+    <!-- Google -->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-35717912-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+</body>
+</html>
