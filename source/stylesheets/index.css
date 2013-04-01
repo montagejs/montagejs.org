@@ -137,6 +137,12 @@
                       -webkit-linear-gradient(top, hsl(0,0%,97%), hsl(0,0%,90%) );
 }
 
+/* Gallery ------------------------------------------- */
+ul.gallery {
+    text-align: center;
+    padding: 0;
+}
+
 
 /* Overwrites ----------------------------------------- */
 
