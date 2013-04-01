@@ -68,7 +68,10 @@
 
 
     <div class="description markdown-body">
-        <p>The Application object is responsible for loading its component tree. TODO finish description</p>
+        <p>The application is a singleton, it initially loads and oversees the running program.
+It is also responsible for window management.
+The behavior of the application can be modified by implementing a delegate {Application#delegate}
+It is also possible to subclass the application by specifying an <code>applicationPrototype&quot;</code> in <code>the package.json</code></p>
 
     </div>
 
@@ -135,7 +138,1378 @@
 
 
 
+        <h3 class="subsection-title">Properties</h3>
 
+        <dl>
+
+<dt>
+    <h4 class="name" id="attachedWindows"><span class="type-signature"></span>attachedWindows<span class="type-signature"> :<a href="Array.html">Array</a>.&lt;<a href="MontageWindow.html">MontageWindow</a>></span></h4>
+
+
+</dt>
+<dd>
+
+    <div class="description">
+        <p>An array of the child windows attached to the application.</p>
+
+    </div>
+
+
+
+<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy"><li>{Array} []</li></ul></dd>
+
+
+
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/application.js, line 194
+    </li></ul></dd>
+
+
+
+
+
+
+
+</dl>
+
+
+
+</dd>
+
+
+
+
+<dt>
+    <h4 class="name" id="delegate"><span class="type-signature"></span>delegate<span class="type-signature"> :Object</span></h4>
+
+
+</dt>
+<dd>
+
+    <div class="description">
+        <p>The application&#39;s delegate object, it can implement a <code>willFinishLoading</code> method that will be called right
+after the index.html is loaded</p>
+
+    </div>
+
+
+
+<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy"><li>null</li></ul></dd>
+
+
+
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/application.js, line 267
+    </li></ul></dd>
+
+
+
+
+
+
+
+</dl>
+
+
+
+</dd>
+
+
+
+
+<dt>
+    <h4 class="name" id="eventManager"><span class="type-signature"></span>eventManager<span class="type-signature"> :<a href="EventManager.html">EventManager</a></span></h4>
+
+
+</dt>
+<dd>
+
+    <div class="description">
+        <p>Provides a reference to the Montage event manager used in the application.</p>
+
+    </div>
+
+
+
+<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/application.js, line 77
+    </li></ul></dd>
+
+
+
+
+
+
+
+</dl>
+
+
+
+</dd>
+
+
+
+
+<dt>
+    <h4 class="name" id="focusWindow"><span class="type-signature"></span>focusWindow<span class="type-signature"> :<a href="MontageWindow.html">MontageWindow</a></span></h4>
+
+
+</dt>
+<dd>
+
+    <div class="description">
+        <p>Return the top most window of any of the Montage Windows.</p>
+
+    </div>
+
+
+
+<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy"><li>document.defaultView</li></ul></dd>
+
+
+
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/application.js, line 215
+    </li></ul></dd>
+
+
+
+
+
+
+
+</dl>
+
+
+
+</dd>
+
+
+
+
+<dt>
+    <h4 class="name" id="mainApplication"><span class="type-signature"></span>mainApplication<span class="type-signature"> :<a href="Application.html">Application</a></span></h4>
+
+
+</dt>
+<dd>
+
+    <div class="description">
+        <p>Provides a reference to the main application.</p>
+
+    </div>
+
+
+
+<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy"><li>this</li></ul></dd>
+
+
+
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/application.js, line 95
+    </li></ul></dd>
+
+
+
+
+
+
+
+</dl>
+
+
+
+</dd>
+
+
+
+
+<dt>
+    <h4 class="name" id="parentApplication"><span class="type-signature"></span>parentApplication<span class="type-signature"> :<a href="Application.html">Application</a></span></h4>
+
+
+</dt>
+<dd>
+
+    <div class="description">
+        <p>Provides a reference to the parent application.</p>
+
+    </div>
+
+
+
+<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy"><li>null</li></ul></dd>
+
+
+
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/application.js, line 86
+    </li></ul></dd>
+
+
+
+
+
+
+
+</dl>
+
+
+
+</dd>
+
+
+
+
+<dt>
+    <h4 class="name" id="window"><span class="type-signature"></span>window<span class="type-signature"> :<a href="MontageWindow.html">MontageWindow</a></span></h4>
+
+
+</dt>
+<dd>
+
+    <div class="description">
+        <p>Provides a reference to the MontageWindow associated with the application.</p>
+
+    </div>
+
+
+
+<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/application.js, line 171
+    </li></ul></dd>
+
+
+
+
+
+
+
+</dl>
+
+
+
+</dd>
+
+
+
+
+<dt>
+    <h4 class="name" id="windows"><span class="type-signature"></span>windows<span class="type-signature"> :<a href="Array.html">Array</a>.&lt;<a href="MontageWindow.html">MontageWindow</a>></span></h4>
+
+
+</dt>
+<dd>
+
+    <div class="description">
+        <p>Provides a reference to all the windows opened by the main application or any of its descendents, including the main
+     window itself The list is kept sorted, the sort order is determined by the Application.windowsSortOrder property</p>
+
+    </div>
+
+
+
+<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/application.js, line 142
+    </li></ul></dd>
+
+
+
+
+
+
+
+</dl>
+
+
+
+</dd>
+
+
+
+
+<dt>
+    <h4 class="name" id="windowsSortOrder"><span class="type-signature"></span>windowsSortOrder<span class="type-signature"> :String</span></h4>
+
+
+</dt>
+<dd>
+
+    <div class="description">
+        <p>Determines the sort order for the Application.windows array.
+     Possible values are: z-order, reverse-z-order, open-order, reverse-open-order</p>
+
+    </div>
+
+
+
+<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy"><li>"reverse-z-order"</li></ul></dd>
+
+
+
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/application.js, line 117
+    </li></ul></dd>
+
+
+
+
+
+
+
+</dl>
+
+
+
+</dd>
+
+
+        </dl>
+
+
+
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+
+<dt>
+    <h4 class="name" id="addEventListener"><span class="type-signature"></span>addEventListener<span class="signature">(type, listener, useCapture)</span><span class="type-signature"></span></h4>
+
+
+</dt>
+<dd>
+
+
+    <div class="description markdown-body">
+        <p>Registers an event listener on the application instance.</p>
+
+    </div>
+
+
+
+
+
+
+
+        <h5>Parameters:</h5>
+
+
+<table class="params">
+    <thead>
+	<tr>
+
+		<th>Name</th>
+
+
+		<th>Type</th>
+
+
+
+
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+
+
+        <tr>
+
+                <td class="name"><code>type</code></td>
+
+
+            <td class="type">
+
+
+<span class="param-type">String</span>
+
+
+
+            </td>
+
+
+
+
+
+            <td class="description last"><p>The event type to listen for.</p>
+</td>
+        </tr>
+
+
+
+        <tr>
+
+                <td class="name"><code>listener</code></td>
+
+
+            <td class="type">
+
+
+<span class="param-type">Object</span>
+
+
+
+            </td>
+
+
+
+
+
+            <td class="description last"><p>A listener object that defines an event handler function, or a function to handle the event.</p>
+</td>
+        </tr>
+
+
+
+        <tr>
+
+                <td class="name"><code>useCapture</code></td>
+
+
+            <td class="type">
+
+
+<span class="param-type">Function</span>
+
+
+
+            </td>
+
+
+
+
+
+            <td class="description last"><p>If &lt;code&gt;true&lt;/code&gt;, the listener will only be notified during the event&#39;s capture phase.&lt;br&gt;
+If &lt;code&gt;false&lt;/code&gt; (the default) the listener will be notified during the event&#39;s bubble phase.</p>
+</td>
+        </tr>
+
+
+	</tbody>
+</table>
+
+
+
+<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/application.js, line 242
+    </li></ul></dd>
+
+
+
+
+
+
+
+</dl>
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+<dt>
+    <h4 class="name" id="attachWindow"><span class="type-signature"></span>attachWindow<span class="signature">(window)</span><span class="type-signature"></span></h4>
+
+
+</dt>
+<dd>
+
+
+    <div class="description markdown-body">
+        <p>Attach a window to a parent application. When a window open, it is automatically attached to the Application used to
+create the window.</p>
+
+    </div>
+
+
+
+
+
+
+
+        <h5>Parameters:</h5>
+
+
+<table class="params">
+    <thead>
+	<tr>
+
+		<th>Name</th>
+
+
+		<th>Type</th>
+
+
+
+
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+
+
+        <tr>
+
+                <td class="name"><code>window</code></td>
+
+
+            <td class="type">
+
+
+<span class="param-type"><a href="MontageWindow.html">MontageWindow</a></span>
+
+
+
+            </td>
+
+
+
+
+
+            <td class="description last"><p>to detach.</p>
+</td>
+        </tr>
+
+
+	</tbody>
+</table>
+
+
+
+<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/application.js, line 381
+    </li></ul></dd>
+
+
+
+
+
+
+
+</dl>
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+<dt>
+    <h4 class="name" id="detachWindow"><span class="type-signature"></span>detachWindow<span class="signature">(window)</span><span class="type-signature"></span></h4>
+
+
+</dt>
+<dd>
+
+
+    <div class="description markdown-body">
+        <p>Detach the window from its parent application. If no montageWindow is specified, the current application&#39;s windows
+will be detached</p>
+
+    </div>
+
+
+
+
+
+
+
+        <h5>Parameters:</h5>
+
+
+<table class="params">
+    <thead>
+	<tr>
+
+		<th>Name</th>
+
+
+		<th>Type</th>
+
+
+
+
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+
+
+        <tr>
+
+                <td class="name"><code>window</code></td>
+
+
+            <td class="type">
+
+
+<span class="param-type"><a href="MontageWindow.html">MontageWindow</a></span>
+
+
+
+            </td>
+
+
+
+
+
+            <td class="description last"><p>to detach.</p>
+</td>
+        </tr>
+
+
+	</tbody>
+</table>
+
+
+
+<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/application.js, line 412
+    </li></ul></dd>
+
+
+
+
+
+
+
+</dl>
+
+
+
+
+
+
+
+
+
+</dd>
+
+
+
+<dt>
+    <h4 class="name" id="eventManagerForWindow"><span class="type-signature"></span>eventManagerForWindow<span class="signature">(aWindow)</span><span class="type-signature"></span></h4>
+
+
+</dt>
+<dd>
+
+
+    <div class="description markdown-body">
+        <p>Returns the event manager for the specified window object.</p>
+
+    </div>
+
+
+
+
+
+
+
+        <h5>Parameters:</h5>
+
+
+<table class="params">
+    <thead>
+	<tr>
+
+		<th>Name</th>
+
+
+		<th>Type</th>
+
+
+
+
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+
+
+        <tr>
+
+                <td class="name"><code>aWindow</code></td>
+
+
+            <td class="type">
+
+
+<span class="param-type">Window</span>
+
+
+
+            </td>
+
+
+
+
+
+            <td class="description last"><p>The browser window whose event manager object should be returned.</p>
+</td>
+        </tr>
+
+
+	</tbody>
+</table>
+
+
+
+<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/application.js, line 204
+    </li></ul></dd>
+
+
+
+
+
+
+
+</dl>
+
+
+
+
+
+
+
+    <h5>Returns:</h5>
+
+
+<div class="param-desc">
+    <p>aWindow.defaultEventMananger</p>
+
+</div>
+
+
+
+
+
+
+
+</dd>
+
+
+
+<dt>
+    <h4 class="name" id="openWindow"><span class="type-signature"></span>openWindow<span class="signature">(component,, name,, parameters,)</span><span class="type-signature"></span></h4>
+
+
+</dt>
+<dd>
+
+
+    <div class="description markdown-body">
+        <p>Opens a component in a new browser window, and registers the window with the Montage event manager.&lt;br&gt;
+The component URL must be in the same domain as the calling script. Can be relative to the main application</p>
+
+    </div>
+
+
+
+
+
+
+
+        <h5>Parameters:</h5>
+
+
+<table class="params">
+    <thead>
+	<tr>
+
+		<th>Name</th>
+
+
+		<th>Type</th>
+
+
+
+
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+
+
+        <tr>
+
+                <td class="name"><code>component,</code></td>
+
+
+            <td class="type">
+
+
+<span class="param-type">String</span>
+
+
+
+            </td>
+
+
+
+
+
+            <td class="description last"><p>the path to the reel component to open in the new window.</p>
+</td>
+        </tr>
+
+
+
+        <tr>
+
+                <td class="name"><code>name,</code></td>
+
+
+            <td class="type">
+
+
+<span class="param-type">String</span>
+
+
+
+            </td>
+
+
+
+
+
+            <td class="description last"><p>the component main class name.</p>
+</td>
+        </tr>
+
+
+
+        <tr>
+
+                <td class="name"><code>parameters,</code></td>
+
+
+            <td class="type">
+
+
+<span class="param-type">Object</span>
+
+
+
+            </td>
+
+
+
+
+
+            <td class="description last"><p>the new window parameters (accept same parameters than window.open).</p>
+</td>
+        </tr>
+
+
+	</tbody>
+</table>
+
+
+
+<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/application.js, line 282
+    </li></ul></dd>
+
+
+
+
+
+
+
+</dl>
+
+
+
+
+
+
+
+
+
+        <h5>Example</h5>
+
+    <pre class="prettyprint"><code>var app = document.application;
+app.openWindow("docs/help.reel", "Help", "{width:300, height:500}");</code></pre>
+
+
+</dd>
+
+
+
+<dt>
+    <h4 class="name" id="removeEventListener"><span class="type-signature"></span>removeEventListener<span class="signature">(type, listener, useCapture)</span><span class="type-signature"></span></h4>
+
+
+</dt>
+<dd>
+
+
+    <div class="description markdown-body">
+        <p>Removes a previously registered event listener on the application instance.</p>
+
+    </div>
+
+
+
+
+
+
+
+        <h5>Parameters:</h5>
+
+
+<table class="params">
+    <thead>
+	<tr>
+
+		<th>Name</th>
+
+
+		<th>Type</th>
+
+
+
+
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+
+
+        <tr>
+
+                <td class="name"><code>type</code></td>
+
+
+            <td class="type">
+
+
+<span class="param-type">String</span>
+
+
+
+            </td>
+
+
+
+
+
+            <td class="description last"><p>The event type that was originally registered.</p>
+</td>
+        </tr>
+
+
+
+        <tr>
+
+                <td class="name"><code>listener</code></td>
+
+
+            <td class="type">
+
+
+<span class="param-type">Object</span>
+
+
+
+            </td>
+
+
+
+
+
+            <td class="description last"><p>The listener object or function that was registered to handle the event.</p>
+</td>
+        </tr>
+
+
+
+        <tr>
+
+                <td class="name"><code>useCapture</code></td>
+
+
+            <td class="type">
+
+
+<span class="param-type">Function</span>
+
+
+
+            </td>
+
+
+
+
+
+            <td class="description last"><p>TODO</p>
+</td>
+        </tr>
+
+
+	</tbody>
+</table>
+
+
+
+<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/application.js, line 255
+    </li></ul></dd>
+
+
+
+
+
+
+
+</dl>
+
+
+
+
+
+
+
+
+
+</dd>
+
+        </dl>
 
 
 
@@ -168,40 +1542,6 @@
             </div>
         </article>
     </section>
-
-
-    <section id="social" class="social">
-        <article>
-
-            <div class="button-group github">
-                <iframe src="http://ghbtns.com/github-btn.html?user=montagejs&repo=montage&type=watch&count=true"
-                  allowtransparency="true" frameborder="0" scrolling="0" width="90px" height="20px"></iframe>
-                <iframe src="http://ghbtns.com/github-btn.html?user=montagejs&repo=montage&type=fork&count=true"
-                  allowtransparency="true" frameborder="0" scrolling="0" width="90px" height="20px"></iframe>
-            </div>
-
-
-            <div class="button-group twitter">
-                <a href="https://twitter.com/share" class="twitter-share-button" data-via="montage_js" data-count="none">Tweet</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                <a href="https://twitter.com/montage_js" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @montage_js</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-            </div>
-
-            <div class="button-group g-plus">
-                <!-- Place this tag in your head or just before your close body tag. -->
-                <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
-                  {parsetags: 'explicit'}
-                </script>
-                <!-- Place this tag where you want the +1 button to render. -->
-                <div class="g-plusone" data-size="medium" data-annotation="inline" data-width="200"></div>
-                <!-- Place this render call where appropriate. -->
-                <script type="text/javascript">gapi.plusone.go();</script>
-            </div>
-
-        </article>
-    </section>
-
 
     <footer class="footer">
         2013 montagejs.org - <a href="https://github.com/montagejs/montagejs.org">Contributions</a> to this page are welcomed.

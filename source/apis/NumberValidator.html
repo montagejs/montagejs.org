@@ -138,7 +138,66 @@
         <dl>
 
 <dt>
-    <h4 class="name" id="validate"><span class="type-signature"></span>validate<span class="type-signature"> :Object</span></h4>
+    <h4 class="name" id="allowFloat"><span class="type-signature"></span>allowFloat<span class="type-signature"> :Property</span></h4>
+
+
+</dt>
+<dd>
+
+    <div class="description">
+        <p>Indicates whether floating point values are allowed.&lt;br&gt;
+     If &lt;code&gt;true&lt;/code&gt; (the default) then the validator attempts to parse the string as a float value.&lt;br&gt;
+     If &lt;code&gt;false&lt;/code&gt;, it attempts to parse the value as an integer.</p>
+
+    </div>
+
+
+
+<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy"><li>{Boolean} true</li></ul></dd>
+
+
+
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/converter/number-converter.js, line 239
+    </li></ul></dd>
+
+
+
+
+
+
+
+</dl>
+
+
+
+</dd>
+
+
+
+
+<dt>
+    <h4 class="name" id="allowNegative"><span class="type-signature"></span>allowNegative<span class="type-signature"> :Property</span></h4>
 
 
 </dt>
@@ -154,11 +213,6 @@
 
 
 
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="Validator.html#validate">Validator#validate</a>
-    </li></dd>
-
 
 
 
@@ -170,13 +224,13 @@
 
 
     <dt class="tag-default">Default Value:</dt>
-    <dd class="tag-default"><ul class="dummy"><li>null</li></ul></dd>
+    <dd class="tag-default"><ul class="dummy"><li>{Boolean} true</li></ul></dd>
 
 
 
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        core/converter/converter.js, line 79
+        core/converter/number-converter.js, line 247
     </li></ul></dd>
 
 
@@ -195,6 +249,150 @@
         </dl>
 
 
+
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+
+<dt>
+    <h4 class="name" id="validate"><span class="type-signature"></span>validate<span class="signature">(v)</span><span class="type-signature"> &rarr; {Number}</span></h4>
+
+
+</dt>
+<dd>
+
+
+    <div class="description markdown-body">
+        <p>Determines if the parameter &lt;code&gt;v&lt;/code&gt; is a number or not.</p>
+
+    </div>
+
+
+
+
+
+
+
+        <h5>Parameters:</h5>
+
+
+<table class="params">
+    <thead>
+	<tr>
+
+		<th>Name</th>
+
+
+		<th>Type</th>
+
+
+
+
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+
+
+        <tr>
+
+                <td class="name"><code>v</code></td>
+
+
+            <td class="type">
+
+
+<span class="param-type">String</span>
+
+
+
+            </td>
+
+
+
+
+
+            <td class="description last"><p>The value to validate as a number.</p>
+</td>
+        </tr>
+
+
+	</tbody>
+</table>
+
+
+
+<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/converter/number-converter.js, line 258
+    </li></ul></dd>
+
+
+
+
+
+
+
+</dl>
+
+
+
+
+
+
+
+    <h5>Returns:</h5>
+
+
+<div class="param-desc">
+    <p>num An integer or float, if the value provided to the function can parsed as a number;
+     otherwise returns an error.</p>
+
+</div>
+
+
+
+<dl>
+	<dt class="return-type-label">
+		Type
+	</dt>
+	<dd class="return-type">
+
+<span class="param-type">Number</span>
+
+
+	</dd>
+</dl>
+
+
+
+
+
+</dd>
+
+        </dl>
 
 
 
@@ -227,40 +425,6 @@
             </div>
         </article>
     </section>
-
-
-    <section id="social" class="social">
-        <article>
-
-            <div class="button-group github">
-                <iframe src="http://ghbtns.com/github-btn.html?user=montagejs&repo=montage&type=watch&count=true"
-                  allowtransparency="true" frameborder="0" scrolling="0" width="90px" height="20px"></iframe>
-                <iframe src="http://ghbtns.com/github-btn.html?user=montagejs&repo=montage&type=fork&count=true"
-                  allowtransparency="true" frameborder="0" scrolling="0" width="90px" height="20px"></iframe>
-            </div>
-
-
-            <div class="button-group twitter">
-                <a href="https://twitter.com/share" class="twitter-share-button" data-via="montage_js" data-count="none">Tweet</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                <a href="https://twitter.com/montage_js" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @montage_js</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-            </div>
-
-            <div class="button-group g-plus">
-                <!-- Place this tag in your head or just before your close body tag. -->
-                <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
-                  {parsetags: 'explicit'}
-                </script>
-                <!-- Place this tag where you want the +1 button to render. -->
-                <div class="g-plusone" data-size="medium" data-annotation="inline" data-width="200"></div>
-                <!-- Place this render call where appropriate. -->
-                <script type="text/javascript">gapi.plusone.go();</script>
-            </div>
-
-        </article>
-    </section>
-
 
     <footer class="footer">
         2013 montagejs.org - <a href="https://github.com/montagejs/montagejs.org">Contributions</a> to this page are welcomed.
