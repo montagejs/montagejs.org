@@ -1,1 +1,0 @@
-montageDefine("2e342c4","temp-converter",{dependencies:["montage","montage/core/converter/converter"],factory:function(e,t,n){var r=e("montage").Montage,i=e("montage/core/converter/converter").Converter;t.TempConverter=r.create(i,{convert:{value:function(e){return(parseInt(e,10)-32)/1.8}},revert:{value:function(e){return 1.8*parseInt(e,10)+32}}})}})

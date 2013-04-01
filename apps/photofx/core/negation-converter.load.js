@@ -1,1 +1,0 @@
-montageDefine("a005228","core/negation-converter",{dependencies:["montage","montage/core/converter/converter"],factory:function(e,t,n){var r=e("montage").Montage,i=e("montage/core/converter/converter").Converter;t.NegationConverter=r.create(i,{convert:{value:function(e){return!e}},revert:{value:function(e){return!e}}})}})

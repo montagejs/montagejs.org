@@ -1,1 +1,0 @@
-montageDefine("2649653","animation/animation-manager",{dependencies:["montage/core/core"],factory:function(e,t,n){var r=e("montage/core/core").Montage;AnimationManager=t.AnimationManager=r.create(r,{_animationDuration:{enumerable:!1,value:0},animationDuration:{enumerable:!0,get:function(){return this._animationDuration},set:function(e){this._animationDuration=e}}})}})

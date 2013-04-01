@@ -1,1 +1,0 @@
-montageDefine("a005228","core/valid-number-converter",{dependencies:["montage","montage/core/converter/converter"],factory:function(e,t,n){var r=e("montage").Montage,i=e("montage/core/converter/converter").Converter;t.ValidNumberConverter=r.create(i,{convert:{value:function(e){return 0===e?!0:!!e}}})}})

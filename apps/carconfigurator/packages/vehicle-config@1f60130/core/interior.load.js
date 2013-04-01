@@ -1,1 +1,0 @@
-montageDefine("1f60130","core/interior",{dependencies:["montage","core/configuration-option"],factory:function(e,t,n){var r=e("montage").Montage,i=e("core/configuration-option").ConfigurationOption;t.Interior=r.create(i,{})}})

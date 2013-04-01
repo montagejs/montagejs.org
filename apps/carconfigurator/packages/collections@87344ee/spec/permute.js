@@ -1,1 +1,0 @@
-function permute(e){if(e.length===0)return[];if(e.length===1)return[e];var t=[];for(var n=0;n<e.length;n++){var r=e.slice(),i=r.splice(n,1);permute(r).forEach(function(e){t.push(i.concat(e))})}return t}module.exports=permute

@@ -1,1 +1,0 @@
-require("../listen/array-changes");var array=[];array.addOwnPropertyChangeListener("length",function(e){console.log("changed",e)}),array.addOwnPropertyChangeListener(0,function(e){console.log("array[0] changed to",e)}),array.addMapChangeListener(function(e,t){console.log(t,e)}),array.push(40),array.splice(0,0,10,20,30)

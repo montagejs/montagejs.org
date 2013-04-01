@@ -1,1 +1,0 @@
-montageDefine("fb87e57","filter-preview.reel/filter-preview",{dependencies:["montage/core/core","montage/ui/component"],factory:function(e,t,n){var r=e("montage/core/core").Montage,i=e("montage/ui/component").Component,s=t.FilterPreview=r.create(i,{src:{value:null},image:{value:null},filter:{value:null}})}})

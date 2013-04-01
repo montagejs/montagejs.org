@@ -1,1 +1,0 @@
-var Montage=require("montage").Montage,Converter=require("montage/core/converter/converter").Converter;exports.TempConverter=Montage.create(Converter,{convert:{value:function(e){return(parseInt(e,10)-32)/1.8}},revert:{value:function(e){return 1.8*parseInt(e,10)+32}}})

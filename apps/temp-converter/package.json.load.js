@@ -1,1 +1,0 @@
-montageDefine("2e342c4","package.json",{exports:{name:"temp-converter",version:"1.0.0",hash:"2e342c4",directories:{lib:"./"},mappings:{montage:{name:"montage",hash:"120b0c7",location:"packages/montage@120b0c7/"}},production:!0,useScriptInjection:!0}})

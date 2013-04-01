@@ -1,1 +1,0 @@
-var Montage=require("montage/core/core").Montage;DefaultEffectRepository=exports.DefaultEffectRepository=Montage.create(Montage,{templates:{enumerable:!0,get:function(){var e={};return Object.defineProperty(e,"__builtin_templates",{writable:!0,value:!0}),e}}})

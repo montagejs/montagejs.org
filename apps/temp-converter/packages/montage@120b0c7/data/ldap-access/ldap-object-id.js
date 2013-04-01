@@ -1,1 +1,0 @@
-var Montage=require("montage").Montage,logger=require("core/logger").logger("ldap-object-id"),LdapObjectId=exports.LdapObjectId=Montage.create(Montage,{})
