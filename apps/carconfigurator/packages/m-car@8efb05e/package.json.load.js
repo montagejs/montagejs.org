@@ -1,0 +1,1 @@
+montageDefine("8efb05e","package.json",{exports:{name:"m-car",version:"0.0.0",hash:"8efb05e",directories:{lib:"./"},mappings:{montage:{name:"montage",hash:"120b0c7",location:"../montage@120b0c7/"},"vehicle-config":{name:"vehicle-config",hash:"1f60130",location:"../vehicle-config@1f60130/"}},production:!0,useScriptInjection:!0}})

@@ -1,0 +1,1 @@
+montageDefine("62d1532","package.json",{exports:{name:"mr",version:"0.12.6",hash:"62d1532",main:"require",directories:{lib:"./"},mappings:{q:{name:"q",hash:"d68bace",location:"../q@d68bace/"}},production:!0,useScriptInjection:!0}})

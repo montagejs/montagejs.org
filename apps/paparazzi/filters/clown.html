@@ -1,0 +1,48 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <script type="text/montage-serialization">{"owner":{"prototype":"shuriken/effect/effect","properties":{"inputs":{"stencil":{"type":"path","value":"img/stencils/clown.png","label":"Clown"}},"profiles":{"GLSL":{"techniques":{"radialGradient":{"pass 0":{"x-shader/x-fragment":{"#":"filter-clown-fs"},"x-shader/x-vertex":{"#":"filter-clown-vs"},"inputs":{"stencil":{"symbol":"uStencilSampler","type":"sampler2d"}}}}}}}}}}</script>
+
+    </head>
+
+<body>
+
+<script id="filter-clown-fs" type="x-shader/x-fragment">
+    #ifdef GL_ES
+    precision highp float;
+    #endif
+
+    uniform sampler2D uSampler;
+    uniform sampler2D uStencilSampler;
+
+    varying vec2 vTexCoord;
+
+    void main(void)
+    {
+        vec4 camera = texture2D(uSampler, vTexCoord);
+        vec4 stencil = texture2D(uStencilSampler, vTexCoord);
+        gl_FragColor = vec4((camera.rgb * (1.0-stencil.a)) + (stencil.rgb * stencil.a), camera.a);
+    }
+</script>
+
+<script id="filter-clown-vs" type="x-shader/x-vertex">
+    attribute vec3 aPosition;
+    attribute vec2 aTexCoord;
+
+    uniform mat4 uModelViewMatrix;
+    uniform mat4 uProjMatrix;
+
+    varying vec2 vTexCoord;
+
+    void main(void) {
+        vTexCoord = aTexCoord;
+        gl_Position = uProjMatrix * uModelViewMatrix * vec4(aPosition, 1.0);
+    }
+</script>
+
+</body>
+
+</html>

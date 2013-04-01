@@ -1,0 +1,1 @@
+require("../shim-object"),Object.forEach({a:10,b:20},function(e,t){console.log(t+": "+e)})

@@ -1,0 +1,1 @@
+var Montage=require("montage").Montage,Component=require("montage/ui/component").Component;exports.Snapshot=Montage.create(Component,{supportsUserMedia:{value:null},didCreate:{value:function(){console.log("createdSnapshot")}}})

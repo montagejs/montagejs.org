@@ -1,0 +1,1 @@
+var Montage=require("montage").Montage,Component=require("montage/ui/component").Component,TextInput=require("montage/ui/text-input").TextInput,InputColor=exports.InputColor=Montage.create(TextInput,{})

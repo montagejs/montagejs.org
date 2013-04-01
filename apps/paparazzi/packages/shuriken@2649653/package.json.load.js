@@ -1,0 +1,1 @@
+montageDefine("2649653","package.json",{exports:{name:"shuriken",version:"0.0.0",hash:"2649653",directories:{lib:"./"},mappings:{montage:{name:"montage",hash:"120b0c7",location:"../montage@120b0c7/"}},production:!0,useScriptInjection:!0}})

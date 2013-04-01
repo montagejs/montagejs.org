@@ -1,0 +1,1 @@
+var Montage=require("montage").Montage,ObjectId=require("data/object-id").ObjectId,logger=require("core/logger").logger("sql-object-id"),SqlObjectId=exports.SqlObjectId=Montage.create(ObjectId,{})
