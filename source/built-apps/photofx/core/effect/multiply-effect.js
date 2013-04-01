@@ -1,0 +1,1 @@
+var Montage=require("montage").Montage,Effect=require("core/effect/effect").Effect;exports.MultiplyEffect=Montage.create(Effect,{applyEffect:{value:function(e,t,n){var r=0;for(r=0;r<t;r+=4)e[r]=e[r]*n,e[r+1]=e[r+1]*n,e[r+2]=e[r+2]*n}}})

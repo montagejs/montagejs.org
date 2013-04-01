@@ -1,0 +1,1 @@
+var SortedArrayMap=require("../sorted-array-map"),describeDict=require("./dict"),describeMap=require("./map"),describeMapChanges=require("./listen/map-changes");describe("SortedArrayMap",function(){describeDict(SortedArrayMap),describeMap(SortedArrayMap,[1,2,3]),describeMapChanges(SortedArrayMap)})

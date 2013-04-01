@@ -1,0 +1,1 @@
+var Montage=require("montage").Montage;exports.PointMonitor=Montage.create(Montage,{color:{value:null},x:{value:null},y:{value:null}})

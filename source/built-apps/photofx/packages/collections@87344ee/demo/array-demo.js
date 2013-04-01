@@ -1,0 +1,1 @@
+require("../shim-array");var Iterator=require("../iterator"),array=[1,2,3],iterator=new Iterator(array);iterator.forEach(console.log);var iterator=new Iterator(array.iterate(0,2));iterator.forEach(console.log),console.log(Array.from([1,2,3]))

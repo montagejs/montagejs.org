@@ -1,0 +1,50 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <script type="text/montage-serialization">{"owner":{"prototype":"shuriken/effect/effect","properties":{"profiles":{"GLSL":{"techniques":{"mirror":{"pass 0":{"x-shader/x-fragment":{"#":"filter-mirror-fs"},"x-shader/x-vertex":{"#":"filter-mirror-vs"}}}}}}}}}</script>
+
+    </head>
+
+<body>
+
+<script id="filter-mirror-fs" type="x-shader/x-fragment">
+    #ifdef GL_ES
+    precision highp float;
+    #endif
+
+    uniform sampler2D uSampler;
+    uniform float uTime;
+
+    varying vec2 vTexCoord;
+
+    void main(void)
+    {
+        vec2 mirrorCoord = vTexCoord;
+        if(mirrorCoord.x > 0.5) {
+            mirrorCoord.x = mirrorCoord.x * -1.0 + 1.0;
+        }
+        gl_FragColor = texture2D(uSampler, mirrorCoord);
+    }
+</script>
+
+<script id="filter-mirror-vs" type="x-shader/x-vertex">
+    attribute vec3 aPosition;
+    attribute vec2 aTexCoord;
+
+    uniform mat4 uModelViewMatrix;
+    uniform mat4 uProjMatrix;
+
+    varying vec2 vTexCoord;
+
+    void main(void) {
+        vTexCoord = aTexCoord;
+        gl_Position = uProjMatrix * uModelViewMatrix * vec4(aPosition, 1.0);
+    }
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,1 @@
+montageDefine("1f60130","package.json",{exports:{name:"vehicle-config",version:"0.0.0",hash:"1f60130",directories:{lib:"./"},mappings:{montage:{name:"montage",hash:"120b0c7",location:"../montage@120b0c7/"}},production:!0,useScriptInjection:!0}})
