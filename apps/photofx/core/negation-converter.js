@@ -1,0 +1,1 @@
+var Montage=require("montage").Montage,Converter=require("montage/core/converter/converter").Converter;exports.NegationConverter=Montage.create(Converter,{convert:{value:function(e){return!e}},revert:{value:function(e){return!e}}})

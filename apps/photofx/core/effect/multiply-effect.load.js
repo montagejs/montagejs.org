@@ -1,0 +1,1 @@
+montageDefine("a005228","core/effect/multiply-effect",{dependencies:["montage","core/effect/effect"],factory:function(e,t,n){var r=e("montage").Montage,i=e("core/effect/effect").Effect;t.MultiplyEffect=r.create(i,{applyEffect:{value:function(e,t,n){var r=0;for(r=0;r<t;r+=4)e[r]=e[r]*n,e[r+1]=e[r+1]*n,e[r+2]=e[r+2]*n}}})}})

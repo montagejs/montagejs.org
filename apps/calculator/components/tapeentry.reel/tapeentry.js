@@ -1,0 +1,1 @@
+var Montage=require("montage").Montage,Component=require("montage/ui/component").Component;exports.TapeEntry=Montage.create(Component,{expression:{value:null}})

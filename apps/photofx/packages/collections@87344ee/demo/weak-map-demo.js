@@ -1,0 +1,1 @@
+var WeakMap=require("../weak-map");/native/.test(WeakMap.toString())?console.log("Using native WeakMap"):console.log("Using shim WeakMap");var map=new WeakMap,key={};map.set(key,10),console.log(map.toString()),console.log(map.get(key))

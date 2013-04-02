@@ -1,0 +1,18 @@
+<!doctype html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Showroom</title>
+
+    <link rel="stylesheet" type="text/css" href="showroom.css" />
+
+    <script type="text/montage-serialization">{"owner":{"properties":{"element":{"#":"showroom"},"configuratorSubstitution":{"@":"configuratorSubstitution"}}},"configuratorSubstitution":{"prototype":"montage/ui/substitution.reel","properties":{"element":{"#":"configuratorSubstitution"},"delegate":{"@":"owner"}}},"stage":{"prototype":"ui/stage.reel","properties":{"element":{"#":"stage"},"location":"assets/location/parkinglot.jpg"},"bindings":{"model":{"<-":"@owner.vehicle.modelPath"},"baseURL":{"<-":"@owner.vehicle.baseURL"},"vehicle":{"<-":"@owner.vehicle"}}}}</script>
+</head>
+<body>
+    <div data-montage-id="showroom" class="Showroom">
+        <div data-montage-id="stage" class="stage"></div>
+        <div data-montage-id="configuratorSubstitution" class="configuratorSubstitution"></div>
+    </div>
+</body>
+</html>
