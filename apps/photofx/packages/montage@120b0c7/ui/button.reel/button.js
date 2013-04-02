@@ -1,0 +1,1 @@
+var Montage=require("montage").Montage,Component=require("ui/component").Component,NativeButton=require("ui/native/button.reel").Button;exports.Button=Montage.create(NativeButton,{hasTemplate:{value:!0},willPrepareForDraw:{value:function(){NativeButton.willPrepareForDraw.call(this),this.element.classList.add("montage-Button")}}})

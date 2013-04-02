@@ -1,0 +1,1 @@
+var Montage=require("montage/core/core").Montage,Component=require("montage/ui/component").Component,Gallery=exports.Gallery=Montage.create(Component,{snapshotController:{value:null},list:{value:null},addSnapshot:{value:function(e){this.snapshotController.content.unshift(e)}}})

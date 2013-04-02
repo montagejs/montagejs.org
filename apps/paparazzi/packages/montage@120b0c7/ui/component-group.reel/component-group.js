@@ -1,0 +1,1 @@
+var Montage=require("montage").Montage,Component=require("ui/component").Component,ComponentGroup=exports.ComponentGroup=Montage.create(Component,{hasTemplate:{value:!1},initWithComponents:{value:function(e){return this.childComponents=e,this}}})

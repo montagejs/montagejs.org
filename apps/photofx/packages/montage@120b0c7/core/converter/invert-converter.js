@@ -1,0 +1,1 @@
+var Montage=require("montage").Montage,Converter=require("core/converter/converter").Converter,InvertConverter=exports.InvertConverter=Montage.create(Converter,{convert:{value:function(e){return!e}},revert:{value:function(e){return!e}}})
