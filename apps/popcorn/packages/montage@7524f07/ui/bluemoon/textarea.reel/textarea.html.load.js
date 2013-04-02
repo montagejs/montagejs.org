@@ -1,0 +1,1 @@
+montageDefine("7524f07","ui/bluemoon/textarea.reel/textarea.html",{text:"<!doctype html>\n\n<html>\n<head>\n    <meta charset=utf-8>\n    <link rel=stylesheet href=textarea.css>\n</head>\n<body>\n</body>\n</html>"})

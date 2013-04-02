@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>JSDoc: DynamicElement</title>
 
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" />
@@ -10,14 +10,12 @@
     <link rel="stylesheet" href="stylesheets/pages.css" />
     <link rel="stylesheet" href="stylesheets/solarized.css" />
 
-    <script src="scripts/prettify/prettify.js"> </script>
-    <script src="scripts/prettify/lang-css.js"> </script>
-    <script src="scripts/search.js"> </script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
-    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <script src="scripts/search.js"></script>
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css" />
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css" />
 </head>
 
 <body class="docs">
@@ -33,7 +31,7 @@
         </div>
     </header>
 
-    <!--<h1 class="page-title">DynamicElement</h1>-->
+    
 
     <section id="docs">
 
@@ -221,7 +219,7 @@
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Component.html#application">Component#application</a>
-    </li></dd>
+    </li></ul></dd>
 
 
 
@@ -280,7 +278,7 @@
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Component.html#canDrawGate">Component#canDrawGate</a>
-    </li></dd>
+    </li></ul></dd>
 
 
 
@@ -339,7 +337,7 @@
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Component.html#childComponents">Component#childComponents</a>
-    </li></dd>
+    </li></ul></dd>
 
 
 
@@ -391,9 +389,9 @@
 <dd>
 
     <div class="description">
-        <p>The classList of the component&#39;s element, the purpose is to mimic the element&#39;s API but to also respect the draw.
+        <p>The classList of the component's element, the purpose is to mimic the element's API but to also respect the draw.
         It can also be bound to by binding each class as a property.
-        example to toggle the complete class: &quot;classList.complete&quot; : { &quot;&lt;-&quot; : &quot;@owner.isCompete&quot;}</p>
+        example to toggle the complete class: "classList.complete" : { "&lt;-" : "@owner.isCompete"}</p>
 
     </div>
 
@@ -524,7 +522,7 @@
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Component.html#delegate">Component#delegate</a>
-    </li></dd>
+    </li></ul></dd>
 
 
 
@@ -569,11 +567,11 @@
 <dd>
 
     <div class="description">
-        <p>The element of the component as defined in it&#39;s template.</p>
+        <p>The element of the component as defined in it's template.</p>
 <pre><code class="lang-json">{
-   &quot;component&quot;: {
-       &quot;properties&quot;: {
-           &quot;element&quot;: {&quot;#&quot;: &quot;datamontageid&quot;}
+   "component": {
+       "properties": {
+           "element": {"#": "datamontageid"}
        }
    }
 }</code></pre>
@@ -594,7 +592,7 @@
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Component.html#element">Component#element</a>
-    </li></dd>
+    </li></ul></dd>
 
 
 
@@ -656,7 +654,7 @@
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Component.html#eventManager">Component#eventManager</a>
-    </li></dd>
+    </li></ul></dd>
 
 
 
@@ -772,7 +770,7 @@
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Component.html#localizer">Component#localizer</a>
-    </li></dd>
+    </li></ul></dd>
 
 
 
@@ -819,7 +817,7 @@
     <div class="description">
         <p>The purpose of this property is to trigger the adding of the component to the draw list and maintain whether draw needs to be called as a consequence of drawIfNeeded.
 If needsDraw is set to true, and the component can draw but is not yet added to the parent Draw List, then <code>addToDrawList()</code> is called on the parentComponent with this as the argument.
-If the component cannot draw then it&#39;s recorded in the component&#39;s <code>blockDrawGate</code> that a draw was requested.</p>
+If the component cannot draw then it's recorded in the component's <code>blockDrawGate</code> that a draw was requested.</p>
 <p>Two actions are required for a component to load:</p>
 <ul>
 <li>it needs an element</li>
@@ -841,7 +839,7 @@ If the component cannot draw then it&#39;s recorded in the component&#39;s <code
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Component.html#needsDraw">Component#needsDraw</a>
-    </li></dd>
+    </li></ul></dd>
 
 
 
@@ -903,7 +901,7 @@ If the component cannot draw then it&#39;s recorded in the component&#39;s <code
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Component.html#ownerComponent">Component#ownerComponent</a>
-    </li></dd>
+    </li></ul></dd>
 
 
 
@@ -965,7 +963,7 @@ If the component cannot draw then it&#39;s recorded in the component&#39;s <code
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Component.html#rootComponent">Component#rootComponent</a>
-    </li></dd>
+    </li></ul></dd>
 
 
 
@@ -1019,7 +1017,7 @@ If the component cannot draw then it&#39;s recorded in the component&#39;s <code
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Component.html#template">Component#template</a>
-    </li></dd>
+    </li></ul></dd>
 
 
 
@@ -1065,8 +1063,8 @@ If the component cannot draw then it&#39;s recorded in the component&#39;s <code
 
     <div class="description">
         <p>The templateObjects property is populated by the template. It is a map of all the instances present in the
-template&#39;s serialization keyed by their label. If the templateObjects is initialized prior to template load then
-if one it&#39;s keys matches a label in the serialization that value is used rather than the what is defined in the
+template's serialization keyed by their label. If the templateObjects is initialized prior to template load then
+if one it's keys matches a label in the serialization that value is used rather than the what is defined in the
 template.</p>
 
     </div>
@@ -1084,7 +1082,7 @@ template.</p>
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Component.html#templateObjects">Component#templateObjects</a>
-    </li></dd>
+    </li></ul></dd>
 
 
 
@@ -1147,7 +1145,7 @@ Make sure to set the localizer before setting to <code>true</code>.</p>
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Component.html#waitForLocalizerMessages">Component#waitForLocalizerMessages</a>
-    </li></dd>
+    </li></ul></dd>
 
 
 
@@ -1299,7 +1297,7 @@ exports.Main = Montage.create(Component, {
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Component.html#_addChildComponent">Component#_addChildComponent</a>
-    </li></dd>
+    </li></ul></dd>
 
 
 
@@ -1339,7 +1337,7 @@ exports.Main = Montage.create(Component, {
 
 
 <dt>
-    <h4 class="name" id="acceptsDirectFocus"><span class="type-signature"></span>acceptsDirectFocus<span class="signature">()</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
+    <h4 class="name" id="acceptsDirectFocus"><span class="type-signature"></span>acceptsDirectFocus<span class="signature">()</span><span class="type-signature"> → {Boolean}</span></h4>
 
 
 </dt>
@@ -1365,7 +1363,7 @@ exports.Main = Montage.create(Component, {
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Component.html#acceptsDirectFocus">Component#acceptsDirectFocus</a>
-    </li></dd>
+    </li></ul></dd>
 
 
 
@@ -1509,7 +1507,7 @@ exports.Main = Montage.create(Component, {
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Component.html#addAttributes">Component#addAttributes</a>
-    </li></dd>
+    </li></ul></dd>
 
 
 
@@ -1557,7 +1555,7 @@ exports.Main = Montage.create(Component, {
 
 
     <div class="description markdown-body">
-        <p>Adds the passed in composer to the component&#39;s composer list.</p>
+        <p>Adds the passed in composer to the component's composer list.</p>
 
     </div>
 
@@ -1629,7 +1627,7 @@ exports.Main = Montage.create(Component, {
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Component.html#addComposer">Component#addComposer</a>
-    </li></dd>
+    </li></ul></dd>
 
 
 
@@ -1677,7 +1675,7 @@ exports.Main = Montage.create(Component, {
 
 
     <div class="description markdown-body">
-        <p>Adds the passed in composer to the component&#39;s composer list and
+        <p>Adds the passed in composer to the component's composer list and
 sets the element of the composer to the passed in element.</p>
 
     </div>
@@ -1774,7 +1772,7 @@ sets the element of the composer to the passed in element.</p>
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Component.html#addComposerForElement">Component#addComposerForElement</a>
-    </li></dd>
+    </li></ul></dd>
 
 
 
@@ -1840,7 +1838,7 @@ sets the element of the composer to the passed in element.</p>
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Component.html#attachToParentComponent">Component#attachToParentComponent</a>
-    </li></dd>
+    </li></ul></dd>
 
 
 
@@ -1880,7 +1878,7 @@ sets the element of the composer to the passed in element.</p>
 
 
 <dt>
-    <h4 class="name" id="canDraw"><span class="type-signature"></span>canDraw<span class="signature">()</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
+    <h4 class="name" id="canDraw"><span class="type-signature"></span>canDraw<span class="signature">()</span><span class="type-signature"> → {Boolean}</span></h4>
 
 
 </dt>
@@ -1889,7 +1887,7 @@ sets the element of the composer to the passed in element.</p>
 
     <div class="description markdown-body">
         <p>This method is called right before draw is called.
-If <code>canDraw()</code> returns false, then the component is re-added to the parent&#39;s draw list and draw isn&#39;t called.</p>
+If <code>canDraw()</code> returns false, then the component is re-added to the parent's draw list and draw isn't called.</p>
 
     </div>
 
@@ -1912,7 +1910,7 @@ If <code>canDraw()</code> returns false, then the component is re-added to the p
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Component.html#canDraw">Component#canDraw</a>
-    </li></dd>
+    </li></ul></dd>
 
 
 
@@ -2007,7 +2005,7 @@ If <code>canDraw()</code> returns false, then the component is re-added to the p
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Component.html#cleanupDeletedComponentTree">Component#cleanupDeletedComponentTree</a>
-    </li></dd>
+    </li></ul></dd>
 
 
 
@@ -2079,7 +2077,7 @@ is responsible for calling unload on each composer before removing it.</p>
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Component.html#clearAllComposers">Component#clearAllComposers</a>
-    </li></dd>
+    </li></ul></dd>
 
 
 
@@ -2127,7 +2125,7 @@ is responsible for calling unload on each composer before removing it.</p>
 
 
     <div class="description markdown-body">
-        <p>Convenience to create a custom event named &quot;action&quot;</p>
+        <p>Convenience to create a custom event named "action"</p>
 
     </div>
 
@@ -2150,7 +2148,7 @@ is responsible for calling unload on each composer before removing it.</p>
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Component.html#createActionEvent">Component#createActionEvent</a>
-    </li></dd>
+    </li></ul></dd>
 
 
 
@@ -2210,7 +2208,7 @@ is responsible for calling unload on each composer before removing it.</p>
 
 
     <div class="description markdown-body">
-        <p>Adds a property to the component with the specified name. This method is used internally by the framework convert a DOM element&#39;s standard attributes into bindable properties. It creates an accessor property (getter/setter) with the same name as the specified property, as well as a &quot;backing&quot; data property whose name is prepended with an underscore (_). The backing variable is assigned the value from the property descriptor. For example, if the name  &quot;title&quot; is passed as the first parameter, a &quot;title&quot; accessor property is created as well a data property named &quot;_title&quot;.</p>
+        <p>Adds a property to the component with the specified name. This method is used internally by the framework convert a DOM element's standard attributes into bindable properties. It creates an accessor property (getter/setter) with the same name as the specified property, as well as a "backing" data property whose name is prepended with an underscore (_). The backing variable is assigned the value from the property descriptor. For example, if the name  "title" is passed as the first parameter, a "title" accessor property is created as well a data property named "_title".</p>
 
     </div>
 
@@ -2306,7 +2304,7 @@ is responsible for calling unload on each composer before removing it.</p>
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Component.html#defineAttribute">Component#defineAttribute</a>
-    </li></dd>
+    </li></ul></dd>
 
 
 
@@ -2372,7 +2370,7 @@ is responsible for calling unload on each composer before removing it.</p>
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Component.html#deserializedFromSerialization">Component#deserializedFromSerialization</a>
-    </li></dd>
+    </li></ul></dd>
 
 
 
@@ -2443,7 +2441,7 @@ is responsible for calling unload on each composer before removing it.</p>
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Component.html#didDraw">Component#didDraw</a>
-    </li></dd>
+    </li></ul></dd>
 
 
 
@@ -2516,7 +2514,7 @@ is responsible for calling unload on each composer before removing it.</p>
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Component.html#elementControllerFromEvent">Component#elementControllerFromEvent</a>
-    </li></dd>
+    </li></ul></dd>
 
 
 
@@ -2643,7 +2641,7 @@ is responsible for calling unload on each composer before removing it.</p>
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Component.html#expandComponent">Component#expandComponent</a>
-    </li></dd>
+    </li></ul></dd>
 
 
 
@@ -2763,7 +2761,7 @@ is responsible for calling unload on each composer before removing it.</p>
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Component.html#gateDidBecomeTrue">Component#gateDidBecomeTrue</a>
-    </li></dd>
+    </li></ul></dd>
 
 
 
@@ -2885,7 +2883,7 @@ is responsible for calling unload on each composer before removing it.</p>
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Component.html#loadComponentTree">Component#loadComponentTree</a>
-    </li></dd>
+    </li></ul></dd>
 
 
 
@@ -3000,7 +2998,7 @@ is responsible for calling unload on each composer before removing it.</p>
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Component.html#loadTemplate">Component#loadTemplate</a>
-    </li></dd>
+    </li></ul></dd>
 
 
 
@@ -3073,7 +3071,7 @@ Returns undefined if this is the rootComponent.</p>
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Component.html#parentComponent">Component#parentComponent</a>
-    </li></dd>
+    </li></ul></dd>
 
 
 
@@ -3157,7 +3155,7 @@ The component can implement this method to add event listeners for these events 
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Component.html#prepareForActivationEvents">Component#prepareForActivationEvents</a>
-    </li></dd>
+    </li></ul></dd>
 
 
 
@@ -3272,7 +3270,7 @@ The component can implement this method to add event listeners for these events 
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Component.html#removeChildComponent">Component#removeChildComponent</a>
-    </li></dd>
+    </li></ul></dd>
 
 
 
@@ -3320,7 +3318,7 @@ The component can implement this method to add event listeners for these events 
 
 
     <div class="description markdown-body">
-        <p>Removes the passed in composer from this component&#39;s composer list.  It takes care
+        <p>Removes the passed in composer from this component's composer list.  It takes care
 of calling the composers unload method before removing it from the list.</p>
 
     </div>
@@ -3393,7 +3391,7 @@ of calling the composers unload method before removing it from the list.</p>
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Component.html#removeComposer">Component#removeComposer</a>
-    </li></dd>
+    </li></ul></dd>
 
 
 
@@ -3515,7 +3513,7 @@ iff one has not already been scheduled.</p>
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Component.html#scheduleComposer">Component#scheduleComposer</a>
-    </li></dd>
+    </li></ul></dd>
 
 
 
@@ -3555,7 +3553,7 @@ iff one has not already been scheduled.</p>
 
 
 <dt>
-    <h4 class="name" id="surrenderPointer"><span class="type-signature"></span>surrenderPointer<span class="signature">(pointer, demandingComponent)</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
+    <h4 class="name" id="surrenderPointer"><span class="type-signature"></span>surrenderPointer<span class="signature">(pointer, demandingComponent)</span><span class="type-signature"> → {Boolean}</span></h4>
 
 
 </dt>
@@ -3663,7 +3661,7 @@ iff one has not already been scheduled.</p>
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Component.html#surrenderPointer">Component#surrenderPointer</a>
-    </li></dd>
+    </li></ul></dd>
 
 
 
@@ -3831,7 +3829,7 @@ iff one has not already been scheduled.</p>
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Component.html#traverseComponentTree">Component#traverseComponentTree</a>
-    </li></dd>
+    </li></ul></dd>
 
 
 
@@ -3902,7 +3900,7 @@ iff one has not already been scheduled.</p>
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Component.html#willDraw">Component#willDraw</a>
-    </li></dd>
+    </li></ul></dd>
 
 
 
@@ -3961,7 +3959,7 @@ iff one has not already been scheduled.</p>
     </section>
 
     <nav class="docs">
-        <h2>Search</h2><input id="index-search" type="search" placeholder="search for"><details open><summary>Types</summary><ul><li><a href="Application.html">Application</a></li><li><a href="ArrayController.html">ArrayController</a></li><li><a href="BindingDescriptor.html">BindingDescriptor</a></li><li><a href="BitField.html">BitField</a></li><li><a href="Button.html">Button</a></li><li><a href="BytesConverter.html">BytesConverter</a></li><li><a href="ChangeEventDispatchingArray.html">ChangeEventDispatchingArray</a></li><li><a href="CheckInput.html">CheckInput</a></li><li><a href="Component.html">Component</a></li><li><a href="Composer.html">Composer</a></li><li><a href="Condition.html">Condition</a></li><li><a href="Converter.html">Converter</a></li><li><a href="CurrencyConverter.html">CurrencyConverter</a></li><li><a href="DateConverter.html">DateConverter</a></li><li><a href="DateValidator.html">DateValidator</a></li><li><a href="DefaultLocalizer.html">DefaultLocalizer</a></li><li><a href="Deserializer.html">Deserializer</a></li><li><a href="DynamicElement.html">DynamicElement</a></li><li><a href="DynamicText.html">DynamicText</a></li><li><a href="EditableText.html">EditableText</a></li><li><a href="Enum.html">Enum</a></li><li><a href="EventManager.html">EventManager</a></li><li><a href="Exception.html">Exception</a></li><li><a href="Gate.html">Gate</a></li><li><a href="InputText.html">InputText</a></li><li><a href="InvertConverter.html">InvertConverter</a></li><li><a href="KeyComposer.html">KeyComposer</a></li><li><a href="KeyManager.html">KeyManager</a></li><li><a href="Localizer.html">Localizer</a></li><li><a href="Logger.html">Logger</a></li><li><a href="LowerCaseConverter.html">LowerCaseConverter</a></li><li><a href="MediaController.html">MediaController</a></li><li><a href="MessageFormat.html">MessageFormat</a></li><li><a href="MessageLocalizer.html">MessageLocalizer</a></li><li><a href="Montage.html">Montage</a></li><li><a href="MontageWindow.html">MontageWindow</a></li><li><a href="MutableEvent.html">MutableEvent</a></li><li><a href="NativeControl.html">NativeControl</a></li><li><a href="NewLineToBrConverter.html">NewLineToBrConverter</a></li><li><a href="NumberConverter.html">NumberConverter</a></li><li><a href="NumberValidator.html">NumberValidator</a></li><li><a href="ObjectController.html">ObjectController</a></li><li><a href="PressComposer.html">PressComposer</a></li><li><a href="PropertyChangeBindingListener.html">PropertyChangeBindingListener</a></li><li><a href="Repetition.html">Repetition</a></li><li><a href="RootComponent.html">RootComponent</a></li><li><a href="Serializer_.html">Serializer</a></li><li><a href="Slot.html">Slot</a></li><li><a href="State.html">State</a></li><li><a href="StateChart.html">StateChart</a></li><li><a href="Substitution.html">Substitution</a></li><li><a href="SwipeComposer.html">SwipeComposer</a></li><li><a href="Template_.html">Template</a></li><li><a href="TranslateComposer.html">TranslateComposer</a></li><li><a href="TrimConverter.html">TrimConverter</a></li><li><a href="UndoManager.html">UndoManager</a></li><li><a href="UpperCaseConverter.html">UpperCaseConverter</a></li><li><a href="Uuid_.html">Uuid</a></li><li><a href="Validator.html">Validator</a></li></ul></details><details><summary>Externals</summary><ul><li><a href="external-Array.html">Array</a></li><li><a href="external-Element.html">Element</a></li><li><a href="external-Function.html">Function</a></li><li><a href="external-Object.html">Object</a></li><li><a href="external-RegExp.html">RegExp</a></li><li><a href="external-String.html">String</a></li></ul></details><details><summary>Events</summary><ul><li><a href="PressComposer.html#event:longPress">longPress</a></li><li><a href="PressComposer.html#event:press">press</a></li><li><a href="PressComposer.html#event:pressCancel">pressCancel</a></li><li><a href="PressComposer.html#event:pressStart">pressStart</a></li></ul></details><details><summary>Tutorials</summary><ul><li><a href="tutorial-README.html">README</a></li></ul></details><details><summary>Global</summary><ul><li><a href="global.html#_bezierTubeBoundingSphere">_bezierTubeBoundingSphere</a></li><li><a href="global.html#_computeRotationValuesToXAxis">_computeRotationValuesToXAxis</a></li><li><a href="global.html#_rayRectangleIntersection">_rayRectangleIntersection</a></li><li><a href="global.html#_rayRectangleIntersectionPosition">_rayRectangleIntersectionPosition</a></li><li><a href="global.html#_sphereIntersection">_sphereIntersection</a></li><li><a href="global.html#linearScrollingVector">linearScrollingVector</a></li><li><a href="global.html#relative">relative</a></li><li><a href="global.html#resolve">resolve</a></li><li><a href="global.html#test">test</a></li></ul></details>
+        <h2>Search</h2><input id="index-search" type="search" placeholder="search for" /><details open="open"><summary>Types</summary><ul><li><a href="Application.html">Application</a></li><li><a href="ArrayController.html">ArrayController</a></li><li><a href="BindingDescriptor.html">BindingDescriptor</a></li><li><a href="BitField.html">BitField</a></li><li><a href="Button.html">Button</a></li><li><a href="BytesConverter.html">BytesConverter</a></li><li><a href="ChangeEventDispatchingArray.html">ChangeEventDispatchingArray</a></li><li><a href="CheckInput.html">CheckInput</a></li><li><a href="Component.html">Component</a></li><li><a href="Composer.html">Composer</a></li><li><a href="Condition.html">Condition</a></li><li><a href="Converter.html">Converter</a></li><li><a href="CurrencyConverter.html">CurrencyConverter</a></li><li><a href="DateConverter.html">DateConverter</a></li><li><a href="DateValidator.html">DateValidator</a></li><li><a href="DefaultLocalizer.html">DefaultLocalizer</a></li><li><a href="Deserializer.html">Deserializer</a></li><li><a href="DynamicElement.html">DynamicElement</a></li><li><a href="DynamicText.html">DynamicText</a></li><li><a href="EditableText.html">EditableText</a></li><li><a href="Enum.html">Enum</a></li><li><a href="EventManager.html">EventManager</a></li><li><a href="Exception.html">Exception</a></li><li><a href="Gate.html">Gate</a></li><li><a href="InputText.html">InputText</a></li><li><a href="InvertConverter.html">InvertConverter</a></li><li><a href="KeyComposer.html">KeyComposer</a></li><li><a href="KeyManager.html">KeyManager</a></li><li><a href="Localizer.html">Localizer</a></li><li><a href="Logger.html">Logger</a></li><li><a href="LowerCaseConverter.html">LowerCaseConverter</a></li><li><a href="MediaController.html">MediaController</a></li><li><a href="MessageFormat.html">MessageFormat</a></li><li><a href="MessageLocalizer.html">MessageLocalizer</a></li><li><a href="Montage.html">Montage</a></li><li><a href="MontageWindow.html">MontageWindow</a></li><li><a href="MutableEvent.html">MutableEvent</a></li><li><a href="NativeControl.html">NativeControl</a></li><li><a href="NewLineToBrConverter.html">NewLineToBrConverter</a></li><li><a href="NumberConverter.html">NumberConverter</a></li><li><a href="NumberValidator.html">NumberValidator</a></li><li><a href="ObjectController.html">ObjectController</a></li><li><a href="PressComposer.html">PressComposer</a></li><li><a href="PropertyChangeBindingListener.html">PropertyChangeBindingListener</a></li><li><a href="Repetition.html">Repetition</a></li><li><a href="RootComponent.html">RootComponent</a></li><li><a href="Serializer_.html">Serializer</a></li><li><a href="Slot.html">Slot</a></li><li><a href="State.html">State</a></li><li><a href="StateChart.html">StateChart</a></li><li><a href="Substitution.html">Substitution</a></li><li><a href="SwipeComposer.html">SwipeComposer</a></li><li><a href="Template_.html">Template</a></li><li><a href="TranslateComposer.html">TranslateComposer</a></li><li><a href="TrimConverter.html">TrimConverter</a></li><li><a href="UndoManager.html">UndoManager</a></li><li><a href="UpperCaseConverter.html">UpperCaseConverter</a></li><li><a href="Uuid_.html">Uuid</a></li><li><a href="Validator.html">Validator</a></li></ul></details><details><summary>Externals</summary><ul><li><a href="external-Array.html">Array</a></li><li><a href="external-Element.html">Element</a></li><li><a href="external-Function.html">Function</a></li><li><a href="external-Object.html">Object</a></li><li><a href="external-RegExp.html">RegExp</a></li><li><a href="external-String.html">String</a></li></ul></details><details><summary>Events</summary><ul><li><a href="PressComposer.html#event:longPress">longPress</a></li><li><a href="PressComposer.html#event:press">press</a></li><li><a href="PressComposer.html#event:pressCancel">pressCancel</a></li><li><a href="PressComposer.html#event:pressStart">pressStart</a></li></ul></details><details><summary>Tutorials</summary><ul><li><a href="tutorial-README.html">README</a></li></ul></details><details><summary>Global</summary><ul><li><a href="global.html#_bezierTubeBoundingSphere">_bezierTubeBoundingSphere</a></li><li><a href="global.html#_computeRotationValuesToXAxis">_computeRotationValuesToXAxis</a></li><li><a href="global.html#_rayRectangleIntersection">_rayRectangleIntersection</a></li><li><a href="global.html#_rayRectangleIntersectionPosition">_rayRectangleIntersectionPosition</a></li><li><a href="global.html#_sphereIntersection">_sphereIntersection</a></li><li><a href="global.html#linearScrollingVector">linearScrollingVector</a></li><li><a href="global.html#relative">relative</a></li><li><a href="global.html#resolve">resolve</a></li><li><a href="global.html#test">test</a></li></ul></details>
     </nav>
 
     <section id="next" class="next">
@@ -3984,27 +3982,9 @@ iff one has not already been scheduled.</p>
         2013 montagejs.org - <a href="https://github.com/montagejs/montagejs.org">Contributions</a> to this page are welcomed.
     </footer>
 
-    <script>
-        var codes = document.getElementsByTagName('code');
-        if (codes) {
-            Array.prototype.forEach.call(codes, function(element) {
-                if(element.classList.contains("lang-javascript")) {
-                    element.classList.add("prettyprint");
-                }
-            });
-        }
-        prettyPrint(); </script>
-    <!-- Google -->
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-35717912-1']);
-      _gaq.push(['_trackPageview']);
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
+    <script>var codes=document.getElementsByTagName("code");codes&&Array.prototype.forEach.call(codes,function(e){e.classList.contains("lang-javascript")&&e.classList.add("prettyprint")}),prettyPrint()</script>
+    
+    <script>var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-35717912-1"]),_gaq.push(["_trackPageview"]),function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script>
 
 </body>
 </html>
