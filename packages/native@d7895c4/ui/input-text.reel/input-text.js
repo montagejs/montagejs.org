@@ -1,0 +1,1 @@
+var TextInput=require("ui/text-input").TextInput;exports.InputText=TextInput.specialize({select:{value:function(){this._element.select()}}});

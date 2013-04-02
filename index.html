@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -14,7 +14,7 @@
 
     <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
-    <script src="index.html.bundle-0.js" data-montage-location="packages/montage@8c9da00/" data-promise-location="packages/q@76567f7/" data-montage-hash="8c9da00" data-promise-hash="76567f7" data-application-hash="ed2cab6"></script>
+    <script src="index.html.bundle-0.js" data-montage-location="packages/montage@1b6c26a/" data-promise-location="packages/q@0b8cfe2/" data-montage-hash="1b6c26a" data-promise-hash="0b8cfe2" data-application-hash="7fb6feb"></script>
     <script type="text/montage-serialization">{"features":{"prototype":"ui/features.reel","properties":{"element":{"#":"features"}}}}</script>
 
   </head>
@@ -26,8 +26,7 @@
     </header>
 
     <nav class="bar links">
-        <a class="link download" href="docs/Quick-Start">Quick Start</a>
-        <a class="link fork" href="https://github.com/montagejs/montage">Fork</a>
+        <a class="link download" href="docs/quick-start.html">Quick Start</a>
         <a class="link docs" href="docs/">Docs</a>
     </nav>
 
@@ -36,55 +35,50 @@
             <h3 class="title">Introducing Montage</h3>
             <div class="cols">
                 <div class="col col-1-2">
-                    <p>The Montage framework lets you develop rich HTML5 applications optimized for today and tomorrow’s range of connected devices. You can build rich client-side UI’s, sharing packages and modules with your NodeJS server. Montage opens a new world of opportunity for web developers.</p>
-
+                <p>MontageJS helps you build scalable and maintainable HTML5 applications optimized for today's and tomorrow's range of connected devices. With MontageJS, developers can create reusable user interface components and modules, bind properties among components and controllers, and synchronize DOM queries and updates to ensure a smooth user experience, especially on resource-constrained devices.</p>
                 </div>
                 <aside class="col col-1-2">
-                    <p>Some features</p>
+                    <p>Features include</p>
                     <ul>
-                        <li>Components and HTML templates</li>
-                        <li>2-way data binding</li>
-                        <li>Serialization</li>
-                        <li>Event Management</li>
+                        <li>Reusable components and HTML templates</li>
+                        <li>Declarative component model</li>
+                        <li>Declarative data binding</li>                        
+                        <li>Managed draw cycle</li>
+                        <li>Implicit event delegation</li>
                     </ul>
                 </aside>
             </div>
         </article>
     </section>
 
-    <section id="features" class="features" style="min-height: 1050px;">
+    <section id="features" class="features" style="min-height:1050px">
         <article>
             <h3 class="title">Features</h3>
 
-            <h3 class="sub-title">2-way Data Binding</h3>
-
+            <div class="cols">
+                <div class="col col-1-2">
+                    <h3 class="sub-title">Reusable Components</h3>
+                    <p>MontageJS comes with a variety of self-contained, reusable, and reliable components for building native-quality HTML5 apps. You can use these components individually, nest them within others, or use our clean API to build your own. <a href="docs/component-overview.html" target="_blank">Learn more &gt;</a></p>
+                </div>
+                <div class="col col-1-2">
+                    <h3 class="sub-title">Declarative Component Model</h3>
+                    <p>Montage models components as standalone web pages. The HTML of a component (the "template") contains a DOM skeleton and comes to life with the inclusion of a JSON formatted block or file—a component object model, distinct but connected to the DOM—that describes how to dress up the DOM with connections among components. <a href="docs/montage-serialization-format.html" target="_blank">Learn more &gt;</a></p>
+                </div>
+            </div>
+            <h3 class="sub-title">Declarative Data Binding</h3>
             <div data-montage-id="features"></div>
 
             <div class="cols">
                 <div class="col col-1-2">
-                    <h3 class="sub-title">Components and templates</h3>
-                    <p>Montage comes with a number of professionally designed, fully stylable, controls and components that are commonly needed in native-quality applications. You can use components on their own, nest them within others, or use our clean API to build your own.</p>
+                    <h3 class="sub-title">Implicit Event Delegation</h3>
+                    <p>MontageJS supports and extends the browser's native event handling mechanism using an event delegation model. This model helps improve performance, provides simple event handling logic, and adds the ability to observe property changes. <a href="docs/event-handling.html" target="_blank">Learn more &gt;</a></p>
                 </div>
                 <div class="col col-1-2">
-                    <h3 class="sub-title">Serialization</h3>
-                    <p>Montage supports serialization of the object graph using pure JSON. It describes the objects, properties, components, data bindings, and DOM relationships that make up a Montage application. Learn more about the <a href="docs/Montage-serialization-format" target="_blank">Montage serialization format</a>.</p>
-                </div>
-                <div class="col col-1-2">
-                    <h3 class="sub-title">Event Management</h3>
-                    <p>The Montage event manager wraps and extends the user-agent’s native event handling. This improves performance, provides simple event handling logic, and adds the ability to observe property changes. Learn more about <a href="docs/Event-handling" target="_blank">event handling</a>.</p>
-                </div>
-                <div class="col col-1-2">
-                    <h3 class="sub-title">Component draw cycle</h3>
-                    <p>To maximize application performance, Montage uses a deferred drawing model in which DOM updates and queries are batched together, limiting the number of DOM reflows. These features are implemented through a series of component method callbacks that the framework invokes. Learn more about <a href="docs/Component-draw-cycle" target="_blank">component draw cycle</a>.</p>
+                    <h3 class="sub-title">Managed Draw Cycle</h3>
+                    <p>MontageJS components participate in a managed draw cycle that separates reading and writing operations: DOM updates and queries are batched into separate code passes, thus limiting the number of DOM reflows while maximizing application performance. <a href="docs/component-draw-cycle.html" target="_blank">Learn more &gt;</a></p>
                 </div>
 
             </div>
-
-            <nav class="more">Learn more:
-                <a class="more-button" href="docs/" target="_blank">Docs</a>
-                <a class="more-button" href="http://montagejs.org/docs/kitchen-sink" target="_blank">Kitchen Sink</a>
-                <a class="more-button" href="http://montagejs.github.com/montage/samples/mfiddle/" target="_blank">M Fiddle</a>
-            </nav>
 
 
         </article>
@@ -96,12 +90,6 @@
 	        <p>A couple examples of Apps built with Montage.<br />
                 Check out more <a class="link" href="apps">sample Apps and demos</a>.</p>
 	        <ul class="gallery">
-	            <li class="gallery-item">
-	                <a href="https://chrome.google.com/webstore/detail/kjebfhglflhjjjiceimfkgicifkhjlnm" target="_blank">
-	                    <figure class="gallery-thumb"><img class="gallery-img" src="images/apps/scratchpad.jpg" alt="Scratchpad" /></figure>
-	                    <figcaption class="gallery-description">Scratchpad (Chrome)</figcaption>
-	                </a>
-	            </li>
                 <li class="gallery-item">
    	                <a href="apps/popcorn/" target="_blank">
    	                    <figure class="gallery-thumb"><img class="gallery-img" src="images/apps/popcorn.jpg" alt="Popcorn" /></figure>
@@ -111,7 +99,13 @@
 	            <li class="gallery-item">
 	                <a href="apps/calculator/" target="_blank">
 	                    <figure class="gallery-thumb"><img class="gallery-img" src="images/apps/calculator.jpg" alt="Calculator" /></figure>
-	                    <figcaption class="gallery-description">Calculator</figcaption>
+	                    <figcaption class="gallery-description">Calculator (Mobile)</figcaption>
+	                </a>
+	            </li>
+	            <li class="gallery-item">
+	                <a href="apps/paparazzi/" target="_blank">
+	                    <figure class="gallery-thumb"><img class="gallery-img" src="images/apps/paparazzi.jpg" alt="Paparazzi" /></figure>
+	                    <figcaption class="gallery-description">Paparazzi (Desktop)</figcaption>
 	                </a>
 	            </li>
                 <li class="gallery-item">
@@ -128,14 +122,11 @@
         <article>
             <h3 class="title">Tools</h3>
             <div class="cols">
-                <div class="col col-1-3">
-                    <p><a href="https://github.com/montagejs/minit" target="_blank">Minit</a> kickstarts your applications by generating all files and basic structure.</p>
+                <div class="col col-1-2">
+                    <p><a href="https://github.com/montagejs/minit" target="_blank">Minit</a> kickstarts your Montage projects by generating prebuilt Montage application templates and components and placing the associated files inside the proper directories of your project.</p>
                 </div>
-                <div class="col col-1-3">
-                    <p><a href="https://github.com/montagejs/mint" target="_blank">Mint</a> is a linter tailored to check for errors in the code for Montage.</p>
-                </div>
-                <div class="col col-1-3">
-                    <p><a href="https://github.com/montagejs/mop" target="_blank">Mop</a> optimizes Montage applications for production.</p>
+                <div class="col col-1-2">
+                    <p><a href="https://github.com/montagejs/mop" target="_blank">Mop</a> translates your developer-optimized experience into a user-optimized experience by cleaning up an application with its deeply intertwined dependencies into a single optimized script.</p>
                 </div>
             </div>
         </article>
@@ -146,7 +137,7 @@
             <div class="cols">
                 <div class="col col-1-2">
                     <h3 class="title">Browser Support</h3>
-                    <p>Montage works best in most modern browsers. An exact overview will follow once we finalize each theme.</p>
+                    <p>Montage works best in "evergreen" browsers, including current versions of Google Chrome, Firefox, Safari, Chrome Android, Mobile Safari, and IE 10.</p>
                 </div>
                 <div class="col col-1-2">
                     <h3 class="title">License</h3>
@@ -165,7 +156,7 @@
                     </p>
                 </div>
                 <aside class="col col-1-2">
-                    <p><strong>Have feedback or ideas?</strong> Let us know by creating a new <a href="https://github.com/montagejs/montage/issues" target="_blank">issue</a>, join us in <a href="http://webchat.freenode.net/?channels=montage" target="_blank">IRC</a> or post questions to our <a href="https://groups.google.com/forum/?fromgroups#!forum/montagejs" target="_blank">Google Group</a>. We're also on <a href="https://twitter.com/montage_js" target="_blank">Twitter</a> and <a href="https://plus.google.com/116915300739108010954/" target="_blank">Google+</a>.
+                    <p><strong>Have feedback or ideas?</strong> Let us know by creating a new <a href="https://github.com/montagejs/montage/issues" target="_blank">issue</a>, join us in <a href="http://webchat.freenode.net/?channels=montage" target="_blank">IRC</a> or post questions to our <a href="https://groups.google.com/forum/?fromgroups#!forum/montagejs" target="_blank">Google Group</a>. We're also on <a href="https://twitter.com/montagejs" target="_blank">Twitter</a> and <a href="https://plus.google.com/116915300739108010954/" target="_blank">Google+</a>.
                     </p>
                 </aside>
             </div>
@@ -178,11 +169,11 @@
 
 
     
-    <a href="https://github.com/montagejs/montage"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+    <a href="https://github.com/montagejs/montage"><img style="position: absolute; top: 0; right: 0; border: 0" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
 
 
     
-    <script>var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-35717912-1"]),_gaq.push(["_trackPageview"]),function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script>
+    <script>var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-35717912-1"]),_gaq.push(["_trackPageview"]),function(){var s=document.createElement("script");s.type="text/javascript",s.async=!0,s.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(s,n)}();</script>
 
 </body>
 </html>

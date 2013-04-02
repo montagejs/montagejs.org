@@ -1,0 +1,1 @@
+var AbstractRadioButton=require("montage/ui/base/abstract-radio-button").AbstractRadioButton;exports.RadioButton=AbstractRadioButton.specialize({hasTemplate:{value:!0},constructor:{value:function(){this.super(),this.classList.add("matte-RadioButton")}}});

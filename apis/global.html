@@ -36,353 +36,8641 @@
     <!--<h1 class="page-title">Global</h1>-->
 
     <section id="docs">
-
+        
 
 
 
 <header>
     <h2>
-
+    
     </h2>
-
+    
 </header>
 
 <article>
-
+    
     <div class="container-overview">
+    
 
+    
+        
 
-
-
-
-
+        
 <dl class="details">
+    
+        
+    
+    
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </dl>
 
 
-
-
+        
+    
     </div>
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
+    
         <h3 class="subsection-title">Properties</h3>
 
         <dl>
+            
 
+        
+            
 
+        
+            
 
+        
+            
 
+        
+            
 
+        
+            
 
+        
+            
 
+        
+            
 
+        
+            
 
+        
+            
 
+        
+            
 
+        
+            
 
+        
+            
 
+        
+            
 
+        
+            
 
+        
+            
 
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
 <dt>
-    <h4 class="name" id="linearScrollingVector"><span class="type-signature"></span>linearScrollingVector<span class="type-signature"></span></h4>
+    <h4 class="name" id="acceptsActiveTarget"><span class="type-signature"></span>acceptsActiveTarget<span class="type-signature"></span></h4>
 
-
+    
 </dt>
 <dd>
-
+    
     <div class="description">
-        <p>Only applicable when linear scrollingMode is selected</p>
-
+        <p>Whether or not this target can accept user focus and become the activeTarget
+This matches up with the &lt;code&gt;document.activeElement&lt;/code&gt; property purpose-wise;
+Events from components that should be dispatched as logically occurring at the point
+of user focus should be dispatched at the activeTarget</p>
+<p>By default a target does not accept this responsibility.</p>
     </div>
+    
 
-
-
+    
 <dl class="details">
+    
+        
+    
+    
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        ui/composer/flow-translate-composer.js, line 35
+        core/target.js, line 27
     </li></ul></dd>
-
-
-
-
-
-
-
+    
+    
+    
+    
+    
+    
+    
 </dl>
 
 
-
+    
 </dd>
 
 
-
-
+        
+            
 <dt>
-    <h4 class="name" id="test"><span class="type-signature"></span>test<span class="type-signature"></span></h4>
+    <h4 class="name" id="active"><span class="type-signature"></span>active<span class="type-signature"> :boolean</span></h4>
 
-
+    
 </dt>
 <dd>
-
+    
     <div class="description">
-        <p>This test function is from a previous iteration of Flow.
-        I need to re-read and analyze it before removing it, as
-        I don&#39;t remember what it is doing. Roman Cortes</p>
-
+        <p>This property is true when the checkbox is being interacted with, either through mouse click or touch event, otherwise false.</p>
     </div>
+    
 
-
-
+    
 <dl class="details">
+    
+        
+    
+    
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy"><li>false</li></ul></dd>
+    
+    
+    
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        ui/composer/flow-translate-composer.js, line 702
+        ui/base/abstract-checkbox.js, line 50
     </li></ul></dd>
-
-
-
-
-
-
-
+    
+    
+    
+    
+    
+    
+    
 </dl>
 
 
+    
+</dd>
 
+
+        
+            
+<dt>
+    <h4 class="name" id="active"><span class="type-signature"></span>active<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Whether this iteration should be highlighted.  It might be highlighted
+because the user is touching it, or because it is under some other user
+cursor as in an autocomplete popdown where the arrow keys manipulate the
+active iteration.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/repetition.reel/repetition.js, line 84
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="activeIndexes"><span class="type-signature"></span>activeIndexes<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/flow.reel/flow.js, line 1304
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="add"><span class="type-signature"></span>add<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Proxies adding content to the underlying collection, accounting for
+&lt;code&gt;selectAddedContent&lt;/code&gt;.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/range-controller.js, line 308
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="addContent"><span class="type-signature"></span>addContent<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Creates content and adds it to the controller and its backing
+collection.  Uses <code>add</code> and <code>contentConstructor</code>.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/range-controller.js, line 449
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="addEach"><span class="type-signature"></span>addEach<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Proxies adding each value into the underlying collection.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/range-controller.js, line 425
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="addEventListener"><span class="type-signature"></span>addEventListener<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Adds an event listener to the object.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/target.js, line 115
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="avoidsEmptySelection"><span class="type-signature"></span>avoidsEmptySelection<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Whether to automatically reselect a value if it is the last value
+removed from the selection.</p>
+<p>Off by default.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/range-controller.js, line 205
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="boundingBoxSize"><span class="type-signature"></span>boundingBoxSize<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/flow.reel/flow.js, line 689
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="cachedFirstElement"><span class="type-signature"></span>cachedFirstElement<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/repetition.reel/repetition.js, line 371
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="cameraFov"><span class="type-signature"></span>cameraFov<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The &quot;field of view&quot; of the camera, measured in degrees away from
+the ray from the camera position to the camera target point.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/flow.reel/flow.js, line 371
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="cameraPosition"><span class="type-signature"></span>cameraPosition<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>An [x, y, z] array representing the 3d vector describing the
+position of the virtual camera.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/flow.reel/flow.js, line 333
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="cameraRoll"><span class="type-signature"></span>cameraRoll<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The angle that the camera is rotated about the ray from the
+camera position to the camera target point, away from vertical.</p>
+<p>This feature is not presently implemented.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/flow.reel/flow.js, line 394
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="cameraTargetPoint"><span class="type-signature"></span>cameraTargetPoint<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>An [x, y, z] array representing the 3d vector describing the
+position of one of the points in the center of the camera's view.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/flow.reel/flow.js, line 352
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="checked"><span class="type-signature"></span>checked<span class="type-signature"> :boolean</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>This property reflect the checked state of the checkbox.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy"><li>false</li></ul></dd>
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/base/abstract-checkbox.js, line 67
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="clear"><span class="type-signature"></span>clear<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Proxies clearing the underlying content collection.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/range-controller.js, line 439
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="clearSelectionOnOrderChange"><span class="type-signature"></span>clearSelectionOnOrderChange<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Whether to automatically clear the selection whenever the
+&lt;code&gt;sortPath&lt;/code&gt;, &lt;code&gt;filterPath&lt;/code&gt;, or &lt;code&gt;reversed&lt;/code&gt;
+knobs change.</p>
+<p>Off by default.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/range-controller.js, line 197
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="constructor"><span class="type-signature"></span>constructor<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>private</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/base/abstract-link.js, line 30
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="contentConstructor"><span class="type-signature"></span>contentConstructor<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Creates a content value for this range controller.  If the backing
+collection has an intrinsict type, uses its <code>contentConstructor</code>.
+Otherwise, creates and returns simple, empty objects.</p>
+<p>This property can be set to an alternate content constructor, which will
+take precedence over either of the above defaults.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/range-controller.js, line 469
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="contentController"><span class="type-signature"></span>contentController<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/flow.reel/flow.js, line 1282
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="controller"><span class="type-signature"></span>controller<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The repetition gets iterations from its &lt;code&gt;contentController&lt;/code&gt;.
+The controller is responsible for tracking which iterations are drawn
+and which are selected.  The iteration view-model is attached to the
+controller view-model by this property. The &lt;code&gt;selected&lt;/code&gt; and
+&lt;code&gt;object&lt;/code&gt; properties are bound to the eponymous properties of
+the iteration controller.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/repetition.reel/repetition.js, line 35
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="convertCssPixelsPropertyStringToNumber"><span class="type-signature"></span>convertCssPixelsPropertyStringToNumber<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/flow.reel/flow-translate-composer.js, line 578
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="delete"><span class="type-signature"></span>delete<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Proxies deleting content from the underlying collection.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/range-controller.js, line 406
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="deleteEach"><span class="type-signature"></span>deleteEach<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Proxies deleting each value out from the underlying collection.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/range-controller.js, line 432
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="deselectInvisibleContent"><span class="type-signature"></span>deselectInvisibleContent<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Whether to automatically deselect content that disappears from the
+&lt;code&gt;organizedContent&lt;/code&gt;.</p>
+<p>Off by default.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/range-controller.js, line 188
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="didBecomeActiveTarget"><span class="type-signature"></span>didBecomeActiveTarget<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Called after to this target became the activeTarget</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/target.js, line 52
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="dispatchEvent"><span class="type-signature"></span>dispatchEvent<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Dispatches the specified event with this target
+as the event's proximal target</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/target.js, line 79
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="dispatchEventNamed"><span class="type-signature"></span>dispatchEventNamed<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Creates and dispatches an event with the specified properties with this
+target as the event's proximal target</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/target.js, line 101
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="draggedSlideIndex"><span class="type-signature"></span>draggedSlideIndex<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/flow.reel/flow.js, line 1613
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="ElementReference"><span class="type-signature"></span>ElementReference<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>ElementReference</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/serialization/serializer/montage-ast.js, line 9
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="elementsBoundingSphereRadius"><span class="type-signature"></span>elementsBoundingSphereRadius<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/flow.reel/flow.js, line 710
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="enabled"><span class="type-signature"></span>enabled<span class="type-signature"> :boolean</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Enables or disables the checkbox from user input. When this property is set to <code>false</code>,
+the &quot;montage--disabled&quot; CSS class is applied to the checkbox's DOM element during the next draw cycle. When set to
+<code>true</code> the &quot;montage--disabled&quot; CSS class is removed from the element's class list.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/base/abstract-checkbox.js, line 82
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="enabled"><span class="type-signature"></span>enabled<span class="type-signature"> :number</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Wether or not the number field acccepts user input</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy"><li>0</li></ul></dd>
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/base/abstract-number-field.js, line 309
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="expandParameters"><span class="type-signature"></span>expandParameters<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/template.js, line 898
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="extractSerialization"><span class="type-signature"></span>extractSerialization<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Creates a new serialization with the labels given.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/serialization/serialization.js, line 567
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="filterPath"><span class="type-signature"></span>filterPath<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>An FRB expression that determines how to filter content like
+&quot;name.startsWith('A')&quot; to see only names starting with 'A'.  If the
+&lt;code&gt;filterPath&lt;/code&gt; is null, all content is accepted.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/range-controller.js, line 145
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="firstElement"><span class="type-signature"></span>firstElement<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/repetition.reel/repetition.js, line 349
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="flow"><span class="type-signature"></span>flow<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/flow.reel/flow-translate-composer.js, line 344
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="FlowTranslateComposer"><span class="type-signature"></span>FlowTranslateComposer<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/flow.reel/flow-translate-composer.js, line 10
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="frame"><span class="type-signature"></span>frame<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/flow.reel/flow-translate-composer.js, line 567
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="handleMinusAction"><span class="type-signature"></span>handleMinusAction<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Handle decrement-button action</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/base/abstract-number-field.js, line 127
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="handleMousewheel"><span class="type-signature"></span>handleMousewheel<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/flow.reel/flow-translate-composer.js, line 290
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="handlePlusAction"><span class="type-signature"></span>handlePlusAction<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Handle increment-button action</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/base/abstract-number-field.js, line 107
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="handlePress"><span class="type-signature"></span>handlePress<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Handle press event from press composer</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/base/abstract-link.js, line 148
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="handlePress"><span class="type-signature"></span>handlePress<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Handle press event from press composer</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/base/abstract-radio-button.js, line 123
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="handlePress"><span class="type-signature"></span>handlePress<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Handle press event from press composer</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/base/abstract-checkbox.js, line 123
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="hasElasticScrolling"><span class="type-signature"></span>hasElasticScrolling<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/flow.reel/flow.js, line 1394
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="hasSelectedIndexScrolling"><span class="type-signature"></span>hasSelectedIndexScrolling<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/flow.reel/flow.js, line 472
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="index"><span class="type-signature"></span>index<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The position of this iteration within the content controller, and within
+the document immediately after the repetition has drawn.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/repetition.reel/repetition.js, line 69
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="init"><span class="type-signature"></span>init<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/serialization/deserializer/montage-reviver.js, line 87
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="initWithContent"><span class="type-signature"></span>initWithContent<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Initializes a range controller with a backing collection.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/range-controller.js, line 118
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="initWithRepetition"><span class="type-signature"></span>initWithRepetition<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Associates the iteration instance with a repetition.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/repetition.reel/repetition.js, line 189
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="injectIntoDocument"><span class="type-signature"></span>injectIntoDocument<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Injects this iteration to the document between its top and bottom
+boundaries.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/repetition.reel/repetition.js, line 220
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="instantiateWithInstances"><span class="type-signature"></span>instantiateWithInstances<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/template.js, line 248
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="isActiveTarget"><span class="type-signature"></span>isActiveTarget<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Whether or not this is the activeTarget</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/target.js, line 35
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="isEven"><span class="type-signature"></span>isEven<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Whether this iteration appears on the 0th position within the iteration,
+or every other position thereafter.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/repetition.reel/repetition.js, line 100
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="isFirst"><span class="type-signature"></span>isFirst<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Whether this iteration appears first in the visible order of iterations.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/repetition.reel/repetition.js, line 89
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="isInputEnabled"><span class="type-signature"></span>isInputEnabled<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/flow.reel/flow.js, line 1590
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="isLast"><span class="type-signature"></span>isLast<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Whether this iteration appears last in the visible order of iterations.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/repetition.reel/repetition.js, line 94
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="isOdd"><span class="type-signature"></span>isOdd<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Whether this iteration appears on the 1st position within the iteration,
+or every other position thereafter.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/repetition.reel/repetition.js, line 106
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="isSelectionEnabled"><span class="type-signature"></span>isSelectionEnabled<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/flow.reel/flow.js, line 1289
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="Iteration"><span class="type-signature"></span>Iteration<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>A reusable view-model for each iteration of a repetition.  Each iteration
+corresponds to a value from the contentController.  When an iteration is
+drawn, it is tied to the corresponding controller-model that carries which
+object the iteration is coupled to, and whether it is selected.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/repetition.reel/repetition.js, line 20
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="iterations"><span class="type-signature"></span>iterations<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>An array of iterations corresponding to each of the values in
+&lt;code&gt;organizedContent&lt;/code&gt;, providing an interface for getting or
+setting whether each is selected.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/range-controller.js, line 237
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="lastDrawTime"><span class="type-signature"></span>lastDrawTime<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/flow.reel/flow.js, line 1660
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="length"><span class="type-signature"></span>length<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The length of a sliding window over the content, suitable for binding
+(indirectly) to the scroll height.
+If &lt;code&gt;start&lt;/code&gt; or &lt;code&gt;length&lt;/code&gt; is null, all content is
+accepted.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/range-controller.js, line 168
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="length"><span class="type-signature"></span>length<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The number of visible iterations after frustrum culling, which is
+subject to variation depending on the scroll offset.</p>
+<p>&lt;pre&gt;
++----+ +----+ +----+ +----+ +----+
+|    | |    | |    | |    | |    | length = 5
++----+ +----+ +----+ +----+ +----+
+--+ +----+ +----+ +----+ +----+ +-
+  | |    | |    | |    | |    | |  length = 6
+--+ +----+ +----+ +----+ +----+ +-
+&lt;/pre&gt;</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/flow.reel/flow.js, line 1360
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="linearScrollingVector"><span class="type-signature"></span>linearScrollingVector<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>A constant 2d vector used to transform a drag vector into a
+scroll vector, applicable only in the &quot;linear&quot;
+&lt;code&gt;scrollingMode&lt;/code&gt;.</p>
+<p>Bound to the eponymous property of the Flow that owns it.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/flow.reel/flow-translate-composer.js, line 56
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="linearScrollingVector"><span class="type-signature"></span>linearScrollingVector<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>A constant 2d vector used to transform a drag vector into a
+scroll vector, applicable only in the &quot;linear&quot;
+&lt;code&gt;scrollingMode&lt;/code&gt;.</p>
+<p>Used by the corresponding &lt;code&gt;FlowTranslateComposer&lt;/code&gt; and
+communicated by way of a binding to the property of the same
+name.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/flow.reel/flow.js, line 125
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="max"><span class="type-signature"></span>max<span class="type-signature"> :number|string</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The maximum value allowed in the InputNumber. Can be any number or the string &quot;any&quot;.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy"><li>"any"</li></ul></dd>
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/base/abstract-number-field.js, line 221
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="maxScroll"><span class="type-signature"></span>maxScroll<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/flow.reel/flow-translate-composer.js, line 330
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="mergeSerializations"><span class="type-signature"></span>mergeSerializations<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Merges serialization2 into serialization1.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/serialization/serialization.js, line 172
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="min"><span class="type-signature"></span>min<span class="type-signature"> :number|string</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The maximum value allowed in the InputNumber. Can be any number or the string &quot;any&quot;.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy"><li>"any"</li></ul></dd>
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/base/abstract-number-field.js, line 195
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="minScroll"><span class="type-signature"></span>minScroll<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/flow.reel/flow-translate-composer.js, line 323
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="momentumDuration"><span class="type-signature"></span>momentumDuration<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The amount of time in miliseconds after a gesture has ended until
+the flow's scroll inertia disipates.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/flow.reel/flow.js, line 147
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="Montage"><span class="type-signature"></span>Montage<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>It's dangerous to go alone! Take this.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/base/abstract-link.js, line 6
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="MontageBuilder"><span class="type-signature"></span>MontageBuilder<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>ElementReference</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/serialization/serializer/montage-builder.js, line 10
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="multiSelect"><span class="type-signature"></span>multiSelect<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Whether to automatically deselect all previously selected content when a
+new selection is made.</p>
+<p>Off by default.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/range-controller.js, line 213
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="nextTarget"><span class="type-signature"></span>nextTarget<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Which target to distribute an event after this when distributing events throughout a
+graph of targets.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/target.js, line 68
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="object"><span class="type-signature"></span>object<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The corresponding content for this iteration.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/repetition.reel/repetition.js, line 40
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="offset"><span class="type-signature"></span>offset<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/flow.reel/flow.js, line 1667
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="organizedContent"><span class="type-signature"></span>organizedContent<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>An array incrementally projected from &lt;code&gt;content&lt;/code&gt; through sort,
+reversed, filter, visibleIndexes, start, and length.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/range-controller.js, line 230
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="paths"><span class="type-signature"></span>paths<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The paths that slides will follow in the flow, as represented in
+the serialization of a Flow.  Each path is an object with a
+&quot;knots&quot; array, &quot;headOffset&quot;, &quot;tailOffset&quot;, and &quot;units&quot;
+descriptor.  Each &quot;knot&quot; has &quot;knotPosition&quot;,
+&quot;previousHandlerPosition&quot;, &quot;previousDensity&quot;, and &quot;nextDensity&quot;
+properties.  The positions are 3d vectors represented as arrays.
+Densities are describe slide gravitation relative to other knots,
+where equal densities represent linear distribution of slides
+from knot to knot.</p>
+<p>The paths property is a getter and setter.  The Flow converts the
+paths to and from an internal &lt;code&gt;splinePaths&lt;/code&gt;
+representation.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/flow.reel/flow.js, line 250
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="pop"><span class="type-signature"></span>pop<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Proxies popping content from the underlying collection.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/range-controller.js, line 343
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="push"><span class="type-signature"></span>push<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Proxies pushing content to the underlying collection, accounting for
+&lt;code&gt;selectAddedContent&lt;/code&gt;.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/range-controller.js, line 329
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="RangeController"><span class="type-signature"></span>RangeController<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>A &lt;code&gt;RangeController&lt;/code&gt; receives a &lt;code&gt;content&lt;/code&gt; collection,
+manages what portition of that content is visible and the order of its
+appearance (&lt;code&gt;organizedContent&lt;/code&gt;), and projects changes to the the
+organized content into an array of iteration controllers
+(&lt;code&gt;iterations&lt;/code&gt;, containing instances of &lt;code&gt;Iteration&lt;/code&gt;).</p>
+<p>The &lt;code&gt;RangeController&lt;/code&gt; provides a variety of knobs for how to
+project the content into the organized content, all of which are optional,
+and the default behavior is to preserve the content and its order.  You can
+use the bindings path expression language (from FRB) to determine the
+&lt;code&gt;sortPath&lt;/code&gt; and &lt;code&gt;filterPath&lt;/code&gt;.  There is a
+&lt;code&gt;reversed&lt;/code&gt; flag to invert the order of appearance.  The
+&lt;code&gt;visibleIndexes&lt;/code&gt; property will pluck values from the sorted and
+filtered content by position, in arbitrary order.  The &lt;code&gt;start&lt;/code&gt;
+and &lt;code&gt;length&lt;/code&gt; properties manage a sliding window into the content.</p>
+<p>The &lt;code&gt;RangeController&lt;/code&gt; is also responsible for managing which
+content is selected and provides a variety of knobs for that purpose.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/range-controller.js, line 46
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="recycle"><span class="type-signature"></span>recycle<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Disassociates an iteration with its content and prepares it to be
+recycled on the repetition's list of free iterations.  This function is
+called by handleOrganizedContentRangeChange when it recycles an
+iteration.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/repetition.reel/repetition.js, line 202
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="removeEventListener"><span class="type-signature"></span>removeEventListener<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Removes an event listener from the object.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/target.js, line 129
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="repetition"><span class="type-signature"></span>repetition<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The parent repetition component.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/repetition.reel/repetition.js, line 25
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="retractFromDocument"><span class="type-signature"></span>retractFromDocument<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Retracts an iteration from the document, scooping its child nodes into
+its DOMFragment.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/repetition.reel/repetition.js, line 277
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="reversed"><span class="type-signature"></span>reversed<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Whether to reverse the order of the sorted content.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/range-controller.js, line 138
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="scroll"><span class="type-signature"></span>scroll<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/flow.reel/flow-translate-composer.js, line 305
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="scroll"><span class="type-signature"></span>scroll<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/flow.reel/flow.js, line 1537
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="scrollingMode"><span class="type-signature"></span>scrollingMode<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>One of &quot;linear&quot; or &quot;drag&quot;.</p>
+<p>Bound to the eponymous property of the Flow that owns it.</p>
+<p>Drag mode is an experiment to preserve the dragged slide's
+position relative to the gesture pointer.  Since this feature is
+not yet ready, &quot;linear&quot; is the default.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/flow.reel/flow-translate-composer.js, line 31
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="scrollingMode"><span class="type-signature"></span>scrollingMode<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>One of &quot;linear&quot; or &quot;drag&quot;.</p>
+<p>Drag mode is an experiment to preserve the dragged slide's
+position relative to the gesture pointer.  Since this feature is
+not yet ready, &quot;linear&quot; is the default.</p>
+<p>Used by the corresponding &lt;code&gt;FlowTranslateComposer&lt;/code&gt; and
+communicated by way of a binding to the property of the same
+name.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/flow.reel/flow.js, line 97
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="scrollingTransitionDuration"><span class="type-signature"></span>scrollingTransitionDuration<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The configurable duration of scrolling animation in miliseconds.
+It may be set to a number, or a CSS duration like &quot;1s&quot; or
+&quot;500ms&quot;.  Getting the property always reports the number.  The
+default is 500.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/flow.reel/flow.js, line 444
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="scrollingTransitionTimingFunction"><span class="type-signature"></span>scrollingTransitionTimingFunction<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The CSS timing function, &quot;ease&quot; by default, used for smooth
+scroll transitions.  Supports named timing functions &quot;ease&quot;,
+&quot;linear&quot;, &quot;ease-in&quot;, &quot;ease-out&quot;, &quot;ease-in-out&quot;, and the qunituple
+&lt;code&gt;cubic-bezier(0, 0, 1, 1)&lt;/code&gt; format as well.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/flow.reel/flow.js, line 540
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="select"><span class="type-signature"></span>select<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>A managed interface for adding values to the selection, accounting for
+&lt;code&gt;multiSelect&lt;/code&gt;.
+You can however directly manipulate the selection, but that will update
+the selection asynchronously because the controller cannot change the
+selection while handling a selection change event.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/range-controller.js, line 263
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="selectAddedContent"><span class="type-signature"></span>selectAddedContent<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Whether to select new content automatically.</p>
+<p>Off by default.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/range-controller.js, line 179
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="selected"><span class="type-signature"></span>selected<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Whether the content for this iteration is selected.  This property is
+bound bidirectionally to whether every element on the document for the
+corresponding drawn iteration has the &lt;code&gt;selected&lt;/code&gt; CSS class
+(synchronized on draw), and whether the &lt;code&gt;object&lt;/code&gt; is in the
+&lt;code&gt;contentController.selection&lt;/code&gt; collection.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/repetition.reel/repetition.js, line 49
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="selectedIndexes"><span class="type-signature"></span>selectedIndexes<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/flow.reel/flow.js, line 1296
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="selectedIndexScrollingOffset"><span class="type-signature"></span>selectedIndexScrollingOffset<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/flow.reel/flow.js, line 479
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="selection"><span class="type-signature"></span>selection<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>A subset of the &lt;code&gt;content&lt;/code&gt; that are selected.  The user may
+safely reassign this property and all iterations will react to the
+change.  The selection may be &lt;code&gt;null&lt;/code&gt;.  The selection may be
+any collection that supports range change events like &lt;code&gt;Array&lt;/code&gt;
+or &lt;code&gt;SortedSet&lt;/code&gt;.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/range-controller.js, line 246
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="setObjectMetadata"><span class="type-signature"></span>setObjectMetadata<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Add metadata to specific objects of the serialization.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/template.js, line 543
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="shift"><span class="type-signature"></span>shift<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Proxies shifting content from the underlying collection.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/range-controller.js, line 353
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="slotContent"><span class="type-signature"></span>slotContent<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>An optional component or element to place inside the camera's
+perspective shared by the slides.</p>
+<p>This will likely be replaced with a template parameter in a future
+version.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/flow.reel/flow.js, line 70
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="sortPath"><span class="type-signature"></span>sortPath<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>An FRB expression that determines how to sort the content, like &quot;name&quot;
+to sort by name.  If the &lt;code&gt;sortPath&lt;/code&gt; is null, the content
+is not sorted.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/range-controller.js, line 133
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="splice"><span class="type-signature"></span>splice<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Proxies splicing values into the underlying collection.  Accounts for
+&lt;code&gt;selectAddedContent&lt;/code&gt;</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/range-controller.js, line 379
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="start"><span class="type-signature"></span>start<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The first index of a sliding window over the content, suitable for
+binding (indirectly) to the scroll offset of a large list.
+If &lt;code&gt;start&lt;/code&gt; or &lt;code&gt;length&lt;/code&gt; is null, all content is
+accepted.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/range-controller.js, line 160
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="startScrollingIndexToOffset"><span class="type-signature"></span>startScrollingIndexToOffset<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Starts an scrolling animation from the given slide index to the
+given offset position.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/flow.reel/flow.js, line 638
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="startStrideTime"><span class="type-signature"></span>startStrideTime<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/flow.reel/flow-translate-composer.js, line 1283
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="step"><span class="type-signature"></span>step<span class="type-signature"> :number</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The amount the value changes when using the plus/minus buttons. Can be any positive number.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy"><li>1</li></ul></dd>
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/base/abstract-number-field.js, line 248
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="stopScrolling"><span class="type-signature"></span>stopScrolling<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Stops scrolling animation.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/flow.reel/flow.js, line 623
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="stride"><span class="type-signature"></span>stride<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The interval between snap points along the paths, to which slides
+wil gravitate.  The default value of &quot;0&quot; disables this feature.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/flow.reel/flow.js, line 413
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="swap"><span class="type-signature"></span>swap<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Proxies swapping values in the underlying collection.  Accounts for
+&lt;code&gt;selectAddedContent&lt;/code&gt;</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/range-controller.js, line 393
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="Target"><span class="type-signature"></span>Target<span class="type-signature"> :<a href="global.html#Target">Target</a></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>A Target is any object that can be a candidate for dispatching and receiving events
+throughout what is typically considered the &quot;component tree&quot; of a Montage application.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/target.js, line 11
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="translateStride"><span class="type-signature"></span>translateStride<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/flow.reel/flow-translate-composer.js, line 1269
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="unshift"><span class="type-signature"></span>unshift<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Proxies unshifting content to the underlying collection, accounting for
+&lt;code&gt;selectAddedContent&lt;/code&gt;.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/range-controller.js, line 365
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="value"><span class="type-signature"></span>value<span class="type-signature"> :number</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The value of the InputNumber</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy"><li>0</li></ul></dd>
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/base/abstract-number-field.js, line 274
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="visibleIndexes"><span class="type-signature"></span>visibleIndexes<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>An array of indexes to pluck from the ordered and filtered content.  The
+output will be an array of the corresponding content.  If the
+&lt;code&gt;visibleIndexes&lt;/code&gt; is null, all content is accepted.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/range-controller.js, line 152
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="willBecomeActiveTarget"><span class="type-signature"></span>willBecomeActiveTarget<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Called prior to this target becoming the activeTarget</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/target.js, line 45
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="willSurrenderActiveTarget"><span class="type-signature"></span>willSurrenderActiveTarget<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Called prior to this target surrendering the activeTarget</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/target.js, line 60
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
 </dd>
 
 
         </dl>
+    
 
-
-
+    
         <h3 class="subsection-title">Methods</h3>
 
         <dl>
-
+            
 <dt>
-    <h4 class="name" id="relative"><span class="type-signature"></span>relative<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="callDelegateMethod"><span class="type-signature"></span>callDelegateMethod<span class="signature">(name)</span><span class="type-signature"></span></h4>
 
-
+    
 </dt>
 <dd>
 
+    
+    <div class="description markdown-body">
+        <p>/*
+    This method calls the method named with the identifier prefix if it exists.
+    Example: If the name parameter is &quot;shouldDoSomething&quot; and the caller's identifier is &quot;bob&quot;, then
+    this method will try and call &quot;bobShouldDoSomething&quot;</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
 
 
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last"></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
 
-
-
-
-
-
-
+    
 <dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/core.js, line 918
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="getExternalObjectsString"><span class="type-signature"></span>getExternalObjectsString<span class="signature">(doc)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Searches for an external objects file in a document and returns its
+contents if found.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>doc</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last"><p>The document to search.</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/template.js, line 662
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>A promise to the contents of the objects file or null
+                   if none found.</p>
+</div>
 
 
 
+<dl>
+	<dt class="return-type-label">
+		Type
+	</dt>
+	<dd class="return-type">
+		
+<span class="param-type">Promise</span>
+
+
+	</dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="getInlineObjectsString"><span class="type-signature"></span>getInlineObjectsString<span class="signature">(doc)</span><span class="type-signature"> &rarr; {String|null}</span></h4>
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Searches for an inline objects string in a document and returns it if
+found.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>doc</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">HTMLDocument</span>
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last"><p>The document with the objects string.</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/template.js, line 640
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>The objects string or null if not found.</p>
+</div>
 
 
 
+<dl>
+	<dt class="return-type-label">
+		Type
+	</dt>
+	<dd class="return-type">
+		
+<span class="param-type">String</span>
+|
+
+<span class="param-type">null</span>
+
+
+	</dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="getObjectsString"><span class="type-signature"></span>getObjectsString<span class="signature">(doc)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Searches for objects in the document.
+The objects string can live as an inline script in the document or as an
+external resource that needs to be loaded.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>doc</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">HTMLDocument</span>
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last"><p>The document with the objects string.</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/template.js, line 619
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>A promise for the objects string, null if not
+                   found.</p>
+</div>
 
 
 
+<dl>
+	<dt class="return-type-label">
+		Type
+	</dt>
+	<dd class="return-type">
+		
+<span class="param-type">Promise</span>
+
+
+	</dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="initWithDocument"><span class="type-signature"></span>initWithDocument<span class="signature">(_document, _require)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Initializes the Template with a document.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>_document</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">HTMLDocument</span>
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last"><p>The document to be used as a template.</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>_require</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">require</span>
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last"><p>The require function used to load modules when
+                          a template is instantiated.</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/template.js, line 119
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>A promise for the proper initialization of the
+                   template.</p>
+</div>
 
 
 
+<dl>
+	<dt class="return-type-label">
+		Type
+	</dt>
+	<dd class="return-type">
+		
+<span class="param-type">Promise</span>
+
+
+	</dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="initWithHtml"><span class="type-signature"></span>initWithHtml<span class="signature">(html, _require)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Initializes the Template with an HTML string.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>html</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">HTMLDocument</span>
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last"><p>The HTML string to be used as a template.</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>_require</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">require</span>
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last"><p>The require function used to load modules when
+                          a template is instantiated.</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/template.js, line 144
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>A promise for the proper initialization of the
+                   template.</p>
+</div>
 
 
 
+<dl>
+	<dt class="return-type-label">
+		Type
+	</dt>
+	<dd class="return-type">
+		
+<span class="param-type">Promise</span>
+
+
+	</dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="initWithModuleId"><span class="type-signature"></span>initWithModuleId<span class="signature">(moduleId, _require)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Initializes the Template with the HTML document at the module id.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>moduleId</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last"><p>The module id of the HTML page to load.</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>_require</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">require</span>
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last"><p>The require function used to load modules when
+                          a template is instantiated.</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/template.js, line 197
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>A promise for the proper initialization of the
+                   template.</p>
+</div>
 
 
 
+<dl>
+	<dt class="return-type-label">
+		Type
+	</dt>
+	<dd class="return-type">
+		
+<span class="param-type">Promise</span>
 
+
+	</dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="initWithObjectsAndDocumentFragment"><span class="type-signature"></span>initWithObjectsAndDocumentFragment<span class="signature">(objects, html, _require)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Initializes the Template with Objects and a DocumentFragment to be
+used as the body of the document.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>objects</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last"><p>A JSON'able representation of the objects of the
+                        template.</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>html</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">DocumentFragment</span>
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last"><p>The HTML string to be used as the body.</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>_require</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">require</span>
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last"><p>The require function used to load modules when
+                          a template is instantiated.</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/template.js, line 172
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>A promise for the proper initialization of the
+                   template.</p>
+</div>
+
+
+
+<dl>
+	<dt class="return-type-label">
+		Type
+	</dt>
+	<dd class="return-type">
+		
+<span class="param-type">Promise</span>
+
+
+	</dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="initWithRequire"><span class="type-signature"></span>initWithRequire<span class="signature">(_require)</span><span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Initializes the Template with an empty document.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>_require</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">require</span>
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last"><p>The require function used to load modules when
+                          a template is instantiated.</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/template.js, line 99
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="relative"><span class="type-signature"></span>relative<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
         core/url.js, line 338
     </li></ul></dd>
-
-
-
-
-
-
-
+    
+    
+    
+    
+    
+    
+    
 </dl>
 
 
+    
 
+    
 
-
-
-
+    
     <h5>Returns:</h5>
-
-
+    
+            
 <div class="param-desc">
     <p>a relative URL to a target from a source.</p>
-
 </div>
 
 
 
 
+        
 
-
-
+    
 </dd>
 
-
-
+        
+            
 <dt>
     <h4 class="name" id="resolve"><span class="type-signature"></span>resolve<span class="signature">()</span><span class="type-signature"></span></h4>
 
-
+    
 </dt>
 <dd>
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
+    
 <dl class="details">
+    
+        
+    
+    
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
         core/url.js, line 331
     </li></ul></dd>
-
-
-
-
-
-
-
+    
+    
+    
+    
+    
+    
+    
 </dl>
 
 
+    
 
+    
 
-
-
-
+    
     <h5>Returns:</h5>
-
-
+    
+            
 <div class="param-desc">
     <p>a URL resovled to a relative URL from a source URL.</p>
-
 </div>
 
 
 
 
+        
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="setDocument"><span class="type-signature"></span>setDocument<span class="signature">(doc)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Uses the document markup as the base of the template markup.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>doc</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">HTMLDocument</span>
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last"><p>The document.</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/template.js, line 601
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>A promise for the proper initialization of the
+                   document.</p>
+</div>
 
 
 
+<dl>
+	<dt class="return-type-label">
+		Type
+	</dt>
+	<dd class="return-type">
+		
+<span class="param-type">Promise</span>
+
+
+	</dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="setInstances"><span class="type-signature"></span>setInstances<span class="signature">(instances)</span><span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Sets the instances to use when instantiating the objects of the template.
+These instances will always be used when instantiating the template
+unless a different set of instances is passed in
+instantiateWithInstances().</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>instances</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last"><p>The objects' instances.</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        core/template.js, line 514
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
 </dd>
 
         </dl>
+    
+
+    
+
+    
+        <h3 class="subsection-title">Events</h3>
+
+        <dl>
+            
+<dt>
+    <h4 class="name" id="event:longpress">longpress</h4>
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Specifies whether the button should receive focus or not.</p>
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">boolean</span>
 
 
+            </li>
+        </ul>
+    
+
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy"><li>false</li></ul></dd>
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/base/abstract-button.js, line 70
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
 
 
+    
+</dd>
 
+        </dl>
+    
 </article>
 
 
@@ -392,7 +8680,7 @@
     </section>
 
     <nav class="docs">
-        <h2>Search</h2><input id="index-search" type="search" placeholder="search for"><details open><summary>Types</summary><ul><li><a href="Application.html">Application</a></li><li><a href="ArrayController.html">ArrayController</a></li><li><a href="BindingDescriptor.html">BindingDescriptor</a></li><li><a href="BitField.html">BitField</a></li><li><a href="Button.html">Button</a></li><li><a href="BytesConverter.html">BytesConverter</a></li><li><a href="ChangeEventDispatchingArray.html">ChangeEventDispatchingArray</a></li><li><a href="CheckInput.html">CheckInput</a></li><li><a href="Component.html">Component</a></li><li><a href="Composer.html">Composer</a></li><li><a href="Condition.html">Condition</a></li><li><a href="Converter.html">Converter</a></li><li><a href="CurrencyConverter.html">CurrencyConverter</a></li><li><a href="DateConverter.html">DateConverter</a></li><li><a href="DateValidator.html">DateValidator</a></li><li><a href="DefaultLocalizer.html">DefaultLocalizer</a></li><li><a href="Deserializer.html">Deserializer</a></li><li><a href="DynamicElement.html">DynamicElement</a></li><li><a href="DynamicText.html">DynamicText</a></li><li><a href="EditableText.html">EditableText</a></li><li><a href="Enum.html">Enum</a></li><li><a href="EventManager.html">EventManager</a></li><li><a href="Exception.html">Exception</a></li><li><a href="Gate.html">Gate</a></li><li><a href="InputText.html">InputText</a></li><li><a href="InvertConverter.html">InvertConverter</a></li><li><a href="KeyComposer.html">KeyComposer</a></li><li><a href="KeyManager.html">KeyManager</a></li><li><a href="Localizer.html">Localizer</a></li><li><a href="Logger.html">Logger</a></li><li><a href="LowerCaseConverter.html">LowerCaseConverter</a></li><li><a href="MediaController.html">MediaController</a></li><li><a href="MessageFormat.html">MessageFormat</a></li><li><a href="MessageLocalizer.html">MessageLocalizer</a></li><li><a href="Montage.html">Montage</a></li><li><a href="MontageWindow.html">MontageWindow</a></li><li><a href="MutableEvent.html">MutableEvent</a></li><li><a href="NativeControl.html">NativeControl</a></li><li><a href="NewLineToBrConverter.html">NewLineToBrConverter</a></li><li><a href="NumberConverter.html">NumberConverter</a></li><li><a href="NumberValidator.html">NumberValidator</a></li><li><a href="ObjectController.html">ObjectController</a></li><li><a href="PressComposer.html">PressComposer</a></li><li><a href="PropertyChangeBindingListener.html">PropertyChangeBindingListener</a></li><li><a href="Repetition.html">Repetition</a></li><li><a href="RootComponent.html">RootComponent</a></li><li><a href="Serializer_.html">Serializer</a></li><li><a href="Slot.html">Slot</a></li><li><a href="State.html">State</a></li><li><a href="StateChart.html">StateChart</a></li><li><a href="Substitution.html">Substitution</a></li><li><a href="SwipeComposer.html">SwipeComposer</a></li><li><a href="Template_.html">Template</a></li><li><a href="TranslateComposer.html">TranslateComposer</a></li><li><a href="TrimConverter.html">TrimConverter</a></li><li><a href="UndoManager.html">UndoManager</a></li><li><a href="UpperCaseConverter.html">UpperCaseConverter</a></li><li><a href="Uuid_.html">Uuid</a></li><li><a href="Validator.html">Validator</a></li></ul></details><details><summary>Externals</summary><ul><li><a href="external-Array.html">Array</a></li><li><a href="external-Element.html">Element</a></li><li><a href="external-Function.html">Function</a></li><li><a href="external-Object.html">Object</a></li><li><a href="external-RegExp.html">RegExp</a></li><li><a href="external-String.html">String</a></li></ul></details><details><summary>Events</summary><ul><li><a href="PressComposer.html#event:longPress">longPress</a></li><li><a href="PressComposer.html#event:press">press</a></li><li><a href="PressComposer.html#event:pressCancel">pressCancel</a></li><li><a href="PressComposer.html#event:pressStart">pressStart</a></li></ul></details><details><summary>Tutorials</summary><ul><li><a href="tutorial-README.html">README</a></li></ul></details><details><summary>Global</summary><ul><li><a href="global.html#_bezierTubeBoundingSphere">_bezierTubeBoundingSphere</a></li><li><a href="global.html#_computeRotationValuesToXAxis">_computeRotationValuesToXAxis</a></li><li><a href="global.html#_rayRectangleIntersection">_rayRectangleIntersection</a></li><li><a href="global.html#_rayRectangleIntersectionPosition">_rayRectangleIntersectionPosition</a></li><li><a href="global.html#_sphereIntersection">_sphereIntersection</a></li><li><a href="global.html#linearScrollingVector">linearScrollingVector</a></li><li><a href="global.html#relative">relative</a></li><li><a href="global.html#resolve">resolve</a></li><li><a href="global.html#test">test</a></li></ul></details>
+        <h2>Search</h2><input id="index-search" type="search" placeholder="search for"><details open><summary>Types</summary><ul><li><a href="AbstractButton.html">AbstractButton</a></li><li><a href="AbstractCheckbox.html">AbstractCheckbox</a></li><li><a href="AbstractControl.html">AbstractControl</a></li><li><a href="AbstractImage.html">AbstractImage</a></li><li><a href="AbstractLink.html">AbstractLink</a></li><li><a href="AbstractNumberField.html">AbstractNumberField</a></li><li><a href="AbstractRadioButton.html">AbstractRadioButton</a></li><li><a href="AbstractSelect.html">AbstractSelect</a></li><li><a href="AbstractSlider.html">AbstractSlider</a></li><li><a href="AbstractTextArea.html">AbstractTextArea</a></li><li><a href="AbstractTextField.html">AbstractTextField</a></li><li><a href="AbstractToggleButton.html">AbstractToggleButton</a></li><li><a href="ActionEventListener.html">ActionEventListener</a></li><li><a href="Application.html">Application</a></li><li><a href="AssociationBlueprint.html">AssociationBlueprint</a></li><li><a href="Binder.html">Binder</a></li><li><a href="BinderManager.html">BinderManager</a></li><li><a href="BitField.html">BitField</a></li><li><a href="Blueprint.html">Blueprint</a></li><li><a href="BytesConverter.html">BytesConverter</a></li><li><a href="Component.html">Component</a></li><li><a href="Composer.html">Composer</a></li><li><a href="Condition.html">Condition</a></li><li><a href="Converter.html">Converter</a></li><li><a href="CubicBezier.html">CubicBezier</a></li><li><a href="CurrencyConverter.html">CurrencyConverter</a></li><li><a href="DateConverter.html">DateConverter</a></li><li><a href="DateValidator.html">DateValidator</a></li><li><a href="DefaultLocalizer.html">DefaultLocalizer</a></li><li><a href="DerivedPropertyBlueprint.html">DerivedPropertyBlueprint</a></li><li><a href="Enum.html">Enum</a></li><li><a href="EventBlueprint.html">EventBlueprint</a></li><li><a href="EventManager.html">EventManager</a></li><li><a href="Exception.html">Exception</a></li><li><a href="Gate.html">Gate</a></li><li><a href="InvertConverter.html">InvertConverter</a></li><li><a href="KeyComposer.html">KeyComposer</a></li><li><a href="KeyManager.html">KeyManager</a></li><li><a href="Loader.html">Loader</a></li><li><a href="Localizer.html">Localizer</a></li><li><a href="Logger.html">Logger</a></li><li><a href="LowerCaseConverter.html">LowerCaseConverter</a></li><li><a href="MediaController.html">MediaController</a></li><li><a href="MessageFormat.html">MessageFormat</a></li><li><a href="MessageLocalizer.html">MessageLocalizer</a></li><li><a href="module-Overlay.html">module:Overlay</a></li><li><a href="global.html#Montage">Montage</a></li><li><a href="MontageWindow.html">MontageWindow</a></li><li><a href="MutableEvent.html">MutableEvent</a></li><li><a href="NewLineToBrConverter.html">NewLineToBrConverter</a></li><li><a href="NumberConverter.html">NumberConverter</a></li><li><a href="NumberValidator.html">NumberValidator</a></li><li><a href="ObjectController.html">ObjectController</a></li><li><a href="ObjectProperty.html">ObjectProperty</a></li><li><a href="Point_.html">Point</a></li><li><a href="PressComposer.html">PressComposer</a></li><li><a href="PropertyBlueprint.html">PropertyBlueprint</a></li><li><a href="PropertyValidationRule.html">PropertyValidationRule</a></li><li><a href="PropertyValidationSemantics.html">PropertyValidationSemantics</a></li><li><a href="Repetition.html">Repetition</a></li><li><a href="RootComponent.html">RootComponent</a></li><li><a href="Slot.html">Slot</a></li><li><a href="State.html">State</a></li><li><a href="StateChart.html">StateChart</a></li><li><a href="Substitution.html">Substitution</a></li><li><a href="SwipeComposer.html">SwipeComposer</a></li><li><a href="Text.html">Text</a></li><li><a href="TranslateComposer.html">TranslateComposer</a></li><li><a href="TrimConverter.html">TrimConverter</a></li><li><a href="UndoManager.html">UndoManager</a></li><li><a href="UpperCaseConverter.html">UpperCaseConverter</a></li><li><a href="Uuid_.html">Uuid</a></li><li><a href="Validator.html">Validator</a></li></ul></details><details><summary>Externals</summary><ul><li><a href="external-Array.html">Array</a></li><li><a href="external-Function.html">Function</a></li><li><a href="external-Object.html">Object</a></li><li><a href="external-RegExp.html">RegExp</a></li><li><a href="external-String.html">String</a></li></ul></details><details><summary>Events</summary><ul><li><a href="AbstractButton.html#event:action">action</a></li><li><a href="AbstractButton.html#event:longAction">longAction</a></li><li><a href="AbstractCheckbox.html#event:action">action</a></li><li><a href="AbstractLink.html#event:action">action</a></li><li><a href="AbstractRadioButton.html#event:action">action</a></li><li><a href="AbstractSelect.html#event:action">action</a></li><li><a href="AbstractTextField.html#event:action">action</a></li><li><a href="AbstractToggleButton.html#event:action">action</a></li><li><a href="AbstractToggleButton.html#event:longAction">longAction</a></li><li><a href="global.html#event:longpress">longpress</a></li><li><a href="Overlay.html#event:dismiss">dismiss</a></li><li><a href="PressComposer.html#event:longPress">longPress</a></li><li><a href="PressComposer.html#event:press">press</a></li><li><a href="PressComposer.html#event:pressCancel">pressCancel</a></li><li><a href="PressComposer.html#event:pressStart">pressStart</a></li><li><a href="UndoManager.html#event:operationRegistered">operationRegistered</a></li><li><a href="UndoManager.html#event:redo">redo</a></li><li><a href="UndoManager.html#event:undo">undo</a></li></ul></details><details><summary>Tutorials</summary><ul><li><a href="tutorial-README.html">README</a></li></ul></details><details><summary>Global</summary><ul><li><a href="global.html#_analyzeMovement">_analyzeMovement</a></li><li><a href="global.html#_animationInterval">_animationInterval</a></li><li><a href="global.html#_bezierTubeBoundingSphere">_bezierTubeBoundingSphere</a></li><li><a href="global.html#_bezierValue">_bezierValue</a></li><li><a href="global.html#_boundingBoxSize">_boundingBoxSize</a></li><li><a href="global.html#_cameraElement">_cameraElement</a></li><li><a href="global.html#_closerIndex">_closerIndex</a></li><li><a href="global.html#_computeCssCubicBezierValue">_computeCssCubicBezierValue</a></li><li><a href="global.html#_computeFrustumNormals">_computeFrustumNormals</a></li><li><a href="global.html#_computePointedElement">_computePointedElement</a></li><li><a href="global.html#_computeRotationValuesToXAxis">_computeRotationValuesToXAxis</a></li><li><a href="global.html#_computeVisibleRange">_computeVisibleRange</a></li><li><a href="global.html#_contentOffsetX">_contentOffsetX</a></li><li><a href="global.html#_contentOffsetY">_contentOffsetY</a></li><li><a href="global.html#_createTemplateObjects">_createTemplateObjects</a></li><li><a href="global.html#_currentX">_currentX</a></li><li><a href="global.html#_currentY">_currentY</a></li><li><a href="global.html#_dispatchTranslate">_dispatchTranslate</a></li><li><a href="global.html#_dispatchTranslateEnd">_dispatchTranslateEnd</a></li><li><a href="global.html#_dispatchTranslateStart">_dispatchTranslateStart</a></li><li><a href="global.html#_draggedSlideIndex">_draggedSlideIndex</a></li><li><a href="global.html#_elasticScrollingRange">_elasticScrollingRange</a></li><li><a href="global.html#_elasticScrollingSpeed">_elasticScrollingSpeed</a></li><li><a href="global.html#_elementsBoundingSphereRadius">_elementsBoundingSphereRadius</a></li><li><a href="global.html#_end">_end</a></li><li><a href="global.html#_flow">_flow</a></li><li><a href="global.html#_flowTranslateComposer">_flowTranslateComposer</a></li><li><a href="global.html#_getSlideOffset">_getSlideOffset</a></li><li><a href="global.html#_handleSelectedIndexesChange">_handleSelectedIndexesChange</a></li><li><a href="global.html#_hasMomentum">_hasMomentum</a></li><li><a href="global.html#_height">_height</a></li><li><a href="global.html#_incrementSlideOffset">_incrementSlideOffset</a></li><li><a href="global.html#_infinite">_infinite</a></li><li><a href="global.html#_isCameraUpdated">_isCameraUpdated</a></li><li><a href="global.html#_isTransitioningScroll">_isTransitioningScroll</a></li><li><a href="global.html#_lineVectorX">_lineVectorX</a></li><li><a href="global.html#_lineVectorY">_lineVectorY</a></li><li><a href="global.html#_maxSlideOffsetIndex">_maxSlideOffsetIndex</a></li><li><a href="global.html#_minSlideOffsetIndex">_minSlideOffsetIndex</a></li><li><a href="global.html#_move">_move</a></li><li><a href="global.html#_numberOfIterations">_numberOfIterations</a></li><li><a href="global.html#_optimizeObjectsInstantiation">_optimizeObjectsInstantiation</a></li><li><a href="global.html#_pageX">_pageX</a></li><li><a href="global.html#_pageY">_pageY</a></li><li><a href="global.html#_pointerIntersectionPosition">_pointerIntersectionPosition</a></li><li><a href="global.html#_pointerStartX">_pointerStartX</a></li><li><a href="global.html#_pointerStartY">_pointerStartY</a></li><li><a href="global.html#_previousScrollDelta">_previousScrollDelta</a></li><li><a href="global.html#_raycastBezierTubes">_raycastBezierTubes</a></li><li><a href="global.html#_rayRectangleIntersection">_rayRectangleIntersection</a></li><li><a href="global.html#_rayRectangleIntersectionPosition">_rayRectangleIntersectionPosition</a></li><li><a href="global.html#_removeObjects">_removeObjects</a></li><li><a href="global.html#_removeSlideOffset">_removeSlideOffset</a></li><li><a href="global.html#_repetition">_repetition</a></li><li><a href="global.html#_resolveElementIdCollisions">_resolveElementIdCollisions</a></li><li><a href="global.html#_rotateXYZ">_rotateXYZ</a></li><li><a href="global.html#_scroll">_scroll</a></li><li><a href="global.html#_scrollEnd">_scrollEnd</a></li><li><a href="global.html#_scrollingTransitionDuration">_scrollingTransitionDuration</a></li><li><a href="global.html#_scrollingTransitionDurationMiliseconds">_scrollingTransitionDurationMiliseconds</a></li><li><a href="global.html#_scrollingTransitionTimingFunction">_scrollingTransitionTimingFunction</a></li><li><a href="global.html#_scrollingTransitionTimingFunctionBezier">_scrollingTransitionTimingFunctionBezier</a></li><li><a href="global.html#_scrollStart">_scrollStart</a></li><li><a href="global.html#_segmentsIntersection">_segmentsIntersection</a></li><li><a href="global.html#_slideOffsets">_slideOffsets</a></li><li><a href="global.html#_slideOffsetsLength">_slideOffsetsLength</a></li><li><a href="global.html#_sphereIntersection">_sphereIntersection</a></li><li><a href="global.html#_start">_start</a></li><li><a href="global.html#_startPageX">_startPageX</a></li><li><a href="global.html#_startPageY">_startPageY</a></li><li><a href="global.html#_startScroll">_startScroll</a></li><li><a href="global.html#_startX">_startX</a></li><li><a href="global.html#_startY">_startY</a></li><li><a href="global.html#_timingFunctions">_timingFunctions</a></li><li><a href="global.html#_translateStride">_translateStride</a></li><li><a href="global.html#_updateDragScroll">_updateDragScroll</a></li><li><a href="global.html#_updateLength">_updateLength</a></li><li><a href="global.html#_updateLinearScroll">_updateLinearScroll</a></li><li><a href="global.html#_updateScroll">_updateScroll</a></li><li><a href="global.html#_updateSlideOffset">_updateSlideOffset</a></li><li><a href="global.html#_updateVisibleIndexes">_updateVisibleIndexes</a></li><li><a href="global.html#_walkObject">_walkObject</a></li><li><a href="global.html#_walksBindingReferences">_walksBindingReferences</a></li><li><a href="global.html#_width">_width</a></li><li><a href="global.html#acceptsActiveTarget">acceptsActiveTarget</a></li><li><a href="global.html#active">active</a></li><li><a href="global.html#activeIndexes">activeIndexes</a></li><li><a href="global.html#add">add</a></li><li><a href="global.html#addContent">addContent</a></li><li><a href="global.html#addEach">addEach</a></li><li><a href="global.html#addEventListener">addEventListener</a></li><li><a href="global.html#avoidsEmptySelection">avoidsEmptySelection</a></li><li><a href="global.html#boundingBoxSize">boundingBoxSize</a></li><li><a href="global.html#cachedFirstElement">cachedFirstElement</a></li><li><a href="global.html#callDelegateMethod">callDelegateMethod</a></li><li><a href="global.html#cameraFov">cameraFov</a></li><li><a href="global.html#cameraPosition">cameraPosition</a></li><li><a href="global.html#cameraRoll">cameraRoll</a></li><li><a href="global.html#cameraTargetPoint">cameraTargetPoint</a></li><li><a href="global.html#checked">checked</a></li><li><a href="global.html#clear">clear</a></li><li><a href="global.html#clearSelectionOnOrderChange">clearSelectionOnOrderChange</a></li><li><a href="global.html#constructor">constructor</a></li><li><a href="global.html#contentConstructor">contentConstructor</a></li><li><a href="global.html#contentController">contentController</a></li><li><a href="global.html#controller">controller</a></li><li><a href="global.html#convertCssPixelsPropertyStringToNumber">convertCssPixelsPropertyStringToNumber</a></li><li><a href="global.html#delete">delete</a></li><li><a href="global.html#deleteEach">deleteEach</a></li><li><a href="global.html#deselectInvisibleContent">deselectInvisibleContent</a></li><li><a href="global.html#didBecomeActiveTarget">didBecomeActiveTarget</a></li><li><a href="global.html#dispatchEvent">dispatchEvent</a></li><li><a href="global.html#dispatchEventNamed">dispatchEventNamed</a></li><li><a href="global.html#draggedSlideIndex">draggedSlideIndex</a></li><li><a href="global.html#ElementReference">ElementReference</a></li><li><a href="global.html#elementsBoundingSphereRadius">elementsBoundingSphereRadius</a></li><li><a href="global.html#enabled">enabled</a></li><li><a href="global.html#expandParameters">expandParameters</a></li><li><a href="global.html#extractSerialization">extractSerialization</a></li><li><a href="global.html#filterPath">filterPath</a></li><li><a href="global.html#firstElement">firstElement</a></li><li><a href="global.html#flow">flow</a></li><li><a href="global.html#FlowTranslateComposer">FlowTranslateComposer</a></li><li><a href="global.html#frame">frame</a></li><li><a href="global.html#getExternalObjectsString">getExternalObjectsString</a></li><li><a href="global.html#getInlineObjectsString">getInlineObjectsString</a></li><li><a href="global.html#getObjectsString">getObjectsString</a></li><li><a href="global.html#handleMinusAction">handleMinusAction</a></li><li><a href="global.html#handleMousewheel">handleMousewheel</a></li><li><a href="global.html#handlePlusAction">handlePlusAction</a></li><li><a href="global.html#handlePress">handlePress</a></li><li><a href="global.html#hasElasticScrolling">hasElasticScrolling</a></li><li><a href="global.html#hasSelectedIndexScrolling">hasSelectedIndexScrolling</a></li><li><a href="global.html#index">index</a></li><li><a href="global.html#init">init</a></li><li><a href="global.html#initWithContent">initWithContent</a></li><li><a href="global.html#initWithDocument">initWithDocument</a></li><li><a href="global.html#initWithHtml">initWithHtml</a></li><li><a href="global.html#initWithModuleId">initWithModuleId</a></li><li><a href="global.html#initWithObjectsAndDocumentFragment">initWithObjectsAndDocumentFragment</a></li><li><a href="global.html#initWithRepetition">initWithRepetition</a></li><li><a href="global.html#initWithRequire">initWithRequire</a></li><li><a href="global.html#injectIntoDocument">injectIntoDocument</a></li><li><a href="global.html#instantiateWithInstances">instantiateWithInstances</a></li><li><a href="global.html#isActiveTarget">isActiveTarget</a></li><li><a href="global.html#isEven">isEven</a></li><li><a href="global.html#isFirst">isFirst</a></li><li><a href="global.html#isInputEnabled">isInputEnabled</a></li><li><a href="global.html#isLast">isLast</a></li><li><a href="global.html#isOdd">isOdd</a></li><li><a href="global.html#isSelectionEnabled">isSelectionEnabled</a></li><li><a href="global.html#Iteration">Iteration</a></li><li><a href="global.html#iterations">iterations</a></li><li><a href="global.html#lastDrawTime">lastDrawTime</a></li><li><a href="global.html#length">length</a></li><li><a href="global.html#linearScrollingVector">linearScrollingVector</a></li><li><a href="global.html#max">max</a></li><li><a href="global.html#maxScroll">maxScroll</a></li><li><a href="global.html#mergeSerializations">mergeSerializations</a></li><li><a href="global.html#min">min</a></li><li><a href="global.html#minScroll">minScroll</a></li><li><a href="global.html#momentumDuration">momentumDuration</a></li><li><a href="global.html#MontageBuilder">MontageBuilder</a></li><li><a href="global.html#multiSelect">multiSelect</a></li><li><a href="global.html#nextTarget">nextTarget</a></li><li><a href="global.html#object">object</a></li><li><a href="global.html#offset">offset</a></li><li><a href="global.html#organizedContent">organizedContent</a></li><li><a href="global.html#paths">paths</a></li><li><a href="global.html#pop">pop</a></li><li><a href="global.html#push">push</a></li><li><a href="global.html#RangeController">RangeController</a></li><li><a href="global.html#recycle">recycle</a></li><li><a href="global.html#relative">relative</a></li><li><a href="global.html#removeEventListener">removeEventListener</a></li><li><a href="global.html#repetition">repetition</a></li><li><a href="global.html#resolve">resolve</a></li><li><a href="global.html#retractFromDocument">retractFromDocument</a></li><li><a href="global.html#reversed">reversed</a></li><li><a href="global.html#scroll">scroll</a></li><li><a href="global.html#scrollingMode">scrollingMode</a></li><li><a href="global.html#scrollingTransitionDuration">scrollingTransitionDuration</a></li><li><a href="global.html#scrollingTransitionTimingFunction">scrollingTransitionTimingFunction</a></li><li><a href="global.html#select">select</a></li><li><a href="global.html#selectAddedContent">selectAddedContent</a></li><li><a href="global.html#selected">selected</a></li><li><a href="global.html#selectedIndexes">selectedIndexes</a></li><li><a href="global.html#selectedIndexScrollingOffset">selectedIndexScrollingOffset</a></li><li><a href="global.html#selection">selection</a></li><li><a href="global.html#setDocument">setDocument</a></li><li><a href="global.html#setInstances">setInstances</a></li><li><a href="global.html#setObjectMetadata">setObjectMetadata</a></li><li><a href="global.html#shift">shift</a></li><li><a href="global.html#slotContent">slotContent</a></li><li><a href="global.html#sortPath">sortPath</a></li><li><a href="global.html#splice">splice</a></li><li><a href="global.html#start">start</a></li><li><a href="global.html#startScrollingIndexToOffset">startScrollingIndexToOffset</a></li><li><a href="global.html#startStrideTime">startStrideTime</a></li><li><a href="global.html#step">step</a></li><li><a href="global.html#stopScrolling">stopScrolling</a></li><li><a href="global.html#stride">stride</a></li><li><a href="global.html#swap">swap</a></li><li><a href="global.html#Target">Target</a></li><li><a href="global.html#translateStride">translateStride</a></li><li><a href="global.html#unshift">unshift</a></li><li><a href="global.html#value">value</a></li><li><a href="global.html#visibleIndexes">visibleIndexes</a></li><li><a href="global.html#willBecomeActiveTarget">willBecomeActiveTarget</a></li><li><a href="global.html#willSurrenderActiveTarget">willSurrenderActiveTarget</a></li></ul></details>
     </nav>
 
     <section id="next" class="next">

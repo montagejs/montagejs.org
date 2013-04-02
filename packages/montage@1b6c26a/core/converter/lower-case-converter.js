@@ -1,0 +1,1 @@
+var Montage=require("montage").Montage,Converter=require("core/converter/converter").Converter;exports.LowerCaseConverter=Converter.specialize({_convert:{value:function(e){return e&&"string"==typeof e?e.toLowerCase?e.toLowerCase():e:e}},convert:{value:function(e){return this._convert(e)}},revert:{value:function(e){return this._convert(e)}}});

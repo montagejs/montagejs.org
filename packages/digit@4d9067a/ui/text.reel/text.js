@@ -1,0 +1,1 @@
+var Text=require("montage/ui/text.reel").Text;exports.Text=Text.specialize({hasTemplate:{value:!0},constructor:{value:function Text(){this.super(),this.classList.add("digit-Text")}}});
