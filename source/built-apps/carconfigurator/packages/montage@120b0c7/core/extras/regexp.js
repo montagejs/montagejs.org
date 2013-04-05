@@ -1,0 +1,1 @@
+if(!RegExp.isRegExp){var toString=Object.prototype.toString;Object.defineProperty(RegExp,"isRegExp",{value:function(e){return toString.call(e)==="[object RegExp]"},writable:!0,configurable:!0})}

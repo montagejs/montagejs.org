@@ -1,0 +1,1 @@
+var Dict=require("../dict"),describeDict=require("./dict");describe("Dict",function(){describeDict(Dict),it("should throw errors for non-string keys",function(){var e=Dict();expect(function(){e.get(0)}).toThrow(),expect(function(){e.set(0,10)}).toThrow(),expect(function(){e.has(0)}).toThrow(),expect(function(){e.delete(0)}).toThrow()})})

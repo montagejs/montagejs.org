@@ -25,15 +25,7 @@
                 "properties": {
                     "element": {"#": "features"}
                 }
-            },
-
-            "themes": {
-                "prototype": "ui/themes.reel",
-                "properties": {
-                    "element": {"#": "themes"}
-                }
             }
-
         }
     </script>
 
@@ -46,7 +38,7 @@
     </header>
 
     <nav class="bar links">
-        <a class="link download" href="https://github.com/montagejs/montage/wiki/Quick-Start">Quick Start</a>
+        <a class="link download" href="docs/Quick-Start">Quick Start</a>
         <a class="link fork" href="https://github.com/montagejs/montage">Fork</a>
         <a class="link docs" href="docs/">Docs</a>
     </nav>
@@ -87,21 +79,21 @@
                 </div>
                 <div class="col col-1-2">
                     <h3 class="sub-title">Serialization</h3>
-                    <p>Montage supports serialization of the object graph using pure JSON. It describes the objects, properties, components, data bindings, and DOM relationships that make up a Montage application. Learn more about the <a href="https://github.com/montagejs/montage/wiki/Montage-serialization-format" target="_blank">Montage serialization format</a>.</p>
+                    <p>Montage supports serialization of the object graph using pure JSON. It describes the objects, properties, components, data bindings, and DOM relationships that make up a Montage application. Learn more about the <a href="docs/Montage-serialization-format" target="_blank">Montage serialization format</a>.</p>
                 </div>
                 <div class="col col-1-2">
                     <h3 class="sub-title">Event Management</h3>
-                    <p>The Montage event manager wraps and extends the user-agent’s native event handling. This improves performance, provides simple event handling logic, and adds the ability to observe property changes. Learn more about <a href="https://github.com/montagejs/montage/wiki/Event-handling" target="_blank">event handling</a>.</p>
+                    <p>The Montage event manager wraps and extends the user-agent’s native event handling. This improves performance, provides simple event handling logic, and adds the ability to observe property changes. Learn more about <a href="docs/Event-handling" target="_blank">event handling</a>.</p>
                 </div>
                 <div class="col col-1-2">
                     <h3 class="sub-title">Component draw cycle</h3>
-                    <p>To maximize application performance, Montage uses a deferred drawing model in which DOM updates and queries are batched together, limiting the number of DOM reflows. These features are implemented through a series of component method callbacks that the framework invokes. Learn more about <a href="https://github.com/montagejs/montage/wiki/Component-draw-cycle" target="_blank">component draw cycle</a>.</p>
+                    <p>To maximize application performance, Montage uses a deferred drawing model in which DOM updates and queries are batched together, limiting the number of DOM reflows. These features are implemented through a series of component method callbacks that the framework invokes. Learn more about <a href="docs/Component-draw-cycle" target="_blank">component draw cycle</a>.</p>
                 </div>
 
             </div>
 
             <nav class="more">Learn more:
-                <a class="more-button" href="https://github.com/montagejs/montage/wiki" target="_blank">Docs</a>
+                <a class="more-button" href="docs/" target="_blank">Docs</a>
                 <a class="more-button" href="http://montagejs.org/docs/kitchen-sink" target="_blank">Kitchen Sink</a>
                 <a class="more-button" href="http://montagejs.github.com/montage/samples/mfiddle/" target="_blank">M Fiddle</a>
             </nav>
@@ -110,41 +102,7 @@
         </article>
     </section>
 
-
-    <section id="themes" class="themes" style="min-height:500px;">
-    	<article>
-	        <div class="cols">
-	            <div class="col col-1-3">
-	                <img class="logo" src="images/logo-skeleton.png" alt="Skeleton logo" />
-	            </div>
-	            <div class="col col-2-3">
-	                <h3 class="title">Themes</h3>
-	                <p>Montage comes with the <strong>Skeleton</strong> theme. It's a basic, neutral-looking theme for HTML5 controls and inputs. You can use it as a wireframe theme for prototypes, starting point for creating your own theme, or easily style it with CSS to create custom <strong>skins</strong>. The Skeleton theme aims to provide cross-browser support so you can use it as a fallback theme.</p>
-	                <!--<nav class="more">Learn more: <a class="more-button" href="" target="_blank">Skeleton Overview</a></nav>-->
-	            </div>
-	        </div>
-
-			<div data-montage-id="themes"></div>
-
-		</article>
-    </section>
-
-	<section id="misc" class="misc">
-	    <article>
-	        <div class="cols">
-	            <div class="col col-1-2">
-	                <h3 class="title">Browser Support</h3>
-	                <p>Montage works best in most modern browsers. An exact overview will follow once we finalize each theme.</p>
-	            </div>
-	            <div class="col col-1-2">
-	                <h3 class="title">License</h3>
-	                <p>Montage is <strong>open source</strong> and licensed under <strong>BSD</strong>. For more details see <a href="https://github.com/montagejs/montage/blob/master/LICENSE.md" target="_blank">LICENSE.md</a>.</p>
-	            </div>
-	        </div>
-	    </article>
-	</section>
-
-	<section id="apps" class="apps pushed">
+	<section id="apps" class="gallery apps pushed">
 	    <article>
 	        <h3 class="title">Made with Montage</h3>
 	        <p>A couple examples of Apps built with Montage.<br>
@@ -156,24 +114,24 @@
 	                    <figcaption class="gallery-description">Scratchpad (Chrome)</figcaption>
 	                </a>
 	            </li>
+                <li class="gallery-item">
+   	                <a href="apps/popcorn/" target="_blank">
+   	                    <figure class="gallery-thumb"><img class="gallery-img" src="images/apps/popcorn.jpg" alt="Popcorn" /></figure>
+   	                    <figcaption class="gallery-description">Popcorn (Tablets)</figcaption>
+   	                </a>
+   	            </li>
 	            <li class="gallery-item">
-	                <a href="http://montagejs.github.com/montage/samples/paparazzi/" target="_blank">
-	                    <figure class="gallery-thumb"><img class="gallery-img" src="images/apps/paparazzi.jpg" alt="Paparazzi" /></figure>
-	                    <figcaption class="gallery-description">Paparazzi (Desktop)</figcaption>
-	                </a>
-	            </li>
-	            <li class="gallery-item">
-	                <a href="http://montagejs.github.com/montage/samples/calculator/" target="_blank">
+	                <a href="apps/calculator/" target="_blank">
 	                    <figure class="gallery-thumb"><img class="gallery-img" src="images/apps/calculator.jpg" alt="Calculator" /></figure>
-	                    <figcaption class="gallery-description">Calculator (Phones + Tablets)</figcaption>
+	                    <figcaption class="gallery-description">Calculator</figcaption>
 	                </a>
 	            </li>
-	            <li class="gallery-item">
-	                <a href="apps/popcorn/" target="_blank">
-	                    <figure class="gallery-thumb"><img class="gallery-img" src="images/apps/popcorn.jpg" alt="Popcorn" /></figure>
-	                    <figcaption class="gallery-description">Popcorn (Tablets)</figcaption>
-	                </a>
-	            </li>
+                <li class="gallery-item">
+   	                <a href="apps/carconfigurator/" target="_blank">
+   	                    <figure class="gallery-thumb"><img class="gallery-img" src="images/apps/carconfigurator.jpg" alt="Car Configurator" /></figure>
+   	                    <figcaption class="gallery-description">Car Configurator (WebGL)</figcaption>
+   	                </a>
+   	            </li>
 	        </ul>
 	    </article>
 	</section>
@@ -195,12 +153,27 @@
         </article>
     </section>
 
+    <section id="misc" class="misc">
+        <article>
+            <div class="cols">
+                <div class="col col-1-2">
+                    <h3 class="title">Browser Support</h3>
+                    <p>Montage works best in most modern browsers. An exact overview will follow once we finalize each theme.</p>
+                </div>
+                <div class="col col-1-2">
+                    <h3 class="title">License</h3>
+                    <p>Montage is <strong>open source</strong> and licensed under <strong>BSD</strong>. For more details see <a href="https://github.com/montagejs/montage/blob/master/LICENSE.md" target="_blank">LICENSE.md</a>.</p>
+                </div>
+            </div>
+        </article>
+    </section>
+
     <section id="next" class="next">
         <article>
             <h3 class="title">Next steps</h3>
             <div class="cols">
                 <div class="col col-1-2">
-                    <p><strong>Get started with Montage</strong>: If you're interested, here a more <a href="https://github.com/montagejs/montage#montage" target="_blank">technical introduction</a>. For more infos and resources, head over to the <a href="https://github.com/montagejs/montage/wiki">Montage Docs</a>.
+                    <p>For more information <a href="docs/">explore the Montage documentation</a> or <a href="https://github.com/montagejs/montage#montage" target="_blank">dive into the code itself</a>.
                     </p>
                 </div>
                 <aside class="col col-1-2">

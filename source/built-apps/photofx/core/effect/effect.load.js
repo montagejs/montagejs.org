@@ -1,0 +1,1 @@
+montageDefine("a005228","core/effect/effect",{dependencies:["montage"],factory:function(e,t,n){var r=e("montage").Montage,i=t.Effect=r.create(r,{applyEffect:{enumerable:!1,value:null}})}})
