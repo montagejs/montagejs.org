@@ -41,7 +41,6 @@ Q.ninvoke(npm, "load", config)
         return Q.ninvoke(loadedNpm.commands, "install", [packageName +"@"+ tag]);
     }).then(function () {
         var jsdocGeneration = Q.defer();
-        console.log('executing:',  path.join(mainPath,'node_modules/jsdoc/jsdoc'), "-c", path.join(mainPath,"montage.json"));
 
         var args = ["-c", path.join(mainPath,"montage.json")];
         if (outDir) {
@@ -54,8 +53,8 @@ Q.ninvoke(npm, "load", config)
             {
                 cwd: mainPath
             });
+        console.log('executing:',  path.join(mainPath,'node_modules/jsdoc/jsdoc'), args.join(" "));
         jsdoc.on('close', function (code, signal) {
-            console.log('child process terminated due to receipt of signal '+signal);
             if (signal) {
                 jsdocGeneration.reject(new Error(signal))
             } else {

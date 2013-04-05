@@ -2,11 +2,8 @@
   "name": "montagejs.org-jsdoc",
   "version": "0.0.1",
   "dependencies": {
-    "commander": "~1.1.1",
     "q": "~0.9.2",
-    "q-io": "~1.6.4",
     "npm": "~1.2.16",
-    "jsdom": "~0.5.5"
-  },
-  "preferGlobal": true
+    "jsdoc": "git+https://github.com/montagejs/jsdoc.git#custom"
+  }
 }

@@ -103,7 +103,7 @@ rm "$OUT_DIR/builds/montagejs.org/docs/kitchen-sink/.gitignore"
 #  the js doc template and jsdoc has been installed by npm
 ######################
 
-node build/jsdoc/jsdoc.js -out $OUT_DIR montage@edge
+node build/jsdoc/jsdoc.js -out $OUT_DIR/builds/montagejs.org/apis/ montage@edge
 
 #####################################################################
 # Deploy
