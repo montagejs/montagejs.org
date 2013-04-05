@@ -2,6 +2,7 @@
 
 require 'rubygems'
 require 'gollum'
+require 'gollum-lib'
 require 'mustache'
 
 WIKI_DIR = ENV['WIKI_DIR']
