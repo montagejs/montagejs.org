@@ -1,0 +1,7 @@
+{
+    "name": "card",
+    "version": "1.0.0",
+    "dependencies": {
+        "montage" : "0.12.6"
+    }
+}
