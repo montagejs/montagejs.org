@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -98,26 +98,26 @@
 
 <p>This would result in the following runtime error:
 </p>
-<div class="highlight"><pre><span class="n">Object</span> “<span class="n">Buttonn</span>” <span class="n">not</span> <span class="n">found</span> <span class="n">at</span> “<span class="n">montage</span><span class="o">/</span><span class="n">ui</span><span class="o">/</span><span class="n">button</span><span class="p">.</span><span class="n">reel</span>” <span class="n">referenced</span> <span class="n">from</span>
-<span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">8081</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">buttonerror</span><span class="o">/</span><span class="p">.</span>
+<div class="highlight"><pre><span class="n">Object</span> <span class="err">“</span><span class="n">Buttonn</span><span class="err">”</span> <span class="n">not</span> <span class="n">found</span> <span class="n">at</span> <span class="err">“</span><span class="n">montage</span><span class="o">/</span><span class="n">ui</span><span class="o">/</span><span class="n">button</span><span class="p">.</span><span class="n">reel</span><span class="err">”</span> <span class="n">referenced</span> <span class="n">from</span>
+<span class="nl">http:</span><span class="c1">//localhost:8081/examples/buttonerror/.</span>
 </pre></div>
 
 <p>If you provide an invalid module ID in a serialization, then the console will report a 404 error “Can’t XHR <em>module-id</em>“. For example, consider the following serialization that defines a Textfield component but the module ID is misspelled as “montage/ui/textfld.reel”.
 </p>
 <div class="highlight"><pre><span class="p">{</span>
-"<span class="n">emailInput</span>"<span class="p">:</span> <span class="p">{</span>
-    "<span class="n">name</span>"<span class="p">:</span> "<span class="n">Textfield</span>"<span class="p">,</span>
-    "<span class="n">module</span>"<span class="p">:</span> "<span class="n">montage</span><span class="o">/</span><span class="n">ui</span><span class="o">/</span><span class="n">textfld</span><span class="p">.</span><span class="n">reel</span>"<span class="p">,</span>
-    "<span class="k">properties</span>"<span class="p">:</span> <span class="p">{</span>
-        "<span class="n">element</span>"<span class="p">:</span> <span class="p">{</span>"#"<span class="p">:</span> "<span class="n">email</span>"<span class="p">}</span>
+<span class="s">"emailInput"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s">"name"</span><span class="o">:</span> <span class="s">"Textfield"</span><span class="p">,</span>
+    <span class="s">"module"</span><span class="o">:</span> <span class="s">"montage/ui/textfld.reel"</span><span class="p">,</span>
+    <span class="s">"properties"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s">"element"</span><span class="o">:</span> <span class="p">{</span><span class="s">"#"</span><span class="o">:</span> <span class="s">"email"</span><span class="p">}</span>
     <span class="p">}</span>
 <span class="p">},</span>
 </pre></div>
 
 <p>In Chrome, this results in the following error:
 </p>
-<div class="highlight"><pre><span class="n">GET</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">8081</span><span class="o">/</span><span class="n">ui</span><span class="o">/</span><span class="n">textfeld</span><span class="p">.</span><span class="n">reel</span><span class="o">/</span><span class="n">textfld</span><span class="p">.</span><span class="n">js</span> <span class="mi">404</span> <span class="p">(</span><span class="n">Not</span> <span class="n">Found</span><span class="p">)</span> <span class="n">browser</span><span class="p">.</span><span class="n">js</span><span class="p">:</span><span class="mi">136</span>
-<span class="n">Can</span>’<span class="n">t</span> <span class="n">XHR</span> “<span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">8081</span><span class="o">/</span><span class="n">ui</span><span class="o">/</span><span class="n">textfeld</span><span class="p">.</span><span class="n">reel</span><span class="o">/</span><span class="n">textfeld</span><span class="p">.</span><span class="n">js</span>”
+<div class="highlight"><pre><span class="n">GET</span> <span class="n">http</span><span class="o">:</span><span class="c1">//localhost:8081/ui/textfeld.reel/textfld.js 404 (Not Found) browser.js:136</span>
+<span class="n">Can</span><span class="err">’</span><span class="n">t</span> <span class="n">XHR</span> <span class="err">“</span><span class="n">http</span><span class="o">:</span><span class="c1">//localhost:8081/ui/textfeld.reel/textfeld.js”</span>
 </pre></div>
 
 <h2>JSON formatting errors<a class="anchor" id="JSON-formatting-errors" href="#JSON-formatting-errors"></a>
@@ -132,9 +132,9 @@
 
 <p></p>
 <div class="highlight"><pre><span class="p">{</span>
-   "<span class="n">name</span>"<span class="p">:</span> "<span class="n">Tim</span>"<span class="p">,</span>
-   "<span class="n">name</span>"<span class="p">:</span> "<span class="n">Jen</span>"<span class="p">,</span>
-   "<span class="n">name</span>"<span class="p">:</span> "<span class="n">Frank</span>"<span class="p">,</span>
+   <span class="s">"name"</span><span class="o">:</span> <span class="s">"Tim"</span><span class="p">,</span>
+   <span class="s">"name"</span><span class="o">:</span> <span class="s">"Jen"</span><span class="p">,</span>
+   <span class="s">"name"</span><span class="o">:</span> <span class="s">"Frank"</span><span class="p">,</span>
 <span class="p">}</span>
 </pre></div>
 
@@ -162,23 +162,23 @@
 </pre></div>
 
 <p></p>
-<div class="highlight"><pre><span class="n">Syntax</span> <span class="n">error</span> <span class="n">at</span> <span class="n">line</span> <span class="mi">16</span> <span class="n">from</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">8081</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">errors</span><span class="o">/</span><span class="p">:</span>
+<div class="highlight"><pre><span class="n">Syntax</span> <span class="n">error</span> <span class="n">at</span> <span class="n">line</span> <span class="mi">16</span> <span class="n">from</span> <span class="n">http</span><span class="o">:</span><span class="c1">//localhost:8081/examples/errors/:</span>
     <span class="p">},</span>
 <span class="n">Unexpected</span> <span class="n">comma</span><span class="p">.</span>
     <span class="mi">1</span> 
     <span class="mi">2</span> <span class="p">{</span>
-    <span class="mi">3</span>     "<span class="n">emailInput</span>"<span class="p">:</span> <span class="p">{</span>
-    <span class="mi">4</span>         "<span class="n">name</span>"<span class="p">:</span> "<span class="n">Textfield</span>"<span class="p">,</span>
-    <span class="mi">5</span>         "<span class="n">module</span>"<span class="p">:</span> "<span class="n">montage</span><span class="o">/</span><span class="n">ui</span><span class="o">/</span><span class="n">textfield</span><span class="p">.</span><span class="n">reel</span>"<span class="p">,</span>
-    <span class="mi">6</span>         "<span class="k">properties</span>"<span class="p">:</span> <span class="p">{</span>
-    <span class="mi">7</span>             "<span class="n">element</span>"<span class="p">:</span> <span class="p">{</span>"#"<span class="p">:</span> "<span class="n">email</span>"<span class="p">}</span>
+    <span class="mi">3</span>     <span class="s">"emailInput"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="mi">4</span>         <span class="s">"name"</span><span class="o">:</span> <span class="s">"Textfield"</span><span class="p">,</span>
+    <span class="mi">5</span>         <span class="s">"module"</span><span class="o">:</span> <span class="s">"montage/ui/textfield.reel"</span><span class="p">,</span>
+    <span class="mi">6</span>         <span class="s">"properties"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="mi">7</span>             <span class="s">"element"</span><span class="o">:</span> <span class="p">{</span><span class="s">"#"</span><span class="o">:</span> <span class="s">"email"</span><span class="p">}</span>
     <span class="mi">8</span>         <span class="p">}</span>
     <span class="mi">9</span>     <span class="p">},</span>
-   <span class="mi">10</span>     "<span class="n">passwordInput</span>"<span class="p">:</span> <span class="p">{</span>
-   <span class="mi">11</span>         "<span class="n">name</span>"<span class="p">:</span> "<span class="n">Textfield</span>"<span class="p">,</span>
-   <span class="mi">12</span>         "<span class="n">module</span>"<span class="p">:</span> "<span class="n">montage</span><span class="o">/</span><span class="n">ui</span><span class="o">/</span><span class="n">textfield</span><span class="p">.</span><span class="n">reel</span>"<span class="p">,</span>
-   <span class="mi">13</span>         "<span class="k">properties</span>"<span class="p">:</span> <span class="p">{</span>
-   <span class="mi">14</span>             "<span class="n">element</span>"<span class="p">:</span> <span class="p">{</span>"#"<span class="p">:</span> "<span class="n">password</span>"<span class="p">}</span>
+   <span class="mi">10</span>     <span class="s">"passwordInput"</span><span class="o">:</span> <span class="p">{</span>
+   <span class="mi">11</span>         <span class="s">"name"</span><span class="o">:</span> <span class="s">"Textfield"</span><span class="p">,</span>
+   <span class="mi">12</span>         <span class="s">"module"</span><span class="o">:</span> <span class="s">"montage/ui/textfield.reel"</span><span class="p">,</span>
+   <span class="mi">13</span>         <span class="s">"properties"</span><span class="o">:</span> <span class="p">{</span>
+   <span class="mi">14</span>             <span class="s">"element"</span><span class="o">:</span> <span class="p">{</span><span class="s">"#"</span><span class="o">:</span> <span class="s">"password"</span><span class="p">}</span>
    <span class="mi">15</span>         <span class="p">}</span>
 <span class="o">&gt;&gt;&gt;</span><span class="mi">16</span>     <span class="p">},</span>
    <span class="mi">17</span> <span class="p">}</span>

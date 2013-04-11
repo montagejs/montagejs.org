@@ -1,0 +1,1 @@
+montageDefine("ec13df0","package.json",{exports:{name:"montage",version:"0.12.4",hash:"ec13df0",main:"core/core",directories:{lib:"./"},mappings:{mr:{name:"mr",hash:"e1eb775",location:"../mr@e1eb775/"},q:{name:"q",hash:"e910e85",location:"../q@e910e85/"},collections:{name:"collections",hash:"a7dc6de",location:"../collections@a7dc6de/"}},production:!0,useScriptInjection:!0}})

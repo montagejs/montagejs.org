@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -204,8 +204,8 @@
 
 <p>At runtime, the following is displayed in the JavaScript console:</p>
 
-<p></p><div class="highlight"><pre><span class="n">My</span> <span class="n">name</span> <span class="n">is</span><span class="p">:</span> <span class="n">null</span>
-<span class="n">Steve</span> <span class="n">was</span> <span class="n">created</span> <span class="n">at</span><span class="p">:</span> <span class="n">Wed</span> <span class="n">Jan</span> <span class="mi">25</span> <span class="mi">2012</span> <span class="mi">17</span><span class="p">:</span><span class="mi">33</span><span class="p">:</span><span class="mi">07</span> <span class="n">GMT</span><span class="o">-</span><span class="mi">0800</span> <span class="p">(</span><span class="n">PST</span><span class="p">)</span>
+<p></p><div class="highlight"><pre><span class="n">My</span> <span class="n">name</span> <span class="n">is</span><span class="o">:</span> <span class="n">null</span>
+<span class="n">Steve</span> <span class="n">was</span> <span class="n">created</span> <span class="n">at</span><span class="o">:</span> <span class="n">Wed</span> <span class="n">Jan</span> <span class="mi">25</span> <span class="mi">2012</span> <span class="mi">17</span><span class="o">:</span><span class="mi">33</span><span class="o">:</span><span class="mo">07</span> <span class="n">GMT</span><span class="o">-</span><span class="mi">0800</span> <span class="p">(</span><span class="n">PST</span><span class="p">)</span>
 </pre></div>
 
 <p>The reason for this output is that, at initialization, the object’s <code>name</code> property hasn’t yet been set from the serialization, so its value is <code>null</code> when accessed inside <code>didCreate()</code>. The <code>name</code> property’s accessor <code>set</code> method is passed the property’s value during deserialization, which is then displayed by the <code>sayHello()</code> function.</p>

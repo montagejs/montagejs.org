@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -52,16 +52,16 @@
 <p>Let's start by revealing that <code>Main</code> component as a child of the <code>Welcome</code> component located at <code>ui/welcome.reel/welcome.html</code></p>
 
 <p>Replace the following serialization text:
-</p><div class="highlight"><pre>"<span class="n">main</span>"<span class="p">:</span> <span class="p">{</span>
+</p><div class="highlight"><pre><span class="s">"main"</span><span class="o">:</span> <span class="p">{</span>
 
 <span class="p">}</span>
 </pre></div>
 
 <p>with this new text:
-</p><div class="highlight"><pre>"<span class="n">main</span>"<span class="p">:</span> <span class="p">{</span>
-    "<span class="n">prototype</span>"<span class="p">:</span> "<span class="n">ui</span><span class="o">/</span><span class="n">main</span><span class="p">.</span><span class="n">reel</span>"<span class="p">,</span>
-    "<span class="k">properties</span>"<span class="p">:</span> <span class="p">{</span>
-        "<span class="n">element</span>"<span class="p">:</span> <span class="p">{</span>"#"<span class="p">:</span> "<span class="n">main</span>"<span class="p">}</span>
+</p><div class="highlight"><pre><span class="s">"main"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s">"prototype"</span><span class="o">:</span> <span class="s">"ui/main.reel"</span><span class="p">,</span>
+    <span class="s">"properties"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s">"element"</span><span class="o">:</span> <span class="p">{</span><span class="s">"#"</span><span class="o">:</span> <span class="s">"main"</span><span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
@@ -80,10 +80,10 @@
 <li>
 <p>Add serialization entry for the NameTag component that links the component to its placeholder
 </p>
-<div class="highlight"><pre>"<span class="n">nameTag</span>"<span class="p">:</span> <span class="p">{</span>
-    "<span class="n">prototype</span>"<span class="p">:</span> "<span class="n">ui</span><span class="o">/</span><span class="n">name</span><span class="o">-</span><span class="n">tag</span><span class="p">.</span><span class="n">reel</span>"<span class="p">,</span>
-    "<span class="k">properties</span>"<span class="p">:</span> <span class="p">{</span>
-        "<span class="n">element</span>"<span class="p">:</span> <span class="p">{</span>"#"<span class="p">:</span> "<span class="n">nameTag</span>"<span class="p">}</span>
+<div class="highlight"><pre><span class="s">"nameTag"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s">"prototype"</span><span class="o">:</span> <span class="s">"ui/name-tag.reel"</span><span class="p">,</span>
+    <span class="s">"properties"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s">"element"</span><span class="o">:</span> <span class="p">{</span><span class="s">"#"</span><span class="o">:</span> <span class="s">"nameTag"</span><span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
@@ -91,9 +91,9 @@
 <li>
 <p>Pretty up the NameTag component in <code>ui/name-tag.reel/name-tag.css</code>
 </p>
-<div class="highlight"><pre><span class="na">.NameTag</span> <span class="err">{</span>
-    <span class="nl">color:</span> <span class="nf">green</span><span class="err">;</span>
-<span class="err">}</span>
+<div class="highlight"><pre><span class="p">.</span><span class="n">NameTag</span> <span class="p">{</span>
+    <span class="nl">color:</span> <span class="n">green</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
 </li>
 <li>
@@ -116,10 +116,10 @@
 <li>
 <p>Add a name property to the <code>NameTag</code> component's implementation at <code>ui/name-tag.reel/name-tag.js</code>
 </p>
-<div class="highlight"><pre><span class="n">exports</span><span class="p">.</span><span class="n">NameTag</span> <span class="p">=</span> <span class="n">Montage</span><span class="p">.</span><span class="n">create</span><span class="p">(</span><span class="n">Component</span><span class="p">,</span> <span class="o">/**</span> <span class="p">@</span><span class="n">lends</span> <span class="n">module</span><span class="p">:</span>"<span class="n">ui</span><span class="o">/</span><span class="n">name</span><span class="o">-</span><span class="n">tag</span><span class="p">.</span><span class="n">reel</span>"<span class="p">.</span><span class="n">NameTag</span># <span class="o">*/</span> <span class="p">{</span>
+<div class="highlight"><pre><span class="n">exports</span><span class="p">.</span><span class="n">NameTag</span> <span class="o">=</span> <span class="n">Montage</span><span class="p">.</span><span class="n">create</span><span class="p">(</span><span class="n">Component</span><span class="p">,</span> <span class="cm">/** @lends module:"ui/name-tag.reel".NameTag# */</span> <span class="p">{</span>
 
-    <span class="n">name</span><span class="p">:</span> <span class="p">{</span>
-        <span class="n">value</span><span class="p">:</span> "<span class="n">Alice</span>"
+    <span class="nl">name:</span> <span class="p">{</span>
+        <span class="nl">value:</span> <span class="s">"Alice"</span>
     <span class="p">}</span>
 
 <span class="p">});</span>
@@ -261,8 +261,8 @@ For the sake of showing off bindings we use one here to bind the <code>label</co
 <li>
 <p>Inside the <code>index.html</code> remove the explicit loading of the <code>Welcome</code> component.
 </p>
-<div class="highlight"><pre>"<span class="n">owner</span>"<span class="p">:</span> <span class="p">{</span>
-    "<span class="n">prototype</span>"<span class="p">:</span> "<span class="n">montage</span><span class="o">/</span><span class="n">ui</span><span class="o">/</span><span class="n">loader</span><span class="p">.</span><span class="n">reel</span>"
+<div class="highlight"><pre><span class="s">"owner"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s">"prototype"</span><span class="o">:</span> <span class="s">"montage/ui/loader.reel"</span>
 <span class="p">}</span>
 </pre></div>
 </li>

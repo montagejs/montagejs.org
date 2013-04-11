@@ -1,0 +1,1 @@
+var Montage=require("montage").Montage,Component=require("ui/component").Component,NativeTextarea=require("ui/native/textarea.reel").Textarea;exports.Textarea=Montage.create(NativeTextarea,{hasTemplate:{value:!0},willPrepareForDraw:{value:function(){NativeTextarea.willPrepareForDraw.call(this),this.element.classList.add("montage-Textarea")}}})

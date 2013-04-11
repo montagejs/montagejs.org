@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -42,29 +42,29 @@
 font-family: and font-size:</p>
 
 <p></p><div class="highlight"><pre><span class="s">"ui-backgound-color"</span><span class="o">:</span> <span class="p">{</span>
-	<span class="nl">prototype:</span> <span class="s">"montage/ui/css-declaration-component"</span><span class="p">,</span>
-	<span class="nl">properties:</span> <span class="p">{</span>
-		<span class="nl">element:</span><span class="s">"$.ui-backgound-color{backgound-color}"</span>
+	prototype<span class="o">:</span> <span class="s">"montage/ui/css-declaration-component"</span><span class="p">,</span>
+	properties<span class="o">:</span> <span class="p">{</span>
+		element<span class="o">:</span><span class="s">"$.ui-backgound-color{backgound-color}"</span>
 	<span class="p">},</span>
-	<span class="nl">bindings:</span> <span class="p">{</span>
+	bindings<span class="o">:</span> <span class="p">{</span>
 		<span class="s">"background-color"</span><span class="o">:</span><span class="s">"&lt;-owner.contentColor"</span><span class="p">;</span>
 	<span class="p">}</span>
 <span class="p">},</span>
 
 <span class="s">"ui-border-color"</span><span class="o">:</span> <span class="p">{</span>
-	<span class="nl">prototype:</span> <span class="s">"montage/ui/css-declaration-component"</span><span class="p">,</span>
-	<span class="nl">properties:</span> <span class="p">{</span>
-		<span class="nl">element:</span><span class="s">"$.ui-backgound-color"</span>
+	prototype<span class="o">:</span> <span class="s">"montage/ui/css-declaration-component"</span><span class="p">,</span>
+	properties<span class="o">:</span> <span class="p">{</span>
+		element<span class="o">:</span><span class="s">"$.ui-backgound-color"</span>
 	<span class="p">},</span>
-	<span class="nl">bindings:</span> <span class="p">{</span>
+	bindings<span class="o">:</span> <span class="p">{</span>
 		<span class="s">"background-color"</span><span class="o">:</span><span class="s">"&lt;-owner.contentColor"</span><span class="p">,</span> <span class="s">"converter"</span><span class="o">:</span> <span class="p">{</span><span class="s">"@"</span><span class="o">:</span> <span class="s">"darkenConverter"</span><span class="p">};</span>
 	<span class="p">}</span>
 <span class="p">},</span>
 
-<span class="s">"darkenConverter"</span><span class="o">:</span> <span class="p">{</span> <span class="c1">//Same as Less .mixin (dark, @color) { color: darken(@color, 10%);}</span>
+<span class="s">"darkenConverter"</span><span class="o">:</span> <span class="p">{</span> <span class="o">//</span>Same as Less .mixin <span class="p">(</span>dark<span class="p">,</span> <span class="o">@</span>color<span class="p">)</span> <span class="p">{</span> color<span class="o">:</span> darken<span class="p">(</span><span class="o">@</span>color<span class="p">,</span> <span class="m">10</span>%<span class="p">);}</span>
 
-	<span class="nl">prototype:</span> <span class="s">"montage/core/converter/darken-converter"</span><span class="p">,</span>
-	<span class="nl">properties:</span> <span class="p">{</span>
+	prototype<span class="o">:</span> <span class="s">"montage/core/converter/darken-converter"</span><span class="p">,</span>
+	properties<span class="o">:</span> <span class="p">{</span>
 		<span class="s">"percent"</span><span class="o">:</span> <span class="s">"10"</span>
 	<span class="p">}</span>
 <span class="p">}</span>

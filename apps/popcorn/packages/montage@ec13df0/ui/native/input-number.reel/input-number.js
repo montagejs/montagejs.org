@@ -1,0 +1,1 @@
+var Montage=require("montage").Montage,Component=require("ui/component").Component,TextInput=require("ui/text-input").TextInput,InputNumber=exports.InputNumber=Montage.create(TextInput,{});InputNumber.addAttributes({max:{dataType:"number"},min:{dataType:"number"},step:null})
