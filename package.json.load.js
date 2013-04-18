@@ -1,1 +1,1 @@
-montageDefine("87d518c","package.json",{exports:{name:"montagejs.org",version:"0.0.0",hash:"87d518c",directories:{lib:"./"},mappings:{montage:{name:"montage",hash:"eb3badc",location:"packages/montage@eb3badc/"}},production:!0,useScriptInjection:!0}})
+montageDefine("d91c20d","package.json",{exports:{name:"montagejs.org",version:"0.0.0",hash:"d91c20d",directories:{lib:"./"},mappings:{montage:{name:"montage",hash:"b3a3119",location:"packages/montage@b3a3119/"}},production:!0,useScriptInjection:!0}})

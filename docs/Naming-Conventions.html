@@ -69,7 +69,7 @@
 <li>The goal was to make it easy to see the <strong>markup structure</strong> by just looking at the CSS name.</li>
 <li>It also has good usability because you can double-click <strong>each part</strong> to quickly select/edit them. That's why no <code>_</code> underscores are used. Try <code>montage-InputRange-thumb</code> vs <code>montage_InputRange_thumb</code>.</li>
 <li>And by using a single selector, it avoids <strong>name collisions</strong> (less likely to leak-in/out).</li>
-</ul><p><strong>TODO</strong>: Since we will be using <a href="http://www.w3.org/TR/wai-aria/states_and_properties#attrs_widgets">aria</a> for "states", we could also use that for the CSS selectors. That way we don't have to add aria AND a class when changing states. The currently used <code>.montage-hidden</code> could be replaced with <code>[aria-hidden]</code>. Not sure if this still needs a montage namespace or if it should be on component basis? It would leave it open to the component author to choose the best way for hiding (display:none, visibility:hidden or opacity..). And it also is safer to use instead of the global selector. We just would need to "enforce" it everywhere.</p>
+</ul><p><strong>TODO</strong>: Should we still be using global state classes like: <code>.montage--hidden</code>? Or should it be only on a component basis, like <code>.montage-Button--hidden</code>. The later might be better since it allows for different "hiding" strategies (display:none, visibility:hidden, transform, or opacity..).</p>
 
                 </div>
         </article>
