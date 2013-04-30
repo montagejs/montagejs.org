@@ -45,9 +45,9 @@
 
 <p>The <code>index.html</code> file uses a Montage <code>loader</code> component to specify that when ready it should load the <code>Welcome</code> component immediately.</p>
 
-<p>By design, Montage applications start with a <code>Main</code> component, which <code>minit</code> happens to have generated for you.</p>
+<p>Montage applications start with a <code>Main</code> component, which <code>minit</code> happens to have generated for you.</p>
 
-<p>Start by revealing that <code>Main</code> component as a child of the <code>Welcome</code> component located at <code>ui/welcome.reel/welcome.html</code>.</p>
+<p>Start by declaring the <code>Main</code> component as a child of the <code>Welcome</code> component located at <code>ui/welcome.reel/welcome.html</code>.</p>
 
 <p>Replace the following serialization snippet:
 </p><div class="highlight"><pre><span class="s">"main"</span><span class="o">:</span> <span class="p">{</span>
@@ -158,7 +158,7 @@
 <p>For the purposes of this example, you want <code>NameTag</code> to be a read-only component, so you'll make editing the job of the <code>Main</code> component.</p>
 
 <ol>
-<li>Insert an <code>InputText</code> component as a child of the <code>Main</code> component.</li>
+<li>Insert an <code>InputText</code> component as a child of the <code>Main</code> component, ui/main.reel/main.html.</li>
 </ol><p><strong>HTML</strong>
 </p><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">data-montage-id=</span><span class="s">"main"</span> <span class="na">class=</span><span class="s">"Main"</span><span class="nt">&gt;</span>
     Hello <span class="nt">&lt;span</span> <span class="na">data-montage-id=</span><span class="s">"nameTag"</span><span class="nt">&gt;&lt;/span&gt;</span>
@@ -178,7 +178,7 @@
 <span class="p">}</span>
 </pre></div>
 
-<p>Now you've bound the <code>value</code> property of the slider, making it the same as the nameTag's <code>name</code> property. You've also made this a two-way binding as indicated by the double-headed arrow; changes on either side of this binding propagate to the other side.</p>
+<p>Now you've bound the <code>value</code> property of the input text, making it the same as the nameTag's <code>name</code> property. You've also made this a two-way binding as indicated by the double-headed arrow; changes on either side of this binding propagate to the other side.</p>
 
 <p>In addition to deciding where components should live, you also have to decide which side to establish a binding on;    but that's a topic for another tutorial.</p>
 
@@ -243,7 +243,7 @@ For the sake of showing off bindings we use one here to bind the <code>label</co
 <li><code>handleEvent</code></li>
 </ul><p>This reduces the need for inspecting each event in a generic <code>handleEvent</code> method to determine what the event was and how it should be handled.</p>
 
-<p>The <code>templateObjects</code> property exposes all the objects that were defined in a component's template. It's a convenient way to access any object in the template by its <code>label</code>.</p>
+<p>The <code>templateObjects</code> property exposes all the objects that were defined in a component's template. It's a convenient way to access any object in the template by its serialization <code>label</code>.</p>
 
 <p>Reaching into another component suggests that we should start to consider formalizing the model we're working with (a person? an identity?) and expose it somewhere so that all concerned components can access it easily. But that's a lesson for another day.</p>
 
@@ -252,7 +252,7 @@ For the sake of showing off bindings we use one here to bind the <code>label</co
 </ol><h2>Take Off the Training Wheels<a class="anchor" id="Take-Off-the-Training-Wheels" href="#Take-Off-the-Training-Wheels"></a>
 </h2>
 
-<p>Although it has served us well so far, it's time to ditch the Welcome component.</p>
+<p>Although it has served us well so far, it's time to ditch the default ui/main.reel module.</p>
 
 <ol>
 <li>
@@ -264,7 +264,7 @@ For the sake of showing off bindings we use one here to bind the <code>label</co
 </pre></div>
 </li>
 <li><p>Refresh the browser and note that the Welcome component is no longer present as a decorative frame around the Main component.</p></li>
-</ol><hr /><p>There still more to learn of course as you've barely scratched the surface of what Montage can do. What you should take away from this quick start is how simple things are with a declarative framework that embraces components and bindings.</p>
+</ol><hr /><p>There still is more to learn of course as you've barely scratched the surface of what Montage can do. What you should take away from this quick start is how simple things are with a declarative framework that embraces components and bindings.</p>
 
                 </div>
         </article>
