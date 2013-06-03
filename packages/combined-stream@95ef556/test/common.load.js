@@ -1,0 +1,1 @@
+montageDefine("95ef556","test/common",{dependencies:["path","fs","assert"],factory:function(e,t,n){var r=n.exports,i=e("path"),s=e("fs"),o=i.join(__dirname,"..");r.dir={fixture:o+"/test/fixture",tmp:o+"/test/tmp"};try{s.statSync(r.dir.tmp)}catch(u){s.mkdirSync(r.dir.tmp)}r.CombinedStream=e(o),r.assert=e("assert")}})

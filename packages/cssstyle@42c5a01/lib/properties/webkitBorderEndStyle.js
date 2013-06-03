@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-border-end-style",e)},get:function(){return this.getPropertyValue("-webkit-border-end-style")},enumerable:!0}

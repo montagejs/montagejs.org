@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/letterSpacing",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("letter-spacing",e)},get:function(){return this.getPropertyValue("letter-spacing")},enumerable:!0}}})

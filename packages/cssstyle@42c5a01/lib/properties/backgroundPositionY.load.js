@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/backgroundPositionY",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("background-position-y",e)},get:function(){return this.getPropertyValue("background-position-y")},enumerable:!0}}})

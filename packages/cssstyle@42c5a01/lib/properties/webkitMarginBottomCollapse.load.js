@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/webkitMarginBottomCollapse",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("-webkit-margin-bottom-collapse",e)},get:function(){return this.getPropertyValue("-webkit-margin-bottom-collapse")},enumerable:!0}}})

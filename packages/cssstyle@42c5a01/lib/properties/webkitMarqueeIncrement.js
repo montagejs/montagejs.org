@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-marquee-increment",e)},get:function(){return this.getPropertyValue("-webkit-marquee-increment")},enumerable:!0}

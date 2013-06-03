@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/backgroundColor",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("background-color",e)},get:function(){return this.getPropertyValue("background-color")},enumerable:!0}}})

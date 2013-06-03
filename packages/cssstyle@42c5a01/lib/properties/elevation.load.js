@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/elevation",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("elevation",e)},get:function(){return this.getPropertyValue("elevation")},enumerable:!0}}})

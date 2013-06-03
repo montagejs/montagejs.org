@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("text-transform",e)},get:function(){return this.getPropertyValue("text-transform")},enumerable:!0}

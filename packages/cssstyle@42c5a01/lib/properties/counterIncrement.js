@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("counter-increment",e)},get:function(){return this.getPropertyValue("counter-increment")},enumerable:!0}

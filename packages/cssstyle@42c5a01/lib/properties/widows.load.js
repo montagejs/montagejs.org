@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/widows",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("widows",e)},get:function(){return this.getPropertyValue("widows")},enumerable:!0}}})

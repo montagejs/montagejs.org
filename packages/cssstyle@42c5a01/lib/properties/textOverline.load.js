@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/textOverline",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("text-overline",e)},get:function(){return this.getPropertyValue("text-overline")},enumerable:!0}}})

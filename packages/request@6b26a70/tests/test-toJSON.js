@@ -1,0 +1,1 @@
+var request=require("../index"),http=require("http"),assert=require("assert"),s=http.createServer(function(e,t){t.statusCode=200,t.end("asdf")}).listen(8080,function(){var e=request("http://localhost:8080",function(t,n){assert.equal(JSON.parse(JSON.stringify(e)).response.statusCode,200),s.close()})})

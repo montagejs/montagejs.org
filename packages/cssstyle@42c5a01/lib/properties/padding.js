@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("padding",e)},get:function(){return this.getPropertyValue("padding")},enumerable:!0}

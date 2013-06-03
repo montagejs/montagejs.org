@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/colorInterpolation",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("color-interpolation",e)},get:function(){return this.getPropertyValue("color-interpolation")},enumerable:!0}}})

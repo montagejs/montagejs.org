@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/pitch",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("pitch",e)},get:function(){return this.getPropertyValue("pitch")},enumerable:!0}}})

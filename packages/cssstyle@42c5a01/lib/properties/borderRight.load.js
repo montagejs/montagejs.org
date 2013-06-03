@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/borderRight",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("border-right",e)},get:function(){return this.getPropertyValue("border-right")},enumerable:!0}}})

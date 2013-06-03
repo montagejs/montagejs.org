@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/webkitFontSizeDelta",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("-webkit-font-size-delta",e)},get:function(){return this.getPropertyValue("-webkit-font-size-delta")},enumerable:!0}}})

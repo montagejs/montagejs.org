@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/emptyCells",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("empty-cells",e)},get:function(){return this.getPropertyValue("empty-cells")},enumerable:!0}}})

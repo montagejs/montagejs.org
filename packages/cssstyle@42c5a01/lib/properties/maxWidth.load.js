@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/maxWidth",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("max-width",e)},get:function(){return this.getPropertyValue("max-width")},enumerable:!0}}})

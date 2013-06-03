@@ -1,1 +1,0 @@
-montageDefine("e910e85","package.json",{exports:{name:"q",version:"0.8.12",hash:"e910e85",main:"q.js",directories:{lib:"./"},mappings:{},production:!0,useScriptInjection:!0}})

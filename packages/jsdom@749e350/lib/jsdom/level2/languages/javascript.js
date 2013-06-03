@@ -1,0 +1,1 @@
+exports.javascript=function(e,t,n){var r=e.ownerDocument,i=r&&r.parentWindow;if(i)try{i.run(t,n)}catch(s){e.raise("error","Running "+n+" failed.",{error:s,filename:n})}}

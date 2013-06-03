@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("font-size-adjust",e)},get:function(){return this.getPropertyValue("font-size-adjust")},enumerable:!0}

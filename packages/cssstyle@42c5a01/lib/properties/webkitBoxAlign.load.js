@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/webkitBoxAlign",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("-webkit-box-align",e)},get:function(){return this.getPropertyValue("-webkit-box-align")},enumerable:!0}}})

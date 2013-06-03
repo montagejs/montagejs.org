@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/strokeDasharray",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("stroke-dasharray",e)},get:function(){return this.getPropertyValue("stroke-dasharray")},enumerable:!0}}})

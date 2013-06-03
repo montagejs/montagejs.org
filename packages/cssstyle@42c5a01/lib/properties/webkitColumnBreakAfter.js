@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-column-break-after",e)},get:function(){return this.getPropertyValue("-webkit-column-break-after")},enumerable:!0}

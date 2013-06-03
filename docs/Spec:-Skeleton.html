@@ -128,9 +128,9 @@ Show a warning to update/switch the browser. I’m thinking not a global popup..
 
 <p>Chrome/Safari has this CSS property appearance: none that I'm using and it lets you remove the native look and restyle however you want. But it Firefox it seems too buggy and other browsers don't support it yet. Soo.. the conclusion is:</p>
 
-<p>Yep: <button>, <input />, <textarea>
+<p>Yep: <button>, </button><input type="text" />, <textarea>
 Maybe: checkbox, radio, select. Chrome is the desired look, but I think it's impossible to restyle the dot and checkmark in the other browsers. And the border/background in Firefox. If we have to redo them with just div's that would be a lot of work and maybe accessibly issues. And stuff like how to trigger the scroll wheel on iOS.
-Nope: The rest we have to recreate from scratch. Also because they are too new and not implemented in older browsers.</textarea></button></p>
+Nope: The rest we have to recreate from scratch. Also because they are too new and not implemented in older browsers.</textarea></p>
 
 <p>Concerns</p>
 

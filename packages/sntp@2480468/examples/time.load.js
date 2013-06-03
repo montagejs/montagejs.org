@@ -1,0 +1,1 @@
+montageDefine("2480468","examples/time",{dependencies:["../lib"],factory:function(e,t,n){var r=e("../lib"),i={host:"nist1-sj.ustiming.org",port:123,resolveReference:!0,timeout:1e3};r.time(i,function(e,t){e&&(console.log("Failed: "+e.message),process.exit(1)),console.log(t),console.log("Local clock is off by: "+t.t+" milliseconds"),process.exit(0)})}})

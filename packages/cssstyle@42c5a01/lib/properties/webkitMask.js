@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-mask",e)},get:function(){return this.getPropertyValue("-webkit-mask")},enumerable:!0}

@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-marquee-repetition",e)},get:function(){return this.getPropertyValue("-webkit-marquee-repetition")},enumerable:!0}

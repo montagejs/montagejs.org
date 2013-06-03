@@ -1,0 +1,1 @@
+function test(){var e,t;e=JSON.parse(mod_fs.readFileSync("./typedef.json").toString()),t=mod_ctype.parseCTF(e,{endian:"big"}),mod_assert.deepEqual(t.lstypes(),{bar_t:"int","int":"int32_t"})}var mod_fs=require("fs"),mod_ctype=require("../../ctype.js"),mod_assert=require("assert");test()

@@ -1,0 +1,1 @@
+montageDefine("2480468","examples/offset",{dependencies:["../lib"],factory:function(e,t,n){var r=e("../lib");r.offset(function(e,t){console.log(t),r.offset(function(e,t){console.log(t)})})}})

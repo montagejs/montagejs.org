@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-border-before-color",e)},get:function(){return this.getPropertyValue("-webkit-border-before-color")},enumerable:!0}

@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("min-width",e)},get:function(){return this.getPropertyValue("min-width")},enumerable:!0}

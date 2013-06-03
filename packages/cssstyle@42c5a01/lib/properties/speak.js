@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("speak",e)},get:function(){return this.getPropertyValue("speak")},enumerable:!0}

@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/webkitBorderBefore",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("-webkit-border-before",e)},get:function(){return this.getPropertyValue("-webkit-border-before")},enumerable:!0}}})

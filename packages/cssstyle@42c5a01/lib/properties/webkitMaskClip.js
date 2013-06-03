@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-mask-clip",e)},get:function(){return this.getPropertyValue("-webkit-mask-clip")},enumerable:!0}

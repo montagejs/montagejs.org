@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-user-drag",e)},get:function(){return this.getPropertyValue("-webkit-user-drag")},enumerable:!0}

@@ -1,0 +1,1 @@
+montageDefine("af8ae5e","tst/ctf/typedef.json",{exports:{metadata:{ctf2json_version:"1.0",created_at:1316302348,derived_from:"/lib/libc.so",ctf_version:2,requested_types:["bar_t"]},data:[{name:"int",integer:{length:4,signed:!0}},{name:"bar_t",typedef:"int"}]}})

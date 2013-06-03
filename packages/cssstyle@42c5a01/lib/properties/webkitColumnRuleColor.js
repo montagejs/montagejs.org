@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-column-rule-color",e)},get:function(){return this.getPropertyValue("-webkit-column-rule-color")},enumerable:!0}

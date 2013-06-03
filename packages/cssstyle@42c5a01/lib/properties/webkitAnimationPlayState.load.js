@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/webkitAnimationPlayState",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("-webkit-animation-play-state",e)},get:function(){return this.getPropertyValue("-webkit-animation-play-state")},enumerable:!0}}})

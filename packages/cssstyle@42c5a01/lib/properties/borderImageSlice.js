@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("border-image-slice",e)},get:function(){return this.getPropertyValue("border-image-slice")},enumerable:!0}

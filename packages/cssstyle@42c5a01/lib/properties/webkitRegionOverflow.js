@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-region-overflow",e)},get:function(){return this.getPropertyValue("-webkit-region-overflow")},enumerable:!0}

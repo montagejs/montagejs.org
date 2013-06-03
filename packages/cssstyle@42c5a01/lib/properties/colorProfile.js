@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("color-profile",e)},get:function(){return this.getPropertyValue("color-profile")},enumerable:!0}

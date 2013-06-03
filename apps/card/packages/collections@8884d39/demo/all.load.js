@@ -1,1 +1,0 @@
-montageDefine("8884d39","demo/all",{dependencies:["./list-demo","./fast-map-demo","./fast-set-demo","./map-demo","./set-demo","./sorted-map-demo","./sorted-set-demo","./iterator-demo"],factory:function(e,t,n){e("./list-demo"),e("./fast-map-demo"),e("./fast-set-demo"),e("./map-demo"),e("./set-demo"),e("./sorted-map-demo"),e("./sorted-set-demo"),e("./iterator-demo")}})

@@ -1,0 +1,1 @@
+montageDefine("6b26a70","tests/test-localAddress",{dependencies:["../index","assert"],factory:function(e,t,n){var r=e("../index"),i=e("assert");r.get({uri:"http://www.google.com",localAddress:"1.2.3.4"},function(e,t){i(!t)}),r.get({uri:"http://www.google.com",localAddress:"127.0.0.1"},function(e,t){i(!t)})}})

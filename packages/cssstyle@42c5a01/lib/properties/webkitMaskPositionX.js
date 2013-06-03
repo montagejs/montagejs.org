@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-mask-position-x",e)},get:function(){return this.getPropertyValue("-webkit-mask-position-x")},enumerable:!0}

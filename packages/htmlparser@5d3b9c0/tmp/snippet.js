@@ -1,0 +1,1 @@
+var sys=require("sys"),htmlparser=require("htmlparser"),html="<html><body><p>foo</p></body></html>",handler=new htmlparser.DefaultHandler(function(e,t){e?sys.debug("Error: "+e):sys.debug(sys.inspect(t,!1,null))},{enforceEmptyTags:!0}),parser=new htmlparser.Parser(handler);parser.parseComplete(html)

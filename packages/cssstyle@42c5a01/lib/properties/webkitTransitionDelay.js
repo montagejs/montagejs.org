@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-transition-delay",e)},get:function(){return this.getPropertyValue("-webkit-transition-delay")},enumerable:!0}

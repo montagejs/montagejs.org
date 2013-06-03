@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/textDecoration",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("text-decoration",e)},get:function(){return this.getPropertyValue("text-decoration")},enumerable:!0}}})

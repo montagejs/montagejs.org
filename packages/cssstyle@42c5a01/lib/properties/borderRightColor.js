@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("border-right-color",e)},get:function(){return this.getPropertyValue("border-right-color")},enumerable:!0}

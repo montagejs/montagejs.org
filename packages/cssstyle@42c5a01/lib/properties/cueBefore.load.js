@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/cueBefore",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("cue-before",e)},get:function(){return this.getPropertyValue("cue-before")},enumerable:!0}}})

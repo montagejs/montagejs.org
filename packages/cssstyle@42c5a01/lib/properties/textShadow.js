@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("text-shadow",e)},get:function(){return this.getPropertyValue("text-shadow")},enumerable:!0}

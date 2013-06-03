@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-box-shadow",e)},get:function(){return this.getPropertyValue("-webkit-box-shadow")},enumerable:!0}

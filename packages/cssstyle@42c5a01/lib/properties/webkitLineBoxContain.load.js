@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/webkitLineBoxContain",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("-webkit-line-box-contain",e)},get:function(){return this.getPropertyValue("-webkit-line-box-contain")},enumerable:!0}}})

@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/webkitBorderEndWidth",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("-webkit-border-end-width",e)},get:function(){return this.getPropertyValue("-webkit-border-end-width")},enumerable:!0}}})

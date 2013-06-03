@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-animation-name",e)},get:function(){return this.getPropertyValue("-webkit-animation-name")},enumerable:!0}

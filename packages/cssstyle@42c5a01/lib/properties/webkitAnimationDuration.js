@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-animation-duration",e)},get:function(){return this.getPropertyValue("-webkit-animation-duration")},enumerable:!0}

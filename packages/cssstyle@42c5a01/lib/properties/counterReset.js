@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("counter-reset",e)},get:function(){return this.getPropertyValue("counter-reset")},enumerable:!0}

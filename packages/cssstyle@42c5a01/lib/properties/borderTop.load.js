@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/borderTop",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("border-top",e)},get:function(){return this.getPropertyValue("border-top")},enumerable:!0}}})

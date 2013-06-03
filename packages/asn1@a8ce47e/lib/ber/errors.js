@@ -1,0 +1,1 @@
+module.exports={newInvalidAsn1Error:function(e){var t=new Error;return t.name="InvalidAsn1Error",t.message=e||"",t}}

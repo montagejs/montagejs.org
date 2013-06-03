@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-aspect-ratio",e)},get:function(){return this.getPropertyValue("-webkit-aspect-ratio")},enumerable:!0}

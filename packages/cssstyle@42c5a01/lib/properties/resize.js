@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("resize",e)},get:function(){return this.getPropertyValue("resize")},enumerable:!0}

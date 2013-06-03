@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/direction",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("direction",e)},get:function(){return this.getPropertyValue("direction")},enumerable:!0}}})

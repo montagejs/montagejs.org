@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/speakPunctuation",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("speak-punctuation",e)},get:function(){return this.getPropertyValue("speak-punctuation")},enumerable:!0}}})

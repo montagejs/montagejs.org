@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/baselineShift",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("baseline-shift",e)},get:function(){return this.getPropertyValue("baseline-shift")},enumerable:!0}}})

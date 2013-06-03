@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("opacity",e)},get:function(){return this.getPropertyValue("opacity")},enumerable:!0}

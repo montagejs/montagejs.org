@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-user-select",e)},get:function(){return this.getPropertyValue("-webkit-user-select")},enumerable:!0}

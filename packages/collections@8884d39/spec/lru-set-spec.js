@@ -1,1 +1,0 @@
-var LruSet=require("../lru-set"),describeCollection=require("./collection"),describeSet=require("./set");describe("LruSet",function(){function e(e){return new LruSet(e)}[LruSet,e].forEach(function(e){describeCollection(e,[1,2,3,4],!0),describeCollection(e,[{id:0},{id:1},{id:2},{id:3}],!0),describeSet(e)})})

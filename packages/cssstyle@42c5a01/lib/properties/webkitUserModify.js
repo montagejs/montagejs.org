@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-user-modify",e)},get:function(){return this.getPropertyValue("-webkit-user-modify")},enumerable:!0}

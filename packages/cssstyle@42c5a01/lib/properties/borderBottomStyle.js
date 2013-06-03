@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("border-bottom-style",e)},get:function(){return this.getPropertyValue("border-bottom-style")},enumerable:!0}

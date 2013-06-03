@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/webkitWrap",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("-webkit-wrap",e)},get:function(){return this.getPropertyValue("-webkit-wrap")},enumerable:!0}}})

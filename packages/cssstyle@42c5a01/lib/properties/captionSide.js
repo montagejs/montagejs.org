@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("caption-side",e)},get:function(){return this.getPropertyValue("caption-side")},enumerable:!0}

@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("min-height",e)},get:function(){return this.getPropertyValue("min-height")},enumerable:!0}

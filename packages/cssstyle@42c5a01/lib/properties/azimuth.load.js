@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/azimuth",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("azimuth",e)},get:function(){return this.getPropertyValue("azimuth")},enumerable:!0}}})

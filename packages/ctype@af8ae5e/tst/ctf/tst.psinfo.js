@@ -1,0 +1,1 @@
+function test(){var e;e=JSON.parse(mod_fs.readFileSync("./psinfo.json").toString()),mod_ctype.parseCTF(e,{endian:"big"})}var mod_fs=require("fs"),mod_ctype=require("../../ctype.js"),mod_assert=require("assert");test()

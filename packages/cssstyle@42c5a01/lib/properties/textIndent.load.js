@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/textIndent",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("text-indent",e)},get:function(){return this.getPropertyValue("text-indent")},enumerable:!0}}})

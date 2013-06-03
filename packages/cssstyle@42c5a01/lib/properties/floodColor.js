@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("flood-color",e)},get:function(){return this.getPropertyValue("flood-color")},enumerable:!0}

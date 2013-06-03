@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("font-weight",e)},get:function(){return this.getPropertyValue("font-weight")},enumerable:!0}

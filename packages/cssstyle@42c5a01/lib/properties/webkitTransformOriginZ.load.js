@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/webkitTransformOriginZ",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("-webkit-transform-origin-z",e)},get:function(){return this.getPropertyValue("-webkit-transform-origin-z")},enumerable:!0}}})

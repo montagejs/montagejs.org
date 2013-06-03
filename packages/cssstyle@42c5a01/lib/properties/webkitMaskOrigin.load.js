@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/webkitMaskOrigin",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("-webkit-mask-origin",e)},get:function(){return this.getPropertyValue("-webkit-mask-origin")},enumerable:!0}}})

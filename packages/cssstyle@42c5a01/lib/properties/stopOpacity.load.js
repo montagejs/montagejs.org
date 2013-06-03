@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/stopOpacity",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("stop-opacity",e)},get:function(){return this.getPropertyValue("stop-opacity")},enumerable:!0}}})

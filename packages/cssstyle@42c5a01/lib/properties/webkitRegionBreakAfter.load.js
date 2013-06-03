@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/webkitRegionBreakAfter",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("-webkit-region-break-after",e)},get:function(){return this.getPropertyValue("-webkit-region-break-after")},enumerable:!0}}})

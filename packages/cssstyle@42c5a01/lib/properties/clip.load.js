@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/clip",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("clip",e)},get:function(){return this.getPropertyValue("clip")},enumerable:!0}}})

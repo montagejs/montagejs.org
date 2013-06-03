@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-backface-visibility",e)},get:function(){return this.getPropertyValue("-webkit-backface-visibility")},enumerable:!0}

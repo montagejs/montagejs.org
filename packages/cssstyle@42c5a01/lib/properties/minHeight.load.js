@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/minHeight",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("min-height",e)},get:function(){return this.getPropertyValue("min-height")},enumerable:!0}}})

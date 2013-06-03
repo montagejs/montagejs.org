@@ -1,1 +1,0 @@
-montageDefine("f3dadbd","package.json",{exports:{name:"mr",version:"0.12.13",hash:"f3dadbd",main:"require",directories:{lib:"./"},mappings:{q:{name:"q",hash:"e40b13a",location:"../q@e40b13a/"}},production:!0,useScriptInjection:!0}})

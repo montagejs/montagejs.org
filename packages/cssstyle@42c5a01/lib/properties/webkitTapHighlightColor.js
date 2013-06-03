@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-tap-highlight-color",e)},get:function(){return this.getPropertyValue("-webkit-tap-highlight-color")},enumerable:!0}

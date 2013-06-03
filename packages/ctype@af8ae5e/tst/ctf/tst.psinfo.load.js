@@ -1,0 +1,1 @@
+montageDefine("af8ae5e","tst/ctf/tst.psinfo",{dependencies:["fs","../../ctype.js","assert"],factory:function(e,t,n){function o(){var e;e=JSON.parse(r.readFileSync("./psinfo.json").toString()),i.parseCTF(e,{endian:"big"})}var r=e("fs"),i=e("../../ctype.js"),s=e("assert");o()}})

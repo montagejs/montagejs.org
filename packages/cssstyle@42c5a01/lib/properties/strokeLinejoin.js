@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("stroke-linejoin",e)},get:function(){return this.getPropertyValue("stroke-linejoin")},enumerable:!0}

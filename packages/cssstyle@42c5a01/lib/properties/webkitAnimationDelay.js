@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-animation-delay",e)},get:function(){return this.getPropertyValue("-webkit-animation-delay")},enumerable:!0}

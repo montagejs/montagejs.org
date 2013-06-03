@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-background-origin",e)},get:function(){return this.getPropertyValue("-webkit-background-origin")},enumerable:!0}

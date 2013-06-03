@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("outline-style",e)},get:function(){return this.getPropertyValue("outline-style")},enumerable:!0}

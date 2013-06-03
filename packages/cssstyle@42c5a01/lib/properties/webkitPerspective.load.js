@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/webkitPerspective",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("-webkit-perspective",e)},get:function(){return this.getPropertyValue("-webkit-perspective")},enumerable:!0}}})

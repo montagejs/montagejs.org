@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("vector-effect",e)},get:function(){return this.getPropertyValue("vector-effect")},enumerable:!0}

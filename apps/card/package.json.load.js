@@ -1,1 +1,1 @@
-montageDefine("1772686","package.json",{exports:{name:"card",version:"1.0.0",hash:"1772686",directories:{lib:"./"},mappings:{montage:{name:"montage",hash:"9222744",location:"packages/montage@9222744/"}},production:!0,useScriptInjection:!0}})
+montageDefine("108ab87","package.json",{exports:{name:"card",version:"1.0.0",dependencies:{montage:"0.12.6"},directories:{lib:"./"},hash:"108ab87",mappings:{montage:{name:"montage",hash:"44c1119",location:"packages/montage@44c1119/"}},production:!0,useScriptInjection:!0}})

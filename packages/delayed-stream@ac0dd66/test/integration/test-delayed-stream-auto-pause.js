@@ -1,0 +1,1 @@
+var common=require("../common"),assert=common.assert,fake=common.fake.create(),DelayedStream=common.DelayedStream,Stream=require("stream").Stream;(function(){var t=new Stream;fake.expect(t,"pause",1);var n=DelayedStream.create(t);fake.verify()})(),function(){var t=new Stream;fake.expect(t,"pause",0);var n=DelayedStream.create(t,{pauseStream:!1});fake.verify()}()

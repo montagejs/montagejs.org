@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("white-space",e)},get:function(){return this.getPropertyValue("white-space")},enumerable:!0}

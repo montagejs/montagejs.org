@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/webkitMaxLogicalHeight",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("-webkit-max-logical-height",e)},get:function(){return this.getPropertyValue("-webkit-max-logical-height")},enumerable:!0}}})

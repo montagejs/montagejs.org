@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("play-during",e)},get:function(){return this.getPropertyValue("play-during")},enumerable:!0}

@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-appearance",e)},get:function(){return this.getPropertyValue("-webkit-appearance")},enumerable:!0}

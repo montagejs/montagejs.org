@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/borderBottomStyle",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("border-bottom-style",e)},get:function(){return this.getPropertyValue("border-bottom-style")},enumerable:!0}}})

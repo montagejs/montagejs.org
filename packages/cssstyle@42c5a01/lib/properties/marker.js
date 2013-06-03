@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("marker",e)},get:function(){return this.getPropertyValue("marker")},enumerable:!0}

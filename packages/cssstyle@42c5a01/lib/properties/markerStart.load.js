@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/markerStart",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("marker-start",e)},get:function(){return this.getPropertyValue("marker-start")},enumerable:!0}}})

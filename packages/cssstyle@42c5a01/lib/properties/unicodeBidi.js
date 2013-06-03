@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("unicode-bidi",e)},get:function(){return this.getPropertyValue("unicode-bidi")},enumerable:!0}

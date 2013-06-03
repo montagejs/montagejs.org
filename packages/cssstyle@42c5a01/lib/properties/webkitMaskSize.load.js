@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/webkitMaskSize",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("-webkit-mask-size",e)},get:function(){return this.getPropertyValue("-webkit-mask-size")},enumerable:!0}}})

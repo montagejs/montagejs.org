@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-box-lines",e)},get:function(){return this.getPropertyValue("-webkit-box-lines")},enumerable:!0}

@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-color-correction",e)},get:function(){return this.getPropertyValue("-webkit-color-correction")},enumerable:!0}

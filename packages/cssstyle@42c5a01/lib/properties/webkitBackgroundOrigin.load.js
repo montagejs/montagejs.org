@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/webkitBackgroundOrigin",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("-webkit-background-origin",e)},get:function(){return this.getPropertyValue("-webkit-background-origin")},enumerable:!0}}})

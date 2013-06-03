@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-flow-from",e)},get:function(){return this.getPropertyValue("-webkit-flow-from")},enumerable:!0}

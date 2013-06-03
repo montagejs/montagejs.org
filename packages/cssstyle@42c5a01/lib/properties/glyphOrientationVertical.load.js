@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/glyphOrientationVertical",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("glyph-orientation-vertical",e)},get:function(){return this.getPropertyValue("glyph-orientation-vertical")},enumerable:!0}}})

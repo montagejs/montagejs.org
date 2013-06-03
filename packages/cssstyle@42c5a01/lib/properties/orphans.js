@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("orphans",e)},get:function(){return this.getPropertyValue("orphans")},enumerable:!0}

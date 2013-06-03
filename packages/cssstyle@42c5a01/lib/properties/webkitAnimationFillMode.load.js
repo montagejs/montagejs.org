@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/webkitAnimationFillMode",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("-webkit-animation-fill-mode",e)},get:function(){return this.getPropertyValue("-webkit-animation-fill-mode")},enumerable:!0}}})

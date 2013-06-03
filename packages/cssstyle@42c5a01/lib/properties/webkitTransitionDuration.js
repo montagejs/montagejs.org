@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-transition-duration",e)},get:function(){return this.getPropertyValue("-webkit-transition-duration")},enumerable:!0}

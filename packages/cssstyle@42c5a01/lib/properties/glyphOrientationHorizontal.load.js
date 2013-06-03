@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/glyphOrientationHorizontal",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("glyph-orientation-horizontal",e)},get:function(){return this.getPropertyValue("glyph-orientation-horizontal")},enumerable:!0}}})

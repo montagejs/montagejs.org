@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/colorProfile",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("color-profile",e)},get:function(){return this.getPropertyValue("color-profile")},enumerable:!0}}})

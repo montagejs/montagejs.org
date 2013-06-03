@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-match-nearest-mail-blockquote-color",e)},get:function(){return this.getPropertyValue("-webkit-match-nearest-mail-blockquote-color")},enumerable:!0}

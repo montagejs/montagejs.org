@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/webkitMaskPositionY",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("-webkit-mask-position-y",e)},get:function(){return this.getPropertyValue("-webkit-mask-position-y")},enumerable:!0}}})

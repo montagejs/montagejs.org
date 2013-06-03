@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/webkitBorderStartStyle",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("-webkit-border-start-style",e)},get:function(){return this.getPropertyValue("-webkit-border-start-style")},enumerable:!0}}})

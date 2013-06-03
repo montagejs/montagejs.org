@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/webkitFlexOrder",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("-webkit-flex-order",e)},get:function(){return this.getPropertyValue("-webkit-flex-order")},enumerable:!0}}})

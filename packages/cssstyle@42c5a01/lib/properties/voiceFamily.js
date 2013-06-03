@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("voic-family",e)},get:function(){return this.getPropertyValue("voice-family")},enumerable:!0}

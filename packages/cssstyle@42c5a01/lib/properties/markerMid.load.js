@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/markerMid",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("marker-mid",e)},get:function(){return this.getPropertyValue("marker-mid")},enumerable:!0}}})

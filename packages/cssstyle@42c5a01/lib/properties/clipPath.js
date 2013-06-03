@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("clip-path",e)},get:function(){return this.getPropertyValue("clip-path")},enumerable:!0}

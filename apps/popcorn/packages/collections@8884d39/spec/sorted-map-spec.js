@@ -1,1 +1,0 @@
-var SortedMap=require("../sorted-map"),describeDict=require("./dict");describe("SortedMap",function(){describeDict(SortedMap),describe("reduceRight",function(){var e=SortedMap([[1,2],[2,4],[3,6],[4,8]]);expect(e.reduceRight(function(e,t,n){return e&&n*2==t},!0)).toBe(!0)})})

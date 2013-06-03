@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/backgroundSize",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("background-size",e)},get:function(){return this.getPropertyValue("background-size")},enumerable:!0}}})

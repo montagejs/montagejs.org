@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/webkitMaskClip",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("-webkit-mask-clip",e)},get:function(){return this.getPropertyValue("-webkit-mask-clip")},enumerable:!0}}})

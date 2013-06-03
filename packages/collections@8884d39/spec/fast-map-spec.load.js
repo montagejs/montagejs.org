@@ -1,1 +1,0 @@
-montageDefine("8884d39","spec/fast-map-spec",{dependencies:["../fast-map","./dict","./map"],factory:function(e,t,n){var r=e("../fast-map"),i=e("./dict"),s=e("./map");describe("FastMap",function(){i(r),s(r)})}})

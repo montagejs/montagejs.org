@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/borderImageWidth",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("border-image-width",e)},get:function(){return this.getPropertyValue("border-image-width")},enumerable:!0}}})

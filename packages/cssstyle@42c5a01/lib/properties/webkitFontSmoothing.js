@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-font-smoothing",e)},get:function(){return this.getPropertyValue("-webkit-font-smoothing")},enumerable:!0}

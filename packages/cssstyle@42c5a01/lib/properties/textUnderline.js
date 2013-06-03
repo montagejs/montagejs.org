@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("text-underline",e)},get:function(){return this.getPropertyValue("text-underline")},enumerable:!0}

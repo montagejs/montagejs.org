@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/webkitUserSelect",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("-webkit-user-select",e)},get:function(){return this.getPropertyValue("-webkit-user-select")},enumerable:!0}}})

@@ -1,0 +1,1 @@
+var Sntp=require("../lib"),options={host:"nist1-sj.ustiming.org",port:123,resolveReference:!0,timeout:1e3};Sntp.time(options,function(e,t){e&&(console.log("Failed: "+e.message),process.exit(1)),console.log(t),console.log("Local clock is off by: "+t.t+" milliseconds"),process.exit(0)})

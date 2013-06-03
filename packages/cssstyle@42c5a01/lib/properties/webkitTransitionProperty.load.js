@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/webkitTransitionProperty",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("-webkit-transition-property",e)},get:function(){return this.getPropertyValue("-webkit-transition-property")},enumerable:!0}}})

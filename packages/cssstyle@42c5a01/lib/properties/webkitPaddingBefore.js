@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-padding-before",e)},get:function(){return this.getPropertyValue("-webkit-padding-before")},enumerable:!0}

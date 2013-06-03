@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("word-spacing",e)},get:function(){return this.getPropertyValue("word-spacing")},enumerable:!0}

@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-line-break",e)},get:function(){return this.getPropertyValue("-webkit-line-break")},enumerable:!0}

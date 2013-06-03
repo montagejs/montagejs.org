@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("writing-mode",e)},get:function(){return this.getPropertyValue("writing-mode")},enumerable:!0}

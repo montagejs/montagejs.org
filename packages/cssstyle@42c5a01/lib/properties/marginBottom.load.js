@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/marginBottom",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("margin-bottom",e)},get:function(){return this.getPropertyValue("margin-bottom")},enumerable:!0}}})

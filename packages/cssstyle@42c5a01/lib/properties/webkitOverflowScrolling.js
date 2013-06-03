@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-overflow-scrolling",e)},get:function(){return this.getPropertyValue("-webkit-overflow-scrolling")},enumerable:!0}

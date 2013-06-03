@@ -1,0 +1,1 @@
+montageDefine("af8ae5e","tst/ctf/tst.int",{dependencies:["fs","../../ctype.js","assert"],factory:function(e,t,n){function o(){var e,t;e=JSON.parse(r.readFileSync("./int.json").toString()),t=i.parseCTF(e,{endian:"big"}),s.deepEqual(t.lstypes(),{"int":"int32_t"})}var r=e("fs"),i=e("../../ctype.js"),s=e("assert");o()}})

@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/mask",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("mask",e)},get:function(){return this.getPropertyValue("mask")},enumerable:!0}}})

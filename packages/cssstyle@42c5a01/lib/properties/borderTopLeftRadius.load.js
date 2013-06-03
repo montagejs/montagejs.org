@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/borderTopLeftRadius",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("border-top-left-radius",e)},get:function(){return this.getPropertyValue("border-top-left-radius")},enumerable:!0}}})

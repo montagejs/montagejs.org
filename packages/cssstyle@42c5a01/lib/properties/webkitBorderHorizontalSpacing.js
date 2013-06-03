@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-border-horizontal-spacing",e)},get:function(){return this.getPropertyValue("-webkit-border-horizontal-spacing")},enumerable:!0}

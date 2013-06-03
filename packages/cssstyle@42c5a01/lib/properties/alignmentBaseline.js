@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("alignment-baseline",e)},get:function(){return this.getPropertyValue("alignment-baseline")},enumerable:!0}

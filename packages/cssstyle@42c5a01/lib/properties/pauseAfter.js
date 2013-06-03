@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("pause-after",e)},get:function(){return this.getPropertyValue("pause-after")},enumerable:!0}

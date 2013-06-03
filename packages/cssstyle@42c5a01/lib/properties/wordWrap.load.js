@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/wordWrap",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("word-wrap",e)},get:function(){return this.getPropertyValue("word-wrap")},enumerable:!0}}})

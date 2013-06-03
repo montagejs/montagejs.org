@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/cursor",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("cursor",e)},get:function(){return this.getPropertyValue("cursor")},enumerable:!0}}})

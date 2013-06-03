@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("page-break-after",e)},get:function(){return this.getPropertyValue("page-break-after")},enumerable:!0}

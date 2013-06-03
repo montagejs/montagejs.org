@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("background-repeat-y",e)},get:function(){return this.getPropertyValue("background-repeat-y")},enumerable:!0}

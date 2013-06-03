@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("background-image",e)},get:function(){return this.getPropertyValue("background-image")},enumerable:!0}

@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("text-overline-mode",e)},get:function(){return this.getPropertyValue("text-overline-mode")},enumerable:!0}

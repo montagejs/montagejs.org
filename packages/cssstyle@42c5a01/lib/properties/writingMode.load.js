@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/writingMode",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("writing-mode",e)},get:function(){return this.getPropertyValue("writing-mode")},enumerable:!0}}})

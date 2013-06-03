@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-border-start",e)},get:function(){return this.getPropertyValue("-webkit-border-start")},enumerable:!0}

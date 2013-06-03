@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("word-break",e)},get:function(){return this.getPropertyValue("word-break")},enumerable:!0}

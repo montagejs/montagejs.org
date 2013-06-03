@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/counterIncrement",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("counter-increment",e)},get:function(){return this.getPropertyValue("counter-increment")},enumerable:!0}}})

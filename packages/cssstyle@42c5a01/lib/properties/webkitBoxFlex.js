@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-box-flex",e)},get:function(){return this.getPropertyValue("-webkit-box-flex")},enumerable:!0}

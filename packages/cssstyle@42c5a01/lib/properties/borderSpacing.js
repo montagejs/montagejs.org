@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("border-spacing",e)},get:function(){return this.getPropertyValue("border-spacing")},enumerable:!0}

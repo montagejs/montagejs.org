@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/borderLeftWidth",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("border-left-width",e)},get:function(){return this.getPropertyValue("border-left-width")},enumerable:!0}}})

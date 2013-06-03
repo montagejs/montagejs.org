@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/listStyleImage",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("list-style-image",e)},get:function(){return this.getPropertyValue("list-style-image")},enumerable:!0}}})

@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("background-origin",e)},get:function(){return this.getPropertyValue("background-origin")},enumerable:!0}

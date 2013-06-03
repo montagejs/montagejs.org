@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-filter",e)},get:function(){return this.getPropertyValue("-webkit-filter")},enumerable:!0}

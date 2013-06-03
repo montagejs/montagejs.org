@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-border-image",e)},get:function(){return this.getPropertyValue("-webkit-border-image")},enumerable:!0}

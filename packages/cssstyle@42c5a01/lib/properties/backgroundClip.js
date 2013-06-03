@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("background-clip",e)},get:function(){return this.getPropertyValue("background-clip")},enumerable:!0}

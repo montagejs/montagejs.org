@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/webkitUserDrag",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("-webkit-user-drag",e)},get:function(){return this.getPropertyValue("-webkit-user-drag")},enumerable:!0}}})

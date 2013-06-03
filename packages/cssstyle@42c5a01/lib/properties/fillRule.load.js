@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/fillRule",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("fill-rule",e)},get:function(){return this.getPropertyValue("fill-rule")},enumerable:!0}}})

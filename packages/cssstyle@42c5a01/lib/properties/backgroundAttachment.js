@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("background-attachment",e)},get:function(){return this.getPropertyValue("background-attachment")},enumerable:!0}

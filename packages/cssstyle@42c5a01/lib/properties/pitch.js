@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("pitch",e)},get:function(){return this.getPropertyValue("pitch")},enumerable:!0}

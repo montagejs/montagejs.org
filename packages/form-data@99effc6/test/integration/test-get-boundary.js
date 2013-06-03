@@ -1,0 +1,1 @@
+var common=require("../common"),assert=common.assert,FormData=require(common.dir.lib+"/form_data");(function(){var t=new FormData,n=t.getBoundary();assert.equal(n,t.getBoundary()),assert.equal(n.length,50)})(),function(){var t=new FormData,n=new FormData;assert.notEqual(t.getBoundary(),n.getBoundary())}()

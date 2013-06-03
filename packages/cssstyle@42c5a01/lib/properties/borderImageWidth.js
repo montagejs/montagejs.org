@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("border-image-width",e)},get:function(){return this.getPropertyValue("border-image-width")},enumerable:!0}

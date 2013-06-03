@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/webkitAspectRatio",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("-webkit-aspect-ratio",e)},get:function(){return this.getPropertyValue("-webkit-aspect-ratio")},enumerable:!0}}})

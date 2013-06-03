@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-margin-after-collapse",e)},get:function(){return this.getPropertyValue("-webkit-margin-after-collapse")},enumerable:!0}

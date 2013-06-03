@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/webkitMarginStart",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("-webkit-margin-start",e)},get:function(){return this.getPropertyValue("-webkit-margin-start")},enumerable:!0}}})

@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("border-collapse",e)},get:function(){return this.getPropertyValue("border-collapse")},enumerable:!0}

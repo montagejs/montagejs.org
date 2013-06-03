@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/quotes",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("quotes",e)},get:function(){return this.getPropertyValue("quotes")},enumerable:!0}}})

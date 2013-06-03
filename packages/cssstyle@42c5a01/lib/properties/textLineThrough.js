@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("text-line-through",e)},get:function(){return this.getPropertyValue("text-line-through")},enumerable:!0}

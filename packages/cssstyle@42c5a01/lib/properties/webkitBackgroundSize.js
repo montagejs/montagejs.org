@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-background-size",e)},get:function(){return this.getPropertyValue("-webkit-background-size")},enumerable:!0}

@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/borderRightStyle",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("border-right-style",e)},get:function(){return this.getPropertyValue("border-right-style")},enumerable:!0}}})

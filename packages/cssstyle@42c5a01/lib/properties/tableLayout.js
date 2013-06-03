@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("table-layout",e)},get:function(){return this.getPropertyValue("table-layout")},enumerable:!0}

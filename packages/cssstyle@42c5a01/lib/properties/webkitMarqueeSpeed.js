@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-marquee-speed",e)},get:function(){return this.getPropertyValue("-webkit-marquee-speed")},enumerable:!0}

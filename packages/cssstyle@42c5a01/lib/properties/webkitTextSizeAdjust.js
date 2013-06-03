@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-text-size-adjust",e)},get:function(){return this.getPropertyValue("-webkit-text-size-adjust")},enumerable:!0}

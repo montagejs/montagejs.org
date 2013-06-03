@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("word-wrap",e)},get:function(){return this.getPropertyValue("word-wrap")},enumerable:!0}

@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("stroke",e)},get:function(){return this.getPropertyValue("stroke")},enumerable:!0}

@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-flex-order",e)},get:function(){return this.getPropertyValue("-webkit-flex-order")},enumerable:!0}

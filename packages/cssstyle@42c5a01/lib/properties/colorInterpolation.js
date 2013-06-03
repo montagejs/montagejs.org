@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("color-interpolation",e)},get:function(){return this.getPropertyValue("color-interpolation")},enumerable:!0}

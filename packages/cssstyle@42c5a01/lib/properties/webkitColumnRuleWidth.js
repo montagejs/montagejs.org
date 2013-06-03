@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-column-rule-width",e)},get:function(){return this.getPropertyValue("-webkit-column-rule-width")},enumerable:!0}

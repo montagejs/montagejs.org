@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("kerning",e)},get:function(){return this.getPropertyValue("kerning")},enumerable:!0}

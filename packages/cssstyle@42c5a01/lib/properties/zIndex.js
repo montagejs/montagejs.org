@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("z-index",e)},get:function(){return this.getPropertyValue("z-index")},enumerable:!0}

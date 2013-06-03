@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-nbsp-mode",e)},get:function(){return this.getPropertyValue("-webkit-nbsp-mode")},enumerable:!0}

@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/captionSide",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("caption-side",e)},get:function(){return this.getPropertyValue("caption-side")},enumerable:!0}}})

@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/fontWeight",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("font-weight",e)},get:function(){return this.getPropertyValue("font-weight")},enumerable:!0}}})

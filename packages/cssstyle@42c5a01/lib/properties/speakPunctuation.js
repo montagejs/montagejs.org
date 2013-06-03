@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("speak-punctuation",e)},get:function(){return this.getPropertyValue("speak-punctuation")},enumerable:!0}

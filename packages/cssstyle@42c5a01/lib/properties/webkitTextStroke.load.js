@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/webkitTextStroke",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("-webkit-text-stroke",e)},get:function(){return this.getPropertyValue("-webkit-text-stroke")},enumerable:!0}}})

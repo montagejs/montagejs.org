@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-line-align",e)},get:function(){return this.getPropertyValue("-webkit-line-align")},enumerable:!0}

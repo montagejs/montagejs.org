@@ -1,0 +1,1 @@
+montageDefine("5d3b9c0","rssbug",{dependencies:["sys","fs","./node-htmlparser"],factory:function(e,t,n){var r=e("sys"),i=e("fs"),s=e("./node-htmlparser"),o=i.readFileSync("rssbug.rss"),u=new s.DefaultHandler(function(e,t){e?r.debug("Error: "+e):r.debug(r.inspect(t,!1,null))},{verbose:!1}),a=new s.Parser(u);a.parseComplete(o)}})

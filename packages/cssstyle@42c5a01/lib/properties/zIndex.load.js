@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/zIndex",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("z-index",e)},get:function(){return this.getPropertyValue("z-index")},enumerable:!0}}})

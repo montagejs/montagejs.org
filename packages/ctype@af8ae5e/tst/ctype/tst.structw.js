@@ -1,0 +1,1 @@
+function test(){var e,t,n;e=new mod_ctype.Parser({endian:"little"}),e.typedef("point_t",[{x:{type:"uint8_t"}},{y:{type:"uint8_t"}}]),t=new Buffer(2),n=[{point:{type:"point_t"}}],e.writeData(n,t,0,[[23,42]]),mod_assert.ok(t[0]==23),mod_assert.ok(t[1]==42)}var mod_ctype=require("../../ctype.js"),mod_assert=require("assert");test()

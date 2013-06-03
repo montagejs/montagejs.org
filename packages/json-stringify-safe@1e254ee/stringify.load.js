@@ -1,0 +1,1 @@
+montageDefine("1e254ee","stringify",{dependencies:[],factory:function(e,t,n){function r(e,t){var n=[];return t=t||function(e,t){return"[Circular]"},function(r,i){var s=i;return typeof i=="object"&&i&&(n.indexOf(i)!==-1?s=t(r,i):n.push(i)),e&&(s=e(r,s)),s}}function i(e,t,n,i){return JSON.stringify(e,r(t,i),n)}n.exports=i,i.getSerialize=r}})

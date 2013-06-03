@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("speak-header",e)},get:function(){return this.getPropertyValue("speak-header")},enumerable:!0}

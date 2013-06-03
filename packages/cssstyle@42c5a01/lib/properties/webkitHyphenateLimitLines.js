@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-hyphenate-limit-lines",e)},get:function(){return this.getPropertyValue("-webkit-hyphenate-limit-lines")},enumerable:!0}

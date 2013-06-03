@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("text-rendering",e)},get:function(){return this.getPropertyValue("text-rendering")},enumerable:!0}

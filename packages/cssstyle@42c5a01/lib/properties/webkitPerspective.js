@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-perspective",e)},get:function(){return this.getPropertyValue("-webkit-perspective")},enumerable:!0}

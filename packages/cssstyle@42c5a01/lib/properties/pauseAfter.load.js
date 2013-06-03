@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/pauseAfter",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("pause-after",e)},get:function(){return this.getPropertyValue("pause-after")},enumerable:!0}}})

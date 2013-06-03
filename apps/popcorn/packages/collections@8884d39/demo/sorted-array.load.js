@@ -1,1 +1,0 @@
-montageDefine("8884d39","demo/sorted-array",{dependencies:["../sorted-array"],factory:function(e,t,n){var r=e("../sorted-array"),i=r([]);i.addEach([5,2,4,3,1]),console.log(i.toArray());var i=r([1,1,1,1,1]);console.log(i.indexOf(1)),console.log(i.lastIndexOf(1))}})

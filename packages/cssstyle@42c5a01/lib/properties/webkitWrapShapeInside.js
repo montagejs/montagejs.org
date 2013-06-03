@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-wrap-shape-inside",e)},get:function(){return this.getPropertyValue("-webkit-wrap-shape-inside")},enumerable:!0}

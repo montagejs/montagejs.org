@@ -1,0 +1,1 @@
+montageDefine("3e28815","lib/index",{dependencies:["boom","sntp","./server","./client","./crypto","./utils"],factory:function(e,t,n){t.error=t.Error=e("boom"),t.sntp=e("sntp"),t.server=e("./server"),t.client=e("./client"),t.crypto=e("./crypto"),t.utils=e("./utils"),t.uri={authenticate:t.server.authenticateBewit,getBewit:t.client.getBewit}}})

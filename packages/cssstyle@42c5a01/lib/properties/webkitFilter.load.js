@@ -1,0 +1,1 @@
+montageDefine("42c5a01","lib/properties/webkitFilter",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("-webkit-filter",e)},get:function(){return this.getPropertyValue("-webkit-filter")},enumerable:!0}}})

@@ -1,0 +1,1 @@
+montageDefine("6b26a70","tests/test-toJSON",{dependencies:["../index","http","assert"],factory:function(e,t,n){var r=e("../index"),i=e("http"),s=e("assert"),o=i.createServer(function(e,t){t.statusCode=200,t.end("asdf")}).listen(8080,function(){var e=r("http://localhost:8080",function(t,n){s.equal(JSON.parse(JSON.stringify(e)).response.statusCode,200),o.close()})})}})

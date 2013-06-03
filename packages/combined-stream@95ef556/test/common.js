@@ -1,0 +1,1 @@
+var common=module.exports,path=require("path"),fs=require("fs"),root=path.join(__dirname,"..");common.dir={fixture:root+"/test/fixture",tmp:root+"/test/tmp"};try{fs.statSync(common.dir.tmp)}catch(e){fs.mkdirSync(common.dir.tmp)}common.CombinedStream=require(root),common.assert=require("assert")

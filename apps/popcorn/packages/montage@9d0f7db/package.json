@@ -1,1 +1,0 @@
-{"name":"montage","version":"0.12.4","hash":"9d0f7db","main":"core/core","directories":{"lib":"./"},"mappings":{"mr":{"name":"mr","hash":"e1eb775","location":"../mr@e1eb775/"},"q":{"name":"q","hash":"e910e85","location":"../q@e910e85/"},"collections":{"name":"collections","hash":"8884d39","location":"../collections@8884d39/"}},"production":true,"useScriptInjection":true}

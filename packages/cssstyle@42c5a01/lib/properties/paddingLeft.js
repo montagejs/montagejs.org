@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("padding-left",e)},get:function(){return this.getPropertyValue("padding-left")},enumerable:!0}

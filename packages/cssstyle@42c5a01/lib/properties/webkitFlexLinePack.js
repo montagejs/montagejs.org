@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-flex-line-pack",e)},get:function(){return this.getPropertyValue("-webkit-flex-line-pack")},enumerable:!0}

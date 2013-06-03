@@ -1,0 +1,1 @@
+"use strict";module.exports={set:function(e){this.setProperty("-webkit-mask-repeat-x",e)},get:function(){return this.getPropertyValue("-webkit-mask-repeat-x")},enumerable:!0}

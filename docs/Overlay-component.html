@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+
+    <title>Overlay component - Montage Docs</title>
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" />
+    <link rel="stylesheet" href="../stylesheets/normalize.css" />
+    <link rel="stylesheet" href="../stylesheets/base.css" />
+    <link rel="stylesheet" href="../stylesheets/pages.css" />
+    <link rel="stylesheet" href="../stylesheets/solarized.css" />
+
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+<body class="docs">
+
+    <header class="header header-pages pushed">
+        <div class="header-container">
+            <a href="/"><img class="logo" src="../images/logo-pages.png" alt="Montage" /></a>
+            <nav class="nav">
+                <a class="nav-item" href="/apps">Apps</a>
+                <a class="nav-item active" href="/docs">Docs</a>
+                <a class="nav-item" href="/apis">APIs</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="docs">
+        <article>
+            <div class="markdown-body">
+
+<h1>Overlay component<a class="anchor" id="Overlay-component" href="#Overlay-component"></a>
+</h1>
+
+<h1>["edge" branch only]<a class="anchor" id="[%22edge%22-branch-only]" href="#%5B%22edge%22-branch-only%5D"></a>
+</h1>
+
+<p>The <code>Overlay</code> positions content over the page in a modal or non-modal way.</p>
+
+<h2>How to use<a class="anchor" id="How-to-use" href="#How-to-use"></a>
+</h2>
+
+<h4>Template<a class="anchor" id="Template" href="#Template"></a>
+</h4>
+
+<p></p><div class="highlight"><pre><span class="s2">"overlayImage"</span><span class="err">:</span> <span class="p">{</span>
+    <span class="nt">"prototype"</span><span class="p">:</span> <span class="s2">"montage/ui/overlay.reel"</span><span class="p">,</span>
+    <span class="nt">"properties"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">"element"</span><span class="p">:</span> <span class="p">{</span><span class="nt">"#"</span><span class="p">:</span> <span class="s2">"overlayImage"</span><span class="p">},</span>
+        <span class="nt">"isModal"</span><span class="p">:</span> <span class="kc">true</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+<div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">data-montage-id=</span><span class="s">"overlayImage"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://montagejs.org/images/logo-montage.png"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+<h4>JavaScript<a class="anchor" id="JavaScript" href="#JavaScript"></a>
+</h4>
+
+<p></p><div class="highlight"><pre><span class="nx">overlayImage</span><span class="p">.</span><span class="nx">show</span><span class="p">();</span>
+</pre></div>
+
+<p>When an overlay is defined to be Modal a mask is rendered between the page and the contents of the overlay.</p>
+
+<h2>Positioning<a class="anchor" id="Positioning" href="#Positioning"></a>
+</h2>
+
+<p>The Overlay supports three types of positioning:</p>
+
+<ul>
+<li>Specific coordinates with the "position" property:
+<div class="highlight"><pre><span class="s2">"position"</span><span class="o">:</span> <span class="p">{</span><span class="nx">left</span><span class="o">:</span> <span class="mi">100</span><span class="p">,</span> <span class="nx">top</span><span class="o">:</span> <span class="mi">50</span><span class="p">}</span>
+</pre></div>
+</li>
+<li>Anchored to an element or component's element:
+<div class="highlight"><pre><span class="s2">"anchor"</span><span class="o">:</span> <span class="p">{</span><span class="s2">"#"</span><span class="o">:</span> <span class="s2">"icon"</span><span class="p">}</span>
+</pre></div>
+<div class="highlight"><pre><span class="s2">"anchor"</span><span class="o">:</span> <span class="p">{</span><span class="s2">"@"</span><span class="o">:</span> <span class="s2">"owner"</span><span class="p">}</span>
+</pre></div>
+The overlay element is positioned right bellow the anchor and horizontally centered with it.</li>
+<li>
+<p>Screen centered.</p>
+
+<p>This is the default.</p>
+</li>
+</ul><h2>Delegate methods<a class="anchor" id="Delegate-methods" href="#Delegate-methods"></a>
+</h2>
+
+<ul>
+<li>
+<p><code>willPositionOverlay(overlay, position)</code></p>
+
+<p>Returning a new position will replace the calculated one.</p>
+</li>
+</ul><h2>Events<a class="anchor" id="Events" href="#Events"></a>
+</h2>
+
+<ul>
+<li>
+<p><code>dismiss</code></p>
+
+<p>Fired when the user dismisses the overlay by clicking / touching outside of it.</p>
+</li>
+</ul>
+
+                </div>
+        </article>
+    </section>
+
+    <section id="next" class="next">
+        <article>
+            <h3 class="title">More help?</h3>
+            <div class="cols">
+                <div class="col col-1-2">
+                    <p>Can't find what you are looking for? Get in touch, we're more than happy in helping answer your questions.
+                    </p>
+                </div>
+                <aside class="col col-1-2">
+                    <p><strong>Have feedback or ideas?</strong> Let us know by creating a new <a href="https://github.com/montagejs/montage/issues" target="_blank">issue</a>, join us in <a href="http://webchat.freenode.net/?channels=montage" target="_blank">IRC</a> or post questions to our <a href="https://groups.google.com/forum/?fromgroups#!forum/montagejs" target="_blank">Google Group</a>. We're also on <a href="https://twitter.com/montagejs" target="_blank">Twitter</a> and <a href="https://plus.google.com/116915300739108010954/" target="_blank">Google+</a>.
+                    </p>
+                </aside>
+            </div>
+        </article>
+    </section>
+
+
+    <section id="social" class="social">
+        <article>
+
+            <div class="button-group github">
+                <iframe src="http://ghbtns.com/github-btn.html?user=montagejs&amp;repo=montage&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="90px" height="20px"></iframe>
+                <iframe src="http://ghbtns.com/github-btn.html?user=montagejs&amp;repo=montage&amp;type=fork&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="90px" height="20px"></iframe>
+            </div>
+
+
+            <div class="button-group twitter">
+                <a href="https://twitter.com/share" class="twitter-share-button" data-via="montagejs" data-count="none">Tweet</a>
+                <script>!function(e,t,n){var r,i=e.getElementsByTagName(t)[0];e.getElementById(n)||(r=e.createElement(t),r.id=n,r.src="//platform.twitter.com/widgets.js",i.parentNode.insertBefore(r,i))}(document,"script","twitter-wjs")</script>
+                <a href="https://twitter.com/montagejs" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @montagejs</a>
+                <script>!function(e,t,n){var r,i=e.getElementsByTagName(t)[0];e.getElementById(n)||(r=e.createElement(t),r.id=n,r.src="//platform.twitter.com/widgets.js",i.parentNode.insertBefore(r,i))}(document,"script","twitter-wjs")</script>
+            </div>
+
+            <div class="button-group g-plus">
+                
+                <script src="https://apis.google.com/js/plusone.js">"explicit"</script>
+                
+                <div class="g-plusone" data-size="medium" data-annotation="inline" data-width="200"></div>
+                
+                <script>gapi.plusone.go()</script>
+            </div>
+
+        </article>
+    </section>
+
+
+    <footer class="footer">
+        2013 montagejs.org - <a href="https://github.com/montagejs/montagejs.org">Contributions</a> to this page are welcomed.
+    </footer>
+
+
+    
+    <script>var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-35717912-1"]),_gaq.push(["_trackPageview"]),function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script>
+
+</body>
+</html>

@@ -1,1 +1,0 @@
-montageDefine("8884d39","demo/observable-object-demo",{dependencies:["../observable-object"],factory:function(e,t,n){e("../observable-object");var r={};Object.addOwnPropertyChangeListener(r,"a",function(e,t,n){console.log("changed",e)}),r.a=10,r.a=20}})
