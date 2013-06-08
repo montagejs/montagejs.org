@@ -37,9 +37,15 @@ if (!packageName) {
 
 Q.ninvoke(npm, "load", config)
     .then(function (loadedNpm) {
-        console.log('npm install',  packageName +"@"+ tag);
-        return Q.ninvoke(loadedNpm.commands, "install", [packageName +"@"+ tag]);
-    }).then(function () {
+        if(tag === "npm-link") {
+            console.log('npm link',  packageName);
+            return Q.ninvoke(loadedNpm.commands, "link", [packageName]);
+        } else {
+            console.log('npm install',  packageName +"@"+ tag);
+            return Q.ninvoke(loadedNpm.commands, "install", [packageName +"@"+ tag]);
+        }
+    })
+    .then(function () {
         var jsdocGeneration = Q.defer();
 
         var args = ["-c", path.join(mainPath,"montage.json")];
