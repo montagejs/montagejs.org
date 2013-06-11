@@ -44,7 +44,7 @@ cp -rn "$SOURCE_DIR"/* "$OUT_DIR"
 
 # avoid built-apps directory for npm install because they are manually mopped
 pushd "$OUT_DIR"
-for p in `find . -name package.json -not -wholename './built-apps/*' -prune`; do
+for p in `find .  -mindepth 1 -maxdepth 3 -name package.json -not -wholename './built-apps/*' -prune`; do
     pushd `dirname $p`
     npm install
     popd
@@ -75,7 +75,17 @@ popd
 "$OUT_DIR/node_modules/.bin/mop" "$OUT_DIR"
 
 for a in `find $OUT_DIR/apps -mindepth 1 -maxdepth 1 -type d`; do
-    "$OUT_DIR/node_modules/.bin/mop" "$a"
+    pushd $a
+    export APP_MONTAGE_VERSION=`node -e 'console.log(JSON.parse(require("fs").readFileSync(process.argv[1])).dependencies.montage)' package.json`
+    if [ $APP_MONTAGE_VERSION == "0.12.6" ]
+    then
+        npm install mop@0.12.8
+        "./node_modules/.bin/mop" "$a"
+    else
+        npm install mop@latest
+        "./node_modules/.bin/mop" "$a"
+    fi
+    popd
     # move to the montagejs.org build directory
     mv "$a/builds/"*@* "$OUT_DIR/builds/montagejs.org/apps/"`basename $a`
 done

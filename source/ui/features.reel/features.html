@@ -15,32 +15,33 @@
             },
 
             "number": {
-                "prototype": "montage/ui/input-number.reel",
+                "prototype": "digit/ui/number-field.reel",
                 "properties": {
                     "element": {"#": "number"},
                     "min": 0,
-                    "max": 100
+                    "max": 100,
+                    "step": 1
                 },
                 "bindings": {
                     "value": {
-                        "<->": "@range.value",
-                        "converter": {"@": "owner"}
+                        "<->": "@slider.value"
                     }
                 }                
             },
 
-            "range": {
-                "prototype": "montage/ui/input-range.reel",
+            "slider": {
+                "prototype": "digit/ui/slider.reel",
                 "properties": {
-                    "element": {"#": "range"},
-                    "minValue": 0,
-                    "maxValue": 100,
+                    "element": {"#": "slider"},
+                    "min": 0,
+                    "max": 100,
+                    "step": 1,
                     "value": 50
                 }
             },
 
             "numberValue": {
-                "prototype": "montage/ui/dynamic-text.reel",
+                "prototype": "montage/ui/text.reel",
                 "properties": {
                     "element": {"#": "numberValue"}
                 },
@@ -52,7 +53,7 @@
                 }
             },
             "rangeValue": {
-                "prototype": "montage/ui/dynamic-text.reel",
+                "prototype": "montage/ui/text.reel",
                 "properties": {
                     "element": {"#": "rangeValue"}
                 },
@@ -69,16 +70,16 @@
 </head>
 <body>
 
-    <div data-montage-id="component">
+    <div data-montage-id="component" data-montage-skin="light">
         <div class="cols">
             <p class="col col-2-3">Montage data binding makes it easier to manage your application and UI state. A UI component or Montage object can establish one way or bi-directional binding with another component or object. The source object is kept in sync when you update the bound property of the bound object. Learn more about <a href="docs/Data-binding" target="_blank">data binding</a>.</p>
             <ul class="col col-1-3">
                 <li>
-                    <input data-montage-id="number" type="number" value="0" />
+                    <input data-montage-id="number" type="number" value="50"/>
                 </li>
                 <li class="arrow">↕</li>
                 <li>
-                    <input data-montage-id="range" type="range" value="0" />
+                    <input data-montage-id="slider" type="range" value="50"/>
                 </li>
             </ul>
         </div>
@@ -94,12 +95,12 @@
         <div class="block serialization">
 <pre>
 "number": {
-    "prototype": "montage/ui/input-number.reel",
+    "prototype": "digit/ui/number-field.reel",
     "properties": { "element": {"#": "<span class="hl-number">number</span>"} }
 },
-"range": {
-    "prototype": "montage/ui/input-range.reel",
-    "properties": { "element": {"#": "<span class="hl-range">range</span>"} },
+"slider": {
+    "prototype": "digit/ui/slider.reel",
+    "properties": { "element": {"#": "<span class="hl-range">slider</span>"} },
     <span class="hl-bindings">"bindings": { "value": {"&lt;-&gt;": "@number.value"} }</span>
 }
 </pre>
