@@ -11,12 +11,7 @@
     text-align: center;
 }
 
-.features .montage-InputNumber {
-    text-align: center;
-    width: 100px;
-    font-size: 14px;
-}
-.features .montage-InputRange {
+.features .digit-Slider {
     width: 200px;
 }
 

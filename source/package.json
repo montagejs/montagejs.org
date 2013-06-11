@@ -3,9 +3,10 @@
     "version": "0.0.0",
     "private": true,
     "dependencies": {
-        "montage": "*"
+        "montage": "0.13.0",
+        "digit": "0.2.0-alpha"
     },
     "devDependencies": {
-        "mop": "*"
+        "mop": "0.13.0"
     }
 }

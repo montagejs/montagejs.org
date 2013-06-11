@@ -17,10 +17,12 @@ end
 
 wiki = Gollum::Wiki.new(WIKI_DIR)
 wiki.pages().each { |page|
-  filename = File.join(OUT_DIR, "#{page.filename_stripped}.html")
+  filename = File.join(OUT_DIR, "#{page.filename_stripped.downcase}.html")
   page.formatted_data("utf-8") { |data|
     # replace links to Github with local relative ones
-    data = data.to_s.gsub(LINKS_RE, '"\1.html"')
+    data = data.to_s.gsub(LINKS_RE){|m|
+        "\"#{$1.downcase}.html\""
+    }
     # render the rendered wiki page into a full html document
     doc = Mustache.render(TEMPLATE, :title => page.name, :content => data)
     puts "Write #{filename}"

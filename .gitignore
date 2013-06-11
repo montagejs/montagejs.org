@@ -1,5 +1,6 @@
 generated
 deploy
 /source/node_modules
+/build/jsdoc/node_modules
 .DS_Store
 .idea
