@@ -3,9 +3,9 @@
     "version": "0.0.0",
     "private": true,
     "dependencies": {
-        "montage": "0.13.0-alpha"
+        "montage": "0.13.0"
     },
     "devDependencies": {
-        "mop": "0.13.0-alpha"
+        "mop": "0.13.0"
     }
 }
