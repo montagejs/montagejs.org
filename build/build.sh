@@ -24,7 +24,7 @@ fi
 "$THIS_DIR/generate.rb"
 
 # Home needs to be index for serving
-mv "$OUT_DIR/docs/Home.html" "$OUT_DIR/docs/index.html"
+mv "$OUT_DIR/docs/home.html" "$OUT_DIR/docs/index.html"
 
 # get wiki commit hash
 wiki_hash=`git --git-dir="$WIKI_DIR/.git/" rev-parse --short HEAD`
