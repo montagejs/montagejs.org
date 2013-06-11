@@ -1,1 +1,0 @@
-montageDefine("99effc6","test/integration/test-get-boundary",{dependencies:["../common"],factory:function(e,t,n){var r=e("../common"),i=r.assert,s=e(r.dir.lib+"/form_data");(function(){var t=new s,n=t.getBoundary();i.equal(n,t.getBoundary()),i.equal(n.length,50)})(),function(){var t=new s,n=new s;i.notEqual(t.getBoundary(),n.getBoundary())}()}})

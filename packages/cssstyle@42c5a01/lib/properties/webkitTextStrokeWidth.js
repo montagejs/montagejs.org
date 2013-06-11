@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("-webkit-text-stroke-width",e)},get:function(){return this.getPropertyValue("-webkit-text-stroke-width")},enumerable:!0}

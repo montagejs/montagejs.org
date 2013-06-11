@@ -1,1 +1,0 @@
-function getSerialize(e,t){var n=[];return t=t||function(e,t){return"[Circular]"},function(r,i){var s=i;return typeof i=="object"&&i&&(n.indexOf(i)!==-1?s=t(r,i):n.push(i)),e&&(s=e(r,s)),s}}function stringify(e,t,n,r){return JSON.stringify(e,getSerialize(t,r),n)}module.exports=stringify,stringify.getSerialize=getSerialize

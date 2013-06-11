@@ -1,1 +1,0 @@
-var errors=require("./errors"),types=require("./types"),Reader=require("./reader"),Writer=require("./writer");module.exports={Reader:Reader,Writer:Writer};for(var t in types)types.hasOwnProperty(t)&&(module.exports[t]=types[t]);for(var e in errors)errors.hasOwnProperty(e)&&(module.exports[e]=errors[e])

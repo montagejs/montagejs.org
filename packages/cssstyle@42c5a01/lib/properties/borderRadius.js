@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("border-radius",e)},get:function(){return this.getPropertyValue("border-radius")},enumerable:!0}

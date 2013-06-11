@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("direction",e)},get:function(){return this.getPropertyValue("direction")},enumerable:!0}

@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/overflowY",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("overflow-y",e)},get:function(){return this.getPropertyValue("overflow-y")},enumerable:!0}}})

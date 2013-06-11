@@ -1,1 +1,0 @@
-montageDefine("d8ac640","component.json",{exports:{name:"async",repo:"caolan/async",description:"Higher-order functions and common patterns for asynchronous code",version:"0.1.23",keywords:[],dependencies:{},development:{},main:"lib/async.js",scripts:["lib/async.js"]}})

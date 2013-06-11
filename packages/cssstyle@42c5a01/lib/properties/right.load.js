@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/right",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("right",e)},get:function(){return this.getPropertyValue("right")},enumerable:!0}}})

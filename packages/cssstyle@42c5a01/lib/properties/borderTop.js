@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("border-top",e)},get:function(){return this.getPropertyValue("border-top")},enumerable:!0}

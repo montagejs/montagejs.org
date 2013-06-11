@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("font-variant",e)},get:function(){return this.getPropertyValue("font-variant")},enumerable:!0}

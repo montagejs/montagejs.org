@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("quotes",e)},get:function(){return this.getPropertyValue("quotes")},enumerable:!0}

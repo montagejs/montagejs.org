@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/textLineThroughWidth",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("text-line-through-width",e)},get:function(){return this.getPropertyValue("text-line-through-width")},enumerable:!0}}})

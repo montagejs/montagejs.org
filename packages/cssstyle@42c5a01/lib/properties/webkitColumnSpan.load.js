@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/webkitColumnSpan",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("-webkit-column-span",e)},get:function(){return this.getPropertyValue("-webkit-column-span")},enumerable:!0}}})

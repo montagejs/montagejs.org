@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("-webkit-region-break-inside",e)},get:function(){return this.getPropertyValue("-webkit-region-break-inside")},enumerable:!0}

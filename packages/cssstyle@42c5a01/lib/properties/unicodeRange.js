@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("unicode-range",e)},get:function(){return this.getPropertyValue("unicode-range")},enumerable:!0}

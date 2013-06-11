@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("-webkit-font-feature-settings",e)},get:function(){return this.getPropertyValue("-webkit-font-feature-settings")},enumerable:!0}

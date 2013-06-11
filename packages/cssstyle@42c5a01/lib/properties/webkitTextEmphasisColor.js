@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("-webkit-text-emphasis-color",e)},get:function(){return this.getPropertyValue("-webkit-text-emphasis-color")},enumerable:!0}

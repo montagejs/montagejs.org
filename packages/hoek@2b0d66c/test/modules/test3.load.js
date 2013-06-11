@@ -1,1 +1,0 @@
-montageDefine("2b0d66c","test/modules/test3",{dependencies:[],factory:function(e,t,n){t.z=3}})

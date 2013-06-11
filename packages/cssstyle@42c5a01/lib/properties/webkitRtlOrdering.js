@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("-webkit-rtl-ordering",e)},get:function(){return this.getPropertyValue("-webkit-rtl-ordering")},enumerable:!0}

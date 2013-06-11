@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("list-style-position",e)},get:function(){return this.getPropertyValue("list-style-position")},enumerable:!0}

@@ -1,1 +1,0 @@
-montageDefine("ac0dd66","test/integration/test-delayed-stream-pause",{dependencies:["../common","stream"],factory:function(e,t,n){var r=e("../common"),i=r.assert,s=r.fake.create(),o=r.DelayedStream,u=e("stream").Stream;(function(){var t=new u,n=o.create(t,{pauseStream:!1});s.expect(t,"pause"),n.pause(),s.verify()})()}})

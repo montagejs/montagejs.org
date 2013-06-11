@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("-webkit-border-before-width",e)},get:function(){return this.getPropertyValue("-webkit-border-before-width")},enumerable:!0}

@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("overflow-y",e)},get:function(){return this.getPropertyValue("overflow-y")},enumerable:!0}

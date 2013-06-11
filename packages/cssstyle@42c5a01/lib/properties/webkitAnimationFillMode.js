@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("-webkit-animation-fill-mode",e)},get:function(){return this.getPropertyValue("-webkit-animation-fill-mode")},enumerable:!0}

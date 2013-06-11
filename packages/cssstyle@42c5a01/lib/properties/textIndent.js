@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("text-indent",e)},get:function(){return this.getPropertyValue("text-indent")},enumerable:!0}

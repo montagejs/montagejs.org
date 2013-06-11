@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("-webkit-hyphenate-character",e)},get:function(){return this.getPropertyValue("-webkit-hyphenate-character")},enumerable:!0}

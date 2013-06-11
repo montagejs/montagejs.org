@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/webkitMarginAfterCollapse",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("-webkit-margin-after-collapse",e)},get:function(){return this.getPropertyValue("-webkit-margin-after-collapse")},enumerable:!0}}})

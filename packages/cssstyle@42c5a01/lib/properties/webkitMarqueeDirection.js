@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("-webkit-marquee-direction",e)},get:function(){return this.getPropertyValue("-webkit-marquee-direction")},enumerable:!0}

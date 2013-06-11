@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/textAlign",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("text-align",e)},get:function(){return this.getPropertyValue("text-align")},enumerable:!0}}})

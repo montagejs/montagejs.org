@@ -1,1 +1,0 @@
-montageDefine("95ef556","test/run",{dependencies:["far"],factory:function(e,t,n){var r=e("far").create();r.add(__dirname),r.include(/test-.*\.js$/),r.execute()}})

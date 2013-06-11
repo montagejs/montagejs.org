@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("dominant-baseline",e)},get:function(){return this.getPropertyValue("dominant-baseline")},enumerable:!0}

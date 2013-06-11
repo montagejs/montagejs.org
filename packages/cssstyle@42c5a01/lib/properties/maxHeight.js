@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("max-height",e)},get:function(){return this.getPropertyValue("max-height")},enumerable:!0}

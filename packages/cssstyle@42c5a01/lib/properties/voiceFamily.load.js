@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/voiceFamily",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("voic-family",e)},get:function(){return this.getPropertyValue("voice-family")},enumerable:!0}}})

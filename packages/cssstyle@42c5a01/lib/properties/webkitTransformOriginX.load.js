@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/webkitTransformOriginX",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("-webkit-transform-origin-x",e)},get:function(){return this.getPropertyValue("-webkit-transform-origin-x")},enumerable:!0}}})

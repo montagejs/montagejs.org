@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/webkitBorderEndStyle",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("-webkit-border-end-style",e)},get:function(){return this.getPropertyValue("-webkit-border-end-style")},enumerable:!0}}})

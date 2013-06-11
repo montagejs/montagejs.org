@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("stroke-linecap",e)},get:function(){return this.getPropertyValue("stroke-linecap")},enumerable:!0}

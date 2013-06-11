@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("-webkit-svg-shadow",e)},get:function(){return this.getPropertyValue("-webkit-svg-shadow")},enumerable:!0}

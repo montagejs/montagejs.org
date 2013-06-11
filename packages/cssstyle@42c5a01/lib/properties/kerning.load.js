@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/kerning",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("kerning",e)},get:function(){return this.getPropertyValue("kerning")},enumerable:!0}}})

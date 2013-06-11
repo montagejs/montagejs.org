@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("-webkit-box-direction",e)},get:function(){return this.getPropertyValue("-webkit-box-direction")},enumerable:!0}

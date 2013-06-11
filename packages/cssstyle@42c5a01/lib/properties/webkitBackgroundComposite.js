@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("-webkit-background-composite",e)},get:function(){return this.getPropertyValue("-webkit-background-composite")},enumerable:!0}

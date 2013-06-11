@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/markerOffset",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("marker-offset",e)},get:function(){return this.getPropertyValue("marker-offset")},enumerable:!0}}})

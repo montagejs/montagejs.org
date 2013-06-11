@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("-webkit-transform-origin",e)},get:function(){return this.getPropertyValue("-webkit-transform-origin")},enumerable:!0}

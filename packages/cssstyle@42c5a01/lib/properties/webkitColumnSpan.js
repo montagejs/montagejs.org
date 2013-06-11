@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("-webkit-column-span",e)},get:function(){return this.getPropertyValue("-webkit-column-span")},enumerable:!0}

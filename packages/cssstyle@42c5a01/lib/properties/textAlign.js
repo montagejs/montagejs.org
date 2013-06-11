@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("text-align",e)},get:function(){return this.getPropertyValue("text-align")},enumerable:!0}

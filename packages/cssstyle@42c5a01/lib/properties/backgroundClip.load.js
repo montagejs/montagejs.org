@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/backgroundClip",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("background-clip",e)},get:function(){return this.getPropertyValue("background-clip")},enumerable:!0}}})

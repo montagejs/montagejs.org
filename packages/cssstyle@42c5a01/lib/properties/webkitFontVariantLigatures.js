@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("-webkit-font-variant-ligatures",e)},get:function(){return this.getPropertyValue("-webkit-font-variant-ligatures")},enumerable:!0}

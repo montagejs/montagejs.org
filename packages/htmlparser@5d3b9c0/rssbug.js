@@ -1,1 +1,0 @@
-var sys=require("sys"),fs=require("fs"),htmlparser=require("./node-htmlparser"),rss=fs.readFileSync("rssbug.rss"),handler=new htmlparser.DefaultHandler(function(e,t){e?sys.debug("Error: "+e):sys.debug(sys.inspect(t,!1,null))},{verbose:!1}),parser=new htmlparser.Parser(handler);parser.parseComplete(rss)

@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("-webkit-font-kerning",e)},get:function(){return this.getPropertyValue("-webkit-font-kerning")},enumerable:!0}

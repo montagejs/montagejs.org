@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/webkitMatchNearestMailBlockquoteColor",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("-webkit-match-nearest-mail-blockquote-color",e)},get:function(){return this.getPropertyValue("-webkit-match-nearest-mail-blockquote-color")},enumerable:!0}}})

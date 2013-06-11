@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/wordBreak",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("word-break",e)},get:function(){return this.getPropertyValue("word-break")},enumerable:!0}}})

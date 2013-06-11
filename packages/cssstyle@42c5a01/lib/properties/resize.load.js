@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/resize",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("resize",e)},get:function(){return this.getPropertyValue("resize")},enumerable:!0}}})

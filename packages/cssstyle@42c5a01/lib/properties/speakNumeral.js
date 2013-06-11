@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("speak-numeral",e)},get:function(){return this.getPropertyValue("speak-numeral")},enumerable:!0}

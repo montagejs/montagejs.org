@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("margin-bottom",e)},get:function(){return this.getPropertyValue("margin-bottom")},enumerable:!0}

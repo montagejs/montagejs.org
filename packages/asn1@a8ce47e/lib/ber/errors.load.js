@@ -1,1 +1,0 @@
-montageDefine("a8ce47e","lib/ber/errors",{dependencies:[],factory:function(e,t,n){n.exports={newInvalidAsn1Error:function(e){var t=new Error;return t.name="InvalidAsn1Error",t.message=e||"",t}}}})

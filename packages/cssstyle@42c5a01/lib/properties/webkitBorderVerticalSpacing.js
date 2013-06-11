@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("-webkit-border-vertical-spacing",e)},get:function(){return this.getPropertyValue("-webkit-border-vertical-spacing")},enumerable:!0}

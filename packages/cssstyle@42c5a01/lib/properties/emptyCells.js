@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("empty-cells",e)},get:function(){return this.getPropertyValue("empty-cells")},enumerable:!0}

@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("background-color",e)},get:function(){return this.getPropertyValue("background-color")},enumerable:!0}

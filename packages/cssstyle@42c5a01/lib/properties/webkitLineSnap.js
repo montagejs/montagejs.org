@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("-webkit-line-snap",e)},get:function(){return this.getPropertyValue("-webkit-line-snap")},enumerable:!0}

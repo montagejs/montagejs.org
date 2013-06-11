@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("stroke-dashoffset",e)},get:function(){return this.getPropertyValue("stroke-dashoffset")},enumerable:!0}

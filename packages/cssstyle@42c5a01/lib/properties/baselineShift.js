@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("baseline-shift",e)},get:function(){return this.getPropertyValue("baseline-shift")},enumerable:!0}

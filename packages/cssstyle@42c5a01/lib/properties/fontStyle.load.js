@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/fontStyle",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("font-style",e)},get:function(){return this.getPropertyValue("font-style")},enumerable:!0}}})

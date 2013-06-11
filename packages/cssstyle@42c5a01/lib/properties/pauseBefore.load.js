@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/pauseBefore",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("pause-before",e)},get:function(){return this.getPropertyValue("pause-before")},enumerable:!0}}})

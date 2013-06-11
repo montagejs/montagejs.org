@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("-webkit-transition",e)},get:function(){return this.getPropertyValue("-webkit-transition")},enumerable:!0}

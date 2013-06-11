@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("vertical-align",e)},get:function(){return this.getPropertyValue("vertical-align")},enumerable:!0}

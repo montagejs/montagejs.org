@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/textUnderlineWidth",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("text-underline-width",e)},get:function(){return this.getPropertyValue("text-underline-width")},enumerable:!0}}})

@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("-webkit-mask-box-image-outset",e)},get:function(){return this.getPropertyValue("-webkit-mask-box-image-outset")},enumerable:!0}

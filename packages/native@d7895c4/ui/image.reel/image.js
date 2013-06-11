@@ -1,0 +1,1 @@
+var NativeControl=require("ui/native-control").NativeControl,Image=exports.Image=NativeControl.specialize({});Image.addAttributes({alt:null,height:null,src:null,width:null});

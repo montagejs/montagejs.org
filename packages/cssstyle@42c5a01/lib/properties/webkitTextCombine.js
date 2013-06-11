@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("-webkit-text-combine",e)},get:function(){return this.getPropertyValue("-webkit-text-combine")},enumerable:!0}

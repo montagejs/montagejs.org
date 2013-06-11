@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/clipRule",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("clip-rule",e)},get:function(){return this.getPropertyValue("clip-rule")},enumerable:!0}}})

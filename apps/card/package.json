@@ -1,1 +1,1 @@
-{"name":"card","version":"1.0.0","dependencies":{"montage":"0.12.6"},"directories":{"lib":"./"},"hash":"108ab87","mappings":{"montage":{"name":"montage","hash":"44c1119","location":"packages/montage@44c1119/"}},"production":true,"useScriptInjection":true}
+{"name":"card","version":"1.0.0","dependencies":{"montage":"0.12.6"},"directories":{"lib":"./"},"hash":"578ce18","mappings":{"montage":{"name":"montage","hash":"7feb762","location":"packages/montage@7feb762/"}},"production":true,"useScriptInjection":true}

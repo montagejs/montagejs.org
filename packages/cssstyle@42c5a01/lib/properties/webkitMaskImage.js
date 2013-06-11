@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("-webkit-mask-image",e)},get:function(){return this.getPropertyValue("-webkit-mask-image")},enumerable:!0}

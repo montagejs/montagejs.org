@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("glyph-orientation-horizontal",e)},get:function(){return this.getPropertyValue("glyph-orientation-horizontal")},enumerable:!0}

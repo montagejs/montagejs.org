@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/webkitBorderAfterStyle",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("-webkit-border-after-style",e)},get:function(){return this.getPropertyValue("-webkit-border-after-style")},enumerable:!0}}})

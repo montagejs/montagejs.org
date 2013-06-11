@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("speech-rate",e)},get:function(){return this.getPropertyValue("speech-rate")},enumerable:!0}

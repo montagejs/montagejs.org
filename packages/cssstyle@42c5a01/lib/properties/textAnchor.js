@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("text-anchor",e)},get:function(){return this.getPropertyValue("text-anchor")},enumerable:!0}

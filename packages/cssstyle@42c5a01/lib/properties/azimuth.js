@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("azimuth",e)},get:function(){return this.getPropertyValue("azimuth")},enumerable:!0}

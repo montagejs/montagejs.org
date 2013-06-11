@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/vectorEffect",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("vector-effect",e)},get:function(){return this.getPropertyValue("vector-effect")},enumerable:!0}}})

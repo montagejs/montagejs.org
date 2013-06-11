@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/paddingLeft",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("padding-left",e)},get:function(){return this.getPropertyValue("padding-left")},enumerable:!0}}})

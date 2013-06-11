@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/top",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("top",e)},get:function(){return this.getPropertyValue("top")},enumerable:!0}}})

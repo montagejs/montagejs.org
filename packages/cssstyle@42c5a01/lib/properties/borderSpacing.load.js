@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/borderSpacing",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("border-spacing",e)},get:function(){return this.getPropertyValue("border-spacing")},enumerable:!0}}})

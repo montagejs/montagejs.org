@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/webkitMarginAfter",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("-webkit-margin-after",e)},get:function(){return this.getPropertyValue("-webkit-margin-after")},enumerable:!0}}})

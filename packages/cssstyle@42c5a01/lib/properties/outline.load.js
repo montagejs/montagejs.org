@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/outline",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("outline",e)},get:function(){return this.getPropertyValue("outline")},enumerable:!0}}})

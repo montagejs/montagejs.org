@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/backgroundImage",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("background-image",e)},get:function(){return this.getPropertyValue("background-image")},enumerable:!0}}})

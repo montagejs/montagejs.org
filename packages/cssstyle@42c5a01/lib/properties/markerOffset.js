@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("marker-offset",e)},get:function(){return this.getPropertyValue("marker-offset")},enumerable:!0}

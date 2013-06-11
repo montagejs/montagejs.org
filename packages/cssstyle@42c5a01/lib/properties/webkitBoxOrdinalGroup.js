@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("-webkit-box-ordinal-group",e)},get:function(){return this.getPropertyValue("-webkit-box-ordinal-group")},enumerable:!0}

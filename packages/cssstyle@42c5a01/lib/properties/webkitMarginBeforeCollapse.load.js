@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/webkitMarginBeforeCollapse",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("-webkit-margin-before-collapse",e)},get:function(){return this.getPropertyValue("-webkit-margin-before-collapse")},enumerable:!0}}})

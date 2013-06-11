@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("-webkit-max-logical-height",e)},get:function(){return this.getPropertyValue("-webkit-max-logical-height")},enumerable:!0}

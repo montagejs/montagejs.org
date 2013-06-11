@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("marker-mid",e)},get:function(){return this.getPropertyValue("marker-mid")},enumerable:!0}

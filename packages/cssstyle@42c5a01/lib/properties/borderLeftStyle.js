@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("border-left-style",e)},get:function(){return this.getPropertyValue("border-left-style")},enumerable:!0}

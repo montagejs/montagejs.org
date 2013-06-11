@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/borderLeftStyle",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("border-left-style",e)},get:function(){return this.getPropertyValue("border-left-style")},enumerable:!0}}})

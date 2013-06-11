@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("text-overline-width",e)},get:function(){return this.getPropertyValue("text-overline-width")},enumerable:!0}

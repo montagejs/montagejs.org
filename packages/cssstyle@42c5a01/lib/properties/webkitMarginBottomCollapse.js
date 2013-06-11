@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("-webkit-margin-bottom-collapse",e)},get:function(){return this.getPropertyValue("-webkit-margin-bottom-collapse")},enumerable:!0}

@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("font-size",e)},get:function(){return this.getPropertyValue("font-size")},enumerable:!0}

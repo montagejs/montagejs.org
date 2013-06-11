@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/volume",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("volume",e)},get:function(){return this.getPropertyValue("volume")},enumerable:!0}}})

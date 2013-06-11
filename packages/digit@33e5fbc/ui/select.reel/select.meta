@@ -1,0 +1,22 @@
+{
+    "blueprint_parent": {
+        "prototype": "montage/core/meta/blueprint-reference",
+        "properties": {
+            "valueReference": {
+                "blueprintName": "AbstractSelect",
+                "blueprintModuleId": "montage/ui/base/abstract-select.meta",
+                "prototypeName": "AbstractSelect"
+            }
+        }
+    },
+
+    "root": {
+        "prototype": "montage/core/meta/blueprint",
+        "properties": {
+            "name": "Select",
+            "blueprintModuleId": "ui/select.reel/select.meta",
+            "prototypeName": "Select",
+            "parent": {"@": "blueprint_parent"}
+        }
+    }
+}

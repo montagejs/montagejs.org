@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/outlineColor",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("outline-color",e)},get:function(){return this.getPropertyValue("outline-color")},enumerable:!0}}})

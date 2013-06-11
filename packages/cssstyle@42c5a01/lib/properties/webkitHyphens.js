@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("-webkit-hyphens",e)},get:function(){return this.getPropertyValue("-webkit-hyphens")},enumerable:!0}

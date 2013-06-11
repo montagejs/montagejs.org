@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/webkitBoxDirection",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("-webkit-box-direction",e)},get:function(){return this.getPropertyValue("-webkit-box-direction")},enumerable:!0}}})

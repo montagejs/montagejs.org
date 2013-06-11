@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/lineHeight",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("line-height",e)},get:function(){return this.getPropertyValue("line-height")},enumerable:!0}}})

@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("float",e)},get:function(){return this.getPropertyValue("float")},enumerable:!0}

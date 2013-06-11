@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/floodColor",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("flood-color",e)},get:function(){return this.getPropertyValue("flood-color")},enumerable:!0}}})

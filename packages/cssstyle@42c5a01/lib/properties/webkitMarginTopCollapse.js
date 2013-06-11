@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("-webkit-margin-top-collapse",e)},get:function(){return this.getPropertyValue("-webkit-margin-top-collapse")},enumerable:!0}

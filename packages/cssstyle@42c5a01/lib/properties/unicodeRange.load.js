@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/unicodeRange",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("unicode-range",e)},get:function(){return this.getPropertyValue("unicode-range")},enumerable:!0}}})

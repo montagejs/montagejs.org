@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("lighting-color",e)},get:function(){return this.getPropertyValue("lighting-color")},enumerable:!0}

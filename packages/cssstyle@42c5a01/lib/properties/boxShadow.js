@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("box-shadow",e)},get:function(){return this.getPropertyValue("box-shadow")},enumerable:!0}

@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("page-break-inside",e)},get:function(){return this.getPropertyValue("page-break-inside")},enumerable:!0}

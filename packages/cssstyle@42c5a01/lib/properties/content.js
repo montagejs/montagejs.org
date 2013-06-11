@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("content",e)},get:function(){return this.getPropertyValue("content")},enumerable:!0}

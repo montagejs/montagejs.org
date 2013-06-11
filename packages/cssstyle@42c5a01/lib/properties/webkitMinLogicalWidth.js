@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("-webkit-min-logical-width",e)},get:function(){return this.getPropertyValue("-webkit-min-logical-width")},enumerable:!0}

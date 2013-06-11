@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("volume",e)},get:function(){return this.getPropertyValue("volume")},enumerable:!0}

@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("border-width",e)},get:function(){return this.getPropertyValue("border-width")},enumerable:!0}

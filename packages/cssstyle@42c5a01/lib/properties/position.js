@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("position",e)},get:function(){return this.getPropertyValue("position")},enumerable:!0}

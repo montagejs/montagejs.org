@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("-webkit-text-decorations-in-effect",e)},get:function(){return this.getPropertyValue("-webkit-text-decorations-in-effect")},enumerable:!0}

@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/fill",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("fill",e)},get:function(){return this.getPropertyValue("fill")},enumerable:!0}}})

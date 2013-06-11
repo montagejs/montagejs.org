@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("filter",e)},get:function(){return this.getPropertyValue("filter")},enumerable:!0}

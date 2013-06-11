@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("-webkit-margin-after",e)},get:function(){return this.getPropertyValue("-webkit-margin-after")},enumerable:!0}

@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/shapeRendering",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("shape-rendering",e)},get:function(){return this.getPropertyValue("shape-rendering")},enumerable:!0}}})

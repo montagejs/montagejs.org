@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("-webkit-box-pack",e)},get:function(){return this.getPropertyValue("-webkit-box-pack")},enumerable:!0}

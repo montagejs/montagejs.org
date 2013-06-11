@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/paddingBottom",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("padding-bottom",e)},get:function(){return this.getPropertyValue("padding-bottom")},enumerable:!0}}})

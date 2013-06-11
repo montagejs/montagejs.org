@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("-webkit-column-axis",e)},get:function(){return this.getPropertyValue("-webkit-column-axis")},enumerable:!0}

@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("-webkit-animation-timing-function",e)},get:function(){return this.getPropertyValue("-webkit-animation-timing-function")},enumerable:!0}

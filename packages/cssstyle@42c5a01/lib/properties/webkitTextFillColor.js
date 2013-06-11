@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("-webkit-text-fill-color",e)},get:function(){return this.getPropertyValue("-webkit-text-fill-color")},enumerable:!0}

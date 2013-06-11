@@ -1,1 +1,0 @@
-montageDefine("99effc6","test/common",{dependencies:["path","assert","fake"],factory:function(e,t,n){var r=n.exports,i=e("path"),s=i.join(__dirname,"..");r.dir={lib:s+"/lib",fixture:s+"/test/fixture",tmp:s+"/test/tmp"},r.assert=e("assert"),r.fake=e("fake"),r.port=8432}})

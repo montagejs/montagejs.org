@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("stroke-miterlimit",e)},get:function(){return this.getPropertyValue("stroke-miterlimit")},enumerable:!0}

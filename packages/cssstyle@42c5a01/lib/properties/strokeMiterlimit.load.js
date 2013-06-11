@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/strokeMiterlimit",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("stroke-miterlimit",e)},get:function(){return this.getPropertyValue("stroke-miterlimit")},enumerable:!0}}})

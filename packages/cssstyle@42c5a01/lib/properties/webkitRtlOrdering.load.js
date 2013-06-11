@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/webkitRtlOrdering",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("-webkit-rtl-ordering",e)},get:function(){return this.getPropertyValue("-webkit-rtl-ordering")},enumerable:!0}}})

@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("stop-color",e)},get:function(){return this.getPropertyValue("stop-color")},enumerable:!0}

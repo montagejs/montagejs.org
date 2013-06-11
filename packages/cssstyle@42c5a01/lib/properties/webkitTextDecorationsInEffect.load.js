@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/webkitTextDecorationsInEffect",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("-webkit-text-decorations-in-effect",e)},get:function(){return this.getPropertyValue("-webkit-text-decorations-in-effect")},enumerable:!0}}})

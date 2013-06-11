@@ -1,1 +1,0 @@
-montageDefine("6b26a70","tests/test-s3",{dependencies:["../index"],factory:function(e,t,n){var r=e("../index"),i=r.get("https://log.curlybracecast.com.s3.amazonaws.com/",{aws:{key:"AKIAI6KIQRRVMGK3WK5Q",secret:"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",bucket:"log.curlybracecast.com"}},function(e,t,n){console.log(i.headers),console.log(n)})}})

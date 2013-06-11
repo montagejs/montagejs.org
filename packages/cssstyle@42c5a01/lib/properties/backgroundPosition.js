@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("background-position",e)},get:function(){return this.getPropertyValue("background-position")},enumerable:!0}

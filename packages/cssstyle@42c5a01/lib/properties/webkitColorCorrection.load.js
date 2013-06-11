@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/webkitColorCorrection",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("-webkit-color-correction",e)},get:function(){return this.getPropertyValue("-webkit-color-correction")},enumerable:!0}}})

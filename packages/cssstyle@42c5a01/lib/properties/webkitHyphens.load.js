@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/webkitHyphens",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("-webkit-hyphens",e)},get:function(){return this.getPropertyValue("-webkit-hyphens")},enumerable:!0}}})

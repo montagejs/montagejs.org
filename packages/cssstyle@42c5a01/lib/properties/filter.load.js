@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/filter",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("filter",e)},get:function(){return this.getPropertyValue("filter")},enumerable:!0}}})

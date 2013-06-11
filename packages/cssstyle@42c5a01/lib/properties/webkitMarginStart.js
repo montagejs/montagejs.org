@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("-webkit-margin-start",e)},get:function(){return this.getPropertyValue("-webkit-margin-start")},enumerable:!0}

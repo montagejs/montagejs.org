@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/webkitMarqueeStyle",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("-webkit-marquee-style",e)},get:function(){return this.getPropertyValue("-webkit-marquee-style")},enumerable:!0}}})

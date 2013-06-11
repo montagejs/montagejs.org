@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("-webkit-mask-composite",e)},get:function(){return this.getPropertyValue("-webkit-mask-composite")},enumerable:!0}

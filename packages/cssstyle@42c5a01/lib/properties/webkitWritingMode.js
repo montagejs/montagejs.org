@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("-webkit-writing-mode",e)},get:function(){return this.getPropertyValue("-webkit-writing-mode")},enumerable:!0}

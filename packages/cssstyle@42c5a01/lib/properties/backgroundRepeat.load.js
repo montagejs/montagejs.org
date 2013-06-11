@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/backgroundRepeat",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("background-repeat",e)},get:function(){return this.getPropertyValue("background-repeat")},enumerable:!0}}})

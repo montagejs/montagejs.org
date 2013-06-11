@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/webkitWrapThrough",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("-webkit-wrap-through",e)},get:function(){return this.getPropertyValue("-webkit-wrap-through")},enumerable:!0}}})

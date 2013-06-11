@@ -1,1 +1,0 @@
-montageDefine("5d3b9c0","tmp/snippet",{dependencies:["sys","htmlparser"],factory:function(e,t,n){var r=e("sys"),i=e("htmlparser"),s="<html><body><p>foo</p></body></html>",o=new i.DefaultHandler(function(e,t){e?r.debug("Error: "+e):r.debug(r.inspect(t,!1,null))},{enforceEmptyTags:!0}),u=new i.Parser(o);u.parseComplete(s)}})

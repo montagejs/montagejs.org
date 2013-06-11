@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("elevation",e)},get:function(){return this.getPropertyValue("elevation")},enumerable:!0}

@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/listStyleType",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("list-style-type",e)},get:function(){return this.getPropertyValue("list-style-type")},enumerable:!0}}})

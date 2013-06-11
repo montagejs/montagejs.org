@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("-webkit-flex-item-align",e)},get:function(){return this.getPropertyValue("-webkit-flex-item-align")},enumerable:!0}

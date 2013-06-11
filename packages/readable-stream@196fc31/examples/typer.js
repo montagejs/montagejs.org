@@ -1,0 +1,1 @@
+var fs=require("fs"),fst=fs.createReadStream(__filename),Readable=require("../readable.js"),rst=new Readable;rst.wrap(fst),rst.on("end",function(){process.stdin.pause()}),process.stdin.setRawMode(!0),process.stdin.on("data",function(){var e=rst.read(3);return e?(process.stdout.write(e),void 0):setTimeout(process.exit,500)}),process.stdin.resume();

@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("outline-color",e)},get:function(){return this.getPropertyValue("outline-color")},enumerable:!0}

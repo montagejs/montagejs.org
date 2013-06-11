@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/markerEnd",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("marker-end",e)},get:function(){return this.getPropertyValue("marker-end")},enumerable:!0}}})

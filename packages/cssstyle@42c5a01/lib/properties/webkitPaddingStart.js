@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("-webkit-padding-start",e)},get:function(){return this.getPropertyValue("-webkit-padding-start")},enumerable:!0}

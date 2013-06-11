@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("-webkit-highlight",e)},get:function(){return this.getPropertyValue("-webkit-highlight")},enumerable:!0}

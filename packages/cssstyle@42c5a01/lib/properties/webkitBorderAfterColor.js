@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("-webkit-border-after-color",e)},get:function(){return this.getPropertyValue("-webkit-border-after-color")},enumerable:!0}

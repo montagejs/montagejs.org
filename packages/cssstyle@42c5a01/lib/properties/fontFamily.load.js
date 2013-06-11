@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/fontFamily",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("font-family",e)},get:function(){return this.getPropertyValue("font-family")},enumerable:!0}}})

@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/textShadow",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("text-shadow",e)},get:function(){return this.getPropertyValue("text-shadow")},enumerable:!0}}})

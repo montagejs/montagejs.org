@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("-webkit-wrap-padding",e)},get:function(){return this.getPropertyValue("-webkit-wrap-padding")},enumerable:!0}

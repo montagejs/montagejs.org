@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/webkitMarqueeDirection",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("-webkit-marquee-direction",e)},get:function(){return this.getPropertyValue("-webkit-marquee-direction")},enumerable:!0}}})

@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("widows",e)},get:function(){return this.getPropertyValue("widows")},enumerable:!0}

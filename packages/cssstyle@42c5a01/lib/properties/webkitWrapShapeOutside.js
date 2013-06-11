@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("-webkit-wrap-shape-outside",e)},get:function(){return this.getPropertyValue("-webkit-wrap-shape-outside")},enumerable:!0}

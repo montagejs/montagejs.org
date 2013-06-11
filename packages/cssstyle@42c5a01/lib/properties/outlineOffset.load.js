@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/outlineOffset",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("outline-offset",e)},get:function(){return this.getPropertyValue("outline-offset")},enumerable:!0}}})

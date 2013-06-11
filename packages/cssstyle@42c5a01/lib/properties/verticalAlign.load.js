@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/verticalAlign",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("vertical-align",e)},get:function(){return this.getPropertyValue("vertical-align")},enumerable:!0}}})

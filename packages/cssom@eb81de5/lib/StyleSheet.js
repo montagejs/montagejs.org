@@ -1,1 +1,0 @@
-var CSSOM={};CSSOM.StyleSheet=function(){this.parentStyleSheet=null},exports.StyleSheet=CSSOM.StyleSheet

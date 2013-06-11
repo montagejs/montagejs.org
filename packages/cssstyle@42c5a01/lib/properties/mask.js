@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("mask",e)},get:function(){return this.getPropertyValue("mask")},enumerable:!0}

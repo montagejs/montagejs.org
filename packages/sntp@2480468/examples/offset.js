@@ -1,1 +1,0 @@
-var Sntp=require("../lib");Sntp.offset(function(e,t){console.log(t),Sntp.offset(function(e,t){console.log(t)})})

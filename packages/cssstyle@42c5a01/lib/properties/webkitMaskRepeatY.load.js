@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/webkitMaskRepeatY",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("-webkit-mask-repeat-y",e)},get:function(){return this.getPropertyValue("-webkit-mask-repeat-y")},enumerable:!0}}})

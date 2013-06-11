@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("pointer-events",e)},get:function(){return this.getPropertyValue("pointer-events")},enumerable:!0}

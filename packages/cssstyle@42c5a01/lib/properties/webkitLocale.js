@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("-webkit-locale",e)},get:function(){return this.getPropertyValue("-webkit-locale")},enumerable:!0}

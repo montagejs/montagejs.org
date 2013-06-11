@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/backgroundOrigin",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("background-origin",e)},get:function(){return this.getPropertyValue("background-origin")},enumerable:!0}}})

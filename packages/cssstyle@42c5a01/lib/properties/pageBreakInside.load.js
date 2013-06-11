@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/pageBreakInside",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("page-break-inside",e)},get:function(){return this.getPropertyValue("page-break-inside")},enumerable:!0}}})

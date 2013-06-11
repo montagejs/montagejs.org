@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/marginLeft",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("margin-left",e)},get:function(){return this.getPropertyValue("margin-left")},enumerable:!0}}})

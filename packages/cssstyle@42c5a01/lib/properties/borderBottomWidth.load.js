@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/borderBottomWidth",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("border-bottom-width",e)},get:function(){return this.getPropertyValue("border-bottom-width")},enumerable:!0}}})

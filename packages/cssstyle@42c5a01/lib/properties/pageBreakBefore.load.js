@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/pageBreakBefore",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("page-break-before",e)},get:function(){return this.getPropertyValue("page-break-before")},enumerable:!0}}})

@@ -1,1 +1,0 @@
-var common=require("../common"),assert=common.assert,fake=common.fake.create(),DelayedStream=common.DelayedStream,Stream=require("stream").Stream;(function(){var t=new Stream,n=DelayedStream.create(t,{maxDataSize:1024,pauseStream:!1});t.emit("data",new Buffer(1024)),fake.expect(n,"emit").withArg(1,"error"),t.emit("data",new Buffer(1)),fake.verify()})()

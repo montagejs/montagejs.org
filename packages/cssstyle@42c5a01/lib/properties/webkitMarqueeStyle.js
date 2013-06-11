@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("-webkit-marquee-style",e)},get:function(){return this.getPropertyValue("-webkit-marquee-style")},enumerable:!0}

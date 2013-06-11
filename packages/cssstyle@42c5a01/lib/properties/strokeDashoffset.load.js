@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/strokeDashoffset",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("stroke-dashoffset",e)},get:function(){return this.getPropertyValue("stroke-dashoffset")},enumerable:!0}}})

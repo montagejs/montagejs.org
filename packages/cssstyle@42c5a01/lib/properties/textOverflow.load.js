@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/textOverflow",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("text-overflow",e)},get:function(){return this.getPropertyValue("text-overflow")},enumerable:!0}}})

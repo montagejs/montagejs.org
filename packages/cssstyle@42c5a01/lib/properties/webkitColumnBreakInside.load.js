@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/webkitColumnBreakInside",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("-webkit-column-break-inside",e)},get:function(){return this.getPropertyValue("-webkit-column-break-inside")},enumerable:!0}}})

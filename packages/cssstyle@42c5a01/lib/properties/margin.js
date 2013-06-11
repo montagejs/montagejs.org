@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("margin",e)},get:function(){return this.getPropertyValue("margin")},enumerable:!0}

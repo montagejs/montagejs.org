@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/stopColor",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("stop-color",e)},get:function(){return this.getPropertyValue("stop-color")},enumerable:!0}}})

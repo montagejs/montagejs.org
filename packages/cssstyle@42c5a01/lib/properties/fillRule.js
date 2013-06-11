@@ -1,1 +1,0 @@
-"use strict";module.exports={set:function(e){this.setProperty("fill-rule",e)},get:function(){return this.getPropertyValue("fill-rule")},enumerable:!0}

@@ -1,1 +1,0 @@
-montageDefine("42c5a01","lib/properties/webkitLineAlign",{dependencies:[],factory:function(e,t,n){"use strict";n.exports={set:function(e){this.setProperty("-webkit-line-align",e)},get:function(){return this.getPropertyValue("-webkit-line-align")},enumerable:!0}}})
