@@ -6,6 +6,6 @@
         "montage": "0.13.0"
     },
     "devDependencies": {
-        "mop": "0.13.0"
+        "mop": "0.13.0-alpha"
     }
 }
