@@ -35,41 +35,61 @@
 <h1>Naming Conventions<a class="anchor" id="Naming-Conventions" href="#Naming-Conventions"></a>
 </h1>
 
+<p>This document summarizes Montage-specific naming conventions and recommendations for modules, components, and CSS classes. </p>
+
 <h2>Modules<a class="anchor" id="Modules" href="#Modules"></a>
 </h2>
 
-<ol>
-<li>All module names and package names are <code>lower-case</code>, that is all terms are lower-case words or numbers delimited by hyphens.</li>
-</ol><h2>Reels<a class="anchor" id="Reels" href="#Reels"></a>
+<p>All module and package names are written in lowercase letters or numbers and delimited by dashes.</p>
+
+<h2>Components<a class="anchor" id="Components" href="#Components"></a>
 </h2>
 
-<ol>
-<li>If there is an official W3C HTML element we use that name, like <code>button</code> for a <code>&lt;button&gt;</code>
-</li>
-<li>If there is no official equivalent we can make up a name, like <code>toggle-switch</code>
-</li>
-<li>For input elements we use an <code>"element-type"</code> pattern, like <code>input-range</code>, <code>input-radio</code>, <code>input-color</code>.</li>
-</ol><h2>CSS<a class="anchor" id="CSS" href="#CSS"></a>
-</h2>
+<p>User interface components are stored in the ui directory of your montage project and identified by a .reel extension. </p>
 
-<p>Class names follow a <code>org-Component</code> and <code>org-Component-childElement</code> pattern. So for the progress bar it would be: <code>montage-Progress</code> and <code>montage-Progress-bar</code>.</p>
-
-<p>Here a guide with more details:</p>
-
-<ol>
-<li>All CSS classes are namespaced with <strong>montage</strong> + a <strong>dash</strong>, like <code>montage-</code>.</li>
-<li>After follows the component name in <strong>CamelCase</strong> (same as the JS class), like <code>montage-Button</code>, <code>montage-InputRange</code>.</li>
-<li>If the component has <strong>child elements</strong>, they get added to a component’s name with a dash, like <code>montage-InputRange-thumb</code>. Note: that child elements start with lower case to make the distinction between component and child element more clear.</li>
-<li>If a child element needs to have a name that contains multiple words, <strong>camelCase</strong> is used: <code>montage-InputRange-thumbWithSpikyEars</code>.</li>
-<li>If child elements have child elements themselves. They also get appended with a dash and the same rules as in point 3 + 4 applies, like <code>montage-InputRange-thumb-nobs-centerNob</code>. There is <strong>no limit</strong> to how many levels of child elements can be used, but if the whole CSS class becomes too long, it might be a good idea to <strong>break</strong> it into sub-components.</li>
-<li>If a class name represents a <strong>state</strong> or a <strong>variation</strong>, double dash is used, like <code>montage-InputRange--dragging</code>, <code>montage-Button--pressed</code> or variations <code>montage-Button--big</code>, <code>montage-Button--primary</code>.</li>
-</ol><p>For the reasoning of this naming convention, see this <a href="https://github.com/montagejs/montage/issues/795">discussion</a>. In short:</p>
+<p>The following naming conventions apply for <code>.reel</code> directories:</p>
 
 <ul>
-<li>The goal was to make it easy to see the <strong>markup structure</strong> by just looking at the CSS name.</li>
-<li>It also has good usability because you can double-click <strong>each part</strong> to quickly select/edit them. That's why no <code>_</code> underscores are used. Try <code>montage-InputRange-thumb</code> vs <code>montage_InputRange_thumb</code>.</li>
-<li>And by using a single selector, it avoids <strong>name collisions</strong> (less likely to leak-in/out).</li>
-</ul><p><strong>TODO</strong>: Should we still be using global state classes like: <code>.montage--hidden</code>? Or should it be only on a component basis, like <code>.montage-Button--hidden</code>. The later might be better since it allows for different "hiding" strategies (display:none, visibility:hidden, transform, or opacity..).</p>
+<li>Component names are always spelled in lowercase letters.</li>
+<li>If an official W3C HTML element exists, the component's name matches the name of that element; for example, <code>button</code> (<code>button.reel</code>) for a <code>&lt;button&gt;</code>.</li>
+<li>If an official HTML equivalent does not exist, assign a name that captures the function or meaning of the component; for example, <code>toggle-switch</code>.</li>
+<li>For input elements we use a dash-delimited <code>"element-type"</code> pattern; for example, <code>input-range</code>, <code>input-radio</code>, or <code>input-color</code>.</li>
+</ul><h2>CSS Classes<a class="anchor" id="CSS-Classes" href="#CSS-Classes"></a>
+</h2>
+
+<p>MontageJS standardizes on a CSS class naming convention whereby the names follow a dash-delimited <code>org-Component</code> and <code>org-Component-childElement</code> pattern. For example, for the progress bar it would be: <code>montage-Progress</code> and <code>montage-Progress-bar</code>.</p>
+
+<p>More specifically, the following conventions apply:</p>
+
+<ol>
+<li>All CSS classes are prefixed with <strong>montage</strong> + <strong>dash</strong>: <code>montage-</code>.</li>
+<li>
+<p>Component names follow the namespace identifier (<code>montage-</code>) and always start with an uppercase letter; for example, <code>montage-Button</code>. </p>
+
+<p></p>
+<div class="highlight"><pre><span class="o">&lt;</span><span class="n">button</span> <span class="n">data</span><span class="o">-</span><span class="n">montage</span><span class="o">-</span><span class="n">id</span> <span class="s">"button"</span> <span class="n">class</span><span class="o">=</span><span class="s">"montage-Button"</span><span class="o">&gt;</span>
+</pre></div>
+
+<p>If a component name consists of more than one word, each new word also starts with an uppercase letter, a convention commonly  referred to as <strong>upper camel case</strong> ("CamelCaps") formatting; for example, <code>montage-Button</code>, <code>montage-InputRange</code>.</p>
+</li>
+<li>
+<p>Composite components (components with children) follow this convention:</p>
+
+<ul>
+<li>If a component has a <strong>child element</strong>, the child's name is written in lowercase (to signal the distinction between parent and child) and follows the component’s name separated by a dash; for example, <code>montage-InputRange-thumb</code>. Be sure to use the same name for children as the native pseudo (Shadow DOM) elements if known; for example: -webkit-progress-**bar**. Angelina Fabbro put together a nice reference <a href="https://gist.github.com/3759334">list</a> of pseudo element selectors used in WebKit.</li>
+<li>If a child element consists of concatenated words, its name is written in lower camelCase; for example, <code>montage-InputRange-thumbWithSpikyEars</code>.</li>
+<li>If a component has multiple levels of child elements, each child is separated from the other by a dash; for example, <code>montage-InputRange-thumb-nobs-centerNob</code>.</li>
+</ul>
+<p><strong>Note:</strong> There is <strong>no limit</strong> as to how many levels of child elements can be used, but if the whole CSS class becomes too long, it might be a good idea to <strong>break</strong> it into subcomponents.</p>
+</li>
+<li><p>If a class name represents a <strong>state</strong> or a <strong>variation</strong>, a double-dash is used; for example, (states) <code>montage-InputRange--dragging</code>, <code>montage-Button--pressed</code> or (variations) <code>montage-Button--big</code>, <code>montage-Button--primary</code>.</p></li>
+</ol><p>We chose these conventions for the following reasons:</p>
+
+<ul>
+<li>To reduce the effort to read and understand the markup structure of our source code.</li>
+<li>To increase code usability because you can double-click each part of the code to quickly select and edit it. (Try it for yourself: <code>montage-InputRange-thumb</code> versus <code>montage_InputRange_thumb</code>.)</li>
+<li>To avoid name collisions due to multiple selectors.</li>
+</ul>
 
                 </div>
         </article>

@@ -1,1 +1,0 @@
-montageDefine("13ca2d3","mousse",{dependencies:["./serialization/serializer","./deserialization/deserializer"],factory:function(e,t){var n=e("./serialization/serializer"),a=e("./deserialization/deserializer");t.Serializer=n.Serializer,t.serialize=n.serialize,t.Deserializer=a.Deserializer,t.deserialize=a.deserialize}});

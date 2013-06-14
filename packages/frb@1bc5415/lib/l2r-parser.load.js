@@ -1,0 +1,1 @@
+montageDefine("1bc5415","lib/l2r-parser",{dependencies:[],factory:function(e,t,n){function a(e,t,n){var a=function(s,i){return i?t(function(t){return t?e(function(e){return a(s,n(t,i,e))}):s(i)}):e(function(e){return a(s,e)})};return a}n.exports=a}});
