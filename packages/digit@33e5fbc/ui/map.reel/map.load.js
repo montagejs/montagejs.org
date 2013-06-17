@@ -1,1 +1,0 @@
-montageDefine("33e5fbc","ui/map.reel/map",{dependencies:["montage/core/core","montage/ui/component"],factory:function(e,t){var n=e("montage/core/core").Montage,a=e("montage/ui/component").Component;t.Map=n.create(a,{enterDocument:{value:function(e){e&&this._element.addEventListener("click",function(){this.classList.toggle("digit-Map-link--show")},!0)}}})}});
