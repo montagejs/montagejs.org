@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+<testsuite name="jasmine-promise" errors="0" tests="5" failures="0" time="0.142" timestamp="2013-06-19T17:27:08">
+  <testcase classname="jasmine-promise" name="passes if the deferred resolves immediately" time="0.005"></testcase>
+  <testcase classname="jasmine-promise" name="passes if the deferred resolves after a short delay" time="0.114"></testcase>
+  <testcase classname="jasmine-promise" name="lets specs that return nothing pass" time="0"></testcase>
+  <testcase classname="jasmine-promise" name="lets specs that return non-promises pass" time="0.001"></testcase>
+  <testcase classname="jasmine-promise" name="works ok with specs that return crappy non-Q promises" time="0.001"></testcase>
+</testsuite>
+</testsuites>

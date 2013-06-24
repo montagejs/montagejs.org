@@ -1,1 +1,0 @@
-montageDefine("baac5fa","core/extras/regexp",{dependencies:[],factory:function(){if(!RegExp.isRegExp){var e=Object.prototype.toString;Object.defineProperty(RegExp,"isRegExp",{value:function(n){return"[object RegExp]"===e.call(n)},writable:!0,configurable:!0})}}});

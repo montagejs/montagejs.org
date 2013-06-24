@@ -1,1 +1,0 @@
-montageDefine("cda8317","evaluate",{dependencies:["./parse","./compile-evaluator","./scope"],factory:function(e,t,n){function a(e,t,n,a,o){var l;l="string"==typeof e?s(e):e;var c=r(l);return c(new i(t,null,n,a,o))}var s=e("./parse"),r=e("./compile-evaluator"),i=e("./scope");n.exports=a}});
