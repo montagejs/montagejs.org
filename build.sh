@@ -77,7 +77,7 @@ popd
 for a in `find $OUT_DIR/apps -mindepth 1 -maxdepth 1 -type d`; do
     pushd $a
     export APP_MONTAGE_VERSION=`node -e 'console.log(JSON.parse(require("fs").readFileSync(process.argv[1])).dependencies.montage)' package.json`
-    if [ $APP_MONTAGE_VERSION == "0.12.6" ]
+    if [[ $APP_MONTAGE_VERSION == 0.12* ]]
     then
         npm install mop@0.12.8
         "./node_modules/.bin/mop" "$a"
