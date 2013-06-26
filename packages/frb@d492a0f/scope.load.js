@@ -1,1 +1,0 @@
-montageDefine("d492a0f","scope",{dependencies:[],factory:function(e,t,n){function a(e,t,n,a,s,i){this.value=e,this.parent=t,this.parameters=n,this.document=a,this.components=s,this.beforeChange=i}n.exports=a,a.nest=function(e,t){return e=e||new a,new a(t,e,e.parameters,e.document,e.components,e.beforeChange)}}});
