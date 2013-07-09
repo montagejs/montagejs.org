@@ -1,0 +1,1 @@
+montageDefine("8426b5a","ui/tab-bar.reel/tab-bar",{dependencies:["montage/core/core","montage/ui/component"],factory:function(e,t){var n=e("montage/core/core").Montage,a=e("montage/ui/component").Component;t.TabBar=n.create(a,{})}});
