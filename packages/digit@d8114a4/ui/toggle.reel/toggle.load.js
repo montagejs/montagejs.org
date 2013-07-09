@@ -1,1 +1,0 @@
-montageDefine("d8114a4","ui/toggle.reel/toggle",{dependencies:["montage/core/core","montage/ui/component"],factory:function(e,t){var n=e("montage/core/core").Montage,a=e("montage/ui/component").Component;t.Toggle=n.create(a,{enterDocument:{value:function(e){e&&this._element.addEventListener("click",function(){this.classList.toggle("digit-Toggle--checked")},!0)}}})}});

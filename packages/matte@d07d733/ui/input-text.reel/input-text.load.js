@@ -1,1 +1,0 @@
-montageDefine("d07d733","ui/input-text.reel/input-text",{dependencies:["native/ui/input-text.reel"],factory:function(e,t){var n=e("native/ui/input-text.reel").InputText;t.InputText=n.specialize({hasTemplate:{value:!0},constructor:{value:function(){this.super(),this.classList.add("matte-InputText")}}})}});

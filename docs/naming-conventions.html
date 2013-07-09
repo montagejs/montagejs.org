@@ -35,17 +35,26 @@
 <h1>Naming Conventions<a class="anchor" id="Naming-Conventions" href="#Naming-Conventions"></a>
 </h1>
 
-<p>This document summarizes Montage-specific naming conventions and recommendations for modules, components, and CSS classes. </p>
+<p>This document summarizes MontageJS-specific naming conventions and recommendations for modules, components, and CSS classes. Please refer to these conventions when creating MontageJS packages or contributing to the MontageJS framework.</p>
 
-<h2>Modules<a class="anchor" id="Modules" href="#Modules"></a>
+<h2>Rationale<a class="anchor" id="Rationale" href="#Rationale"></a>
 </h2>
 
-<p>All module and package names are written in lowercase letters or numbers and delimited by dashes.</p>
+<p>We chose these conventions for the following reasons:</p>
+
+<ul>
+<li>To reduce the effort to read and understand the markup structure of our source code.</li>
+<li>To increase code usability because you can double-click each part of the code to quickly select and edit it. (Try it: <code>montage-InputRange-thumb</code> versus <code>montage_InputRange_thumb</code>.)</li>
+<li>To avoid name collisions due to multiple selectors.</li>
+</ul><h2>Modules<a class="anchor" id="Modules" href="#Modules"></a>
+</h2>
+
+<p>All module and package names are written in lowercase letters or numbers and delimited by dashes (for example, child-package).</p>
 
 <h2>Components<a class="anchor" id="Components" href="#Components"></a>
 </h2>
 
-<p>User interface components are stored in the ui directory of your montage project and identified by a .reel extension. </p>
+<p>User interface components are stored in the ui directory of your MontageJS project and identified by a .reel extension. </p>
 
 <p>The following naming conventions apply for <code>.reel</code> directories:</p>
 
@@ -53,11 +62,11 @@
 <li>Component names are always spelled in lowercase letters.</li>
 <li>If an official W3C HTML element exists, the component's name matches the name of that element; for example, <code>button</code> (<code>button.reel</code>) for a <code>&lt;button&gt;</code>.</li>
 <li>If an official HTML equivalent does not exist, assign a name that captures the function or meaning of the component; for example, <code>toggle-switch</code>.</li>
-<li>For input elements we use a dash-delimited <code>"element-type"</code> pattern; for example, <code>input-range</code>, <code>input-radio</code>, or <code>input-color</code>.</li>
+<li>Input elements follow a dash-delimited <code>"element-type"</code> pattern; for example, <code>input-range</code>, <code>input-radio</code>, or <code>input-color</code>.</li>
 </ul><h2>CSS Classes<a class="anchor" id="CSS-Classes" href="#CSS-Classes"></a>
 </h2>
 
-<p>MontageJS standardizes on a CSS class naming convention whereby the names follow a dash-delimited <code>org-Component</code> and <code>org-Component-childElement</code> pattern. For example, for the progress bar it would be: <code>montage-Progress</code> and <code>montage-Progress-bar</code>.</p>
+<p>CSS class names follow a dash-delimited <code>org-Component</code> and <code>org-Component-childElement</code> pattern. For example, for the progress bar it would be: <code>montage-Progress</code> and <code>montage-Progress-bar</code>.</p>
 
 <p>More specifically, the following conventions apply:</p>
 
@@ -75,21 +84,19 @@
 <li>
 <p>Composite components (components with children) follow this convention:</p>
 
-<ul>
-<li>If a component has a <strong>child element</strong>, the child's name is written in lowercase (to signal the distinction between parent and child) and follows the component’s name separated by a dash; for example, <code>montage-InputRange-thumb</code>. Be sure to use the same name for children as the native pseudo (Shadow DOM) elements if known; for example: -webkit-progress-**bar**. Angelina Fabbro put together a nice reference <a href="https://gist.github.com/3759334">list</a> of pseudo element selectors used in WebKit.</li>
-<li>If a child element consists of concatenated words, its name is written in lower camelCase; for example, <code>montage-InputRange-thumbWithSpikyEars</code>.</li>
-<li>If a component has multiple levels of child elements, each child is separated from the other by a dash; for example, <code>montage-InputRange-thumb-nobs-centerNob</code>.</li>
-</ul>
-<p><strong>Note:</strong> There is <strong>no limit</strong> as to how many levels of child elements can be used, but if the whole CSS class becomes too long, it might be a good idea to <strong>break</strong> it into subcomponents.</p>
-</li>
-<li><p>If a class name represents a <strong>state</strong> or a <strong>variation</strong>, a double-dash is used; for example, (states) <code>montage-InputRange--dragging</code>, <code>montage-Button--pressed</code> or (variations) <code>montage-Button--big</code>, <code>montage-Button--primary</code>.</p></li>
-</ol><p>We chose these conventions for the following reasons:</p>
+<p>If a component has a <strong>child element</strong>, the child's name is written in lowercase (to signal the distinction between parent and child) and follows the component’s name separated by a dash; for example, <code>montage-InputRange-thumb</code>. Be sure to use the same name for children as the native pseudo (Shadow DOM) elements if known; for example: -webkit-progress-**bar**. Angelina Fabbro put together a nice reference <a href="https://gist.github.com/3759334">list</a> of pseudo element selectors used in WebKit.</p>
 
 <ul>
-<li>To reduce the effort to read and understand the markup structure of our source code.</li>
-<li>To increase code usability because you can double-click each part of the code to quickly select and edit it. (Try it for yourself: <code>montage-InputRange-thumb</code> versus <code>montage_InputRange_thumb</code>.)</li>
-<li>To avoid name collisions due to multiple selectors.</li>
+<li>If a child element consists of concatenated words, its name is written in lower camelCase; for example, <code>montage-InputRange-thumbWithSpikyEars</code>.</li>
+<li>
+<p>If a component has multiple levels of child elements, each child is separated from the other by a dash; for example, <code>montage-InputRange-thumb-nobs-centerNob</code>.</p>
+
+<p><strong>Note:</strong> There is <strong>no limit</strong> as to how many levels of child elements can be used, but if the whole CSS class becomes too long, it might be a good idea to <strong>break</strong> it into subcomponents.</p>
+</li>
 </ul>
+<p>If a class name represents a <strong>state</strong> or a <strong>variation</strong>, a double-dash is used; for example, (states) <code>montage-InputRange--dragging</code>, <code>montage-Button--pressed</code> or (variations) <code>montage-Button--big</code>, <code>montage-Button--primary</code>.</p>
+</li>
+</ol>
 
                 </div>
         </article>
@@ -123,9 +130,9 @@
 
             <div class="button-group twitter">
                 <a href="https://twitter.com/share" class="twitter-share-button" data-via="montagejs" data-count="none">Tweet</a>
-                <script>!function(e,n,s){var a,t=e.getElementsByTagName(n)[0];e.getElementById(s)||(a=e.createElement(n),a.id=s,a.src="//platform.twitter.com/widgets.js",t.parentNode.insertBefore(a,t))}(document,"script","twitter-wjs");</script>
+                <script>!function(e,n,s){var t,a=e.getElementsByTagName(n)[0];e.getElementById(s)||(t=e.createElement(n),t.id=s,t.src="//platform.twitter.com/widgets.js",a.parentNode.insertBefore(t,a))}(document,"script","twitter-wjs");</script>
                 <a href="https://twitter.com/montagejs" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @montagejs</a>
-                <script>!function(e,n,s){var a,t=e.getElementsByTagName(n)[0];e.getElementById(s)||(a=e.createElement(n),a.id=s,a.src="//platform.twitter.com/widgets.js",t.parentNode.insertBefore(a,t))}(document,"script","twitter-wjs");</script>
+                <script>!function(e,n,s){var t,a=e.getElementsByTagName(n)[0];e.getElementById(s)||(t=e.createElement(n),t.id=s,t.src="//platform.twitter.com/widgets.js",a.parentNode.insertBefore(t,a))}(document,"script","twitter-wjs");</script>
             </div>
 
             <div class="button-group g-plus">

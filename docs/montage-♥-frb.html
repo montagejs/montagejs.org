@@ -138,6 +138,37 @@ or
 <span class="nx">myObject</span><span class="p">.</span><span class="nx">dispatchOwnPropertyChange</span><span class="p">(</span><span class="s2">"anotherAffectedProperty"</span><span class="p">,</span> <span class="nx">myObject</span><span class="p">.</span><span class="nx">anotherAffectedProperty</span><span class="p">);</span>
 </pre></div>
 
+<h2>How do I make a checkbox automatically uncheck if it becomes disabled<a class="anchor" id="How-do-I-make-a-checkbox-automatically-uncheck-if-it-becomes-disabled" href="#How-do-I-make-a-checkbox-automatically-uncheck-if-it-becomes-disabled"></a>
+</h2>
+
+<p></p><div class="highlight"><pre>checked <span class="o">&lt;-</span> checked <span class="o">&amp;&amp;</span> enabled
+</pre></div>
+
+<p>This will cause the checkbox to retain its state when it is enabled, but unchecks when it becomes disabled.</p>
+
+<h2>How do I make a "select all" or "select none" checkboxes<a class="anchor" id="How-do-I-make-a-%22select-all%22-or-%22select-none%22-checkboxes" href="#How-do-I-make-a-%22select-all%22-or-%22select-none%22-checkboxes"></a>
+</h2>
+
+<p>The checkbox needs to be useful both for observing whether all the checkboxes are currently checked, none of them are checked, and also for forcing them all to become checked or unchecked.</p>
+
+<p></p><div class="highlight"><pre>checkboxes.every<span class="p">{</span>checked<span class="p">}</span> <span class="o">&lt;-&gt;</span> allChecked
+checkboxes.every<span class="p">{</span><span class="o">!</span>checked<span class="p">}</span> <span class="o">&lt;-&gt;</span> noneChecked
+</pre></div>
+
+<p>FRB supports binding to "every" and "some" blocks.</p>
+
+<h3>But what if the checkboxes can be disabled?<a class="anchor" id="But-what-if-the-checkboxes-can-be-disabled?" href="#But-what-if-the-checkboxes-can-be-disabled?"></a>
+</h3>
+
+<p></p><div class="highlight"><pre>checkbox.checked <span class="o">&lt;-</span> checked <span class="o">&amp;&amp;</span> enabled
+checkboxes.every<span class="p">{</span>checked <span class="o">||</span> <span class="o">!</span>enabled<span class="p">}</span> <span class="o">&lt;-&gt;</span> allChecked
+checkboxes.every<span class="p">{</span><span class="o">!</span>checked<span class="p">}</span> <span class="o">&lt;-&gt;</span> noneChecked
+</pre></div>
+
+<p>The <code>|| !enabled</code> clause serves two purposes.  If a checkbox becomes disabled, the first binding will cause it to become unchecked.  Without the <code>|| !enabled</code> clause, this might cause <code>allChecked</code> to become false, even though the checkbox should not be participating.  With the <code>|| !enabled</code> clause, <code>checked || !enabled</code> is true so it effectively does not participate in determining whether <code>allChecked</code> should become false.</p>
+
+<p>In the other direction, if <code>allChecked</code> becomes true, without the <code>|| !enabled</code> clause, it would cause all disabled checkboxes to become checked.  With it, <code>checked || !enabled</code> is already true so it does not force <code>checked</code> to become <code>true</code>.</p>
+
                 </div>
         </article>
     </section>
