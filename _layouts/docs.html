@@ -1,0 +1,80 @@
+---
+layout: default
+docs: true
+---
+
+    <section id="docs" class="docs">
+        <article>
+        
+            {% if page.id != null %}
+                <a href="https://github.com/simurai/simurai.github.io/blob/master/docs/{{ page.id }}.md" class="edit">Improve this Doc</a>
+            {% endif %}
+            
+            <div class="markdown-body">
+
+                {{content}}
+
+            </div>
+            
+            <nav class="paging">
+                {% if page.prev-page != null %}
+                    <a href="/docs/{{ page.prev-page }}.html" class="paging--prev">Prev</a>
+                {% endif %}
+                {% if page.next-page != null %}
+                    <a href="/docs/{{ page.next-page }}.html" class="paging--next">Next</a>
+                {% endif %}
+            </nav>
+            
+        </article>
+    </section>
+    
+    <nav class="subnav">
+        
+        <details open>
+            <summary>Get Started</summary>
+            <a href="#">Overview</a>
+            <a href="#">Basics</a>
+            <a href="#">Quick Start</a>
+        </details>
+        
+        <details open>
+            <summary>Components</summary>
+            <a href="#">Introduction</a>
+            <a href="#">Draw Cycle</a>
+            <a href="#">Digit</a>
+            <a href="#">Extending Components</a>
+        </details>
+        
+        <details open>
+            <summary>Bindings</summary>
+            <a href="#">Introduction</a>
+            <a href="#">Data Bindings</a>
+            <a href="#">FRB</a>
+        </details>
+        
+        <details>
+            <summary>Examples</summary>
+            <a href="#">Example 1</a>
+            <a href="#">Example 2</a>
+            <a href="#">Example 3</a>
+        </details>
+        
+        <details>
+            <summary>API</summary>
+            <a href="#">API 1</a>
+            <a href="#">API 2</a>
+            <a href="#">API 3</a>
+        </details>
+        
+        <details>
+            <summary>FAQ</summary>
+            <a href="#">FAQ 1</a>
+            <a href="#">FAQ 2</a>
+            <a href="#">FAQ 3</a>
+        </details>
+        
+    </nav>
+    
+    {% include comments.html %}
+    
+    {% include help.html %}
