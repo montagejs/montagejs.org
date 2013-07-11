@@ -265,13 +265,33 @@
     max-width: 800px;
 }
 
-.blog ol {
-    padding: 0 0 0 1em;
-    font-size: 1.4em;
-    line-height: 1.5;
+.blog-index {
+    padding: 0;
+    font-size: 1.2em;
+    line-height: 1.4;
     list-style: none;
 }
 
+.blog-index-item {
+    padding: 1.5em 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.blog-index-title {
+    margin: 0 0 .4em 0;
+}
+
+.blog-time {
+    font-weight: normal;
+    font-size: .6em;
+    color: #999;
+    margin-left: .4em;
+}
+
+.blog-index-item p {
+    display: inline;
+    margin: 0;
+}
 
 /* Themes ----------------------------------------- */
 
