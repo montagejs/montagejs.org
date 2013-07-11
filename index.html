@@ -1,34 +1,13 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+---
+layout: default
+title: Montage - HTML5 framework
+home: true
+---
 
-    <title>Montage - HTML5 framework</title>
-
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" />
-    <link rel="stylesheet" href="stylesheets/normalize.css" />
-    <link rel="stylesheet" href="stylesheets/base.css" />
-    <link rel="stylesheet" href="stylesheets/index.css" />
-
-    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-
-    <script src="index.html.bundle-0.js" data-montage-location="packages/montage@1934147/" data-promise-location="packages/q@0b8cfe2/" data-montage-hash="1934147" data-promise-hash="0b8cfe2" data-application-hash="28f0767"></script>
-    <script type="text/montage-serialization">{"features":{"prototype":"ui/features.reel","properties":{"element":{"#":"features"}}}}</script>
-
-  </head>
-<body>
-
-    <header class="header-index pushed">
+    <section class="header-index pushed">
         <h1><img class="logo" src="images/logo-montage.png" alt="Montage" /></h1>
         <h2 class="tagline">An <strong>HTML5 framework</strong> for building modern <strong>Web Apps</strong>.</h2>
-    </header>
-
-    <nav class="bar links">
-        <a class="link download" href="docs/quick-start.html">Quick Start</a>
-        <a class="link docs" href="docs/">Docs</a>
-    </nav>
+    </section>
 
     <section id="intro" class="intro">
         <article>
@@ -65,8 +44,10 @@
                     <p>Montage models components as standalone web pages. The HTML of a component (the "template") contains a DOM skeleton and comes to life with the inclusion of a JSON formatted block or file—a component object model, distinct but connected to the DOM—that describes how to dress up the DOM with connections among components. <a href="docs/montage-serialization-format.html" target="_blank">Learn more &gt;</a></p>
                 </div>
             </div>
+            
             <h3 class="sub-title">Declarative Data Binding</h3>
-            <div data-montage-id="features"></div>
+            
+            {% include home-example.html %}
 
             <div class="cols">
                 <div class="col col-1-2">
@@ -79,7 +60,6 @@
                 </div>
 
             </div>
-
 
         </article>
     </section>
@@ -162,18 +142,3 @@
             </div>
         </article>
     </section>
-
-    <footer class="footer">
-        2013 montagejs.org - <a href="https://github.com/montagejs/montagejs.org">Contributions</a> to this page are welcomed.
-    </footer>
-
-
-    
-    <a href="https://github.com/montagejs/montage"><img style="position: absolute; top: 0; right: 0; border: 0" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
-
-
-    
-    <script>var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-35717912-1"]),_gaq.push(["_trackPageview"]),function(){var s=document.createElement("script");s.type="text/javascript",s.async=!0,s.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(s,n)}();</script>
-
-</body>
-</html>

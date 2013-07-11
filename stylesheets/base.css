@@ -132,7 +132,6 @@ hr {
 /* Nav ----------------------------------------- */
 
 .nav {
-    margin: 0 0 0 20px;
     display: inline-block;
     vertical-align: middle;
     font-size: 0; /* Removes inline-block gap */
@@ -149,15 +148,28 @@ hr {
 
 .nav-item:hover {
     color: hsl(196,0%,70%);
-    background: hsla(0,0%,100%,.1);
+    background-color: hsla(0,0%,100%,.1);
 }
 
 .nav-item:active,
 .nav-item.active {
     color: hsl(196,100%,60%);
-    background: hsla(0,0%,0%,.2);
+    background-color: hsla(0,0%,0%,.2);
     box-shadow: inset 0 0 2px hsla(0,0%,0%,.4);
     
+}
+
+.nav-item--home,
+.nav-item--home:hover,
+.nav-item--home:active,
+.nav-item--home.active {
+    color: transparent;
+    text-shadow: none;
+    width: 200px;
+    background-image: url(/images/logo-pages.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 32px;
 }
 
 @media all and (max-width: 800px) {

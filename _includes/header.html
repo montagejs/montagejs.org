@@ -1,7 +1,7 @@
 <header class="header">
     <div class="header-container">
-        <a href="/"><img class="logo" src="/images/logo-pages.png" alt="Montage"></a>
         <nav class="nav">
+            <a class="nav-item nav-item--home {% if page.home %}active{% endif %}" href="/">Home</a>
             <a class="nav-item {% if page.docs %}active{% endif %}" href="/docs">Docs</a>
             <a class="nav-item {% if page.apps %}active{% endif %}" href="/apps">Apps</a>
             <a class="nav-item {% if page.api %}active{% endif %}" href="/apis">APIs</a>
