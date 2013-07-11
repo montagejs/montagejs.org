@@ -7,6 +7,7 @@ docs: true
         <article>
         
             {% if page.id != null %}
+                <!-- TODO: Add IDs to docs -->
                 <a href="https://github.com/simurai/simurai.github.io/blob/master/docs/{{ page.id }}.md" class="edit">Improve this Doc</a>
             {% endif %}
             
@@ -75,4 +76,5 @@ docs: true
         
     </nav>-->
     
+    {% include comments.html %}
     {% include help.html %}
