@@ -1,37 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>JSDoc: <?js= title ?></title>
-
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" />
-    <link rel="stylesheet" href="stylesheets/normalize.css" />
-    <link rel="stylesheet" href="stylesheets/base.css" />
-    <link rel="stylesheet" href="stylesheets/pages.css" />
-    <link rel="stylesheet" href="stylesheets/solarized.css" />
-
-    <script src="scripts/prettify/prettify.js"> </script>
-    <script src="scripts/prettify/lang-css.js"> </script>
-    <script src="scripts/search.js"> </script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
-    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
-</head>
-
-<body class="docs">
-
-    <header class="header header-pages pushed">
-        <div class="header-container">
-            <a href="/"><img class="logo" src="images/logo-pages.png" alt="Montage" /></a>
-            <nav class="nav">
-                <a class="nav-item" href="http://montagejs.org/apps">Apps</a>
-                <a class="nav-item" href="http://montagejs.org/docs">Docs</a>
-                <a class="nav-item active" href="http://montagejs.org/apis">APIs</a>
-            </nav>
-        </div>
-    </header>
+---
+layout: api
+title: <?js= title ?>
+---
 
     <!--<h1 class="page-title"><?js= title ?></h1>-->
 
@@ -42,48 +12,3 @@
     <nav class="docs">
         <?js= this.nav ?>
     </nav>
-
-    <section id="next" class="next">
-        <article>
-            <h3 class="title">More help?</h3>
-            <div class="cols">
-                <div class="col col-1-2">
-                    <p>Can't find what you are looking for? Get in touch, we're more than happy in helping answer your questions.
-                    </p>
-                </div>
-                <aside class="col col-1-2">
-                    <p><strong>Have feedback or ideas?</strong> Let us know by creating a new <a href="https://github.com/montagejs/montage/issues" target="_blank">issue</a>, join us in <a href="http://webchat.freenode.net/?channels=montage" target="_blank">IRC</a> or post questions to our <a href="https://groups.google.com/forum/?fromgroups#!forum/montagejs" target="_blank">Google Group</a>. We're also on <a href="https://twitter.com/montage_js" target="_blank">Twitter</a> and <a href="https://plus.google.com/116915300739108010954/" target="_blank">Google+</a>.
-                    </p>
-                </aside>
-            </div>
-        </article>
-    </section>
-
-    <footer class="footer">
-        2013 montagejs.org - <a href="https://github.com/montagejs/montagejs.org">Contributions</a> to this page are welcomed.
-    </footer>
-
-    <script>
-        var codes = document.getElementsByTagName('code');
-        if (codes) {
-            Array.prototype.forEach.call(codes, function(element) {
-                if(element.classList.contains("lang-javascript")) {
-                    element.classList.add("prettyprint");
-                }
-            });
-        }
-        prettyPrint(); </script>
-    <!-- Google -->
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-35717912-1']);
-      _gaq.push(['_trackPageview']);
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
-
-</body>
-</html>

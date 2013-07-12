@@ -27,7 +27,7 @@
     "opts": {
         "template": "./template",
         "encoding": "utf8",
-        "destination": "../../source/apis",
+        "destination": "../../apis",
         "recurse": true,
         "tutorials": "./template",
         "query": "value",
