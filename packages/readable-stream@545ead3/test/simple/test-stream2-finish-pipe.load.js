@@ -1,0 +1,1 @@
+montageDefine("545ead3","test/simple/test-stream2-finish-pipe",{dependencies:["../common.js","../../readable","buffer"],factory:function(e){e("../common.js");var t=e("../../readable"),n=e("buffer").Buffer,a=new t.Readable;a._read=function(e){a.push(new n(e))};var s=new t.Writable;s._write=function(e,t,n){n(null)},a.pipe(s),s.end()}});

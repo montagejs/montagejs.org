@@ -1,0 +1,1 @@
+montageDefine("8c245bc","scope",{dependencies:[],factory:function(e,t,n){function a(e,t,n,a,s,r){this.value=e,this.parent=t,this.parameters=n,this.document=a,this.components=s,this.beforeChange=r}n.exports=a,a.nest=function(e,t){return e=e||new a,new a(t,e,e.parameters,e.document,e.components,e.beforeChange)}}});

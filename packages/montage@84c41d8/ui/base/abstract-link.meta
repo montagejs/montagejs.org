@@ -1,0 +1,69 @@
+{
+    "enabled_property": {
+        "prototype": "core/meta/property-blueprint",
+        "properties": {
+            "name": "enabled",
+            "valueType": "boolean",
+            "blueprint": {"@": "root"}
+        }
+    },
+    "src_property": {
+        "prototype": "core/meta/property-blueprint",
+        "properties": {
+            "name": "src",
+            "valueType": "string",
+            "blueprint": {"@": "root"}
+        }
+    },
+    "label_property": {
+        "prototype": "core/meta/property-blueprint",
+        "properties": {
+            "name": "label",
+            "valueType": "string",
+            "blueprint": {"@": "root"}
+        }
+    },
+    "active_property": {
+        "prototype": "core/meta/property-blueprint",
+        "properties": {
+            "name": "active",
+            "valueType": "boolean",
+            "blueprint": {"@": "root"}
+        }
+    },
+    "blueprint_parent": {
+        "prototype": "core/meta/blueprint-reference",
+        "properties": {
+            "valueReference": {
+                "blueprintName": "AbstractControl",
+                "blueprintModuleId": "ui/base/abstract-control.meta",
+                "prototypeName": "AbstractControl"
+            }
+        }
+    },
+    "root": {
+        "prototype": "core/meta/blueprint",
+        "properties": {
+            "name": "AbstractLink",
+            "blueprintModuleId": "ui/base/abstract-link.meta",
+            "prototypeName": "AbstractLink",
+            "parent": {"@": "blueprint_parent"},
+            "propertyBlueprints": [
+                {"@": "enabled_property"},
+                {"@": "src_property"},
+                {"@": "label_property"},
+                {"@": "active_property"}
+            ],
+            "propertyBlueprintGroups": {
+                "Main": [
+                    {"@": "enabled_property"},
+                    {"@": "src_property"},
+                    {"@": "label_property"}
+                ],
+                "Options": [
+                     {"@": "active_property"}
+                ]
+            }
+        }
+    }
+}

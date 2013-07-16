@@ -1,1 +1,0 @@
-montageDefine("78bb040","ui/split-view.reel/split-view",{dependencies:["montage/core/core","montage/ui/component"],factory:function(e,t){var n=e("montage/core/core").Montage,a=e("montage/ui/component").Component;t.SplitView=n.create(a,{})}});
