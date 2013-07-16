@@ -108,12 +108,6 @@
 
 /* Subnav ----------------------------------------- */
 
-@media (max-width: 1300px) {
-    .subnav {
-        display: none;
-    }
-}
-
 .subnav {
     position: fixed;
     top: 142px;
@@ -121,32 +115,53 @@
     margin-left: -500px;
     width: 180px;
 }
+@media (max-width: 1080px) {
+    .subnav {
+        left: 40px;
+        margin-left: 0;
+    }
+}
+
+.subnav details {
+    padding: 0 0 20px 0;
+}
 
 .subnav summary {
     padding: 5px;
     outline: none;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
     color: hsl(0, 0%, 30%);
 }
 
 .subnav a {
     display: block;
     margin-left: 9px;
-    padding: 5px 10px 5px 20px;
-    color: hsl(0,0%,60%);
+    padding: 5px 5px 5px 20px;
     border-left: 2px solid hsl(0,0%,85%);
-    font-size: 13px;
+    font-size: 14px;
+    color: hsl(0, 0%, 50%);
 }
 
 .subnav a:hover {
-    background-color: hsla(210,100%,50%,.05);
+    color: hsl(0, 0%, 20%);
+    background-color: hsla(210,0%,0%,.05);
+    border-color: hsl(210,100%,50%);
 }
 
 .subnav a:active {
-    color: hsl(0,0%,30%);
     color: hsl(0,0%,100%);
     background-color: hsla(210,100%,50%,1);
+}
+
+.subnav a[href^="http"]:after {
+     content: "";
+     display: inline-block;
+     margin-left: 8px;
+     width: 8px;
+     height: 8px;
+     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABJElEQVQ4EY1SwWrCQBB1jSHQkxe/wv5ET+3FDxD8iuBBgiUJgfRQsZCL3+BXaD+iR496kRw8WLo1SfteYGEJg8nAZGbn7Xsz2V0VhmESRdFrT7A4jn2UV3AlwHWpr5RaQuBd2gDxdVVVU2Bawlnr8wOROboNmTcN9S1qL/BLE+O6FpAAu4ZJ9mVZTlC72XXmnQSCIBg5jrPBfhf+Q6KxVgGSPc/bgTCGfxVF8Yj42UmgSdZaPyVJcsjz/BkCPJvewCg1o0RO0/TMfVmWaRz8FLd3EgXukU2jPxhyXzwD13VnAOt/5timsyHbURTA3X/gAfltZAqJv0CAIoxtJk7QRrJxe4IHdP21wXs5Xuc3cXuCI9bXro4rfKOAPQHXnQ3vYIGJb/8a4nf/5LC60AAAAABJRU5ErkJggg==) no-repeat center;
+     background-size: 8px;    
 }
 
 .subnav ~ section {
@@ -155,6 +170,7 @@
     z-index: 1;
     background: hsl(0,0%,95%);
 }
+
 
 
 /* Paging ----------------------------------------- */
@@ -189,6 +205,7 @@
 /* Docs page ----------------------------------------- */
 
 .docs {
+    min-height: 720px;
     padding: 60px 40px 60px 240px;
 }
 
@@ -242,7 +259,7 @@
     border-radius: 2em;
     position: absolute;
     right: 0;
-    top: 0;
+    top: -60px;
 }
 
 
