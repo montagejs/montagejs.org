@@ -35,10 +35,7 @@
 <h1>Overlay component<a class="anchor" id="Overlay-component" href="#Overlay-component"></a>
 </h1>
 
-<h1>["edge" branch only]<a class="anchor" id="[%22edge%22-branch-only]" href="#%5B%22edge%22-branch-only%5D"></a>
-</h1>
-
-<p>The <code>Overlay</code> positions content over the page in a modal or non-modal way.</p>
+<p>The <code>Overlay</code> positions content over the page.</p>
 
 <h2>How to use<a class="anchor" id="How-to-use" href="#How-to-use"></a>
 </h2>
@@ -49,8 +46,7 @@
 <p></p><div class="highlight"><pre><span class="s2">"overlayImage"</span><span class="err">:</span> <span class="p">{</span>
     <span class="nt">"prototype"</span><span class="p">:</span> <span class="s2">"montage/ui/overlay.reel"</span><span class="p">,</span>
     <span class="nt">"properties"</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">"element"</span><span class="p">:</span> <span class="p">{</span><span class="nt">"#"</span><span class="p">:</span> <span class="s2">"overlayImage"</span><span class="p">},</span>
-        <span class="nt">"isModal"</span><span class="p">:</span> <span class="kc">true</span>
+        <span class="nt">"element"</span><span class="p">:</span> <span class="p">{</span><span class="nt">"#"</span><span class="p">:</span> <span class="s2">"overlayImage"</span><span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
@@ -65,28 +61,30 @@
 <p></p><div class="highlight"><pre><span class="nx">overlayImage</span><span class="p">.</span><span class="nx">show</span><span class="p">();</span>
 </pre></div>
 
-<p>When an overlay is defined to be Modal a mask is rendered between the page and the contents of the overlay.</p>
-
 <h2>Positioning<a class="anchor" id="Positioning" href="#Positioning"></a>
 </h2>
 
 <p>The Overlay supports three types of positioning:</p>
 
 <ul>
-<li>Specific coordinates with the "position" property:
+<li>
+<p>Specific coordinates with the "position" property:
+</p>
 <div class="highlight"><pre><span class="s2">"position"</span><span class="o">:</span> <span class="p">{</span><span class="nx">left</span><span class="o">:</span> <span class="mi">100</span><span class="p">,</span> <span class="nx">top</span><span class="o">:</span> <span class="mi">50</span><span class="p">}</span>
 </pre></div>
-</li>
-<li>Anchored to an element or component's element:
+(<a href="https://gist.github.com/anonymous/6005026">Example</a>)</li>
+<li>
+<p>Anchored to an element or component's element:
+</p>
 <div class="highlight"><pre><span class="s2">"anchor"</span><span class="o">:</span> <span class="p">{</span><span class="s2">"#"</span><span class="o">:</span> <span class="s2">"icon"</span><span class="p">}</span>
 </pre></div>
 <div class="highlight"><pre><span class="s2">"anchor"</span><span class="o">:</span> <span class="p">{</span><span class="s2">"@"</span><span class="o">:</span> <span class="s2">"owner"</span><span class="p">}</span>
 </pre></div>
-The overlay element is positioned right bellow the anchor and horizontally centered with it.</li>
+The overlay element is positioned right bellow the anchor and horizontally centered with it (<a href="https://gist.github.com/anonymous/6005017">Example</a>).</li>
 <li>
 <p>Screen centered.</p>
 
-<p>This is the default.</p>
+<p>This is the default (<a href="https://gist.github.com/anonymous/6004971">Example</a>).</p>
 </li>
 </ul><h2>Delegate methods<a class="anchor" id="Delegate-methods" href="#Delegate-methods"></a>
 </h2>
