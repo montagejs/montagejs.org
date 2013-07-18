@@ -45,10 +45,9 @@ More specifically, the following conventions apply:
     If a component name consists of more than one word, each new word also starts with an uppercase letter, a convention commonly  referred to as **upper camel case** ("CamelCaps") formatting; for example, `montage-InputRange`.
     
 3. **Composite components** (components with children) follow this convention:
-
-* If a component has a **child element**, the child's name is written in lowercase (to signal the distinction between parent and child) and follows the component’s name separated by a dash; for example, `digit-Slider-thumb`.
-* If a child element consists of concatenated words, its name is written in lower camelCase; for example, `digit-Slider-thumbWithSpikyEars`.
-* If a component has multiple levels of child elements, each child can be separated from the other by a dash; for example, `digit-Slider-thumb-nobs-centerNob`. This is not required in all cases as the class name would become too long. Only use if it makes sense.
+    * If a component has a **child element**, the child's name is written in lowercase (to signal the distinction between parent and child) and follows the component’s name separated by a dash; for example, `digit-Slider-thumb`.
+    * If a child element consists of concatenated words, its name is written in lower camelCase; for example, `digit-Slider-thumbWithSpikyEars`.
+    * If a component has multiple levels of child elements, each child can be separated from the other by a dash; for example, `digit-Slider-thumb-nobs-centerNob`. This is not required in all cases as the class name would become too long. Only use if it makes sense.
 
 4. **Variations** If a component offers variations, a double-dash is used; for example: `digit-Button--primary`, `digit-Slider--vertical`.
 
