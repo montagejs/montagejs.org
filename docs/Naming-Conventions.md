@@ -5,11 +5,11 @@ title: Naming Conventions
 
 # Naming Conventions
 
-This document summarizes MontageJS-specific naming conventions and recommendations for modules, components, and CSS classes. Please refer to these conventions when creating MontageJS packages or contributing to the MontageJS framework.
+This document summarizes MontageJS-specific naming conventions and recommendations for packages, components, and CSS classes. Please refer to these conventions when creating MontageJS packages or contributing to the MontageJS framework.
 
-## Modules
+## Packages
 
-All module and package names are written in lowercase letters or numbers and delimited by dashes (for example, child-package).
+All package names are written in lowercase letters or numbers and delimited by dashes (for example, child-package).
 
 ## Components (.reel)
 User interface components are stored in the ui directory of your MontageJS project and identified by a .reel extension. 
