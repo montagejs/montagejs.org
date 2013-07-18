@@ -7,13 +7,6 @@ title: Naming Conventions
 
 This document summarizes MontageJS-specific naming conventions and recommendations for modules, components, and CSS classes. Please refer to these conventions when creating MontageJS packages or contributing to the MontageJS framework.
 
-## Rationale
-We chose these conventions for the following reasons:
-
-* To reduce the effort to read and understand the markup structure of our source code.
-* To increase code usability because you can double-click each part of the code to quickly select and edit it. (Try it: `montage-InputRange-thumb` versus `montage_InputRange_thumb`.)
-* To avoid name collisions due to multiple selectors.
-
 ## Modules
 
 All module and package names are written in lowercase letters or numbers and delimited by dashes (for example, child-package).
@@ -53,3 +46,10 @@ More specifically, the following conventions apply:
         **Note:** There is **no limit** as to how many levels of child elements can be used, but if the whole CSS class becomes too long, it might be a good idea to **break** it into subcomponents.
 
     If a class name represents a **state** or a **variation**, a double-dash is used; for example, (states) `montage-InputRange--dragging`, `montage-Button--pressed` or (variations) `montage-Button--big`, `montage-Button--primary`.
+
+### Rationale
+We chose these conventions for naming CSS classes for the following reasons:
+
+* To reduce the effort to read and understand the markup structure of our source code.
+* To increase code usability because you can double-click each part of the code to quickly select and edit it. (Try it: `montage-InputRange-thumb` versus `montage_InputRange_thumb`.)
+* To avoid name collisions due to multiple selectors.
