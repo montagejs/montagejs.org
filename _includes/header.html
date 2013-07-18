@@ -1,7 +1,8 @@
 <header class="header">
     <div class="header-container">
+        <a class="logo {% if page.home %}active{% endif %}" href="/">Home</a>
         <nav class="nav">
-            <a class="nav-item nav-item--home {% if page.home %}active{% endif %}" href="/">Home</a>
+            <a class="nav-item {% if page.home %}active{% endif %}" href="/">About</a>
             <a class="nav-item {% if page.themes %}active{% endif %}" href="/themes">Themes</a>
             <a class="nav-item {% if page.docs %}active{% endif %}" href="/docs">Docs</a>
             <a class="nav-item {% if page.apps %}active{% endif %}" href="/apps">Apps</a>
@@ -9,6 +10,6 @@
             <a class="nav-item {% if page.forum %}active{% endif %}" href="/community/forum">Forum</a>
             <a class="nav-item {% if page.blog %}active{% endif %}" href="/blog">Blog</a>
         </nav>
-        <a href="https://github.com/montagejs/montage" target="_blank"><img class="github" src="/images/github.svg" alt="github"></a>
+        <a class="fork" href="https://github.com/montagejs/montage" target="_blank"><img src="/images/github.svg" alt="github"></a>
     </div>
 </header>
