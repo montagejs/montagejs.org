@@ -109,16 +109,15 @@
 /* Subnav ----------------------------------------- */
 
 .subnav {
-    position: fixed;
-    top: 142px;
-    left: 50%;
-    margin-left: -500px;
+    display: inline-block;
+    vertical-align: top;
     width: 180px;
+    margin-right: 40px;
+    margin-top: 12px;
 }
 @media (max-width: 1080px) {
     .subnav {
-        left: 40px;
-        margin-left: 0;
+        display: none;
     }
 }
 
@@ -164,12 +163,6 @@
      background-size: 8px;    
 }
 
-.subnav ~ section {
-    /* Covers the subnav with a solid background*/
-    position: relative;
-    z-index: 1;
-    background: hsl(0,0%,95%);
-}
 
 
 
@@ -204,14 +197,15 @@
 
 /* Docs page ----------------------------------------- */
 
-.docs {
-    min-height: 720px;
-    padding: 60px 40px 60px 240px;
+.docs .markdown-body {
+    display: inline-block;
+    vertical-align: top;
+    width: 776px;
 }
-
-.docs .header-container,
-.docs article {
-    max-width: 800px;
+@media (max-width: 1080px) {
+    .docs .markdown-body {
+        width: 100%;
+    }
 }
 
 .docs img {
@@ -259,7 +253,7 @@
     border-radius: 2em;
     position: absolute;
     right: 0;
-    top: -60px;
+    top: -32px;
 }
 
 

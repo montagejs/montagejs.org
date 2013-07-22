@@ -82,13 +82,14 @@ hr {
 /* Header ----------------------------------------- */
 
 .header {
-    padding: 0px 50px;
+    padding: 0px 40px;
     text-align: left;
     border-bottom: 1px solid hsl(0,0%,85%);
     background-color: hsl(210,100%,100%);
 }
 
 .header-container {
+    position: relative;
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -116,8 +117,9 @@ hr {
 }
 
 .header .fork {
-    float: right;
-    margin-top: 16px;
+    position: absolute;
+    top: 16px;
+    right: 0;
     width: 32px;
     height: 32px;
     opacity: .4;
@@ -129,11 +131,7 @@ hr {
 
 @media all and (max-width: 800px) {
     .header {
-        padding: 0;
-    }
-    .header .logo {
-        //display: block;
-        //margin: 30px auto;
+        padding: 0 16px 0 0;
     }
 }
 
@@ -167,16 +165,10 @@ hr {
 
 @media all and (max-width: 800px) {
     .nav {
-        display: block;
-        margin: 0;
-        text-align: center;
-        border-top: 1px solid hsla(0,0%,0%,.1);
-        background: hsla(0,0%,0%,.1);
+        margin: 12px 70px;
     }
     .nav-item {
         padding: 8px 12px;
-        background: transparent;
-        border: none;
     }
 }
 
