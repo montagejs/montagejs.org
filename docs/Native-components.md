@@ -1,6 +1,9 @@
 ---
 layout: docs
 title: Native components
+
+prev-page: Overlay
+next-page: Extending-components
 ---
 
 # Native components

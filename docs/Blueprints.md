@@ -1,6 +1,9 @@
 ---
 layout: docs
 title: Blueprints
+
+prev-page: Gestures
+next-page: Troubleshooting
 ---
 
 # Blueprints

@@ -1,11 +1,15 @@
 ---
 layout: docs
-title: Overlay component
+title: Overlay
+
+prev-page: Substitution
+next-page: Native-components
 ---
 
-# Overlay component ["edge" branch only]
+# Overlay 
+## ["edge" branch only]
 
-The `Overlay` positions content over the page in a modal or non-modal way.
+The `Overlay` component positions content over the page in a modal or non-modal way.
 
 ## How to use
 #### Template

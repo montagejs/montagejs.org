@@ -250,6 +250,30 @@ hr {
 }
 
 
+/* Button ----------------------------------------- */
+
+.button {
+    display: inline-block;
+    margin: 0 .5em;
+    padding: .5em 1em;
+    border-radius: 2em;
+    border: 1px solid hsl(0,0%,80%);
+}
+
+.button:hover {
+    background: hsla(0,0%,100%,.3);
+}
+
+.button:active {
+    background: hsla(0,0%,0%,.05);
+}
+
+.button.disabled {
+    opacity: .4;
+    color: hsl(0,0%,50%);
+    pointer-events: none;
+}
+
 /* Action Button ----------------------------------------- */
 
 .button--action {

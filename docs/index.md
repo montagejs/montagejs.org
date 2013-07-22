@@ -1,6 +1,8 @@
 ---
 layout: docs
 title: Montage Docs
+
+next-page: Quick-Start
 ---
 
 # Montage Docs

@@ -1,6 +1,8 @@
 ---
 layout: docs
 title: FAQ
+
+prev-page: Troubleshooting
 ---
 
 # FAQ

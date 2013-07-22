@@ -139,6 +139,7 @@
     padding: 5px 5px 5px 20px;
     border-left: 2px solid hsl(0,0%,85%);
     font-size: 14px;
+    line-height: 1.3;
     color: hsl(0, 0%, 50%);
 }
 
@@ -173,16 +174,6 @@
     margin-top: 2em;
     padding-top: 2em;
     text-align: center;
-}
-
-.paging--prev,
-.paging--next {
-    margin: 0 .5em;
-}
-
-.paging--prev.disabled,
-.paging--next.disabled {
-    opacity: .3;
 }
 
 .paging--prev:before {
@@ -254,6 +245,10 @@
     position: absolute;
     right: 0;
     top: -32px;
+}
+
+.docs .button.disabled {
+    visibility: hidden;
 }
 
 

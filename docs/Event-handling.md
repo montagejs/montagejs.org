@@ -1,6 +1,9 @@
 ---
 layout: docs
 title: Event handling
+
+prev-page: Data-binding
+next-page: Draw-cycle
 ---
 
 # Event handling

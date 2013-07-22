@@ -1,6 +1,9 @@
 ---
 layout: docs
 title: Data binding
+
+prev-page: Serialization-format
+next-page: Event-handling
 ---
 
 # Data binding

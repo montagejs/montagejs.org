@@ -1,9 +1,12 @@
 ---
 layout: docs
-title: Component draw cycle
+title: Draw cycle
+
+prev-page: Event-handling
+next-page: Gestures
 ---
 
-# Component draw cycle
+# Draw cycle
 
 When building HTML5 applications, especially on mobile, performance is important. Two things that can have a critical impact on web application performance are DOM manipulation (creating or modifying DOM structure or styles) and DOM inspection (querying an element’s calculated style, such `offsetWidth`). Repeatedly manipulating and reading the DOM, in a unmanaged fashion, can cause multiple style reflows that can slow down an application considerably, even on a desktop machine. The term “layout thrash” has been used to describe the result of this type of DOM manipulation.
 
