@@ -1,9 +1,14 @@
 ---
 layout: docs
-title: Montage Components
+title: Examples
+
+prev-page: Getting-Started
+next-page: Repetition
 ---
 
-# Montage Components
+# Examples
+
+## Montage Components
 
 **Text**
 - [Hello World](http://montagejs.github.io/mfiddle/#!/5904314)
@@ -17,7 +22,8 @@ title: Montage Components
 **Converters**
 - [Number converters](http://montagejs.github.io/mfiddle/#!/5904344)
 
-# UI Components (Digit)
+## UI Components (Digit)
+
 **Button**
 - [Button with an explicit identifier](http://montagejs.github.io/mfiddle/#!/5906286) (used to link to a handler method)
 - [Button with a default identifier](http://montagejs.github.io/mfiddle/#!/5906289) (serialization label is the default identifier)
@@ -56,5 +62,5 @@ title: Montage Components
 **List**
 - [A list of categories](http://montagejs.github.io/mfiddle/#!/5904497)
 
-# Draw Cycle
+## Draw Cycle
 - Changing the background color of an element with a [slider](http://montagejs.github.io/mfiddle/#!/5904498)

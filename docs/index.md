@@ -2,7 +2,7 @@
 layout: docs
 title: Montage Docs
 
-next-page: Quick-Start
+next-page: Getting-Started
 ---
 
 # Montage Docs

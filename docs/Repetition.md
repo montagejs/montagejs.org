@@ -2,7 +2,7 @@
 layout: docs
 title: Repetition
 
-prev-page: Quick-start
+prev-page: Examples
 next-page: Substitution-component
 ---
 

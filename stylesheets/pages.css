@@ -149,8 +149,11 @@
     border-color: hsl(210,100%,50%);
 }
 
-.subnav a:active {
+.subnav a:active,
+.subnav a.active {
     color: hsl(0,0%,100%);
+    text-shadow: none;
+    border-left-color: transparent;
     background-color: hsla(210,100%,50%,1);
 }
 
