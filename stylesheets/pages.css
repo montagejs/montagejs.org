@@ -146,7 +146,7 @@
 .subnav a:hover {
     color: hsl(0, 0%, 20%);
     background-color: hsla(210,0%,0%,.05);
-    border-color: hsl(210,100%,50%);
+    border-color: hsl(210,75%,57%);
 }
 
 .subnav a:active,
@@ -154,7 +154,7 @@
     color: hsl(0,0%,100%);
     text-shadow: none;
     border-left-color: transparent;
-    background-color: hsla(210,100%,50%,1);
+    background-color: hsl(210,75%,57%);
 }
 
 .subnav a[href^="http"]:after {
