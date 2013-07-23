@@ -339,7 +339,41 @@ body {
     margin-left: 200px;
 }
 
+.themes-icon {
+    float: left;
+    margin: 0 10px 10px 0;
+}
 
-.themes img {
+
+.themes-gallery a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.themes-gallery a:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: hsl(210,75%,57%);
+    -webkit-transition: width .2s;
+}
+
+.themes-gallery a:hover:before {
+    width: 10px;
+    -webkit-transition-duration: .08s;
+}
+
+.themes-gallery a:active:before {
+    width: 2px;
+    -webkit-transition-duration: .04s;
+}
+
+.themes-gallery img {
+    display: block;
     max-width: 100%;
 }
+
