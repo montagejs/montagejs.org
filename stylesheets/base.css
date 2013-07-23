@@ -35,6 +35,10 @@ section {
     border-bottom: 1px solid hsl(0,0%,85%);
 }
 
+body > section:first-of-type {
+    margin-top: 65px;
+}
+
 article {
     position: relative;
     max-width: 1000px;
@@ -82,10 +86,16 @@ hr {
 /* Header ----------------------------------------- */
 
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
     padding: 0px 40px;
     text-align: left;
     border-bottom: 1px solid hsl(0,0%,85%);
     background-color: hsl(210,100%,100%);
+    -webkit-transform: translateZ(0); /* should make it scroll faster */
 }
 
 .header-container {
@@ -106,14 +116,17 @@ hr {
     background-repeat: no-repeat;
     background-position: center;
     background-size: auto 100%;
+    -webkit-transition: -webkit-transform .2s;
 }
 
 .header .logo:hover {
-    -webkit-transform: translateY(-2px);
+    -webkit-transition-duration: .1s;
+    -webkit-transform: translateY(6px);
 }
 
 .header .logo:active {
-    -webkit-transform: translateY(10px);
+    -webkit-transition-duration: .04s;
+    -webkit-transform: translateY(20px);
 }
 
 .header .fork {
