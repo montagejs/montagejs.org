@@ -3,7 +3,7 @@ layout: docs
 title: Repetition
 
 prev-page: Examples
-next-page: Substitution-component
+next-page: Substitution
 ---
 
 # Repetition

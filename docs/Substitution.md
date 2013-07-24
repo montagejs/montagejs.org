@@ -3,7 +3,7 @@ layout: docs
 title: Substitution
 
 prev-page: Repetition
-next-page: Overlay-component
+next-page: Overlay
 ---
 
 # Substitution

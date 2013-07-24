@@ -3,7 +3,7 @@ layout: docs
 title: Getting Started
 
 prev-page: index
-next-page: Repetition
+next-page: Examples
 ---
 
 # Getting Started

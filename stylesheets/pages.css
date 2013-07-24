@@ -214,6 +214,14 @@
     margin: .3em 0;
 }
 
+.docs h4 {
+    margin-bottom: 0;
+}
+
+.docs h4 + ul {
+    margin-top: 0;
+}
+
 .docs .highlight ::-moz-selection { background: hsl(50,5%,50%); color: white; text-shadow: none; }
 .docs .highlight ::selection { background: hsl(50,5%,50%); color: white; text-shadow: none; }
 
@@ -326,7 +334,7 @@ body {
 }
 .themes-tablet {
     left: 50%;
-    margin-left: -370px;
+    margin-left: -280px;
     height: 330px; 
 }
 
@@ -337,7 +345,7 @@ body {
 .themes-phone {
     top: 100px;
     left: 50%;
-    margin-left: 30px;
+    margin-left: 130px;
     height: 280px;
 }
 
