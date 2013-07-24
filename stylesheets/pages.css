@@ -309,7 +309,7 @@ body {
 
 .header-themes {
     position: relative;
-    height: 580px;
+    height: 331px;
     overflow: hidden;
     text-align: center;
 }
@@ -321,22 +321,24 @@ body {
 }
 
 .header-themes:hover .themes-tablet {
-    -webkit-transform: translateX(-60px);
+    -webkit-transform: translateX(-40px);
     -webkit-transition-duration: .2s;
 }
 .themes-tablet {
     left: 50%;
-    margin-left: -450px; 
+    margin-left: -370px;
+    height: 330px; 
 }
 
 .header-themes:hover .themes-phone {
-    -webkit-transform: translateX(60px);
+    -webkit-transform: translateX(40px);
     -webkit-transition-duration: .2s;
 }
 .themes-phone {
-    top: 104px;
+    top: 100px;
     left: 50%;
-    margin-left: 200px;
+    margin-left: 30px;
+    height: 280px;
 }
 
 .themes-icon {
