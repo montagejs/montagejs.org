@@ -2,8 +2,8 @@
 layout: docs
 title: Overlay
 
-prev-page: Substitution
-next-page: Native-components
+prev-page: substitution
+next-page: native-components
 ---
 
 # Overlay 

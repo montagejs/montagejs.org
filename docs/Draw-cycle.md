@@ -2,8 +2,8 @@
 layout: docs
 title: Draw cycle
 
-prev-page: Event-handling
-next-page: Gestures
+prev-page: event-handling
+next-page: gestures
 ---
 
 # Draw cycle

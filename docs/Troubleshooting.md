@@ -2,8 +2,8 @@
 layout: docs
 title: Troubleshooting
 
-prev-page: Blueprints
-next-page: FAQ
+prev-page: blueprints
+next-page: faq
 ---
 
 # Troubleshooting

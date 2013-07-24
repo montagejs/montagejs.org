@@ -2,7 +2,7 @@
 layout: docs
 title: FAQ
 
-prev-page: Troubleshooting
+prev-page: troubleshooting
 ---
 
 # FAQ

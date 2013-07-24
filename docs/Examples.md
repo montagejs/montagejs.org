@@ -2,8 +2,8 @@
 layout: docs
 title: Examples
 
-prev-page: Getting-Started
-next-page: Repetition
+prev-page: getting-Started
+next-page: repetition
 ---
 
 # Examples

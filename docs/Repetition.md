@@ -2,8 +2,8 @@
 layout: docs
 title: Repetition
 
-prev-page: Examples
-next-page: Substitution
+prev-page: examples
+next-page: substitution
 ---
 
 # Repetition

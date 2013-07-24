@@ -2,8 +2,8 @@
 layout: docs
 title: Substitution
 
-prev-page: Repetition
-next-page: Overlay
+prev-page: repetition
+next-page: overlay
 ---
 
 # Substitution

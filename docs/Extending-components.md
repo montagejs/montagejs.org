@@ -2,8 +2,8 @@
 layout: docs
 title: Extending components
 
-prev-page: Native-components
-next-page: Montage-objects
+prev-page: native-components
+next-page: montage-objects
 ---
 
 # Extending components
