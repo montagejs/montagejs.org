@@ -32,14 +32,20 @@ a:active {
 /* Sections ----------------------------------------- */
 
 section {
-    padding: 60px 40px;
+    padding: 20px;
     border-top: 1px solid hsl(0,0%,99%);
     border-bottom: 1px solid hsl(0,0%,85%);
 }
 
-body > section:first-of-type {
-    margin-top: 65px;
+@media all and (min-width: 801px) {
+    body > section:first-of-type {
+        margin-top: 65px;
+    }
+    section {
+        padding: 60px 40px;
+    }
 }
+
 
 article {
     position: relative;
@@ -74,14 +80,6 @@ hr {
     border: none;
     border-bottom: 2px dashed hsl(0, 0%, 80%);
     margin: 2em 0;
-}
-
-@media all and (max-width: 800px) {
-
-    section {
-        padding: 40px 25px;
-    }
-
 }
 
 
@@ -146,6 +144,7 @@ hr {
 
 @media all and (max-width: 800px) {
     .header {
+        position: relative;
         padding: 0 16px 0 0;
     }
 }

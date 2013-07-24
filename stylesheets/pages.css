@@ -120,6 +120,7 @@
 @media (max-width: 1080px) {
     .withSubnav .markdown-body {
         width: 100%;
+        box-sizing: border-box;
     }
 }
 
@@ -206,15 +207,6 @@
 .paging {
     padding-top: 2em;
     text-align: center;
-    padding-left: 224px;
-}
-
-.withSubnav--left .paging {
-    padding-left: 224px;
-}
-
-.withSubnav--right .paging {
-    padding-right: 224px;
 }
 
 .paging--prev:before {
@@ -224,6 +216,16 @@
 .paging--next:after {
     content: "→";
     margin-left: 4px;
+}
+
+@media (min-width: 1080px) {
+    .withSubnav--left .paging {
+        padding-left: 224px;
+    }
+    
+    .withSubnav--right .paging {
+        padding-right: 224px;
+    }
 }
 
 
