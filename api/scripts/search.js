@@ -1,6 +1,6 @@
 window.addEventListener("load", function() {
     var searchField = document.getElementById("index-search"),
-        nav = document.querySelectorAll("nav.docs")[0],
+        nav = document.querySelectorAll("nav.subnav")[0],
         details = nav.querySelectorAll("details");
 
     var searchTimeout;

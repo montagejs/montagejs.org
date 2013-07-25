@@ -3,13 +3,15 @@ layout: default
 api: true
 ---
 
-	<section id="api" class="api">
+	<section id="api" class="api docs withSubnav withSubnav--left">
         <article>
-            <div class="markdown-body">
-
+            
+            {% include subnav-api.html %}
+            
+            <div class="main">
                 {{content}}
-
             </div>
+            
         </article>
     </section>
     

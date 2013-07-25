@@ -1,0 +1,636 @@
+---
+layout: api
+title: AbstractButton
+---    
+
+
+
+<header>
+    <h2>
+    AbstractButton
+    </h2>
+    
+</header>
+
+<article>
+    
+        <dl>
+            <dt>Extends</dt>
+            <dd><a href="AbstractControl.html">AbstractControl</a> </dd>
+        </dl>
+    
+    <div class="container-overview">
+    
+
+    
+        
+<dt>
+    <h4 class="name" id="AbstractButton"></h4>
+
+    
+</dt>
+<dd>
+
+    
+
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/base/abstract-button.js, line 14
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+    <h5>Fires:</h5>
+    <ul>
+        
+<li>
+    AbstractButton#event:action
+</li>
+    
+        
+<li>
+    AbstractButton#event:longAction
+</li>
+    </ul>
+    
+
+    
+
+    
+
+    
+</dd>
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Properties</h3>
+
+        <dl>
+            
+<dt>
+    <h4 class="name" id="active"><span class="type-signature"></span>active<span class="type-signature"> :boolean</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>This property is true when the button is being interacted with, either through mouse click or touch event, otherwise false.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy"><li>false</li></ul></dd>
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/base/abstract-button.js, line 169
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="detail"><span class="type-signature"></span>detail<span class="type-signature"> :Dict</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The data property of the action event.
+example to toggle the complete class: &quot;detail.get('selectedItem')&quot; : { &quot;&lt;-&quot; : &quot;@repetition.objectAtCurrentIteration&quot;}</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="AbstractControl.html#detail">AbstractControl#detail</a>
+    </li></dd>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy"><li>null</li></ul></dd>
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/base/abstract-control.js, line 28
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="enabled"><span class="type-signature"></span>enabled<span class="type-signature"> :boolean</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Enables or disables the Button from user input. When this property is set to <code>false</code>,
+the &quot;montage--disabled&quot; CSS style is applied to the button's DOM element during the next draw cycle. When set to
+<code>true</code> the &quot;montage--disabled&quot; CSS class is removed from the element's class list.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/base/abstract-button.js, line 62
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="holdThreshold"><span class="type-signature"></span>holdThreshold<span class="type-signature"> :number</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The amount of time in milliseconds the user must press and hold the button a <code>longAction</code> event is dispatched. The default is 1 second.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy"><li>1000</li></ul></dd>
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/base/abstract-button.js, line 152
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="label"><span class="type-signature"></span>label<span class="type-signature"> :string</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The displayed text on the button. In an &lt;input&gt; element this is taken from the element's <code>value</code> attribute. On any other element (including &lt;button&gt;) this is the first child node which is a text node. If one isn't found then it will be created.
+If the button has a non-null <code>converter</code> property, the converter object's <code>convert()</code> method is called on the value before being assigned to the button instance.</p>
+    </div>
+    
+
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy"><li>undefined</li></ul></dd>
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/base/abstract-button.js, line 113
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+
+        </dl>
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Events</h3>
+
+        <dl>
+            
+<dt>
+    <h4 class="name" id="event:action">action</h4>
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Dispatched when the button is activated through a mouse click, finger tap,
+or when focused and the spacebar is pressed.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+        
+        <h5 class="subsection-title">Properties:</h5>
+        
+        <dl>
+
+<table class="props">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>detail</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Dict</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The detail object as defined in  <a href="AbstractControl.html#detail">AbstractControl#detail</a></p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+</dl>
+        
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/base/abstract-button.js, line 22
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id="event:longAction">longAction</h4>
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Dispatched when the button is pressed for a period of time, set by  <a href="AbstractButton.html#holdThreshold">AbstractButton#holdThreshold</a>.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+<dl class="details">
+    
+        
+        <h5 class="subsection-title">Properties:</h5>
+        
+        <dl>
+
+<table class="props">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>detail</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Dict</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The detail object as defined in <a href="AbstractControl.html#detail">AbstractControl#detail</a></p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+</dl>
+        
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        ui/base/abstract-button.js, line 24
+    </li></ul></dd>
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+
+    
+</dd>
+
+        </dl>
+    
+</article>
+
+
+
+
+
+    </section>

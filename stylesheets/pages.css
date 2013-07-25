@@ -108,7 +108,7 @@
 
 /* Subnav ----------------------------------------- */
 
-.withSubnav .markdown-body {
+.withSubnav .main {
     display: inline-block;
     vertical-align: top;
     width: 775px;
@@ -120,7 +120,7 @@
     box-shadow: 0 0 2px hsla(0, 0%, 0%, 0.12);
 }
 @media (max-width: 1080px) {
-    .withSubnav .markdown-body {
+    .withSubnav .main {
         width: 100%;
     }
 }
@@ -200,6 +200,29 @@
      background-size: 8px;    
 }
 
+.subnav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.subnav input[type="search"] {
+    padding: 0.4em 0.6em;
+    border-radius: 2em;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: .9em;
+    box-shadow: inset 0 1px 2px hsla(0,0%,0%,.1), 0 1px 0px hsla(0,0%,100%,0.3);
+    border: 1px solid hsla(0,0%,0%,0.15);
+    background: hsla(0,0%,0%,.04);
+}
+
+.subnav input[type="search"]:focus {
+    outline: none;
+    border-color: hsl(210,75%,57%);
+    background: transparent;
+}
 
 
 
@@ -230,32 +253,32 @@
 }
 
 
-/* Docs page ----------------------------------------- */
+/* main ----------------------------------------- */
 
-.docs img {
+.main img {
     max-width: 100%;
 }
 
-.docs ol li {
+.main ol li {
     margin: 1em 0;
 }
 
-.docs ul li {
+.main ul li {
     margin: .3em 0;
 }
 
-.docs h4 {
+.main h4 {
     margin-bottom: 0;
 }
 
-.docs h4 + ul {
+.main h4 + ul {
     margin-top: 0;
 }
 
-.docs .highlight ::-moz-selection { background: hsl(50,5%,50%); color: white; text-shadow: none; }
-.docs .highlight ::selection { background: hsl(50,5%,50%); color: white; text-shadow: none; }
+.main .highlight ::-moz-selection { background: hsl(50,5%,50%); color: white; text-shadow: none; }
+.main .highlight ::selection { background: hsl(50,5%,50%); color: white; text-shadow: none; }
 
-.docs .highlight pre { 
+.main .highlight pre { 
     margin: 0;
     padding: 20px;
     color: hsl(60, 15%, 36%);
@@ -265,7 +288,7 @@
     background-color: hsl(50,100%,98%);
 }
 
-.docs code {
+.main code {
     padding: 0 4px;
     border-radius: 4px;
     border: 1px solid hsl(60, 20%, 85%);
@@ -273,12 +296,15 @@
     color: hsl(50,20%,40%);
 }
 
-.docs pre > code { 
+.main pre > code { 
     padding: 0;
     border-radius: 0;
     border: none;
     background-color: transparent;
 }
+
+
+/* Edit this ----------------------------------------- */
 
 .docs .edit {
     position: absolute;
