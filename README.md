@@ -18,6 +18,14 @@ Then `cd` into your montagejs.org directory and run:
     
 Now you should see the site at `http://localhost:4000`.
 
+After making changes you can close the server with `Ctrl c` and then rebuild the site with `jekyll serve` again. Then if you refresh the browser, you should see the changes.
+
+If you don't wanna manually rebuild after every change, you can serve with the "watch" command:
+
+    jekyll serve --watch
+    
+Then the site gets automatically rebuilt once you save a file. __Note__: Because some directories like the /apps are quite big, it is advised to exclude them temporarily while testing locally. It speeds up rebuilding a lot and your CPU thanks you for that. To exclude directories, open the `/_config.yml` file and uncomment this line `exclude: [apps, built-apps, node_modules, packages, ui]` (it might look a bit different by now). Just make sure you don't commit that change to _config.yml.
+
 
 ## Building and deploying
 
