@@ -1,3 +1,4 @@
+
 This is the repo for the [montagejs.org](http://montagejs.org) website.
 
 ## Contributing
@@ -15,7 +16,7 @@ First you need Ruby and RubyGems, see [details](http://jekyllrb.com/docs/install
 Then `cd` into your montagejs.org directory and run:
 
     jekyll serve
-    
+
 Now you should see the site at `http://localhost:4000`.
 
 After making changes you can close the server with `Ctrl c` and then rebuild the site with `jekyll serve` again. Then if you refresh the browser, you should see the changes.
@@ -29,28 +30,15 @@ Then the site gets automatically rebuilt once you save a file. __Note__: Because
 
 ## Building and deploying
 
-Run `./build.sh`. It will take its time installing gems to compile the wiki
-into HTML. In the end the `deploy` directory contains the gh-pages of this
-repo, with a new commit containing any updates.
+First install the dependencies, and then run the build script.
 
-Before you push make sure you have committed your changes and then built, so
-that the gh-pages commit message has the correct commit hash.
+```bash
+$ cd _build
+$ npm install
+# wait ...
+$ cd ..
+$ _build/build.js
+# wait...
+```
 
-To deploy, change into the deploy directory and run `git push origin gh-pages`
-
-You can run `build.sh` with these arguments:
-
-* `--no-build` – will generate the wiki pages, but will not Mop the site into the deploy directory
-* `--no-commit` – will generate the deploy directory, but won't commit the changes
-
-## Updating Apps and Kitchen Sink
-
-To get the changes from an App or Kitchen Sink, run the following:
-
-### Popcorn
-`git subtree pull --squash --prefix=source/apps/popcorn git@github.com:montagejs/popcorn.git master -m "Update Popcorn to master"`
-
-### Kitchen Sink
-`git subtree pull --squash --prefix=source/docs/kitchen-sink git@github.com:montagejs/kitchen-sink.git master -m "Update Kitchen sink to master"`
-
-More [infos](https://github.com/montagejs/montage/wiki/git-subtree) about using `subtree`.
+This will build the apps and the API docs
