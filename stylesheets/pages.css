@@ -111,7 +111,9 @@
 .withSubnav .markdown-body {
     display: inline-block;
     vertical-align: top;
-    width: 716px;
+    width: 775px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     background: #fff;
     padding: 10px 30px 30px 30px;
     border-radius: 8px;
@@ -120,7 +122,6 @@
 @media (max-width: 1080px) {
     .withSubnav .markdown-body {
         width: 100%;
-        box-sizing: border-box;
     }
 }
 
@@ -377,11 +378,23 @@ body {
 .themes-phone {
     position: absolute;
     -webkit-transition: -webkit-transform .6s;
+       -moz-transition:    -moz-transform .6s;
+        -ms-transition:     -ms-transform .6s;
+         -o-transition:      -o-transform .6s;
+            transition:         transform .6s;
 }
 
 .header-themes:hover .themes-tablet {
     -webkit-transform: translateX(-40px);
+       -moz-transform: translateX(-40px);
+        -ms-transform: translateX(-40px);
+         -o-transform: translateX(-40px);
+            transform: translateX(-40px);
     -webkit-transition-duration: .2s;
+       -moz-transition-duration: .2s;
+        -ms-transition-duration: .2s;
+         -o-transition-duration: .2s;
+            transition-duration: .2s;
 }
 .themes-tablet {
     left: 50%;
@@ -391,7 +404,15 @@ body {
 
 .header-themes:hover .themes-phone {
     -webkit-transform: translateX(40px);
+       -moz-transform: translateX(40px);
+        -ms-transform: translateX(40px);
+         -o-transform: translateX(40px);
+            transform: translateX(40px);
     -webkit-transition-duration: .2s;
+       -moz-transition-duration: .2s;
+        -ms-transition-duration: .2s;
+         -o-transition-duration: .2s;
+            transition-duration: .2s;
 }
 .themes-phone {
     top: 100px;
@@ -421,16 +442,28 @@ body {
     bottom: 0;
     background: hsl(210,75%,57%);
     -webkit-transition: width .2s;
+       -moz-transition: width .2s;
+        -ms-transition: width .2s;
+         -o-transition: width .2s;
+            transition: width .2s;
 }
 
 .themes-gallery a:hover:before {
     width: 10px;
     -webkit-transition-duration: .08s;
+       -moz-transition-duration: .08s;
+        -ms-transition-duration: .08s;
+         -o-transition-duration: .08s;
+            transition-duration: .08s;
 }
 
 .themes-gallery a:active:before {
     width: 2px;
     -webkit-transition-duration: .04s;
+       -moz-transition-duration: .04s;
+        -ms-transition-duration: .04s;
+         -o-transition-duration: .04s;
+            transition-duration: .04s;
 }
 
 .themes-gallery img {

@@ -22,6 +22,10 @@ a:active {
     color: hsl(220,80%,40%);
 }
 
+h1 {
+    line-height: 1;
+}
+
 ::-moz-selection { background: hsl(60, 86%, 88%); text-shadow: none; }
 ::selection { background: hsl(60, 86%, 88%); text-shadow: none; }
 
@@ -117,16 +121,36 @@ hr {
     background-position: center;
     background-size: auto 100%;
     -webkit-transition: -webkit-transform .2s;
+       -moz-transition:    -moz-transform .2s;
+        -ms-transition:     -ms-transform .2s;
+         -o-transition:      -o-transform .2s;
+            transition:         transform .2s;
 }
 
 .header .logo:hover {
     -webkit-transition-duration: .1s;
+       -moz-transition-duration: .1s;
+        -ms-transition-duration: .1s;
+         -o-transition-duration: .1s;
+            transition-duration: .1s;
     -webkit-transform: translateY(6px);
+       -moz-transform: translateY(6px);
+        -ms-transform: translateY(6px);
+         -o-transform: translateY(6px);
+            transform: translateY(6px);
 }
 
 .header .logo:active {
     -webkit-transition-duration: .04s;
+       -moz-transition-duration: .04s;
+        -ms-transition-duration: .04s;
+         -o-transition-duration: .04s;
+            transition-duration: .04s;
     -webkit-transform: translateY(20px);
+       -moz-transform: translateY(20px);
+        -ms-transform: translateY(20px);
+         -o-transform: translateY(20px);
+            transform: translateY(20px);
 }
 
 .header .fork {
