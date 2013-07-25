@@ -82,6 +82,13 @@ function cloneAndMopApps(apps) {
             return exec("cp", ["-r", PATH.join("builds", name), outPath], clonePath);
         })
         .then(function () {
+            // Put a file in the app dir with the hash it was built from
+            shell.pushd(clonePath);
+            var hash = shell.exec("git rev-parse --short HEAD").output;
+            shell.popd();
+            FS.writeFileSync(PATH.join(outPath, "HASH"), hash);
+        })
+        .then(function () {
             console.log("toto");
         });
     }));
