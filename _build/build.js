@@ -76,42 +76,26 @@ function cloneAndMopApps(apps) {
             return exec("./node_modules/.bin/mop", [], clonePath);
         })
         .then(function () {
+            return exec("rm", ["-r", outPath], clonePath);
+        })
+        .then(function () {
+            return exec("cp", ["-r", PATH.join("builds", name), outPath], clonePath);
+        })
+        .then(function () {
             console.log("toto");
         });
     }));
-
-    // console.log("Clone and Mop apps");
-    // for (var name in apps) {
-    //     var repo = apps[name];
-    //     var outPath = PATH.join(process.cwd(), "apps", name);
-    //     var clonePath = PATH.join(TEMP_DIR, name);
-
-    //     console.log("Cloning", name, "from", repo + "...");
-    //     if (exec(["git", "clone", repo, clonePath].join(" ")).code !== 0) {
-    //         throw new Error("Could not clone " + name + " from " + repo);
-    //     }
-    //     pushd(clonePath);
-
-    //     exec("npm install");
-
-    //     var montageVersion = JSON.parse(FS.readFileSync("package.json")).dependencies.montage;
-    //     montageVersion = montageVersion.match(/\d\.\d+/)[0];
-    //     exec("npm install mop@" + montageVersion);
-
-    //     console.log("Mopping");
-    //     exec("./node_modules/.bin/mop");
-
-    //     rm("-r", outPath);
-    //     cp("-r", PATH.join("builds", name), outPath);
-
-    //     popd();
-    // }
 }
 
 // var TEMP_DIR = shell.exec("mktemp -d -t montagejs_org_temp.XXXXXX").output;
 var TEMP_DIR = PATH.join(process.cwd(), "tmp");
-
-return cloneAndMopApps(APPS)
+exec("rm", ["-rf", TEMP_DIR])
+.then(function () {
+    return exec("mkdir", [TEMP_DIR]);
+})
+.then(function () {
+    return cloneAndMopApps(APPS);
+})
 .then(function () {
     console.log("done");
 })
