@@ -3,6 +3,8 @@
   "private": true,
   "dependencies": {
     "shelljs": "~0.1.4",
-    "q": "~0.9.6"
+    "q": "~0.9.6",
+    "npm": "~1.2.16",
+    "jsdoc": "3.2.0-dev"
   }
 }

@@ -11,31 +11,8 @@ var config = {
    production : true
 };
 
-//deal with argv
-
-var outDir, packageName, tag;
-
-if (process.argv[2] === "-out") {
-    outDir = process.argv[3];
-    packageName = process.argv[4];
-} else {
-    packageName = process.argv[2];
-}
-
-
-if (!packageName) {
-    packageName = "montage";
-    tag = "latest";
-} else if (packageName.indexOf("@") !== -1) {
-    var what = String.prototype.split.call(packageName,"@");
-    packageName = what[0];
-    tag = what[1];
-}
-
-
-
-
-Q.ninvoke(npm, "load", config)
+module.exports = function (outDir, packageName, tag) {
+    return Q.ninvoke(npm, "load", config)
     .then(function (loadedNpm) {
         if(tag === "npm-link") {
             console.log('npm link',  packageName);
@@ -54,22 +31,23 @@ Q.ninvoke(npm, "load", config)
         }
 
         var jsdoc = spawn(
-            path.join(mainPath,'node_modules/jsdoc/jsdoc'),
+            path.join(mainPath,'../node_modules/jsdoc/jsdoc'),
             args,
             {
-                cwd: mainPath
+                cwd: mainPath,
+                stdio: "inherit"
             });
-        console.log('executing:',  path.join(mainPath,'node_modules/jsdoc/jsdoc'), args.join(" "));
+        console.log('executing:',  path.join(mainPath,'../node_modules/jsdoc/jsdoc'), args.join(" "));
         jsdoc.on('close', function (code, signal) {
             if (signal) {
-                jsdocGeneration.reject(new Error(signal))
+                jsdocGeneration.reject(new Error(signal));
             } else {
-                jsdocGeneration.resolve()
+                jsdocGeneration.resolve();
             }
         });
 
         return jsdocGeneration.promise;
     }).then(function (version) {
         console.log('jsdoc generated.');
-    })
-    .done();
+    });
+};

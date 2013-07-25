@@ -4,10 +4,10 @@
     },
     "source": {
         "include": [
-              "./node_modules/montage/composer/"
-          , "./node_modules/montage/core/"
-          , "./node_modules/montage/ui/"
-          , "./node_modules/montage/window-loader/"
+              "../node_modules/montage/composer/"
+          , "../node_modules/montage/core/"
+          , "../node_modules/montage/ui/"
+          , "../node_modules/montage/window-loader/"
 
         ],
         "exclude": [
