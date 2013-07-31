@@ -10,7 +10,7 @@ home: true
     </section>
 
     {% include social.html %}
-    
+
     <section id="intro" class="intro">
         <article>
             <h3 class="title">Introducing Montage</h3>
@@ -23,7 +23,7 @@ home: true
                     <ul>
                         <li>Reusable components and HTML templates</li>
                         <li>Declarative component model</li>
-                        <li>Declarative data binding</li>                        
+                        <li>Declarative data binding</li>
                         <li>Managed draw cycle</li>
                         <li>Implicit event delegation</li>
                     </ul>
@@ -36,6 +36,10 @@ home: true
         <article>
             <h3 class="title">Features</h3>
 
+            <h3 class="title">Declarative Data Binding</h3>
+
+            {% include home-example.html %}
+
             <div class="cols">
                 <div class="col col-1-2">
                     <h3 class="sub-title">Reusable Components</h3>
@@ -46,10 +50,6 @@ home: true
                     <p>Montage models components as standalone web pages. The HTML of a component (the "template") contains a DOM skeleton and comes to life with the inclusion of a JSON formatted block or file—a component object model, distinct but connected to the DOM—that describes how to dress up the DOM with connections among components. <a href="docs/montage-serialization-format.html" target="_blank">Learn more &gt;</a></p>
                 </div>
             </div>
-            
-            <h3 class="title">Declarative Data Binding</h3>
-            
-            {% include home-example.html %}
 
             <div class="cols">
                 <div class="col col-1-2">
