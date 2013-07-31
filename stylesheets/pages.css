@@ -159,6 +159,7 @@
 
 .subnav a {
     display: block;
+    margin-left: 5px;
     padding: 5px 5px 5px 13px;
     border-left: 2px solid hsl(210,75%,70%);
     font-size: 14px;
@@ -169,10 +170,6 @@
 .subnav a:visited {
     color: hsl(0,0%,60%);
     border-color: hsl(0,0%,85%);
-}
-
-.docs .subnav a {
-    margin-left: 5px;
 }
 
 .subnav a:hover {

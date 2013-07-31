@@ -43,13 +43,12 @@
     width: 100%;
 }
 
-section
-{
+/*section {
 	display: block;
 	padding: 12px 24px;
     border-bottom: 1px solid #ccc;
     margin-right: 240px;
-}
+}*/
 
 .variation {
     display: none;
@@ -64,13 +63,13 @@ section
 }
 
 
-footer {
+/*footer {
     display: block;
     padding: 6px;
     margin-top: 12px;
     font-style: italic;
     font-size: 90%;
-}
+}*/
 
 h1
 {

@@ -1,12 +1,12 @@
 ---
 layout: api
-title: "<?js= title ?>"
+title: <?js= title ?> - MontageJS API
 ---
-
-    <section id="docs">
-        <?js= content ?>
-    </section>
-
-    <nav class="docs">
+    
+    <nav class="subnav js-api-subnav">
         <?js= this.nav ?>
     </nav>
+    
+    <div class="main">
+        <?js= content ?>
+    </div>

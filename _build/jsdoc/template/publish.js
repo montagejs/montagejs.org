@@ -163,7 +163,7 @@ function generateSourceFiles(sourceFiles) {
  * @return {string} The HTML for the navigation sidebar.
  */
 function buildNav(members) {
-    var nav = '<h2>Search</h2><input id="index-search" type="search" placeholder="search for">',
+    var nav = '<input id="index-search" type="search" placeholder="Search">',
         seen = {};
 
     if (members.classes.length) {
