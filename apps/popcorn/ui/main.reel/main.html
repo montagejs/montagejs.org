@@ -6,7 +6,7 @@
 
         <link rel="stylesheet" type="text/css" href="main.css" />
         <link href="http://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet" type="text/css" />
-        <script type="text/montage-serialization">{"owner":{"properties":{"element":{"#":"main"}}},"facadeflow":{"prototype":"ui/facadeflow.reel","properties":{"element":{"#":"facade-flow"}},"bindings":{"property":{"<-":"@label.path"},"latestBoxofficeMovies":{"<-":"@owner.appData.latestBoxofficeMovies"},"upcomingMovies":{"<-":"@owner.appData.upcomingMovies"},"topDvdRentals":{"<-":"@owner.appData.topDvdRentals"},"inTheaters":{"<-":"@owner.appData.inTheaters"},"categoryId":{"<-":"@owner.categoryId"}}},"latest":{"prototype":"montage/ui/toggle-button.reel","properties":{"element":{"#":"latest"},"identifier":"categoryButton","pressedClass":"selected","category":"latestBoxofficeMovies"},"listeners":[{"type":"action","listener":{"@":"owner"}}]},"theaters":{"prototype":"montage/ui/toggle-button.reel","properties":{"element":{"#":"theaters"},"identifier":"categoryButton","pressedClass":"selected","category":"inTheaters"},"listeners":[{"type":"action","listener":{"@":"owner"}}]},"dvd":{"prototype":"montage/ui/toggle-button.reel","properties":{"element":{"#":"dvd"},"identifier":"categoryButton","pressedClass":"selected","category":"topDvdRentals"},"listeners":[{"type":"action","listener":{"@":"owner"}}]},"upcoming":{"prototype":"montage/ui/toggle-button.reel","properties":{"element":{"#":"upcoming"},"identifier":"categoryButton","pressedClass":"selected","category":"upcomingMovies"},"listeners":[{"type":"action","listener":{"@":"owner"}}]},"popup":{"prototype":"ui/moviepopup.reel","properties":{"element":{"#":"popup"}}}}</script>
+        <script type="text/montage-serialization">{"owner":{"properties":{"element":{"#":"main"}}},"facadeflow":{"prototype":"ui/facadeflow.reel","properties":{"element":{"#":"facade-flow"}},"bindings":{"latestBoxofficeMovies":{"<-":"@owner.appData.latestBoxofficeMovies"},"upcomingMovies":{"<-":"@owner.appData.upcomingMovies"},"topDvdRentals":{"<-":"@owner.appData.topDvdRentals"},"inTheaters":{"<-":"@owner.appData.inTheaters"},"categoryId":{"<-":"@owner.categoryId"}}},"latest":{"prototype":"matte/ui/toggle-button.reel","properties":{"element":{"#":"latest"},"identifier":"categoryButton","pressedClass":"selected","category":"latestBoxofficeMovies"},"listeners":[{"type":"action","listener":{"@":"owner"}}]},"theaters":{"prototype":"matte/ui/toggle-button.reel","properties":{"element":{"#":"theaters"},"identifier":"categoryButton","pressedClass":"selected","category":"inTheaters"},"listeners":[{"type":"action","listener":{"@":"owner"}}]},"dvd":{"prototype":"matte/ui/toggle-button.reel","properties":{"element":{"#":"dvd"},"identifier":"categoryButton","pressedClass":"selected","category":"topDvdRentals"},"listeners":[{"type":"action","listener":{"@":"owner"}}]},"upcoming":{"prototype":"matte/ui/toggle-button.reel","properties":{"element":{"#":"upcoming"},"identifier":"categoryButton","pressedClass":"selected","category":"upcomingMovies"},"listeners":[{"type":"action","listener":{"@":"owner"}}]},"popup":{"prototype":"ui/moviepopup.reel","properties":{"element":{"#":"popup"}}}}</script>
 
     </head>
 
@@ -15,7 +15,7 @@
             <div data-montage-id="facade" class="facade">
                 <header class="header">
                     <img class="logo" src="assets/image/logo.png" alt="logo" />
-                    <div class="filter montage-ButtonGroup">
+                    <div class="filter matte-ButtonGroup">
                         <button data-montage-id="latest">Box Office</button>
                         <button data-montage-id="theaters">In Theaters</button>
                         <button data-montage-id="upcoming">Upcoming</button>
@@ -25,6 +25,7 @@
                 <div data-montage-id="facade-flow" class="facade-flow"></div>
                 <div data-montage-id="popup" class="popup"></div>
             </div>
+            <a class="MontageMade" href="http://montagejs.org">Made with Montage</a>
         </div>
     </body>
 

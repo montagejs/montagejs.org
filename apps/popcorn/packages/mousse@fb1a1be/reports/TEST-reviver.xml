@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+<testsuite name="reviver" errors="0" tests="0" failures="0" time="0" timestamp="2013-06-19T17:27:09">
+</testsuite>
+<testsuite name="reviver.get type" errors="0" tests="5" failures="0" time="0.026" timestamp="2013-06-19T17:27:09">
+  <testcase classname="reviver.get type" name="should detect a string" time="0"></testcase>
+  <testcase classname="reviver.get type" name="should detect a null" time="0"></testcase>
+  <testcase classname="reviver.get type" name="should detect an array" time="0"></testcase>
+  <testcase classname="reviver.get type" name="should detect an object literal" time="0"></testcase>
+  <testcase classname="reviver.get type" name="should detect a reference" time="0"></testcase>
+</testsuite>
+<testsuite name="reviver.get type.external objects" errors="0" tests="2" failures="0" time="0.002" timestamp="2013-06-19T17:27:09">
+  <testcase classname="reviver.get type.external objects" name="should revive an external object" time="0"></testcase>
+  <testcase classname="reviver.get type.external objects" name="should fail when external object is missing" time="0.001"></testcase>
+</testsuite>
+<testsuite name="reviver.get type.number" errors="0" tests="3" failures="0" time="0.021" timestamp="2013-06-19T17:27:09">
+  <testcase classname="reviver.get type.number" name="should detect a positive number" time="0"></testcase>
+  <testcase classname="reviver.get type.number" name="should detect a negative number" time="0"></testcase>
+  <testcase classname="reviver.get type.number" name="should detect a rational number" time="0"></testcase>
+</testsuite>
+<testsuite name="reviver.get type.boolean" errors="0" tests="2" failures="0" time="0.001" timestamp="2013-06-19T17:27:09">
+  <testcase classname="reviver.get type.boolean" name="should detect a true" time="0"></testcase>
+  <testcase classname="reviver.get type.boolean" name="should detect a false" time="0"></testcase>
+</testsuite>
+<testsuite name="reviver.get type.regular expression" errors="0" tests="2" failures="0" time="0" timestamp="2013-06-19T17:27:09">
+  <testcase classname="reviver.get type.regular expression" name="should detect a regular expression" time="0"></testcase>
+  <testcase classname="reviver.get type.regular expression" name="should detect a regular expression with flags" time="0"></testcase>
+</testsuite>
+<testsuite name="reviver.custom object revivers" errors="0" tests="3" failures="0" time="0.007" timestamp="2013-06-19T17:27:09">
+  <testcase classname="reviver.custom object revivers" name="should deserialize a type of custom object" time="0.001"></testcase>
+  <testcase classname="reviver.custom object revivers" name="should deserialize different types of custom objects in the same reviver" time="0.001"></testcase>
+  <testcase classname="reviver.custom object revivers" name="should deserialize a type of custom object that has an asynchronous revival only once" time="0.002"></testcase>
+</testsuite>
+<testsuite name="reviver.extending reviver with types" errors="0" tests="1" failures="0" time="0.011" timestamp="2013-06-19T17:27:09">
+  <testcase classname="reviver.extending reviver with types" name="should call new reviver methods based on the getTypeOf" time="0.008"></testcase>
+</testsuite>
+</testsuites>

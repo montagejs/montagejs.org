@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+<testsuite name="serialization" errors="0" tests="1" failures="0" time="0.001" timestamp="2013-06-19T17:27:09">
+  <testcase classname="serialization" name="should be oblivious to Object.prototype aditions" time="0"></testcase>
+</testsuite>
+<testsuite name="serialization.native types serialization" errors="0" tests="3" failures="0" time="0.013" timestamp="2013-06-19T17:27:09">
+  <testcase classname="serialization.native types serialization" name="should serialize a string" time="0.002"></testcase>
+  <testcase classname="serialization.native types serialization" name="should serialize a null value" time="0"></testcase>
+  <testcase classname="serialization.native types serialization" name="shouldn&apos;t serialize an undefined value" time="0"></testcase>
+</testsuite>
+<testsuite name="serialization.native types serialization.numbers" errors="0" tests="3" failures="0" time="0.005" timestamp="2013-06-19T17:27:09">
+  <testcase classname="serialization.native types serialization.numbers" name="should serialize a positive number" time="0.001"></testcase>
+  <testcase classname="serialization.native types serialization.numbers" name="should serialize a negative number" time="0.001"></testcase>
+  <testcase classname="serialization.native types serialization.numbers" name="should serialize a rational number" time="0"></testcase>
+</testsuite>
+<testsuite name="serialization.native types serialization.booleans" errors="0" tests="2" failures="0" time="0.002" timestamp="2013-06-19T17:27:09">
+  <testcase classname="serialization.native types serialization.booleans" name="should serialize true" time="0"></testcase>
+  <testcase classname="serialization.native types serialization.booleans" name="should serialize false" time="0.001"></testcase>
+</testsuite>
+<testsuite name="serialization.native objects serialization" errors="0" tests="1" failures="0" time="0.103" timestamp="2013-06-19T17:27:09">
+  <testcase classname="serialization.native objects serialization" name="should serialize a RegExp" time="0.001"></testcase>
+</testsuite>
+<testsuite name="serialization.native objects serialization.array" errors="0" tests="5" failures="0" time="0.029" timestamp="2013-06-19T17:27:09">
+  <testcase classname="serialization.native objects serialization.array" name="should serialize an empty array" time="0.015"></testcase>
+  <testcase classname="serialization.native objects serialization.array" name="should serialize an array with native values" time="0.001"></testcase>
+  <testcase classname="serialization.native objects serialization.array" name="should serialize composed arrays" time="0.001"></testcase>
+  <testcase classname="serialization.native objects serialization.array" name="should serialize different references to the same array" time="0.001"></testcase>
+  <testcase classname="serialization.native objects serialization.array" name="should serialize an array with a reference to itself" time="0.001"></testcase>
+</testsuite>
+<testsuite name="serialization.native objects serialization.object literal" errors="0" tests="5" failures="0" time="0.01" timestamp="2013-06-19T17:27:09">
+  <testcase classname="serialization.native objects serialization.object literal" name="should serialize an empty object literal" time="0"></testcase>
+  <testcase classname="serialization.native objects serialization.object literal" name="should serialize an object literal with native values" time="0.001"></testcase>
+  <testcase classname="serialization.native objects serialization.object literal" name="should serialize composed object literals" time="0.001"></testcase>
+  <testcase classname="serialization.native objects serialization.object literal" name="should serialize different references to the same object literal " time="0"></testcase>
+  <testcase classname="serialization.native objects serialization.object literal" name="should serialize an object literal with a reference to itself" time="0.001"></testcase>
+</testsuite>
+<testsuite name="serialization.native objects serialization.different document" errors="0" tests="2" failures="0" time="0.063" timestamp="2013-06-19T17:27:09">
+  <testcase classname="serialization.native objects serialization.different document" name="should serialize an object literal created in a different document" time="0.005"></testcase>
+  <testcase classname="serialization.native objects serialization.different document" name="should serialize a regexp created in a different document" time="0.055"></testcase>
+</testsuite>
+<testsuite name="serialization.native objects serialization.labels" errors="0" tests="2" failures="0" time="0.026" timestamp="2013-06-19T17:27:09">
+  <testcase classname="serialization.native objects serialization.labels" name="should serialize a reference to an object using its given label" time="0.023"></testcase>
+  <testcase classname="serialization.native objects serialization.labels" name="should avoid name clashes between given labels and generated labels from the type of object" time="0.001"></testcase>
+</testsuite>
+</testsuites>
