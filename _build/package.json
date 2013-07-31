@@ -1,5 +1,6 @@
 {
   "name": "montagejs.org-build",
+  "version":"2.0.0",
   "private": true,
   "dependencies": {
     "shelljs": "~0.1.4",
