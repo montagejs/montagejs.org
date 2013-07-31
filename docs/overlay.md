@@ -6,10 +6,9 @@ prev-page: substitution
 next-page: native-components
 ---
 
-# Overlay 
-## ["edge" branch only]
+# Overlay
 
-The `Overlay` component positions content over the page in a modal or non-modal way.
+The `Overlay` positions content over the page.
 
 ## How to use
 #### Template
@@ -17,8 +16,7 @@ The `Overlay` component positions content over the page in a modal or non-modal 
 "overlayImage": {
     "prototype": "montage/ui/overlay.reel",
     "properties": {
-        "element": {"#": "overlayImage"},
-        "isModal": true
+        "element": {"#": "overlayImage"}
     }
 }
 ```
@@ -32,14 +30,14 @@ The `Overlay` component positions content over the page in a modal or non-modal 
 overlayImage.show();
 ```
 
-When an overlay is defined to be Modal a mask is rendered between the page and the contents of the overlay.
-
 ## Positioning
 The Overlay supports three types of positioning:
 - Specific coordinates with the "position" property:
 ```javascript
 "position": {left: 100, top: 50}
 ```
+    ([Example](https://gist.github.com/anonymous/6005026))
+
 - Anchored to an element or component's element:
 ```javascript
 "anchor": {"#": "icon"}
@@ -47,10 +45,10 @@ The Overlay supports three types of positioning:
 ```javascript
 "anchor": {"@": "owner"}
 ```
-    The overlay element is positioned right bellow the anchor and horizontally centered with it.
+    The overlay element is positioned right bellow the anchor and horizontally centered with it ([Example](https://gist.github.com/anonymous/6005017)).
 - Screen centered.
 
-    This is the default.
+    This is the default ([Example](https://gist.github.com/anonymous/6004971)).
 
 ## Delegate methods
 - `willPositionOverlay(overlay, position)`

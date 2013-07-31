@@ -8,7 +8,6 @@ next-page: overlay
 
 # Substitution
 
-## ["edge" branch only]
 The `Substitution` handles a group of elements and shows only one at a time.
 
 Each element has a key associated with it. The key is used to select which element the substitution should display, this is done by setting `switchValue`.
