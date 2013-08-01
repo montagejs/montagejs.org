@@ -167,6 +167,10 @@
     color: hsl(0,0%,30%);
 }
 
+.subnav--noDetails a {
+    margin-left: 0;
+}
+
 .subnav a:visited {
     color: hsl(0,0%,60%);
     border-color: hsl(0,0%,85%);
@@ -327,17 +331,6 @@
 
 .docs .button.disabled {
     visibility: hidden;
-}
-
-
-/* Community page ----------------------------------------- */
-
-.community {
-    padding: 60px 40px 60px 240px;
-}
-
-.community article {
-    max-width: 800px;
 }
 
 

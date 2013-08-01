@@ -1,30 +1,21 @@
 ---
-layout: default
-title: Montage Forum
-forum: true
+layout: community
+title: MontageJS Forum
 ---
 
-    <section id="forum" class="forum">
-        <article>
-            
-            <h1>Montage Forum</h1>
-            
-            <iframe id="forum_embed"
-             src="javascript:void(0)"
-             scrolling="no"
-             frameborder="0"
-             width="100%"
-             height="800px">
-            </iframe>
-            
-            <script type="text/javascript">
-             document.getElementById("forum_embed").src =
-              "https://groups.google.com/forum/embed/?place=forum/montagejs" +
-              "&showsearch=true&showpopout=true&parenturl=" +
-              encodeURIComponent(window.location.href);
-            </script>
-            
-        </article>
-    </section>
+    <h1>Montage Forum</h1>
     
-    {% include help.html %}
+    <iframe id="forum_embed"
+     src="javascript:void(0)"
+     scrolling="no"
+     frameborder="0"
+     width="100%"
+     height="800px">
+    </iframe>
+    
+    <script type="text/javascript">
+     document.getElementById("forum_embed").src =
+      "https://groups.google.com/forum/embed/?place=forum/montagejs" +
+      "&showsearch=true&showpopout=true&parenturl=" +
+      encodeURIComponent(window.location.href);
+    </script>
