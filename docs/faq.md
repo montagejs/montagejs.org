@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: FAQ
+title: MontageJS FAQ
 
 prev-page: troubleshooting
 ---
@@ -13,7 +13,7 @@ Get answers to frequently asked questions about MontageJS.
 * [Getting Started](#GS)
 * [Licensing](#LIC)
 
-## [General Questions](id:GQ)
+## [General Questions](#GQ)
 ### What is MontageJS?
 MontageJS is a modern client-side application framework powered by standard web technologies. It was designed from the ground up to help you build scalable and maintainable HTML5 applications optimized for today's and tomorrow's range of connected devices. With MontageJS, developers can create reusable user interface components and modules, bind properties among components and controllers, and synchronize DOM queries and updates to ensure a smooth user experience, especially on resource-constrained devices.
 
@@ -23,10 +23,10 @@ MontageJS provides a simple, structured approach to building and maintaining amb
 ### Who is using MontageJS?
 MontageJS is still evolving, but it has been used to create the (temporarily suspended) ScratchPad Chrome browser extension app and the Tips and Tricks application you see when you start up a Chrome notebook for the first time. In addition, several businesses and consultants are currently evaluating MontageJS for their projects. However, not having powerful client portfolio yet should not keep you from taking a closer look at what you can do with MontageJS. On the contrary, go check it out, play with it, and let us know what you think. Others already have.
 
-## [Getting Started](id:GS)
+## [Getting Started](#GS)
 
 ### What types of apps can I build with MontageJS?
-MontageJS is best for building modular single-page “thick-client” web applications for mobile and tablet devices and desktop browsers. You can use MontageJS for building traditional websites, of course, but it may not be the best fit for that. For examples, check out the sample apps [link]. You can also use MontageJS for building Chrome browser extensions and native applications that can embed a web component.
+MontageJS is best for building modular single-page "thick-client" web applications for mobile and tablet devices and desktop browsers. You can use MontageJS for building traditional websites, of course, but it may not be the best fit for that. For examples, check out the sample apps [link]. You can also use MontageJS for building Chrome browser extensions and native applications that can embed a web component.
 
 ### How do I get started with MontageJS?
 Check out our [Quick Start](http://montagejs.org/docs/Quick-Start.html) to get a feel for how to set up your environment and assmeble MontageJS components into a rich user interface.
@@ -46,7 +46,7 @@ Yes! Please have a look at our archived [release notes](https://github.com/monta
 ### How can I file a bug or provide feedback?
 You can file bugs in the MontageJS project on [GitHub](https://github.com/montagejs/montage/issues). For feedback or ideas, create a new [issue](https://github.com/montagejs/montage/issues) on GitHub, join us at #montage on [IRC](http://webchat.freenode.net/?channels=montage), or post questions to our [Google Group](https://groups.google.com/forum/?fromgroups#!forum/montagejs). You can also follow us on [Twitter](https://twitter.com/montage_js) and [Google+](https://plus.google.com/116915300739108010954/).
 
-## [Licensing](id:LIC)
+## [Licensing](#LIC)
 
 ### How is MontageJS licensed?
 MontageJS is open source and released under the [BDS](https://github.com/montagejs/montage/blob/master/LICENSE.md) license.
