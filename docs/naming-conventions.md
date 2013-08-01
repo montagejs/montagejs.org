@@ -42,14 +42,14 @@ More specifically, the following conventions apply:
     <button data-montage-id "button" class="montage-Button">
     ```
 
-    If a component name consists of more than one word, each new word also starts with an uppercase letter, a convention commonly  referred to as **upper camel case** ("CamelCaps") formatting; for example, `montage-Button`, `montage-InputRange`.
+    If a component name consists of more than one word, each new word also starts with an uppercase letter, a convention commonly referred to as **upper camel case** ("CamelCaps") formatting; for example, `montage-Button`, `montage-InputRange`.
     
 3. Composite components (components with children) follow this convention:
 
-    If a component has a **child element**, the child's name is written in lowercase (to signal the distinction between parent and child) and follows the component’s name separated by a dash; for example, `montage-InputRange-thumb`. Be sure to use the same name for children as the native pseudo (Shadow DOM) elements if known; for example: -webkit-progress-**bar**. Angelina Fabbro put together a nice reference [list](https://gist.github.com/3759334) of pseudo element selectors used in WebKit.
+    If a component has a **child element**, the child's name is written in lowercase (to signal the distinction between parent and child) and follows the component's name separated by a dash; for example, `montage-InputRange-thumb`. Be sure to use the same name for children as the native pseudo (Shadow DOM) elements if known; for example: -webkit-progress-**bar**. Angelina Fabbro put together a nice reference [list](https://gist.github.com/3759334) of pseudo element selectors used in WebKit.
     * If a child element consists of concatenated words, its name is written in lower camelCase; for example, `montage-InputRange-thumbWithSpikyEars`.
     * If a component has multiple levels of child elements, each child is separated from the other by a dash; for example, `montage-InputRange-thumb-nobs-centerNob`.
 
         **Note:** There is **no limit** as to how many levels of child elements can be used, but if the whole CSS class becomes too long, it might be a good idea to **break** it into subcomponents.
 
-    If a class name represents a **state** or a **variation**, a double-dash is used; for example, (states) `montage-InputRange--dragging`, `montage-Button--pressed` or (variations) `montage-Button--big`, `montage-Button--primary`.
+    * If a class name represents a **state** or a **variation**, a double-dash is used; for example, (states) `montage-InputRange--dragging`, `montage-Button--pressed` or (variations) `montage-Button--big`, `montage-Button--primary`.
