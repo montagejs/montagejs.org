@@ -2,7 +2,7 @@
 layout: docs
 title: Examples
 
-prev-page: getting-Started
+prev-page: getting-started
 next-page: repetition
 ---
 
