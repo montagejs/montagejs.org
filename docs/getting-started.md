@@ -10,6 +10,8 @@ next-page: examples
 
 This tutorial will show you how to assemble a simple MontageJS application. The goal is to quickly familiarize you with the basic building blocks of Montage. It should take no more than fifteen minutes for you to complete. To make the most of this tutorial, you should have a basic understanding of HTML, CSS, and JavaScript and some familiarity with working in a command-line environment.
 
+>**Note**: If you are unfamiliar with the common convention to denote the command line, note that a leading dollar sign ($) indicates that what follows is a command to be run; it is not part of the command. In other words, do not type the leading dollar sign at the beginning of a command line when following the instructions in this document.
+
 ##Set Up MontageJS Development
 MontageJS application development is divided into a development (creating the app) and a production (compiling the app) process, each has its own tools and requirements. For the development process (which is the focus of this tutorial) you need:
 
@@ -40,11 +42,12 @@ $ sudo npm install -gq minit@latest
 
 **Windows**
 
-Run the Node.js command prompt.
+Open the Command Prompt and type:
 
 ```
-$ npm install -gq minit@latest
+npm install -gq minit@latest
 ``` 
+
 ###Step 3: Create the default application template
 You are now ready to create your first MontageJS application.
 
@@ -77,7 +80,7 @@ In the remaining part of this tutorial, you will learn how to assemble MontageJS
 
 MontageJS applications consist of a model layer that handles the data and a view layer that reads from the models and handles user input and rendering. Components make up the view portion of a MontageJS application. As a rule, these components are stored in the ui directory of your MontageJS application and identified by a .reel suffix (which has the benefit that you can use any MontageJS package and easily locate the user interface components it provides).
 
-Check it out: In your file browser go to the hello/ui directory; inside you’ll find two components—main.reel and welcome.reel.
+Check it out: In your file browser go to the hello/ui directory; inside you'll find two components—main.reel and welcome.reel.
 
 A .reel suffix identifies a self-contained MontageJS component that encapsulates the structure (HTML), appearance (CSS), and behavior (JavaScript) of the component. 
 
@@ -122,7 +125,7 @@ Let's dress up the Welcome component by adding a user interface component. First
     },
     ```
 
-    This declares an instance of the HelloWorld component with an object label of `helloWorld` as a child of the Welcome component: The component's module ID ("/ui/hello-world.reel") allows MontageJS to recreate the component from its serialized form at runtime. The component's `element` property, which corresponds to the associated HTML element on which the component operates, is set to the HTML body div with the `data-montage-id` attribute of `hello-world`.
+    This declares an instance of the HelloWorld component with an object label of `helloWorld` as a child of the Welcome component: The component's module ID (`"/ui/hello-world.reel"`) allows MontageJS to recreate the component from its serialized form at runtime. The component's `element` property, which corresponds to the associated HTML element on which the component operates, is set to the HTML body div with the `data-montage-id` attribute of `hello-world`.
 
 6. Refresh the page.
 
@@ -287,7 +290,7 @@ You're almost done. Just one more thing.
 
 ###Listen for Events
 
-Components can emit events in the same sense that DOM elements emit events. A MontageJS Button component, for example, dispatches an action event with itself as the target. This event is synthesized from a sequence of mouse or touch events that the button component itself observes on its own element. Here’s how you handle a button’s action event.
+Components can emit events in the same sense that DOM elements emit events. A MontageJS Button component, for example, dispatches an action event with itself as the target. This event is synthesized from a sequence of mouse or touch events that the button component itself observes on its own element. Here's how you handle a button's action event.
 
 1. Add the Button component to the Hello-World component's template at ui/hello-world.reel/hello-world.html:
 
@@ -349,7 +352,7 @@ Components can emit events in the same sense that DOM elements emit events. A Mo
 
     The `classList` property manipulates the CSS classes applied to the HelloWorld component's element.
 
-4. Refresh the browser and click the button. If everything works as expected, you should see the background color of the the Welcome component change color and flip diagonally.
+4. Refresh the browser and click the button. If everything works as expected, you should see the background color of the Welcome component change color and flip diagonally.
 
     ![GS_Figure1](/images/docs/gs_tut_fig_07.png)
 
