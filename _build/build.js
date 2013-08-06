@@ -39,7 +39,7 @@ var exec = function (command, args, cwd, silent) {
 
 var SOURCE_PATH = PATH.join(__dirname, "..");
 var APPS = {
-    "popcorn": "https://github.com/montagejs/popcorn.git"
+    "popcorn": {url: "https://github.com/montagejs/popcorn.git", commit: "master"}
 };
 
 var TEMP_DIR;
@@ -50,11 +50,16 @@ var TEMP_DIR;
 
 function cloneAndMopApps(apps) {
     return Q.all(Object.keys(apps).map(function (name) {
-        var repo = apps[name];
+        var repo = apps[name].url;
+        var commit = apps[name].commit || "master";
+
         var outPath = PATH.join(SOURCE_PATH, "apps", name);
         var clonePath = PATH.join(TEMP_DIR, name);
 
         return exec("git", ["clone", repo, clonePath])
+        .then(function () {
+            return exec("git", ["checkout", commit], clonePath);
+        })
         .then(function () {
             return exec("npm", ["install"], clonePath);
         })
