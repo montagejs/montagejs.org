@@ -39,7 +39,7 @@ var exec = function (command, args, cwd, silent) {
 
 var SOURCE_PATH = PATH.join(__dirname, "..");
 var APPS = {
-    "popcorn": {url: "https://github.com/montagejs/popcorn.git", commit: "master"}
+    "popcorn": {url: "https://github.com/montagejs/popcorn.git", commit: "v0.12"}
 };
 
 var TEMP_DIR;
