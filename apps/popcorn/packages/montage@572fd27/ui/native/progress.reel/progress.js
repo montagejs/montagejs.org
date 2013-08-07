@@ -1,0 +1,1 @@
+var Montage=require("montage").Montage,Component=require("ui/component").Component,NativeControl=require("ui/native-control").NativeControl,Progress=exports.Progress=Montage.create(NativeControl,{});Progress.addAttributes({form:null,max:{dataType:"number"},value:{dataType:"number"}})

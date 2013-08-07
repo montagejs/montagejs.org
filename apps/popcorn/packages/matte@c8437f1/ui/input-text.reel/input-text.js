@@ -1,1 +1,0 @@
-var NativeInputText=require("native/ui/input-text.reel").InputText;exports.InputText=NativeInputText.specialize({hasTemplate:{value:!0},constructor:{value:function(){this.super(),this.classList.add("matte-InputText")}}});
