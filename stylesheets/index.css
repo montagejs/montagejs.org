@@ -122,8 +122,7 @@ ul.gallery {
 /* Hero ----------------------------------------- */
 
 .hero {
-    padding: 50px;
-    text-align: center;
+    padding: 0 50px;
 }
 
 .hero h1 {
@@ -131,6 +130,7 @@ ul.gallery {
 }
 
 .hero .tagline {
+    margin-top: 50px;
     font-size: 1.6em;
     line-height: 1.3;
     font-weight: normal;
@@ -144,12 +144,411 @@ ul.gallery {
 
 .hero .logo {
     height: 200px;
+    margin-top: 100px;
 }
 
 @media all and (max-width: 800px) {
     
+    .hero {
+        text-align: center;
+    }
+    
     .hero .logo {
-        height: 150px;
+        height: 180px;
     }
 
 }
+
+
+/* Neo (that's the 3D phone thing) ----------------------------------------- */
+
+.neo {
+    position: relative;
+    height: 520px;
+    -webkit-perspective: 1000px;
+       -moz-perspective: 1000px;
+        -ms-perspective: 1000px;
+         -o-perspective: 1000px;
+            perspective: 1000px;
+    -webkit-perspective-origin: 50% 0;
+       -moz-perspective-origin: 50% 0;
+        -ms-perspective-origin: 50% 0;
+         -o-perspective-origin: 50% 0;
+            perspective-origin: 50% 0;
+}
+
+.neo-device {
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    width: 240px;
+    height: 360px;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    padding: 40px 10px;
+    border-radius: 20px;
+    background: hsl(0,0%,24%);
+    
+    -webkit-transform-style: preserve-3d;
+       -moz-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+         -o-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+       -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+         -o-backface-visibility: hidden;
+            backface-visibility: hidden;
+    -webkit-transform: rotateX(0deg) rotateY(-20deg) rotateZ(10deg) scale(.84);
+       -moz-transform: rotateX(0deg) rotateY(-20deg) rotateZ(10deg) scale(.84);
+        -ms-transform: rotateX(0deg) rotateY(-20deg) rotateZ(10deg) scale(.84);
+         -o-transform: rotateX(0deg) rotateY(-20deg) rotateZ(10deg) scale(.84);
+            transform: rotateX(0deg) rotateY(-20deg) rotateZ(10deg) scale(.84);
+    -webkit-transition: -webkit-transform 1s cubic-bezier(.5,.05,.09,1);
+       -moz-transition:    -moz-transform 1s cubic-bezier(.5,.05,.09,1);
+        -ms-transition:     -ms-transform 1s cubic-bezier(.5,.05,.09,1);
+         -o-transition:      -o-transform 1s cubic-bezier(.5,.05,.09,1);
+            transition:         transform 1s cubic-bezier(.5,.05,.09,1);
+}
+
+.neo:hover .neo-device {
+    -webkit-transition-duration: .6s;
+       -moz-transition-duration: .6s;
+        -ms-transition-duration: .6s;
+         -o-transition-duration: .6s;
+            transition-duration: .6s;
+    -webkit-transform: translateX(-120px) rotateX(10deg) rotateY(40deg) rotateZ(-20deg);
+       -moz-transform: translateX(-120px) rotateX(10deg) rotateY(40deg) rotateZ(-20deg);
+        -ms-transform: translateX(-120px) rotateX(10deg) rotateY(40deg) rotateZ(-20deg);
+         -o-transform: translateX(-120px) rotateX(10deg) rotateY(40deg) rotateZ(-20deg);
+            transform: translateX(-120px) rotateX(10deg) rotateY(40deg) rotateZ(-20deg);
+}
+
+
+.neo--has3D {
+    -webkit-backface-visibility: hidden;
+       -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+         -o-backface-visibility: hidden;
+            backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+       -moz-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+         -o-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-transform: translateZ(1px); /* Needs to be > 0 to avoid flickering */
+       -moz-transform: translateZ(1px); /* Needs to be > 0 to avoid flickering */
+        -ms-transform: translateZ(1px); /* Needs to be > 0 to avoid flickering */
+         -o-transform: translateZ(1px); /* Needs to be > 0 to avoid flickering */
+            transform: translateZ(1px); /* Needs to be > 0 to avoid flickering */
+    
+    -webkit-animation: neo-pulse 1s .2s cubic-bezier(.7,0,.3,1) alternate infinite;
+       -moz-animation: neo-pulse 1s .2s cubic-bezier(.7,0,.3,1) alternate infinite;
+        -ms-animation: neo-pulse 1s .2s cubic-bezier(.7,0,.3,1) alternate infinite;
+         -o-animation: neo-pulse 1s .2s cubic-bezier(.7,0,.3,1) alternate infinite;
+            animation: neo-pulse 1s .2s cubic-bezier(.7,0,.3,1) alternate infinite;
+    -webkit-animation-play-state: paused;
+       -moz-animation-play-state: paused;
+        -ms-animation-play-state: paused;
+         -o-animation-play-state: paused;
+            animation-play-state: paused;
+}
+
+.neo:hover .neo--has3D {
+    -webkit-animation-play-state: running;
+       -moz-animation-play-state: running;
+        -ms-animation-play-state: running;
+         -o-animation-play-state: running;
+            animation-play-state: running;
+}
+
+.neo--has3D:nth-child(1) { 
+    -webkit-animation-delay: .3s;
+       -moz-animation-delay: .3s;
+        -ms-animation-delay: .3s;
+         -o-animation-delay: .3s;
+            animation-delay: .3s;
+}
+.neo--has3D:nth-child(2) { 
+    -webkit-animation-delay: .4s;
+       -moz-animation-delay: .4s;
+        -ms-animation-delay: .4s;
+         -o-animation-delay: .4s;
+            animation-delay: .4s;
+}
+.neo--has3D:nth-child(3) { 
+    -webkit-animation-delay: .5s;
+       -moz-animation-delay: .5s;
+        -ms-animation-delay: .5s;
+         -o-animation-delay: .5s;
+            animation-delay: .5s;
+}
+.neo--has3D:nth-child(4) { 
+    -webkit-animation-delay: .6s;
+       -moz-animation-delay: .6s;
+        -ms-animation-delay: .6s;
+         -o-animation-delay: .6s;
+            animation-delay: .6s;
+}
+
+@-webkit-keyframes neo-pulse { 100% { -webkit-transform: translateZ(80px); opacity: .8; } }
+   @-moz-keyframes neo-pulse { 100% {    -moz-transform: translateZ(80px); opacity: .8; } }
+    @-ms-keyframes neo-pulse { 100% {     -ms-transform: translateZ(80px); opacity: .8; } }
+     @-o-keyframes neo-pulse { 100% {      -o-transform: translateZ(80px); opacity: .8; } }
+        @keyframes neo-pulse { 100% {         transform: translateZ(80px); opacity: .8; } }
+
+
+@media all and (max-width: 800px) {
+    /* Currently disabled on smaller screens */
+    .neo {
+        display: none;
+    }
+}
+
+
+/* Neo App ---------------- */
+
+.neo-App {
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    text-shadow: none;
+    background-color: hsl(0,0%,20%);
+    resize: none;
+}
+
+
+/* Neo Header ---------------- */
+
+.neo-Header {
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    
+    color: hsla(0,0%,0%,.6);
+    border-bottom: 2px solid hsla(0,0%,0%,.3);
+    background-color: #2ecc71;
+}
+
+.neo-Header-title {
+    -webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
+    -webkit-flex: 1;          /* Chrome */
+    -ms-flex: 1;              /* IE 10 */
+    flex: 1;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    
+    display: block;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: inherit;
+    font-size: 1.2em;
+    line-height: 50px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    border-left: 1px solid hsla(0,0%,0%,.1);
+    border-right: 1px solid hsla(0,0%,0%,.1);
+    background: inherit;
+}
+
+.neo-Header-button {
+    display: block;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border: none;
+    color: inherit;
+    border-radius: 0;
+    margin: 0;
+    background: inherit;
+}
+.neo-Header-button[data-icon]:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 24px;
+    line-height: 50px;
+}
+
+.neo-Header-button:active {
+    color: #fff;
+    background-color: hsla(0,0%,0%,.2);
+}
+
+
+/* Neo Search ---------------- */
+
+.neo-Search {
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    
+    padding: 10px;
+    background-color: #1abc9c;
+}
+
+.neo-Search .neo-Search-input {
+    -webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
+    -webkit-flex: 1;          /* Chrome */
+    -ms-flex: 1;              /* IE 10 */
+    flex: 1;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    
+    -webkit-appearance: none; /* Removes inner shadow on iOS. */
+    display: block;
+    outline: none;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 14px;
+    height: 2.5em;
+    padding: 0.5em;
+    vertical-align: middle;
+    border-radius: 3px;
+    border: 2px solid hsla(0, 0%, 0%, 0.1);
+    background-color: inherit;
+}
+
+.neo-Search-input:focus {
+    border-color: hsla(0, 0%, 0%, 0.3);
+}
+
+.neo-Search-input::-webkit-input-placeholder {
+    color: hsla(0,0%,0%,.5);
+}
+
+.neo-Search-badge {
+    display: block;
+    margin: 0 0 0 10px;
+    padding: 0 9px;
+    min-width: 30px;
+    border-radius: 3px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    vertical-align: middle;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: bold;
+    color: hsla(0,0%,0%,.5);
+    border: 2px solid hsla(0, 0%, 0%, 0.1);
+    background-color: inherit;
+}
+
+
+/* Neo Content ---------------- */
+
+.neo-Content {
+    -webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
+    -webkit-flex: 1;          /* Chrome */
+    -ms-flex: 1;              /* IE 10 */
+    flex: 1;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    min-height: 0;
+        
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    -webkit-box-orient: vertical;
+    -ms-flex-direction: column;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    
+    position: relative;
+    padding: 5px;
+    text-align: center;
+    font-size: 0;
+    background: hsl(200,30%,30%);
+}
+
+.neo-Content-img {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 50%;
+    -ms-flex: 1;   
+    flex: 1 0 50%;
+    
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: inherit;
+    background-color: hsl(200,30%,40%);
+    background-clip: content-box;
+}
+
+@-moz-document url-prefix() {
+    /* Hack since FF doesn't support flex-flow: row wrap; but already is unprefixed */
+    .neo-Content {
+        flex-direction: column;
+    }
+    .neo-Content-img {
+        flex: 1;
+    }
+}
+
+
+/* Neo TabBar ---------------- */
+
+.neo-TabBar {
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    
+    margin: 0;
+    padding: 0;
+    background-color: #3498db;
+}
+
+.neo-TabBar-tab {
+    -webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
+    -webkit-flex: 1;          /* Chrome */
+    -ms-flex: 1;              /* IE 10 */
+    flex: 1;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    
+    display: block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 4px;
+    height: 50px;
+    border-radius: 0;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    color: hsla(0,0%,0%,.5);
+    border: none;
+    border-left: 1px solid hsla(0,0%,0%,.1);
+    background: inherit;
+}
+
+.neo-TabBar-tab[data-icon] {
+    position: relative;
+    padding: 30px 0 0 0;
+    font-size: 10px;
+}
+
+.neo-TabBar-tab[data-icon]:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 24px;
+    line-height: 36px;
+
+}
+
+.neo-TabBar-tab--active,
+.neo-TabBar-tab:active {
+    color: hsla(0,0%,100%,.6);
+    background-color: #2980b9;
+}
+
