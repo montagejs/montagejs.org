@@ -265,14 +265,14 @@ hr {
     margin-right: 4%;
     font-size: 16px;
 }
-.cols > .col:nth-child(even),
+
 .cols > .col:last-child {
     margin-right: 0;
 }
 
 .col-1-2 { width: 48%; }
-.col-1-3 { width: 30%; }
-.col-2-3 { width: 63%; }
+.col-1-3 { width: 30.666%; }
+.col-2-3 { width: 65.333%; }
 
 @media all and (max-width: 800px) {
     .cols > .col {
