@@ -304,6 +304,12 @@
     background-color: transparent;
 }
 
+.main .comments {
+    padding-top: 30px;
+    margin-top: 30px;
+    border-top: 2px solid rgba(0,49,79,.08);
+}
+
 
 /* Edit this ----------------------------------------- */
 

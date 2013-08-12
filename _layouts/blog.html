@@ -12,6 +12,8 @@ blog: true
                 <time class="blog-time">{{ page.date | date: "%B %d %Y" }}</time>
                 {{content}}
 
+                {% include comments.html %}
+
             </div>
             
             <nav class="subnav">
@@ -24,7 +26,3 @@ blog: true
             
         </article>
     </section>
-    
-    {% include comments.html %}
-
-    
