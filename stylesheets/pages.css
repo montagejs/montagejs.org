@@ -304,6 +304,20 @@
     background-color: transparent;
 }
 
+.content figure {
+    border-radius: 0 0 6px 6px;
+    border: 1px solid #ddd;
+}
+
+.content figcaption {
+    font-size: .9em;
+    font-style: italic;
+    padding: .5em 1em;
+    border-radius: inherit;
+    border-top: 1px solid #ddd;
+    background-color: hsl(0,0%,96%);
+}
+
 
 /* Edit this ----------------------------------------- */
 
