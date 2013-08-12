@@ -8,5 +8,8 @@ title: "<?js= title ?> - MontageJS API"
     </nav>
 
     <div class="main">
-        <?js= content ?>
+        <div class="content">
+        	<?js= content ?>
+        </div>
+        {% include comments.html %}
     </div>
