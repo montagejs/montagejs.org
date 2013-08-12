@@ -12,15 +12,17 @@ docs: true
             <a href="https://github.com/montagejs/montagejs.org/tree/gh-pages/{{page.path}}" class="edit">Improve this</a>
             
             <div class="main">
-                {{content}}
+                <div class="content">
+                    {{content}}
+                </div>
+
+                <nav class="paging">
+                    <a class="button paging--prev {% if page.prev-page == null %}disabled{% endif %}" href="/docs/{{ page.prev-page }}.html">Prev</a>
+                    <a class="button paging--next {% if page.next-page == null %}disabled{% endif %}" href="/docs/{{ page.next-page }}.html">Next</a>
+                </nav>
 
                 {% include comments.html %}
             </div>
-            
-            <nav class="paging">
-                <a class="button paging--prev {% if page.prev-page == null %}disabled{% endif %}" href="/docs/{{ page.prev-page }}.html">Prev</a>
-                <a class="button paging--next {% if page.next-page == null %}disabled{% endif %}" href="/docs/{{ page.next-page }}.html">Next</a>
-            </nav>
             
         </article>
         
