@@ -503,7 +503,30 @@ hr {
 
 .footer {
     padding: 20px;
+    font-size: 14px;
     text-align: center;
     text-shadow: 0px 1px 0px hsla(0,0%,100%,.6);
     background: hsl(0,0%,90%);
+}
+
+.footer .wrapper {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.footer .col {
+    font-size: 15px;
+    line-height: 1.4;
+    text-align: left;
+}
+
+@media all and (max-width: 800px) {
+    .footer .col {
+        text-align: center;
+    }
+}
+
+.footer-end {
+    padding-top: 10px;
+    color: hsl(0,0%,50%);
 }
