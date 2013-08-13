@@ -509,6 +509,12 @@ hr {
     background: hsl(0,0%,90%);
 }
 
+@media all and (min-width: 801px) {
+    .footer {
+        padding: 40px;
+    }
+}
+
 .footer .wrapper {
     margin: 0 auto;
     max-width: 1000px;
