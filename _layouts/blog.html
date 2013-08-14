@@ -4,15 +4,15 @@ blog: true
 ---
 
     <section id="blog" class="blog withSubnav withSubnav--right">
-        <article>
+        <div class="wrapper">
             
             <div class="main">
             
-                <div class="content">
+                <article class="content">
                     <h1>{{ page.title }}</h1>
                     <time class="blog-time">{{ page.date | date: "%B %d %Y" }}</time>
                     {{content}}
-                </div>
+                </article>
 
                 {% include comments.html %}
 
@@ -26,5 +26,5 @@ blog: true
                 
             </nav>
             
-        </article>
+        </div>
     </section>

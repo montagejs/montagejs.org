@@ -5,16 +5,16 @@ docs: true
 
     <section id="docs" class="docs withSubnav withSubnav--left">
         
-        <article>
+        <div class="wrapper">
             
             {% include subnav-docs.html %}
             
             <a href="https://github.com/montagejs/montagejs.org/tree/gh-pages/{{page.path}}" class="edit">Improve this</a>
             
             <div class="main">
-                <div class="content">
+                <article class="content">
                     {{content}}
-                </div>
+                </article>
 
                 <nav class="paging">
                     <a class="button paging--prev {% if page.prev-page == null %}disabled{% endif %}" href="/docs/{{ page.prev-page }}.html">Prev</a>
@@ -24,7 +24,7 @@ docs: true
                 {% include comments.html %}
             </div>
             
-        </article>
+        </div>
         
     </section>
     

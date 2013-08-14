@@ -51,7 +51,7 @@ section {
 }
 
 
-article {
+.wrapper {
     position: relative;
     max-width: 1000px;
     margin: 0 auto;
@@ -405,7 +405,7 @@ hr {
     text-shadow: 0px 1px 0px hsl(0,0%,0%);
 }
 
-.gallery article {
+.gallery .wrapper {
     color: hsl(0,0%,50%);
     text-shadow: none;
 }
