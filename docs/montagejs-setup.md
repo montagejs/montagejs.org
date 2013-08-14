@@ -66,7 +66,7 @@ Before you start to learn how to program with MontageJS, you will need to set up
 
     You should see the contents of the Welcome component—a simple single-page application, which is explicitly loaded to accompany [part 2](http://montagejs.org/docs/hello-montagejs.html) of our quick start tutorial.
     
-    ![GS_Figure1](http://simurai.github.io/images/docs/gs_tut_fig_01.png)
+    ![GS_Figure1](/images/docs/gs_tut_fig_01.png)
     
 You are now ready to start coding.
 
