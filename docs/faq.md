@@ -2,16 +2,17 @@
 layout: docs
 title: MontageJS FAQ
 
-prev-page: troubleshooting
+prev-page: overlay
+next-page: troubleshooting
 ---
 
 # FAQ
 
 Get answers to frequently asked questions about MontageJS.
-General Questions
-Getting Started
-MontageJS and other MV* Frameworks
-Licensing
+
+* General Questions
+* Getting Started
+* Licensing
 
 ## General Questions
 ### What is MontageJS?

@@ -2,8 +2,7 @@
 layout: docs
 title: Troubleshooting
 
-prev-page: overlay
-next-page: faq
+prev-page: faq
 ---
 
 # Troubleshooting
