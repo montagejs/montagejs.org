@@ -1,7 +1,9 @@
 ---
+
 layout: blog
 title: Title
 published: false
+
 ---
 
 # Title

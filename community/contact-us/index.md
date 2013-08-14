@@ -1,6 +1,8 @@
 ---
+
 layout: community
 title: MontageJS Contact Us
+
 ---
 
 # Get in touch

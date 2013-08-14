@@ -1,6 +1,8 @@
 ---
+
 layout: community
 title: MontageJS Meet-ups
+
 ---
 
 # MontageJS Meet-ups

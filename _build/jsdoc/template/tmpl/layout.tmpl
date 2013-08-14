@@ -1,15 +1,17 @@
 ---
+
 layout: api
 title: "<?js= title ?> - MontageJS API"
+
 ---
 
-    <nav class="subnav js-api-subnav">
-        <?js= this.nav ?>
-    </nav>
+<nav class="subnav js-api-subnav">
+    <?js= this.nav ?>
+</nav>
 
-    <div class="main">
-        <div class="content">
-        	<?js= content ?>
-        </div>
-        {% include comments.html %}
+<div class="main">
+    <div class="content">
+    	<?js= content ?>
     </div>
+    {% include comments.html %}
+</div>

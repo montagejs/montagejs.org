@@ -1,6 +1,8 @@
 ---
+
 layout: community
 title: MontageJS Events
+
 ---
 
 # Upcoming Events
