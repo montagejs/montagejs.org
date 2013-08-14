@@ -1,80 +1,13 @@
----
 layout: docs
-title: Getting Started
+title: Hello MontageJS - Quick Start part 2
 
-prev-page: index
-next-page: examples
+prev-page: montagejs-setup
+next-page: montagejs-examples
 ---
+#Hello MontageJS
 
-# Getting Started
+This tutorial will show you how to assemble a simple MontageJS application. The goal is to quickly familiarize you with the basic building blocks of the MontageJS framework. To make the most of this tutorial, you should have a basic understanding of HTML, CSS, and JavaScript and some familiarity with working in a command-line environment.
 
-This tutorial will show you how to assemble a simple MontageJS application. The goal is to quickly familiarize you with the basic building blocks of Montage. It should take no more than fifteen minutes for you to complete. To make the most of this tutorial, you should have a basic understanding of HTML, CSS, and JavaScript and some familiarity with working in a command-line environment.
-
->**Note**: If you are unfamiliar with the common convention to denote the command line, note that a leading dollar sign ($) indicates that what follows is a command to be run; it is not part of the command. In other words, do not type the leading dollar sign at the beginning of a command line when following the instructions in this document.
-
-##Set Up MontageJS Development
-MontageJS application development is divided into a development (creating the app) and a production (compiling the app) process, each has its own tools and requirements. For the development process (which is the focus of this tutorial) you need:
-
-* Node.js and npm.
-* A recent stable release of Chrome, Safari, or Firefox.
-
-###Step 1: Install Node and npm
-MontageJS application development depends on npm, the Node package manager, which is distributed with Node.js.
-
-If you haven't already, be sure to [download](http://nodejs.org/download/) and run the prebuilt installer for your platform from the Node.js website before proceeding.
-
-###Step 2: Install the MontageJS Initializer
-Next, you will need to install `minit`, the MontageJS Initializer.
-
-`minit` is a command line utility that will help you kickstart your MontageJS project by generating prebuilt MontageJS application templates and components and placing the associated files inside the proper directories of your project. 
-
-> **Note**: You don't have to use `minit` to build MontageJS application; you can just use a GIT client and start from scratch. However, using `minit` makes the development process a lot easier.
-
-Open a Terminal window and install the latest version of `minit`:
-
-**Mac OS X**
-
-```
-$ mkdir -p ~/.npm
-$ sudo npm install -gq minit@latest
-```
-> **Note**: `minit` does not need sudo access; this is a workaround due to a current [issue](https://github.com/joyent/node/issues/3821) with the OS X node installer package.
-
-**Windows**
-
-Open the Command Prompt and type:
-
-```
-npm install -gq minit@latest
-``` 
-
-###Step 3: Create the default application template
-You are now ready to create your first MontageJS application.
-
-1. Use `minit` to create a MontageJS application named hello.
-
-    ```
-    $ minit create:app -n hello
-    ```
-
-    > **Note**: If you get an EACCES warning when trying to run `minit:create`, use `sudo chown -R <username> ~/.npm` and then use `$ minit create:app -n hello`. This is a workaround due to a bug in npm.
-
-    This generates the hello directory—which contains the default MontageJS application template, including the production dependencies—in your current directory.
-
-2. To verify your installation, switch to the hello directory and serve your new MontageJS project using `minit`:
-
-    ```
-    $ cd hello
-    $ minit serve &
-    ```
-
-3. Finally, point your browser to http://localhost:8083/.
-
-Voilà—you are looking at your first MontageJS application. More precisely, you are looking at the contents of the Welcome component, which is explicitly loaded for no other reason than to accompany this tutorial and help kickstart your MontageJS application development skills. Think of this app and what follows as an expanded version of your standard "Hello World" application.
-
-![GS_Figure1](/images/docs/gs_tut_fig_01.png)
-
-In the remaining part of this tutorial, you will learn how to assemble MontageJS components into a user interface, surface and synchronize data between MontageJS objects and the user interface, and listen for and react to events.
 
 ##Say Hello to MontageJS
 
@@ -125,7 +58,7 @@ Let's dress up the Welcome component by adding a user interface component. First
     },
     ```
 
-    This declares an instance of the HelloWorld component with an object label of `helloWorld` as a child of the Welcome component: The component's module ID (`"/ui/hello-world.reel"`) allows MontageJS to recreate the component from its serialized form at runtime. The component's `element` property, which corresponds to the associated HTML element on which the component operates, is set to the HTML body div with the `data-montage-id` attribute of `hello-world`.
+    This declares an instance of the HelloWorld component with an object label of `helloWorld` as a child of the Welcome component: The component's module ID ("/ui/hello-world.reel") allows MontageJS to recreate the component from its serialized form at runtime. The component's `element` property, which corresponds to the associated HTML element on which the component operates, is set to the HTML body div with the `data-montage-id` attribute of `hello-world`.
 
 6. Refresh the page.
 
@@ -133,7 +66,7 @@ You should see the contents of the HelloWorld component—a simple "Hello World"
 
 > **Note**: You may have to clear your browser's cache for the change to appear.
 
-![GS_Figure1](/images/docs/gs_tut_fig_02.png)
+![GS_Figure1](http://simurai.github.io/images/docs/gs_tut_fig_02.png)
 
 That's how you build MontageJS applications—you assemble user interface components.
 
@@ -195,7 +128,7 @@ Follow these steps:
     ```
 7. Refresh the browser and enjoy the fancy red Name tag: The contents of the NameTag component are rendered using the `name-tag` element from its included HTML template and styled using its included CSS.
 
-![GS_Figure1](/images/docs/gs_tut_fig_03.png)
+![GS_Figure1](http://simurai.github.io/images/docs/gs_tut_fig_03.png)
 
 You now have a pretty respectable component tree. But you're not done yet. All you've done so far is assemble your visual component tree through the power of declarative programming. You have yet to connect its parts to an underlying model. For simplicity's sake, we'll let our components serve as the model.
 
@@ -242,7 +175,7 @@ Your next task in your goal to create a more personalized greeting is to instruc
 
 4. Refresh the page. Instead of a red Name tag you should now see a red Alice.
 
-![GS_Figure1](/images/docs/gs_tut_fig_04.png)
+![GS_Figure1](http://simurai.github.io/images/docs/gs_tut_fig_04.png)
 
 Bindings are among the pinnacle of declarative bliss. After declaring the binding between the two properties—`value` and `name`—you don't need to do anything else to make it happen.
 
@@ -284,13 +217,13 @@ For the purpose of this example, you want NameTag to be a read-only component, s
 
     As you type in the text field, the Name tag should update in real time.
 
-![GS_Figure1](/images/docs/gs_tut_fig_05.png)
+![GS_Figure1](http://simurai.github.io/images/docs/gs_tut_fig_05.png)
 
 You're almost done. Just one more thing.
 
 ###Listen for Events
 
-Components can emit events in the same sense that DOM elements emit events. A MontageJS Button component, for example, dispatches an action event with itself as the target. This event is synthesized from a sequence of mouse or touch events that the button component itself observes on its own element. Here's how you handle a button's action event.
+Components can emit events in the same sense that DOM elements emit events. A MontageJS Button component, for example, dispatches an action event with itself as the target. This event is synthesized from a sequence of mouse or touch events that the button component itself observes on its own element. Here’s how you handle a button’s action event.
 
 1. Add the Button component to the Hello-World component's template at ui/hello-world.reel/hello-world.html:
 
@@ -327,7 +260,7 @@ Components can emit events in the same sense that DOM elements emit events. A Mo
 
 2. Refresh the page. You should see a button whose label matches the current name.
 
-    ![GS_Figure1](/images/docs/gs_tut_fig_06.png)
+    ![GS_Figure1](http://simurai.github.io/images/docs/gs_tut_fig_06.png)
 
 
     Behold the joy of code-free declarative binding: change the name in the TextField component and see it reflected in both the `nameTag` and the `greetButton` component instances.
@@ -352,9 +285,9 @@ Components can emit events in the same sense that DOM elements emit events. A Mo
 
     The `classList` property manipulates the CSS classes applied to the HelloWorld component's element.
 
-4. Refresh the browser and click the button. If everything works as expected, you should see the background color of the Welcome component change color and flip diagonally.
+4. Refresh the browser and click the button. If everything works as expected, you should see the background color of the the Welcome component change color and flip diagonally.
 
-    ![GS_Figure1](/images/docs/gs_tut_fig_07.png)
+    ![GS_Figure1](http://simurai.github.io/images/docs/gs_tut_fig_07.png)
 
 ##Take Off the Training Wheels
 

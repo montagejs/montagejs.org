@@ -1,11 +1,9 @@
 ---
-
 layout: docs
-title: Data binding
+title: MontageJS Data Binding
 
-prev-page: serialization-format
+prev-page: montagejs-objects
 next-page: event-handling
-
 ---
 
 # Data binding

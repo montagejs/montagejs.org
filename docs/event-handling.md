@@ -1,11 +1,9 @@
 ---
-
 layout: docs
-title: Event handling
+title: MontageJS Event Handling
 
 prev-page: data-binding
-next-page: draw-cycle
-
+next-page: themes
 ---
 
 # Event handling
@@ -28,6 +26,7 @@ You use the standard `addEventListener()` method to register an event handler on
 
 ### Montage event listener interface
 The Montage event listener interface extends the [DOM Level 3 EventListener interface](http://dev.w3.org/2006/webapi/DOM-Level-3-Events/html/DOM3-Events.html#interface-EventListener) specification implemented by all modern web browsers. In the standard interface you specify an object as a “listener” object for an event type. The listener object defines an `handleEvent()` method that is invoked by the browser whenever the specified event occurs:
+
 ```js
 // DOM Level 3 EventListener interface
 var listenerObj = {};
@@ -45,6 +44,7 @@ Montage extends this interface to make it more useful for developers. Instead of
 * Optionally, a string identifier property on the target element or object
 
 The following pseudo-code shows how the event manager determines what method to call on the listener object:
+
 ```js
 methodToInvoke = "";
 identifier = eventTarget.identifier;

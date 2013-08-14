@@ -1,14 +1,15 @@
 ---
-
 layout: docs
-title: Repetition
+title: MontageJS Repetition UI Container
 
-prev-page: themes
+prev-page: native-components
 next-page: substitution
-
 ---
 
 # Repetition
+Repetition
+
+
 The repetition iterates through its ```objects``` property rendering the content originally inside the repetition's own element for each object. 
 
 This ```objects``` property can be set directly with a typical array for simple repeating. However, the repetition has expanded capabilities when working in tandem with an ArrayController assigned to its ```contentController``` property, in lieu of populating the ```objects``` property manually.

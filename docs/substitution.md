@@ -1,16 +1,14 @@
 ---
-
 layout: docs
-title: Substitution
+title: MontageJS Substitution UI Container
 
 prev-page: repetition
 next-page: overlay
-
 ---
 
 # Substitution
 
-The `Substitution` handles a group of elements and shows only one at a time.
+The Substitution component handles a group of elements and shows only one element at a time.
 
 Each element has a key associated with it. The key is used to select which element the substitution should display, this is done by setting `switchValue`.
 
@@ -42,6 +40,7 @@ The elements are set up in the substitution with DOM arguments. The name of each
 ```
 ### Example 2
 Dom arguments can also be elements of components:
+
 ```json
 "substitution": {
     "prototype": "montage/ui/substitution.reel",

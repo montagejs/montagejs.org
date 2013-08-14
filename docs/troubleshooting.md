@@ -1,11 +1,9 @@
 ---
-
 layout: docs
 title: Troubleshooting
 
-prev-page: blueprints
+prev-page: overlay
 next-page: faq
-
 ---
 
 # Troubleshooting
@@ -13,7 +11,7 @@ next-page: faq
 If your Montage application isn’t working as expected, you can use the JavaScript console available in modern web browsers to help diagnose the problem.
 
 ## JavaScript console
-If you test a Montage application in the browser and don’t see what you expect, open the JavaScript console to look any for errors or warnings. Most modern web browsers include a JavaScript debugger, console, and related tools that can help debug problems with Montage applications. These tools are built-in to the latest versions of Chrome and Safari. You use the browser’s `console.log()` method to send output to the console.
+If you test a Montage application in the browser and don’t see what you expect, open the JavaScript console to look for any errors or warnings. Most modern web browsers include a JavaScript debugger, console, and related tools that can help debug problems with Montage applications. These tools are built-in to the latest versions of Chrome and Safari. You use the browser’s `console.log()` method to send output to the console.
 
 * To open the console in Chrome, select View > Developer > JavaScript console.
 * To open the console in Safari, first enable the Develop menu (Safari Preferences > Advanced > Show Develop menu in menu bar), then select Develop > Show Error Console.

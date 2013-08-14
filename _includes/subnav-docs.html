@@ -1,36 +1,45 @@
 <nav class="subnav">
     
     <details open>
-        <summary>I'm new</summary>
-        <a href="getting-started.html" {% if page.title == 'Getting Started' %}class="active"{% endif %}>Getting Started</a>
-        <a href="examples.html" {% if page.title == 'Examples' %}class="active"{% endif %}>Examples</a>
+        <summary>Quick Start</summary>
+        <a href="montagejs-setup.html" {% if page.title == 'Set Up MontageJS - Quick Start part 1' %}class="active"{% endif %}>Set Up</a>
+        <a href="hello-montagejs.html" {% if page.title == 'Hello MontageJS - Quick Start part 2' %}class="active"{% endif %}>Hello MontageJS</a>
     </details>
 
     <details open>
-        <summary>Widgets</summary>
-        <a href="themes.html" {% if page.title == 'Themes' %}class="active"{% endif %}>Overview</a>
+        <summary>Demos</summary>
+        <a href="montagejs-examples.html" {% if page.title == 'MontageJS Examples' %}class="active"{% endif %}>Examples</a>
+        <a href="http://montagejs.github.com/mfiddle/" target="_blank">Mfiddle</a>
     </details>
-    
+
     <details open>
-        <summary>Guides</summary>
-        <a href="repetition.html" {% if page.title == 'Repetition' %}class="active"{% endif %}>Repetition</a>
-        <a href="substitution.html" {% if page.title == 'Substitution' %}class="active"{% endif %}>Substitution</a>
-        <a href="overlay.html" {% if page.title == 'Overlay' %}class="active"{% endif %}>Overlay</a>
-        <a href="native-components.html" {% if page.title == 'Native components' %}class="active"{% endif %}>Native components</a>
-        <a href="extending-components.html" {% if page.title == 'Extending components' %}class="active"{% endif %}>Extending components</a>
-        <a href="montage-objects.html" {% if page.title == 'Montage objects' %}class="active"{% endif %}>Montage objects</a>
-        <a href="serialization-format.html" {% if page.title == 'Serialization format' %}class="active"{% endif %}>Serialization format</a>
-        <a href="data-binding.html" {% if page.title == 'Data binding' %}class="active"{% endif %}>Data binding</a>
-        <a href="event-handling.html" {% if page.title == 'Event handling' %}class="active"{% endif %}>Event handling</a>
-        <a href="draw-cycle.html" {% if page.title == 'Draw cycle' %}class="active"{% endif %}>Draw cycle</a>
-        <a href="gestures.html" {% if page.title == 'Gestures' %}class="active"{% endif %}>Gestures</a>
-        <a href="blueprints.html" {% if page.title == 'Blueprints' %}class="active"{% endif %}>Blueprints</a>
+        <summary>Concepts</summary>
+        <a href="draw-cycle.html" {% if page.title == 'MontageJS Draw Cycle' %}class="active"{% endif %}>Draw cycle</a>
+        <a href="extending-components.html" {% if page.title == 'Extending MontageJS Components' %}class="active"{% endif %}>Extending Components</a>
+        <a href="serialization-format.html" {% if page.title == 'MontageJS Component Object Model' %}class="active"{% endif %}>Component Object Model</a>
+        <a href="montagejs-objects.html" {% if page.title == 'Montage Objects' %}class="active"{% endif %}>Objects</a>
+        <a href="data-binding.html" {% if page.title == 'MontageJS Data Binding' %}class="active"{% endif %}>Data Binding</a>
+        <a href="event-handling.html" {% if page.title == 'MontageJS Event Handling' %}class="active"{% endif %}>Event Handling</a>
+        <!-- a href="gestures.html" {% if page.title == 'Gestures' %}class="active"{% endif %}>Gestures</a -->
+    </details>
+
+    <details open>
+        <summary>Themes</summary>
+        <a href="themes.html" {% if page.title == 'Overview - MontageJS Themes' %}class="active"{% endif %}>Overview</a>
+        <a href="native-components.html" {% if page.title == 'Native - MontageJS Theme' %}class="active"{% endif %}>Native components</a>
+    </details>
+
+    <details open>
+        <summary>UI Containers</summary>
+        <a href="repetition.html" {% if page.title == 'MontageJS Repetition UI Container' %}class="active"{% endif %}>Repetition</a>
+        <a href="substitution.html" {% if page.title == 'MontageJS Substitution UI Container' %}class="active"{% endif %}>Substitution</a>
+        <a href="overlay.html" {% if page.title == 'MontageJS Overlay UI Container' %}class="active"{% endif %}>Overlay</a>
     </details>
     
     <details open>
         <summary>Help</summary>
         <a href="troubleshooting.html" {% if page.title == 'Troubleshooting' %}class="active"{% endif %}>Troubleshooting</a>
-        <a href="faq.html" {% if page.title == 'FAQ' %}class="active"{% endif %}>FAQ</a>
+        <a href="faq.html" {% if page.title == 'MontageJS FAQ' %}class="active"{% endif %}>FAQ</a>
     </details>
     
 </nav>

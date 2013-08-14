@@ -1,11 +1,9 @@
 ---
-
 layout: docs
-title: Extending components
+title: Extending MontageJS Components
 
 prev-page: native-components
 next-page: montage-objects
-
 ---
 
 # Extending components
@@ -16,12 +14,13 @@ The process of extending a component is the same as creating an entirely new com
 
 There are three options to extend a component’s template:
 
-1. If the extended component doesn’t wish to introduce changes in the template, the component can set its `templateModuleId` property to point to the parent module’s template.
-2. Create a new template that will completely redefine the markup of the component with no relation to the original template.
-3. Set the `extends` property of the template that points to the template to be imported and where. This is similar to the “decorator” pattern of the proposed [Web Components](http://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html#decorator-section) feature. This approach is useful when the component needs to add additional CSS data, or reuse the original markup. The template object will be accessible through the `template` label of the serialization.
+* Set the `templateModuleId` property to point to the parent module's template; use this option if the extended component doesn't introduce changes in the template.
+* Create a new template that will completely redefine the markup of the component with no relation to the original template.
+* Set the `extends` property of the template that points to the template to be imported and where. This is similar to the "decorator" pattern of the proposed [Web Components](http://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html#decorator-section) feature. This approach is useful when the component needs to add additional CSS data, or reuse the original markup. The template object will be accessible through the `template` label of the serialization.
 
 ## Examples
-### Extending the Toggle component only changing its markup
+### Extending the Toggle component changing its markup only
+
 
 ```js
 //my-toggle.js
@@ -58,7 +57,7 @@ exports.MyToggle = Montage.create(Toggle);
 </html>
 ```
 
-### Extending the Toggle component by only changing some of its logic
+### Extending the Toggle component by changing some of its logic
 
 ```js
 //my-toggle.js

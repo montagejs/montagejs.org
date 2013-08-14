@@ -1,11 +1,9 @@
 ---
-
 layout: docs
 title: Gestures
 
 prev-page: draw-cycle
 next-page: blueprints
-
 ---
 
 # Gestures

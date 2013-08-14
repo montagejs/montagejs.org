@@ -1,11 +1,10 @@
 ---
 
 layout: docs
-title: Themes
+title: Overview - MontageJS Themes
 
-prev-page: examples
-next-page: repetition
-
+prev-page: event-handling
+next-page: native-components
 ---
 
 # MontageJS Themes

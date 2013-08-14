@@ -1,11 +1,9 @@
 ---
-
 layout: docs
-title: Native components
+title: Native - MontageJS Theme
 
-prev-page: overlay
-next-page: extending-components
-
+prev-page: themes
+next-page: repetition
 ---
 
 # Native components

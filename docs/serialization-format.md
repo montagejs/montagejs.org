@@ -1,30 +1,28 @@
 ---
-
 layout: docs
-title: Serialization format
+title: MontageJS Component Object Model
 
-prev-page: montage-objects
-next-page: data-binding
-
+prev-page: extending-components
+next-page: montage-objects
 ---
 
 # Serialization format
 
-This document explains the serialization format used by Montage to serialize, and later deserialize, an _object graph_. A serialized object graph describes the objects, components, properties, component data bindings, and DOM relationships involved in a Montage application. Montage uses JavaScript Object Notation (JSON) as the serialization format. At runtime, Montage parses the JSON structure and deserializes its contents into JavaScript that is then evaluated and executed in the browser.
+This document explains the serialization format used by MontageJS to serialize, and later deserialize, an _object graph_. A serialized object graph describes the objects, components, properties, component data bindings, and DOM relationships involved in a MontageJS application. MontageJS uses JavaScript Object Notation (JSON) as the serialization format. At runtime, MontageJS parses the JSON structure and deserializes its contents into JavaScript that is then evaluated and executed in the browser.
 
 ## JSON overview
-JSON, a text format designed for serializing structured data, can represent six types:
+JSON is a text-based open standard designed for human-readable data interchange. It can represent six data types:
 
-* Four primitive types: strings, numbers, booleans, and null
+* Four primitive types: strings, numbers, Booleans, and null
 * Two structured types: objects and arrays
 
-In JSON, an object is represented as an unordered collection of zero or more name/value pairs. A name is a string, and a value is one of the primitive JSON data types—string, number, boolean, or null. An array structure is represented as square brackets surrounding zero or more values (or elements). Elements are separated by commas.
+In JSON, an object is represented as an unordered collection of zero or more name/value pairs. A name is a string, and a value is one of the primitive JSON data types—string, number, Boolean, or null. An array structure is represented as square brackets surrounding zero or more values (or elements). Elements are separated by commas.
 
 For example, the following JSON content defines an object named `anObject` that contains three properties:
 
 * A string named `id`
 * An array named `colors`
-* A boolean named `readyState`
+* A Boolean named `readyState`
 
 ```json
 "anObject": {
@@ -34,10 +32,10 @@ For example, the following JSON content defines an object named `anObject` that 
 }
 ```
 
-In addition to these standard data types, Montage supports a few special types to enable serialization of more complex objects. These types include references to other objects in the same serialization, DOM references, functions, and regular expressions.
+In addition to these standard data types, MontageJS supports a few special types to enable serialization of more complex objects. These types include references to other objects in the same serialization, DOM references, functions, and regular expressions.
 
-## Example of serialization
-The following simple (yet complete) Montage application is defined in a single HTML document. This example gives you a sense of what serialization in Montage is about and why it’s useful.
+## Serialization Example
+The following simple (yet complete) Montage application is defined in a single HTML document. This example gives you a sense of what serialization in Montage is about and why it's useful.
 
 ```html
 <html>
@@ -53,12 +51,13 @@ The following simple (yet complete) Montage application is defined in a single H
    }
    </script>
    <body>
-    <input id="fName"></input>
+    <input data-montage-id="fName"></input>
    <body>
 </html>
 ```
 
 Important things to note:
+
 * The HTML body contains a single `<input>` tag that has the ID “fName”.
 * The document head contains a `<script>` block of type `text/montage-serialization`. This block contains all serialized Montage objects used in the document.
 * The serialization block declares a Montage Textfield component with an object label of “firstName”. The component’s module ID (“montage/ui/textfield.reel”) and its name (“Textfield”) allow Montage to re-create the component from its serialized form at runtime.
