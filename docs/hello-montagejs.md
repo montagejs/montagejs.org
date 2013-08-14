@@ -66,7 +66,7 @@ You should see the contents of the HelloWorld component—a simple "Hello World"
 
 > **Note**: You may have to clear your browser's cache for the change to appear.
 
-![GS_Figure1](http://simurai.github.io/images/docs/gs_tut_fig_02.png)
+![GS_Figure1](/images/docs/gs_tut_fig_02.png)
 
 That's how you build MontageJS applications—you assemble user interface components.
 
@@ -123,12 +123,12 @@ Follow these steps:
 6. In the HTML body, inside the div, replace "World" with the following span:
 
     ```
-    <div data-montage-id="main" class="Main">Hello <span data-montage-id="nameTag"></span>
+    <div data-montage-id="helloWorld" class="HelloWorld">Hello <span data-montage-id="nameTag"></span>
     </div>
     ```
 7. Refresh the browser and enjoy the fancy red Name tag: The contents of the NameTag component are rendered using the `name-tag` element from its included HTML template and styled using its included CSS.
 
-![GS_Figure1](http://simurai.github.io/images/docs/gs_tut_fig_03.png)
+![GS_Figure1](/images/docs/gs_tut_fig_03.png)
 
 You now have a pretty respectable component tree. But you're not done yet. All you've done so far is assemble your visual component tree through the power of declarative programming. You have yet to connect its parts to an underlying model. For simplicity's sake, we'll let our components serve as the model.
 
@@ -175,7 +175,7 @@ Your next task in your goal to create a more personalized greeting is to instruc
 
 4. Refresh the page. Instead of a red Name tag you should now see a red Alice.
 
-![GS_Figure1](http://simurai.github.io/images/docs/gs_tut_fig_04.png)
+![GS_Figure1](/images/docs/gs_tut_fig_04.png)
 
 Bindings are among the pinnacle of declarative bliss. After declaring the binding between the two properties—`value` and `name`—you don't need to do anything else to make it happen.
 
@@ -205,7 +205,7 @@ For the purpose of this example, you want NameTag to be a read-only component, s
     **HTML body**
 
     ```
-    <div data-montage-id="main" class="Main">
+    <div data-montage-id="helloWorld" class="HelloWorld">
         Hello <span data-montage-id="nameTag"></span>
         <div><input type="text" data-montage-id="nameField"></div>
     </div>
@@ -217,7 +217,7 @@ For the purpose of this example, you want NameTag to be a read-only component, s
 
     As you type in the text field, the Name tag should update in real time.
 
-![GS_Figure1](http://simurai.github.io/images/docs/gs_tut_fig_05.png)
+![GS_Figure1](/images/docs/gs_tut_fig_05.png)
 
 You're almost done. Just one more thing.
 
@@ -250,7 +250,7 @@ Components can emit events in the same sense that DOM elements emit events. A Mo
     **HTML body**
 
     ```
-    <div data-montage-id="main" class="Main">Hello
+    <div data-montage-id="helloWorld" class="HelloWorld">Hello
      <span data-montage-id="nameTag"></span>
      <div><input type="text" data-montage-id="nameField"></div>
      <button data-montage-id="greetButton"></button>
@@ -260,7 +260,7 @@ Components can emit events in the same sense that DOM elements emit events. A Mo
 
 2. Refresh the page. You should see a button whose label matches the current name.
 
-    ![GS_Figure1](http://simurai.github.io/images/docs/gs_tut_fig_06.png)
+    ![GS_Figure1](/images/docs/gs_tut_fig_06.png)
 
 
     Behold the joy of code-free declarative binding: change the name in the TextField component and see it reflected in both the `nameTag` and the `greetButton` component instances.
@@ -287,7 +287,7 @@ Components can emit events in the same sense that DOM elements emit events. A Mo
 
 4. Refresh the browser and click the button. If everything works as expected, you should see the background color of the the Welcome component change color and flip diagonally.
 
-    ![GS_Figure1](http://simurai.github.io/images/docs/gs_tut_fig_07.png)
+    ![GS_Figure1](/images/docs/gs_tut_fig_07.png)
 
 ##Take Off the Training Wheels
 

@@ -190,7 +190,7 @@ Follow these steps:
 6. In the HTML body, inside the div, replace "World" with the following span:
 
     ```
-    <div data-montage-id="main" class="Main">Hello <span data-montage-id="nameTag"></span>
+    <div data-montage-id="helloWorld" class="HelloWorld">Hello <span data-montage-id="nameTag"></span>
     </div>
     ```
 7. Refresh the browser and enjoy the fancy red Name tag: The contents of the NameTag component are rendered using the `name-tag` element from its included HTML template and styled using its included CSS.
