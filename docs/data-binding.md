@@ -1,9 +1,11 @@
 ---
+
 layout: docs
 title: Data binding
 
 prev-page: serialization-format
 next-page: event-handling
+
 ---
 
 # Data binding

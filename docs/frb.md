@@ -1,6 +1,8 @@
 ---
+
 layout: docs
 title: FAQ for the FRB Transition
+
 ---
 
 # FAQ for the FRB Transition

@@ -1,6 +1,8 @@
 ---
+
 layout: docs
 title: Overridable Methods
+
 ---
 
 # Overridable Methods

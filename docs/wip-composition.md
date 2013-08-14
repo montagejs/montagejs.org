@@ -1,6 +1,8 @@
 ---
+
 layout: docs
 title: Component composition using Montage
+
 ---
 
 # Component composition using Montage.

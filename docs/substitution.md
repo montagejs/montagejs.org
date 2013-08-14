@@ -1,9 +1,11 @@
 ---
+
 layout: docs
 title: Substitution
 
 prev-page: repetition
 next-page: overlay
+
 ---
 
 # Substitution

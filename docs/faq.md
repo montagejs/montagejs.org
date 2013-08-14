@@ -1,8 +1,10 @@
 ---
+
 layout: docs
 title: MontageJS FAQ
 
 prev-page: troubleshooting
+
 ---
 
 # FAQ

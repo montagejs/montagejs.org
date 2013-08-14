@@ -1,9 +1,11 @@
 ---
+
 layout: docs
 title: Repetition
 
 prev-page: themes
 next-page: substitution
+
 ---
 
 # Repetition

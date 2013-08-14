@@ -1,9 +1,11 @@
 ---
+
 layout: docs
 title: Examples
 
 prev-page: getting-started
 next-page: themes
+
 ---
 
 # Examples

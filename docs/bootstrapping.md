@@ -1,6 +1,8 @@
 ---
+
 layout: docs
 title: Montage Bootstrapping
+
 ---
 
 # Montage Bootstrapping

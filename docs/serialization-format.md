@@ -1,9 +1,11 @@
 ---
+
 layout: docs
 title: Serialization format
 
 prev-page: montage-objects
 next-page: data-binding
+
 ---
 
 # Serialization format

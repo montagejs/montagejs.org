@@ -1,9 +1,11 @@
 ---
+
 layout: docs
 title: Troubleshooting
 
 prev-page: blueprints
 next-page: faq
+
 ---
 
 # Troubleshooting

@@ -1,6 +1,8 @@
 ---
+
 layout: docs
 title: Rich Text Editor
+
 ---
 
 # Rich Text Editor

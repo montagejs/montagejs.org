@@ -1,9 +1,11 @@
 ---
+
 layout: docs
 title: Montage objects
 
 prev-page: extending-components
 next-page: serialization-format
+
 ---
 
 # Montage objects

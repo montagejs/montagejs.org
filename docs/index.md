@@ -1,8 +1,10 @@
 ---
+
 layout: docs
 title: Montage Docs
 
 next-page: getting-started
+
 ---
 
 # Montage Docs
