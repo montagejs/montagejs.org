@@ -13,7 +13,6 @@ MontageJS provides three widget sets (or themes) for user interface components: 
 
 ## Digit
 
-<img class="float-img" src="https://raw.github.com/simurai/digit/edge/overview/assets/images/icon.png" alt="Digit logo">
 Digit is a touch-optimized component set for tablets and mobile phones. You can choose from three themes: flat, light, and dark. <a href="https://github.com/montagejs/digit" target="_blank">See Digit on GitHub »</a>
 
 [ ![Button](https://raw.github.com/montagejs/digit/master/ui/button.reel/screenshot.png) ](https://github.com/montagejs/digit/tree/master/ui/button.reel)
