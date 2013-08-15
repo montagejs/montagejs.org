@@ -201,10 +201,10 @@
     background-color: hsl(210,75%,57%);
 }
 
-.subnav a[href^="http"]:after {
+.subnav a[target="_blank"]:after {
      content: "";
      display: inline-block;
-     margin-left: 8px;
+     margin-left: 4px;
      width: 8px;
      height: 8px;
      background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABJElEQVQ4EY1SwWrCQBB1jSHQkxe/wv5ET+3FDxD8iuBBgiUJgfRQsZCL3+BXaD+iR496kRw8WLo1SfteYGEJg8nAZGbn7Xsz2V0VhmESRdFrT7A4jn2UV3AlwHWpr5RaQuBd2gDxdVVVU2Bawlnr8wOROboNmTcN9S1qL/BLE+O6FpAAu4ZJ9mVZTlC72XXmnQSCIBg5jrPBfhf+Q6KxVgGSPc/bgTCGfxVF8Yj42UmgSdZaPyVJcsjz/BkCPJvewCg1o0RO0/TMfVmWaRz8FLd3EgXukU2jPxhyXzwD13VnAOt/5timsyHbURTA3X/gAfltZAqJv0CAIoxtJk7QRrJxe4IHdP21wXs5Xuc3cXuCI9bXro4rfKOAPQHXnQ3vYIGJb/8a4nf/5LC60AAAAABJRU5ErkJggg==) no-repeat center;
