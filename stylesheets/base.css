@@ -90,6 +90,11 @@ hr {
     margin: 0 10px 10px 0;
 }
 
+.img-fill {
+    width: 100%;
+    vertical-align: top;
+}
+
 
 /* Header ----------------------------------------- */
 
