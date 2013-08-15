@@ -28,23 +28,6 @@ Digit is a touch-optimized component set for tablets and mobile phones. You can 
 [ ![TextField](https://raw.github.com/montagejs/digit/master/ui/text-field.reel/screenshot.png) ](https://github.com/montagejs/digit/tree/master/ui/text-field.reel)
 [ ![TextArea](https://raw.github.com/montagejs/digit/master/ui/text-area.reel/screenshot.png) ](https://github.com/montagejs/digit/tree/master/ui/text-area.reel)
 
-> Note: Development of Digit is still in progress. Below is a preview of some upcoming components.
-
-![Toggle](https://raw.github.com/simurai/digit/edge/ui/toggle.reel/screenshot.png)
-![Button Group](https://raw.github.com/simurai/digit/edge/ui/button-group.reel/screenshot.png)
-![Progress](https://raw.github.com/simurai/digit/edge/ui/progress.reel/screenshot.png)
-![Audio](https://raw.github.com/simurai/digit/edge/ui/audio.reel/screenshot.png)
-![Video](https://raw.github.com/simurai/digit/edge/ui/video.reel/screenshot.png)
-
-![Map](https://raw.github.com/simurai/digit/edge/ui/map.reel/screenshot.png)
-![Header](https://raw.github.com/simurai/digit/edge/ui/header.reel/screenshot.png)
-![Tool Bar](https://raw.github.com/simurai/digit/edge/ui/tool-bar.reel/screenshot.png)
-![List](https://raw.github.com/simurai/digit/edge/ui/list.reel/screenshot.png)
-![Tab Bar](https://raw.github.com/simurai/digit/edge/ui/tab-bar.reel/screenshot.png)
-
-![Action Sheet](https://raw.github.com/simurai/digit/edge/ui/action-sheet.reel/screenshot.png)
-![Modal](https://raw.github.com/simurai/digit/edge/ui/modal.reel/screenshot.png)
-![Notification](https://raw.github.com/simurai/digit/edge/ui/notification.reel/screenshot.png)
 
 -----
 
