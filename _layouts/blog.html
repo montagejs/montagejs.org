@@ -11,7 +11,7 @@ blog: true
         <nav class="subnav">
             
             {% for post in site.posts %}
-              <a href="{{ post.url }}">{{ post.title }}</a>
+              <a {% if page.title == post.title %}class="active"{% endif %} href="{{ post.url }}">{{ post.title }}</a>
             {% endfor %}
             
         </nav>

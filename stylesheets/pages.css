@@ -357,9 +357,10 @@
     list-style: none;
 }
 
-.blog-index-item {
-    padding: 1.5em 0;
-    border-bottom: 1px solid #ddd;
+.content .blog-index-item {
+    margin: 1.5em 0 0 0;
+    padding: 1.5em 0 0 0;
+    border-top: 1px solid hsl(0,0%,90%);
 }
 
 .blog-index-title {
