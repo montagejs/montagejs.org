@@ -387,3 +387,13 @@
 .blog img {
     max-width: 100%;
 }
+
+
+/* 404 ----------------------------------------- */
+
+.title-404 {
+    font-size: 8em;
+    text-align: center;
+    line-height: 0;
+    color: hsl(0,0%,80%);
+}
