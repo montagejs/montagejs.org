@@ -272,7 +272,8 @@
     margin-bottom: 0;
 }
 
-.content h4 + ul {
+.content h4 + ul,
+.content h4 + p {
     margin-top: 0;
 }
 
