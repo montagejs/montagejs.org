@@ -390,6 +390,31 @@
 }
 
 
+/* Code ----------------------------------------- */
+
+.highlight {
+    position: relative;
+}
+
+code[data-lang]:after {
+    content: attr(data-lang);
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 1.5em;
+    padding: 0em .6em;
+    text-align: center;
+    font-size: .75em;
+    line-height: 1.6;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    color: hsl(50,20%,60%);
+    border-radius: 0 5px;
+    border-left: 1px solid hsla(0, 0%, 0%, 0.05);
+    border-bottom: 1px solid hsla(0, 0%, 0%, 0.05);
+    background: hsla(0, 0%, 0%, 0.04);
+}
+
 /* 404 ----------------------------------------- */
 
 .title-404 {
