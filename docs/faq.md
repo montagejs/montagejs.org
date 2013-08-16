@@ -27,10 +27,10 @@ MontageJS is still evolving, but it has been used to create the (temporarily sus
 ## Getting Started
 
 ### What types of apps can I build with MontageJS?
-MontageJS is best for building modular single-page “thick-client” web applications for mobile and tablet devices and desktop browsers. You can use MontageJS for building traditional websites, of course, but it may not be the best fit for that. For examples, check out the sample apps [link]. You can also use MontageJS for building Chrome browser extensions and native applications that can embed a web component.
+MontageJS is best for building modular single-page “thick-client” web applications for mobile and tablet devices and desktop browsers. You can use MontageJS for building traditional websites, of course, but it may not be the best fit for that. For examples, check out the [sample apps](http://montagejs.org/apps/). You can also use MontageJS for building Chrome browser extensions and native applications that can embed a web component.
 
 ### How do I get started with MontageJS?
-Check out our [Quick Start](http://montagejs.org/docs/Quick-Start.html) to get a feel for how to set up your environment and assmeble MontageJS components into a rich user interface.
+Check out our [Quick Start](http://montagejs.org/docs/montagejs-setup.html) to get a feel for how to set up your environment and assmeble MontageJS components into a rich user interface.
 
 ### What is the total size of the framework?
 MontageJS is not your traditional framework library that you download or include  in an app. Building MontageJS applications is divided into a development phase and a production phase, during which you minify the app. Only the dependencies and components that you actually use will be optimized and included in the final page that makes up your app. In short: The size will depend on the complexity of your application.
