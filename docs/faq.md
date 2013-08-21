@@ -33,10 +33,13 @@ MontageJS is best for building modular single-page “thick-client” web applic
 Check out our [Quick Start](http://montagejs.org/docs/montagejs-setup.html) to get a feel for how to set up your environment and assmeble MontageJS components into a rich user interface.
 
 ### What is the total size of the framework?
-MontageJS is not your traditional framework library that you download or include  in an app. Building MontageJS applications is divided into a development phase and a production phase, during which you minify the app. Only the dependencies and components that you actually use will be optimized and included in the final page that makes up your app. In short: The size will depend on the complexity of your application.
+MontageJS is not your traditional framework library that you download or include in an app. Building MontageJS applications is divided into a development phase, during which you assemble your MontageJS application, and a production phase, during which you minify the app. Only the dependencies and components that you actually use will be optimized and included in the final page that makes up your app. In short: The size will depend on the complexity of your application.
 
 ### What browsers does MontageJS support?
 MontageJS is designed to help you build rich and well-performing HTML5 applications that take full advantage of what the evolving web platform has to offer rather than make concessions to older browsers. For this reason, MontageJS works best in the latest versions of Google Chrome, Firefox, Safari, Chrome Android, Mobile Safari, and IE 10.
+
+### Do you support unit testing?
+Yes, we use Jasmine for unit testing. To install the test code, run `npm install` in your project folder.
 
 ### Can I access the device from a Montage app?
 You will be able to access a device when these capabilities are added to a browser. We are actively watching the browser community for such additions.
