@@ -8,14 +8,12 @@ next-page: extending-components
 
 # Draw Cycle
 
-You want your web applications, especially mobile ones, to perform well in order to be valuable to users. People don't like to wait; "every millisecond counts!" Although you can, to some extent, mitigate perceived application performance issues by optimizing ui flows and elements, you cannot get around two key factors that can trigger expensive reflow: DOM manipulation (i.e., creating or modifying the DOM structure or styles) and DOM inspection (i.e., querying an element's calculated style; for example, `offsetWidth`).
+You want your web applications, especially mobile ones, to perform well in order to be valuable to users. People don't like to wait; "every millisecond counts!" Although you can, to some extent, mitigate perceived application performance issues by optimizing user interface flows and elements, you cannot get around two key factors that can trigger expensive reflow: DOM manipulation (i.e., creating or modifying the DOM structure or styles) and DOM inspection (i.e., querying an element's calculated style; for example, `offsetWidth`).
 
 Repeatedly manipulating and reading the DOM in an unmanaged fashion—AKA interleaving write and read operations or "layout thrash"—will cause expensive reflows that can have a critical impact on the performance and responsivenes of your web application and, by extension, on usage and brand perception. This is where MontageJS comes in.
 
 To help maximize application performance, MontageJS components participate in a managed draw cycle that batches DOM write and read operations into separate code passes. In this approach, all the required DOM updates are made in a single pass, followed by another pass that executes all required DOM queries. As a result, only the first DOM query triggers a reflow; subsequent queries do not.
 
-```
-/// Interleaving DOM read and write operations—AKA "layout thrash"—result in unavoidable reflows 
 
 ## How It Works
 

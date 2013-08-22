@@ -2,13 +2,15 @@
 layout: docs
 title: Native - MontageJS Theme
 
-prev-page: themes
+prev-page: theme-matte-components
 next-page: repetition
 ---
 
-# Native components
+# Native Theme
 
-Montage includes three widget sets (or themes) for user interface components: Digit, Matte, and Default. Digit is a touch-friendly widget set optimzed for mobile device development. Matte contains desktop-optimized UI components. The Default package contains native UI components. This package lets you wrap HTML5 elements to give them access to Montage features such as data binding and the Montage event handling model. All styling is left to the user-agent/browser or the author to apply.
+The Native set uses the browser's default styles. Use this set if you want to custom design your user interface components yet still gain access to Montage features such as data binding and the Montage event handling model.
+
+![Native](/images/themes/native.png)
 
 ## Benefits
 Using Montage native components has several advantages over using custom Montage components or pure HTML5 elements.
@@ -20,7 +22,7 @@ Using Montage native components has several advantages over using custom Montage
 * **Keeps the power of Montage**: Although you don't have the styling and extra elements associated with custom components, you still have access to the same powerful event binding and event listener model as with the custom components. This means that you don't have to handle keeping the view and model in sync yourself or write your own event listeners, so you can spend your development effort writing your application logic rather than doing the plumbing.
 
 ## Available Components
-The following list summarizes the UI components that are currently part of the default (native) widget set:
+The following list summarizes the UI components that are currently part of the Native widget set:
 
 Component | Description 
 ------------ | ------------- 
@@ -38,20 +40,39 @@ Select | Provides drop-down list functionality in Montage. It wraps the `input` 
 TextArea | Provides functionality for a multiline text field. It wraps the `textarea` element.  
 
 
-## Using the Default Theme
+## Installing the Native Theme
+
+The Native set is not included in the default application template. To use the Native components in your project, you have to install it first:
+
+1. Use your command line tool to switch to your project directory.
+
+    ```
+    cd yourpojectfolder
+    ```
+    
+2. At the prompt, enter:
+
+    ```
+    $ npm install native@latest --save
+    ```
+    
+    The `--save` flag ensures that the matte package is automatically added as a dependency to the package.json file of your application code.
+
+## Using the Native Theme
+
 You can use Native components in almost the same way as the Digit and Matte components. The main differences are: you will have to provide the styling yourself and you need to specify the actual element in your HTML file, rather than using a placeholder element. The hooks for adding the serialization and so on are the same.
 
 For example, here is an HTML button hooked up as a Button component:
 
 **HTML body**
 
-```
+```html
 <button data-montage-id="button">I'm a native button</button>
 ```
 
 **Serialization**
 
-```
+```json
 "button": {
     "prototype": "montage/ui/button.reel",
     "properties": {
@@ -65,7 +86,7 @@ The following example adds a range slider that is hooked up to an InputRange com
 
 **HTML body**
 
-```
+```html
 <h1>Pump up the volume</h1>
 <form>
     <label for="slider1">Volume</label>
@@ -76,7 +97,7 @@ The following example adds a range slider that is hooked up to an InputRange com
 
 **Serialization**
 
-```
+```json
 "slider": {
     "module": "montage/ui/input-range.reel",
     "name": "InputRange",
@@ -105,19 +126,19 @@ In the example above two attributes are set on the slider; `min` and `max`. Thes
 
 As these two attributes were specified in the original HTML (rather than with a script later), they are available at serialization time and thus the values are stored in their equivalent Montage properties.
 
-If the attributes are updated later, after serialization takes place, the new values will not be synced with the Montage properties and the model and view will get out of sync. As mentioned above, it is better to update the component properties directly, rather than mutating the DOM, as this will keep things in sync. This potentially also gives you performance gains as DOM manipulation can be performance sensitive, and Montage can optimize how it interacts with the DOM.
+If the attributes are updated later, after serialization takes place, the new values will not be synced with the Montage properties and the model and view will get out of sync. To avoid expensive reflow, it is better to update the component properties directly, rather than mutating the DOM, as this will keep things in sync. This potentially also gives you performance gains as DOM manipulation can be performance sensitive, and Montage can optimize how it interacts with the DOM.
 
 The following example shows how to set the `min` and `max` properties in the serialization rather than using attributes in the HTML. In this particular case adding via HTML would be fine as they're added before serialization happens, but it is worth showing how to set it in this manor.
 
 In this example the HTML stays the same, except the range slider:
 
-```
+```html
 <input type="range" data-montage-id="testSlider"/>
 ```
 
 Then the properties section of the slider serialization is updated to add the two new min and max properties:
 
-```
+```json
 …
 "slider": {
     "module": "montage/ui/input-range.reel",
