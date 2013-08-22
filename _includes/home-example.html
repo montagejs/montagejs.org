@@ -1,3 +1,9 @@
+<script>
+    // Workaround for window.Touch on desktop browsers
+    if (!("ontouchstart" in window)) {
+        window.Touch = null;
+    }
+</script>
 <div data-montage-id="features"></div>
 <script src="index.html.bundle-0.js" data-montage-location="packages/montage@1934147/" data-promise-location="packages/q@0b8cfe2/" data-montage-hash="1934147" data-promise-hash="0b8cfe2" data-application-hash="28f0767"></script>
 <script type="text/montage-serialization">{"features":{"prototype":"ui/features.reel","properties":{"element":{"#":"features"}}}}</script>
