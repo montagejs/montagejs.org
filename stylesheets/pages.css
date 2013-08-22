@@ -147,8 +147,15 @@
     margin: .3em 0;
 }
 
+.content h2 {
+    border-bottom: 1px solid hsl(0,0%,90%);
+    padding-bottom: .3em;
+}
+
+.content h2,
+.content h3,
 .content h4 {
-    margin-bottom: 0;
+    margin: 1.6em 0 .4em 0;
 }
 
 .content h4 + ul,
@@ -246,6 +253,7 @@
 
 .highlight {
     position: relative;
+    margin: 1em 0;
 }
 
 code[data-lang]:after {
