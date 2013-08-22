@@ -198,6 +198,29 @@
     background-color: hsl(0,0%,96%);
 }
 
+.content table {
+    margin-bottom: 1em;
+    font-size: .94em;
+    line-height: 1.3;
+    border: 1px solid hsl(0,0%,92%);
+    border-width: 0 1px 1px 0;
+}
+
+.content thead {
+    background: hsl(208,60%,97%);
+}
+
+.content tr:nth-child(even) {
+    background: hsl(0,0%,97%);
+}
+
+.content th,
+.content td {
+    padding: .6em .8em;
+    border: 1px solid hsl(0,0%,92%);
+    border-width: 1px 0 0 1px;
+}
+
 
 
 
