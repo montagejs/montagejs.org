@@ -1,111 +1,6 @@
 /* These Styles only get used on sub-pages */
 
 
-/* Apps page ----------------------------------------- */
-
-.intro {
-    border-bottom: none;
-    padding-bottom: 0;
-}
-
-.case:nth-child(3) {
-    border-top: none;
-}
-
-.case .title {
-    margin-bottom: 20px;
-}
-
-.case .case-optimized {
-    font-size: .7em;
-    font-weight: normal;
-    color: hsl(0,0%,60%);
-}
-
-.case-thumb {
-    position: relative;
-    display: inline-block;
-    border-radius: 5px;
-    border: 3px solid hsl(0,0%,100%);
-    background-color: hsl(0,0%,95%);
-    box-shadow: 0px 12px 20px -12px hsla(0,0%,0%,1);
-}
-.case-thumb:hover {
-    border-color: hsl(200,100%,50%);
-}
-.case-thumb:active {
-    border-color: hsl(200,100%,30%);
-}
-
-.case-thumb:before {
-    content: "";
-    position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
-    border-radius: 3px;
-    box-shadow: inset 0px 0px 4px hsla(0,0%,0%,.2);
-    background-image: -webkit-linear-gradient(-45deg, hsla(0,0%,100%,.1), hsla(0,0%,100%,.2) 50%, hsla(0,0%,100%,0) 50% );
-    background-image:    -moz-linear-gradient(-45deg, hsla(0,0%,100%,.1), hsla(0,0%,100%,.2) 50%, hsla(0,0%,100%,0) 50% );
-    background-image:     -ms-linear-gradient(-45deg, hsla(0,0%,100%,.1), hsla(0,0%,100%,.2) 50%, hsla(0,0%,100%,0) 50% );
-    background-image:      -o-linear-gradient(-45deg, hsla(0,0%,100%,.1), hsla(0,0%,100%,.2) 50%, hsla(0,0%,100%,0) 50% );
-    background-image:         linear-gradient(-45deg, hsla(0,0%,100%,.1), hsla(0,0%,100%,.2) 50%, hsla(0,0%,100%,0) 50% );
-}
-.case-img {
-    display: block;
-    width: 100%;
-    max-width: 480px;
-    border-radius: 3px;
-}
-
-.case-icon {
-    float: left;
-    position: relative;
-    width: 48px;
-    top: 6px;
-    margin: 0 20px 20px 0;
-}
-
-.case p {
-    margin-top: 0;
-}
-
-.case-launch {
-    margin-left: 0;
-}
-
-.gallery .note {
-    max-width: 900px;
-    margin: 50px auto 0 auto;
-    font-size: 14px;
-    line-height: 1.5;
-}
-
-.gallery a {
-    color: hsl(196,100%,50%);
-}
-
-.gallery a:hover {
-    color: hsl(196,100%,60%);
-}
-
-.gallery a:active {
-    color: hsl(196,100%,40%);
-}
-
-.gallery .gallery-item-source {
-    display: inline-block;
-    padding: 0 8px;
-    line-height: 1.5;
-    color: hsl(0,0%,70%);
-    font-size: 12px;
-    border-radius: 20px;
-    background: hsl(0,0%,30%);
-}
-
-.gallery .gallery-item-source:hover {
-    background: hsl(200,100%,25%);
-}
-
-
 /* with Subnav ----------------------------------------- */
 
 .withSubnav--left .subnav {
@@ -237,22 +132,6 @@
 
 
 
-/* Paging ----------------------------------------- */
-
-.paging {
-    padding-top: 2em;
-    text-align: center;
-}
-
-.paging--prev:before {
-    content: "←";
-    margin-right: 4px;
-}
-.paging--next:after {
-    content: "→";
-    margin-left: 4px;
-}
-
 
 /* Content ----------------------------------------- */
 
@@ -320,6 +199,53 @@
 }
 
 
+
+
+
+/* Paging ----------------------------------------- */
+
+.paging {
+    padding-top: 2em;
+    text-align: center;
+}
+
+.paging--prev:before {
+    content: "←";
+    margin-right: 4px;
+}
+.paging--next:after {
+    content: "→";
+    margin-left: 4px;
+}
+
+
+/* Code ----------------------------------------- */
+
+.highlight {
+    position: relative;
+}
+
+code[data-lang]:after {
+    content: attr(data-lang);
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 1.5em;
+    padding: 0em .6em;
+    text-align: center;
+    font-size: .75em;
+    line-height: 1.6;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    color: hsl(50,20%,60%);
+    border-radius: 0 5px;
+    border-left: 1px solid hsla(0, 0%, 0%, 0.05);
+    border-bottom: 1px solid hsla(0, 0%, 0%, 0.05);
+    background: hsla(0, 0%, 0%, 0.04);
+}
+
+
+
 /* Edit this ----------------------------------------- */
 
 .docs .edit {
@@ -347,6 +273,7 @@
 .docs .button.disabled {
     visibility: hidden;
 }
+
 
 
 /* Blog ----------------------------------------- */
@@ -390,30 +317,114 @@
 }
 
 
-/* Code ----------------------------------------- */
 
-.highlight {
+
+/* Apps page ----------------------------------------- */
+
+.intro {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.case:nth-child(3) {
+    border-top: none;
+}
+
+.case .title {
+    margin-bottom: 20px;
+}
+
+.case .case-optimized {
+    font-size: .7em;
+    font-weight: normal;
+    color: hsl(0,0%,60%);
+}
+
+.case-thumb {
     position: relative;
+    display: inline-block;
+    border-radius: 5px;
+    border: 3px solid hsl(0,0%,100%);
+    background-color: hsl(0,0%,95%);
+    box-shadow: 0px 12px 20px -12px hsla(0,0%,0%,1);
+}
+.case-thumb:hover {
+    border-color: hsl(200,100%,50%);
+}
+.case-thumb:active {
+    border-color: hsl(200,100%,30%);
 }
 
-code[data-lang]:after {
-    content: attr(data-lang);
+.case-thumb:before {
+    content: "";
     position: absolute;
-    top: 0;
-    right: 0;
-    min-width: 1.5em;
-    padding: 0em .6em;
-    text-align: center;
-    font-size: .75em;
-    line-height: 1.6;
-    text-transform: uppercase;
-    font-family: 'Open Sans', sans-serif;
-    color: hsl(50,20%,60%);
-    border-radius: 0 5px;
-    border-left: 1px solid hsla(0, 0%, 0%, 0.05);
-    border-bottom: 1px solid hsla(0, 0%, 0%, 0.05);
-    background: hsla(0, 0%, 0%, 0.04);
+    top: 0; right: 0; bottom: 0; left: 0;
+    border-radius: 3px;
+    box-shadow: inset 0px 0px 4px hsla(0,0%,0%,.2);
+    background-image: -webkit-linear-gradient(-45deg, hsla(0,0%,100%,.1), hsla(0,0%,100%,.2) 50%, hsla(0,0%,100%,0) 50% );
+    background-image:    -moz-linear-gradient(-45deg, hsla(0,0%,100%,.1), hsla(0,0%,100%,.2) 50%, hsla(0,0%,100%,0) 50% );
+    background-image:     -ms-linear-gradient(-45deg, hsla(0,0%,100%,.1), hsla(0,0%,100%,.2) 50%, hsla(0,0%,100%,0) 50% );
+    background-image:      -o-linear-gradient(-45deg, hsla(0,0%,100%,.1), hsla(0,0%,100%,.2) 50%, hsla(0,0%,100%,0) 50% );
+    background-image:         linear-gradient(-45deg, hsla(0,0%,100%,.1), hsla(0,0%,100%,.2) 50%, hsla(0,0%,100%,0) 50% );
 }
+.case-img {
+    display: block;
+    width: 100%;
+    max-width: 480px;
+    border-radius: 3px;
+}
+
+.case-icon {
+    float: left;
+    position: relative;
+    width: 48px;
+    top: 6px;
+    margin: 0 20px 20px 0;
+}
+
+.case p {
+    margin-top: 0;
+}
+
+.case-launch {
+    margin-left: 0;
+}
+
+.gallery .note {
+    max-width: 900px;
+    margin: 50px auto 0 auto;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.gallery a {
+    color: hsl(196,100%,50%);
+}
+
+.gallery a:hover {
+    color: hsl(196,100%,60%);
+}
+
+.gallery a:active {
+    color: hsl(196,100%,40%);
+}
+
+.gallery .gallery-item-source {
+    display: inline-block;
+    padding: 0 8px;
+    line-height: 1.5;
+    color: hsl(0,0%,70%);
+    font-size: 12px;
+    border-radius: 20px;
+    background: hsl(0,0%,30%);
+}
+
+.gallery .gallery-item-source:hover {
+    background: hsl(200,100%,25%);
+}
+
+
+
 
 /* 404 ----------------------------------------- */
 
