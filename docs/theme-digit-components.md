@@ -26,7 +26,7 @@ The following list provides an overview of the existing Digit components.
 [ ![TextArea](https://raw.github.com/montagejs/digit/master/ui/text-area.reel/screenshot.png) ](https://github.com/montagejs/digit/tree/master/ui/text-area.reel)
 
 
-## Updateing Digit
+## Updating Digit
 Digit is part of the default application template. The theme is still under development. To ensure you are using the latest version of digit, follow these steps:
 
 1. Use your command line tool to switch to your project directory.
