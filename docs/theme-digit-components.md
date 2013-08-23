@@ -1,7 +1,7 @@
 ---
 
 layout: docs
-title: Digit - MontageJS Themes
+title: Digit - MontageJS Theme
 
 prev-page: themes
 next-page: theme-matte-components

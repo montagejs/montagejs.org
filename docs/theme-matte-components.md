@@ -1,7 +1,7 @@
 ---
 
 layout: docs
-title: Matte - MontageJS Themes
+title: Matte - MontageJS Theme
 
 prev-page: theme-digit-components
 next-page: theme-native-components
