@@ -137,7 +137,10 @@
 
 .content :target {
     display: block;
-    padding-top: 90px;
+    margin-left: 50%;
+    margin-bottom: 30px;
+    padding-top: 60px;
+    border-left: 2px solid #eee;
 }
 
 .content img {
