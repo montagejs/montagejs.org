@@ -135,6 +135,20 @@
 
 /* Content ----------------------------------------- */
 
+.content :target:before {
+    content: "☟";
+    display: block;
+    font-size: 50px;
+    line-height: 1;
+    padding: 10px 0 20px 0;
+    color: hsl(220, 100%, 66%);
+    -webkit-animation: target-pointing .4s cubic-bezier(.56,.16,.48,.9) 2;
+            animation: target-pointing .4s cubic-bezier(.56,.16,.48,.9) 2;
+}
+
+@-webkit-keyframes target-pointing { 50% { -webkit-transform: translateY(-20px); } }
+@keyframes         target-pointing { 50% {         transform: translateY(-20px); } }
+
 .content img {
     max-width: 100%;
 }
