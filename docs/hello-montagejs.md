@@ -108,7 +108,7 @@ Follow these steps:
         color: red;
     }
     ```
-    > **Note**: Style sheets for newly created components only contain the class name of the root element. It's up to you to populate them with your meticulously crafted rules. Note also that the CSS class name is a CamelCase version of the component’s name. This is part of our [CSS naming convention](https://github.com/montagejs/montage/wiki/naming-conventions); it allows us to scope each component's CSS so that it doesn't "leak out" and accidentally style other components.
+    > **Note**: Style sheets for newly created components only contain the class name of the root element. It's up to you to populate them with your meticulously crafted rules. Note also that the CSS class name is a CamelCase version of the component’s name. This is part of our [CSS naming convention](/docs/naming-conventions.html); it allows us to scope each component's CSS so that it doesn't "leak out" and accidentally style other components.
 
     Next, you need to instruct the HelloWorld component to use the NameTag component.
 
