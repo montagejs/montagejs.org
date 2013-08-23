@@ -3,8 +3,8 @@
 layout: docs
 title: MontageJS Objects
 
-prev-page: extending-components
-next-page: serialization-format
+prev-page: serialization-format
+next-page: data-binding
 
 ---
 

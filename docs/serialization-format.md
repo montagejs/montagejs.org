@@ -4,7 +4,7 @@ layout: docs
 title: MontageJS Component Object Model
 
 prev-page: extending-components
-next-page: montage-objects
+next-page: montagejs-objects
 
 ---
 

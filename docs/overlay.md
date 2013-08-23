@@ -4,7 +4,7 @@ layout: docs
 title: MontageJS Overlay UI Container
 
 prev-page: substitution
-next-page: troubleshooting
+next-page: faq
 
 ---
 

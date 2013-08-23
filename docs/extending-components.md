@@ -3,8 +3,8 @@
 layout: docs
 title: Extending MontageJS Components
 
-prev-page: native-components
-next-page: montage-objects
+prev-page: draw-cycle
+next-page: serialization-format
 
 ---
 
