@@ -4,6 +4,7 @@ layout: docs
 title: MontageJS Substitution UI Container
 
 prev-page: repetition
+this-page: substitution
 next-page: overlay
 
 ---

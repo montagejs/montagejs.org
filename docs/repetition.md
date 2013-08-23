@@ -4,6 +4,7 @@ layout: docs
 title: MontageJS Repetition UI Container
 
 prev-page: native-components
+this-page: repetition
 next-page: substitution
 
 ---

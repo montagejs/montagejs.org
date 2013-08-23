@@ -4,6 +4,7 @@ layout: docs
 title: Overview - MontageJS Themes
 
 prev-page: event-handling
+this-page: themes
 next-page: theme-digit-components
 ---
 

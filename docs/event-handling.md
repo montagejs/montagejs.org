@@ -4,6 +4,7 @@ layout: docs
 title: MontageJS Event Handling
 
 prev-page: data-binding
+this-page: event-handling
 next-page: themes
 
 ---

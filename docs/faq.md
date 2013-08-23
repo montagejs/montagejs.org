@@ -4,6 +4,7 @@ layout: docs
 title: MontageJS FAQ
 
 prev-page: overlay
+this-page: faq
 next-page: troubleshooting
 
 ---

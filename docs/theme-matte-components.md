@@ -4,6 +4,7 @@ layout: docs
 title: Matte - MontageJS Theme
 
 prev-page: theme-digit-components
+this-page: theme-matte-components
 next-page: theme-native-components
 
 ---

@@ -4,6 +4,7 @@ layout: docs
 title: MontageJS Data Binding
 
 prev-page: montagejs-objects
+this-page: data-binding
 next-page: event-handling
 
 ---

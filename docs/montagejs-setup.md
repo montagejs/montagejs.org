@@ -4,6 +4,7 @@ layout: docs
 title: Set Up MontageJS - Quick Start part 1
 
 prev-page: index
+this-page: montagejs-setup
 next-page: hello-montagejs
 
 ---

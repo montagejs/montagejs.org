@@ -4,6 +4,7 @@ layout: docs
 title: MontageJS Component Object Model
 
 prev-page: extending-components
+this-page: serialization-format
 next-page: montagejs-objects
 
 ---

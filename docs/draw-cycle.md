@@ -4,6 +4,7 @@ layout: docs
 title: MontageJS Draw Cycle
 
 prev-page: montagejs-examples
+this-page: draw-cycle
 next-page: extending-components
 
 ---

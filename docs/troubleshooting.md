@@ -4,6 +4,7 @@ layout: docs
 title: Troubleshooting
 
 prev-page: faq
+this-page: troubleshooting
 
 ---
 

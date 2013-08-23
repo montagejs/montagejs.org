@@ -4,6 +4,7 @@ layout: docs
 title: Native - MontageJS Theme
 
 prev-page: theme-matte-components
+this-page: theme-native-components
 next-page: repetition
 
 ---

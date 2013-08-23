@@ -4,6 +4,7 @@ layout: docs
 title: Extending MontageJS Components
 
 prev-page: draw-cycle
+this-page: extending-components
 next-page: serialization-format
 
 ---

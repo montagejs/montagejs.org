@@ -4,6 +4,7 @@ layout: docs
 title: Digit - MontageJS Theme
 
 prev-page: themes
+this-page: theme-digit-components
 next-page: theme-matte-components
 
 ---
