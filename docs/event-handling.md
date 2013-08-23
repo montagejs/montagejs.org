@@ -1,9 +1,11 @@
 ---
+
 layout: docs
 title: MontageJS Event Handling
 
 prev-page: data-binding
 next-page: themes
+
 ---
 
 # Event handling

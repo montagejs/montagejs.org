@@ -1,16 +1,19 @@
 ---
+
 layout: docs
 title: MontageJS Examples
 
 prev-page: hello-montagejs
 next-page: draw-cycle
+
 ---
+
 
 # MontageJS Examples
 
 Follow the links on this page to explore pre-defined demos and source code of MontageJS ui components and features in [Mfiddle](http://montagejs.github.com/mfiddle/).
 
-### MontageJS Components
+## MontageJS Components
 The following components are pre-built MontageJS components.
 
 #### Text
@@ -26,7 +29,7 @@ The following components are pre-built MontageJS components.
 * [Number converters](http://montagejs.github.io/mfiddle/#!/5904344)
 
 
-### UI Components (Digit)
+## UI Components (Digit)
 The following components are part of the touch-optimized Digit widget set, which is part of the default MontageJS installation. 
 
 #### Button
@@ -68,7 +71,7 @@ The following components are part of the touch-optimized Digit widget set, which
 * [A list of categories](http://montagejs.github.io/mfiddle/#!/5904497)
 
 
-### Draw Cycle
+## Draw Cycle
 The draw cycle is a loop that allows components to change their element's DOM structure without troublesome reflow issues.
 
 * Changing the background color of an element with a [slider](http://montagejs.github.io/mfiddle/#!/5904498)

@@ -1,8 +1,10 @@
 ---
+
 layout: docs
 title: Troubleshooting
 
 prev-page: faq
+
 ---
 
 # Troubleshooting
@@ -21,7 +23,7 @@ One class of error you may encounter are those that occur during the deserializa
 ### Invalid element reference
 In the following abbreviated code, the ID of the <div> element referenced in the serialization (`"loginButton"`) does not match the element’s actual ID (`"loginBtn"`).
 
-```
+```html
 <script type="text/montage-serialization">
 {
     "loginButton": {
@@ -39,6 +41,7 @@ In the following abbreviated code, the ID of the <div> element referenced in the
 ```
 
 At runtime, this would generate the following error message in the JavaScript console:
+
 ```
 Warning: Element "#loginButton" not found in template
 http://localhost:8081/examples/myapp/mycomponent.reel/mycomponent.html
@@ -46,7 +49,8 @@ http://localhost:8081/examples/myapp/mycomponent.reel/mycomponent.html
 
 ### Invalid module ID or symbol name
 If you provide an invalid value for a serialized object’s “name” property, Montage will generate an error. For example, the following serialization will generate this error, since the symbol name is misspelled “Buttonn” instead of “Button”.
-```
+
+```json
 <script type="text/montage-serialization">
 {
     "loginButton": {
@@ -61,13 +65,14 @@ If you provide an invalid value for a serialized object’s “name” property,
 ```
 
 This would result in the following runtime error:
+
 ```
-Object “Buttonn” not found at “montage/ui/button.reel” referenced from
-http://localhost:8081/examples/buttonerror/.
+Object “Buttonn” not found at “montage/ui/button.reel” referenced from http://localhost:8081/examples/buttonerror/.
 ```
 
 If you provide an invalid module ID in a serialization, then the console will report a 404 error “Can’t XHR _module-id_“. For example, consider the following serialization that defines a Textfield component but the module ID is misspelled as “montage/ui/textfld.reel”.
-```
+
+```json
 {
 "emailInput": {
     "name": "Textfield",
@@ -79,6 +84,7 @@ If you provide an invalid module ID in a serialization, then the console will re
 ```
 
 In Chrome, this results in the following error:
+
 ```
 GET http://localhost:8081/ui/textfeld.reel/textfld.js 404 (Not Found) browser.js:136
 Can’t XHR “http://localhost:8081/ui/textfeld.reel/textfeld.js”
@@ -90,7 +96,7 @@ The JSON serialization block must be well-formed for Montage to successfully par
 ### Serial commas
 A common JSON formatting problem are “serial” commas. In valid JSON, commas are used to separate name/value pairs; a comma that follows the last (or serial) name/value pair of an object invalidates the JSON. For example, in the JSON snippet below the comma after the last name/value pair is invalid and would generate a JSON parsing errors.
 
-```
+```json
 {
    "name": "Tim",
    "name": "Jen",
@@ -100,7 +106,7 @@ A common JSON formatting problem are “serial” commas. In valid JSON, commas 
 
 As another example, in the Montage serialization block below notice the comma after the “passwordInput” JSON object. At runtime, this would generate an “Unexpected comma” error as the object is the last one in the serialization.
 
-```
+```json
 <script type="text/montage-serialization">
 {
     "emailInput": {
@@ -121,7 +127,7 @@ As another example, in the Montage serialization block below notice the comma af
 </script>
 ```
 
-```
+```console
 Syntax error at line 16 from http://localhost:8081/examples/errors/:
     },
 Unexpected comma.

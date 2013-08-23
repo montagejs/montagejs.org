@@ -1,10 +1,13 @@
 ---
+
 layout: docs
 title: MontageJS Substitution UI Container
 
 prev-page: repetition
 next-page: overlay
+
 ---
+
 
 # Substitution
 
@@ -15,7 +18,9 @@ Each element has a key associated with it. The key is used to select which eleme
 The elements are set up in the substitution with DOM arguments. The name of each argument will be used as the key of that element.
 
 ## Declarative API
+
 ### Example 1
+
 ```json
 "substitution": {
     "prototype": "montage/ui/substitution.reel",
@@ -25,6 +30,7 @@ The elements are set up in the substitution with DOM arguments. The name of each
     }
 }
 ```
+
 ```html
 <div data-montage-id="substitution">
     <div data-arg="profile">
@@ -38,6 +44,7 @@ The elements are set up in the substitution with DOM arguments. The name of each
     </div>
 </div>
 ```
+
 ### Example 2
 Dom arguments can also be elements of components:
 
@@ -64,6 +71,7 @@ Dom arguments can also be elements of components:
     }
 }
 ```
+
 ```html
 <div data-montage-id="substitution">
     <div data-arg="profile" data-montage-id="userProfile"></div>

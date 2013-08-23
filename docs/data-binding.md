@@ -1,10 +1,13 @@
 ---
+
 layout: docs
 title: MontageJS Data Binding
 
 prev-page: montagejs-objects
 next-page: event-handling
+
 ---
+
 
 # Data binding
 
@@ -38,7 +41,9 @@ You can define a data binding between any two Montage objects or components. To 
 ## Creating data bindings with Object.defineBinding()
 You use the Object.defineBinding() method to create a data binding between two objects. The method has the following signature:
 
-`Object.defineBinding(sourceObject, propertyPath, bindingDescriptor)`
+```js
+Object.defineBinding(sourceObject, propertyPath, bindingDescriptor)
+```
 
 The first parameter, `sourceObject`, is a reference to the object on which the binding is defined. The second parameter, `propertyPath`, is a string that specifies the key path to the bound property on the source object. The third parameter, `bindingDescriptor`, is an object that contains the following properties:
 
@@ -109,19 +114,25 @@ Each serialized object in a serialization may specify a “bindings” property,
 </body>
 </html>
 ```
+
 ## Data binding serialization shorthand syntax
 Montage provides a shorthand syntax when declaring data bindings in a serialization. An arrow symbol that indicates the source of the binding and whether its one-way or two-way. The symbol can take one of the following forms:
 
-* `<-` — One-way data binding, bound object on right
-* `->` — One-way data binding, bound object on left
-* `<<->` — Two-way data binding, bound object on right
-* `<->>` — Two-way data binding, bound object on left
+| Symbol | Description |
+| :----: | --- |
+|  `<-`  | __One-way__ data binding, bound object on __right__ |
+|  `->`  | __One-way__ data binding, bound object on __left__ |
+| `<<->` | __Two-way__ data binding, bound object on __right__ |
+| `<->>` | __Two-way__ data binding, bound object on __left__ |
 
 The `boundObject` and `boundObjectPropertyPath` properties of `defineBinding()` API are combined into a single string form. The syntax takes the following general form:
 
-`"boundProperty": {"direction-symbol": "@objectReference.key.path"}`
+```json
+"boundProperty": {"direction-symbol": "@objectReference.key.path"}
+```
 
 To demonstrate consider an application whose serialization contains a Textfield component and a Slider component. To create a one-way binding between the Slider’s `value` property and the Textfield’s `value` property using the short-hand syntax:
+
 ```json
 {
    "inputText": {
@@ -136,8 +147,8 @@ To demonstrate consider an application whose serialization contains a Textfield 
 }
 ```
 
-This means that changes to `slider.value` will be pushed to the Textfield. In code, this would be written as follows, assuming `inputText` is a Textfield instance and `slider` is a Slider 
-instance.
+This means that changes to `slider.value` will be pushed to the Textfield. In code, this would be written as follows, assuming `inputText` is a Textfield instance and `slider` is a Slider instance.
+
 ```js
 Object.defineBinding(inputText, "value", {
     boundObject: slider,
@@ -146,6 +157,7 @@ Object.defineBinding(inputText, "value", {
 ```
 
 To define a one-way binding in the opposite direction (from the Textfield to the Slider), simply reverse the direction of the arrow symbol:
+
 ```json
 {
    "inputText": {
@@ -161,13 +173,16 @@ To define a one-way binding in the opposite direction (from the Textfield to the
 ```
 
 In code this would be written as follows:
+
 ```js
 Object.defineBinding(slider, "value", {
     boundObject: textField,
     boundObjectPropertyPath: "value"
 });
 ```
+
 Or, equivalently, you can define the binding on the Slider object instead:
+
 ```json
 {
    "inputText": {
@@ -183,6 +198,7 @@ Or, equivalently, you can define the binding on the Slider object instead:
 ```
 
 To create a two-way binding between the object’s properties, with Textfield as the source, you add a single arrow pointing to @slider.value, and a double arrow pointing in the opposite direction:
+
 ```json
 {
    "inputText": {
@@ -198,6 +214,7 @@ To create a two-way binding between the object’s properties, with Textfield as
 ```
 
 Which is equivalent to the following code:
+
 ```js
 Object.defineBinding(inputText, "value", {
     boundObject: slider,
@@ -206,6 +223,7 @@ Object.defineBinding(inputText, "value", {
 ```
 
 To create a two-way binding with Slider as the binding source, you add a single arrow pointing to the left, and a double arrow pointing to the right:
+
 ```json
 {
    "inputText": {
@@ -218,6 +236,7 @@ To create a two-way binding with Slider as the binding source, you add a single 
 ```
 
 Or, equivalently, you can declare the binding on the slider and reverse the direction of the arrow:
+
 ```json
 {
    "slider": {
@@ -230,6 +249,7 @@ Or, equivalently, you can declare the binding on the slider and reverse the dire
 ```
 
 In long-form syntax, you would declare the following:
+
 ```json
 {
    "slider": {
@@ -250,6 +270,7 @@ By default, all data bindings are two-way. This means when the value of the obse
 ![Montage Data Binding](/images/docs/databinding.png)
 
 To demonstrate, below is a simple Montage object that defines a single property, `name`.
+
 ```js
 var Montage = require("montage").Montage;
 var Person = exports.Person = Montage.create(Montage, {
@@ -260,6 +281,7 @@ var Person = exports.Person = Montage.create(Montage, {
 ```
 
 We create two instances of the Person object and define a binding between their `name` properties:
+
 ```js
 // Create two instances of Person
 var p1 = Person.create();
@@ -272,11 +294,13 @@ Object.defineBinding(p1, "name", {
 ```
 
 If you assign a value to `name` on either the `p1` or `p2` instances, then the value on the other object changes accordingly:
+
 ```js
 p1.name = "Abe";
 console.log("p2.name is now: " + p2.name);
 // console says: "p2.name is now: Abe"
 ```
+
 ```js
 p2.name = "Betty";
 console.log("p1.name is now: " + p1.name);

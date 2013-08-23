@@ -1,10 +1,13 @@
 ---
+
 layout: docs
 title: Extending MontageJS Components
 
 prev-page: native-components
 next-page: montage-objects
+
 ---
+
 
 # Extending components
 
@@ -19,8 +22,8 @@ There are three options to extend a component’s template:
 * Set the `extends` property of the template that points to the template to be imported and where. This is similar to the "decorator" pattern of the proposed [Web Components](http://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html#decorator-section) feature. This approach is useful when the component needs to add additional CSS data, or reuse the original markup. The template object will be accessible through the `template` label of the serialization.
 
 ## Examples
-### Extending the Toggle component changing its markup only
 
+### Extending the Toggle component changing its markup only
 
 ```js
 //my-toggle.js

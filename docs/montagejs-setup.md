@@ -1,17 +1,20 @@
 ---
+
 layout: docs
 title: Set Up MontageJS - Quick Start part 1
 
 prev-page: index
 next-page: hello-montagejs
+
 ---
 
-#Getting Started
+# Getting Started
+
 This tutorial will show you how to set up MontageJS development. It is part 1 of our MontageJS quick start; however, the steps outlined here apply to any MontageJS project. To make the most of this tutorial, you should have a basic understanding of HTML, CSS, and JavaScript and some familiarity with working in a command-line environment.
 
 >**Note**: If you are unfamiliar with the common convention to denote the command line, note that a leading dollar sign ($) indicates that what follows is a command to be run; it is not part of the command. In other words, do not type the leading dollar sign at the beginning of a command line when following the instructions in this document.
 
-##Requirements
+## Requirements
 MontageJS application development is divided into a development (creating the app) phase and a production (compiling the app) phase. For the development phase you need:
 
 * Node.js and npm. MontageJS application development depends on npm, the Node package manager, which is distributed with Node.js.
@@ -19,7 +22,9 @@ MontageJS application development is divided into a development (creating the ap
 * `minit`, the MontageJS Initilizer. `minit` is a is a cross-platform command line tool that provides convenient automated tasks during the development phase, from generating the default application directory to creating new components.
 * A text editor.
 
-##Set Up MontageJS Development
+
+## Set Up MontageJS Development
+
 Before you start to learn how to program with MontageJS, you will need to set up your development environment. Follow these steps:
 
 1. [Download](http://nodejs.org/download/) and run the prebuilt Node.js installer for your platform from the Node.js website.

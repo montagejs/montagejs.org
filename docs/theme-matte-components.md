@@ -5,7 +5,10 @@ title: Matte - MontageJS Themes
 
 prev-page: theme-digit-components
 next-page: theme-native-components
+
 ---
+
+
 # Matte Theme
 
 Matte is a basic, neutral-looking theme for HTML5 controls and inputs. You can use it as a wireframe for prototypes or starting point for creating your own custom theme.

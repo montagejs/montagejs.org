@@ -1,10 +1,13 @@
 ---
+
 layout: docs
 title: MontageJS Objects
 
 prev-page: extending-components
 next-page: serialization-format
+
 ---
+
 
 # Montage objects
 Montage objects are based on the [ECMAScript 5](http://ecma-international.org/ecma-262/5.1/#sec-8.6) object model, which uses `Object.create()` to define new objects. Montage provides a similar method called `Montage.create()` that serves two purposes: to define new Montage types that share a common interface, and to create new _instances_ from those types.
@@ -18,7 +21,9 @@ The `Montage.create()` method defined by the framework is used for two purposes:
 ### Creating Montage types
 To define a new Montage type, you call `Montage.create()` and pass it two parameters: the prototype object from which the new type will inherit, and a properties object. The properties object is an object literal whose own properties define the new properties and functions that the type will have.
 
-`var type = Montage.create(Prototype, propertiesObject);`
+```js
+var type = Montage.create(Prototype, propertiesObject);
+```
 
 For instance, the following defines a new Montage type named `Person` whose base prototype is the `Montage` object itself. The new type inherits all the properties of the base prototype. The properties object passed to `Montage.create()` defines three member properties: `_name`, `name`, and the function `sayHello()`.
 
@@ -81,23 +86,25 @@ To create an instance of the `Person` prototype defined in "Creating Montage typ
 * Call `Montage.create()` passing the `Person` prototype as the base:
 
     ```js
-// require() Person prototype
-// assumes person.js is in same folder
-var Person = require("person").Person;
-var p1 = Montage.create(Person);
-p1.sayHello();
-```
+    // require() Person prototype
+    // assumes person.js is in same folder
+    var Person = require("person").Person;
+    var p1 = Montage.create(Person);
+    p1.sayHello();
+    ```
+
 * Call `create()` directly on the `Person` prototype itself:
 
     ```js
-var Person = require("person").Person;
-var p2 = Person.create();
-p2.sayHello();
-```
+    var Person = require("person").Person;
+    var p2 = Person.create();
+    p2.sayHello();
+    ```
 
 You can call `create()` on any Montage type to return an instance of that type.
 
 Note that instances should never be used as types. For example, the `p1` instance from the previous code sample should _not_ be used like this:
+
 ```js
 var Montage = require("montage").Montage;
 var Person = require("person").Person;
@@ -176,7 +183,7 @@ And below is an HTML template whose serialization block declares a new `Person` 
 
 At runtime, the following is displayed in the JavaScript console:
 
-```
+```console
 My name is: null
 Steve was created at: Wed Jan 25 2012 17:33:07 GMT-0800 (PST)
 ```
@@ -218,88 +225,42 @@ In addition to the standard ECMAScript property attributes, Montage objects also
 ### Default property attribute values
 The following table lists the default values of property descriptor attributes in Montage. Note that some attributes do not have the same default values as `Object.create()`.
 
-<table>
-<tbody><tr>
-   <th>Attribute</th>
-   <th>Type</th>
-   <th>Default value</th>
-</tr>
-<tr>
-    <td><code>value</code></td>
-    <td>Object</td>
-    <td><code>null</code></td>
-</tr>
-<tr>
-    <td><code>get</code></td>
-    <td>Function</td>
-    <td><code>null</code></td>
-</tr>
-<tr>
-   <td><code>set</code></td>
-   <td>Function</td>
-   <td><code>null</code></td>
-</tr>
-<tr>
-   <td><code>enumerable</code></td>
-    <td>Boolean</td>
-   <td><code>true</code> for non-function values and accessor properties; <code>false</code> for function values.</td>
-</tr>
-<tr>
-   <td><code>configurable</code></td>
-   <td>Boolean</td>
-   <td><code>true</code></td>
-</tr>
-<tr>
-    <td><code>serializable</code></td>
-    <td>String. Valid values:
-         <ul>
-             <li><code>"value"</code></li>
-             <li><code>"reference"</code></li>
-             <li><code>"auto"</code></li>
-         </ul>
-    </td>
-    <td><code>"auto"</code></td>
-</tr>
-<tr>
-   <td><code>dependencies</code></td>
-   <td>Array</td>
-   <td><code>null</code></td>
-</tr>
-<tr>
-   <td><code>modify</code></td>
-   <td>function</td>
-   <td><code>null</code></td>
-</tr>
-<tr>
-   <td><code>distinct</code></td>
-   <td>Boolean</td>
-   <td><code>false</code></td>
-</tr>
-</tbody></table>
+Attribute |	Type | Default value
+:---:|---|---
+`value` | Object | `null`
+`get` | Function | `null`
+`set` | Function | `null`
+`enumerable` | Boolean | `true` for non-function values and accessor properties; `false` for function values.
+`configurable` | Boolean | `true`
+`serializable` | String. Valid values: `"value"` `"reference"` `"auto"` | `"auto"`
+`dependencies` | Array | `null`
+`modify` | Function | `null`
+`distinct` | Boolean | `false`
+
 
 ## Terminology
 Below are some definitions to help with the discussion.
 
-__prototype__
+#### prototype
 (noun): As used in JavaScript, a prototype is an object that shares its interface through “prototypical inheritance”. Both Montage instances and types (see below) have prototypes.
 
-__create__
+#### create
 (verb) To create a new prototype from a base prototype. In Montage, creation is used for both “type inheritance” and “instantiation”.
 
-__(Montage) type__
+#### (Montage) type
 (noun) A prototype for the purpose of inheriting a common interface. Montage types are always defined by rich property descriptors that extend ECMAScript 5 property descriptors, but have slightly different default attribute values. Creating descriptors has some overhead, which is acceptable for types because they are never “hot” code.
 
-__(Montage) instance__
+#### (Montage) instance
 (noun): A prototype for the purpose of doing work. The properties of an instance have state which must not be shared by other objects. An instance must not be used as a type.
 
-__inherit__
+#### inherit
 (verb): To create a new type, based on another type. Types can be used to create instances or types. Types should only have state if it is acceptable for all instances of that type and its descendant types to share that state. Shared state cannot be serialized.
 
-__instantiate__
+#### instantiate
 (verb) To create a new instance from a type.
 
-__initialize__
+#### initialize
 (verb) To set up an initial, consistent state for an instance. Objects that have been deserialized are not initialized: it’s assumed that they were serialized with a consistent internal state.
 
-__state__
+#### state
 (noun) The properties owned by an instance. Some state can be serialized and deserialized.

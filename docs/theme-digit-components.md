@@ -5,7 +5,10 @@ title: Digit - MontageJS Themes
 
 prev-page: themes
 next-page: theme-matte-components
+
 ---
+
+
 # Digit Theme
 
 Digit is a touch-optimized component set for use with tablets and mobile phones. You can choose from three themes: flat, light, and dark.
@@ -41,5 +44,4 @@ Digit is part of the default application template. The theme is still under deve
     npm install digit@latest --save
     ```
     
-    The `--save` flag ensures that the digit package is automatically added as a dependency to the package.json file of your application code. 
-
+    The `--save` flag ensures that the digit package is automatically added as a dependency to the package.json file of your application code.

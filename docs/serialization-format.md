@@ -1,10 +1,13 @@
 ---
+
 layout: docs
 title: MontageJS Component Object Model
 
 prev-page: extending-components
 next-page: montage-objects
+
 ---
+
 
 # Serialization format
 
@@ -95,6 +98,7 @@ The following sections explain serialization for different objects.
 To serialize custom JavaScript objects, including Montage components, define a JSON object with two properties: `module` and `name`. These properties correspond, respectively, to the ID of the module that defines (or exports) the object with the specified name.
 
 The following serialization fragment declares a Montage Button component:
+
 ```html
 <script type="text/montage-serialization">
 {
@@ -107,6 +111,7 @@ The following serialization fragment declares a Montage Button component:
 ```
 
 At runtime Montage parses this serialization and evaluates it as the following JavaScript:
+
 ```js
 var Button = require("montage/ui/button").Button;
 ```
@@ -114,6 +119,7 @@ var Button = require("montage/ui/button").Button;
 Note that object labels in a serialization (such as “loginButton” in the above example) are only used internally by Montage during the deserialization process. For example, the object label does not translate into a JavaScript variable at runtime. You __can__ reference objects within a serialization using a special JSON representation.
 
 You can assign initial values to an object’s properties in a serialization by adding a `properties` object to the serialization. For example, the Montage Button component has a `value` property that contains the string to display as the button’s label. The following assigns the value “Click me” to the Button component’s `value` property.
+
 ```json
 "loginButton": {
     "name": "Button",
@@ -125,13 +131,17 @@ You can assign initial values to an object’s properties in a serialization by 
 ```
 
 ## Referencing DOM elements in a serialization
+
 You can reference DOM elements from a Montage serialization using a special JSON object representation. This is commonly used to assign an HTML element to a component’s `element` property, or anytime you need a reference to a DOM element.
 
 To reference an element by ID, use the following JSON syntax where _elementID_ is the ID of an element in the document that contains the serialization.
 
-`{"#": "elementID"}`
+```json
+{"#": "elementID"}
+```
 
 For example, this serialization block declares a Montage Button component whose `element` property is assigned the <div> with the ID of `loginButton`:
+
 ```html
 // index.html
 <html>
@@ -154,11 +164,14 @@ For example, this serialization block declares a Montage Button component whose 
 ```
 
 ### Referencing other objects in a serialization
+
 Often you need to reference one serialized Montage object from another object in the same serialization. For instance, the serialization might declare a Montage button that you want to reference from the controller (or owner) object in the serialization.
 
 To reference an element by ID, use the following JSON syntax. In this example, _objectLabel_ is the label assigned to the serialized object.
 
-`{"@": "objectLabel"}`
+```json
+{"@": "objectLabel"}
+```
 
 To demonstrate, first create the owner prototype object that references the button. The owner object—a custom component named Main—is defined in a JavaScript file main.js. The Main component declares a variable `loginButton` that will hold the reference to the Button object in the main application. We can reference that variable elsewhere in the Main component, such as its `prepareForDraw()` function, which is invoked before the first time the component is drawn. In this case, we use this callback opportunity to attach an event listener to the Button object. The event handler displays a message in the JavaScript console.
 
@@ -286,11 +299,13 @@ The following simple example adds data bindings to a serialization. It consists 
 ```
 
 ## Event listeners in serializations
+
 You can assign event listeners to serialized components in a serialization using a `listeners` property.
 
 This can reduce the amount of code required to establish event handling for your components. The serialization in the following example declares two objects: a custom controller object (Controller) and a Montage Button. The controller object acts as the event listener object to respond to “action” events that the Button emits when clicked or touched.
 
 This code for the Controller component defines a single function named `handleAction()`, which is invoked when the user clicks the button:
+
 ```js
 // Module: controller.js
 // Name: Controller
@@ -345,16 +360,18 @@ The following is the HTML document and component serialization. The “loginBtn�
 ```
 
 ## JSON formatting rules
+
 Montage uses the browser’s native JSON parsing APIs to parse the serialization block. For the browser to successfully parse the JSON object, the JSON must be well-formed. If the JSON serialization contains a formatting error, Montage throws an error and does not attempt to deserialize the JSON object. Some formatting concerns are:
 
 * Trailing commas. A trailing comma after the last property in a JSON object or array generates runtime errors. In the following example the comma that trails the `readyState` property would generate a JSON parsing error:
-```json
-"anObject": {
-    "id": "123asd",
-    "colors": [ "red", "green", "blue"],
-    "readystate": false,
-}
-```
+
+    ```json
+    "anObject": {
+        "id": "123asd",
+        "colors": [ "red", "green", "blue"],
+        "readystate": false,
+    }
+    ```
 * Matching brackets. Obviously, each open bracket must have a matching close bracket.
 
 Montage reports any serialization/JSON formatting errors in the console when you run the application.

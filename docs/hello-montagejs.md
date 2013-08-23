@@ -8,12 +8,12 @@ next-page: montagejs-examples
 
 ---
 
-#Hello MontageJS
+# Hello MontageJS
 
 This tutorial will show you how to assemble a simple MontageJS application. The goal is to quickly familiarize you with the basic building blocks of the MontageJS framework. To make the most of this tutorial, you should have a basic understanding of HTML, CSS, and JavaScript and some familiarity with working in a command-line environment.
 
 
-##Say Hello to MontageJS
+## Say Hello to MontageJS
 
 MontageJS applications consist of a model layer that handles the data and a view layer that reads from the models and handles user input and rendering. Components make up the view portion of a MontageJS application. As a rule, these components are stored in the ui directory of your MontageJS application and identified by a .reel suffix (which has the benefit that you can use any MontageJS package and easily locate the user interface components it provides).
 
@@ -74,7 +74,7 @@ You should see the contents of the HelloWorld component—a simple "Hello World"
 
 That's how you build MontageJS applications—you assemble user interface components.
 
-###Modify a UI Component
+### Modify a UI Component
 
 Now suppose you wanted to dynamically change the contents of the HelloWorld component, say you wanted to replace the general word "World" in "Hello World" with a personal name based on user input, and, just to mix things up, you want that name to show in a different color. In broad strokes, here's how you would go about architecting this part of your application:
 
@@ -136,7 +136,7 @@ Follow these steps:
 
 You now have a pretty respectable component tree. But you're not done yet. All you've done so far is assemble your visual component tree through the power of declarative programming. You have yet to connect its parts to an underlying model. For simplicity's sake, we'll let our components serve as the model.
 
-###Assign Value Through Bindings
+### Assign Value Through Bindings
 
 Your next task in your goal to create a more personalized greeting is to instruct the NameTag component on how to behave; more specifically, you want to pin a value on its name. Follow these steps:
  
@@ -185,7 +185,7 @@ Bindings are among the pinnacle of declarative bliss. After declaring the bindin
 
 But wait, there's more. So far you have created only a placeholder for the replacement text and assigned a value to it. To complete your goal, you need to provide and hook up an input component.
 
-###Drive Changes Through Bindings
+### Drive Changes Through Bindings
 
 Conveniently, MontageJS provides a TextField component. First, however, you need to determine where to put it. Here's where you start architecting your application: As long as your application is small where to place your component is an easy decision to make; as your application expands, however, it's important to keep components, and all other objects, loosely coupled and highly cohesive to aid in determining where responsibilities live.
 
@@ -225,7 +225,7 @@ For the purpose of this example, you want NameTag to be a read-only component, s
 
 You're almost done. Just one more thing.
 
-###Listen for Events
+### Listen for Events
 
 Components can emit events in the same sense that DOM elements emit events. A MontageJS Button component, for example, dispatches an action event with itself as the target. This event is synthesized from a sequence of mouse or touch events that the button component itself observes on its own element. Here’s how you handle a button’s action event.
 
@@ -293,7 +293,8 @@ Components can emit events in the same sense that DOM elements emit events. A Mo
 
     ![GS_Figure7](/images/docs/gs_tut_fig_07.png)
 
-##Take Off the Training Wheels
+
+## Take Off the Training Wheels
 
 Although it has served you well so far, it's time to ditch the default Welcome component.
 

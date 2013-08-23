@@ -1,10 +1,13 @@
 ---
+
 layout: docs
 title: Native - MontageJS Theme
 
 prev-page: theme-matte-components
 next-page: repetition
+
 ---
+
 
 # Native Theme
 
@@ -153,5 +156,3 @@ Then the properties section of the slider serialization is updated to add the tw
 
 ## Handling Events
 As shown above, using bindings with Native components is no different from how they are used with other types of components. This also holds true for handling events. As such I wont talk about it here, but you can view our [comprehensive documentation](https://github.com/montagejs/montage/wiki/Event-handling) on events. If you follow the instructions there it will also work with your native components.
-
-> This article was originally written by _David Storey_ and got changed a bit to fit the wiki.
