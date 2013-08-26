@@ -206,6 +206,18 @@
     border-left: 2px solid #eee;
 }
 
+.content a:visited {
+    color: hsl(220, 50%, 70%);
+}
+
+.content a:visited:hover {
+    color: hsl(220, 50%, 80%);
+}
+
+.content a:visited:hover {
+    color: hsl(220, 50%, 60%);
+}
+
 .content img {
     max-width: 100%;
 }
