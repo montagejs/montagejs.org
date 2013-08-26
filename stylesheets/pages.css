@@ -12,11 +12,6 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-@media (max-width: 700px) {
-    .withSubnav .main {
-        width: 100%;
-    }
-}
 
 .withSubnav .content {
     background: #fff;
@@ -30,11 +25,25 @@
 }
 
 .withSubnav .wrapper:after {
-    content: ""; /* 1 */
-    display: block; /* 2 */
+    content: "";
+    display: block;
     clear: both;
 }
 
+@media (max-width: 700px) {
+    
+    section.withSubnav {
+        padding: 10px;
+    }
+    
+    .withSubnav .main {
+        width: 100%;
+    }
+    
+    .withSubnav .content {
+        padding: 1px 20px 20px 20px;
+    }
+}
 
 /* Subnav toggle ----------------------------------------- */
 
