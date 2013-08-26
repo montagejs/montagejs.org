@@ -6,10 +6,12 @@ title: Montage Blog
 
 ---
 
-<section id="blog" class="blog withSubnav withSubnav--left subnav--noDetails">
+<section id="blog" class="blog withSubnav">
     <div class="wrapper">
         
-        <nav class="subnav">
+        {% include subnav-toggle.html %}
+        
+        <nav class="subnav subnav--noDetails">
             
             {% for post in site.posts %}
               <a href="{{ post.url }}">{{ post.title }}</a>

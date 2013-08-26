@@ -7,11 +7,13 @@ docs: true
         
         <div class="wrapper">
             
+            {% include subnav-toggle.html %}
             {% include subnav-docs.html %}
             
-            <a href="https://github.com/montagejs/montagejs.org/tree/gh-pages/{{page.path}}" class="edit">Improve this</a>
-            
             <div class="main">
+            
+                <a href="https://github.com/montagejs/montagejs.org/tree/gh-pages/{{page.path}}" class="edit">Improve this</a>
+                
                 <article class="content">
                     {{content}}
                 </article>

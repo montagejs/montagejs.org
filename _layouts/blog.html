@@ -5,15 +5,15 @@ blog: true
 
 ---
 
-<section id="blog" class="blog withSubnav subnav--noDetails">
+<section id="blog" class="blog withSubnav">
     <div class="wrapper">
         
-        <nav class="subnav">
-            
+        {% include subnav-toggle.html %}
+        
+        <nav class="subnav subnav--noDetails">
             {% for post in site.posts %}
               <a {% if page.title == post.title %}class="active"{% endif %} href="{{ post.url }}">{{ post.title }}</a>
             {% endfor %}
-            
         </nav>
 
         <div class="main">
