@@ -16,10 +16,10 @@ a {
     color: hsl(220, 100%, 66%);;
 }
 a:hover {
-    color: hsl(220,80%,46%);
+    color: hsl(220,80%,76%);
 }
 a:active {
-    color: hsl(220,80%,40%);
+    color: hsl(220,80%,50%);
 }
 
 h1 {
