@@ -20,7 +20,7 @@ The following components are pre-built MontageJS components.
 #### Text
 * [Hello World](http://montagejs.github.io/mfiddle/#!/5904314)
 * [Set text programmatically](http://montagejs.github.io/mfiddle/#!/5904331)
-* [Set text with a binding](http://montagejs.github.io/mfiddle/#!/5904335)
+* [Set text with a binding](http://montagejs.github.io/mfiddle/#!/6343006)
 
 #### Page Controls
 * [Simple repetition](http://montagejs.github.io/mfiddle/#!/5904339)
