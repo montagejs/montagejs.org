@@ -31,11 +31,4 @@ title: 404 - MontageJS
     if (oldApiDocMatch) {
         window.location = "/api/" + oldApiDocMatch[1] + ".html";
     }
-
-    var newApiDocMatcher = /\/api\/([^.]*)/;
-    var newApiDocMatch = path.match(newApiDocMatcher);
-
-    if (newApiDocMatch) {
-        window.location = "/api/#!search=" + newApiDocMatch[1];
-    }
 </script>
