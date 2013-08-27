@@ -74,8 +74,8 @@ A Montage serialization can declare an optional object named “owner”. The sp
 ```js
 // Module: main.js
 // Exported object name: Main
-var Montage = require(&quot;montage/core/core&quot;).Montage;
-var Component = require(&quot;montage/ui/component&quot;).Component;
+var Montage = require("montage/core/core").Montage;
+var Component = require("montage/ui/component").Component;
 //
 exports.Main = Montage.create(Component, {
 // Prototype methods and properties
