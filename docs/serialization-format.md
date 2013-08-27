@@ -243,7 +243,7 @@ You can define event listener and data bindings between components within a seri
 
 ```js
 Object.defineBinding(sourceObject, "propertyName", {
-    boundObject: boundObject>,
+    boundObject: boundObject,
     boundObjectPropertyPath: "property.key.path"
 });
 ```
@@ -253,7 +253,7 @@ You specify a component’s bindings in a serialization with a “bindings” JS
 ```json
 "bindings": {
     "boundValue": {
-        "boundObject": {"@": "bound-object-label",
+        "boundObject": {"@": "bound-object-label"},
         "boundObjectPropertyPath": "key.path.of.property",
     },
 }
