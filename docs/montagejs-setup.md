@@ -20,7 +20,7 @@ MontageJS application development is divided into a development (creating the ap
 
 * Node.js and npm. MontageJS application development depends on npm, the Node package manager, which is distributed with Node.js.
 * A recent stable release of Google Chrome, Safari, or Firefox. MontageJS leverages the evolving web platform of modern browsers.
-* `minit`, the MontageJS Initilizer. `minit` is a is a cross-platform command line tool that provides convenient automated tasks during the development phase, from generating the default application directory to creating new components.
+* `minit`, the MontageJS Initilizer. `minit` is a cross-platform command line tool that provides convenient automated tasks during the development phase, from generating the default application directory to creating new components.
 * A text editor.
 
 
@@ -65,7 +65,7 @@ Before you start to learn how to program with MontageJS, you will need to set up
 
     ```
     $ cd hello
-    $ minit serve
+    $ minit serve &
     ```
 
 5. Point your browser to http://localhost:8083/.
