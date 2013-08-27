@@ -35,17 +35,17 @@ var Person = exports.Person = Montage.create(Montage, {
         value: null,
     },
     sayHello: {
-      value: function() {
-        console.log("Hello, my name is " + this.name);
-      }
+        value: function() {
+            console.log("Hello, my name is " + this.name);
+        }
     },
     name: {
-      get: function() {
-        return this._name; 
-      },
-      set: function(value) {
-        this._name = value;
-      }
+        get: function() {
+            return this._name;
+        },
+        set: function(value) {
+            this._name = value;
+        }
     }
 });
 ```
@@ -60,9 +60,9 @@ _name: {
     enumerable: false
 },
 sayHello: {
-  value: function() {
-    console.log("Hello, my name is " + this.name);
-  }
+    value: function() {
+        console.log("Hello, my name is " + this.name);
+    }
 }
 ```
 
@@ -113,7 +113,7 @@ var p2 = Person.create();
 // Don't do this (base a new type on an instance)
 var p3 = Montage.create(p2, { 
     newProp: {
-       value: null
+        value: null
     }
 };
 ```

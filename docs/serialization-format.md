@@ -43,20 +43,20 @@ The following simple (yet complete) Montage application is defined in a single H
 
 ```html
 <html>
-   <script src="../../montage.js"></script>
-   <script type="text/montage-serialization">
-   {
-       "firstName": {
-           "prototype": "montage/ui/textfield.reel",
-           "properties": {
-               "element": {"#": "fName"}
-           }
+    <script src="../../montage.js"></script>
+    <script type="text/montage-serialization">
+    {
+        "firstName": {
+            "prototype": "montage/ui/textfield.reel",
+            "properties": {
+                "element": {"#": "fName"}
+            }
         }
-   }
-   </script>
-   <body>
-    <input data-montage-id="fName"></input>
-   <body>
+    }
+    </script>
+    <body>
+        <input data-montage-id="fName"></input>
+    <body>
 </html>
 ```
 
@@ -82,11 +82,11 @@ exports.Main = Montage.create(Component, {
 })
 <script type="text/montage-serialization">
 {
-   "owner": {
-       "prototype": "main",
-       "properties": {
-           "element": {"#": "main"}
-       }
+    "owner": {
+        "prototype": "main",
+        "properties": {
+            "element": {"#": "main"}
+        }
     }
 }
 </script>
@@ -126,7 +126,7 @@ You can assign initial values to an object’s properties in a serialization by 
     "name": "Button",
     "module": "montage/ui/button",
     "properties": {
-       "value": "Click me"
+        "value": "Click me"
     }
 }
 ```
@@ -146,21 +146,21 @@ For example, this serialization block declares a Montage Button component whose 
 ```html
 // index.html
 <html>
- <script src="../../montage.js"></script>
- <script type="text/montage-serialization">
- {
-      "loginBtn": {
+<script src="../../montage.js"></script>
+<script type="text/montage-serialization">
+{
+    "loginBtn": {
         "name": "Button",
         "module": "montage/ui/button.reel",
         "properties": {
             "element": {"#": "loginButton"}
         }
-      }
- }
- </script>
- <body>
-      <div id="loginButton" class="text">Click to enter</div>
- <body>
+    }
+}
+</script>
+<body>
+    <div id="loginButton" class="text">Click to enter</div>
+<body>
 </html>
 ```
 
@@ -206,9 +206,9 @@ Next, create the main HTML document that declares the Button and Main components
 
 ```html
 <html>
- <script src="../../montage.js"></script>
- <script type="text/montage-serialization">
- {
+<script src="../../montage.js"></script>
+<script type="text/montage-serialization">
+{
     "owner": {
         "name": "Main",
         "module": "main",
@@ -224,8 +224,8 @@ Next, create the main HTML document that declares the Button and Main components
             "element": {"#": "buttonDiv"}
         }
     }
- }
- </script>
+}
+</script>
 <body>
     <div id="main">
         <div id="buttonDiv" class="text">Click to enter</div>
@@ -243,7 +243,7 @@ You can define event listener and data bindings between components within a seri
 
 ```js
 Object.defineBinding(sourceObject, "propertyName", {
-    boundObject: boundObject>,
+    boundObject: boundObject,
     boundObjectPropertyPath: "property.key.path"
 });
 ```
@@ -252,10 +252,10 @@ You specify a component’s bindings in a serialization with a “bindings” JS
 
 ```json
 "bindings": {
-   "boundValue": {
-      "boundObject": {"@": "bound-object-label",
-      "boundObjectPropertyPath": "key.path.of.property",
-   },
+    "boundValue": {
+        "boundObject": {"@": "bound-object-label"},
+        "boundObjectPropertyPath": "key.path.of.property",
+    },
 }
 ```
 
@@ -325,9 +325,10 @@ The following is the HTML document and component serialization. The “loginBtn�
 
 ```html
 <html>
- <script src="../../montage.js"></script>
- <script type="text/montage-serialization">
- {
+<head>
+<script src="../../montage.js"></script>
+<script type="text/montage-serialization">
+{
     "controller": {
         "name": "Controller",
         "module": "controller",
@@ -350,8 +351,9 @@ The following is the HTML document and component serialization. The “loginBtn�
             }
         ]
     }
- }
- </script>
+}
+</script>
+</head>
 <body>
     <div id="main">
         <div id="buttonDiv" class="text">Click to enter</div>
@@ -369,7 +371,7 @@ Montage uses the browser’s native JSON parsing APIs to parse the serialization
     ```json
     "anObject": {
         "id": "123asd",
-        "colors": [ "red", "green", "blue"],
+        "colors": ["red", "green", "blue"],
         "readystate": false,
     }
     ```
