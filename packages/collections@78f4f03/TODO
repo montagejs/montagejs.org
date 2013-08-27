@@ -1,0 +1,5 @@
+
+s/items/entries per ES6 spec
+s/iterate/iterator per SpiderMonkey Prollyfill
+Return iterators from values(), keys(), entries()
+
