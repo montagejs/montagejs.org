@@ -21,6 +21,14 @@ title: 404 - MontageJS
 </section>
 
 <script type="text/javascript">
+    var path = window.location.pathname;
     // sets the title so we know which URLs are broken
-    document.title = "404 - " + window.location.pathname;
+    document.title = "404 - " + path;
+
+    var oldApiDocMatcher = /\/apis\/([^.]*).html/
+    var oldApiDocMatch = path.match(oldApiDocMatcher);
+
+    if (oldApiDocMatch) {
+        window.location = "/api/" + oldApiDocMatch[1] + ".html";
+    }
 </script>
