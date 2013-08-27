@@ -30,71 +30,6 @@
     clear: both;
 }
 
-@media (max-width: 700px) {
-    
-    section.withSubnav {
-        padding: 10px;
-    }
-    
-    .withSubnav .main {
-        width: 100%;
-    }
-    
-    .withSubnav .content {
-        padding: 1px 20px 20px 20px;
-    }
-}
-
-/* Subnav toggle ----------------------------------------- */
-
-.subnav-toggle,
-.subnav-toggleLabel {
-    display: none;
-}
-
-@media (max-width: 700px) {
-    
-    .subnav {
-        display: none;
-    }
-    
-    .subnav-toggle:checked ~ .subnav {
-        display: block;
-    }
-    
-    .subnav-toggleLabel {
-        display: block;
-        cursor: pointer;
-        width: 100%;
-        height: 48px;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 12px;
-        line-height: 48px;
-        font-size: 1.2em;
-        color: hsl(220, 100%, 66%);
-        margin-bottom: 10px;
-        border-radius: 8px;
-        -webkit-tap-highlight-color: transparent;
-        box-shadow: 0 0 2px hsla(0, 0%, 0%, 0.12);
-        background: #fff url(../images/toggle-icons.svg) no-repeat right top;
-        background-size: 48px auto;
-    }
-    
-    .subnav-toggleLabel:active {
-        background-color: hsl(0, 0%, 90%);
-    }
-    
-    .subnav-toggleLabel:before { content: "Menu"; }
-    
-    .subnav-toggle:checked + .subnav-toggleLabel {
-        color: hsl(0,0%,66%);
-        background-position: right -48px;
-    }
-    
-    .subnav-toggle:checked + .subnav-toggleLabel:before { content: "Close"; }
-}
-
 
 /* Subnav ----------------------------------------- */
 
@@ -189,19 +124,6 @@
 
 .subnav--noDetails a {
     margin-left: 0;
-}
-
-@media (max-width: 700px) {
-    .subnav {
-        float: none;
-        width: 100%;
-        padding-right: 0;
-    }
-
-    .subnav a {
-        font-size: 18px;
-        line-height: 1.8;
-    }   
 }
 
 
@@ -557,3 +479,66 @@ code[data-lang]:after {
     line-height: 0;
     color: hsl(0,0%,80%);
 }
+
+
+
+
+/* Responsive Submenu ----------------------------------------- */
+
+@media all and (max-width: 700px) {
+    
+    .subnav {
+        float: none;
+        width: 100%;
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .subnav a {
+        font-size: 18px;
+        line-height: 1.8;
+        margin-left: 0;
+    }
+
+    .subnav summary {
+        margin-bottom: 10px;
+        border-radius: 8px;
+        padding: 10px 0;
+        box-shadow: 0 0 2px hsla(0, 0%, 0%, 0.12);
+        background: hsl(0,0%,100%);
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    .subnav summary:active {
+        background-color: hsl(0, 0%, 90%);
+    }
+    
+    section.withSubnav {
+        padding: 10px;
+    }
+    
+    .withSubnav .main {
+        width: 100%;
+    }
+    
+    .withSubnav .content {
+        padding: 1px 20px 20px 20px;
+    }
+    
+    .subnav {
+        display: none;
+    }
+    
+    .nav-toggle--sub:checked ~ .subnav {
+        display: block;
+    }
+    
+    .nav-toggleLabel--sub {
+        display: block;
+        margin-bottom: 10px;
+    }
+    
+    .nav-toggleLabel--sub:before { content: "Sub Menu"; }
+    
+}
+

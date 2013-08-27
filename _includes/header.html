@@ -1,6 +1,10 @@
 <header class="header">
     <div class="header-container">
         <a class="logo {% if page.home %}active{% endif %}" href="/">Home</a>
+        
+        <input id="nav-toggle" class="nav-toggle nav-toggle--main" type="checkbox">
+        <label class="nav-toggleLabel nav-toggleLabel--main" for="nav-toggle" onclick></label>
+        
         <nav class="nav">
             <a class="nav-item {% if page.home %}active{% endif %}" href="/">About</a>
             <a class="nav-item {% if page.apps %}active{% endif %}" href="/apps">Apps</a>
@@ -10,5 +14,6 @@
             <a class="nav-item {% if page.blog %}active{% endif %}" href="/blog">Blog</a>
             <a class="nav-item nav-item--fork" href="https://github.com/montagejs/montage" target="_blank">Fork</a>
         </nav>
+        
     </div>
 </header>
