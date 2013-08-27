@@ -58,7 +58,7 @@
     background: url(../images/docs.svg) no-repeat center;
 }
 
-@media all and (max-width: 800px) {
+@media all and (max-width: 700px) {
     .links .link {
         display: inline-block;
         margin: 0 4px;
@@ -79,7 +79,7 @@
 
 /* Misc ----------------------------------------- */
 
-@media all and (max-width: 800px) {
+@media all and (max-width: 700px) {
     .misc .col:nth-child(2) .title {
         margin-top: 50px;
     }
@@ -146,7 +146,7 @@ ul.gallery {
     height: 200px;
 }
 
-@media all and (max-width: 800px) {
+@media all and (max-width: 700px) {
     
     .hero .logo {
         height: 150px;
