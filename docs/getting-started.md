@@ -65,7 +65,7 @@ You are now ready to create your first MontageJS application.
 
     ```
     $ cd hello
-    $ minit serve &
+    $ minit serve
     ```
 
 3. Finally, point your browser to http://localhost:8083/.

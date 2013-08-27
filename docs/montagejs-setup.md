@@ -65,7 +65,7 @@ Before you start to learn how to program with MontageJS, you will need to set up
 
     ```
     $ cd hello
-    $ minit serve &
+    $ minit serve
     ```
 
 5. Point your browser to http://localhost:8083/.
