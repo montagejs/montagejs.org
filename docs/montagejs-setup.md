@@ -57,7 +57,7 @@ Before you start to learn how to program with MontageJS, you will need to set up
     $ minit create:app -n hello
     ```
 
-    **Note**: If you get an EACCES warning when trying to run `minit:create`, use `sudo chown -R <username> ~/.npm` and then use `$ minit create:app -n hello`. This is a workaround due to a bug in npm.
+    > **Note**: If you get an EACCES warning when trying to run `minit:create`, use `sudo chown -R <username> ~/.npm` and then use `$ minit create:app -n hello`. This is a workaround due to a bug in npm.
 
     This generates the hello directory—which contains the default MontageJS application template, including the production dependencies—in your current directory.
 
@@ -70,7 +70,7 @@ Before you start to learn how to program with MontageJS, you will need to set up
 
 5. Point your browser to http://localhost:8083/.
 
-    You should see the contents of the Welcome component—a simple single-page application, which is explicitly loaded to accompany [part 2](http://montagejs.org/docs/hello-montagejs.html) of our quick start tutorial.
+    You should see the contents of the Welcome component—a simple single-page application, which is explicitly loaded to accompany part 2 of our quick start tutorial, [Hello MontageJS](http://montagejs.org/docs/hello-montagejs.html).
     
     ![GS_Figure1](/images/docs/gs_tut_fig_01.png)
     
