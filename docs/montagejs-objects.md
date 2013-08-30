@@ -102,33 +102,9 @@ var Subtype = Montage.specialize({
 });
 ```
 
-Montage also supports a small number of extensions to the [ES5 property-descriptor][Property Descriptors].  Montage alters the defaults for `writable` and `configurable`—properties are both writable and configurable unless you specify otherwise.  Properties continue to be non-`enumerable` by default.
+Montage also supports a small number of modifications to the [ES5 property-descriptor][Property Descriptors].  Montage alters the defaults for `writable` and `configurable`—properties are both writable and configurable unless you specify otherwise.  Properties continue to be non-`enumerable` by default.
 
 [Property Descriptors]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty
-
-There is also a `distinct` flag that will ensure that every intance will receive a fresh clone of the given `value`, allowing you to move imperative property initialization in your constructor, into the declaration of that property on the prototype.
-
-```javascript
-// before
-var Type = Montage.specialize({
-    constructor: {
-        value: function Type() {
-            this.super();
-            this.x = [1, 2, 3];
-        }
-    }
-});
-```
-
-```javascript
-// after
-var Type = Montage.specialize({
-    x: {
-        value: [1, 2, 3],
-        distinct: true
-    }
-});
-```
 
 Perhaps the most subtle and interesting way that `Montage.specialize` extends the JavaScript object model is that it causes constructor functions to inherit from their parent constructor, in parallel the prototype chain.  This makes it possible to use or override `Montage.specialize`, `defineProperties`, and `defineProperty` for subtrees of your object model.  Montage implements `specialize` and `defineProperties` such that an overridden `defineProperty` is sufficient to specialize the property descriptor protocol for all descendent types.  Overriding `specialize` gives you a hook to decorate the constructor for all descendent types.
 
