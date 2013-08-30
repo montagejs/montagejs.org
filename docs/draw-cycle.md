@@ -33,14 +33,14 @@ Draw cycles are scheduled using `requestAnimationFrame()` on browsers that suppo
 
 ## Building the draw list
 
-During each draw cycle, Montage explores [??? parse? examine???] the application's component tree for all components that have their `needsDraw` property set to `true`. Only components that have indicated [how?] they want to draw, or have a child that wants to draw are explored. If a component being added to the draw list is participating in a draw cycle for the first time, its `prepareForDraw()` callback method is invoked. A parent component can also block exploration of its child components by returning `false` from its `canDraw()` method.
+During each draw cycle, Montage explores the application's component tree for all components that have their `needsDraw` property set to `true`. Only components that have indicated [how?] they want to draw, or have a child that wants to draw are explored. If a component being added to the draw list is participating in a draw cycle for the first time, its `prepareForDraw()` callback method is invoked. A parent component can also block exploration of its child components by returning `false` from its `canDraw()` method.
 
 Once this initial list has been created, Montage invokes `willDraw()` on each component in the list. As a result of this, additional components may have had their `needsDraw` property set to `true`. For example, a parent component’s `willDraw()` implementation might determine that one of its child components needs to update its DOM, so it sets the component’s `needsDraw` property to true. To include these components in the current draw cycle, Montage explores the component tree again for new components that requested a draw and adds them to the draw list. It then invokes `willDraw()` on each of the newly added components. This process is repeated until no additional components have requested a draw. Any component that requests a draw during the remainder of the draw cycle will be incuded in the following draw cycle.
 
 
 ## Drawing phase
 
-After generating the draw list, Montage invokes the `draw()` method on each member of the list. This method is the prescribed location [???a method == location??] for components to modify their DOM structure or CSS styles; those types of operations should not be performed outside of a component's `draw()` method. 
+After generating the draw list, Montage invokes the `draw()` method on each member of the list. This method is the prescribed location for components to modify their DOM structure or CSS styles; those types of operations should not be performed outside of a component's `draw()` method. 
 
 Finally, `didDraw()` is called on each component in the draw list. If this was the first time a component in the draw list was drawn, that component automatically dispatches a `"firstDraw"` event.
 
@@ -52,10 +52,6 @@ Children of a component are always drawn before their parents.
 The following are the component callback methods involved in the draw cycle. These methods should never be called directly by an application as These methods are called by MontageJS framework calls these methods at the appropriate times, and should never be called directly by an application. Any component that intends to directly update its DOM structure must implement a `draw()` method; which method a component implements depends on what it wants to do. 
 
 ### Callback methods
-
-#### canDraw()
-* __When invoked:__ While MontageJS walks [parses???] the component tree determining which components to add to the draw list.
-* __Purpose:__ If a component returns `false` from this method then it won’t be added to the draw list, and its child component tree isn’t explored.
 
 #### prepareForDraw()
 * __When invoked:__ The first time a component is added to the draw list.

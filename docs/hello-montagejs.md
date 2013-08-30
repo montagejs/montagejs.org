@@ -11,7 +11,7 @@ next-page: montagejs-examples
 
 # Hello MontageJS
 
-This tutorial will show you how to assemble a simple MontageJS application. The goal is to quickly familiarize you with the basic building blocks of the MontageJS framework. To make the most of this tutorial, you should have a basic understanding of HTML, CSS, and JavaScript and some familiarity with working in a command-line environment.
+This tutorial will show you how to assemble a simple MontageJS application. The goal is to quickly familiarize you with the basic building blocks of the MontageJS framework. To make the most of this tutorial, you should have a basic understanding of HTML, CSS, and JavaScript and some familiarity with working in a command-line environment. You should also have have completed part 1 of this tutorial series, set up your development enironment.
 
 
 ## Say Hello to MontageJS
