@@ -10,13 +10,14 @@ MontageJS applications consist of a model layer that handles the data and a view
 
 MontageJS components are encapsulated; the structure (HTML), appearance (CSS), and behavior (JavaScript) that power a user interface component are all located in the same directory, identified with a .reel suffix. For example, the foo-bar component is located in the ui directory of your MontageJS application at `montageapp/ui/foo-bar.reel` and encapsulates the following files: foo-bar.css, foo-bar.html, and foo-bar.js. Because components are self-contained, it's easy to work on, rename, or even remove an individual component without having to find bits and pieces of it scattered across directories.
 
-Montage components are modular; regardless of where a component is used, the same HTML, CSS, and JavaScript will control how that particular component is structured, looks, and behaves.
+MontageJS components are modular; regardless of where a component is used, the same HTML, CSS, and JavaScript will control how that particular component is structured, looks, and behaves.
 
->**Note**: Out of the box, MontageJS includes three prebuilt widget sets (or themes) for user interface components: Digit, Matte, and Default. Digit is a touch-friendly widget set optimzed for mobile device development. Matte contains desktop-optimized UI components. The Default package contains native UI components. This package lets you wrap HTML5 elements to give them access to Montage features such as data bindings and the Montage event handling model. All styling is left to the user-agent/browser or the author to apply.
+>**Note**: Out of the box, MontageJS includes three prebuilt widget sets (or themes) for user interface components: Digit, Matte, and Native. Digit is a touch-friendly widget set optimzed for mobile device development. Matte contains desktop-optimized UI components. The Native package contains native UI components. This package lets you wrap HTML5 elements to give them access to MontageJS features such as data bindings and the MontageJS event handling model. All styling is left to the user-agent/browser or the author to apply.
 
+## Anatomy of a Component
 Let's take a closer look at some key features of the HTML, CSS, and JS files included in the FooBar component. First the HTML file.
 
-Every component's HTML file is a complete and valid HTML document. The head section includes the component's CSS file and a script block, which contains all serialized Montage objects in the document.
+Every component's HTML file is a complete and valid HTML document. The head section includes the component's CSS file and a script block, which contains all serialized MontageJS objects in the document.
 
 ```html
 <link rel="stylesheet" type="text/css" href="foo-bar.css">
@@ -48,9 +49,9 @@ For more details on the serialization format refer to [MontageJS Serialization F
 
 This means that when you use a FooBar component in a MontageJS application the only portion of its template that will be rendered is the `foo-bar` element.
 
-><div class="note">NOTE: MontageJS components are reusable, that is, you can insert them multiple times in the same document, which is why we use a [custom data-attribute](http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#custom-data-attribute), `data-montage-id`, to identify elements and not the document-unique HTML `id` attribute. This also gives you the freedom to use the `id` attribute for styling, whether for performance or legacy reasons.</div>
+><div class="note">**Note:** MontageJS components are reusable, that is, you can insert them multiple times in the same document, which is why we use a [custom data-attribute](http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#custom-data-attribute), `data-montage-id`, to identify elements and not the document-unique HTML `id` attribute. This also gives you the freedom to use the `id` attribute for styling, whether for performance or legacy reasons.</div>
 
-Next, the CSS file: Note that we start off with an almost blank style sheet, waiting for you to bring it to life by adding your meticulously crafted rules. The only content we pass along is the class name of the root element.
+Next, the CSS file: By default, we start off with an almost blank style sheet, waiting for you to bring it to life by adding your meticulously crafted rules. The only content we pass along is the class name of the root element.
 
 ```css
 .FooBar {

@@ -62,14 +62,14 @@ The following simple (yet complete) Montage application is defined in a single H
 
 Important things to note:
 
-* The HTML body contains a single `<input>` tag that has the ID “fName”.
+* The HTML body contains a single `<input>` tag that has the ID "fName".
 * The document head contains a `<script>` block of type `text/montage-serialization`. This block contains all serialized Montage objects used in the document.
-* The serialization block declares a Montage Textfield component with an object label of “firstName”. The component’s module ID (“montage/ui/textfield.reel”) and its name (“Textfield”) allow Montage to re-create the component from its serialized form at runtime.
-* The “properties” object assigns initial values to the component’s properties. One of the most important properties of a Montage component is its `element` property, which corresponds to the associated HTML element on which the component operates on. In this case, the Textfield component’s element property is set to the `<input>` tag that has the ID “fName”. The Montage serialization format provides a special JSON object representation to refer to an element. This special object’s name is a hash mark (“#”) and its value is the ID of the element.
+* The serialization block declares a Montage Textfield component with an object label of "firstName". The component's module ID ("montage/ui/textfield.reel") and its name ("Textfield") allow Montage to re-create the component from its serialized form at runtime.
+* The "properties" object assigns initial values to the component’s properties. One of the most important properties of a Montage component is its `element` property, which corresponds to the associated HTML element on which the component operates on. In this case, the Textfield component’s element property is set to the `<input>` tag that has the ID "fName". The Montage serialization format provides a special JSON object representation to refer to an element. This special object’s name is a hash mark ("#") and its value is the ID of the element.
 * Montage can load components from a directory that has a .reel extension. The module system redirects `require("x.reel")` to `require("x.reel/x")`.
 
 ## Serialization owner
-A Montage serialization can declare an optional object named “owner”. The specified owner acts as the controller for the document. For example, the following code creates a new module (main.js) that exports a `Main` prototype object.
+A Montage serialization can declare an optional object named "owner". The specified owner acts as the controller for the document. For example, the following code creates a new module (main.js) that exports a `Main` prototype object.
 
 ```js
 // Module: main.js
@@ -119,7 +119,7 @@ var Button = require("montage/ui/button").Button;
 
 Note that object labels in a serialization (such as “loginButton” in the above example) are only used internally by Montage during the deserialization process. For example, the object label does not translate into a JavaScript variable at runtime. You __can__ reference objects within a serialization using a special JSON representation.
 
-You can assign initial values to an object’s properties in a serialization by adding a `properties` object to the serialization. For example, the Montage Button component has a `value` property that contains the string to display as the button’s label. The following assigns the value “Click me” to the Button component’s `value` property.
+You can assign initial values to an object’s properties in a serialization by adding a `properties` object to the serialization. For example, the Montage Button component has a `value` property that contains the string to display as the button’s label. The following assigns the value "Click me" to the Button component’s `value` property.
 
 ```json
 "loginButton": {
@@ -259,7 +259,7 @@ You specify a component’s bindings in a serialization with a “bindings” JS
 }
 ```
 
-The following simple example adds data bindings to a serialization. It consists of two Montage Slider components. The first slider’s value is bound to the second slider’s value. By default, data bindings are bi-directional, so changes to either bound property are pushed to the corresponding property. In this case, the “oneway” parameter is set to false so that changes propagate only from the bound object to the one that defined the binding (the source object).
+The following simple example adds data bindings to a serialization. It consists of two Montage Slider components. The first slider’s value is bound to the second slider’s value. By default, data bindings are bi-directional, so changes to either bound property are pushed to the corresponding property. In this case, the "oneway" parameter is set to false so that changes propagate only from the bound object to the one that defined the binding (the source object).
 
 ```html
 <html>
@@ -321,7 +321,7 @@ exports.Controller = Montage.create(Montage, {
 });
 ```
 
-The following is the HTML document and component serialization. The “loginBtn” object in the serialization contains a “listeners” array property. This array can contain one or more.
+The following is the HTML document and component serialization. The "loginBtn" object in the serialization contains a "listeners" array property. This array can contain one or more.
 
 ```html
 <html>
@@ -364,7 +364,7 @@ The following is the HTML document and component serialization. The “loginBtn�
 
 ## JSON formatting rules
 
-Montage uses the browser’s native JSON parsing APIs to parse the serialization block. For the browser to successfully parse the JSON object, the JSON must be well-formed. If the JSON serialization contains a formatting error, Montage throws an error and does not attempt to deserialize the JSON object. Some formatting concerns are:
+Montage uses the browser's native JSON parsing APIs to parse the serialization block. For the browser to successfully parse the JSON object, the JSON must be well-formed. If the JSON serialization contains a formatting error, Montage throws an error and does not attempt to deserialize the JSON object. Some formatting concerns are:
 
 * Trailing commas. A trailing comma after the last property in a JSON object or array generates runtime errors. In the following example the comma that trails the `readyState` property would generate a JSON parsing error:
 
