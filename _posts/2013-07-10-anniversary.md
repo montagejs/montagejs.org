@@ -2,6 +2,8 @@
 
 layout: blog
 title: Montage's 1st anniversary
+author: simurai
+author_url: https://github.com/simurai/
 
 ---
 

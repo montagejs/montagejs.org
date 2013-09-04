@@ -1,6 +1,10 @@
 ---
+
 layout: blog
 title: The week in Montage
+author: Stuart Knightley
+author_url: http://github.com/Stuk/
+
 ---
 
 Last week the Montage team was happy to gain two new members, [Adam Solove](https://github.com/asolove) and [Nikita Vasilyev](https://github.com/NV)! Nikita jumped straight in and improved component generation in Minit and fixed up some issues in our documentation on [montagejs.org](http://montagejs.org/). Adam landed an improvement to the currency converter, and [fixed `Template`](https://github.com/montagejs/montage/pull/1264) to call `templateDidLoad` on an instance `owner` that doesn't appear in the serialization.
