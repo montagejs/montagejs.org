@@ -12,7 +12,7 @@ next-page: extending-components
 
 # Draw Cycle
 
-Web applications should perform well. Users don't like to wait while interacting with an app; "every millisecond counts!" For simple applications, improving the user experience can be as easy as following some <a href="https://developers.google.com/speed/" target="_blank">performance best practices</a> and writing efficient JavaScript. For more complex applications, however, these practices are rarely enough to manage the main causes for poor application performance: DOM-based manipulation and styling changes. This is where MontageJS comes in.
+Web applications should perform well. Users don't like to wait while interacting with an app; "every millisecond counts!" For simple applications, improving the user experience can be as easy as following some <a href="https://developers.google.com/speed/docs/best-practices/rules_intro" target="_blank">performance best practices</a> and writing efficient JavaScript. For more complex applications, however, these practices are rarely enough to manage the main causes for poor application performance: DOM-based manipulation and styling changes. This is where MontageJS comes in.
 
 To help maximize application performance, MontageJS components participate in a managed draw cycle that aims at reducing the negative effects of expensive browser reflows and repaints on the user experience. In this approach, DOM write and read operations are batched into separate code passes and scheduled to execute at timed event loops using the browser's `requestAnimationFrame()` API.
 
