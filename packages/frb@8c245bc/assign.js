@@ -1,1 +1,0 @@
-function assign(e,t,n,a,s,r){var i;i="string"==typeof t?parse(t):t;var o=compile(i);return o(n,new Scope(e,null,a,s,r))}var parse=require("./parse"),compile=require("./compile-assigner"),Scope=require("./scope");module.exports=assign;

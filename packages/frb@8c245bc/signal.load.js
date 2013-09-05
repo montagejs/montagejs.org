@@ -1,1 +1,0 @@
-montageDefine("8c245bc","signal",{dependencies:["collections/map"],factory:function(e,t,n){function a(e){var t=new s;return t.getDefault=function(){return 0},{observe:function(n){return n(e),t.set(n,t.get(n)+1),function(){t.set(n,t.get(n)-1)}},emit:function(n){e=n,t.forEach(function(e,t){t(n)})}}}var s=e("collections/map");n.exports=a}});

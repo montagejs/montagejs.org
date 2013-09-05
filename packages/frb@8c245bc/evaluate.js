@@ -1,1 +1,0 @@
-function evaluate(e,t,n,a,s){var r;r="string"==typeof e?parse(e):e;var i=compile(r);return i(new Scope(t,null,n,a,s))}var parse=require("./parse"),compile=require("./compile-evaluator"),Scope=require("./scope");module.exports=evaluate;

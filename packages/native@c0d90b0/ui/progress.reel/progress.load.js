@@ -1,0 +1,1 @@
+montageDefine("c0d90b0","ui/progress.reel/progress",{dependencies:["ui/native-control"],factory:function(e,t){var n=e("ui/native-control").NativeControl,r=t.Progress=n.specialize({});r.addAttributes({form:null,max:{dataType:"number"},value:{dataType:"number"}})}});

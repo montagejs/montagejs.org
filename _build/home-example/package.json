@@ -3,8 +3,8 @@
     "version": "0.0.0",
     "private": true,
     "dependencies": {
-        "montage": "0.13.0",
-        "digit": "0.2.0-alpha"
+        "montage": "0.13.5",
+        "digit": "0.3.1"
     },
     "devDependencies": {
         "mop": "0.13.0"

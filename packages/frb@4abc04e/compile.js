@@ -1,0 +1,1 @@
+function compile(){return{dependencies:[],factory:function(){}}}module.exports=compile;
