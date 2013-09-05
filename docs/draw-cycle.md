@@ -12,7 +12,7 @@ next-page: extending-components
 
 # Draw Cycle
 
-Web applications should perform well. Users don't like to wait while interacting with an app; "every millisecond counts!" For simple applications, improving the user experience can be as easy as following some [performance best practices](https://developers.google.com/speed/) and writing efficient JavaScript. For more complex applications, however, these practices are rarely enough to manage the main causes for poor application performance: DOM-based manipulation and styling changes. This is where MontageJS comes in.
+Web applications should perform well. Users don't like to wait while interacting with an app; "every millisecond counts!" For simple applications, improving the user experience can be as easy as following some <a href="https://developers.google.com/speed/" target="_blank">performance best practices</a> and writing efficient JavaScript. For more complex applications, however, these practices are rarely enough to manage the main causes for poor application performance: DOM-based manipulation and styling changes. This is where MontageJS comes in.
 
 To help maximize application performance, MontageJS components participate in a managed draw cycle that aims at reducing the negative effects of expensive browser reflows and repaints on the user experience. In this approach, DOM write and read operations are batched into separate code passes and scheduled to execute at timed event loops using the browser's `requestAnimationFrame()` API.
 
@@ -20,7 +20,7 @@ To help maximize application performance, MontageJS components participate in a 
 
 The draw cycle is a timed loop that allows components to modify their element's DOM structure. Technically, a component can change the DOM at any time; performance best practice, however, is to batch all DOM read/write operations into separate processes. This is critical because of the way browsers handle DOM changes. For the most part, browsers are pretty smart; they will queue up change operations and execute them in batches in order to minimize the number of reflows they need to perform. However, when your script requests style information (e.g., `element.offsetLeft`), you force the browser to give you the most up-to-date value, and this causes a reflow that can be expensive depending on the scope of the change.
 
-> For an overview of what happens in a browser after it has downloaded the source code for a page, see Stoyan Stefanov's article on "<a href:"http://www.phpied.com/rendering-repaint-reflowrelayout-restyle/" target="_blank">Rendering: repaint, reflow/relayout, restyle</a>."
+> For an overview of what happens in a browser after it has downloaded the source code for a page, see Stoyan Stefanov's article on "<a href="http://www.phpied.com/rendering-repaint-reflowrelayout-restyle/" target="_blank">Rendering: repaint, reflow/relayout, restyle</a>."
 
 Interleaving read/write issues are simple enough to solve at a component level; you just need to be careful in how you write your DOM changes. In a complex web application, however, you are dealing with any number of components, some of which you may not even have authored yourself.
 
