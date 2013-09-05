@@ -28,9 +28,9 @@ Using Montage native components has several advantages over using custom Montage
 ## Available Components
 The following list summarizes the UI components that are currently part of the Native widget set:
 
-Component | Description 
------------- | ------------- 
-Anchor | Provides hyperlink functionality. It acts as a wrapper around the `a` element.  
+Component | Description
+------------ | -------------
+Anchor | Provides hyperlink functionality. It acts as a wrapper around the `a` element.
 Button | Provides button functionality. It wraps either a `button` element or an `input` element with type of `button`.
 Image | Provides functionality for displaying an image. It wraps the `img` element.
 InputCheckbox | Provides checkbox functionality. It wraps an `input` element with type of `checkbox`.
@@ -40,8 +40,8 @@ InputRadio | Provides radio button functionality. It wraps the `input` element w
 InputRange | Provides slider functionality. It wraps the `input` element with type of `range`.
 InputText | Provides functionality for a single-line text field. It wraps the `input` element with a type of `text`.
 Progress | Provides progress bar functionality. It wraps the `progress` element.
-Select | Provides drop-down list functionality in Montage. It wraps the `input` element with type of `select`.  
-TextArea | Provides functionality for a multiline text field. It wraps the `textarea` element.  
+Select | Provides drop-down list functionality in Montage. It wraps the `input` element with type of `select`.
+TextArea | Provides functionality for a multiline text field. It wraps the `textarea` element.
 
 
 ## Installing the Native Theme

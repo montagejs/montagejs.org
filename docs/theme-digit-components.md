@@ -29,6 +29,27 @@ The following list provides an overview of the existing Digit components.
 [ ![TextField](https://raw.github.com/montagejs/digit/master/ui/text-field.reel/screenshot.png) ](https://github.com/montagejs/digit/tree/master/ui/text-field.reel)
 [ ![TextArea](https://raw.github.com/montagejs/digit/master/ui/text-area.reel/screenshot.png) ](https://github.com/montagejs/digit/tree/master/ui/text-area.reel)
 
+## Available Components
+The following list summarizes the UI components that are currently part of the Digit widget set:
+
+Component | Description 
+------------ | ------------- 
+Badge |   
+Button | Provides button functionality.
+Checkbox |
+Image | Provides functionality for displaying an image.
+ListItem | 
+List | 
+NumberField | Provides functionality for entering a number in a text field. This typically includes a spinner control attached to the text field.
+RadioButton | Provides radio button functionality.
+Select | Provides drop-down list functionality in Montage.  
+TextArea | Provides functionality for a multiline text field.
+TextField | Provides functionality for a single-line text field.
+Text | 
+Title | 
+ToggleSwitch | 
+VideoControl | 
+Video | 
 
 ## Updating Digit
 Digit is part of the default application template. The theme is still under development. To ensure you are using the latest version of digit, follow these steps:

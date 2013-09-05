@@ -12,73 +12,72 @@ next-page: extending-components
 
 # Draw Cycle
 
-You want your web applications, especially mobile ones, to perform well in order to be valuable to users. People don't like to wait; "every millisecond counts!" Although you can, to some extent, mitigate perceived application performance issues by optimizing user interface flows and elements, you cannot get around two key factors that can trigger expensive reflow: DOM manipulation (i.e., creating or modifying the DOM structure or styles) and DOM inspection (i.e., querying an element's calculated style; for example, `offsetWidth`).
+Web applications should perform well. Users don't like to wait while interacting with an app; "every millisecond counts!" For simple applications, improving the user experience can be as easy as following some [performance best practices](https://developers.google.com/speed/) and writing efficient JavaScript. For more complex applications, however, these practices are rarely enough to manage the main causes for poor application performance: DOM-based manipulation and styling changes. This is where MontageJS comes in.
 
-Repeatedly manipulating and reading the DOM in an unmanaged fashion—AKA interleaving write and read operations or "layout thrash"—will cause expensive reflows that can have a critical impact on the performance and responsivenes of your web application and, by extension, on usage and brand perception. This is where MontageJS comes in.
+To help maximize application performance, MontageJS components participate in a managed draw cycle that aims at reducing the negative effects of expensive browser reflows and repaints on the user experience. In this approach, DOM write and read operations are batched into separate code passes and scheduled to execute at timed event loops using the browser's `requestAnimationFrame()` API.
 
-To help maximize application performance, MontageJS components participate in a managed draw cycle that batches DOM write and read operations into separate code passes. In this approach, all the required DOM updates are made in a single pass, followed by another pass that executes all required DOM queries. As a result, only the first DOM query triggers a reflow; subsequent queries do not.
+## Performance Matters
 
+The draw cycle is a timed loop that allows components to modify their element's DOM structure. Technically, a component can change the DOM at any time; performance best practice, however, is to batch all DOM read/write operations into separate processes. This is critical because of the way browsers handle DOM changes. For the most part, browsers are pretty smart; they will queue up change operations and execute them in batches in order to minimize the number of reflows they need to perform. However, when your script requests style information (e.g., `element.offsetLeft`), you force the browser to give you the most up-to-date value, and this causes a reflow that can be expensive depending on the scope of the change.
 
-## How It Works
+> For an overview of what happens in a browser after it has downloaded the source code for a page, see Stoyan Stefanov's article on "<a href:"http://www.phpied.com/rendering-repaint-reflowrelayout-restyle/" target="_blank">Rendering: repaint, reflow/relayout, restyle</a>."
 
-When a component needs to update its appearance, it requests a draw by setting its `needsDraw` property to true. This causes the component to be added to an internal _draw list_. During each draw cycle, MontageJS iterates over this list and invokes a series of predefined callback methods on each component. The three primary callback methods are `willDraw()`, `draw()`, and `didDraw()`. A callback method is performed on all components in the draw list before the next callback method.
+Interleaving read/write issues are simple enough to solve at a component level; you just need to be careful in how you write your DOM changes. In a complex web application, however, you are dealing with any number of components, some of which you may not even have authored yourself.
 
-These features are implemented through a series of component method callbacks that the framework invokes. Each draw cycle involves two stages:
+Take for example an application that includes two components, a fancy slider and a text box, whose values are bound together. When a user drags the slider, the numeric value in the text box is updated to reflect the value of the slider at the current position; likewise, when a user enters a numeric value in the text box, the slider moves to reflect the chosen value.
 
-1. The request draw phase, which involves building a _draw list_ of components that have their `needsDraw` property set to true.
-2. The draw phase, in which a series of callback methods are invoked on each component in the draw list.
+Dragging the slider forces the component to update its DOM structure and set the new value on the text box component which, in turn, forces the text box component to update its DOM. If each component draws independently of the other, chances are you'll end up with interleaving DOM read/write operations. Now imagine a similar scenario with many more components drawing completely independently of each other. This is where the MontageJS draw manager steps in: it ensures that read/write operations to the DOM are not interleaved while keeping components unaware of each other.
 
-Draw cycles are scheduled using `requestAnimationFrame()` on browsers that support it, or `setTimeout()` on legacy systems.
+## Draw Cycle in a Nutshell
 
+When a component needs to update its appearance, its `needsDraw` property is set to `true` (`this.needsDraw = true`). This, in turn, informs the template's root component that one of its siblings needs to draw and a draw cycle is scheduled. Roughly, draw cycles consist of two phases:
 
-## Building the draw list
+1. The request draw phase, which involves building a _draw list_ of components that have their `needsDraw` property set to `true`.
+2. The draw phase, in which a series of predefined callback methods are invoked sequentially on the components in the draw list. The three primary callback methods are `willDraw()`, `draw()`, and `didDraw()`.
 
-During each draw cycle, Montage explores the application's component tree for all components that have their `needsDraw` property set to `true`. Only components that have indicated [how?] they want to draw, or have a child that wants to draw are explored. If a component being added to the draw list is participating in a draw cycle for the first time, its `prepareForDraw()` callback method is invoked. A parent component can also block exploration of its child components by returning `false` from its `canDraw()` method.
+Draw cycles are scheduled automatically using the `requestAnimationFrame()` method if supported or, as a fallback, `setTimeout()`.
 
-Once this initial list has been created, Montage invokes `willDraw()` on each component in the list. As a result of this, additional components may have had their `needsDraw` property set to `true`. For example, a parent component’s `willDraw()` implementation might determine that one of its child components needs to update its DOM, so it sets the component’s `needsDraw` property to true. To include these components in the current draw cycle, Montage explores the component tree again for new components that requested a draw and adds them to the draw list. It then invokes `willDraw()` on each of the newly added components. This process is repeated until no additional components have requested a draw. Any component that requests a draw during the remainder of the draw cycle will be incuded in the following draw cycle.
+### Building the Draw List
 
-
-## Drawing phase
-
-After generating the draw list, Montage invokes the `draw()` method on each member of the list. This method is the prescribed location for components to modify their DOM structure or CSS styles; those types of operations should not be performed outside of a component's `draw()` method. 
-
-Finally, `didDraw()` is called on each component in the draw list. If this was the first time a component in the draw list was drawn, that component automatically dispatches a `"firstDraw"` event.
-
-Children of a component are always drawn before their parents.
+During each draw cycle, the draw manager walks the application's component tree and constructs a draw list of components that have their `needsDraw` property set to `true`. If a component in the draw list is participating in a draw cycle for the first time, the `prepareForDraw()` event callback method is invoked at the very beginning of the draw cycle. (This ensures that the element is in the document before event listeners are added to it. Furthermore, if this particular component has a template, this is also the first time when the `.element` property refers to the element that comes from the template and not the placeholder. Naturally, event listeners are attached to the element, not the placeholder.)
 
 
-## Callback methods and rules
+After the initial draw list has been created, the draw manager invokes `willDraw()` on each component in the list. This, in turn, may cause additional (child) components to set their `needsDraw` property to `true`. To include these components in the current draw cycle, the draw manager explores the component tree again for new components to add to the draw list. It then invokes `willDraw()` on each of the newly added components. This process is repeated until no additional components have requested a draw [or until the browser draw cycle starts] Any component that requests a draw during the remainder of the draw cycle will be included in the following draw cycle.
 
-The following are the component callback methods involved in the draw cycle. These methods should never be called directly by an application as These methods are called by MontageJS framework calls these methods at the appropriate times, and should never be called directly by an application. Any component that intends to directly update its DOM structure must implement a `draw()` method; which method a component implements depends on what it wants to do. 
+### Executing the Draw List
 
-### Callback methods
+After generating the draw list, the draw manager invokes the `draw()` method on every component in the list. This is the prescribed method for components to modify their DOM structure or CSS styles; DOM modifications should not be performed outside of a component's `draw()` method.
+
+Finally, if the components need to read the final state of a draw cycle, after all `draw()` functions have been performed, `didDraw()` is called on each component in the draw list. This forces the reflow of the DOM at this point in time without having to worry that it is changed again by another component.
+
+
+### Callback Methods
+
+The following list summarizes the component callback methods involved in the draw cycle. These methods should never be called directly by an application; they are invoked automatically by the MontageJS framework. Any component that intends to update its DOM structure directly must implement a `draw()` method.
 
 #### prepareForDraw()
+
 * __When invoked:__ The first time a component is added to the draw list.
-* __Purpose:__ Provides the component a chance to prepare for it being drawn for the first time. For a component with an HTML template, this method is invoked when the template been loaded and applied to the DOM.
+* __Description:__ Enables the component to prepare for its first draw. For components that have an HTML template, this method is invoked after the template has been loaded and applied to the DOM.
 
 #### willDraw()
-* __When invoked:__ Invoked on each component in the generated draw list.
-* __Purpose:__ Provides the component an opportunity to query the DOM for any necessary calculations before drawing. If the execution of this method sets `needsDraw` to true on other components, those components will be added to the current draw cycle.
+* __When invoked:__ On each component in the generated draw list before a `draw()` is performed.
+* __Description:__ Guarantees that the DOM is safe to be read. If the execution of this method sets `needsDraw` to true on other components, those components will be added also to the current draw cycle.
 
 #### draw()
-* __When invoked:__ Invoked on each component in the generated draw list, after `willDraw()` has been invoked on each.
-* __Purpose:__ This is the prescribed location for components to update its DOM structure or modify its styles.
+* __When invoked:__ On each component in the generated draw list, after `willDraw()` has been invoked on each.
+* __Description:__ Contains all DOM write operations of components.
 
 #### didDraw()
-* __When invoked:__ Invoked on each component in the generated draw list, after `draw()` has been invoked on each.
-* __Purpose:__ Provides the component an opportunity to query the DOM for any necessary calculations after drawing.
+* __When invoked:__ On each component in the generated draw list, after `draw()` has been invoked on each (and if the component needs to read the final state of a draw cycle).
+* __Description:__ Provides the component an opportunity to query the DOM for any necessary calculations after drawing, so it can force a reflow of the DOM at this point in time without having to worry that it is changed again by another component.
 
-Components must follow rules for the draw cycle:
+## How to Use the Draw Cycle
+The draw cycle is an internal implementation of MontageJS. That means a lot of the heavy lifting is done for you by the framework, as long as you use the prebuilt MontageJS ui components. When creating your own components the following draw cycle rules apply:
 
-1. A component shall never perform any DOM manipulation outside of its `draw()` method. This includes element style changes, and appending or removing elements from the DOM.
-2. Any reading of the DOM for measurements (such as an element's `offsetWidth`) shall  be performed only in the `willDraw()` or `didDraw()` methods, and never in the `draw()` method.
+1. A component shall never perform any DOM manipulation outside of its `draw()` method. This includes element style changes and appending or removing elements from the DOM.
+2. Any reading of the DOM for measurements (such as an element's `offsetWidth` property) shall be performed only in the `willDraw()` or `didDraw()` methods, and never in the `draw()` method.
 
 Following these rules when implementing your component's DOM changes and queries will limit the amount of reflows in the browser which, in turn, will help improve the performance of your application.
 
-
-## Component tree model
-
-A MontageJS application consists of one or more components arranged hierarchically in a tree, much like the DOM. Every component has an element that is the component's primary connection to the DOM, specified by the component's `element` property. You can access a component by reading the `controller` property on its DOM element. To find a component's parent component, you walk up the DOM tree from its own DOM element until it finds an element that has a non-null `controller` property.
-
-Every MontageJS application has a root component that is created automatically by the framework. ~~Every component (except the root) has a parent component.~~ Every component ~~also~~ has an associated DOM element that is the component's primary connection to the DOM and is specified by the component's `element` property. The component is the element's "controller," and can be accessed by reading the `controller` property on its DOM element. A component's parent component, therefore, can be found by walking up the DOM tree from its own DOM element until it finds an element that has a non-null `controller` property.
+For an example implementation of the draw cycle, see [MFiddle](http://montagejs.github.io/mfiddle/#!/5904498).
