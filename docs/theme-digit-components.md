@@ -34,22 +34,23 @@ The following list summarizes the UI components that are currently part of the D
 
 Component | Description 
 ------------ | ------------- 
-Badge |   
+Badge |  Provides badge metadata functionality.
 Button | Provides button functionality.
-Checkbox |
+Checkbox | Provides checkbox (multichoice) functionality.
 Image | Provides functionality for displaying an image.
-ListItem | 
-List | 
+ListItem | Provides functionality for adding individual list items.
+List | Provides functionality for adding multi-item lists.
 NumberField | Provides functionality for entering a number in a text field. This typically includes a spinner control attached to the text field.
-RadioButton | Provides radio button functionality.
-Select | Provides drop-down list functionality in Montage.  
-TextArea | Provides functionality for a multiline text field.
+RadioButton | Provides radio button (single option) functionality.
+Select | Provides drop-down list functionality.  
+Slider | Provides slider functionality. 
+TextArea | Provides functionality for an expandable multiline text field.
 TextField | Provides functionality for a single-line text field.
-Text | 
-Title | 
-ToggleSwitch | 
-VideoControl | 
-Video | 
+Text | Provides functionality for adding styled text.
+Title | Provides functionality for adding a styled Title element. 
+ToggleSwitch | (planned)
+VideoControl | (planned)
+Video | (planned)
 
 ## Updating Digit
 Digit is part of the default application template. The theme is still under development. To ensure you are using the latest version of digit, follow these steps:
