@@ -340,9 +340,12 @@ code[data-lang]:after {
     margin: 0 0 .4em 0;
 }
 
-.blog-time {
-    display: block;
+.blog-meta {
     color: hsl(0,0%,70%);
+}
+
+.blog-time {
+    margin-right: .8em;
 }
 
 .blog-time--title {

@@ -20,7 +20,10 @@ blog: true
 
             <article class="content">
                 <h1>{{ page.title }}</h1>
-                <time class="blog-time">{{ page.date | date: "%B %d %Y" }}</time>
+                <div class="blog-meta">
+                    <time class="blog-time">{{ page.date | date: "%B %d %Y" }}</time>
+                    Posted by <a class="blog-author" href="{{ page.author_url }}" target="_blank">{{ page.author }}</a>
+                </div>
                 {{content}}
             </article>
 
