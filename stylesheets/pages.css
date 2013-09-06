@@ -41,7 +41,7 @@
     box-sizing: border-box;
 }
 
-.subnav details {
+.subnav details[open] {
     padding: 0 0 20px 0;
 }
 
