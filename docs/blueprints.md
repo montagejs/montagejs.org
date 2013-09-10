@@ -16,7 +16,7 @@ Blueprints are grouped in binders. For components and controllers Montage create
 
 ## Component or Controller Blueprints
 
-The most common way to access a blueprint for a component or controller is by accessing the ```blueprint``` property of the component or controller directly. This returns a promise for the deserialized blueprint.
+The most common way to access a blueprint for a component or controller is by accessing the `blueprint` property of the component or controller directly. This returns a promise for the deserialized blueprint.
 
 The blueprint for an object provides a list of property blueprints that describe each of the object's properties. Property blueprints can be logically grouped by functionality for convenience.
 The blueprint also provides validation rules to govern optional and required bindings. These validation rules verify that the component or controller is bound correctly.
