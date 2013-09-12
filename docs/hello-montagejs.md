@@ -171,7 +171,9 @@ Your next task in your goal to create a more personalized greeting is to instruc
 
 2. Add a Montage-provided Text component to name-tag.html. In the head section, in the object graph, following the `owner` property, add the following serialization entry for the name object (remember to separate the objects in the object graph with a comma):
 
+    <div class="highlight">
     <pre>
+    <code class="text language-text" data-lang="text">
     "owner": {
         "properties": {
             "element": {"#": "nameTag"}
@@ -186,7 +188,9 @@ Your next task in your goal to create a more personalized greeting is to instruc
             "value": {"<-": "@owner.name"}
         }
     }</strong>
+    </code>
     </pre>
+    </div>
 
 3. In the HTML body, inside the span, replace the "Name" text with the following span:
    
