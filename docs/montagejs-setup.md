@@ -67,7 +67,8 @@ Before you start to learn how to program with MontageJS, you will need to set up
     $ cd hello
     $ minit serve &
     ```
-
+    > **Note**: Using the ampersand (&) option ensures that you don't have to open a second Terminal window when stepping through the remainder of this tutorial.
+    
 5. Point your browser to http://localhost:8083/.
 
     You should see the contents of the Welcome component—a simple single-page application, which is explicitly loaded to accompany part 2 of our quick start tutorial, [Hello MontageJS](http://montagejs.org/docs/hello-montagejs.html).

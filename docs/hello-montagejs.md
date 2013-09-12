@@ -11,7 +11,7 @@ next-page: montagejs-examples
 
 # Hello MontageJS
 
-This tutorial will show you how to assemble a simple MontageJS application. The goal is to quickly familiarize you with the basic building blocks of the MontageJS framework. To make the most of this tutorial, you should have a basic understanding of HTML, CSS, and JavaScript and some familiarity with working in a command-line environment. You should also have have completed part 1 of this tutorial series, set up your development enironment.
+This tutorial will show you how to assemble a simple MontageJS application. The goal is to quickly familiarize you with the basic building blocks of the MontageJS framework. To make the most of this tutorial, you should have a basic understanding of HTML, CSS, and JavaScript and some familiarity with working in a command-line environment. You should also have have completed part 1 of this tutorial series, [Set Up Your Development Enironment](/docs/hello-montagejs.html).
 
 
 ## Say Hello to MontageJS
@@ -52,16 +52,24 @@ Let's dress up the Welcome component by adding a user interface component. First
 
     In the head section, inside the `montage-serialization` script block, you'll find a serialized object graph, which describes all the objects used in the document. (For more details on serialization in MontageJS refer to [MontageJS Serialization Format](http://montagejs.org/docs/montage-serialization-format.html) document.)
 
-5. Insert the following `helloWorld` label following the `owner` label (**don't forget the trailing comma, which is required to separate the objects in the object graph**):
+5. Insert the following `helloWorld` label following the `owner` label ( **don't forget the trailing comma, which is required to separate the objects in the object graph** ):
 
-    ```
-    "helloWorld": {
+    <pre>
+    ...
+    "owner": {
+        "properties": {
+            "element": {"#": "welcome"}
+        }
+    },
+    <strong>"helloWorld": {
         "prototype": "ui/hello-world.reel",
         "properties": {
             "element": {"#": "helloWorld"}
         }
-    },
-    ```
+    },</strong>
+    "montageVersion" : {
+    ...
+    </pre>
 
     This declares an instance of the HelloWorld component with an object label of `helloWorld` as a child of the Welcome component: The component's module ID ("/ui/hello-world.reel") allows MontageJS to recreate the component from its serialized form at runtime. The component's `element` property, which corresponds to the associated HTML element on which the component operates, is set to the HTML body div with the `data-montage-id` attribute of `hello-world`.
 
@@ -101,7 +109,7 @@ Follow these steps:
     ```
 3. Save and close name-tag.html.
 
-4. To have the content in this template appear in a different color, open the name-tag.css file and add the following rule:  
+4. To have the content in this template appear in a different color, open the name-tag.css file and add the following rule:
 
     ```
     .NameTag {
@@ -116,21 +124,26 @@ Follow these steps:
 
     In the head section, in the montage-serialization script block, following the "owner" property, add the serialization entry for the NameTag component ( **don't forget to add a comma following the “owner” entry to separate the objects** ):
 
-    ```
+    <pre>
+    "owner": {
+        "properties": {
+            "element": {"#": "helloWorld"}
+        }
+    }<strong>,
     "nameTag": {
         "prototype": "ui/name-tag.reel",
         "properties": {
             "element": {"#": "nameTag"}
         }
-    }
-    ```
+    }</strong>
+    </pre>
 
 6. In the HTML body, inside the div, replace "World" with the following span:
 
-    ```
-    <div data-montage-id="helloWorld" class="HelloWorld">Hello <span data-montage-id="nameTag"></span>
+    <pre>
+    <div data-montage-id="helloWorld" class="HelloWorld">Hello <strong><span data-montage-id="nameTag"></span></strong>
     </div>
-    ```
+    </pre>
 7. Refresh the browser and enjoy the fancy red Name tag: The contents of the NameTag component are rendered using the `name-tag` element from its included HTML template and styled using its included CSS.
 
 ![GS_Figure3](/images/docs/gs_tut_fig_03.png)
@@ -143,22 +156,27 @@ Your next task in your goal to create a more personalized greeting is to instruc
  
 1. Add a `name` property to the NameTag component's implementation at ui/name-tag.reel/name-tag.js: 
 
-    ```
+    <pre>
     exports.NameTag = Component.specialize(/** @lends NameTag# */ {
         constructor: {
             value: function NameTag() {
                 this.super();
             }
         },
-        name: {
+        <strong>name: {
             value: "Alice"
-        }
+        }</strong>
     });
-    ```
+    </pre>
 
 2. Add a Montage-provided Text component to name-tag.html. In the head section, in the object graph, following the `owner` property, add the following serialization entry for the name object (remember to separate the objects in the object graph with a comma):
 
-    ```
+    <pre>
+    "owner": {
+        "properties": {
+            "element": {"#": "nameTag"}
+        }
+    }<strong>,
     "name": {
         "prototype": "montage/ui/text.reel",
         "properties": {
@@ -167,8 +185,8 @@ Your next task in your goal to create a more personalized greeting is to instruc
         "bindings": {
             "value": {"<-": "@owner.name"}
         }
-    }
-    ```
+    }</strong>
+    </pre>
 
 3. In the HTML body, inside the span, replace the "Name" text with the following span:
    
