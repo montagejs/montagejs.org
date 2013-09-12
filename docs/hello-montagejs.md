@@ -41,7 +41,7 @@ Let's dress up the Welcome component by adding a user interface component. First
 
 2. Go to the hello/ui/hello-world.reel directory, open the hello-world.html template in your preferred text editor, and put "Hello World" inside the HTML body div:
 
-    ```
+    ```html
     <div data-montage-id="helloWorld" class="HelloWorld">Hello World</div>
     ```
 3. Save the hello-world.html template.
@@ -54,7 +54,9 @@ Let's dress up the Welcome component by adding a user interface component. First
 
 5. Insert the following `helloWorld` label following the `owner` label ( **don't forget the trailing comma, which is required to separate the objects in the object graph** ):
 
+    <div class="highlight">
     <pre>
+     <code class="text language-text" data-lang="text">
     ...
     "owner": {
         "properties": {
@@ -69,7 +71,9 @@ Let's dress up the Welcome component by adding a user interface component. First
     },</strong>
     "montageVersion" : {
     ...
+    </code>
     </pre>
+    </div>
 
     This declares an instance of the HelloWorld component with an object label of `helloWorld` as a child of the Welcome component: The component's module ID ("/ui/hello-world.reel") allows MontageJS to recreate the component from its serialized form at runtime. The component's `element` property, which corresponds to the associated HTML element on which the component operates, is set to the HTML body div with the `data-montage-id` attribute of `hello-world`.
 
@@ -104,14 +108,14 @@ Follow these steps:
 
 2. Go to the hello/ui/name-tag.reel directory, open the name-tag.html file, and replace the default HTML body div with the following span:
 
-    ```
+    ```html
     <span data-montage-id="nameTag" class="NameTag">Name</span> 
     ```
 3. Save and close name-tag.html.
 
 4. To have the content in this template appear in a different color, open the name-tag.css file and add the following rule:
 
-    ```
+    ```css
     .NameTag {
         color: red;
     }
@@ -124,7 +128,9 @@ Follow these steps:
 
     In the head section, in the montage-serialization script block, following the "owner" property, add the serialization entry for the NameTag component ( **don't forget to add a comma following the “owner” entry to separate the objects** ):
 
+    <div class="highlight">
     <pre>
+    <code class="text language-text" data-lang="text">
     "owner": {
         "properties": {
             "element": {"#": "helloWorld"}
@@ -136,11 +142,13 @@ Follow these steps:
             "element": {"#": "nameTag"}
         }
     }</strong>
+    </code>
     </pre>
+    </div>
 
 6. In the HTML body, inside the div, replace "World" with the following span:
 
-    ```
+    ```html
     <div data-montage-id="helloWorld" class="HelloWorld">Hello <span data-montage-id="nameTag"></span>
     </div>
     ```
@@ -156,7 +164,9 @@ Your next task in your goal to create a more personalized greeting is to instruc
  
 1. Add a `name` property to the NameTag component's implementation at ui/name-tag.reel/name-tag.js: 
 
+    <div class="highlight">
     <pre>
+    <code class="text language-text" data-lang="text">
     exports.NameTag = Component.specialize(/** @lends NameTag# */ {
         constructor: {
             value: function NameTag() {
@@ -167,7 +177,9 @@ Your next task in your goal to create a more personalized greeting is to instruc
             value: "Alice"
         }</strong>
     });
+    </code>
     </pre>
+    </div>
 
 2. Add a Montage-provided Text component to name-tag.html. In the head section, in the object graph, following the `owner` property, add the following serialization entry for the name object (remember to separate the objects in the object graph with a comma):
 
@@ -194,7 +206,7 @@ Your next task in your goal to create a more personalized greeting is to instruc
 
 3. In the HTML body, inside the span, replace the "Name" text with the following span:
    
-    ```
+    ```html
     <span data-montage-id="name"></span>
     ```
     
@@ -231,7 +243,7 @@ For the purpose of this example, you want NameTag to be a read-only component, s
     ```
     **HTML body**
 
-    ```
+    ```html
     <div data-montage-id="helloWorld" class="HelloWorld">
         Hello <span data-montage-id="nameTag"></span>
         <div><input type="text" data-montage-id="nameField"></div>
@@ -276,7 +288,7 @@ Components can emit events in the same sense that DOM elements emit events. A Mo
 
     **HTML body**
 
-    ```
+    ```html
     <div data-montage-id="helloWorld" class="HelloWorld">Hello
      <span data-montage-id="nameTag"></span>
      <div><input type="text" data-montage-id="nameField"></div>
@@ -294,7 +306,7 @@ Components can emit events in the same sense that DOM elements emit events. A Mo
 
 3. To make the button do something, add some code to the listener object you specified (here: HelloWorld), inside ui/hello-world.reel/hello-world.js:
 
-    ```
+    ```js
     exports.HelloWorld = Component.specialize(/** @lends HelloWorld# */ {
     
         handleGreetButtonAction: {
