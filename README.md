@@ -1,4 +1,3 @@
-
 This is the repo for the [montagejs.org](http://montagejs.org) website.
 
 ## Contributing
@@ -7,6 +6,8 @@ If you find any bugs or want to contribute, feel free to create an issue or send
 
 ## Jekyll
 The site uses Jekyll for templates and includes. You can find more infos on [jekyllrb.com](http://jekyllrb.com/).
+
+You need **Ruby version > 2.0.0**.
 
 ### Install
 First you need Ruby and RubyGems, see [details](http://jekyllrb.com/docs/installation/). Once installed run:
