@@ -1,7 +1,7 @@
 ---
 
 layout: blog
-title: The week in Montage
+title: The week in Montage – 4th September '13
 author: Stuart Knightley
 author_url: http://github.com/Stuk/
 
