@@ -7,6 +7,6 @@ author_url: https://github.com/simurai/
 
 ---
 
-On 10th of July 2013 the MontageJS framework went open source. Happy Birthday MontageJS!
+On 10th of July 2012 the MontageJS framework went open source. Happy Birthday MontageJS!
 
 ![montage-anniversary](/images/blog/first-anniversary.jpg)
