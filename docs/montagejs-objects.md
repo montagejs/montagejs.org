@@ -92,7 +92,7 @@ var Type = Montage.specialize({
     }
 });
 
-var Subtype = Montage.specialize({
+var Subtype = Type.specialize({
     id: {
         get: function () {
             return "_" + this.super();
