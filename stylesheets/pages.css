@@ -130,10 +130,17 @@
 /* Content ----------------------------------------- */
 
 .content :target {
+    position: relative;
     display: block;
+    padding-top: 80px;
+}
+
+.content :target:before {
+    content: "";
+    position: absolute;
+    top: 0;
     margin-left: 50%;
-    margin-bottom: 30px;
-    padding-top: 60px;
+    height: 60px;
     border-left: 2px solid #eee;
 }
 
