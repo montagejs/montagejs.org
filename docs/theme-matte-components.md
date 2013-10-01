@@ -22,7 +22,7 @@ The following list summarizes the UI components that are currently part of the M
 Component | Description
 ------------ | -------------
 Anchor | Provides hyperlink functionality.
-Autocomplete | 
+Autocomplete | Provides suggestions while you type into a field.
 Button | Provides button functionality.
 ComponentGroup | 
 DynamicElement | 
@@ -34,18 +34,18 @@ InputRange | Provides slider functionality.
 InputText | Provides functionality for a single-line text field.
 List | 
 LoadingPanel | 
-Loading | 
+Loading | Display status of a determinate or indeterminate process
 Popup | 
 Progress | Provides progress bar functionality.
 RadioButton | Provides radio button functionality.
-RichTextEditor | 
-ScrollBars | 
+RichTextEditor | Provides functioanlity for text entry and styling.
+ScrollBars | Provides scrollbar functionality.
 Scroller | 
 Select | Provides drop-down list functionality in Montage.
 TextArea | Provides functionality for a multiline text field.
-TextInput | 
+TextInput | Provides functionality for a singleline text field.
 TextSlider | 
-ToggleButton | 
+ToggleButton | Provides "on/off" functionality.
 ToggleSwitch | 
 TokenField | 
 VideoPlayer | 
