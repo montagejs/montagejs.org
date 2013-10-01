@@ -111,7 +111,7 @@ h5, .container-overview .subsection-title
 	font-size: 120%;
 	font-weight: bold;
 	letter-spacing: -0.01em;
-	margin: 8px 0 3px -16px;
+	margin: 8px 0 3px 0;
 }
 
 h6
@@ -155,7 +155,7 @@ h6
 
 .description {
 	margin-bottom: 1em;
-	margin-left: -16px;
+	margin-left: 0;
 	margin-top: 1em;
 }
 
@@ -231,3 +231,27 @@ h6
     color: #454545;
 }
 
+#api dd {
+	margin-left: 24px;
+}
+table.details {
+	border-width: 0;
+}
+.details td,
+.details th {
+	vertical-align: top;
+	text-align: left;
+	border-width: 0;
+	background: none;
+}
+.details th {
+	border-left: 2px solid #DDD;
+	padding-left: 10px;
+}
+.details ul li {
+	margin-top: 0;
+	padding-top: 0;
+}
+.dummy {
+	padding-left: 0;
+}
