@@ -25,14 +25,14 @@ Anchor | Provides hyperlink functionality.
 Autocomplete | Provides suggestions while you type into a field.
 Button | Provides button functionality.
 ComponentGroup | 
-DynamicElement | 
+DynamicElement | Lets you append a string of markup to a page.
 Image | Provides functionality for displaying an image.
 InputCheckbox | Provides checkbox functionality.
 InputDate | Provides date functionality.
 InputNumber | Provides functionality for entering a number in a text field. This typically includes a spinner control attached to the text field.
 InputRange | Provides slider functionality.
 InputText | Provides functionality for a single-line text field.
-List | 
+List | Provides list functionality.
 LoadingPanel | Displays status of a determinate or indeterminate process.
 Loading | Shows loading in progress indicator.
 Popup | (Deprecated in favor of the new Overlay component.)
@@ -44,11 +44,11 @@ Scroller | Adds scollbars if there is too much content.
 Select | Provides drop-down list functionality in Montage.
 TextArea | Provides functionality for a multiline text field.
 TextInput | Provides functionality for a singleline text field.
-TextSlider | 
+TextSlider | Adds a numeric slider.
 ToggleButton | Provides "on/off" button functionality.
 ToggleSwitch | Provides "on/off" functionality.
 TokenField | Adds text input for multiple items (e.g., tag list or to field in emails).
-VideoPlayer | 
+VideoPlayer | Provides basic video controls.
 
 
 ## Installing the Matte Theme
