@@ -33,21 +33,21 @@ InputNumber | Provides functionality for entering a number in a text field. This
 InputRange | Provides slider functionality.
 InputText | Provides functionality for a single-line text field.
 List | 
-LoadingPanel | 
-Loading | Display status of a determinate or indeterminate process
-Popup | 
+LoadingPanel | Displays status of a determinate or indeterminate process.
+Loading | Shows loading in progress indicator.
+Popup | (Deprecated in favor of the new Overlay component.)
 Progress | Provides progress bar functionality.
 RadioButton | Provides radio button functionality.
 RichTextEditor | Provides functioanlity for text entry and styling.
 ScrollBars | Provides scrollbar functionality.
-Scroller | 
+Scroller | Adds scollbars if there is too much content.
 Select | Provides drop-down list functionality in Montage.
 TextArea | Provides functionality for a multiline text field.
 TextInput | Provides functionality for a singleline text field.
 TextSlider | 
-ToggleButton | Provides "on/off" functionality.
-ToggleSwitch | 
-TokenField | 
+ToggleButton | Provides "on/off" button functionality.
+ToggleSwitch | Provides "on/off" functionality.
+TokenField | Adds text input for multiple items (e.g., tag list or to field in emails).
 VideoPlayer | 
 
 
