@@ -70,7 +70,7 @@ You can file bugs in the MontageJS project on [GitHub](https://github.com/montag
 ## <a name="licensing"></a>Licensing
 
 ### How is MontageJS licensed?
-MontageJS is open source and released under the [BDS](https://github.com/montagejs/montage/blob/master/LICENSE.md) license.
+MontageJS is open source and released under the [BSD](https://github.com/montagejs/montage/blob/master/LICENSE.md) license.
 
 ### Can I use MontageJS for commercial projects? Do I need to release my MontageJS applications as open source?
 Yes you can, and no you don't need to. That's the beauty of BSD-licensed software, you can use it to produce binary applications or services, without releasing the source code. You can modify the BSD-licensed code and use it as you like (redistribute the code in binary or source code format) without having to publish your modifications to anyone.
