@@ -155,7 +155,6 @@ h6
 
 .description {
 	margin-bottom: 1em;
-	margin-left: 0;
 	margin-top: 1em;
 }
 
@@ -234,24 +233,25 @@ h6
 #api dd {
 	margin-left: 24px;
 }
-table.details {
+#api .details {
 	border-width: 0;
+	width: 100%;
 }
-.details td,
-.details th {
-	vertical-align: top;
+#api .details-header,
+#api .details-content {
 	text-align: left;
+	vertical-align: top;
 	border-width: 0;
-	background: none;
 }
-.details th {
+#api .details-header {
 	border-left: 2px solid #DDD;
-	padding-left: 10px;
+	padding-right: 0;
+	white-space: nowrap;
 }
-.details ul li {
+#api .dummy {
+	padding-left: 0;
+}
+#api .dummy li {
 	margin-top: 0;
 	padding-top: 0;
-}
-.dummy {
-	padding-left: 0;
 }
