@@ -56,7 +56,7 @@ var Constructor = ParentConstructor.specialize({
     },
     property: {
         get: function () {
-            return value;
+            return this._property;
         },
         set: function (value) {
             this._property = value;
