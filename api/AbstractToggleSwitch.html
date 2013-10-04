@@ -1,7 +1,7 @@
 ---
 
 layout: api
-title: "AbstractToggleButton - MontageJS API"
+title: "AbstractToggleSwitch - MontageJS API"
 
 ---
 
@@ -17,7 +17,7 @@ title: "AbstractToggleButton - MontageJS API"
 
 <header>
     <h2>
-    AbstractToggleButton
+    AbstractToggleSwitch
     </h2>
     
 </header>
@@ -35,7 +35,7 @@ title: "AbstractToggleButton - MontageJS API"
     
         
 <dt>
-    <h4 class="name" id="AbstractToggleButton"></h4>
+    <h4 class="name" id="AbstractToggleSwitch"></h4>
 
     
 </dt>
@@ -74,7 +74,7 @@ title: "AbstractToggleButton - MontageJS API"
 	<tr>
 	    <th class="details-header tag-source">Source:</th>
 	    <td class="details-content tag-source"><ul class="dummy"><li>
-	        node_modules/montage/ui/base/abstract-toggle-button.js, line 11
+	        node_modules/montage/ui/base/abstract-toggle-switch.js, line 14
 	    </li></ul></td>
 	</tr>
     
@@ -92,12 +92,7 @@ title: "AbstractToggleButton - MontageJS API"
     <ul>
         
 <li>
-    event:action
-</li>
-    
-        
-<li>
-    event:longAction
+    AbstractToggleSwitch#event:action
 </li>
     </ul>
     
@@ -125,64 +120,6 @@ title: "AbstractToggleButton - MontageJS API"
 
         <dl>
             
-<dt>
-    <h4 class="name" id="active"><span class="type-signature"></span>active<span class="type-signature"> :boolean</span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>This property is true when the button is being interacted with, either through mouse click or touch event, otherwise false.</p>
-    </div>
-    
-
-    
-
-
-
-<table class="details">
-    
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-	<tr>
-	    <th class="details-header tag-default">Default Value:</th>
-	    <td class="details-content tag-default"><ul class="dummy"><li>false</li></ul></td>
-	</tr>
-	
-    
-    
-	<tr>
-	    <th class="details-header tag-source">Source:</th>
-	    <td class="details-content tag-source"><ul class="dummy"><li>
-	        node_modules/montage/ui/base/abstract-toggle-button.js, line 164
-	    </li></ul></td>
-	</tr>
-    
-    
-    
-    
-    
-    
-    
-</table>
-
-
-    
-</dd>
-
 
         
             
@@ -257,359 +194,6 @@ example to toggle the complete class: &quot;detail.get('selectedItem')&quot; : {
 </dd>
 
 
-        
-            
-<dt>
-    <h4 class="name" id="enabled"><span class="type-signature"></span>enabled<span class="type-signature"> :boolean</span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Enables or disables the Button from user input. When this property is set to <code>false</code>,
-the &quot;montage--disabled&quot; CSS style is applied to the button's DOM element during the next draw cycle. When set to
-<code>true</code> the &quot;montage--disabled&quot; CSS class is removed from the element's class list.</p>
-    </div>
-    
-
-    
-
-
-
-<table class="details">
-    
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-	<tr>
-	    <th class="details-header tag-source">Source:</th>
-	    <td class="details-content tag-source"><ul class="dummy"><li>
-	        node_modules/montage/ui/base/abstract-toggle-button.js, line 79
-	    </li></ul></td>
-	</tr>
-    
-    
-    
-    
-    
-    
-    
-</table>
-
-
-    
-</dd>
-
-
-        
-            
-<dt>
-    <h4 class="name" id="handlePress"><span class="type-signature"></span>handlePress<span class="type-signature"></span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Called when the user has interacted with the button.</p>
-    </div>
-    
-
-    
-
-
-
-<table class="details">
-    
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-	<tr>
-	    <th class="details-header tag-source">Source:</th>
-	    <td class="details-content tag-source"><ul class="dummy"><li>
-	        node_modules/montage/ui/base/abstract-toggle-button.js, line 236
-	    </li></ul></td>
-	</tr>
-    
-    
-    
-    
-    
-    
-    
-</table>
-
-
-    
-</dd>
-
-
-        
-            
-<dt>
-    <h4 class="name" id="handlePressStart"><span class="type-signature"></span>handlePressStart<span class="type-signature"></span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Called when the user starts interacting with the component.</p>
-    </div>
-    
-
-    
-
-
-
-<table class="details">
-    
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-	<tr>
-	    <th class="details-header tag-source">Source:</th>
-	    <td class="details-content tag-source"><ul class="dummy"><li>
-	        node_modules/montage/ui/base/abstract-toggle-button.js, line 221
-	    </li></ul></td>
-	</tr>
-    
-    
-    
-    
-    
-    
-    
-</table>
-
-
-    
-</dd>
-
-
-        
-            
-<dt>
-    <h4 class="name" id="holdThreshold"><span class="type-signature"></span>holdThreshold<span class="type-signature"> :number</span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>The amount of time in milliseconds the user must press and hold the button a <code>longAction</code> event is dispatched. The default is 1 second.</p>
-    </div>
-    
-
-    
-
-
-
-<table class="details">
-    
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-	<tr>
-	    <th class="details-header tag-default">Default Value:</th>
-	    <td class="details-content tag-default"><ul class="dummy"><li>1000</li></ul></td>
-	</tr>
-	
-    
-    
-	<tr>
-	    <th class="details-header tag-source">Source:</th>
-	    <td class="details-content tag-source"><ul class="dummy"><li>
-	        node_modules/montage/ui/base/abstract-toggle-button.js, line 143
-	    </li></ul></td>
-	</tr>
-    
-    
-    
-    
-    
-    
-    
-</table>
-
-
-    
-</dd>
-
-
-        
-            
-<dt>
-    <h4 class="name" id="pressedLabel"><span class="type-signature"></span>pressedLabel<span class="type-signature"> :string</span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>The displayed text on the button when it is pressed.</p>
-    </div>
-    
-
-    
-
-
-
-<table class="details">
-    
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-	<tr>
-	    <th class="details-header tag-default">Default Value:</th>
-	    <td class="details-content tag-default"><ul class="dummy"><li>undefined</li></ul></td>
-	</tr>
-	
-    
-    
-	<tr>
-	    <th class="details-header tag-source">Source:</th>
-	    <td class="details-content tag-source"><ul class="dummy"><li>
-	        node_modules/montage/ui/base/abstract-toggle-button.js, line 108
-	    </li></ul></td>
-	</tr>
-    
-    
-    
-    
-    
-    
-    
-</table>
-
-
-    
-</dd>
-
-
-        
-            
-<dt>
-    <h4 class="name" id="unpressedLabel"><span class="type-signature"></span>unpressedLabel<span class="type-signature"> :string</span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>The displayed text on the button when it is unpressed.</p>
-    </div>
-    
-
-    
-
-
-
-<table class="details">
-    
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-	<tr>
-	    <th class="details-header tag-default">Default Value:</th>
-	    <td class="details-content tag-default"><ul class="dummy"><li>undefined</li></ul></td>
-	</tr>
-	
-    
-    
-	<tr>
-	    <th class="details-header tag-source">Source:</th>
-	    <td class="details-content tag-source"><ul class="dummy"><li>
-	        node_modules/montage/ui/base/abstract-toggle-button.js, line 128
-	    </li></ul></td>
-	</tr>
-    
-    
-    
-    
-    
-    
-    
-</table>
-
-
-    
-</dd>
-
-
         </dl>
     
 
@@ -631,65 +215,66 @@ the &quot;montage--disabled&quot; CSS style is applied to the button's DOM eleme
 
     
     <div class="description markdown-body">
-        <p>Dispatched when the toggle button is activated through a mouse click,
-finger tap, or when focused and the spacebar is pressed.</p>
+        <p>Dispatched when the switch is toggled through a mouse click, finger tap,
+or when focused and the spacebar is pressed.</p>
     </div>
     
 
     
 
     
-        <h5>Parameters:</h5>
-        
 
-<table class="params">
+    
+
+
+    <h5 class="subsection-title">Properties:</h5>
+    <dl>
+
+<table class="props">
     <thead>
 	<tr>
 		
 		<th>Name</th>
 		
-		
+
 		<th>Type</th>
+
 		
+
 		
-		
-		
-		
+
 		<th class="last">Description</th>
 	</tr>
 	</thead>
-	
+
 	<tbody>
 	
-	
+
         <tr>
             
-                <td class="name"><code>event</code></td>
+                <td class="name"><code>detail</code></td>
             
-            
+
             <td class="type">
             
                 
-<span class="param-type">Event</span>
+<span class="param-type">Dict</span>
 
 
             
             </td>
+
             
+
             
-            
-            
-            
-            <td class="description last"></td>
+
+            <td class="description last"><p>The detail object as defined in <a href="AbstractControl.html#detail">AbstractControl#detail</a></p></td>
         </tr>
-	
+
 	
 	</tbody>
 </table>
-    
-
-    
-
+</dl>
 
 
 <table class="details">
@@ -713,116 +298,7 @@ finger tap, or when focused and the spacebar is pressed.</p>
 	<tr>
 	    <th class="details-header tag-source">Source:</th>
 	    <td class="details-content tag-source"><ul class="dummy"><li>
-	        node_modules/montage/ui/base/abstract-toggle-button.js, line 19
-	    </li></ul></td>
-	</tr>
-    
-    
-    
-    
-    
-    
-    
-</table>
-
-
-    
-</dd>
-
-        
-            
-<dt>
-    <h4 class="name" id="event:longAction">longAction</h4>
-
-    
-</dt>
-<dd>
-
-    
-    <div class="description markdown-body">
-        <p>Dispatched when the toggle button is pressed for a period of time, set by
-holdThreshold.</p>
-    </div>
-    
-
-    
-
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-		
-		<th>Type</th>
-		
-		
-		
-		
-		
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	
-	<tbody>
-	
-	
-        <tr>
-            
-                <td class="name"><code>event</code></td>
-            
-            
-            <td class="type">
-            
-                
-<span class="param-type">Event</span>
-
-
-            
-            </td>
-            
-            
-            
-            
-            
-            <td class="description last"></td>
-        </tr>
-	
-	
-	</tbody>
-</table>
-    
-
-    
-
-
-
-<table class="details">
-    
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-	<tr>
-	    <th class="details-header tag-source">Source:</th>
-	    <td class="details-content tag-source"><ul class="dummy"><li>
-	        node_modules/montage/ui/base/abstract-toggle-button.js, line 21
+	        node_modules/montage/ui/base/abstract-toggle-switch.js, line 21
 	    </li></ul></td>
 	</tr>
     
