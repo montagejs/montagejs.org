@@ -57,7 +57,7 @@ Before you start to learn how to program with MontageJS, you will need to set up
     $ minit create:app -n hello
     ```
 
-    > **Note**: If you get an EACCES warning when trying to run `minit:create`, use `sudo chown -R <username> ~/.npm` and then use `$ minit create:app -n hello`. This is a workaround due to a bug in npm.
+    > **Note**: If you get an EACCES warning when trying to run `minit:create`, use `sudo chown -R $USER ~/.npm` and then use `$ minit create:app -n hello`. This is a workaround due to a bug in npm.
 
     This generates the hello directory—which contains the default MontageJS application template, including the production dependencies—in your current directory.
 
