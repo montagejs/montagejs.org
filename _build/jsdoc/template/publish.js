@@ -27,6 +27,12 @@ function getAncestorLinks(doclet) {
     return helper.getAncestorLinks(data, doclet);
 }
 
+function sourceLink(path, line) {
+    //TODO: `replace` should not be necessary
+    var filepath = path.replace(/^node_modules\/montage\//, '');
+    return '<a href="https://github.com/montagejs/montage/blob/master/' + filepath + '#L' + line + '">' + filepath + '</a>';
+}
+
 function hashToLink(doclet, hash) {
     if ( !/^(#.+)/.test(hash) ) { return hash; }
 
@@ -421,6 +427,7 @@ exports.publish = function(taffyData, opts, tutorials) {
     view.linkto = linkto;
     view.resolveAuthorLinks = resolveAuthorLinks;
     view.tutoriallink = tutoriallink;
+    view.sourceLink = sourceLink;
     view.htmlsafe = htmlsafe;
 
     // once for all
