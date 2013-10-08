@@ -37,11 +37,10 @@ Before you start to learn how to program with MontageJS, you will need to set up
     Open a Terminal window and type: 
 
     ```
-    $ mkdir -p ~/.npm
     $ sudo npm install -gq minit@latest
     ```
 
-    > **Note**: `minit` does not need sudo access; this is a workaround due to a current [issue](https://github.com/isaacs/npm/pull/3506) with the OS X node installer package.
+    > **Note**: `minit` does not need sudo access; npm does require it though for global install.
 
     **Windows**
     
@@ -56,8 +55,6 @@ Before you start to learn how to program with MontageJS, you will need to set up
     ```
     $ minit create:app -n hello
     ```
-
-    > **Note**: If you get an EACCES warning when trying to run `minit:create`, use `sudo chown -R $USER ~/.npm` and then use `$ minit create:app -n hello`. This is a workaround due to a bug in npm.
 
     This generates the hello directory—which contains the default MontageJS application template, including the production dependencies—in your current directory.
 
