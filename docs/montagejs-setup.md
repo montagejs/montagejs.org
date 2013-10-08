@@ -67,7 +67,7 @@ Before you start to learn how to program with MontageJS, you will need to set up
     $ cd hello
     $ minit serve &
     ```
-    > **Note**: Using the ampersand (&) option ensures that you don't have to open a second Terminal window when stepping through the remainder of this tutorial.
+    > **Note**: During development MontageJS applications rely on XHR to load their various components and modules, which is why you need a server to preview your project in progress; `minit serve &` sets up an on demand web server to serve your project. Note also that using the ampersand (&) option ensures that you don't have to open a second Terminal window when stepping through the remainder of this tutorial.
     
 5. Point your browser to http://localhost:8083/.
 
