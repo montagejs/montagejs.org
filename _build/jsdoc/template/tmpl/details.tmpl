@@ -86,7 +86,7 @@ var self = this;
 	<tr>
 	    <th class="details-header tag-source">Source:</th>
 	    <td class="details-content tag-source"><ul class="dummy"><li>
-	        <?js= self.linkto(meta.filename) ?>, line <?js= meta.lineno ?>
+	        <?js= self.sourceLink(meta.filename, meta.lineno) ?>, line <?js= meta.lineno ?>
 	    </li></ul></td>
 	</tr>
     <?js } ?>
