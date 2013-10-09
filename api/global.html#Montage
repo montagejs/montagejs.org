@@ -69,7 +69,7 @@ title: "Montage - MontageJS API"
 	<tr>
 	    <th class="details-header tag-source">Source:</th>
 	    <td class="details-content tag-source"><ul class="dummy"><li>
-	        node_modules/montage/core/core.js, line 78
+	        <a href="https://github.com/montagejs/montage/blob/master/core/core.js#L78">core/core.js</a>, line 78
 	    </li></ul></td>
 	</tr>
     
@@ -240,7 +240,7 @@ title: "Montage - MontageJS API"
 	<tr>
 	    <th class="details-header tag-source">Source:</th>
 	    <td class="details-content tag-source"><ul class="dummy"><li>
-	        node_modules/montage/core/core.js, line 288
+	        <a href="https://github.com/montagejs/montage/blob/master/core/core.js#L288">core/core.js</a>, line 288
 	    </li></ul></td>
 	</tr>
     
@@ -406,7 +406,7 @@ title: "Montage - MontageJS API"
 	<tr>
 	    <th class="details-header tag-source">Source:</th>
 	    <td class="details-content tag-source"><ul class="dummy"><li>
-	        node_modules/montage/core/core.js, line 599
+	        <a href="https://github.com/montagejs/montage/blob/master/core/core.js#L599">core/core.js</a>, line 599
 	    </li></ul></td>
 	</tr>
     
@@ -568,7 +568,7 @@ title: "Montage - MontageJS API"
 	<tr>
 	    <th class="details-header tag-source">Source:</th>
 	    <td class="details-content tag-source"><ul class="dummy"><li>
-	        node_modules/montage/core/core.js, line 347
+	        <a href="https://github.com/montagejs/montage/blob/master/core/core.js#L347">core/core.js</a>, line 347
 	    </li></ul></td>
 	</tr>
     
@@ -694,7 +694,7 @@ title: "Montage - MontageJS API"
 	<tr>
 	    <th class="details-header tag-source">Source:</th>
 	    <td class="details-content tag-source"><ul class="dummy"><li>
-	        node_modules/montage/core/core.js, line 908
+	        <a href="https://github.com/montagejs/montage/blob/master/core/core.js#L908">core/core.js</a>, line 908
 	    </li></ul></td>
 	</tr>
     
@@ -835,7 +835,7 @@ title: "Montage - MontageJS API"
 	<tr>
 	    <th class="details-header tag-source">Source:</th>
 	    <td class="details-content tag-source"><ul class="dummy"><li>
-	        node_modules/montage/core/core.js, line 770
+	        <a href="https://github.com/montagejs/montage/blob/master/core/core.js#L770">core/core.js</a>, line 770
 	    </li></ul></td>
 	</tr>
     
@@ -1020,7 +1020,7 @@ title: "Montage - MontageJS API"
 	<tr>
 	    <th class="details-header tag-source">Source:</th>
 	    <td class="details-content tag-source"><ul class="dummy"><li>
-	        node_modules/montage/core/core.js, line 721
+	        <a href="https://github.com/montagejs/montage/blob/master/core/core.js#L721">core/core.js</a>, line 721
 	    </li></ul></td>
 	</tr>
     
@@ -1166,7 +1166,7 @@ title: "Montage - MontageJS API"
 	<tr>
 	    <th class="details-header tag-source">Source:</th>
 	    <td class="details-content tag-source"><ul class="dummy"><li>
-	        node_modules/montage/core/core.js, line 739
+	        <a href="https://github.com/montagejs/montage/blob/master/core/core.js#L739">core/core.js</a>, line 739
 	    </li></ul></td>
 	</tr>
     
@@ -1305,7 +1305,7 @@ title: "Montage - MontageJS API"
 	<tr>
 	    <th class="details-header tag-source">Source:</th>
 	    <td class="details-content tag-source"><ul class="dummy"><li>
-	        node_modules/montage/core/core.js, line 699
+	        <a href="https://github.com/montagejs/montage/blob/master/core/core.js#L699">core/core.js</a>, line 699
 	    </li></ul></td>
 	</tr>
     
