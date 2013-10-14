@@ -53,7 +53,7 @@ The Overlay component supports three types of positioning:
 - Absolute, using position coordinates with the `"position"` property:
 
     ```js
-    "position": {left: 100, top: 50}
+    "position": { "left": 100, "top": 50}
     ```
 
 - Anchored to an element or a component's element (which positions the overlay element right below the anchor and horizontally with it):
@@ -65,7 +65,7 @@ The Overlay supports three types of positioning:
 - Specific coordinates with the "position" property ([Example](https://gist.github.com/anonymous/6005026)):
 
     ```js
-    "position": {left: 100, top: 50}
+    "position": { "left": 100, "top": 50}
     ```
 
 
