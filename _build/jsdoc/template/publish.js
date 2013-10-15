@@ -33,6 +33,10 @@ function sourceLink(path, line) {
     return '<a href="https://github.com/montagejs/montage/blob/master/' + filepath + '#L' + line + '">' + filepath + '</a>';
 }
 
+function headCommitish(path) {
+    return '<a href="https://github.com/montagejs/montage/tree/' + env.opts.commitish + '">' + env.opts.commitish.slice(0, 7) + '</a>';
+}
+
 function hashToLink(doclet, hash) {
     if ( !/^(#.+)/.test(hash) ) { return hash; }
 
@@ -428,6 +432,7 @@ exports.publish = function(taffyData, opts, tutorials) {
     view.resolveAuthorLinks = resolveAuthorLinks;
     view.tutoriallink = tutoriallink;
     view.sourceLink = sourceLink;
+    view.headCommitish = headCommitish;
     view.htmlsafe = htmlsafe;
 
     // once for all

@@ -4,19 +4,18 @@
     },
     "source": {
         "include": [
-              "../node_modules/montage/composer/"
-          , "../node_modules/montage/core/"
-          , "../node_modules/montage/ui/"
-          , "../node_modules/montage/window-loader/"
-
+            "../node_modules/montage/composer/",
+            "../node_modules/montage/core/",
+            "../node_modules/montage/ui/",
+            "../node_modules/montage/window-loader/"
         ],
-        "exclude": [
-        ],
+        "exclude": [],
         "includePattern": ".+\\.js(doc)?$",
         "excludePattern": "(^|\\/)_"
-
     },
-    "plugins": [ "plugins/markdown" ],
+    "plugins": [
+        "plugins/markdown"
+    ],
     "markdown": {
         "parser": "marked"
     },
@@ -32,7 +31,8 @@
         "tutorials": "./template",
         "query": "value",
         "private": false,
-        "lenient": true
+        "lenient": true,
+        "commitish": "v0.13.6"
     },
     "jsVersion": 180
 }
