@@ -21,7 +21,7 @@ At some point, while working on the MontageJS framework, the question came up wh
 Now let's take a look at the reasons for choosing this syntax.
 
 ### Hyphens (-)
-The main reason why we're using a hyphen (-) instead of a underscores (_), has to do with the fact that their behavior is different when __double-clicking__ to select text. Try for yourself:
+The main reason why we're using a hyphen (`-`) instead of a underscores (`_`), has to do with the fact that their behavior is different when __double-clicking__ to select text. Try for yourself:
 
 ```css
 component__element /* underscores */
