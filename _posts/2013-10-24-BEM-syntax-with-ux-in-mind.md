@@ -8,7 +8,7 @@ published: false
 
 ---
 
-At some point, while working on the MontageJS framework, the question came up what kind of CSS naming convention we should start using. After a [long discussion](https://github.com/montagejs/montage/issues/795) we settled on using the [BEM mythology](http://bem.info/method/definitions/), but changed the syntax a bit. Now to keep this post short, I'm not gonna go into why using BEM is a good idea, but rather gonna explain why we choose a different syntax. But first let’s look at some examples:
+At some point, while working on the MontageJS framework, the question came up what CSS naming convention we should start using. After a [long discussion](https://github.com/montagejs/montage/issues/795) we settled on using the [BEM mythology](http://bem.info/method/definitions/), but changed the syntax a bit. To keep this post short, I'm won't go into detail why using BEM is a good idea, but rather explain why we chose a different syntax. But first let’s look at some examples:
 
 ```css
 .digit-Progress          /* package-Component */
@@ -18,7 +18,7 @@ At some point, while working on the MontageJS framework, the question came up wh
 
 > Note: The `package-` (digit-) prefix is used as a name-space so it wouldn't conflict with other packages/libraries/frameworks.
 
-Now let's take a look at the reasons for choosing a syntax like that.
+Now let's take a look at the reasons for choosing this syntax.
 
 ### Hyphens (-)
 Rule #1, and the main reason why we're using a hyphen (-) instead of a underscores (_), has to do with the fact that their behavior is different when __double clicking__ to select the text. Try it out here:
