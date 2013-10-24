@@ -230,6 +230,12 @@ h6
     color: #454545;
 }
 
+.generated-from {
+	margin-top: 2em;
+	font-size: 15px;
+	color: #999;
+}
+
 #api dd {
 	margin-left: 24px;
 }
