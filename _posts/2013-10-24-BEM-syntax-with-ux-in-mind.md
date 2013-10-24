@@ -4,7 +4,6 @@ layout: blog
 title: A BEM syntax with UX in mind
 author: simurai
 author_url: https://github.com/simurai
-published: false
 
 ---
 
