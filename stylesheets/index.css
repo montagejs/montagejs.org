@@ -146,6 +146,44 @@ ul.gallery {
     height: 200px;
 }
 
+.hero .button--cta {
+    display: inline-block;
+    margin: 20px 10px 0 10px;
+    padding: 0 20px;
+    line-height: 50px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 0px -1px 0px hsla(0,0%,0%,.4);
+    color: white;
+    border: 2px solid hsl(200, 100%, 10%);
+    background-color: hsl(200,100%,45%);
+    box-shadow: inset 0px 1px 0px hsla(0,0%,100%,.5),
+                inset 0px -1px 1px hsla(0,0%,0%,.2),
+                0px 1px 0px hsla(0,0%,100%,.1);
+    background-image: -webkit-linear-gradient(top, hsl(210,100%,60%), hsl(210,100%,40%) );
+    background-image:    -moz-linear-gradient(top, hsl(210,100%,60%), hsl(210,100%,40%) );
+    background-image:     -ms-linear-gradient(top, hsl(210,100%,60%), hsl(210,100%,40%) );
+    background-image:      -o-linear-gradient(top, hsl(210,100%,60%), hsl(210,100%,40%) );
+    background-image:         linear-gradient(top, hsl(210,100%,60%), hsl(210,100%,40%) );
+    -webkit-font-smoothing: antialiased;
+}
+
+.hero .button--cta:hover {
+    background-image: -webkit-linear-gradient(top, hsl(210,100%,65%), hsl(210,100%,45%) );
+    background-image:    -moz-linear-gradient(top, hsl(210,100%,65%), hsl(210,100%,45%) );
+    background-image:     -ms-linear-gradient(top, hsl(210,100%,65%), hsl(210,100%,45%) );
+    background-image:      -o-linear-gradient(top, hsl(210,100%,65%), hsl(210,100%,45%) );
+    background-image:         linear-gradient(top, hsl(210,100%,65%), hsl(210,100%,45%) );
+}
+.hero .button--cta:active {
+    background-image: -webkit-linear-gradient(top, hsl(210,100%,55%), hsl(210,100%,35%) );
+    background-image:    -moz-linear-gradient(top, hsl(210,100%,55%), hsl(210,100%,35%) );
+    background-image:     -ms-linear-gradient(top, hsl(210,100%,55%), hsl(210,100%,35%) );
+    background-image:      -o-linear-gradient(top, hsl(210,100%,55%), hsl(210,100%,35%) );
+    background-image:         linear-gradient(top, hsl(210,100%,55%), hsl(210,100%,35%) );
+}
+
 @media all and (max-width: 700px) {
     
     .hero .logo {
