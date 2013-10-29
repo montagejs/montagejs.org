@@ -14,7 +14,7 @@ next-page: theme-native-components
 
 Matte is a basic, neutral-looking theme for HTML5 controls and inputs. You can use it as a wireframe for prototypes or starting point for creating your own custom theme.
 
-![Matte](/images/themes/matte.png)
+![Matte](../images/themes/matte.png)
 
 ## Available Components
 The following list summarizes the UI components that are currently part of the Matte widget set:
