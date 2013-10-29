@@ -4,10 +4,8 @@
     },
     "source": {
         "include": [
-            "../node_modules/montage/composer/",
-            "../node_modules/montage/core/",
-            "../node_modules/montage/ui/",
-            "../node_modules/montage/window-loader/"
+            "../node_modules/digit/ui/",
+            "../node_modules/montage/externals.jsdoc"
         ],
         "exclude": [],
         "includePattern": ".+\\.js(doc)?$",
@@ -26,13 +24,13 @@
     "opts": {
         "template": "./template",
         "encoding": "utf8",
-        "destination": "../../api",
+        "destination": "../../api/digit",
         "recurse": true,
         "tutorials": "./template",
         "query": "value",
         "private": false,
         "lenient": true,
-        "commitish": "v0.13.6"
+        "commitish": "14fb57cacc9e1b52ef202685fbe6a97946c3a774"
     },
     "jsVersion": 180
 }
