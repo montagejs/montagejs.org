@@ -35,21 +35,21 @@ The following list summarizes the UI components that are currently part of the D
 
 Component | Description 
 ------------ | ------------- 
-Badge |  Provides badge metadata functionality.
-Button | Provides button functionality.
-Checkbox | Provides checkbox (multichoice) functionality.
-Image | Provides functionality for displaying an image.
-ListItem | Provides functionality for adding individual list items.
-List | Provides functionality for adding multi-item lists.
-NumberField | Provides functionality for entering a number in a text field. This typically includes a spinner control attached to the text field.
-RadioButton | Provides radio button (single option) functionality.
-Select | Provides drop-down list functionality.  
-Slider | Provides slider functionality. 
-TextArea | Provides functionality for an expandable multiline text field.
-TextField | Provides functionality for a single-line text field.
-Text | Provides functionality for adding styled text.
-Title | Provides functionality for adding a styled Title element. 
-ToggleSwitch | Provides toggle functionality.
+<a href="https://github.com/montagejs/digit/tree/master/ui/badge.reel" target="_blank">Badge</a> |  Provides badge metadata functionality.
+<a href="https://github.com/montagejs/digit/tree/master/ui/button.reel" target="_blank">Button</a> | Provides button functionality.
+<a href="https://github.com/montagejs/digit/tree/master/ui/checkbox.reel" target="_blank">Checkbox</a> | Provides checkbox (multichoice) functionality.
+<a href="https://github.com/montagejs/digit/tree/master/ui/image.reel" target="_blank">Image</a> | Provides functionality for displaying an image.
+<a href="https://github.com/montagejs/digit/tree/master/ui/list-item.reel" target="_blank">ListItem</a> | Provides functionality for adding individual list items.
+<a href="https://github.com/montagejs/digit/tree/master/ui/list.reel" target="_blank">List</a> | Provides functionality for adding multi-item lists.
+<a href="https://github.com/montagejs/digit/tree/master/ui/number-field.reel" target="_blank">NumberField</a> | Provides functionality for entering a number in a text field. This typically includes a spinner control attached to the text field.
+<a href="https://github.com/montagejs/digit/tree/master/ui/radio-button.reel" target="_blank">RadioButton</a> | Provides radio button (single option) functionality.
+<a href="https://github.com/montagejs/digit/tree/master/ui/select.reel" target="_blank">Select</a> | Provides drop-down list functionality.  
+<a href="https://github.com/montagejs/digit/tree/master/ui/slider.reel" target="_blank">Slider</a> | Provides slider functionality. 
+<a href="https://github.com/montagejs/digit/tree/master/ui/text-area.reel" target="_blank">TextArea</a> | Provides functionality for an expandable multiline text field.
+<a href="https://github.com/montagejs/digit/tree/master/ui/text-field.reel" target="_blank">TextField</a> | Provides functionality for a single-line text field.
+<a href="https://github.com/montagejs/digit/tree/master/ui/text.reel" target="_blank">Text</a> | Provides functionality for adding styled text.
+<a href="https://github.com/montagejs/digit/tree/master/ui/title.reel" target="_blank">Title</a> | Provides functionality for adding a styled Title element. 
+<a href="https://github.com/montagejs/digit/tree/master/ui/toggle-switch.reel" target="_blank">ToggleSwitch</a> | Provides toggle functionality.
 VideoControl | (planned)
 Video | (planned)
 
