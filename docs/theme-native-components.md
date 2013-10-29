@@ -30,18 +30,18 @@ The following list summarizes the UI components that are currently part of the N
 
 Component | Description
 ------------ | -------------
-Anchor | Provides hyperlink functionality. It acts as a wrapper around the `a` element.
-Button | Provides button functionality. It wraps either a `button` element or an `input` element with type of `button`.
-Image | Provides functionality for displaying an image. It wraps the `img` element.
-InputCheckbox | Provides checkbox functionality. It wraps an `input` element with type of `checkbox`.
-InputDate | Provides date functionality. It wraps a `input` element with type of `date`.
-InputNumber | Provides functionality for entering a number in a text field. This typically includes a spinner control attached to the text field. It wraps the `input` element with type of `number`.
-InputRadio | Provides radio button functionality. It wraps the `input` element with type of `radio`.
-InputRange | Provides slider functionality. It wraps the `input` element with type of `range`.
-InputText | Provides functionality for a single-line text field. It wraps the `input` element with a type of `text`.
-Progress | Provides progress bar functionality. It wraps the `progress` element.
-Select | Provides drop-down list functionality in Montage. It wraps the `input` element with type of `select`.
-TextArea | Provides functionality for a multiline text field. It wraps the `textarea` element.
+<a href="https://github.com/montagejs/native/tree/master/ui/anchor.reel" target="_blank">Anchor</a> | Provides hyperlink functionality. It acts as a wrapper around the `a` element.
+<a href="https://github.com/montagejs/native/tree/master/ui/button.reel" target="_blank">Button</a> | Provides button functionality. It wraps either a `button` element or an `input` element with type of `button`.
+<a href="https://github.com/montagejs/native/tree/master/ui/image.reel" target="_blank">Image</a> | Provides functionality for displaying an image. It wraps the `img` element.
+<a href="https://github.com/montagejs/native/tree/master/ui/input-checkbox.reel" target="_blank">InputCheckbox</a> | Provides checkbox functionality. It wraps an `input` element with type of `checkbox`.
+<a href="https://github.com/montagejs/native/tree/master/ui/input-date.reel" target="_blank">InputDate</a> | Provides date functionality. It wraps a `input` element with type of `date`.
+<a href="https://github.com/montagejs/native/tree/master/ui/input-number.reel" target="_blank">InputNumber</a> | Provides functionality for entering a number in a text field. This typically includes a spinner control attached to the text field. It wraps the `input` element with type of `number`.
+<a href="https://github.com/montagejs/native/tree/master/ui/input-radio.reel" target="_blank">InputRadio</a> | Provides radio button functionality. It wraps the `input` element with type of `radio`.
+<a href="https://github.com/montagejs/native/tree/master/ui/input-range.reel" target="_blank">InputRange</a> | Provides slider functionality. It wraps the `input` element with type of `range`.
+<a href="https://github.com/montagejs/native/tree/master/ui/input-text.reel" target="_blank">InputText</a> | Provides functionality for a single-line text field. It wraps the `input` element with a type of `text`.
+<a href="https://github.com/montagejs/native/tree/master/ui/progress.reel" target="_blank">Progress</a> | Provides progress bar functionality. It wraps the `progress` element.
+<a href="https://github.com/montagejs/native/tree/master/ui/select.reel" target="_blank">Select</a> | Provides drop-down list functionality in Montage. It wraps the `input` element with type of `select`.
+<a href="https://github.com/montagejs/native/tree/master/ui/textarea.reel" target="_blank">TextArea</a> | Provides functionality for a multiline text field. It wraps the `textarea` element.
 
 
 ## Installing the Native Theme
