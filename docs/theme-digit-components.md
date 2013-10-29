@@ -21,6 +21,7 @@ The following list provides an overview of the existing Digit components.
 [ ![Badge](https://raw.github.com/montagejs/digit/master/ui/badge.reel/screenshot.png) ](https://github.com/montagejs/digit/tree/master/ui/badge.reel)
 [ ![Checkbox](https://raw.github.com/montagejs/digit/master/ui/checkbox.reel/screenshot.png) ](https://github.com/montagejs/digit/tree/master/ui/checkbox.reel)
 [ ![RadioButton](https://raw.github.com/montagejs/digit/master/ui/radio-button.reel/screenshot.png) ](https://github.com/montagejs/digit/tree/master/ui/radio-button.reel)
+[ ![ToggleSwitch](https://raw.github.com/montagejs/digit/master/ui/toggle-switch.reel/screenshot.png) ](https://github.com/montagejs/digit/tree/master/ui/toggle-switch.reel)
 [ ![Select](https://raw.github.com/montagejs/digit/master/ui/select.reel/screenshot.png) ](https://github.com/montagejs/digit/tree/master/ui/select.reel)
 [ ![NumberField](https://raw.github.com/montagejs/digit/master/ui/number-field.reel/screenshot.png) ](https://github.com/montagejs/digit/tree/master/ui/number-field.reel)
 [ ![Slider](https://raw.github.com/montagejs/digit/master/ui/slider.reel/screenshot.png) ](https://github.com/montagejs/digit/tree/master/ui/slider.reel)
@@ -48,7 +49,7 @@ TextArea | Provides functionality for an expandable multiline text field.
 TextField | Provides functionality for a single-line text field.
 Text | Provides functionality for adding styled text.
 Title | Provides functionality for adding a styled Title element. 
-ToggleSwitch | (planned)
+ToggleSwitch | Provides toggle functionality.
 VideoControl | (planned)
 Video | (planned)
 
