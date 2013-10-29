@@ -14,7 +14,7 @@ next-page: repetition
 
 The Native set uses the browser's default styles. Use this set if you want to custom design your user interface components yet still gain access to Montage features such as data binding and the Montage event handling model.
 
-![Native](/images/themes/native.png)
+![Native](../images/themes/native.png)
 
 ## Benefits
 Using Montage native components has several advantages over using custom Montage components or pure HTML5 elements.
