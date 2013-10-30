@@ -43,7 +43,7 @@ Component | Description
 <a href="https://github.com/montagejs/digit/tree/master/ui/list.reel" target="_blank">List</a> | Provides functionality for adding multi-item lists.
 <a href="https://github.com/montagejs/digit/tree/master/ui/number-field.reel" target="_blank">NumberField</a> | Provides functionality for entering a number in a text field. This typically includes a spinner control attached to the text field.
 <a href="https://github.com/montagejs/digit/tree/master/ui/radio-button.reel" target="_blank">RadioButton</a> | Provides radio button (single option) functionality.
-<a href="https://github.com/montagejs/digit/tree/master/ui/select.reel" target="_blank">Select</a> | Provides drop-down list functionality.  
+<a href="https://github.com/montagejs/digit/tree/master/ui/select.reel" target="_blank">Select</a> | Provides drop-down list functionality.
 <a href="https://github.com/montagejs/digit/tree/master/ui/slider.reel" target="_blank">Slider</a> | Provides slider functionality. 
 <a href="https://github.com/montagejs/digit/tree/master/ui/text-area.reel" target="_blank">TextArea</a> | Provides functionality for an expandable multiline text field.
 <a href="https://github.com/montagejs/digit/tree/master/ui/text-field.reel" target="_blank">TextField</a> | Provides functionality for a single-line text field.
@@ -59,7 +59,7 @@ Digit is part of the default application template. The theme is still under deve
 1. Use your command line tool to switch to your project directory.
 
     ```
-    cd yourpojectfolder
+    cd yourprojectfolder
     ```
     
 2. At the prompt, enter:

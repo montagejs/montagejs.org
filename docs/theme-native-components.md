@@ -51,7 +51,7 @@ The Native set is not included in the default application template. To use the N
 1. Use your command line tool to switch to your project directory.
 
     ```
-    cd yourpojectfolder
+    cd yourprojectfolder
     ```
     
 2. At the prompt, enter:
@@ -122,7 +122,7 @@ The following example adds a range slider that is hooked up to an InputRange com
         "element": {"#": "volume"},
         "value": 0
     }
-}                
+}
 ```
 
 ## Native Component State
