@@ -45,8 +45,8 @@ Component | Description
 <a href="https://github.com/montagejs/matte/tree/master/ui/textarea.reel" target="_blank">TextArea</a> | Provides functionality for a multiline text field.
 <a href="https://github.com/montagejs/matte/tree/master/ui/text-input.js" target="_blank">TextInput</a> | Provides functionality for a singleline text field.
 <a href="https://github.com/montagejs/matte/tree/master/ui/text-slider.reel" target="_blank">TextSlider</a> | Adds a numeric slider.
-<a href="https://github.com/montagejs/matte/tree/master/ui/toggle-button.reel" target="_blank">ToggleButton</a> | Provides "on/off" button functionality.
-<a href="https://github.com/montagejs/matte/tree/master/ui/toggle-switch.reel" target="_blank">ToggleSwitch</a> | Provides "on/off" functionality.
+<a href="https://github.com/montagejs/matte/tree/master/ui/toggle-button.reel" target="_blank">ToggleButton</a> | Provides on/off button functionality.
+<a href="https://github.com/montagejs/matte/tree/master/ui/toggle-switch.reel" target="_blank">ToggleSwitch</a> | Provides on/off functionality.
 <a href="https://github.com/montagejs/matte/tree/master/ui/token-field" target="_blank">TokenField</a> | Adds text input for multiple items (e.g., tag list or to field in emails).
 <a href="https://github.com/montagejs/matte/tree/master/ui/video-player.reel" target="_blank">VideoPlayer</a> | Provides basic video controls.
 
@@ -58,7 +58,7 @@ Matte is not included in the default application template. To use Matte in your 
 1. Use your command line tool to switch to your project directory.
 
     ```
-    cd yourpojectfolder
+    cd yourprojectfolder
     ```
     
 2. At the prompt, enter:
