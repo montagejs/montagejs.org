@@ -45,7 +45,7 @@ module.exports = function (packageName, tag, outDir) {
         if (tag === "npm-link" && repo[packageName]) {
             var montagePath = path.join(mainPath, "..", "node_modules", packageName);
 
-            exec("git show -s --format=%B " + repo[packageName].sha, {cwd: montagePath}, function(error) {
+            exec("git show -s --format=%B " + repo[packageName].sha, {cwd: montagePath}, function(error, stdout) {
                 if (error) {
                     defer.reject(error);
                 } else {
