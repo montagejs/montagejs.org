@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/*global __dirname */
 "use strict";
 
 var Q = require("q");
@@ -50,7 +51,7 @@ module.exports = function (packageName, tag, outDir) {
                     defer.reject(error);
                 } else {
                     if (stdout.trim() === repo[packageName].message) {
-                        exec("git rev-parse HEAD", {cwd: montagePath}, function(error) {
+                        exec("git rev-parse HEAD", {cwd: montagePath}, function(error, stdout) {
                             if (error) {
                                 defer.reject(error);
                             } else {
@@ -86,7 +87,7 @@ module.exports = function (packageName, tag, outDir) {
 
         if (sha) {
             var montagePath = path.join(mainPath, "../node_modules/" + packageName);
-            exec("git tag --points-at " + sha, {cwd: montagePath}, function(error) {
+            exec("git tag --points-at " + sha, {cwd: montagePath}, function(error, stdout) {
                 if (error) {
                     defer.reject(error);
                 } else {
