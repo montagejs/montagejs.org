@@ -277,7 +277,8 @@ code[data-lang]:after {
 .prettyprint ::selection {      background: hsl(50,5%,50%); color: white; text-shadow: none; }
 
 .highlight pre,
-.prettyprint { 
+.prettyprint {
+    display: block;
     position: relative;
     margin: 1em 0;
     padding: 20px;
