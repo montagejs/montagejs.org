@@ -5,9 +5,17 @@ home: true
 ---
 
     <section class="hero pushed">
-        <h1><img class="logo" src="images/logo-montage.png" alt="Montage" /></h1>
-        <h2 class="tagline">An <strong>HTML5 framework</strong> for building modern <strong>Web Apps</strong>.</h2>
-        <a class="button--cta" href="docs/montagejs-setup.html">Get Started</a>
+        <div class="wrapper cols">
+            <div class="col col-1-2">
+                <h1><img class="logo" src="images/logo-montage.png" alt="Montage" /></h1>
+                <h2 class="tagline">An <strong>HTML5 framework</strong> for building<br>
+                modern <strong>Web Apps</strong>.</h2>
+                <a class="button--cta" href="docs/montagejs-setup.html">Get Started</a>
+            </div>
+            <aside class="col col-1-2">
+                <iframe class="video" width="480" height="270" src="//www.youtube.com/embed/JfT1ML200JI?rel=0&autohide=1" frameborder="0" allowfullscreen></iframe>
+                <p>Watch more <a href="http://www.youtube.com/user/learnmontagejs/videos" class="link">Videos</a>.</p>
+            </aside>
     </section>
 
     {% include social.html %}
