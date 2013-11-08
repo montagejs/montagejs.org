@@ -19,15 +19,30 @@ var config = {
 module.exports = function (packageName, tag, outDir) {
     return Q.ninvoke(npm, "load", config)
     .then(function (loadedNpm) {
+        var defer = Q.defer();
         if(tag === "npm-link") {
             console.log('npm link',  packageName);
-            return Q.ninvoke(loadedNpm.commands, "link", [packageName]);
+            exec("npm link " + packageName, {cwd: mainPath}, function(error) {
+                if (error) {
+                    defer.reject(error);
+                } else {
+                    defer.resolve();
+                }
+            });
         } else {
             console.log('npm install',  packageName +"@"+ tag);
-            return Q.ninvoke(loadedNpm.commands, "install", [packageName +"@"+ tag]);
+            exec("npm install " + packageName +"@"+ tag, {cwd: mainPath}, function(error) {
+                if (error) {
+                    defer.reject(error);
+                } else {
+                    defer.resolve();
+                }
+            });
         }
+        return defer.promise;
     })
     .then(function() {
+            console.log( "Even Rocky had a montage.");
         var defer = Q.defer();
         var repo = {
             montage: {
@@ -139,7 +154,7 @@ module.exports = function (packageName, tag, outDir) {
 
 if (!module.parent) {
     if (process.argv.length == 4) {
-        module.exports.apply(null, process.argv.slice(2));
+        module.exports.apply(null, process.argv.slice(2)).done();
     } else {
         console.log("Usage:\n  ./jsdoc.js montage npm-link [output path]");
         process.exit(1);

@@ -4,8 +4,7 @@
     },
     "source": {
         "include": [
-            "../node_modules/digit/ui/",
-            "../node_modules/montage/externals.jsdoc"
+            "../node_modules/digit/ui/"
         ],
         "exclude": [],
         "includePattern": ".+\\.js(doc)?$",
