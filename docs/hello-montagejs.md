@@ -77,12 +77,12 @@ Follow these steps to add a new component to your project:
 3. Following the owner object within the `<script>` tags, add the following snippet (don't forget the trailing comma; you need it to separate objects from each other):
 
     ```json
-        "tempConverter": {
-            "prototype": "ui/converter.reel",
-            "properties": {
-                "element": {"#": "tempConverter"}
-            }
-        },
+    "tempConverter": {
+        "prototype": "ui/converter.reel",
+        "properties": {
+            "element": {"#": "tempConverter"}
+        }
+    },
     ```
     
 4. Between the `<body>` tags, before `<div data-montage-id="montageVersion"></div>`, add the following:
@@ -287,23 +287,23 @@ At this point, the application works as planned, but doesn't look as designed (s
 1. In ui/converter.reel/converter.html, replace the content within the `<body>` tags with the following updated markup:
 
     ```html
-<body>
-    <div data-montage-id="converter" class="Converter">
-        <div class="Controls">
-            <fieldset class="Numbers">
-                <div class="Label">&deg;C
-                   <input data-montage-id="celsius">
-                </div>
-                <div class="Label">&deg;F
-                   <input data-montage-id="fahrenheit">
-                </div>
-            </fieldset>
-            <fieldset class="Slider">
-               <input data-montage-id="thermometer" class="Slider-handle" type="range" min="-13" max="122">
-            </fieldset>
+    <body>
+        <div data-montage-id="converter" class="Converter">
+            <div class="Controls">
+                <fieldset class="Numbers">
+                    <div class="Label">&deg;C
+                       <input data-montage-id="celsius">
+                    </div>
+                    <div class="Label">&deg;F
+                       <input data-montage-id="fahrenheit">
+                    </div>
+                </fieldset>
+                <fieldset class="Slider">
+                   <input data-montage-id="thermometer" class="Slider-handle" type="range" min="-13" max="122">
+                </fieldset>
+            </div>
         </div>
-    </div>
-</body>
+    </body>
     ```
 
     Things to note: 
@@ -410,11 +410,9 @@ Next you will add some CSS rules to control the appearance of the Main component
 1. Open ui/main.reel/main.html and replace the content within the `<body>` tags with the following updated markup:
 
     ```html
-        <div data-montage-id="main" data-montage-skin="light" class="Main">
-        
+    <div data-montage-id="main" data-montage-skin="light" class="Main">
         <h1 data-montage-id="title" class="Title"></h1>
         <div data-montage-id="tempConverter"></div>
-
         <footer data-montage-id="montageVersion"></footer>
     </div>
     ```
@@ -428,13 +426,13 @@ Next you will add some CSS rules to control the appearance of the Main component
 2. Following the tempConverter object within the `<script>` tags, add the following snippet (remember: don't forget the trailing comma; you need it to separate objects from each other):
 
     ```json
-            "title": {
-                "prototype": "digit/ui/title.reel",
-                "properties": {
-                    "element": {"#": "title"},
-                    "value": "Temperature Converter"
-                }
-            },
+    "title": {
+        "prototype": "digit/ui/title.reel",
+        "properties": {
+            "element": {"#": "title"},
+            "value": "Temperature Converter"
+        }
+    },
     ```
 
     Things to note:
@@ -444,29 +442,29 @@ Next you will add some CSS rules to control the appearance of the Main component
 3. Open ui/main.reel/main.css and replace the content the existing content with the following rules:
 
     ```css
-.Main {
-    height: 100%;
-    padding: 20px;
-    background-color: hsl(0,0%,90%);
-    text-align: center;
-    width: 100%;
-    max-width: 320px;
-    border-radius: 10px;
-}
-body {
-    margin: 20px 0px;
-    display: -webkit-box;
-    -webkit-box-align: center;
-    -webkit-box-pack: center;
-    display: -moz-box;
-    -moz-box-align: center;
-    -moz-box-pack: center;
-    background-color: hsl(0,0%,80%);
-}
-.Title {
-    font-size: 1.6em;
-    line-height: 1.2;
-}
+    .Main {
+        height: 100%;
+        padding: 20px;
+        background-color: hsl(0,0%,90%);
+        text-align: center;
+        width: 100%;
+        max-width: 320px;
+        border-radius: 10px;
+    }
+    body {
+        margin: 20px 0px;
+        display: -webkit-box;
+        -webkit-box-align: center;
+        -webkit-box-pack: center;
+        display: -moz-box;
+        -moz-box-align: center;
+        -moz-box-pack: center;
+        background-color: hsl(0,0%,80%);
+    }
+    .Title {
+        font-size: 1.6em;
+        line-height: 1.2;
+    }
     ```
     
 4. Save your changes and refresh your browser.
