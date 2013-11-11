@@ -321,76 +321,80 @@ At this point, the application works as planned, but doesn't look as designed (s
 
 3. Replace the sparse contents of the file with the following rules:
 
-    <pre>
-.Converter {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-}
-.Controls {
-    margin: 20px 0;
-    padding: 20px;
-    width: 100%;
-    max-width: 260px;
-    text-shadow: #fff 0 1px 0;
-    border-radius: 10px;
-    background-color: hsl(0,0%,98%);
-    box-shadow: inset 0px 1px 2px 1px hsla(0,0%,100%,1), 0px 2px 5px hsla(0,0%,0%,.1);
-}
-.Numbers {
-    float: left;
-    border: none;
-    margin: 0;
-    padding: 0;
-}
-.Label {
-    display: block;
-    margin: 15px 0;
-    text-align: center;
-    line-height: 40px;
-    color: hsl(0,0%,60%);
-    font-size: 1.2em;
-}
-.Label .digit-NumberField-input {
-    width: 70px;
-    vertical-align: middle;
-}
-.Slider {
-    float: right;
-    margin: 0;
-    padding: 8px 4px;
-    border-radius: 100px;
-    border: none;
-    box-shadow: inset 0px 1px 3px hsla(0,0%,0%,.3), 0 2px 0 hsla(0,0%,100%,1);
-    background: -webkit-linear-gradient(bottom, hsl(200,100%,50%),
-                         hsl(200,100%,80%) 30%,
-                         hsl(60,100%,65%) 50%,
-                         hsl(0,100%,80%) 70%,
-                         hsl(0,100%,50%) );
-    background: linear-gradient(to top, hsl(200,100%,50%),
-                         hsl(200,100%,80%) 30%,
-                         hsl(60,100%,65%) 50%,
-                         hsl(0,100%,80%) 70%,
-                         hsl(0,100%,50%) );
-}
-.Slider-handle.digit-Slider.montage-Slider--vertical {
-    height: 120px;
-}
-.Slider-handle.digit-Slider {
-    background-color: transparent;
-    border-color: transparent;
-    box-shadow: none;
-}
-    </pre>
+    ```css
+    .Converter {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    .Controls {
+        margin: 20px 0;
+        padding: 20px;
+        width: 100%;
+        max-width: 260px;
+        text-shadow: #fff 0 1px 0;
+        border-radius: 10px;
+        background-color: hsl(0,0%,98%);
+        box-shadow: inset 0px 1px 2px 1px hsla(0,0%,100%,1), 
+                    0px 2px 5px hsla(0,0%,0%,.1);
+    }
+    .Numbers {
+        float: left;
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+    .Label {
+        display: block;
+        margin: 15px 0;
+        text-align: center;
+        line-height: 40px;
+        color: hsl(0,0%,60%);
+        font-size: 1.2em;
+    }
+    .Label .digit-NumberField-input {
+        width: 70px;
+        vertical-align: middle;
+    }
+    .Slider {
+        float: right;
+        margin: 0;
+        padding: 8px 4px;
+        border-radius: 100px;
+        border: none;
+        box-shadow: inset 0px 1px 3px hsla(0,0%,0%,.3), 
+                    0 2px 0 hsla(0,0%,100%,1);
+        background: -webkit-linear-gradient(bottom, 
+                             hsl(200,100%,50%),
+                             hsl(200,100%,80%) 30%,
+                             hsl(60,100%,65%) 50%,
+                             hsl(0,100%,80%) 70%,
+                             hsl(0,100%,50%) );
+        background: linear-gradient(to top, 
+                             hsl(200,100%,50%),
+                             hsl(200,100%,80%) 30%,
+                             hsl(60,100%,65%) 50%,
+                             hsl(0,100%,80%) 70%,
+                             hsl(0,100%,50%) );
+    }
+    .Slider-handle.digit-Slider.montage-Slider--vertical {
+        height: 120px;
+    }
+    .Slider-handle.digit-Slider {
+        background-color: transparent;
+        border-color: transparent;
+        box-shadow: none;
+    }
+    ```
 
 4. Save your changes and refresh your browser.
 
