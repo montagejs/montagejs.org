@@ -31,28 +31,19 @@ title: 404 - MontageJS
     var oldApiDocMatcher = /\/apis\/([^.]*).html/
     var oldApiDocMatch = path.match(oldApiDocMatcher);
     
-    // Redirects List
-    var redirects = [
-        [ '/test.html', '/docs/montagejs-setup.html' ],
-        [ '/docs/test.html', '/docs/draw-cycle.html' ],
-        [ '/test', '/docs/frb.html' ]
-    ];
-    
-    // Redirect
     if (oldApiDocMatch) {
         window.location = "/api/" + oldApiDocMatch[1] + ".html";
-    } else {
-        var redirectTo;
-        for (var i = 0; i < redirects.length; i++) {
-            console.log(redirects[i][0]);
-            if (redirects[i][0] == path) {
-                redirectTo = redirects[i][1];
-                break;
-            }
-        }
-        if (redirectTo) {
-            window.location = redirectTo;
-        }
+    }
+    
+    // Redirect List
+    var redirects = {
+        '/test.html': '/docs/montagejs-setup.html',
+        '/docs/test.html': '/docs/draw-cycle.html',
+        '/test': '/docs/frb.html'
+    };
+    
+    if (redirects.hasOwnProperty(path)) {
+        window.location = redirects[path];
     }
         
 </script>
