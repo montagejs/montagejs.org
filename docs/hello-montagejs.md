@@ -16,7 +16,7 @@ You've just finished setting up and verifying your first MontageJS project, and 
 In this tutorial you will assemble a simple, mobile-friendly MontageJS application that converts degrees in Celsius to Fahrenheit and vice versa (see Figure 1). The application consists of three elements—two input fields and a slider—whose values are bound together. When you enter a numeric value in one input field, the numeric value in the other input field updates automatically and the slider moves to reflect the chosen value. Likewise, when you drag the slider, the numeric values in the input fields are updated to reflect the value of the slider at the current position.
 
 <figure>
-	<img src="/images/docs/hello-montagejs/fig01.png" alt="The final application.">
+	<img class="img--66" src="/images/docs/hello-montagejs/fig01.png" alt="The final application.">
 	<figcaption><strong>Figure 1.</strong>Your goal is to build this temperature converter application.</figcaption>
 </figure>
 
@@ -99,7 +99,7 @@ Follow these steps to add a new component to your project:
 If all went well, you should still see the name and the Montage version number (see Figure 3). (If you only get a blank page, verify that the objects between the `<script>` tags are separated by commas.)
 
 <figure>
-	<img src="/images/docs/hello-montagejs/fig03.png" alt="The skeleton of the application.">
+	<img class="img--66" src="/images/docs/hello-montagejs/fig03.png" alt="The skeleton of the application.">
 	<figcaption><strong>Figure 3.</strong> The key components of your application: main, version, and converter (which has no content yet, and hence is invisible).</figcaption>
 </figure>
 
@@ -133,7 +133,7 @@ The application you are going to build has four elements—a title, two numeric 
 You should see two input fields for entering numbers and a slider control (see Figure 4). The controls are fully functional; however, since they are not bound together yet, numeric changes in one field will not be reflected in the value of the other nor the position of the slider.
 
 <figure>
-	<img src="/images/docs/hello-montagejs/fig04.png" alt="The basic elements of your application.">
+	<img class="img--66" src="/images/docs/hello-montagejs/fig04.png" alt="The basic elements of your application.">
 	<figcaption><strong>Figure 4.</strong> The basic elements of your application rendered using the browser's default style sheet.</figcaption>
 </figure>
 
@@ -218,7 +218,7 @@ In a MontageJS application, all UI-related information is contained in a script 
     Setting the `data-montage-id` custom attribute now initializes your markup using the default styles of our mobile-optimized Digit user interface components (see Figure 5).
 
 <figure>
-	<img src="/images/docs/hello-montagejs/fig05.png" alt="The DOM elements extended with Digit components.">
+	<img class="img--66" src="/images/docs/hello-montagejs/fig05.png" alt="The DOM elements extended with Digit components.">
 	<figcaption><strong>Figure 5.</strong> The DOM elements extended with Digit components.</figcaption>
 </figure>
 
@@ -397,7 +397,7 @@ At this point, the application works as planned, but doesn't look as designed (s
 At this point your application should look like the one shown in Figure 6.
 
 <figure>
-	<img src="/images/docs/hello-montagejs/fig06.png" alt="The styled Converter component.">
+	<img class="img--66" src="/images/docs/hello-montagejs/fig06.png" alt="The styled Converter component.">
 	<figcaption><strong>Figure 6.</strong> The application with the styled Converter component.</figcaption>
 </figure>
 
@@ -470,7 +470,7 @@ body {
 If all went well, your application should resemble the one shown in Figure 7.
 
 <figure>
-	<img src="/images/docs/hello-montagejs/fig07.png" alt="The styled Converter and Main components.">
+	<img class="img--66" src="/images/docs/hello-montagejs/fig07.png" alt="The styled Converter and Main components.">
 	<figcaption><strong>Figure 7.</strong> The final application with the styled Converter and Main components.</figcaption>
 </figure>
 

@@ -212,18 +212,17 @@
     background-color: transparent;
 }
 
-.content figure {
-    border-radius: 0 0 6px 6px;
-    border: 1px solid #ddd;
+
+/* Figure */
+
+.content figure img {
+    display: block;
 }
 
 .content figcaption {
     font-size: .9em;
     font-style: italic;
-    padding: .5em 1em;
-    border-radius: inherit;
-    border-top: 1px solid #ddd;
-    background-color: hsl(0,0%,96%);
+    padding: .5em 0;
 }
 
 .content table {
