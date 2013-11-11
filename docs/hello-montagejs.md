@@ -1,349 +1,486 @@
 ---
 
 layout: docs
-title: Hello MontageJS - Quick Start part 2
+title: Hello MontageJS - Getting Started Part 2
 
-prev-page: montagejs-setup
+prev-page: index
 this-page: hello-montagejs
-next-page: montagejs-examples
+next-page: TBD
 
 ---
 
 # Hello MontageJS
 
-This tutorial will show you how to assemble a simple MontageJS application. The goal is to quickly familiarize you with the basic building blocks of the MontageJS framework. To make the most of this tutorial, you should have a basic understanding of HTML, CSS, and JavaScript and some familiarity with working in a command-line environment. You should also have have completed part 1 of this tutorial series, [Set Up Your Development Enironment](/docs/montagejs-setup.html).
+You've just finished setting up and verifying your first MontageJS project, and you're staring at a blank page: Now what?
 
+In this tutorial you will assemble a simple, mobile-friendly MontageJS application that converts degrees in Celsius to Fahrenheit and vice versa (see Figure 1). The application consists of three elements—two input fields and a slider—whose values are bound together. When you enter a numeric value in one input field, the numeric value in the other input field updates automatically and the slider moves to reflect the chosen value. Likewise, when you drag the slider, the numeric values in the input fields are updated to reflect the value of the slider at the current position.
 
-## Say Hello to MontageJS
+<figure>
+	<img src="/images/docs/hello-montagejs/fig01.png" alt="The final application.">
+	<figcaption><strong>Figure 1.</strong>Your goal is to build this temperature converter application.</figcaption>
+</figure>
 
-MontageJS applications consist of a model layer that handles the data and a view layer that reads from the models and handles user input and rendering. Components make up the view portion of a MontageJS application. As a rule, these components are stored in the ui directory of your MontageJS application and identified by a .reel suffix (which has the benefit that you can use any MontageJS package and easily locate the user interface components it provides).
+To make the most of this tutorial, you should have a basic understanding of HTML, CSS, and JavaScript.
 
-Check it out: In your file browser go to the hello/ui directory; inside you'll find two components—main.reel and welcome.reel.
+## Before You Begin
 
-A .reel suffix identifies a self-contained MontageJS component that encapsulates the structure (HTML), appearance (CSS), and behavior (JavaScript) of the component. 
+Be sure you have set up MontageJS development as instructed in ["Getting Started"](http://montagejs.org/docs/montagejs-setup.html) before continuing with this tutorial. You must have node.js, npm, and Minit, the MontageJS initilizer installed to complete this tutorial. You also need a a text editor and a recent stable release of Google Chrome, Safari, or Firefox.
 
-See for yourself: Open the welcome.reel directory and you will spot an HTML, a CSS, and a JS file. 
+## Create the Application Template
 
-The welcome.html (or template) file contains the text and graphic that are rendered in the browser, the welcome.css file controls the appearance of the contents in welcome.html, and welcome.js controls its behavior (of which, frankly, there is not much at this point).
+If you've already created a new project and your browser is currently pointing to localhost:8083, you can skip this section and continue with "MontageJS Bascis."
 
-> **Note**: For more details on the anatomy and key features of MontageJS components, refer to the MontageJS Basics document (coming soon).
+1. Open a Terminal window or Command Prompt and type:
+    
+    ```
+    $ minit create:app -n temp-converter
+    ```
 
-###Create a Custom UI Component
-Let's dress up the Welcome component by adding a user interface component. First, you will create and add a new component that spells "Hello World" and insert it in the Welcome component.
-
-1. Open a new Terminal window, switch to the hello directory, and run the `minit` command to create a new component named hello-world:
+2. Switch to the temp-converter directory and use Minit to serve your project:
 
     ```
-    $ cd hello
-    $ minit create:component -n hello-world
+    $ cd temp-converter
+    $ minit serve &
     ```
-    `minit` creates the hello-world.reel directory in the ui directory of your hello app installation, complete with a default set of HTML, CSS, and JS files. Next, you need to add content to your new component that can be rendered inside the browser.
+    
+3. Point your browser to http://localhost:8083/.
 
-2. Go to the hello/ui/hello-world.reel directory, open the hello-world.html template in your preferred text editor, and put "Hello World" inside the HTML body div:
+You should see a blank page with a version reference in the upper left corner of the page.
+    
+## MontageJS Basics
+
+MontageJS application development is divided into a development (creating the app) phase and a production (compiling the app) phase. In development, you assemble the user interface of your application out of prebuilt, encapsulated MontageJS user interface components. 
+
+MontageJS user interface components are reusable and consist of three files that control the component's structure (HTML), appearance (CSS), and behavior (JavaScript). These files are located in the same directory, identified with a .reel suffix (for example, the Main component, main.reel, consists of main.css, main.html, and main.js). When you assemble your MontageJS application, you modify the HTML documents or templates (in MontageJS speak) of the components in the ui directory of your project. To change the look and feel of the components that make up the application, you modify the components' CSS files.
+
+The application you are about to build consists of three components: main.reel, converter.reel, and version.reel (see Figure 2). The Main component is the main user interface component of your application. Think of it as the MontageJS equivalent of a website's index page or the principal screen of your single-page application: it contains the key components that make up your application. Although you could conceivably build an entire application using only the Main component, you really want to architect your application in such a way that you can take advantage of the modular nature of MontageJS components.
+
+<figure>
+	<img src="/images/docs/hello-montagejs/fig02.png" alt="The components of the application.">
+	<figcaption><strong>Figure 2.</strong> The components that make up the temperature converter application.</figcaption>
+</figure>
+
+The default application template includes two UI components: main.reel and version.reel (whose sole purpose is to inform you what version of Montage you are currently working with; you can easily remove it from your application). For this exercise, you also need a component that encapsulates the converter feature.
+
+## Create the Converter Component
+
+Follow these steps to add a new component to your project:
+
+1. At the command prompt, enter:
+
+    ```
+    $ minit create:component -n converter
+    ```
+   This creates a new component, converter.reel, in the the UI directory of your MontageJS project.
+   
+2. In your MontageJS project folder, open ui/main.reel/main.html.
+3. Following the owner object within the `<script>` tags, add the following snippet (don't forget the trailing comma; you need it to separate objects from each other):
+
+    ```json
+        "tempConverter": {
+            "prototype": "ui/converter.reel",
+            "properties": {
+                "element": {"#": "tempConverter"}
+            }
+        },
+    ```
+    
+4. Between the `<body>` tags, before `<div data-montage-id="montageVersion"></div>`, add the following:
 
     ```html
-    <div data-montage-id="helloWorld" class="HelloWorld">Hello World</div>
+    <h1>Temperature Converter</h1>
+    <div data-montage-id="tempConverter"></div>
     ```
-3. Save the hello-world.html template.
 
-    Next, you need to tell the Welcome component to use your new component inside its template.
+    This adds the the title of the application and the converter.reel component to the main.reel component.
+    
+5. Save the changes and refresh your browser.
 
-4. Open the welcome.html template file located in the hello/ui/welcome.reel directory.
+If all went well, you should still see the name and the Montage version number (see Figure 3). (If you only get a blank page, verify that the objects between the `<script>` tags are separated by commas.)
 
-    In the head section, inside the `montage-serialization` script block, you'll find a serialized object graph, which describes all the objects used in the document. (For more details on serialization in MontageJS refer to [MontageJS Serialization Format](http://montagejs.org/docs/montage-serialization-format.html) document.)
+<figure>
+	<img src="/images/docs/hello-montagejs/fig03.png" alt="The skeleton of the application.">
+	<figcaption><strong>Figure 3.</strong> The key components of your application: main, version, and converter (which has no content yet, and hence is invisible).</figcaption>
+</figure>
 
-5. Insert the following `helloWorld` label following the `owner` label ( **don't forget the trailing comma, which is required to separate the objects in the object graph** ):
+## Add the Semantic Markup
 
-    <div class="highlight">
-    <pre>
-     <code class="text language-text" data-lang="text">
-    ...
-    "owner": {
-        "properties": {
-            "element": {"#": "welcome"}
-        }
-    },
-    <strong>"helloWorld": {
-        "prototype": "ui/hello-world.reel",
-        "properties": {
-            "element": {"#": "helloWorld"}
-        }
-    },</strong>
-    "montageVersion" : {
-    ...
-    </code>
-    </pre>
+The application you are going to build has four elements—a title, two numeric input fields, and a slider—that need to be declared in your markup.
+
+1. In your MontageJS project folder, open ui/converter.reel/converter.html.
+2. Replace the HTML within the `<body>` tags with the following markup:
+
+    ```html
+    <div data-montage-id="converter" class="Converter">
+        <div>
+            <fieldset>
+                <div>&deg;C
+                   <input type="number"/>
+                </div>
+                <div>&deg;F
+                   <input type="number"/>
+                </div>
+            </fieldset>
+        </div>
+            <fieldset>
+               <input type="range"/>
+            </fieldset>
     </div>
-
-    This declares an instance of the HelloWorld component with an object label of `helloWorld` as a child of the Welcome component: The component's module ID ("/ui/hello-world.reel") allows MontageJS to recreate the component from its serialized form at runtime. The component's `element` property, which corresponds to the associated HTML element on which the component operates, is set to the HTML body div with the `data-montage-id` attribute of `hello-world`.
-
-6. Refresh the page.
-
-You should see the contents of the HelloWorld component—a simple "Hello World" surrounded by a dotted outline (styled courtesy of the predefined rules in hello/ui/welcome.reel/welcome.css)—rendered inside this simple single-page application.
-
-> **Note**: You may have to clear your browser's cache for the change to appear.
-
-![GS_Figure2](/images/docs/gs_tut_fig_02.png)
-
-That's how you build MontageJS applications—you assemble user interface components.
-
-### Modify a UI Component
-
-Now suppose you wanted to dynamically change the contents of the HelloWorld component, say you wanted to replace the general word "World" in "Hello World" with a personal name based on user input, and, just to mix things up, you want that name to show in a different color. In broad strokes, here's how you would go about architecting this part of your application:
-
-1. Create the component responsible for the replacement text.
-2. Instruct the HelloWorld component to use the replacement text.
-3. Provide an input component for user's to enter text.
-4. Bind the components together so the contents of HelloWorld change in real time based on user input.
-
-Follow these steps:
-
-1. At the command prompt run `minit` in your hello directory to create a new component called name-tag:
-
-    ```
-    $ minit create:component -n name-tag
     ```
 
-    As you'd expect, `minit` creates the name-tag.reel directory complete with the associated files in the hello/ui directory. Next, you need to add the placeholder content that is to replace "World" in "Hello World."
+3. Save the changes and refresh your browser.
 
-2. Go to the hello/ui/name-tag.reel directory, open the name-tag.html file, and replace the default HTML body div with the following span:
+You should see two input fields for entering numbers and a slider control (see Figure 4). The controls are fully functional; however, since they are not bound together yet, numeric changes in one field will not be reflected in the value of the other nor the position of the slider.
+
+<figure>
+	<img src="/images/docs/hello-montagejs/fig04.png" alt="The basic elements of your application.">
+	<figcaption><strong>Figure 4.</strong> The basic elements of your application rendered using the browser's default style sheet.</figcaption>
+</figure>
+
+Next, you will use MontageJS to update the view of these HTML elements.
+
+## Add Some MontageJS "Magic"
+
+In a MontageJS application, all UI-related information is contained in a script block in the `head` area of the HTML document. This is where you add the template-like MontageJS components that controll your HTML elements.
+
+1. In ui/converter.reel/converter.html, replace the contents within the existing `<script>` tags with the following block:
+
+    ```json
+    <script type="text/montage-serialization">
+        {
+            "owner": {
+                "properties": {
+                    "element": {"#": "converter"}
+                }
+            },
+            
+            "celsiusNumberfield": {
+                "prototype": "digit/ui/number-field.reel",
+                "properties": {
+                    "element": {"#": "celsius"}
+                 }
+            },
+            
+            "fahrenheitNumberfield": {
+                "prototype": "digit/ui/number-field.reel",
+                "properties": {
+                    "element": {"#": "fahrenheit"}
+                }
+            },
+            
+            "thermometer": {
+                "prototype": "digit/ui/slider.reel",
+                "properties": {
+                    "element": {"#": "thermometer"},
+                    "axis": "vertical"
+                }
+            }
+        }
+    </script>
+    ```
+
+    Things to note:
+    
+        * The labels `celsiusNumberfield`, `fahrenheitNumberfield`, and `thermometer` identify the serialized objects that control the behavior of your HTML elements.
+        * `prototype` identifies the directory that contains the code of that object's prototype (here you are using components from the Digit widget set that is part of your MontageJS project).
+        * `properties` lists the values assigned to the properties of the current object. 
+        * The `element` property refers to a DOM element in the markup, identified with a corresponding `data-montage-id` custom data attribute—which is what you will be adding next to your markup.
+        * The `axis` property turns the horizontal slider into a vertical one.
+
+    To control the behavior of the markup, you need to map the objects to their corresponding DOM elements. In MontageJS you identify the HTML elements with the [custom data attribute](http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#custom-data-attribute) `data-montage-id` of `celsius`, `fahrenheit`, and `thermometer`. 
+    
+2. Within the `<body>` tags, replace the existing markup with the following update:
 
     ```html
-    <span data-montage-id="nameTag" class="NameTag">Name</span> 
+    <div data-montage-id="converter" class="Converter">
+        <div>
+            <fieldset>
+                <div>&deg;C
+                   <input data-montage-id="celsius"/>
+                </div>
+                <div>&deg;F
+                   <input data-montage-id="fahrenheit"/>
+                </div>
+            </fieldset>
+        </div>
+            <fieldset>
+               <input data-montage-id="thermometer" type="range" />
+            </fieldset>
+    </div>
     ```
-3. Save and close name-tag.html.
 
-4. To have the content in this template appear in a different color, open the name-tag.css file and add the following rule:
+    Things to note:
+
+    * The `<input type="number"/>` and `<input type="range"/>` elements have been updated with the  `data-montage-id` attributes of  `celsius`, `fahrenheit`, and `thermometer`.
+
+3. Save your changes and refresh your browser.
+
+    Setting the `data-montage-id` custom attribute now initializes your markup using the default styles of our mobile-optimized Digit user interface components (see Figure 5).
+
+<figure>
+	<img src="/images/docs/hello-montagejs/fig05.png" alt="The DOM elements extended with Digit components.">
+	<figcaption><strong>Figure 5.</strong> The DOM elements extended with Digit components.</figcaption>
+</figure>
+
+Next, you will bind together the properties of the input fields and slider.
+
+## Add Bindings
+
+MontageJS uses functional reactive bindings (FRB), which you add to the objects in question (here: `celsiusNumberfield` and `thermometer`). 
+
+1. To help speed thigns up, replace the existing `<script>` tag with the following:
+
+    ```json
+    <script type="text/montage-serialization">
+        {
+            "owner": {
+                "properties": {
+                    "element": {"#": "converter"}
+                }
+            },
+            
+            "celsiusNumberfield": {
+                "prototype": "digit/ui/number-field.reel",
+                "properties": {
+                    "element": {"#": "celsius"}
+                },
+                "bindings": {
+                    "value": {"<->": "(+@fahrenheitNumberfield.value - 32) / 1.8"}
+                }
+            },
+            
+            "fahrenheitNumberfield": {
+                "prototype": "digit/ui/number-field.reel",
+                "properties": {
+                    "element": {"#": "fahrenheit"},
+                    "value": "32"
+                }
+            },
+            
+            "thermometer": {
+                "prototype": "digit/ui/slider.reel",
+                "properties": {
+                    "element": {"#": "thermometer"},
+                    "axis": "vertical"
+                },
+                "bindings": {
+                    "value": {"<->": "@fahrenheitNumberfield.value"}
+                }
+            }
+        }
+    </script>
+    ```
+
+    Things to note:
+
+    * The property default value of the Fahrenheit field is set to 32; this is the initial state of the converter when first loaded in the browser.
+    * Two-way bindings (<->) are established between:
+        * The property value of the Celsius field (`(+@fahrenheitTextfield.value - 32) / 1.8`) and the value of the Fahrenheit field. (`(+@fahrenheitTextfield.value - 32) / 1.8` expresses the standard &deg;C to &deg;F conversion formula: &deg;C = (&deg;F - 32) * 5/9).)
+        * The property of the slider (thermometer) and the value of the Fahrenheit field.
+
+Now, when you modify any control, the others adjust accordingly. Give it a try. Enter a value in the Celsius field, use the spinner controls to increase or decrease the value in the Fahrenheit field, or drag the slider left or right.
+
+## Make It Pretty
+
+At this point, the application works as planned, but doesn't look as designed (see Figure 1). This can be easily changed by adding some CSS rules. First, you need to specify CSS class names in your markup.
+
+1. In ui/converter.reel/converter.html, replace the content within the `<body>` tags with the following updated markup:
+
+    ```html
+<body>
+    <div data-montage-id="converter" class="Converter">
+        <div class="Controls">
+            <fieldset class="Numbers">
+                <div class="Label">&deg;C
+                   <input data-montage-id="celsius">
+                </div>
+                <div class="Label">&deg;F
+                   <input data-montage-id="fahrenheit">
+                </div>
+            </fieldset>
+            <fieldset class="Slider">
+               <input data-montage-id="thermometer" class="Slider-handle" type="range" min="-13" max="122">
+            </fieldset>
+        </div>
+    </div>
+</body>
+    ```
+
+    Things to note: 
+
+    * Added class names to control the layout and appearance of the following elements:
+         * Controls, includes Input fields and slider (`Controls`)
+         * Input fields (`Numbers`)
+         * Slider (`Slider`)
+         * Slider knob (`Slider-handle`)
+    * Set minimum (-13) and maxium (122) values allowed in the Fahrenheit field (the slider has two-way bindings with the Fahrenheit field, hence this setting is bound to the Fahrenheit field).
+    
+   Next you need to add the CSS rules to your component's style sheet.
+
+2. Open ui/converter.reel/converter.css in your MontageJS project.
+
+3. Replace the sparse contents of the file with the following rules:
+
+    <pre>
+.Converter {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.Controls {
+    margin: 20px 0;
+    padding: 20px;
+    width: 100%;
+    max-width: 260px;
+    text-shadow: #fff 0 1px 0;
+    border-radius: 10px;
+    background-color: hsl(0,0%,98%);
+    box-shadow: inset 0px 1px 2px 1px hsla(0,0%,100%,1), 0px 2px 5px hsla(0,0%,0%,.1);
+}
+.Numbers {
+    float: left;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+.Label {
+    display: block;
+    margin: 15px 0;
+    text-align: center;
+    line-height: 40px;
+    color: hsl(0,0%,60%);
+    font-size: 1.2em;
+}
+.Label .digit-NumberField-input {
+    width: 70px;
+    vertical-align: middle;
+}
+.Slider {
+    float: right;
+    margin: 0;
+    padding: 8px 4px;
+    border-radius: 100px;
+    border: none;
+    box-shadow: inset 0px 1px 3px hsla(0,0%,0%,.3), 0 2px 0 hsla(0,0%,100%,1);
+    background: -webkit-linear-gradient(bottom, hsl(200,100%,50%),
+                         hsl(200,100%,80%) 30%,
+                         hsl(60,100%,65%) 50%,
+                         hsl(0,100%,80%) 70%,
+                         hsl(0,100%,50%) );
+    background: linear-gradient(to top, hsl(200,100%,50%),
+                         hsl(200,100%,80%) 30%,
+                         hsl(60,100%,65%) 50%,
+                         hsl(0,100%,80%) 70%,
+                         hsl(0,100%,50%) );
+}
+.Slider-handle.digit-Slider.montage-Slider--vertical {
+    height: 120px;
+}
+.Slider-handle.digit-Slider {
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: none;
+}
+    </pre>
+
+4. Save your changes and refresh your browser.
+
+At this point your application should look like the one shown in Figure 6.
+
+<figure>
+	<img src="/images/docs/hello-montagejs/fig06.png" alt="The styled Converter component.">
+	<figcaption><strong>Figure 6.</strong> The application with the styled Converter component.</figcaption>
+</figure>
+
+Next you will add some CSS rules to control the appearance of the Main component.
+
+1. Open ui/main.reel/main.html and replace the content within the `<body>` tags with the following updated markup:
+
+    ```html
+        <div data-montage-id="main" data-montage-skin="light" class="Main">
+        
+        <h1 data-montage-id="title" class="Title"></h1>
+        <div data-montage-id="tempConverter"></div>
+
+        <footer data-montage-id="montageVersion"></footer>
+    </div>
+    ```
+    
+    Things to note: 
+
+    * The `<h1>` element has been updated with the  `data-montage-id` attribute of `title`.
+    * The string "Temperature Converter" has been removed from the markup; the value of the `<h1>` element is now declared by the title object in the serialization (see the following step).
+    * The Montage version div has been replaced with `footer` tags.
+
+2. Following the tempConverter object within the `<script>` tags, add the following snippet (remember: don't forget the trailing comma; you need it to separate objects from each other):
+
+    ```json
+            "title": {
+                "prototype": "digit/ui/title.reel",
+                "properties": {
+                    "element": {"#": "title"},
+                    "value": "Temperature Converter"
+                }
+            },
+    ```
+
+    Things to note:
+    
+    * The value of the `h1` element is by the properties of the title object (`"value": "Temperature Converter"`).
+
+3. Open ui/main.reel/main.css and replace the content the existing content with the following rules:
 
     ```css
-    .NameTag {
-        color: red;
-    }
-    ```
-    > **Note**: Style sheets for newly created components only contain the class name of the root element. It's up to you to populate them with your meticulously crafted rules. Note also that the CSS class name is a CamelCase version of the component’s name. This is part of our [CSS naming convention](/docs/naming-conventions.html); it allows us to scope each component's CSS so that it doesn't "leak out" and accidentally style other components.
-
-    Next, you need to instruct the HelloWorld component to use the NameTag component.
-
-5. Go to hello/ui/hello-world.reel and open the hello-world.html template.
-
-    In the head section, in the montage-serialization script block, following the "owner" property, add the serialization entry for the NameTag component ( **don't forget to add a comma following the “owner” entry to separate the objects** ):
-
-    <div class="highlight">
-    <pre>
-    <code class="text language-text" data-lang="text">
-    "owner": {
-        "properties": {
-            "element": {"#": "helloWorld"}
-        }
-    }<strong>,
-    "nameTag": {
-        "prototype": "ui/name-tag.reel",
-        "properties": {
-            "element": {"#": "nameTag"}
-        }
-    }</strong>
-    </code>
-    </pre>
-    </div>
-
-6. In the HTML body, inside the div, replace "World" with the following span:
-
-    ```html
-    <div data-montage-id="helloWorld" class="HelloWorld">Hello <span data-montage-id="nameTag"></span>
-    </div>
-    ```
-7. Refresh the browser and enjoy the fancy red Name tag: The contents of the NameTag component are rendered using the `name-tag` element from its included HTML template and styled using its included CSS.
-
-![GS_Figure3](/images/docs/gs_tut_fig_03.png)
-
-You now have a pretty respectable component tree. But you're not done yet. All you've done so far is assemble your visual component tree through the power of declarative programming. You have yet to connect its parts to an underlying model. For simplicity's sake, we'll let our components serve as the model.
-
-### Assign Value Through Bindings
-
-Your next task in your goal to create a more personalized greeting is to instruct the NameTag component on how to behave; more specifically, you want to pin a value on its name. Follow these steps:
- 
-1. Add a `name` property to the NameTag component's implementation at ui/name-tag.reel/name-tag.js: 
-
-    <div class="highlight">
-    <pre>
-    <code class="text language-text" data-lang="text">
-    exports.NameTag = Component.specialize(/** @lends NameTag# */ {
-        constructor: {
-            value: function NameTag() {
-                this.super();
-            }
-        },
-        <strong>name: {
-            value: "Alice"
-        }</strong>
-    });
-    </code>
-    </pre>
-    </div>
-
-2. Add a Montage-provided Text component to name-tag.html. In the head section, in the object graph, following the `owner` property, add the following serialization entry for the name object (remember to separate the objects in the object graph with a comma):
-
-    <div class="highlight">
-    <pre>
-    <code class="text language-text" data-lang="text">
-    "owner": {
-        "properties": {
-            "element": {"#": "nameTag"}
-        }
-    }<strong>,
-    "name": {
-        "prototype": "montage/ui/text.reel",
-        "properties": {
-            "element": {"#": "name"}
-        },
-        "bindings": {
-            "value": {"<-": "@owner.name"}
-        }
-    }</strong>
-    </code>
-    </pre>
-    </div>
-
-3. In the HTML body, inside the span, replace the "Name" text with the following span:
-   
-    ```html
-    <span data-montage-id="name"></span>
+.Main {
+    height: 100%;
+    padding: 20px;
+    background-color: hsl(0,0%,90%);
+    text-align: center;
+    width: 100%;
+    max-width: 320px;
+    border-radius: 10px;
+}
+body {
+    margin: 20px 0px;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    display: -moz-box;
+    -moz-box-align: center;
+    -moz-box-pack: center;
+    background-color: hsl(0,0%,80%);
+}
+.Title {
+    font-size: 1.6em;
+    line-height: 1.2;
+}
     ```
     
-    This specifies that the `value` property of the Text component you create will be the same as the owner's `name` property (here: name-tag.html). Anytime the `owner.name` property changes, so will the value you see in the rendered view.
+4. Save your changes and refresh your browser.
 
-4. Refresh the page. Instead of a red Name tag you should now see a red Alice.
+If all went well, your application should resemble the one shown in Figure 7.
 
-![GS_Figure4](/images/docs/gs_tut_fig_04.png)
-
-Bindings are among the pinnacle of declarative bliss. After declaring the binding between the two properties—`value` and `name`—you don't need to do anything else to make it happen.
-
-But wait, there's more. So far you have created only a placeholder for the replacement text and assigned a value to it. To complete your goal, you need to provide and hook up an input component.
-
-### Drive Changes Through Bindings
-
-Conveniently, MontageJS provides a TextField component. First, however, you need to determine where to put it. Here's where you start architecting your application: As long as your application is small where to place your component is an easy decision to make; as your application expands, however, it's important to keep components, and all other objects, loosely coupled and highly cohesive to aid in determining where responsibilities live.
-
-For the purpose of this example, you want NameTag to be a read-only component, so you'll make editing the job of the HelloWorld component.
-
-1. Add a Montage-provided TextField component to the template of your HelloWorld component at ui/hello-world.reel/hello-world.html; you know the drill by now:
-
-    **Serialization**
-
-    ```
-    "nameField": {
-        "prototype": "digit/ui/text-field.reel",
-        "properties": {
-            "element": {"#": "nameField"}
-        },
-        "bindings": {
-            "value": {"<->": "@nameTag.name"}
-        }
-    }
-    ```
-    **HTML body**
-
-    ```html
-    <div data-montage-id="helloWorld" class="HelloWorld">
-        Hello <span data-montage-id="nameTag"></span>
-        <div><input type="text" data-montage-id="nameField"></div>
-    </div>
-    ```
-
-    This binds the `value` property of the TextField component to the NameTag's `name` property, effectively making it a two-way binding as indicated by the double-headed arrow; changes on either side of this binding propagate to the other side. (In addition to deciding where components should live, you also have to decide which side to establish a binding on; but that's a topic for another tutorial.)
-
-2. Refresh the page and give it a try.
-
-    As you type in the text field, the Name tag should update in real time.
-
-![GS_Figure5](/images/docs/gs_tut_fig_05.png)
-
-You're almost done. Just one more thing.
-
-### Listen for Events
-
-Components can emit events in the same sense that DOM elements emit events. A MontageJS Button component, for example, dispatches an action event with itself as the target. This event is synthesized from a sequence of mouse or touch events that the button component itself observes on its own element. Here’s how you handle a button’s action event.
-
-1. Add the Button component to the Hello-World component's template at ui/hello-world.reel/hello-world.html:
-
-    **Serialization** 
-
-    ```
-    "greetButton": {
-        "prototype": "digit/ui/button.reel",
-        "properties": {
-            "element": {"#": "greetButton"}
-        },
-        "bindings": {
-            "label": {"<-": "@nameTag.name"}
-        },
-        "listeners": [
-            {
-                "type": "action",
-                "listener": {"@": "owner"}
-            }
-        ]
-    }
-    ```
-
-    **HTML body**
-
-    ```html
-    <div data-montage-id="helloWorld" class="HelloWorld">Hello
-     <span data-montage-id="nameTag"></span>
-     <div><input type="text" data-montage-id="nameField"></div>
-     <button data-montage-id="greetButton"></button>
-    </div>
-    ```
-    For the sake of showing off bindings we use one here to bind the label of the `greetButton` element to the `nameTag.name` property. The listeners object contains an array (indicated by the square brackets: [ … ]) of listener entries that specify the event type being observed by name and the listener interested in handling the event. Of course, you can register many different listeners here.
-
-2. Refresh the page. You should see a button whose label matches the current name.
-
-    ![GS_Figure6](/images/docs/gs_tut_fig_06.png)
+<figure>
+	<img src="/images/docs/hello-montagejs/fig07.png" alt="The styled Converter and Main components.">
+	<figcaption><strong>Figure 7.</strong> The final application with the styled Converter and Main components.</figcaption>
+</figure>
 
 
-    Behold the joy of code-free declarative binding: change the name in the TextField component and see it reflected in both the `nameTag` and the `greetButton` component instances.
+# Next Steps
 
-3. To make the button do something, add some code to the listener object you specified (here: HelloWorld), inside ui/hello-world.reel/hello-world.js:
+Here are some links to help you continue your MontageJS learning experience:
 
-    ```js
-    exports.HelloWorld = Component.specialize(/** @lends HelloWorld# */ {
-    
-        handleGreetButtonAction: {
-            value: function (event) {
-                this.classList.toggle("flip");
-            }
-        }
-    
-    });
-    ```
-    
-    Note the specifics here: While the standard JavaScript `addEventListener` either expects a function reference or an eventHandler object that implements a `handleEvent` method, MontageJS helps direct an event to a more specific handler method on a listener if implemented.
+* To learn how things work under the hood, continue with ["Templates and Components"](http://#).
+* To learn how to prepare your application for production deployment, see ["Preparing for Deployment"](http://#).
+* To learn more about our MontageJS-specific naming conventions, see ["Naming Conventions"](http://#).
+* To learn more about how to troubleshoot your application in the browser, refer to ["Troubleshooting"](http://#).
 
-    In this case you've implemented `handleGreetButtonAction`, which describes that this method will handle action events emitted from a target with an identifier of `greetButton` during the bubble phase of event distribution. This is the most specific handler possible (less specific alternatives would have been: `handleAction` and `handleEvent`). It reduces the need for inspecting each event in a generic `handleEvent` method to determine what the event was and how it should be handled.
-
-    The `classList` property manipulates the CSS classes applied to the HelloWorld component's element.
-
-4. Refresh the browser and click the button. If everything works as expected, you should see the background color of the the Welcome component change color and flip diagonally.
-
-    ![GS_Figure7](/images/docs/gs_tut_fig_07.png)
-
-
-## Take Off the Training Wheels
-
-Although it has served you well so far, it's time to ditch the default Welcome component.
-
-1. Inside index.html remove the explicit loading of the Welcome component from the owner entry:
-
-    ```
-    "owner": {
-        "prototype": "montage/ui/loader.reel"
-
-    }
-    ```
-
-2. Refresh the browser and note that the Welcome component is no longer present, leaving nothing but a blank page for you to start your own project. With the Welcome component gone, the MontageJS loader component automatically loads the Main component (part of the default MontageJS application installation), which now awaits your assembly instructions.
-
-You have barely scratched the surface of what MontageJS can do. What you should take away from this tutorial is how simple things are with a declarative framework that embraces components and bindings.
-
-For more information on MontageJS components, bindings, event handling, serialization etc. refer to the [documentation](http://montagejs.org/docs/) (be patient: we are currently in the process of updating the docs).
