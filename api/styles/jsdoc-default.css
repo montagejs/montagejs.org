@@ -253,6 +253,7 @@ h6
 	border-left: 2px solid #DDD;
 	padding-right: 0;
 	white-space: nowrap;
+	width: 1em;
 }
 #api .dummy {
 	padding-left: 0;
