@@ -178,12 +178,11 @@ In a MontageJS application, all UI-related information is contained in a script 
     ```
 
     Things to note:
-    
-        * The labels `celsiusNumberfield`, `fahrenheitNumberfield`, and `thermometer` identify the serialized objects that control the behavior of your HTML elements.
-        * `prototype` identifies the directory that contains the code of that object's prototype (here you are using components from the Digit widget set that is part of your MontageJS project).
-        * `properties` lists the values assigned to the properties of the current object. 
-        * The `element` property refers to a DOM element in the markup, identified with a corresponding `data-montage-id` custom data attribute—which is what you will be adding next to your markup.
-        * The `axis` property turns the horizontal slider into a vertical one.
+    * The labels `celsiusNumberfield`, `fahrenheitNumberfield`, and `thermometer` identify the serialized objects that control the behavior of your HTML elements.
+    * `prototype` identifies the directory that contains the code of that object's prototype (here you are using components from the Digit widget set that is part of your MontageJS project).
+    * `properties` lists the values assigned to the properties of the current object. 
+    * The `element` property refers to a DOM element in the markup, identified with a corresponding `data-montage-id` custom data attribute—which is what you will be adding next to your markup.
+    * The `axis` property turns the horizontal slider into a vertical one.
 
     To control the behavior of the markup, you need to map the objects to their corresponding DOM elements. In MontageJS you identify the HTML elements with the [custom data attribute](http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#custom-data-attribute) `data-montage-id` of `celsius`, `fahrenheit`, and `thermometer`. 
     
@@ -206,7 +205,6 @@ In a MontageJS application, all UI-related information is contained in a script 
     ```
 
     Things to note:
-
     * The `<input type="number"/>` and `<input type="range"/>` elements have been updated with the  `data-montage-id` attributes of  `celsius`, `fahrenheit`, and `thermometer`.
 
 3. Save your changes and refresh your browser.
@@ -268,7 +266,6 @@ MontageJS uses functional reactive bindings (FRB), which you add to the objects 
     ```
 
     Things to note:
-
     * The property default value of the Fahrenheit field is set to 32; this is the initial state of the converter when first loaded in the browser.
     * Two-way bindings (<->) are established between:
         * The property value of the Celsius field (`(+@fahrenheitTextfield.value - 32) / 1.8`) and the value of the Fahrenheit field. (`(+@fahrenheitTextfield.value - 32) / 1.8` expresses the standard &deg;C to &deg;F conversion formula: &deg;C = (&deg;F - 32) * 5/9).)
@@ -299,7 +296,6 @@ At this point, the application works as planned, but doesn't look as designed (s
     ```
 
     Things to note: 
-
     * Added class names to control the layout and appearance of the following elements:
          * Controls, includes Input fields and slider (`Controls`)
          * Input fields (`Numbers`)
@@ -402,7 +398,6 @@ Next you will add some CSS rules to control the appearance of the Main component
     ```
     
     Things to note: 
-
     * The `<h1>` element has been updated with the  `data-montage-id` attribute of `title`.
     * The string "Temperature Converter" has been removed from the markup; the value of the `<h1>` element is now declared by the title object in the serialization (see the following step).
     * The Montage version div has been replaced with `footer` tags.
@@ -420,7 +415,6 @@ Next you will add some CSS rules to control the appearance of the Main component
     ```
 
     Things to note:
-    
     * The value of the `h1` element is by the properties of the title object (`"value": "Temperature Converter"`).
 
 3. Open ui/main.reel/main.css and replace the content the existing content with the following rules:
