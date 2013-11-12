@@ -112,19 +112,17 @@ The application you are going to build has four elements—a title, two numeric 
 
     ```html
     <div data-montage-id="converter" class="Converter">
-        <div>
-            <fieldset>
-                <div>&deg;C
-                   <input type="number"/>
-                </div>
-                <div>&deg;F
-                   <input type="number"/>
-                </div>
-            </fieldset>
-        </div>
-            <fieldset>
-               <input type="range"/>
-            </fieldset>
+        <fieldset>
+            <div>&deg;C
+               <input type="number"/>
+            </div>
+            <div>&deg;F
+               <input type="number"/>
+            </div>
+        </fieldset>
+        <fieldset>
+            <input type="range"/>
+        </fieldset>
     </div>
     ```
 
@@ -193,19 +191,17 @@ In a MontageJS application, all UI-related information is contained in a script 
 
     ```html
     <div data-montage-id="converter" class="Converter">
-        <div>
-            <fieldset>
-                <div>&deg;C
-                   <input data-montage-id="celsius"/>
-                </div>
-                <div>&deg;F
-                   <input data-montage-id="fahrenheit"/>
-                </div>
-            </fieldset>
-        </div>
-            <fieldset>
-               <input data-montage-id="thermometer" type="range" />
-            </fieldset>
+        <fieldset>
+            <div>&deg;C
+               <input data-montage-id="celsius"/>
+            </div>
+            <div>&deg;F
+               <input data-montage-id="fahrenheit"/>
+            </div>
+        </fieldset>
+        <fieldset>
+           <input data-montage-id="thermometer" type="range" />
+        </fieldset>
     </div>
     ```
 
@@ -287,21 +283,19 @@ At this point, the application works as planned, but doesn't look as designed (s
 1. In ui/converter.reel/converter.html, replace the content within the `<body>` tags with the following updated markup:
 
     ```html
-    <body>
-        <div data-montage-id="converter" class="Converter">
-            <fieldset class="Numbers">
-                <div class="Label">&deg;C
-                   <input data-montage-id="celsius">
-                </div>
-                <div class="Label">&deg;F
-                   <input data-montage-id="fahrenheit">
-                </div>
-            </fieldset>
-            <fieldset class="Slider">
-               <input data-montage-id="thermometer" class="Slider-handle" type="range" min="-13" max="122">
-            </fieldset>
-        </div>
-    </body>
+    <div data-montage-id="converter" class="Converter">
+        <fieldset class="Numbers">
+            <div class="Label">&deg;C
+               <input data-montage-id="celsius">
+            </div>
+            <div class="Label">&deg;F
+               <input data-montage-id="fahrenheit">
+            </div>
+        </fieldset>
+        <fieldset class="Slider">
+           <input data-montage-id="thermometer" class="Slider-handle" type="range" min="-13" max="122">
+        </fieldset>
+    </div>
     ```
 
     Things to note: 
@@ -321,48 +315,38 @@ At this point, the application works as planned, but doesn't look as designed (s
 
     ```css
     .Converter {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-pack: center;
-        -webkit-justify-content: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -webkit-align-items: center;
-        align-items: center;
-    }
-    .Controls {
-        margin: 20px 0;
+        margin: 20px auto;
         padding: 20px;
-        width: 100%;
-        max-width: 260px;
-        text-shadow: #fff 0 1px 0;
+        width: 274px;
         border-radius: 10px;
         background-color: hsl(0,0%,98%);
-        box-shadow: inset 0px 1px 2px 1px hsla(0,0%,100%,1), 
-                    0px 2px 5px hsla(0,0%,0%,.1);
+        box-shadow: inset 0px 1px 2px 1px hsla(0,0%,100%,1), 0px 2px 5px hsla(0,0%,0%,.1);
     }
+    
+    .Converter:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+    
     .Numbers {
         float: left;
         border: none;
         margin: 0;
         padding: 0;
     }
+    
     .Label {
-        display: block;
         margin: 15px 0;
-        text-align: center;
         line-height: 40px;
-        color: hsl(0,0%,60%);
         font-size: 1.2em;
     }
+    
     .Label .digit-NumberField-input {
         width: 70px;
         vertical-align: middle;
     }
+    
     .Slider {
         float: right;
         margin: 0;
@@ -371,22 +355,24 @@ At this point, the application works as planned, but doesn't look as designed (s
         border: none;
         box-shadow: inset 0px 1px 3px hsla(0,0%,0%,.3), 
                     0 2px 0 hsla(0,0%,100%,1);
-        background: -webkit-linear-gradient(bottom, 
-                             hsl(200,100%,50%),
-                             hsl(200,100%,80%) 30%,
-                             hsl(60,100%,65%) 50%,
-                             hsl(0,100%,80%) 70%,
-                             hsl(0,100%,50%) );
-        background: linear-gradient(to top, 
-                             hsl(200,100%,50%),
-                             hsl(200,100%,80%) 30%,
-                             hsl(60,100%,65%) 50%,
-                             hsl(0,100%,80%) 70%,
-                             hsl(0,100%,50%) );
+        background: -webkit-linear-gradient(bottom,  
+                    hsl(200,100%,50%),
+                    hsl(200,100%,80%) 30%,
+                    hsl(60,100%,65%) 50%,
+                    hsl(0,100%,80%) 70%,
+                    hsl(0,100%,50%) );
+        background: linear-gradient(to top,
+                    hsl(200,100%,50%),
+                    hsl(200,100%,80%) 30%,
+                    hsl(60,100%,65%) 50%,
+                    hsl(0,100%,80%) 70%,
+                    hsl(0,100%,50%) );
     }
+    
     .Slider-handle.digit-Slider.montage-Slider--vertical {
         height: 120px;
     }
+    
     .Slider-handle.digit-Slider {
         background-color: transparent;
         border-color: transparent;
@@ -440,28 +426,25 @@ Next you will add some CSS rules to control the appearance of the Main component
 3. Open ui/main.reel/main.css and replace the content the existing content with the following rules:
 
     ```css
-    .Main {
-        height: 100%;
-        padding: 20px;
-        background-color: hsl(0,0%,90%);
-        text-align: center;
-        width: 100%;
-        max-width: 320px;
-        border-radius: 10px;
+    * {
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
     }
+    
     body {
-        margin: 20px 0px;
-        display: -webkit-box;
-        -webkit-box-align: center;
-        -webkit-box-pack: center;
-        display: -moz-box;
-        -moz-box-align: center;
-        -moz-box-pack: center;
-        background-color: hsl(0,0%,80%);
+        margin: 0;
+        font-family: "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+        color: hsl(0,0%,60%);
+        background-color: hsl(0,0%,95%);
     }
+    
+    .Main {
+        padding: 3em 1em;
+        text-align: center;
+    }
+    
     .Title {
-        font-size: 1.6em;
-        line-height: 1.2;
+        font-size: 1.3em;
     }
     ```
     
