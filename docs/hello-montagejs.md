@@ -289,19 +289,17 @@ At this point, the application works as planned, but doesn't look as designed (s
     ```html
     <body>
         <div data-montage-id="converter" class="Converter">
-            <div class="Controls">
-                <fieldset class="Numbers">
-                    <div class="Label">&deg;C
-                       <input data-montage-id="celsius">
-                    </div>
-                    <div class="Label">&deg;F
-                       <input data-montage-id="fahrenheit">
-                    </div>
-                </fieldset>
-                <fieldset class="Slider">
-                   <input data-montage-id="thermometer" class="Slider-handle" type="range" min="-13" max="122">
-                </fieldset>
-            </div>
+            <fieldset class="Numbers">
+                <div class="Label">&deg;C
+                   <input data-montage-id="celsius">
+                </div>
+                <div class="Label">&deg;F
+                   <input data-montage-id="fahrenheit">
+                </div>
+            </fieldset>
+            <fieldset class="Slider">
+               <input data-montage-id="thermometer" class="Slider-handle" type="range" min="-13" max="122">
+            </fieldset>
         </div>
     </body>
     ```
