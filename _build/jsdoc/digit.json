@@ -4,7 +4,8 @@
     },
     "source": {
         "include": [
-            "../node_modules/digit/ui/"
+            "../node_modules/digit/ui/",
+            "../node_modules/digit/node_modules/montage/externals.jsdoc"
         ],
         "exclude": [],
         "includePattern": ".+\\.js(doc)?$",
@@ -29,7 +30,9 @@
         "query": "value",
         "private": false,
         "lenient": true,
-        "commitish": "14fb57cacc9e1b52ef202685fbe6a97946c3a774"
+        "githubOrg": "montagejs",
+        "githubRepo": "digit",
+        "commitish": "a217d641380d37f875673e94f180c3def5c75335"
     },
     "jsVersion": 180
 }

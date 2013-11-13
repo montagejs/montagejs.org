@@ -32,6 +32,8 @@
         "query": "value",
         "private": false,
         "lenient": true,
+        "githubOrg": "montagejs",
+        "githubRepo": "montage",
         "commitish": "v0.13.6"
     },
     "jsVersion": 180
