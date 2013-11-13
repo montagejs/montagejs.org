@@ -259,14 +259,14 @@ function buildNav(members) {
         nav += '</ul></details>';
     }
 
-    if (members.tutorials.length) {
-        nav += '<details><summary>Tutorials</summary><ul>';
-        members.tutorials.forEach(function(t) {
-            nav += '<li>'+tutoriallink(t.name)+'</li>';
-        });
-
-        nav += '</ul></details>';
-    }
+//    if (members.tutorials.length) {
+//        nav += '<details><summary>Tutorials</summary><ul>';
+//        members.tutorials.forEach(function(t) {
+//            nav += '<li>'+tutoriallink(t.name)+'</li>';
+//        });
+//
+//        nav += '</ul></details>';
+//    }
 
     if (members.globals.length) {
         nav += '<details><summary>Global</summary><ul>';
