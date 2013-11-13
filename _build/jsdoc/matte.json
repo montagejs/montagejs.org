@@ -4,8 +4,8 @@
     },
     "source": {
         "include": [
-            "../node_modules/digit/ui/",
-            "../node_modules/digit/node_modules/montage/externals.jsdoc"
+            "../node_modules/matte/ui/",
+            "../node_modules/matte/node_modules/montage/externals.jsdoc"
         ],
         "exclude": [],
         "includePattern": ".+\\.js(doc)?$",
@@ -31,12 +31,12 @@
         "private": false,
         "lenient": true,
         "githubOrg": "montagejs",
-        "githubRepo": "digit",
-        "commitish": "a217d641380d37f875673e94f180c3def5c75335"
+        "githubRepo": "matte",
+        "commitish": ""
     },
     "repositoryId": {
-        "sha": "d8114c47bdee76b8f750c39dfc95bfee8a6ac341",
-        "message": "New digit logo"
+        "sha": "1713cf2df3ac98860a69362a772935d6d41cfe92",
+        "message": "Find and replace montage for matte..."
     },
     "jsVersion": 180
 }

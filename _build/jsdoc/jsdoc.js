@@ -42,30 +42,16 @@ module.exports = function (packageName, tag, outDir) {
         return defer.promise;
     })
     .then(function() {
-            console.log( "Even Rocky had a montage.");
         var defer = Q.defer();
-        var repo = {
-            montage: {
-                sha: "11ccc5566986d891716837105385daaaf8884980",
-                message: "Even Rocky had a montage."
-            },
-            digit: {
-                sha: "d8114c47bdee76b8f750c39dfc95bfee8a6ac341",
-                message: "New digit logo"
-            },
-            matte: {
-                sha: "1713cf2df3ac98860a69362a772935d6d41cfe92",
-                message: "Find and replace montage for matte..."
-            }
-        };
-        if (tag === "npm-link" && repo[packageName]) {
+        var repositoryId = require("./"+ packageName).repositoryId;
+        if (tag === "npm-link" && repositoryId) {
             var montagePath = path.join(mainPath, "..", "node_modules", packageName);
 
-            exec("git show -s --format=%B " + repo[packageName].sha, {cwd: montagePath}, function(error, stdout) {
+            exec("git show -s --format=%B " + repositoryId.sha, {cwd: montagePath}, function(error, stdout) {
                 if (error) {
                     defer.reject(error);
                 } else {
-                    if (stdout.trim() === repo[packageName].message) {
+                    if (stdout.trim() === repositoryId.message) {
                         exec("git rev-parse HEAD", {cwd: montagePath}, function(error, stdout) {
                             if (error) {
                                 defer.reject(error);
