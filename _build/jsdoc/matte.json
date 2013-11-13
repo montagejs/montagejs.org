@@ -4,10 +4,8 @@
     },
     "source": {
         "include": [
-            "../node_modules/montage/composer/",
-            "../node_modules/montage/core/",
-            "../node_modules/montage/ui/",
-            "../node_modules/montage/window-loader/"
+            "../node_modules/matte/ui/",
+            "../node_modules/matte/node_modules/montage/externals.jsdoc"
         ],
         "exclude": [],
         "includePattern": ".+\\.js(doc)?$",
@@ -26,19 +24,19 @@
     "opts": {
         "template": "./template",
         "encoding": "utf8",
-        "destination": "../../api",
+        "destination": "../../api/digit",
         "recurse": true,
         "tutorials": "./template",
         "query": "value",
         "private": false,
         "lenient": true,
         "githubOrg": "montagejs",
-        "githubRepo": "montage",
+        "githubRepo": "matte",
         "commitish": ""
     },
     "repositoryId": {
-        "sha": "11ccc5566986d891716837105385daaaf8884980",
-        "message": "Even Rocky had a montage."
+        "sha": "1713cf2df3ac98860a69362a772935d6d41cfe92",
+        "message": "Find and replace montage for matte..."
     },
     "jsVersion": 180
 }

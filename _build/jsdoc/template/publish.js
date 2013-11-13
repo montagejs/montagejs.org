@@ -27,14 +27,16 @@ function getAncestorLinks(doclet) {
     return helper.getAncestorLinks(data, doclet);
 }
 
+var githubUrlPrefix = 'https://github.com/' + env.opts.githubOrg + '/' + env.opts.githubRepo;
+
 function sourceLink(path, line) {
     //TODO: `replace` should not be necessary
     var filepath = path.replace(/^node_modules\/montage\//, '');
-    return '<a href="https://github.com/montagejs/montage/blob/master/' + filepath + '#L' + line + '">' + filepath + '</a>';
+    return '<a href="' + githubUrlPrefix + '/blob/' + env.opts.commitish + '/' + filepath + '#L' + line + '">' + filepath + '</a>';
 }
 
 function headCommitish(path) {
-    return '<a href="https://github.com/montagejs/montage/tree/' + env.opts.commitish + '">' + env.opts.commitish.slice(0, 7) + '</a>';
+    return '<a href="' + githubUrlPrefix + '/tree/' + env.opts.commitish + '">' + env.opts.commitish.slice(0, 7) + '</a>';
 }
 
 function hashToLink(doclet, hash) {
@@ -259,14 +261,14 @@ function buildNav(members) {
         nav += '</ul></details>';
     }
 
-    if (members.tutorials.length) {
-        nav += '<details><summary>Tutorials</summary><ul>';
-        members.tutorials.forEach(function(t) {
-            nav += '<li>'+tutoriallink(t.name)+'</li>';
-        });
-
-        nav += '</ul></details>';
-    }
+//    if (members.tutorials.length) {
+//        nav += '<details><summary>Tutorials</summary><ul>';
+//        members.tutorials.forEach(function(t) {
+//            nav += '<li>'+tutoriallink(t.name)+'</li>';
+//        });
+//
+//        nav += '</ul></details>';
+//    }
 
     if (members.globals.length) {
         nav += '<details><summary>Global</summary><ul>';
