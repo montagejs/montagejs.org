@@ -1,8 +1,20 @@
-<?js var data = obj;
+<?js
+var self = this;
+var data = obj;
 if (name.indexOf('_') !== 0) {
 ?>
 <dt>
-    <h4 class="name" id="<?js= id ?>"><?js= data.attribs + name + (data.signature ? data.signature : '') ?></h4>
+    <h4 class="name" id="<?js= id ?>">
+        <?js=
+            name +
+            (data.signature ? data.signature : '') +
+            ' ' +
+            data.attribs
+        ?>
+        <?js if (data.meta) { ?>
+            <span class="source"><?js= self.sourceLink(data.meta.filename, data.meta.lineno, 'L' + data.meta.lineno) ?></span>
+        <?js } ?>
+    </h4>
 
     <?js if (data.summary) { ?>
     <p class="summary"><?js= summary ?></p>

@@ -54,6 +54,10 @@
     display: none;
 }
 
+.source {
+    font-size: 70%;
+}
+
 .optional:after {
 	content: "opt";
 	font-size: 60%;

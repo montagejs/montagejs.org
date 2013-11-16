@@ -10,13 +10,18 @@
 <?js } else { ?>
 
 <header>
-    <h2><?js if (doc.ancestors && doc.ancestors.length) { ?>
-        <span class="ancestors"><?js= doc.ancestors.join('') ?></span>
-    <?js } ?>
-    <?js= doc.name ?>
-    <?js if (doc.variation) { ?>
-        <sup class="variation"><?js= doc.variation ?></sup>
-    <?js } ?></h2>
+    <h2>
+        <?js if (doc.ancestors && doc.ancestors.length) { ?>
+            <span class="ancestors"><?js= doc.ancestors.join('') ?></span>
+        <?js } ?>
+        <?js= doc.name ?>
+        <?js if (doc.variation) { ?>
+            <sup class="variation"><?js= doc.variation ?></sup>
+        <?js } ?>
+        <?js if (doc.meta) { ?>
+            <span class="source"><?js= self.sourceLink(doc.meta.filename, doc.meta.lineno) ?></span>
+        <?js } ?>
+    </h2>
     <?js if (doc.classdesc) { ?>
         <div class="class-description"><?js= doc.classdesc ?></div>
     <?js } ?>
@@ -24,10 +29,7 @@
 
 <article>
     <?js if (doc.augments && doc.augments.length) { ?>
-        <dl>
-            <dt>Extends</dt>
-            <dd><?js doc.augments.forEach(function(a) { ?><?js= self.linkto(a, a) ?> <?js }); ?></dd>
-        </dl>
+        <p>Specializes <?js doc.augments.forEach(function(a) { ?><?js= self.linkto(a, a) ?> <?js }); ?></p>
     <?js } ?>
     <div class="container-overview">
     <?js if (doc.kind === 'module' && doc.module) { ?>

@@ -3,7 +3,14 @@ var data = obj;
 var self = this;
 ?>
 <dt>
-    <h4 class="name" id="<?js= id ?>"><?js= (kind != 'class'? data.attribs + name + data.signature : '') ?></h4>
+    <?js if (kind !== "class" && kind !== "module") { ?>
+    <h4 class="name" id="<?js= id ?>">
+        <?js= name + data.signature + " " + data.attribs ?>
+        <?js if (data.meta) { ?>
+            <span class="source"><?js= self.sourceLink(data.meta.filename, data.meta.lineno, 'L' + data.meta.lineno) ?></span>
+        <?js } ?>
+    </h4>
+    <?js } ?>
 
     <?js if (data.summary) { ?>
     <p class="summary"><?js= summary ?></p>
@@ -58,16 +65,34 @@ var self = this;
     } } ?>
 
     <?js if (data.returns && returns.length) { ?>
-    <h5>Returns:</h5>
-    <?js if (returns.length > 1) { ?><ul><?js
-        returns.forEach(function(r) { ?>
-            <li><?js= self.partial('returns.tmpl', r) ?></li>
-        <?js });
-    ?></ul><?js } else {
-        returns.forEach(function(r) { ?>
-            <?js= self.partial('returns.tmpl', r) ?>
-        <?js });
-    } } ?>
+        <?js if (returns.length > 1) { ?>
+            <h5>Returns:</h5>
+            <ul><?js returns.forEach(function(result) { ?>
+                <li>
+                    <?js if (result.type && result.type.names) { ?>
+                        <span class="return-type"><?js= self.partial('type.tmpl', result.type.names) ?></span>
+                    <?js } ?>
+                    <?js if (result.description) { ?>
+                        <span class="param-desc">
+                            <?js= result.description ?>
+                        </span>
+                    <?js } ?>
+                </li>
+            <?js }); ?></ul>
+        <?js } else { ?>
+            <h5>
+                Returns:
+                <?js if (returns[0].type && returns[0].type.names) { ?>
+                    <span class="return-type"><?js= self.partial('type.tmpl', returns[0].type.names) ?></span>
+                <?js } ?>
+            </h5>
+            <?js if (returns[0].description) { ?>
+                <div class="param-desc">
+                    <?js= returns[0].description ?>
+                </div>
+            <?js } ?>
+        <?js } ?>
+    <?js } ?>
 
     <?js if (data.examples && examples.length) { ?>
         <h5>Example<?js= examples.length > 1? 's':'' ?></h5>
