@@ -277,17 +277,28 @@ hr {
     text-shadow: none;
 }
 
-.pushed .link {
-    color: hsl(200,100%,50%);
+.pushed a {
+    color: hsl(196,100%,50%);
 }
 
-.pushed .link:hover {
-    color: hsl(200,100%,70%);
+.pushed a:hover {
+    color: hsl(196,100%,60%);
 }
 
-.pushed .link:active {
-    color: hsl(200,100%,30%);
+.pushed a:active {
+    color: hsl(196,100%,40%);
 }
+
+.gallery.pushed .title {
+    color: hsl(0,0%,90%);
+    text-shadow: 0px 1px 0px hsl(0,0%,0%);
+}
+
+.gallery.pushed .wrapper {
+    color: hsl(0,0%,50%);
+    text-shadow: none;
+}
+
 
 
 /* Bar (background is light grey) ----------------------------------------- */
@@ -448,16 +459,6 @@ hr {
 
 /* Apps (gallery) ----------------------------------------- */
 
-.gallery .title {
-    color: hsl(0,0%,90%);
-    text-shadow: 0px 1px 0px hsl(0,0%,0%);
-}
-
-.gallery .wrapper {
-    color: hsl(0,0%,50%);
-    text-shadow: none;
-}
-
 .gallery-list {
     list-style: none;
     margin: 40px 0 0 0;
@@ -470,13 +471,6 @@ hr {
     display: inline-block;
     margin: 20px;
     text-align: center;
-}
-
-.gallery-item a {
-    color: hsl(0,0%,50%);
-}
-.gallery-item a:hover {
-    color: hsl(200,100%,50%);
 }
 
 .gallery-thumb {

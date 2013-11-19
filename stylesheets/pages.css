@@ -452,18 +452,6 @@ code[data-lang]:after {
     line-height: 1.5;
 }
 
-.gallery a {
-    color: hsl(196,100%,50%);
-}
-
-.gallery a:hover {
-    color: hsl(196,100%,60%);
-}
-
-.gallery a:active {
-    color: hsl(196,100%,40%);
-}
-
 .gallery .gallery-item-source {
     display: inline-block;
     padding: 0 8px;
