@@ -54,6 +54,12 @@
     display: none;
 }
 
+.source {
+    font-size: 70%;
+    float: right;
+    opacity: 0.5;
+}
+
 .optional:after {
 	content: "opt";
 	font-size: 60%;
