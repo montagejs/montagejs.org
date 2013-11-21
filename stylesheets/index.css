@@ -77,14 +77,30 @@
     }
 }
 
-/* Misc ----------------------------------------- */
 
-@media all and (max-width: 700px) {
-    .misc .col:nth-child(2) .title {
-        margin-top: 50px;
-    }
+
+/* Features ------------------------------------------- */
+
+.features img {
+    float: left;
+    width: 120px;
+    margin: 1.4em 1.4em 1em 0;
 }
 
+.features .cols,
+.features .col {
+    clear: both;
+}
+
+@media all and (max-width: 700px) {
+    .features .col {
+        margin-top: 50px;
+    }
+
+    .features .cols:first-child .col {
+        margin-top: 0;
+    }
+}
 
 /* Tools ----------------------------------------- */
 
