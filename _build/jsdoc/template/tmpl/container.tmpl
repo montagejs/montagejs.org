@@ -19,7 +19,7 @@
             <sup class="variation"><?js= doc.variation ?></sup>
         <?js } ?>
         <?js if (doc.meta) { ?>
-            <span class="source"><?js= self.sourceLink(doc.meta.filename, doc.meta.lineno) ?></span>
+            <span class="source"><?js= self.sourceLink(doc.meta.filename, doc.meta.lineno, 'source') ?></span>
         <?js } ?>
     </h2>
     <?js if (doc.classdesc) { ?>

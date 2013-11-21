@@ -12,7 +12,7 @@ if (name.indexOf('_') !== 0) {
             data.attribs
         ?>
         <?js if (data.meta) { ?>
-            <span class="source"><?js= self.sourceLink(data.meta.filename, data.meta.lineno, 'L' + data.meta.lineno) ?></span>
+            <span class="source"><?js= self.sourceLink(data.meta.filename, data.meta.lineno, 'source') ?></span>
         <?js } ?>
     </h4>
 
