@@ -26,6 +26,10 @@ h1 {
     line-height: 1;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
 ::-moz-selection { background: hsl(60, 86%, 88%); text-shadow: none; }
 ::selection { background: hsl(60, 86%, 88%); text-shadow: none; }
 
