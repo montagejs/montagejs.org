@@ -48,7 +48,7 @@ section {
 
 .wrapper {
     position: relative;
-    max-width: 1000px;
+    max-width: 960px;
     margin: 0 auto;
     font-size: 16px;
     line-height: 1.5em;
@@ -108,7 +108,7 @@ hr {
 
 .header-container {
     position: relative;
-    max-width: 1000px;
+    max-width: 960px;
     margin: 0 auto;
 }
 
