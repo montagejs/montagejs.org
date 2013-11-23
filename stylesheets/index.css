@@ -118,6 +118,16 @@
                       -webkit-linear-gradient(top, hsl(0,0%,97%), hsl(0,0%,90%) );
 }
 
+/* UI ------------------------------------------- */
+
+.theme-screenshot {
+    display: block;
+    margin-top: 1em;    
+    width: 100%;
+    max-width: 294px;
+}
+
+
 /* Gallery ------------------------------------------- */
 ul.gallery {
     text-align: center;
