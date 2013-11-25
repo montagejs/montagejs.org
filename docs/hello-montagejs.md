@@ -95,12 +95,12 @@ Follow these steps to add a new component to your project:
 4. Within the `<script>` tags, after the owner object (and before the montageVersion object), add the following snippet (note the trailing comma; you need it to separate objects from each other or your application will not load):
 
     ```json
-        "tempConverter": {
-            "prototype": "ui/converter.reel",
-            "properties": {
-                "element": {"#": "tempConverter"}
-            }
-        },
+    "tempConverter": {
+        "prototype": "ui/converter.reel",
+        "properties": {
+            "element": {"#": "tempConverter"}
+        }
+    },
     ```
     
     This declares an instance of the Converter component (`"prototype": "ui/converter.reel"`) with an object label of `tempConverter`. Its `element` property corresponds to the associated HTML element, which you added in the previous step (`<div data-montage-id="tempConverter"></div>`).
@@ -179,39 +179,38 @@ First, update the markup of the HTML elements you want to control with a `data-m
 2. Replace the contents within the existing `<script>` tags with the following block:
 
     ```json
-        {
-            "owner": {
-                "properties": {
-                    "element": {"#": "converter"}
-                }
-            },
-            
-            "celsiusNumberfield": {
-                "prototype": "digit/ui/number-field.reel",
-                "properties": {
-                    "element": {"#": "celsius"}
-                 }
-            },
-            
-            "fahrenheitNumberfield": {
-                "prototype": "digit/ui/number-field.reel",
-                "properties": {
-                    "element": {"#": "fahrenheit"}
-                }
-            },
-            
-            "thermometer": {
-                "prototype": "digit/ui/slider.reel",
-                "properties": {
-                    "element": {"#": "thermometer"},
-                    "axis": "vertical"
-                }
+    {
+        "owner": {
+            "properties": {
+                "element": {"#": "converter"}
+            }
+        },
+        
+        "celsiusNumberfield": {
+            "prototype": "digit/ui/number-field.reel",
+            "properties": {
+                "element": {"#": "celsius"}
+             }
+        },
+        
+        "fahrenheitNumberfield": {
+            "prototype": "digit/ui/number-field.reel",
+            "properties": {
+                "element": {"#": "fahrenheit"}
+            }
+        },
+        
+        "thermometer": {
+            "prototype": "digit/ui/slider.reel",
+            "properties": {
+                "element": {"#": "thermometer"},
+                "axis": "vertical"
             }
         }
+    }
     ```
 
     Things to note:
-    
     * The labels `celsiusNumberfield`, `fahrenheitNumberfield`, and `thermometer` identify the serialized objects that control the behavior of the corresponding HTML elements.
     * `prototype` identifies the directory that contains the code of that object's prototype (here you are using components from the Digit widget set that is part of your MontageJS project).
     * `properties` lists the values assigned to the properties of the current object. 
@@ -236,46 +235,45 @@ MontageJS uses functional reactive bindings (FRB), which you declare in the obje
 1. To help speed things up, replace the contents between the existing `<script>` tags with the following:
 
     ```json
-        {
-            "owner": {
-                "properties": {
-                    "element": {"#": "converter"}
-                }
+    {
+        "owner": {
+            "properties": {
+                "element": {"#": "converter"}
+            }
+        },
+        
+        "celsiusNumberfield": {
+            "prototype": "digit/ui/number-field.reel",
+            "properties": {
+                "element": {"#": "celsius"}
             },
-            
-            "celsiusNumberfield": {
-                "prototype": "digit/ui/number-field.reel",
-                "properties": {
-                    "element": {"#": "celsius"}
-                },
-                "bindings": {
-                    "value": {"<->": "(+@fahrenheitNumberfield.value - 32) / 1.8"}
-                }
+            "bindings": {
+                "value": {"<->": "(+@fahrenheitNumberfield.value - 32) / 1.8"}
+            }
+        },
+        
+        "fahrenheitNumberfield": {
+            "prototype": "digit/ui/number-field.reel",
+            "properties": {
+                "element": {"#": "fahrenheit"},
+                "value": "32"
+            }
+        },
+        
+        "thermometer": {
+            "prototype": "digit/ui/slider.reel",
+            "properties": {
+                "element": {"#": "thermometer"},
+                "axis": "vertical"
             },
-            
-            "fahrenheitNumberfield": {
-                "prototype": "digit/ui/number-field.reel",
-                "properties": {
-                    "element": {"#": "fahrenheit"},
-                    "value": "32"
-                }
-            },
-            
-            "thermometer": {
-                "prototype": "digit/ui/slider.reel",
-                "properties": {
-                    "element": {"#": "thermometer"},
-                    "axis": "vertical"
-                },
-                "bindings": {
-                    "value": {"<->": "@fahrenheitNumberfield.value"}
-                }
+            "bindings": {
+                "value": {"<->": "@fahrenheitNumberfield.value"}
             }
         }
+    }
     ```
 
     Things to note:
-    
     * The default value of the Fahrenheit field is set to 32; this is the initial state of the converter when loaded in the browser.
     * Two-way bindings (<->) are established between:
         * The value of the celsiusNumberfield object (`(+@fahrenheitTextfield.value - 32) / 1.8`) and the value of the fahrenheitNumberfield object (`32`).
@@ -310,7 +308,6 @@ First, you need to specify CSS class names in the markup of your component.
     ```
 
     Things to note:
-    
     * Added class names to control the layout and appearance of the input fields (`Numbers`), labels (`Label`), slider (`Slider`), and slider knob (`Slider-handle`).
     * Set minimum (`-13`) and maximum (`122`) values allowed in the Fahrenheit field (the slider has two-way bindings with the Fahrenheit field, hence this setting is bound to the Fahrenheit field).
     
@@ -320,71 +317,71 @@ First, you need to specify CSS class names in the markup of your component.
 
 3. Replace the sparse contents of the file with the following rules:
 
-    ```
-.Converter {
-    margin: 20px auto;
-    padding: 20px;
-    width: 274px;
-    border-radius: 10px;
-    background-color: hsl(0,0%,98%);
-    box-shadow: inset 0px 1px 2px 1px hsla(0,0%,100%,1), 0px 2px 5px hsla(0,0%,0%,.1);
-}
-
-.Converter:after {
-    content: "";
-    display: block;
-    clear: both;
-}
-
-.Numbers {
-    float: left;
-    border: none;
-    margin: 0;
-    padding: 0;
-}
-
-.Label {
-    margin: 15px 0;
-    line-height: 40px;
-    font-size: 1.2em;
-}
-
-.Label .digit-NumberField-input {
-    width: 70px;
-    vertical-align: middle;
-}
-
-.Slider {
-    float: right;
-    margin: 0;
-    padding: 8px 4px;
-    border-radius: 100px;
-    border: none;
-    box-shadow: inset 0px 1px 3px hsla(0,0%,0%,.3), 
-                0 2px 0 hsla(0,0%,100%,1);
-    background: -webkit-linear-gradient(bottom,
-                hsl(200,100%,50%),
-                hsl(200,100%,80%) 30%,
-                hsl(60,100%,65%) 50%,
-                hsl(0,100%,80%) 70%,
-                hsl(0,100%,50%) );
-    background: linear-gradient(to top,
-                hsl(200,100%,50%),
-                hsl(200,100%,80%) 30%,
-                hsl(60,100%,65%) 50%,
-                hsl(0,100%,80%) 70%,
-                hsl(0,100%,50%) );
-}
-
-.Slider-handle.digit-Slider.montage-Slider--vertical {
-    height: 120px;
-}
-
-.Slider-handle.digit-Slider {
-    background-color: transparent;
-    border-color: transparent;
-    box-shadow: none;
-}
+    ```css
+    .Converter {
+        margin: 20px auto;
+        padding: 20px;
+        width: 274px;
+        border-radius: 10px;
+        background-color: hsl(0,0%,98%);
+        box-shadow: inset 0px 1px 2px 1px hsla(0,0%,100%,1), 0px 2px 5px hsla(0,0%,0%,.1);
+    }
+    
+    .Converter:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+    
+    .Numbers {
+        float: left;
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .Label {
+        margin: 15px 0;
+        line-height: 40px;
+        font-size: 1.2em;
+    }
+    
+    .Label .digit-NumberField-input {
+        width: 70px;
+        vertical-align: middle;
+    }
+    
+    .Slider {
+        float: right;
+        margin: 0;
+        padding: 8px 4px;
+        border-radius: 100px;
+        border: none;
+        box-shadow: inset 0px 1px 3px hsla(0,0%,0%,.3), 
+                    0 2px 0 hsla(0,0%,100%,1);
+        background: -webkit-linear-gradient(bottom,
+                    hsl(200,100%,50%),
+                    hsl(200,100%,80%) 30%,
+                    hsl(60,100%,65%) 50%,
+                    hsl(0,100%,80%) 70%,
+                    hsl(0,100%,50%) );
+        background: linear-gradient(to top,
+                    hsl(200,100%,50%),
+                    hsl(200,100%,80%) 30%,
+                    hsl(60,100%,65%) 50%,
+                    hsl(0,100%,80%) 70%,
+                    hsl(0,100%,50%) );
+    }
+    
+    .Slider-handle.digit-Slider.montage-Slider--vertical {
+        height: 120px;
+    }
+    
+    .Slider-handle.digit-Slider {
+        background-color: transparent;
+        border-color: transparent;
+        box-shadow: none;
+    }
     ```
 
 4. Save the changes and refresh your browser.
@@ -411,7 +408,6 @@ Next, add some CSS rules to control the appearance of the Main component.
     ```
     
     Things to note:
-    
     * The `<h1>` element has been updated with the  `data-montage-id` attribute of `title`.
     * The string "Temperature Converter" has been removed from the markup; the value of the `<h1>` element is now declared by the title object in the serialization (see the following step).
     * The Montage version div tags have been replaced with `footer` tags.
@@ -419,13 +415,13 @@ Next, add some CSS rules to control the appearance of the Main component.
 2. Following the tempConverter object within the `<script>` tags, add the following snippet (remember: you need the trailing comma to separate objects from each other):
 
     ```json
-        "title": {
-            "prototype": "digit/ui/title.reel",
-            "properties": {
-                "element": {"#": "title"},
-                "value": "Temperature Converter"
-            }
-        },
+    "title": {
+        "prototype": "digit/ui/title.reel",
+        "properties": {
+            "element": {"#": "title"},
+            "value": "Temperature Converter"
+        }
+    },
     ```
 
     This declares an instance of the Title component and sets the value of the `h1` element to `Temperature Converter`.
@@ -433,26 +429,26 @@ Next, add some CSS rules to control the appearance of the Main component.
 3. Open ui/main.reel/main.css and replace the existing content with the following rules:
 
     ```css
-* {
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    font-family: "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
-    color: hsl(0,0%,60%);
-    background-color: hsl(0,0%,95%);
-}
-
-.Main {
-    padding: 3em 1em;
-    text-align: center;
-}
-
-.Title {
-    font-size: 1.3em;
-}
+    * {
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    
+    body {
+        margin: 0;
+        font-family: "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+        color: hsl(0,0%,60%);
+        background-color: hsl(0,0%,95%);
+    }
+    
+    .Main {
+        padding: 3em 1em;
+        text-align: center;
+    }
+    
+    .Title {
+        font-size: 1.3em;
+    }
     ```
     
 4. Save the changes and refresh your browser.
@@ -500,7 +496,7 @@ That's it. You've built a simple MontageJS application and then optimized the so
 
 Yet, you've barely scratched the surface of what you can do with MontageJS.
 
-#Next Steps
+# Next Steps
 
 * To learn more about using MontageJS, see the guides and demos in the [Documentation](http://montagejs.org/docs/).
 * For an overview of the MontageJS widget sets, check out the [Themes](http://montagejs.org/docs/themes.html) sections.
