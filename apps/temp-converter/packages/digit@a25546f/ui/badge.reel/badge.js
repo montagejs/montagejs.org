@@ -1,0 +1,1 @@
+var Text=require("montage/ui/text.reel").Text;exports.Badge=Text.specialize({hasTemplate:{value:!0},constructor:{value:function(){this.super(),this.classList.add("digit-Badge")}},value:{set:function(e){e=parseInt(e,10),Object.getOwnPropertyDescriptor(Text,"value").set.call(this,e)},get:function(){return Object.getOwnPropertyDescriptor(Text,"value").get.call(this)}}});

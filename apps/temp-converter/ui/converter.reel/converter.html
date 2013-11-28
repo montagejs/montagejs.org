@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="converter.css" />
+    <script type="text/montage-serialization">{"owner":{"properties":{"element":{"#":"converter"}}},"celsiusNumberfield":{"prototype":"digit/ui/number-field.reel","properties":{"element":{"#":"celsius"}},"bindings":{"value":{"<->":"(+@fahrenheitNumberfield.value - 32) / 1.8"}}},"fahrenheitNumberfield":{"prototype":"digit/ui/number-field.reel","properties":{"element":{"#":"fahrenheit"},"value":"32"}},"thermometer":{"prototype":"digit/ui/slider.reel","properties":{"element":{"#":"thermometer"},"axis":"vertical"},"bindings":{"value":{"<->":"@fahrenheitNumberfield.value"}}}}</script>
+</head>
+<body>
+    <div data-montage-id="converter" class="Converter">
+        <fieldset class="Numbers">
+            <div class="Label">°C
+               <input type="text" data-montage-id="celsius" />
+            </div>
+            <div class="Label">°F
+               <input type="text" data-montage-id="fahrenheit" />
+            </div>
+        </fieldset>
+        <fieldset class="Slider">
+           <input type="range" data-montage-id="thermometer" class="Slider-handle" min="-13" max="122" />
+        </fieldset>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+var NativeInputCheckbox=require("native/ui/input-checkbox.reel").InputCheckbox;exports.InputCheckbox=NativeInputCheckbox.specialize({hasTemplate:{value:!0},constructor:{value:function(){this.super(),this.classList.add("matte-InputCheckbox")}}});

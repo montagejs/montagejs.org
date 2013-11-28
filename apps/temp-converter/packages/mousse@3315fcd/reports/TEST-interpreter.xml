@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+<testsuite name="interpreter" errors="0" tests="0" failures="0" time="0" timestamp="2013-06-19T17:27:09">
+</testsuite>
+<testsuite name="interpreter.native values with labels" errors="0" tests="0" failures="0" time="0" timestamp="2013-06-19T17:27:08">
+</testsuite>
+<testsuite name="interpreter.native values with labels.string" errors="0" tests="1" failures="0" time="0.001" timestamp="2013-06-19T17:27:08">
+  <testcase classname="interpreter.native values with labels.string" name="should deserialize a labled string" time="0"></testcase>
+</testsuite>
+<testsuite name="interpreter.native values with labels.number" errors="0" tests="3" failures="0" time="0.011" timestamp="2013-06-19T17:27:08">
+  <testcase classname="interpreter.native values with labels.number" name="should deserialize a labled positive number" time="0.003"></testcase>
+  <testcase classname="interpreter.native values with labels.number" name="should deserialize a labled negative number" time="0.001"></testcase>
+  <testcase classname="interpreter.native values with labels.number" name="should deserialize a labled rational number" time="0.001"></testcase>
+</testsuite>
+<testsuite name="interpreter.native values with labels.boolean" errors="0" tests="2" failures="0" time="0.008" timestamp="2013-06-19T17:27:08">
+  <testcase classname="interpreter.native values with labels.boolean" name="should deserialize a labled true" time="0.002"></testcase>
+  <testcase classname="interpreter.native values with labels.boolean" name="should deserialize a labled false" time="0"></testcase>
+</testsuite>
+<testsuite name="interpreter.native values with labels.null" errors="0" tests="1" failures="0" time="0.006" timestamp="2013-06-19T17:27:08">
+  <testcase classname="interpreter.native values with labels.null" name="should deserialize a labled null" time="0.002"></testcase>
+</testsuite>
+<testsuite name="interpreter.objects with labels" errors="0" tests="1" failures="0" time="0.002" timestamp="2013-06-19T17:27:09">
+  <testcase classname="interpreter.objects with labels" name="should deserialize an object labeled clear" time="0.001"></testcase>
+</testsuite>
+<testsuite name="interpreter.objects with labels.array" errors="0" tests="2" failures="0" time="0.01" timestamp="2013-06-19T17:27:08">
+  <testcase classname="interpreter.objects with labels.array" name="should deserialize a labled empty array" time="0.001"></testcase>
+  <testcase classname="interpreter.objects with labels.array" name="should deserialize a labled array" time="0.002"></testcase>
+</testsuite>
+<testsuite name="interpreter.objects with labels.regular expression" errors="0" tests="1" failures="0" time="0.001" timestamp="2013-06-19T17:27:08">
+  <testcase classname="interpreter.objects with labels.regular expression" name="should deserialize a labled regexp" time="0"></testcase>
+</testsuite>
+<testsuite name="interpreter.objects with labels.object literal" errors="0" tests="1" failures="0" time="0.002" timestamp="2013-06-19T17:27:09">
+  <testcase classname="interpreter.objects with labels.object literal" name="should deserialize a labled object literal" time="0.002"></testcase>
+</testsuite>
+<testsuite name="interpreter.object references" errors="0" tests="4" failures="0" time="0.029" timestamp="2013-06-19T17:27:09">
+  <testcase classname="interpreter.object references" name="should deserialize an object reference in a property" time="0"></testcase>
+  <testcase classname="interpreter.object references" name="should deserialize an object reference in an array" time="0.013"></testcase>
+  <testcase classname="interpreter.object references" name="should deserialize an object with a self reference" time="0.002"></testcase>
+  <testcase classname="interpreter.object references" name="should deserialize objects with mutual references" time="0.001"></testcase>
+</testsuite>
+<testsuite name="interpreter.object references" errors="0" tests="3" failures="0" time="0.011" timestamp="2013-06-19T17:27:09">
+  <testcase classname="interpreter.object references" name="should deserialize an object reference in a property" time="0.006"></testcase>
+  <testcase classname="interpreter.object references" name="should deserialize an object reference in an array" time="0.001"></testcase>
+  <testcase classname="interpreter.object references" name="should deserialize an object reference as a value" time="0"></testcase>
+</testsuite>
+<testsuite name="interpreter.instances" errors="0" tests="3" failures="0" time="0.002" timestamp="2013-06-19T17:27:09">
+  <testcase classname="interpreter.instances" name="should use instances to deserialize" time="0.001"></testcase>
+  <testcase classname="interpreter.instances" name="should use instances to deserialize a reference" time="0"></testcase>
+  <testcase classname="interpreter.instances" name="should use instances to deserialize an external object" time="0.001"></testcase>
+</testsuite>
+<testsuite name="interpreter.errors" errors="0" tests="1" failures="0" time="0.004" timestamp="2013-06-19T17:27:09">
+  <testcase classname="interpreter.errors" name="should warn about broken references" time="0.001"></testcase>
+</testsuite>
+</testsuites>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+<testsuite name="visitor" errors="0" tests="0" failures="0" time="0" timestamp="2013-06-19T17:27:09">
+</testsuite>
+<testsuite name="visitor.custom objects serialization" errors="0" tests="3" failures="0" time="0.002" timestamp="2013-06-19T17:27:09">
+  <testcase classname="visitor.custom objects serialization" name="should serialize a custom object" time="0"></testcase>
+  <testcase classname="visitor.custom objects serialization" name="should visit different types of custom objects in different visitors" time="0.001"></testcase>
+  <testcase classname="visitor.custom objects serialization" name="should visit different types of custom objects in the same visitor" time="0.001"></testcase>
+</testsuite>
+</testsuites>

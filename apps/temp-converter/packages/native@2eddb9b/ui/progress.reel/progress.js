@@ -1,0 +1,1 @@
+var NativeControl=require("ui/native-control").NativeControl,Progress=exports.Progress=NativeControl.specialize({});Progress.addAttributes({form:null,max:{dataType:"number"},value:{dataType:"number"}});
