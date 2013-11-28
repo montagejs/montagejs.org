@@ -16,7 +16,7 @@ You've just finished setting up and verifying your first MontageJS project, and 
 In this tutorial you will assemble and prepare for deployment a simple, mobile-friendly MontageJS application that converts degrees in Celsius to Fahrenheit and vice versa (see Figure 1). The application consists of three elements—two input fields and a slider—whose values are bound together. When you enter a numeric value in one input field, the numeric value in the other updates automatically and the slider moves to reflect the chosen value. Likewise, when you drag the slider, the numeric values in the input fields are updated to reflect the value of the slider at the current position.
 
 <figure>
-	<img class="img--66" src="/images/docs/hello-montagejs/fig01.jpg" alt="The final application.">
+	<img class="img--66" src="/images/docs/hello-montagejs/fig01.jpg" alt="The final application." style="max-width: 380px;">
 	<figcaption><strong>Figure 1.</strong> Your goal is to build this temperature converter application.</figcaption>
 </figure>
 
@@ -52,7 +52,7 @@ You should see a blank page with a version reference in the upper left corner of
 MontageJS application development is divided into a development (creating the application) phase and a production (optimizing the application) phase. In development, you assemble an application out of encapsulated components. These components are stored in the ui directory of your project and identified by a .reel suffix (see Figure 2).
 
 <figure>
-	<img class="img--66" src="/images/docs/hello-montagejs/fig02.jpg" alt="Default application starter template.">
+	<img class="img--66" src="/images/docs/hello-montagejs/fig02.jpg" alt="Default application starter template." style="max-width: 380px;">
 	<figcaption><strong>Figure 2.</strong> User interface components are stored in the ui directory of your application.</figcaption>
 </figure>
 
@@ -63,7 +63,7 @@ Figure 3 identifies the components that make up the view layer of the applicatio
 >**Note:** Although you could conceivably build an entire application using only the Main component, we recommend you assemble MontageJS applications out of individual components (just like you build a website out of individual pages)—to make the most of what MontageJS has to offer, including a modular architecture and encapsulated and reusable components. 
 
 <figure>
-	<img src="/images/docs/hello-montagejs/fig03.jpg" alt="The components of the application.">
+	<img src="/images/docs/hello-montagejs/fig03.jpg" alt="The components of the application." style="max-width: 493px;">
 	<figcaption><strong>Figure 3.</strong> The components that make up the temperature converter application.</figcaption>
 </figure>
 
@@ -110,7 +110,7 @@ Follow these steps to add a new component to your project:
 If all went well, you should see the title of the application and the Montage version number (see Figure 4). Since you have not specified any content in the Converter component yet, it remains invisible. (If you only get a blank page, verify that the objects between the `<script>` tags are separated by commas.)
 
 <figure>
-	<img class="img--66" src="/images/docs/hello-montagejs/fig04.jpg" alt="The skeleton of the application.">
+	<img src="/images/docs/hello-montagejs/fig04.jpg" alt="The skeleton of the application." style="max-width: 380px;">
 	<figcaption><strong>Figure 4.</strong> The Main component with the title and MontageJS version number of the application.</figcaption>
 </figure>
 
@@ -144,7 +144,7 @@ The application you are going to build has four elements—a title, two numeric 
 You should see two input fields and a slider control (see Figure 5).
 
 <figure>
-	<img class="img--66" src="/images/docs/hello-montagejs/fig05.jpg" alt="The basic elements of your application.">
+	<img src="/images/docs/hello-montagejs/fig05.jpg" alt="The basic elements of your application." style="max-width: 380px;">
 	<figcaption><strong>Figure 5.</strong> The basic elements of your application rendered using the browser's default style sheet.</figcaption>
 </figure>
 
@@ -222,7 +222,7 @@ First, update the markup of the HTML elements you want to control with a `data-m
 Setting the `data-montage-id` custom data attribute now initializes your markup using the default styles of the mobile-optimized Digit user interface components (see Figure 6).
 
 <figure>
-	<img class="img--66" src="/images/docs/hello-montagejs/fig06.jpg" alt="The DOM elements extended with Digit components.">
+	<img src="/images/docs/hello-montagejs/fig06.jpg" alt="The DOM elements extended with Digit components." style="max-width: 380px;">
 	<figcaption><strong>Figure 6.</strong> The DOM elements extended with Digit components.</figcaption>
 </figure>
 
@@ -389,7 +389,7 @@ First, you need to specify CSS class names in the markup of your component.
 At this point your application should look like Figure 7.
 
 <figure>
-	<img class="img--66" src="/images/docs/hello-montagejs/fig07.jpg" alt="The styled Converter component.">
+	<img src="/images/docs/hello-montagejs/fig07.jpg" alt="The styled Converter component." style="max-width: 380px;">
 	<figcaption><strong>Figure 7.</strong> The application with the styled Converter component.</figcaption>
 </figure>
 
@@ -456,7 +456,7 @@ Next, add some CSS rules to control the appearance of the Main component.
 If all went well, your application should resemble the one shown in Figure 8: a functional and pretty temperature converter.
 
 <figure>
-	<img class="img--66" src="/images/docs/hello-montagejs/fig08.jpg" alt="The styled Converter and Main components.">
+	<img src="/images/docs/hello-montagejs/fig08.jpg" alt="The styled Converter and Main components." style="max-width: 380px;">
 	<figcaption><strong>Figure 8.</strong> The final application with the styled Converter and Main components.</figcaption>
 </figure>
 
