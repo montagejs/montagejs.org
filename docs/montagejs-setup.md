@@ -80,7 +80,7 @@ To verify your setup:
     If all went well, you should see a blank page with a version reference in the upper left corner of the page (see Figure 1).
     
 <figure>
-	<img src="/images/docs/montagejs-setup/fig01.jpg" alt="MontageJS development is set up.">
+	<img src="/images/docs/montagejs-setup/fig01.jpg" alt="MontageJS development is set up." style="width: 451px;">
 	<figcaption><strong>Figure 1.</strong> MontageJS development is set up.</figcaption>
 </figure>
     
