@@ -19,7 +19,7 @@ This `content` property can be set directly with a typical array for simple repe
 Repetitions expose a special bindable property `objectAtCurrentIteration` intended for use by repeated components to reach the object within the `content` property related to that iteration.
 
 ## Basic usage
-http://montagejs.github.io/mfiddle/#!/7759998
+http://montagejs.github.io/mfiddle/#!/7760932
 
 This example sets a repetition's `contentController` property to be a `RangeController` managing some content.
 
