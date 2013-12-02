@@ -29,6 +29,8 @@ The following components are pre-built MontageJS components.
 #### Converters
 * [Number converters](http://montagejs.github.io/mfiddle/#!/5904344)
 
+#### Pattern
+* [Sorting a Repetition](http://montagejs.github.io/mfiddle/#!/7651480)
 
 ## UI Components (Digit)
 The following components are part of the touch-optimized Digit widget set, which is part of the default MontageJS installation. 

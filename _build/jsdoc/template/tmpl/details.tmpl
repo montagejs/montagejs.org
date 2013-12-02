@@ -5,7 +5,7 @@ var self = this;
 
 <?js
     var properties = data.properties;
-    if (properties && properties.length && properties.forEach) { 
+    if (properties && properties.length && properties.forEach) {
 ?>
     <h5 class="subsection-title">Properties:</h5>
     <dl><?js= this.partial('properties.tmpl', properties) ?></dl>
@@ -18,7 +18,7 @@ var self = this;
         <td class="details-content tag-version"><ul class="dummy"><li><?js= version ?></li></ul></td>
     </tr>
     <?js } ?>
-    
+
     <?js if (data.since) {?>
 	<tr>
 	    <th class="details-header tag-since">Since:</th>
@@ -38,7 +38,7 @@ var self = this;
 		</td>
 	</tr>
     <?js } ?>
-    
+
     <?js if (data.deprecated) { ?>
 	<tr>
 		<th class="details-header important tag-deprecated">Deprecated:</th>
@@ -49,7 +49,7 @@ var self = this;
 		</td>
 	</tr>
     <?js } ?>
-    
+
     <?js if (data.author && author.length) {?>
 	<tr>
 	    <th class="details-header tag-author">Author:</th>
@@ -60,37 +60,28 @@ var self = this;
 		</td>
 	</tr>
     <?js } ?>
-    
+
     <?js if (data.copyright) {?>
 	<tr>
 	    <th class="details-header tag-copyright">Copyright:</th>
 	    <td class="details-content tag-copyright"><ul class="dummy"><li><?js= copyright ?></li></ul></td>
 	</tr>
     <?js } ?>
-    
+
     <?js if (data.license) {?>
 	<tr>
 	    <th class="details-header tag-license">License:</th>
 	    <td class="details-content tag-license"><ul class="dummy"><li><?js= license ?></li></ul></td>
 		</tr>
 	<?js } ?>
-    
+
     <?js if (data.defaultvalue) {?>
 	<tr>
 	    <th class="details-header tag-default">Default Value:</th>
 	    <td class="details-content tag-default"><ul class="dummy"><li><?js= data.defaultvalue ?></li></ul></td>
 	</tr>
 	<?js } ?>
-    
-    <?js if (data.meta) {?>
-	<tr>
-	    <th class="details-header tag-source">Source:</th>
-	    <td class="details-content tag-source"><ul class="dummy"><li>
-	        <?js= self.sourceLink(meta.filename, meta.lineno) ?>, line <?js= meta.lineno ?>
-	    </li></ul></td>
-	</tr>
-    <?js } ?>
-    
+
     <?js if (data.tutorials && tutorials.length) {?>
 	<tr>
 	    <th class="details-header tag-tutorial">Tutorials:</th>
@@ -101,7 +92,7 @@ var self = this;
 	    </td>
 	</tr>
     <?js } ?>
-    
+
     <?js if (data.see && see.length) {?>
 	<tr>
 	    <th class="details-header tag-see">See:</th>
@@ -112,7 +103,7 @@ var self = this;
 	    </td>
 	</tr>
     <?js } ?>
-    
+
     <?js if (data.todo && todo.length) {?>
 	<tr>
 	    <th class="details-header tag-todo">To Do:</th>

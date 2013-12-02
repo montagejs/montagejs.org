@@ -1,7 +1,7 @@
 ---
 
 layout: docs
-title: Set Up MontageJS - Quick Start part 1
+title: Set Up MontageJS Development - Getting Started Part 1
 
 prev-page: index
 this-page: montagejs-setup
@@ -9,71 +9,85 @@ next-page: hello-montagejs
 
 ---
 
-# Getting Started
+# Getting Started with MontageJS
 
-This tutorial will show you how to set up MontageJS development. It is part 1 of our MontageJS quick start; however, the steps outlined here apply to any MontageJS project. To make the most of this tutorial, you should have a basic understanding of HTML, CSS, and JavaScript and some familiarity with working in a command-line environment.
+MontageJS is an HTML5 framework for building rich single-page applications (SPAs). The framework features mobile-optimized user interface widgets, logic-less templates, reusable components, simple and two-way bindings between components and objects, implicit event delegation, a managed draw cycle, and powerful command line tools for kickstarting and compiling SPA projects.
 
->**Note**: If you are unfamiliar with the common convention to denote the command line, note that a leading dollar sign ($) indicates that what follows is a command to be run; it is not part of the command. In other words, do not type the leading dollar sign at the beginning of a command line when following the instructions in this document.
+# A Note about MontageJS
+Most framework developers provide you with a download link to code libraries. These code libraries are designed to make a web application developer's life easier. Unfortunately, they typically also include a lot more functionality than is needed for any given project. Consequently, most web applications tend to include massive libraries that have a lot more parts than the application requires.
 
-## Requirements
-MontageJS application development is divided into a development (creating the app) phase and a production (compiling the app) phase. For the development phase you need:
+MontageJS takes a different approach to developing web applications. With MontageJS you do not download or link to a prebuilt, kitchensink-style solution in your application. MontageJS uses the CommonJS module system and is part of the npm package ecosystem. This makes it easy for developers to set up a client-side development environment and organize and manage their code base. In development, you supplement your code with the modules and components that provide just the functionality you need. Then, come production time, you use Mop, the Montage optimizer, to sift through your developer-optimized experience, analyze your project and its dependencies, and then create a minified version of your source code that includes only those modules and components that your application actually uses—nothing more.
 
-* Node.js and npm. MontageJS application development depends on npm, the Node package manager, which is distributed with Node.js.
-* A recent stable release of Google Chrome, Safari, or Firefox. MontageJS leverages the evolving web platform of modern browsers.
-* `minit`, the MontageJS Initilizer. `minit` is a cross-platform command line tool that provides convenient automated tasks during the development phase, from generating the default application directory to creating new components.
-* A text editor.
+# Setting Up MontageJS Development
 
+Before you can start building applications with MontageJS, you need to set up your development environment. The setup involves installing the following software package and command line tools:
 
-## Set Up MontageJS Development
+* Node.js and npm
+* Minit, the MontageJS initializer
 
-Before you start to learn how to program with MontageJS, you will need to set up your development environment. Follow these steps:
+You also need a recent stable release of Google Chrome, Safari, or Firefox.
 
-1. [Download](http://nodejs.org/download/) and run the prebuilt Node.js installer for your platform from the Node.js website.
+## Before You Begin
 
-2. Install the latest version of `minit`, the MontageJS Initializer.
+<a href="http://nodejs.org/download/" target="_blank">Download</a> and run the prebuilt Node.js installer for your platform from the Node.js website if you haven't already. MontageJS uses Node.js and npm, which is part of the Node.js installation, for its command line tools and for version and code dependency management in development.
 
-    **Mac OS X / Linux**
-    
-    Open a Terminal window and type: 
+## Step 1: Install Minit
+
+The Minit command line tool provides a convenient way to kickstart your MontageJS projects. With Minit you can quickly generate an application template that includes everything you need to start building a mobile-optimized SPA. Use the following commands to install the latest version of Minit for your platform:
+
+* **Mac OS X / Linux:** Open a Terminal window and type:
 
     ```
     $ sudo npm install -gq minit@latest
     ```
 
-    > **Note**: `minit` does not need sudo access; npm does require it though for global install.
+    > **Note**: Minit does not need `sudo` access; npm uses `sudo` for greater safety when installing packages. When run as root, npm will downgrade permissions before running any build scripts that package authors specified. For more details see the npm <a href="https://npmjs.org/doc/README.html" target="_blank">readme</a>.
 
-    **Windows**
-    
-    Open the Command Prompt and type:
+* **Windows:** Open the Command Prompt and type:
 
     ```
     npm install -gq minit@latest
     ```
 
-3. Use `minit` to create a new MontageJS project called "hello":
+## Step 2: Create a New Project
+
+To create a new MontageJS project, enter the following command at the prompt (<em>app-name</em> = a short and descriptive name of your choice):
+
+```
+$ minit create:app -n app-name
+```
+
+This generates the _app-name_ directory—which includes the MontageJS code dependencies—in your current directory.
+
+>**Note**: For a brief overview of the files and folders included in a default MontageJS project, see the readme file in the "app-name" project directory.
+
+
+## Step 3: Verify Your Setup
+
+To verify your setup:
+
+1. Switch to the _app-name_ directory and use Minit to serve your project:
 
     ```
-    $ minit create:app -n hello
-    ```
-
-    This generates the hello directory—which contains the default MontageJS application template, including the production dependencies—in your current directory.
-
-4. To verify your installation, switch to the hello directory and serve your new MontageJS project using `minit`:
-
-    ```
-    $ cd hello
+    $ cd app-name
     $ minit serve &
     ```
-    > **Note**: During development MontageJS applications rely on XHR to load their various components and modules, which is why you need a server to preview your project in progress; `minit serve &` sets up an on demand web server to serve your project. Note also that using the ampersand (&) option ensures that you don't have to open a second Terminal window when stepping through the remainder of this tutorial.
-    
-5. Point your browser to http://localhost:8083/.
 
-    You should see the contents of the Welcome component—a simple single-page application, which is explicitly loaded to accompany part 2 of our quick start tutorial, [Hello MontageJS](http://montagejs.org/docs/hello-montagejs.html).
+    >**Note:** In development, MontageJS applications rely on the XMLHttpRequest (XHR) API to load components and modules (which is why you need a server to preview your project in progress); `minit serve &` sets up a local on-demand web server. The ampersand (`&`) option ensures that you don't have to open a second Terminal window while working on your project.
+
+2. Point your browser to http://localhost:8083/.
+
+    If all went well, you should see a blank page with a version reference in the upper left corner of the page (see Figure 1).
     
-    ![GS_Figure1](/images/docs/gs_tut_fig_01.png)
+<figure>
+	<img src="/images/docs/montagejs-setup/fig01.jpg" alt="MontageJS development is set up." style="width: 451px;">
+	<figcaption><strong>Figure 1.</strong> MontageJS development is set up.</figcaption>
+</figure>
     
 You are now ready to start coding.
 
-For a quick introduction on the basics of how to assemble MontageJS components into a user interface, continue with [part 2](http://montagejs.org/docs/hello-montagejs.html) of our quick start tutorial. 
+#Next Steps
 
-If you prefer to explore MontageJS development on your own, refer to the documentation or the MontageJS [examples](montagejs-examples.html).
+* To learn how to build a simple MontageJS application, continue with [Hello MontageJS](http://montagejs.org/docs/hello-montagejs.html).
+* To explore MontageJS on your own, check out the demos and articles in the [Documentation](http://montagejs.org/docs/) section.
+

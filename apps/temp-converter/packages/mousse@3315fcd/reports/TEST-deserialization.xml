@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+<testsuite name="deserialization" errors="0" tests="5" failures="0" time="0.039" timestamp="2013-06-19T17:27:08">
+  <testcase classname="deserialization" name="should deserialize a serialization string" time="0.003"></testcase>
+  <testcase classname="deserialization" name="should deserialize an object from a serialization string" time="0.002"></testcase>
+  <testcase classname="deserialization" name="should deserialize an external object from a serialization string" time="0.001"></testcase>
+  <testcase classname="deserialization" name="should fail deserializing a missing external object from a serialization string" time="0.003"></testcase>
+  <testcase classname="deserialization" name="should be oblivious to Object.prototype aditions" time="0.001"></testcase>
+</testsuite>
+<testsuite name="deserialization.shorthand" errors="0" tests="1" failures="0" time="0.002" timestamp="2013-06-19T17:27:08">
+  <testcase classname="deserialization.shorthand" name="should deserialize an object from a serialization string" time="0.001"></testcase>
+</testsuite>
+<testsuite name="deserialization.errors" errors="0" tests="1" failures="0" time="0" timestamp="2013-06-19T17:27:08">
+  <testcase classname="deserialization.errors" name="should warn about invalid format" time="0"></testcase>
+</testsuite>
+</testsuites>

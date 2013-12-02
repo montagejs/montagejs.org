@@ -104,7 +104,7 @@ exec("rm", ["-rf", TEMP_DIR])
     return cloneAndMopApps(APPS);
 })
 .then(function () {
-    return generateJsdoc(PATH.join(SOURCE_PATH, "api"), "montage", "latest");
+    return generateJsdoc("montage", "latest", PATH.join(SOURCE_PATH, "api"));
 })
 .then(function () {
     console.log("done");

@@ -1,0 +1,1 @@
+var Component=require("montage/ui/component").Component,NativeAnchor=require("native/ui/anchor.reel").Anchor;exports.Anchor=NativeAnchor.specialize({hasTemplate:{value:!1},constructor:{value:function(){this.super(),this.classList.add("matte-Anchor")}}});

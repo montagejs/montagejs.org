@@ -1,0 +1,1 @@
+var NativeControl=require("ui/native-control").NativeControl,Anchor=exports.Anchor=NativeControl.specialize({blur:{value:function(){this._element.blur()}},focus:{value:function(){this._element.focus()}}});Anchor.addAttributes({textContent:null,href:null,hreflang:null,media:null,rel:null,target:null,type:null});

@@ -1,0 +1,1 @@
+var AbstractImage=require("montage/ui/base/abstract-image").AbstractImage;exports.Image=AbstractImage.specialize({hasTemplate:{value:!1},constructor:{value:function(){this.super(),this.classList.add("matte-image")}}});

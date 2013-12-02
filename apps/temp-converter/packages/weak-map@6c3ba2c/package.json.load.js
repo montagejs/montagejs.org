@@ -1,0 +1,1 @@
+montageDefine("6c3ba2c","package.json",{exports:{name:"weak-map",version:"1.0.0",main:"weak-map.js",readme:"ERROR: No README data found!",_id:"weak-map@1.0.0",_from:"weak-map@1.0.0",directories:{lib:"./"},hash:"6c3ba2c",mappings:{},production:!0,useScriptInjection:!0}});

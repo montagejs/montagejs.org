@@ -1,0 +1,42 @@
+{
+    "tags": {
+        "allowUnknownTags": true
+    },
+    "source": {
+        "include": [
+            "../node_modules/matte/ui/",
+            "../node_modules/matte/node_modules/montage/externals.jsdoc"
+        ],
+        "exclude": [],
+        "includePattern": ".+\\.js(doc)?$",
+        "excludePattern": "(^|\\/)_"
+    },
+    "plugins": [
+        "plugins/markdown"
+    ],
+    "markdown": {
+        "parser": "marked"
+    },
+    "templates": {
+        "cleverLinks": false,
+        "monospaceLinks": false
+    },
+    "opts": {
+        "template": "./template",
+        "encoding": "utf8",
+        "destination": "../../api/digit",
+        "recurse": true,
+        "tutorials": "./template",
+        "query": "value",
+        "private": false,
+        "lenient": true,
+        "githubOrg": "montagejs",
+        "githubRepo": "matte",
+        "commitish": ""
+    },
+    "repositoryId": {
+        "sha": "1713cf2df3ac98860a69362a772935d6d41cfe92",
+        "message": "Find and replace montage for matte..."
+    },
+    "jsVersion": 180
+}

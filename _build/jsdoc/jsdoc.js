@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/*global __dirname */
 "use strict";
 
 var Q = require("q");
@@ -15,27 +16,43 @@ var config = {
 };
 
 
-module.exports = function (outDir, packageName, tag) {
+module.exports = function (packageName, tag, outDir) {
     return Q.ninvoke(npm, "load", config)
     .then(function (loadedNpm) {
+        var defer = Q.defer();
         if(tag === "npm-link") {
             console.log('npm link',  packageName);
-            return Q.ninvoke(loadedNpm.commands, "link", [packageName]);
-        } else {
-            console.log('npm install',  packageName +"@"+ tag);
-            return Q.ninvoke(loadedNpm.commands, "install", [packageName +"@"+ tag]);
-        }
-    })
-    .then(function() {
-        var defer = Q.defer();
-        if (tag === "npm-link") {
-            var montagePath = path.join(mainPath, "../node_modules/montage");
-            exec("git show -s --format=%B 11ccc5566986d891716837105385daaaf8884980", {cwd: montagePath}, function(error, stdout, stderr) {
+            exec("npm link " + packageName, {cwd: mainPath}, function(error) {
                 if (error) {
                     defer.reject(error);
                 } else {
-                    if (stdout.trim() === "Even Rocky had a montage.") {
-                        exec("git rev-parse HEAD", {cwd: montagePath}, function(error, stdout, stderr) {
+                    defer.resolve();
+                }
+            });
+        } else {
+            console.log('npm install',  packageName +"@"+ tag);
+            exec("npm install " + packageName +"@"+ tag, {cwd: mainPath}, function(error) {
+                if (error) {
+                    defer.reject(error);
+                } else {
+                    defer.resolve();
+                }
+            });
+        }
+        return defer.promise;
+    })
+    .then(function() {
+        var defer = Q.defer();
+        var repositoryId = require("./"+ packageName).repositoryId;
+        if (tag === "npm-link" && repositoryId) {
+            var montagePath = path.join(mainPath, "..", "node_modules", packageName);
+
+            exec("git show -s --format=%B " + repositoryId.sha, {cwd: montagePath}, function(error, stdout) {
+                if (error) {
+                    defer.reject(error);
+                } else {
+                    if (stdout.trim() === repositoryId.message) {
+                        exec("git rev-parse HEAD", {cwd: montagePath}, function(error, stdout) {
                             if (error) {
                                 defer.reject(error);
                             } else {
@@ -44,11 +61,10 @@ module.exports = function (outDir, packageName, tag) {
                             }
                         });
                     } else {
-                        defer.reject(montagePath + " is not a montage repo.");
+                        defer.reject(packageName + " is not a known repo.");
                     }
                 }
             });
-
         } else {
             defer.resolve("");
         }
@@ -58,11 +74,11 @@ module.exports = function (outDir, packageName, tag) {
         var defer = Q.defer();
 
         if (tag === "latest" || tag === "npm-link") {
-            tag = "v" + require("montage/package.json").version;
+            tag = "v" + require(packageName + "/package.json").version;
         }
 
         function saveCommitish(commitish) {
-            var configPath = path.join(mainPath, "montage.json");
+            var configPath = path.join(mainPath, packageName+ ".json");
             console.log("Save commit-ish (" + commitish + ") to " + configPath);
             var json = fs.readFileSync(configPath);
             var config = JSON.parse(json);
@@ -71,8 +87,8 @@ module.exports = function (outDir, packageName, tag) {
         }
 
         if (sha) {
-            var montagePath = path.join(mainPath, "../node_modules/montage");
-            exec("git tag --points-at " + sha, {cwd: montagePath}, function(error, stdout, stderr) {
+            var montagePath = path.join(mainPath, "../node_modules/" + packageName);
+            exec("git tag --points-at " + sha, {cwd: montagePath}, function(error, stdout) {
                 if (error) {
                     defer.reject(error);
                 } else {
@@ -95,7 +111,7 @@ module.exports = function (outDir, packageName, tag) {
     .then(function () {
         var jsdocGeneration = Q.defer();
 
-        var args = ["-c", path.join(mainPath,"montage.json")];
+        var args = ["-c", path.join(mainPath,packageName+ ".json")];
         if (outDir) {
             args.push("-d", outDir);
         }
@@ -117,16 +133,16 @@ module.exports = function (outDir, packageName, tag) {
         });
 
         return jsdocGeneration.promise;
-    }).then(function (version) {
+    }).then(function () {
         console.log('jsdoc generated.');
     });
 };
 
 if (!module.parent) {
-    if (process.argv.length == 5) {
-        module.exports.apply(null, process.argv.slice(2));
+    if (process.argv.length == 4) {
+        module.exports.apply(null, process.argv.slice(2)).done();
     } else {
-        console.log("Usage:\n  ./jsdoc.js ../../api/ ~/Code/montage/montage/ npm-link");
+        console.log("Usage:\n  ./jsdoc.js montage npm-link [output path]");
         process.exit(1);
     }
 }

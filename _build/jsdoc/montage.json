@@ -26,13 +26,19 @@
     "opts": {
         "template": "./template",
         "encoding": "utf8",
-        "destination": "../../apis",
+        "destination": "../../api",
         "recurse": true,
         "tutorials": "./template",
         "query": "value",
         "private": false,
         "lenient": true,
-        "commitish": "v0.13.6"
+        "githubOrg": "montagejs",
+        "githubRepo": "montage",
+        "commitish": ""
+    },
+    "repositoryId": {
+        "sha": "11ccc5566986d891716837105385daaaf8884980",
+        "message": "Even Rocky had a montage."
     },
     "jsVersion": 180
 }
