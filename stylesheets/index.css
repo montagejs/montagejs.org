@@ -111,13 +111,15 @@
 
 /* Themes ------------------------------------------- */
 
-.themes p {
-    clear: both;
+.theme-screenshot {
+    display: block;
+    margin: 0.5em 0;   
 }
 
-.theme-screenshot {
-    float: left;
-    margin: 0.3em 1em 1em 0;   
+.theme-description {
+    font-size: 0.9em;
+    font-style: italic;
+    color: hsl(0, 0%, 50%);
 }
 
 
