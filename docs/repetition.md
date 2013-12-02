@@ -12,17 +12,17 @@ next-page: substitution
 
 # Repetition
 
-The repetition iterates through its `objects` property rendering the content originally inside the repetition's own element for each object. 
+The repetition iterates through its `content` property rendering the content originally inside the repetition's own element for each object. 
 
-This `objects` property can be set directly with a typical array for simple repeating. However, the repetition has expanded capabilities when working in tandem with an ArrayController assigned to its `contentController` property, in lieu of populating the `objects` property manually.
+This `content` property can be set directly with a typical array for simple repeating. However, the repetition has expanded capabilities when working in tandem with a `RangeController` assigned to its `contentController` property, in lieu of populating the `content` property manually.
 
-Repetitions expose a special bindable property `objectAtCurrentIteration` intended for use by repeated components to reach the object within the `objects` property related to that iteration.
+Repetitions expose a special bindable property `objectAtCurrentIteration` intended for use by repeated components to reach the object within the `content` property related to that iteration.
 
 ## Basic usage
-http://montagejs.github.com/mfiddle/#!/4163708
+http://montagejs.github.io/mfiddle/#!/7759998
 
-This example sets a repetition's `contentController` property to be an ArrayController managing some content.
+This example sets a repetition's `contentController` property to be a `RangeController` managing some content.
 
-A DynamicText component is a child of the repetition and derives its `value` property from the repetition's `objectAtcurrentIteration`
+A `Text` component is a child of the repetition and derives its `value` property from the repetition's `objectAtcurrentIteration`
 
-Clicking the change content button replaces the managed content with new random content.
+Clicking the "Change Content" button replaces the managed content with new random content.
