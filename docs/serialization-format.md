@@ -47,15 +47,15 @@ The following simple (yet complete) Montage application is defined in a single H
     <script type="text/montage-serialization">
     {
         "firstName": {
-            "prototype": "montage/ui/textfield.reel",
+            "prototype": "montage/ui/text.reel",
             "properties": {
-                "element": {"#": "fName"}
+                "element": {"#": "firstName"}
             }
         }
     }
     </script>
     <body>
-        <input data-montage-id="fName"></input>
+        <span data-montage-id="firstName"></span>
     <body>
 </html>
 ```
@@ -65,19 +65,18 @@ Important things to note:
 * The HTML body contains a single `<input>` tag that has the ID "fName".
 * The document head contains a `<script>` block of type `text/montage-serialization`. This block contains all serialized Montage objects used in the document.
 * The serialization block declares a Montage Textfield component with an object label of "firstName". The component's module ID ("montage/ui/textfield.reel") and its name ("Textfield") allow Montage to re-create the component from its serialized form at runtime.
-* The "properties" object assigns initial values to the component’s properties. One of the most important properties of a Montage component is its `element` property, which corresponds to the associated HTML element on which the component operates on. In this case, the Textfield component’s element property is set to the `<input>` tag that has the ID "fName". The Montage serialization format provides a special JSON object representation to refer to an element. This special object’s name is a hash mark ("#") and its value is the ID of the element.
+* The "properties" object assigns initial values to the component’s properties. One of the most important properties of a Montage component is its `element` property, which corresponds to the associated HTML element on which the component operates on. In this case, the Text component’s element property is set to the `<span>` tag that has the ID "fName". The Montage serialization format provides a special JSON object representation to refer to an element. This special object’s name is a hash mark ("#") and its value is the ID of the element.
 * Montage can load components from a directory that has a .reel extension. The module system redirects `require("x.reel")` to `require("x.reel/x")`.
 
 ## Serialization owner
 A Montage serialization can declare an optional object named "owner". The specified owner acts as the controller for the document. For example, the following code creates a new module (main.js) that exports a `Main` prototype object.
 
 ```js
-// Module: main.js
+// Module: main
 // Exported object name: Main
-var Montage = require("montage/core/core").Montage;
 var Component = require("montage/ui/component").Component;
 //
-exports.Main = Montage.create(Component, {
+exports.Main = Component.specialize({
 // Prototype methods and properties
 })
 <script type="text/montage-serialization">
@@ -96,16 +95,15 @@ exports.Main = Montage.create(Component, {
 The following sections explain serialization for different objects.
 
 ### Object serialization
-To serialize custom JavaScript objects, including Montage components, define a JSON object with two properties: `module` and `name`. These properties correspond, respectively, to the ID of the module that defines (or exports) the object with the specified name.
+To serialize custom JavaScript objects, including Montage components, define a JSON object with a `prototype` property. This property corresponds to the ID of the module that defines (or exports) the desired object.
 
-The following serialization fragment declares a Montage Button component:
+The following serialization fragment declares a Montage Text component:
 
 ```html
 <script type="text/montage-serialization">
 {
-    "loginButton": {
-        "name": "Button",
-        "module": "montage/ui/button"
+    "hello": {
+        "prototype": "montage/ui/text.reel"
     }
 }
 </script>
@@ -114,19 +112,19 @@ The following serialization fragment declares a Montage Button component:
 At runtime Montage parses this serialization and evaluates it as the following JavaScript:
 
 ```js
-var Button = require("montage/ui/button").Button;
+var Text = require("montage/ui/text.reel").Text;
 ```
 
-Note that object labels in a serialization (such as “loginButton” in the above example) are only used internally by Montage during the deserialization process. For example, the object label does not translate into a JavaScript variable at runtime. You __can__ reference objects within a serialization using a special JSON representation.
+The object labels in a serialization (such as “hello” in the above example) can be accessed in the JavaScript runtime through the `templateObjects` property of the "owner" object of the serialization (when such an object is part of the serialization).
+You __can__ reference objects within a serialization using a special JSON representation.
 
-You can assign initial values to an object’s properties in a serialization by adding a `properties` object to the serialization. For example, the Montage Button component has a `value` property that contains the string to display as the button’s label. The following assigns the value "Click me" to the Button component’s `value` property.
+You can assign initial values to an object’s properties in a serialization by adding a `properties` object to the serialization. For example, the Montage Text component has a `value` property that contains the string to display in the text's element. The following assigns the value "Hello World" to the Text component’s `value` property.
 
 ```json
-"loginButton": {
-    "name": "Button",
-    "module": "montage/ui/button",
+"hello": {
+    "prototype": "montage/ui/text.reel",
     "properties": {
-        "value": "Click me"
+        "value": "Hello World!"
     }
 }
 ```
@@ -141,7 +139,7 @@ To reference an element by ID, use the following JSON syntax where _elementID_ i
 {"#": "elementID"}
 ```
 
-For example, this serialization block declares a Montage Button component whose `element` property is assigned the <div> with the ID of `loginButton`:
+For example, this serialization block declares a Montage Text component whose `element` property is assigned the <span> with the ID of `hello`:
 
 ```html
 // index.html
@@ -149,17 +147,16 @@ For example, this serialization block declares a Montage Button component whose 
 <script src="../../montage.js"></script>
 <script type="text/montage-serialization">
 {
-    "loginBtn": {
-        "name": "Button",
-        "module": "montage/ui/button.reel",
+    "hello": {
+        "prototype": "montage/ui/text.reel",
         "properties": {
-            "element": {"#": "loginButton"}
+            "element": {"#": "hello"}
         }
     }
 }
 </script>
 <body>
-    <div id="loginButton" class="text">Click to enter</div>
+    <span id="hello" class="text"></span>
 <body>
 </html>
 ```
@@ -174,129 +171,30 @@ To reference an element by ID, use the following JSON syntax. In this example, _
 {"@": "objectLabel"}
 ```
 
-To demonstrate, first create the owner prototype object that references the button. The owner object—a custom component named Main—is defined in a JavaScript file main.js. The Main component declares a variable `loginButton` that will hold the reference to the Button object in the main application. We can reference that variable elsewhere in the Main component, such as its `prepareForDraw()` function, which is invoked before the first time the component is drawn. In this case, we use this callback opportunity to attach an event listener to the Button object. The event handler displays a message in the JavaScript console.
-
-```js
-// Module: main.js
-// Name: Main
-var Montage = require("montage/core/core").Montage;
-var Component = require("montage/ui/component").Component;
-exports.Main = Montage.create(Component, {
-    hasTemplate: {
-        value: false
-    },
-    loginButton: {
-        value:null
-    },
-    handleAction: {
-        value: function(event) {
-            console.log("Button event handled...");
-            // Do login stuff...
-        }
-    },
-    prepareForDraw: {
-        value: function() {
-            this.loginButton.addEventListener("action", this)
-        }
-    }
-});
-```
-
-Next, create the main HTML document that declares the Button and Main components. On line 10 a reference to the “loginBtn” serialized Button is assigned to the “loginButton” property of the Main component.
-
-```html
-<html>
-<script src="../../montage.js"></script>
-<script type="text/montage-serialization">
-{
-    "owner": {
-        "name": "Main",
-        "module": "main",
-        "properties": {
-            "element": {"#": "main"},
-            "loginButton": {"@": "loginBtn"}
-        }
-    },
-    "loginBtn": {
-        "name": "Button",
-        "module": "montage/ui/button.reel",
-        "properties": {
-            "element": {"#": "buttonDiv"}
-        }
-    }
-}
-</script>
-<body>
-    <div id="main">
-        <div id="buttonDiv" class="text">Click to enter</div>
-    </div>
-<body>
-</html>
-```
-
 ## Data bindings in serializations
-You can define event listener and data bindings between components within a serialization. To better understand the binding serialization syntax, look at the underlying JavaScript method used for creating data bindings, `Object.defineBinding()`. This method takes three parameters:
+You can define event listener and data bindings between components within a serialization. To better understand the binding serialization syntax, look at the underlying JavaScript method used for creating data bindings, `Montage.defineBinding()`. This method takes three parameters:
 
-* The source object defining the binding.
-* The name of the source object’s property that is being bound.
-* A descriptor object that specifies, minimally, the bound object and the key path of the property being bound. The descriptor can have optional parameters for specifying whether the binding is one-way, or whether the binding should not execute immediately.
+* The target object defining the binding.
+* The name of the target object’s property that is being bound.
+* A descriptor object that specifies, minimally, the direction of the binding - one-way "<-" or 2-way "<->" and the path that the target property is bound to.
 
 ```js
-Object.defineBinding(sourceObject, "propertyName", {
-    boundObject: boundObject,
-    boundObjectPropertyPath: "property.key.path"
+Montage.defineBinding(targetObject, "propertyName", {
+    "<-": "key.path.of.property"
+}, {
+    source: boundObject
 });
 ```
 
 You specify a component’s bindings in a serialization with a “bindings” JSON object that, in turn, defines one or more JSON objects.
+In the serialization a binding path is an FRB expression, components from the serialization can be referenced by using the syntax `@componentLabel`. More information about FRB can be found [here](http://documentup.com/montagejs/frb/).
 
 ```json
 "bindings": {
     "boundValue": {
-        "boundObject": {"@": "bound-object-label"},
-        "boundObjectPropertyPath": "key.path.of.property",
-    },
-}
-```
-
-The following simple example adds data bindings to a serialization. It consists of two Montage Slider components. The first slider’s value is bound to the second slider’s value. By default, data bindings are bi-directional, so changes to either bound property are pushed to the corresponding property. In this case, the "oneway" parameter is set to false so that changes propagate only from the bound object to the one that defined the binding (the source object).
-
-```html
-<html>
-<head>
-    <title>Slider binding text</title>
-    <script src="../../montage.js"></script>
-    <script type="text/montage-serialization">
-    {
-        "slider1": {
-            "name": "Slider",
-            "module": "montage/ui/slider.reel",
-            "properties": {
-                "element": {"#": "slider1"}
-            },
-            "bindings": {
-                "value": {
-                    "boundObject": {"@": "slider2"},
-                    "boundObjectPropertyPath": "value",
-                    "oneway": true
-                }
-            }
-        },
-        "slider2": {
-            "name": "Slider",
-            "module": "montage/ui/slider.reel",
-            "properties": {
-                "element": {"#": "slider2"}
-            }
-        }
+        "<-": {"@boundObjectLabel.key.path.of.property"}
     }
-    </script>
-</head>
-<body>
-    <div id="slider1"></div>
-    <div id="slider2"></div>
-</body>
-</html>
+}
 ```
 
 ## Event listeners in serializations
@@ -308,10 +206,10 @@ This can reduce the amount of code required to establish event handling for your
 This code for the Controller component defines a single function named `handleAction()`, which is invoked when the user clicks the button:
 
 ```js
-// Module: controller.js
+// Module: controller
 // Name: Controller
-var Montage = require("montage/core/core").Montage;
-exports.Controller = Montage.create(Montage, {
+var Montage = require("montage").Montage;
+exports.Controller = Montage.specialize({
     handleAction: {
         value: function(event) {
             console.log("Button event handled...");
@@ -330,24 +228,20 @@ The following is the HTML document and component serialization. The "loginBtn" o
 <script type="text/montage-serialization">
 {
     "controller": {
-        "name": "Controller",
-        "module": "controller",
+        "prototype": "controller",
         "properties": {
-            "element": {"#": "main"},
-            "loginButton": {"@": "loginBtn"}
+            "button": {"@": "loginButton"}
         }
     },
-    "loginBtn": {
-        "name": "Button",
-        "module": "montage/ui/button.reel",
+    "loginButton": {
+        "prototype": "digit/ui/button.reel",
         "properties": {
-            "element": {"#": "buttonDiv"}
+            "element": {"#": "loginButton"}
         },
         "listeners": [
             {
                 "type": "action",
-                "listener": {"@": "controller"},
-                "capture": false
+                "listener": {"@": "controller"}
             }
         ]
     }
@@ -356,7 +250,7 @@ The following is the HTML document and component serialization. The "loginBtn" o
 </head>
 <body>
     <div id="main">
-        <div id="buttonDiv" class="text">Click to enter</div>
+        <div id="loginButton">Click to enter</div>
     </div>
 <body>
 </html>
