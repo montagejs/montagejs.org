@@ -12,7 +12,11 @@ next-page: substitution
 
 # Repetition
 
+http://montagejs.github.io/mfiddle/#!/7764259
+
 The repetition iterates through its `content` property rendering the content originally inside the repetition's own element for each object. 
+
+http://montagejs.github.io/mfiddle/#!/7765238
 
 This `content` property can be set directly with a typical array for simple repeating. However, the repetition has expanded capabilities when working in tandem with a `RangeController` assigned to its `contentController` property, in lieu of populating the `content` property manually.
 
