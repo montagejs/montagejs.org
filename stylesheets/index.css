@@ -8,9 +8,9 @@
     text-align: center;
     border-top: 1px solid hsl(210,75%,0%);
     border-bottom: 1px solid hsl(210,75%,0%);
-    background-color: hsl(210,75%,57%);
-    background-image: -webkit-radial-gradient(hsla(210, 50%, 24%, 0.95), hsla(210, 50%, 10%, 0.96) ), url(../images/home/home-hero-bg.png);
-    background-image: radial-gradient(hsla(210, 50%, 24%, 0.95), hsla(210, 50%, 10%, 0.96) ), url(../images/home/home-hero-bg.png);
+    background-color: hsl(210, 20%, 50%);
+    background-image: -webkit-radial-gradient(hsla(210, 16%, 24%, 0.95), hsla(210, 16%, 10%, 0.96) ), url(../images/home/home-hero-bg.png);
+    background-image: radial-gradient(hsla(210, 16%, 24%, 0.95), hsla(210, 16%, 10%, 0.96) ), url(../images/home/home-hero-bg.png);
     background-size: auto, 240px 160px;
 }
 
