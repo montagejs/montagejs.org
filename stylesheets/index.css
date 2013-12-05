@@ -4,7 +4,7 @@
 /* Hero ----------------------------------------- */
 
 .hero {
-    padding: 100px 0;
+    padding: 60px 0;
     text-align: center;
     border-top: 1px solid hsl(210,75%,0%);
     border-bottom: 1px solid hsl(210,75%,0%);
@@ -15,7 +15,7 @@
 }
 
 .hero .wrapper {
-    color: hsl(210, 32%, 66%);
+    color: hsl(210, 20%, 60%);
     text-shadow: 0px 1px 2px hsla(0, 0%, 0%, 0.5);
 }
 
@@ -80,12 +80,48 @@
 }
 
 
-/* Video */
+/* Video/Img */
 
-.hero .video {
+.hero-video {
     display: block;
     margin: .8em 0 1.5em 0;
     width: 100%;
+}
+
+.hero-thumb {
+    position: relative;
+    display: block;
+    max-width: 360px;
+    margin: .8em auto 1.5em auto;
+    border-radius: 8px;
+    border: 4px solid hsl(0, 0%, 0%);
+    box-shadow: 0 26px 16px -20px hsla(0, 0%, 0%, 0.5);
+    transition: border-color .1s linear;
+}
+
+.hero-thumb:hover {
+    border-color: hsl(200,100%,50%);
+}
+
+.hero-thumb:active {
+    border-color: hsl(200,100%,30%);
+}
+
+.hero-thumb:before {
+    content: "";
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    border-radius: inherit;
+    box-shadow: inset 0px 0px 4px hsla(0,0%,0%,.2);
+    background-image: -webkit-linear-gradient(-45deg, hsla(0, 100%, 100%, 0.05), hsla(0, 100%, 100%, 0.06) 50%, hsla(0, 100%, 100%, 0) 50% );
+    background-image:         linear-gradient(135deg, hsla(0, 100%, 100%, 0.05), hsla(0, 100%, 100%, 0.06) 50%, hsla(0, 100%, 100%, 0) 50% );
+}
+
+.hero-thumb-img {
+    display: block;
+    width: 100%;
+    max-width: inherit;
+    border-radius: 4px;
 }
 
 
