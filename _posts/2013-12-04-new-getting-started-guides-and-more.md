@@ -7,7 +7,7 @@ author_url: http://github.com/Stuk/
 
 ---
 
-The quest to make our documentation the best it can be continues, with the [addition of Composer JSDocs](https://github.com/montagejs/montage/pull/1356), a big [normalization of JSDocs](https://github.com/montagejs/montage/pull/1358) and exiting [new set-up and Hello MontageJS tutorials](https://github.com/montagejs/montagejs.org/pull/69). They are live at [Getting Started with MontageJS](http://montagejs.org/docs/montagejs-setup.html) and [Hello MontageJS](http://montagejs.org/docs/hello-montagejs.html).
+The quest to make our documentation the best it can be continues, with the [addition of Composer JSDocs](https://github.com/montagejs/montage/pull/1356), a big [normalization of JSDocs](https://github.com/montagejs/montage/pull/1358) and exciting [new set-up and Hello MontageJS tutorials](https://github.com/montagejs/montagejs.org/pull/69). They are live at [Getting Started with MontageJS](http://montagejs.org/docs/montagejs-setup.html) and [Hello MontageJS](http://montagejs.org/docs/hello-montagejs.html).
 
 Montage recieved a fix to [call beforeChangeListeners before the change happens ](https://github.com/montagejs/montage/pull/1334) and the Digit Select was fixed to [prevent an undefined item in content breaking drawing](https://github.com/montagejs/digit/pull/54).
 
