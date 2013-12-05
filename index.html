@@ -21,51 +21,48 @@ home: true
 
     {% include social.html %}
 
-    <section id="intro" class="intro">
+    <section id="what" class="what">
         <div class="wrapper">
             <div class="cols">
-                <div class="col col-1-2">
+                <div class="col col-2-3">
                     <h3 class="title">What is MontageJS?</h3>
                     <p>MontageJS is a modern, full stack HTML5 framework designed to create single-page applications—fast! MontageJS builds on the strength of Cocoa and iOS to provide HTML5 with the capability to build native-class web applications.</p> 
                 </div>
-                <div class="col col-1-2">
-                    <h3 class="title">Why use MontageJS?</h3>
-                    <p>MontageJS uses time-tested design patterns and software principles, allowing you to easily create a modular architecture for your projects. Key benefits of MontageJS include:</p>
-                </div>
-            </div>
+                <div class="col col-1-3"></div>
         </div>
     </section>
-
-    <section id="features" class="features">
+    
+    <section id="why" class="why">
         <div class="wrapper">
-            <h2 class="title">Features</h2>
-
+            <h3 class="title">Why use MontageJS?</h3>
+            <p>MontageJS uses time-tested design patterns and software principles, allowing you to easily create a modular architecture for your projects. Key benefits of MontageJS include:</p>
+            
             <div class="cols">
                 <div class="col col-1-2">
-                    <h3 class="sub-title">Reusable Components</h3>
                     <img src="images/home/home-components.svg" alt="Reusable Components">
-                    <p>MontageJS simplifies rich-client development by offering a modular approach to organizing code and components. This allows small teams to write applications faster through maximum reusability and enables larger teams to be more efficient by breaking complex problems into smaller pieces without stepping on each other during the development process</p>
+                    <h3 class="sub-title">Reusable Components</h3>
+                    <p>MontageJS simplifies rich-client development by offering a modular approach to organizing code and components. This allows small teams to write applications faster through maximum reusability and enables larger teams to be more efficient by breaking complex problems into smaller pieces without stepping on each other during the development process.</p>
                 </div>
                 <div class="col col-1-2">
-                    <h3 class="sub-title">Real, Declarative, HTML5 Templates</h3>
-                    <img src="images/home/home-templates.svg" alt="Templates">
-                    <p>MontageJS templates are real, valid, full HTML5 documents. These HTML templates encapsulate a component’s JavaScript code as well as resources like CSS files and images into a folder with “reel” file extension. Developers can instantiate a component without having to worry about what JavaScript dependencies that component has, nor what CSS or other files it may rely on. This leads to dramatic improvements in reliability and ease of use.</p>
-                </div>
-            </div>
-                        
-            <div class="cols">
-                <div class="col col-1-2">
-                    <h3 class="sub-title">High Performance</h3>
                     <img src="images/home/home-performance.svg" alt="High Performance">
+                    <h3 class="sub-title">High Performance</h3>
                     <p>MontageJS supports implicit event delegation and a managed draw cycle. This minimizes expensive layout reflows to provide a better user experience, particularly on hardware limited mobile devices.</p>
-                </div>
-                <div class="col col-1-2">
-                    <h3 class="sub-title">Functional Reactive Bindings (FRB)</h3>
-                    <img src="images/home/home-frb.svg" alt="FRB">
-                    <p>MontageJS supports simple and two-way data binding between components, objects, and collections, allowing you to coordinate the state between views and models, among other entangled objects. FRB go farther and can gracefully bind long property paths and the contents of collections, as well as incrementally update the results of chains of queries including maps, flattened arrays, sums, and averages. FRB makes it easy to ensure consistent state without having to write a lot of “glue” code.</p>
                 </div>
             </div>
             
+            <div class="cols">
+                <div class="col col-1-2">
+                    <img src="images/home/home-templates.svg" alt="Templates">
+                    <h3 class="sub-title">Real, Declarative, HTML5 Templates</h3>
+                    <p>MontageJS templates are real, valid, full HTML5 documents. These HTML templates encapsulate a component’s JavaScript code as well as resources like CSS files and images into a folder with “reel” file extension. Developers can instantiate a component without having to worry about what JavaScript dependencies that component has, nor what CSS or other files it may rely on. This leads to dramatic improvements in reliability and ease of use.</p>
+                </div>
+                <div class="col col-1-2">
+                    <img src="images/home/home-frb.svg" alt="FRB">
+                    <h3 class="sub-title">Functional Reactive Bindings (FRB)</h3>
+                    <p>MontageJS supports simple and two-way data binding between components, objects, and collections, allowing you to coordinate the state between views and models, among other entangled objects. FRB go farther and can gracefully bind long property paths and the contents of collections, as well as incrementally update the results of chains of queries including maps, flattened arrays, sums, and averages. FRB makes it easy to ensure consistent state without having to write a lot of “glue” code.</p>
+                </div>
+            </div>
+                        
         </div>
     </section>
     
@@ -82,108 +79,16 @@ home: true
                     <p><strong>Serialization</strong>: This is where you define the behavior of your markup; all UI-related JavaScript objects reside in the template-like components that control the behavior of their HTML counterparts/corresponding DOM elements.</p>
                 </div>
             </div>
-            <p>Ready to build your own MontageJS application? <a href="docs/hello-montagejs.html">Get Started</a></p>
-            <p>For more demos, check out our <a href="docs/examples.html">Mfiddle-based examples</a>.</p>
         </div>
     </section>
-    
-    <section id="workflow" class="workflow">
-        <div class="wrapper">
-            <h2 class="title">Workflow</h2>
-            <p>When it comes to a smooth workflow, it's important to keep things flexible for multiple team members and reduce the risk of conflicts when contributing code. It's also important that the boring parts can be automated, so you can concentrate on the exciting stuff. With the MontageJS workflow we try to accommodate that.</p>
-            <div class="cols">
-                <div class="col col-1-3">
-                    <h3 class="sub-title">1. Initialize</h3>
-                    <img class="workflow-img" src="images/home/home-initialize.svg" alt="Initialize">
-                    <p>To get up to speed fast, <a href="https://github.com/montagejs/minit">minit</a> (the <strong>MontageJS Initilizer</strong>) will be a great help. It's a command line tool that provides convenient automated tasks during the development phase. Use it to generate all directories and the boilerplate code needed to get your App ready for development.</p>
-                </div>
-                <div class="col col-1-3">
-                    <h3 class="sub-title">2. Collaborate</h3>
-                    <img class="workflow-img" src="images/home/home-collaborate.svg" alt="Collaborate">
-                    <p>One of the great things about MontageJS is its modular approach where an application is broken into smaller parts (components). This is great since it allows multiple team members work simultaneously on different parts of the application.</p>
-                    <p>Furthermore, each component is divided into HTML, CSS and JS files for a nice developer/designer workflow. Developers can focus on wiring up components and "make it work", while designers polish the UI or add custom styling.</p>
-                </div>
-                <div class="col col-1-3">
-                    <h3 class="sub-title">3. Ship</h3>
-                    <img class="workflow-img" src="images/home/home-ship.svg" alt="Ship">
-                    <p>Once it's time to ship, run your application through <a href="https://github.com/montagejs/mop">mop</a> (<strong>MontageJS Optimizer</strong>). It's a command line tool that minifies (reduces file size) and creates bundles (reduces the number of requests) of your Montage application. This will help improving loading times and performance for a better user experience.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-        
-    <section id="themes" class="themes">
-        <div class="wrapper">
-            <h2 class="title">Themes</h2>
-            <div class="cols">
-                <div class="col col-2-3">
-                    <p>MontageJS provides the most common components in an abstract form. This lets you build your own custom looking theme that works hand in hand with the framework. On top of that we provide 3 premade themes that should get you up and running quickly.</p>
-                    
-                    
-                    <div class="cols">
-                        <div class="col col-1-3">
-                            <img class="theme-screenshot" src="images/themes/theme-digit.png" alt="Digit" style="height: 40px;">
-                            <em class="theme-description"><a href="docs/theme-digit-components.html">Digit</a> is a touch-friendly theme optimized for <strong>mobile</strong>.</em>
-                        </div>
-                        <div class="col col-1-3" style="padding-top: 10px;">
-                            <img class="theme-screenshot" src="images/themes/theme-matte.png" alt="Matte" style="height: 30px;">
-                            <em class="theme-description"><a href="docs/theme-matte-components.html">Matte</a> contains <strong>desktop</strong>-optimized UI components.</em>
-                        </div>
-                        <div class="col col-1-3" style="padding-top: 20px;">
-                            <img class="theme-screenshot" src="images/themes/theme-native.png" alt="Native" style="height: 20px;">
-                            <em class="theme-description"><a href="docs/theme-native-components.html">Native</a> uses the browser's <strong>default</strong> styles.</em>
-                        </div>
-                    </div>
-                </div>
-                <div class="col col-1-3">
-                    <h3 class="sub-title">Custom Skins</h3>
-                    <p>Feel free to customize each theme by overriding the default with your own CSS.</p>
-                    <img src="images/themes/theme-custom.png" alt="Custom skin" style="width: 284px;">
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    
-	<section id="apps" class="gallery apps">
-	    <div class="wrapper">
-	        <h3 class="title">Made with Montage</h3>
-	        <p>A couple examples of Apps built with Montage.<br />
-                Check out more <a class="link" href="apps">sample Apps and demos</a>.</p>
-	        <ul class="gallery">
-                <li class="gallery-item">
-   	                <a href="apps/popcorn/" target="_blank">
-   	                    <figure class="gallery-thumb"><img class="gallery-img" src="images/apps/popcorn.jpg" alt="Popcorn" /></figure>
-   	                    <figcaption class="gallery-description">Popcorn (Tablets)</figcaption>
-   	                </a>
-   	            </li>
-	            <li class="gallery-item">
-	                <a href="apps/calculator/" target="_blank">
-	                    <figure class="gallery-thumb"><img class="gallery-img" src="images/apps/calculator.jpg" alt="Calculator" /></figure>
-	                    <figcaption class="gallery-description">Calculator (Mobile)</figcaption>
-	                </a>
-	            </li>
-	            <li class="gallery-item">
-	                <a href="apps/paparazzi/" target="_blank">
-	                    <figure class="gallery-thumb"><img class="gallery-img" src="images/apps/paparazzi.jpg" alt="Paparazzi" /></figure>
-	                    <figcaption class="gallery-description">Paparazzi (Desktop)</figcaption>
-	                </a>
-	            </li>
-                <li class="gallery-item">
-   	                <a href="apps/carconfigurator/" target="_blank">
-   	                    <figure class="gallery-thumb"><img class="gallery-img" src="images/apps/carconfigurator.jpg" alt="Car Configurator" /></figure>
-   	                    <figcaption class="gallery-description">Car Configurator (WebGL)</figcaption>
-   	                </a>
-   	            </li>
-	        </ul>
-	    </div>
-	</section>
 
     <section id="next" class="next">
         <div class="wrapper">
             <h3 class="title">Next steps</h3>
             <div class="cols">
                 <div class="col col-1-2">
+                    <p>Ready to build your own MontageJS application? <a href="docs/hello-montagejs.html">Get Started</a></p>
+                    <p>Or check out our <a href="docs/examples.html">Mfiddle-based examples</a>.</p>
                     <p>For more information <a href="docs/">explore the Montage documentation</a> or <a href="https://github.com/montagejs/montage#montage" target="_blank">dive into the code itself</a>.
                     </p>
                 </div>

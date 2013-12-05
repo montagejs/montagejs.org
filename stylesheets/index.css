@@ -1,155 +1,5 @@
 /* These Styles only get used on the index page only */
 
-/* Links (blue big buttons) ----------------------------------------- */
-
-.links .link {
-    display: inline-block;
-    margin: 0 10px;
-    padding: 0 20px;
-    line-height: 50px;
-    border-radius: 8px;
-    font-size: 18px;
-    font-weight: bold;
-    text-shadow: 0px -1px 0px hsla(0,0%,0%,.4);
-    color: white;
-    border: 2px solid hsl(200,100%,20%);
-    background-color: hsl(200,100%,45%);
-    box-shadow: inset 0px 1px 0px hsla(0,0%,100%,.5),
-                inset 0px -1px 1px hsla(0,0%,0%,.2),
-                0px 1px 0px hsla(0,0%,100%,.5);
-    background-image: -webkit-linear-gradient(top, hsl(210,100%,60%), hsl(210,100%,40%) );
-    background-image:         linear-gradient(top, hsl(210,100%,60%), hsl(210,100%,40%) );
-}
-
-.links .link:hover {
-    background-image: -webkit-linear-gradient(top, hsl(210,100%,65%), hsl(210,100%,45%) );
-    background-image:         linear-gradient(top, hsl(210,100%,65%), hsl(210,100%,45%) );
-}
-.links .link:active {
-    background-image: -webkit-linear-gradient(top, hsl(210,100%,55%), hsl(210,100%,35%) );
-    background-image:         linear-gradient(top, hsl(210,100%,55%), hsl(210,100%,35%) );
-}
-
-.links .link:before {
-    content: "";
-    display: inline-block;
-    width: 20px;
-    height: 50px;
-    vertical-align: top;
-    margin-right: 10px;
-}
-
-.links .fork:before {
-    background: url(../images/git.svg) no-repeat center;
-}
-.links .download:before {
-    background: url(../images/download.svg) no-repeat center;
-}
-.links .docs:before {
-    background: url(../images/docs.svg) no-repeat center;
-}
-
-@media all and (max-width: 700px) {
-    .links .link {
-        display: inline-block;
-        margin: 0 4px;
-        padding: 0 16px;
-        line-height: 50px;
-        font-size: 16px;
-    }
-}
-
-@media all and (max-width: 440px) {
-    .links .link {
-        margin-bottom: 10px;
-    }
-    .links .link:last-child {
-        margin-bottom: 0;
-    }
-}
-
-
-
-/* Features ------------------------------------------- */
-
-.features img {
-    float: left;
-    width: 120px;
-    margin: 1.4em 1.4em 1em 0;
-}
-
-.features .cols,
-.features .col {
-    clear: both;
-}
-
-@media all and (max-width: 700px) {
-    .features .col {
-        margin-top: 50px;
-    }
-
-    .features .cols:first-child .col {
-        margin-top: 0;
-    }
-}
-
-/* Tools ----------------------------------------- */
-
-.tools .logo {
-    float: left;
-    width: 80px;
-    padding: 20px;
-    margin: 20px 20px 10px 0;
-    border-radius: 20px;
-    border: 3px solid hsl(0,0%,100%);
-    background-color: hsl(0,0%,95%);
-    box-shadow: inset 0px 0px 1px hsla(0,0%,0%,.1),
-                0px 1px 2px hsla(0,0%,0%,.3);
-    background-image: -webkit-linear-gradient(-75deg, hsla(0,0%,100%,.1), hsla(0,0%,100%,.5) 50%, hsla(0,0%,100%,0) 50% ),
-                      -webkit-linear-gradient(top, hsl(0,0%,97%), hsl(0,0%,90%) );
-}
-
-
-/* Themes ------------------------------------------- */
-
-.theme-screenshot {
-    display: block;
-    margin: 0.5em 0;   
-}
-
-.theme-description {
-    font-size: 0.9em;
-    font-style: italic;
-    color: hsl(0, 0%, 50%);
-}
-
-
-/* Gallery ------------------------------------------- */
-
-ul.gallery {
-    text-align: center;
-    padding: 0;
-}
-
-
-/* Workflow ------------------------------------------- */
-
-.workflow-img {
-    display: block;
-    width: 100px;
-    margin: 1em 0;
-}
-
-
-/* Overwrites ----------------------------------------- */
-
-.montage-toggle {
-    display: inline-block;
-}
-
-
-
-
 
 /* Hero ----------------------------------------- */
 
@@ -251,3 +101,13 @@ ul.gallery {
     }
 
 }
+
+
+
+/* Why ------------------------------------------- */
+
+.why img {
+    margin: 1.5em 0 0 0;
+}
+
+
