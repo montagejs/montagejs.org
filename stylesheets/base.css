@@ -36,6 +36,11 @@ h1, h2, h3, h4, h5, h6 {
 .pushed ::-moz-selection { background: hsl(0,0%,10%); text-shadow: none; }
 .pushed ::selection { background: hsl(0,0%,10%); text-shadow: none; }
 
+.hasIframe {
+    /* Adds scroll support for iFrames on iOS */
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
 
 /* Sections ----------------------------------------- */
 
@@ -594,6 +599,7 @@ hr {
 }
 
 
+/* Sitemap */
 
 .sitemap {
     list-style: none;
@@ -633,6 +639,25 @@ hr {
     padding-top: 2em;
     color: hsl(0,0%,50%);
     font-size: .8em;
+}
+
+@media all and (max-width: 800px) {
+    .sitemap li {
+        margin: 0 1em;
+    }
+}
+
+@media all and (max-width: 660px) {
+    
+    .sitemap {
+        font-size: 1.2em;
+        line-height: 1.6;
+    }
+    
+    .sitemap li {
+        display: block;
+        margin: 1.5em 0;
+    }
 }
 
 

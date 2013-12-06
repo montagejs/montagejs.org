@@ -4,7 +4,7 @@
 /* Hero ----------------------------------------- */
 
 .hero {
-    padding: 60px 0;
+    padding: 60px 20px;
     text-align: center;
     border-top: 1px solid hsl(210,75%,0%);
     border-bottom: 1px solid hsl(210,75%,0%);
@@ -128,16 +128,19 @@
 
 @media all and (max-width: 700px) {
     
-    .hero .logo {
-        height: 150px;
-    }
-    
-    .hero .video {
+    .hero-video,
+    .hero-thumb {
         margin-top: 2em;
     }
 
 }
 
+
+/* What ------------------------------------------- */
+
+.what img {
+    max-width: 100%;
+}
 
 
 /* Why ------------------------------------------- */
