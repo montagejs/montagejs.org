@@ -24,7 +24,7 @@ To make the most of this tutorial, you should have a basic understanding of HTML
 
 ## Before You Begin
 
-Be sure you have set up MontageJS development as instructed in [Getting Started with MontageJS](http://montagejs.org/docs/montagejs-setup.html). You must have node.js, npm, and Minit, the MontageJS initializer command line tool, installed to complete this tutorial. You also need a text editor and a recent stable release of Google Chrome, Safari, or Firefox.
+Be sure you have set up MontageJS development as instructed in [Getting Started with MontageJS](http://montagejs.org/docs/montagejs-setup.html). You must have node.js, npm, and Minit (the MontageJS initializer command line tool) installed to complete this tutorial. You also need a text editor and a recent stable release of Google Chrome, Safari, or Firefox.
 
 ## Create a New Project
 
@@ -212,7 +212,7 @@ First, update the markup of the HTML elements you want to control with a `data-m
 
     Things to note:
     * The labels `celsiusNumberfield`, `fahrenheitNumberfield`, and `thermometer` identify the serialized objects that control the behavior of the corresponding HTML elements.
-    * `prototype` identifies the directory that contains the code of that object's prototype (here you are using components from the Digit widget set that is part of your MontageJS project).
+    * `prototype` identifies the directory that contains the code of that object's prototype (here you are using components from the mobile-optimized Digit widget set that is part of the default MontageJS project).
     * `properties` lists the values assigned to the properties of the current object. 
     * The `element` property maps to the DOM elements you want to control, identified with the `data-montage-id` of `celsius`, `fahrenheit`, and `thermometer`.
     * The `axis` property replaces the horizontal slider with a vertical one.
@@ -478,7 +478,7 @@ Mop is not part of the default MontageJS starter project; you have to install it
     
     This installs Mop globally so you can use it in the current and all future projects.
     
-    >**Note:** npm uses `sudo` for greater safety when installing packages.
+    >**Note:** npm uses `sudo` to make command line utilities such as mop available system wide.
     
 2. Switch (`cd`) to the temp-converter project directory.
     

@@ -41,7 +41,7 @@ The Minit command line tool provides a convenient way to kickstart your MontageJ
     $ sudo npm install -gq minit@latest
     ```
 
-    > **Note**: Minit does not need `sudo` access; npm uses `sudo` for greater safety when installing packages. When run as root, npm will downgrade permissions before running any build scripts that package authors specified. For more details see the npm <a href="https://npmjs.org/doc/README.html" target="_blank">readme</a>.
+    > **Note**: Minit does not need `sudo` access; npm uses `sudo` to make command line utilities such as minit available system wide. Also, when run as root, npm will downgrade permissions before running any build scripts that package authors specified. For more details see the npm <a href="https://npmjs.org/doc/README.html" target="_blank">readme</a>.
 
 * **Windows:** Open the Command Prompt and type:
 
