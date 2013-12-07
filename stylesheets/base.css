@@ -1,6 +1,6 @@
 /* These Styles get shared between the index and sub pages */
 
-/* MontageJS blue: hsl(210,75%,57%) */
+/* MontageJS blue: hsl(210,75%,57%) / #4092E4 */
 
 /* Globals ----------------------------------------- */
 
@@ -126,7 +126,7 @@ hr {
     z-index: 1;
     margin-top: -38px;
     height: 120px;
-    background-image: url(/images/logo-montage.svg);
+    background-image: url(/images/logo-ribbon.svg);
     color: transparent;
     text-shadow: none;
     width: 60px;

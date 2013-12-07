@@ -15,7 +15,7 @@
 }
 
 .hero .wrapper {
-    color: hsl(210, 20%, 60%);
+    color: hsl(0,0%,60%);
     text-shadow: 0px 1px 2px hsla(0, 0%, 0%, 0.5);
 }
 
@@ -23,9 +23,21 @@
     vertical-align: middle;
 }
 
+.hero a {
+    color: hsl(210,100%,75%);
+}
+
+.hero a:hover {
+    color: hsl(0,0%,85%);
+}
+
+.hero a:active {
+    color: hsl(0,0%,65%);
+}
+
 .hero h1 {
     margin: 0;
-    color: hsl(210, 100%, 92%);
+    color: hsl(0,0%,90%);
     font-size: 3em;
     font-weight: normal;
 }
@@ -44,7 +56,6 @@
 }
 
 .hero strong {
-    color: hsl(210, 100%, 92%);
     font-weight: 600;
 }
 
