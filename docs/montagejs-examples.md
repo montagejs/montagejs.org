@@ -29,6 +29,9 @@ The following components are pre-built MontageJS components.
 #### Converters
 * [Number converters](http://montagejs.github.io/mfiddle/#!/5904344)
 
+#### Composers
+* [Press composer](http://montagejs.github.io/mfiddle/#!/7852383)
+
 #### Pattern
 * [Sorting a Repetition](http://montagejs.github.io/mfiddle/#!/7651480)
 
