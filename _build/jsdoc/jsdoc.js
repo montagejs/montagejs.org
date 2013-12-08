@@ -142,7 +142,14 @@ if (!module.parent) {
     if (process.argv.length == 4) {
         module.exports.apply(null, process.argv.slice(2)).done();
     } else {
-        console.log("Usage:\n  ./jsdoc.js montage npm-link [output path]");
+        console.log('Usage:\n  ./jsdoc.js <package name> <release | "npm-link"> <output path>');
+        console.log();
+        console.log('  package name: "montage" or "digit"');
+        console.log();
+        console.log('       release: a version of the package released on the npm registry or');
+        console.log('                "npm-link" to use the version linked by the npm command');
+        console.log();
+        console.log('   output path: a directory to generate the docs into');
         process.exit(1);
     }
 }
