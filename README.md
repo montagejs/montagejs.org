@@ -43,3 +43,19 @@ $ _build/build.js
 ```
 
 This will build the apps and the API docs
+
+## Building the JSDoc only
+```bash
+$ _build/jsdoc/jsdoc-link.js
+$ jekyll serve # needed only once
+```
+
+Then you can uncomment the apps in the jekyll config:
+Open the `/_config.yml` file and uncomment this line `exclude: [apps, built-apps, node_modules, packages, ui]`.
+From now on you can run jekyll to rebuild automatically
+
+```bash
+$ jekyll serve --watch
+```
+
+Open in the browser: `http://localhost:4000/api/`
