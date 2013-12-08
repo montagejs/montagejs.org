@@ -21,7 +21,7 @@ title: "Montage - MontageJS API"
         Montage
         
         
-            <span class="source"><a href="https://github.com/montagejs/montage/blob/v0.13.7/core/core.js#L78">source</a></span>
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/v0.13.8/core/core.js#L78">source</a></span>
         
     </h2>
     
@@ -110,7 +110,7 @@ title: "Montage - MontageJS API"
     <h4 class="name" id="create">
         create<span class="signature">(aPrototype, <span class="optional">propertyDescriptor</span>)</span><span class="type-signature"></span> <span class="type-signature">&lt;constructor> </span>
         
-            <span class="source"><a href="https://github.com/montagejs/montage/blob/v0.13.7/core/core.js#L288">source</a></span>
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/v0.13.8/core/core.js#L288">source</a></span>
         
     </h4>
     
@@ -292,7 +292,7 @@ title: "Montage - MontageJS API"
     <h4 class="name" id="defineProperties">
         defineProperties<span class="signature">(obj, properties)</span><span class="type-signature"></span> <span class="type-signature">&lt;constructor> </span>
         
-            <span class="source"><a href="https://github.com/montagejs/montage/blob/v0.13.7/core/core.js#L599">source</a></span>
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/v0.13.8/core/core.js#L599">source</a></span>
         
     </h4>
     
@@ -430,7 +430,7 @@ title: "Montage - MontageJS API"
     <h4 class="name" id="defineProperty">
         defineProperty<span class="signature">(obj, prop, descriptor)</span><span class="type-signature"></span> <span class="type-signature">&lt;constructor> </span>
         
-            <span class="source"><a href="https://github.com/montagejs/montage/blob/v0.13.7/core/core.js#L347">source</a></span>
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/v0.13.8/core/core.js#L347">source</a></span>
         
     </h4>
     
@@ -601,7 +601,7 @@ title: "Montage - MontageJS API"
     <h4 class="name" id="equals">
         equals<span class="signature">(anObject)</span><span class="type-signature"> &rarr; {Boolean}</span> <span class="type-signature">&lt;constructor> </span>
         
-            <span class="source"><a href="https://github.com/montagejs/montage/blob/v0.13.7/core/core.js#L908">source</a></span>
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/v0.13.8/core/core.js#L908">source</a></span>
         
     </h4>
     
@@ -735,7 +735,7 @@ title: "Montage - MontageJS API"
     <h4 class="name" id="getInfoForObject">
         getInfoForObject<span class="signature">(object)</span><span class="type-signature"> &rarr; {Object}</span> <span class="type-signature">&lt;constructor> </span>
         
-            <span class="source"><a href="https://github.com/montagejs/montage/blob/v0.13.7/core/core.js#L770">source</a></span>
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/v0.13.8/core/core.js#L770">source</a></span>
         
     </h4>
     
@@ -867,7 +867,7 @@ title: "Montage - MontageJS API"
     <h4 class="name" id="getPropertyAttribute">
         getPropertyAttribute<span class="signature">(anObject, propertyName, attributeName)</span><span class="type-signature"></span> <span class="type-signature">&lt;constructor> </span>
         
-            <span class="source"><a href="https://github.com/montagejs/montage/blob/v0.13.7/core/core.js#L721">source</a></span>
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/v0.13.8/core/core.js#L721">source</a></span>
         
     </h4>
     
@@ -1040,7 +1040,7 @@ title: "Montage - MontageJS API"
     <h4 class="name" id="getPropertyAttributes">
         getPropertyAttributes<span class="signature">(anObject, attributeName)</span><span class="type-signature"> &rarr; {Object}</span> <span class="type-signature">&lt;constructor> </span>
         
-            <span class="source"><a href="https://github.com/montagejs/montage/blob/v0.13.7/core/core.js#L739">source</a></span>
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/v0.13.8/core/core.js#L739">source</a></span>
         
     </h4>
     
@@ -1191,7 +1191,7 @@ title: "Montage - MontageJS API"
     <h4 class="name" id="getSerializablePropertyNames">
         getSerializablePropertyNames<span class="signature">(anObject)</span><span class="type-signature"> &rarr; {Array}</span> <span class="type-signature">&lt;constructor> </span>
         
-            <span class="source"><a href="https://github.com/montagejs/montage/blob/v0.13.7/core/core.js#L699">source</a></span>
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/v0.13.8/core/core.js#L699">source</a></span>
         
     </h4>
     
@@ -1323,7 +1323,7 @@ title: "Montage - MontageJS API"
 
     
 
-    <p class="generated-from">Generated from <a href="https://github.com/montagejs/montage/tree/v0.13.7">v0.13.7</a></p>
+    <p class="generated-from">Generated from <a href="https://github.com/montagejs/montage/tree/v0.13.8">v0.13.8</a></p>
 </article>
 
 

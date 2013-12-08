@@ -34,7 +34,7 @@
         "lenient": true,
         "githubOrg": "montagejs",
         "githubRepo": "montage",
-        "commitish": ""
+        "commitish": "v0.13.8"
     },
     "repositoryId": {
         "sha": "11ccc5566986d891716837105385daaaf8884980",
