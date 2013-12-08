@@ -1,0 +1,3194 @@
+---
+
+layout: api
+title: "RangeController - MontageJS API"
+
+---
+
+<nav class="subnav js-api-subnav">
+    <input id="index-search" type="search" placeholder="Search"><details open><summary>Types</summary><ul><li><a href="AbstractButton.html">AbstractButton</a></li><li><a href="AbstractCheckbox.html">AbstractCheckbox</a></li><li><a href="AbstractControl.html">AbstractControl</a></li><li><a href="AbstractImage.html">AbstractImage</a></li><li><a href="AbstractLink.html">AbstractLink</a></li><li><a href="AbstractNumberField.html">AbstractNumberField</a></li><li><a href="AbstractRadioButton.html">AbstractRadioButton</a></li><li><a href="AbstractSelect.html">AbstractSelect</a></li><li><a href="AbstractSlider.html">AbstractSlider</a></li><li><a href="AbstractTextArea.html">AbstractTextArea</a></li><li><a href="AbstractTextField.html">AbstractTextField</a></li><li><a href="AbstractToggleButton.html">AbstractToggleButton</a></li><li><a href="AbstractToggleSwitch.html">AbstractToggleSwitch</a></li><li><a href="AbstractVideo.html">AbstractVideo</a></li><li><a href="ActionEventListener.html">ActionEventListener</a></li><li><a href="Alert.html">Alert</a></li><li><a href="Alias.html">Alias</a></li><li><a href="Application.html">Application</a></li><li><a href="AssociationBlueprint.html">AssociationBlueprint</a></li><li><a href="Binder.html">Binder</a></li><li><a href="BinderManager.html">BinderManager</a></li><li><a href="BitField.html">BitField</a></li><li><a href="Blueprint.html">Blueprint</a></li><li><a href="BytesConverter.html">BytesConverter</a></li><li><a href="Component.html">Component</a></li><li><a href="Composer.html">Composer</a></li><li><a href="Condition.html">Condition</a></li><li><a href="Converter.html">Converter</a></li><li><a href="CubicBezier.html">CubicBezier</a></li><li><a href="CurrencyConverter.html">CurrencyConverter</a></li><li><a href="DateConverter.html">DateConverter</a></li><li><a href="DateValidator.html">DateValidator</a></li><li><a href="DefaultLocalizer.html">DefaultLocalizer</a></li><li><a href="DerivedPropertyBlueprint.html">DerivedPropertyBlueprint</a></li><li><a href="ElementReference.html">ElementReference</a></li><li><a href="Enum.html">Enum</a></li><li><a href="EventBlueprint.html">EventBlueprint</a></li><li><a href="EventManager.html">EventManager</a></li><li><a href="Exception.html">Exception</a></li><li><a href="Flow.html">Flow</a></li><li><a href="FlowTranslateComposer.html">FlowTranslateComposer</a></li><li><a href="Gate.html">Gate</a></li><li><a href="InvertConverter.html">InvertConverter</a></li><li><a href="Iteration.html">Iteration</a></li><li><a href="KeyComposer.html">KeyComposer</a></li><li><a href="KeyManager.html">KeyManager</a></li><li><a href="Loader.html">Loader</a></li><li><a href="Localizer.html">Localizer</a></li><li><a href="Logger.html">Logger</a></li><li><a href="LowerCaseConverter.html">LowerCaseConverter</a></li><li><a href="MediaController.html">MediaController</a></li><li><a href="MessageFormat.html">MessageFormat</a></li><li><a href="MessageLocalizer.html">MessageLocalizer</a></li><li><a href="ModalOverlay.html">ModalOverlay</a></li><li><a href="module-Overlay.html">module:Overlay</a></li><li><a href="ModuleBlueprint.html">ModuleBlueprint</a></li><li><a href="ModuleReference.html">ModuleReference</a></li><li><a href="Montage.html">Montage</a></li><li><a href="MontageBuilder.html">MontageBuilder</a></li><li><a href="MontageReviver.html">MontageReviver</a></li><li><a href="MontageWindow.html">MontageWindow</a></li><li><a href="MutableEvent.html">MutableEvent</a></li><li><a href="NewLineToBrConverter.html">NewLineToBrConverter</a></li><li><a href="NumberConverter.html">NumberConverter</a></li><li><a href="NumberValidator.html">NumberValidator</a></li><li><a href="ObjectController.html">ObjectController</a></li><li><a href="ObjectProperty.html">ObjectProperty</a></li><li><a href="Point_.html">Point</a></li><li><a href="PressComposer.html">PressComposer</a></li><li><a href="PressEvent.html">PressEvent</a></li><li><a href="PropertyBlueprint.html">PropertyBlueprint</a></li><li><a href="PropertyValidationRule.html">PropertyValidationRule</a></li><li><a href="PropertyValidationSemantics.html">PropertyValidationSemantics</a></li><li><a href="RadioButtonController.html">RadioButtonController</a></li><li><a href="RangeController.html">RangeController</a></li><li><a href="Repetition.html">Repetition</a></li><li><a href="RootComponent.html">RootComponent</a></li><li><a href="Serialization.html">Serialization</a></li><li><a href="SerializationExtractor.html">SerializationExtractor</a></li><li><a href="SerializationInspector.html">SerializationInspector</a></li><li><a href="SerializationMerger.html">SerializationMerger</a></li><li><a href="Slot.html">Slot</a></li><li><a href="State.html">State</a></li><li><a href="StateChart.html">StateChart</a></li><li><a href="Substitution.html">Substitution</a></li><li><a href="SwipeComposer.html">SwipeComposer</a></li><li><a href="Target.html">Target</a></li><li><a href="Template.html">Template</a></li><li><a href="TemplateResources.html">TemplateResources</a></li><li><a href="Text.html">Text</a></li><li><a href="TranslateComposer.html">TranslateComposer</a></li><li><a href="TreeController.html">TreeController</a></li><li><a href="TreeControllerNode.html">TreeControllerNode</a></li><li><a href="TrimConverter.html">TrimConverter</a></li><li><a href="UpperCaseConverter.html">UpperCaseConverter</a></li><li><a href="Uuid_.html">Uuid</a></li><li><a href="Validator.html">Validator</a></li></ul></details><details><summary>Externals</summary><ul><li><a href="external-Array.html">Array</a></li><li><a href="external-Function.html">Function</a></li><li><a href="external-Object.html">Object</a></li><li><a href="external-RegExp.html">RegExp</a></li><li><a href="external-String.html">String</a></li></ul></details><details><summary>Events</summary><ul><li><a href="AbstractButton.html#event:action">action</a></li><li><a href="AbstractButton.html#event:longAction">longAction</a></li><li><a href="AbstractButton.html#event:longpress">longpress</a></li><li><a href="AbstractCheckbox.html#event:action">action</a></li><li><a href="AbstractLink.html#event:action">action</a></li><li><a href="AbstractRadioButton.html#event:action">action</a></li><li><a href="AbstractSelect.html#event:action">action</a></li><li><a href="AbstractTextField.html#event:action">action</a></li><li><a href="AbstractToggleButton.html#event:action">action</a></li><li><a href="AbstractToggleButton.html#event:longAction">longAction</a></li><li><a href="AbstractToggleSwitch.html#event:action">action</a></li><li><a href="Overlay.html#event:dismiss">dismiss</a></li><li><a href="PressComposer.html#event:longPress">longPress</a></li><li><a href="PressComposer.html#event:press">press</a></li><li><a href="PressComposer.html#event:pressCancel">pressCancel</a></li><li><a href="PressComposer.html#event:pressStart">pressStart</a></li><li><a href="UndoManager.html#event:operationRegistered">operationRegistered</a></li><li><a href="UndoManager.html#event:redo">redo</a></li><li><a href="UndoManager.html#event:undo">undo</a></li></ul></details><details><summary>Global</summary><ul><li><a href="global.html#determinate">determinate</a></li><li><a href="global.html#error">error</a></li><li><a href="global.html#fulfilled">fulfilled</a></li><li><a href="global.html#pending">pending</a></li><li><a href="global.html#progress">progress</a></li><li><a href="global.html#progressState">progressState</a></li><li><a href="global.html#promise">promise</a></li><li><a href="global.html#PromiseController">PromiseController</a></li><li><a href="global.html#rejected">rejected</a></li><li><a href="global.html#state">state</a></li><li><a href="global.html#value">value</a></li></ul></details>
+</nav>
+
+<div class="main">
+    <article class="content">
+    	
+
+
+
+<header>
+    <h2>
+        
+        RangeController
+        
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/range-controller.js#L107">source</a></span>
+        
+    </h2>
+    
+        <div class="class-description"><p>Manages the selection and visible portion of given content,
+typically for a <a href="Repetition.html">Repetition</a>.</p></div>
+    
+</header>
+
+<article>
+    
+        <p>Specializes <a href="Montage.html">Montage</a> </p>
+    
+    <div class="container-overview">
+    
+
+    
+        
+<dt>
+    
+
+    
+</dt>
+<dd>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Properties</h3>
+
+        <dl>
+            
+<dt>
+    <h4 class="name" id="avoidsEmptySelection">
+        avoidsEmptySelection<span class="type-signature"> :boolean</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/range-controller.js#L295">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Whether to automatically reselect a value if it is the last value
+removed from the selection.</p>
+<p>Off by default.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="clearSelectionOnOrderChange">
+        clearSelectionOnOrderChange<span class="type-signature"> :boolean</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/range-controller.js#L286">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Whether to automatically clear the selection whenever the
+<code>sortPath</code>, <code>filterPath</code>, or <code>reversed</code>
+knobs change.</p>
+<p>Off by default.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="contentConstructor">
+        contentConstructor<span class="type-signature"> :function</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/range-controller.js#L612">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Creates a content value for this range controller.
+If the backing
+collection has an intrinsict type, uses its <code>contentConstructor</code>.
+Otherwise, creates and returns simple, empty objects.</p>
+<p>This property can be set to an alternate content constructor, which will
+take precedence over either of the above defaults.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="deselectInvisibleContent">
+        deselectInvisibleContent<span class="type-signature"> :boolean</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/range-controller.js#L276">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Whether to automatically deselect content that disappears from the
+<code>organizedContent</code>.</p>
+<p>Off by default.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="filterPath">
+        filterPath<span class="type-signature"> :string</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/range-controller.js#L228">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>An FRB expression that determines how to filter content like
+&quot;name.startsWith('A')&quot; to see only names starting with 'A'.
+If the <code>filterPath</code> is null, all content is accepted.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="iterations">
+        iterations<span class="type-signature"> :Array.&lt;<a href="Iteration.html">Iteration</a>></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/range-controller.js#L330">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>An array of iterations corresponding to each of the values in
+<code>organizedContent</code>, providing an interface for getting or
+setting whether each is selected.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="length">
+        length<span class="type-signature"> :number</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/range-controller.js#L254">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The length of a sliding window over the content, suitable for binding
+(indirectly) to the scroll height.
+If <code>start</code> or <code>length</code> is null, all content is
+accepted.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="multiSelect">
+        multiSelect<span class="type-signature"> :boolean</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/range-controller.js#L304">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Whether to automatically deselect all previously selected content when a
+new selection is made.</p>
+<p>Off by default.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="organizedContent">
+        organizedContent<span class="type-signature"> :Array.&lt;Object></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/range-controller.js#L322">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>An array incrementally projected from <code>content</code> through sort,
+reversed, filter, visibleIndexes, start, and length.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="reversed">
+        reversed<span class="type-signature"> :boolean</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/range-controller.js#L220">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Whether to reverse the order of the sorted content.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="selectAddedContent">
+        selectAddedContent<span class="type-signature"> :boolean</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/range-controller.js#L266">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Whether to select new content automatically.</p>
+<p>Off by default.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="selection">
+        selection<span class="type-signature"> :Array|Set|SortedSet</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/range-controller.js#L343">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>A subset of the <code>content</code> that are selected.
+The user may safely reassign this property and all iterations will react
+to the change.
+The selection may be <code>null</code>.
+The selection may be any collection that supports range change events
+like <code>Array</code> or <code>SortedSet</code>.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="sortPath">
+        sortPath<span class="type-signature"> :string</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/range-controller.js#L214">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>An FRB expression that determines how to sort the content, like &quot;name&quot;
+to sort by name.
+If the <code>sortPath</code> is null, the content is not sorted.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="start">
+        start<span class="type-signature"> :number</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/range-controller.js#L245">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The first index of a sliding window over the content, suitable for
+binding (indirectly) to the scroll offset of a large list.
+If <code>start</code> or <code>length</code> is null, all content is
+accepted.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="visibleIndexes">
+        visibleIndexes<span class="type-signature"> :?Array.&lt;number></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/range-controller.js#L236">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>An array of indexes to pluck from the ordered and filtered content.
+The output will be an array of the corresponding content.
+If the <code>visibleIndexes</code> is null, all content is accepted.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        </dl>
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+            
+<dt>
+    
+    <h4 class="name" id="add">
+        add<span class="signature">(value)</span><span class="type-signature"> &rarr; {boolean}</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/range-controller.js#L420">source</a></span>
+        
+    </h4>
+    
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Proxies adding content to the underlying collection, accounting for
+<code>selectAddedContent</code>.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+        
+            <h5>
+                Returns:
+                
+                    <span class="return-type">
+<span class="param-type">boolean</span>
+
+</span>
+                
+            </h5>
+            
+                <div class="param-desc">
+                    <p>whether the value was added</p>
+                </div>
+            
+        
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+    <h4 class="name" id="addContent">
+        addContent<span class="signature">()</span><span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/range-controller.js#L589">source</a></span>
+        
+    </h4>
+    
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Creates content and adds it to the controller and its backing
+collection.
+Uses <code>add</code> and <code>contentConstructor</code>.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+        
+            <h5>
+                Returns:
+                
+            </h5>
+            
+                <div class="param-desc">
+                    <p>the value constructed and added</p>
+                </div>
+            
+        
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+    <h4 class="name" id="addEach">
+        addEach<span class="signature">(values)</span><span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/range-controller.js#L559">source</a></span>
+        
+    </h4>
+    
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Proxies adding each value into the underlying collection.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>values</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+    <h4 class="name" id="callDelegateMethod">
+        callDelegateMethod<span class="signature">(name)</span><span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/core.js#L1126">source</a></span>
+        
+    </h4>
+    
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>This method calls the method named with the identifier prefix if it exists.
+Example: If the name parameter is &quot;shouldDoSomething&quot; and the caller's identifier is &quot;bob&quot;, then
+this method will try and call &quot;bobShouldDoSomething&quot;</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="Montage.html#callDelegateMethod">Montage#callDelegateMethod</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+    <h4 class="name" id="clear">
+        clear<span class="signature">()</span><span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/range-controller.js#L576">source</a></span>
+        
+    </h4>
+    
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Proxies clearing the underlying content collection.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+    <h4 class="name" id="clearSelection">
+        clearSelection<span class="signature">()</span><span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/range-controller.js#L405">source</a></span>
+        
+    </h4>
+    
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>A managed interface for clearing the selection, accounting for
+<code>avoidsEmptySelection</code>.
+You can however directly manipulate the selection, but that will update
+the selection asynchronously because the controller cannot change the
+selection while handling a selection change event.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+    <h4 class="name" id="delete">
+        delete<span class="signature">(value)</span><span class="type-signature"> &rarr; {boolean}</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/range-controller.js#L532">source</a></span>
+        
+    </h4>
+    
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Proxies deleting content from the underlying collection.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+        
+            <h5>
+                Returns:
+                
+                    <span class="return-type">
+<span class="param-type">boolean</span>
+
+</span>
+                
+            </h5>
+            
+                <div class="param-desc">
+                    <p>whether the value was found and deleted successfully</p>
+                </div>
+            
+        
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+    <h4 class="name" id="deleteEach">
+        deleteEach<span class="signature">(values)</span><span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/range-controller.js#L568">source</a></span>
+        
+    </h4>
+    
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Proxies deleting each value out from the underlying collection.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>values</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+    <h4 class="name" id="deselect">
+        deselect<span class="signature">(value)</span><span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/range-controller.js#L389">source</a></span>
+        
+    </h4>
+    
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>A managed interface for removing values from the selection, accounting
+for <code>avoidsEmptySelection</code>.
+You can however directly manipulate the selection, but that will update
+the selection asynchronously because the controller cannot change the
+selection while handling a selection change event.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+    <h4 class="name" id="equals">
+        equals<span class="signature">(anObject)</span><span class="type-signature"> &rarr; {boolean}</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/core.js#L1107">source</a></span>
+        
+    </h4>
+    
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Returns true if two objects are equal, otherwise returns false.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>anObject</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The object to compare for equality.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="Montage.html#equals">Montage#equals</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+        
+            <h5>
+                Returns:
+                
+                    <span class="return-type">
+<span class="param-type">boolean</span>
+
+</span>
+                
+            </h5>
+            
+                <div class="param-desc">
+                    <p>Returns <code>true</code> if the calling object and
+<code>anObject</code> are identical and their <code>uuid</code> properties
+are also equal. Otherwise, returns <code>false</code>.</p>
+                </div>
+            
+        
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+    <h4 class="name" id="has">
+        has<span class="signature">(value)</span><span class="type-signature"> &rarr; {boolean}</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/range-controller.js#L544">source</a></span>
+        
+    </h4>
+    
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Does the value exist in the content?</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the value to test for</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+        
+            <h5>
+                Returns:
+                
+                    <span class="return-type">
+<span class="param-type">boolean</span>
+
+</span>
+                
+            </h5>
+            
+        
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+    <h4 class="name" id="initWithContent">
+        initWithContent<span class="signature">(content)</span><span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/range-controller.js#L198">source</a></span>
+        
+    </h4>
+    
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Initializes a range controller with a backing collection.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>content</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Any collection that produces range change events, like an
+<code>Array</code> or <code>SortedSet</code>.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+        
+            <h5>
+                Returns:
+                
+            </h5>
+            
+                <div class="param-desc">
+                    <p>this</p>
+                </div>
+            
+        
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+    <h4 class="name" id="pop">
+        pop<span class="signature">()</span><span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/range-controller.js#L457">source</a></span>
+        
+    </h4>
+    
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Proxies popping content from the underlying collection.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+        
+            <h5>
+                Returns:
+                
+            </h5>
+            
+                <div class="param-desc">
+                    <p>the popped value</p>
+                </div>
+            
+        
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+    <h4 class="name" id="push">
+        push<span class="signature">()</span><span class="type-signature"> &rarr; {boolean}</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/range-controller.js#L442">source</a></span>
+        
+    </h4>
+    
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Proxies pushing content to the underlying collection, accounting for
+<code>selectAddedContent</code>.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>...values</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+        
+            <h5>
+                Returns:
+                
+                    <span class="return-type">
+<span class="param-type">boolean</span>
+
+</span>
+                
+            </h5>
+            
+                <div class="param-desc">
+                    <p>whether the value was added</p>
+                </div>
+            
+        
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+    <h4 class="name" id="select">
+        select<span class="signature">(value)</span><span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/range-controller.js#L371">source</a></span>
+        
+    </h4>
+    
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>A managed interface for adding values to the selection, accounting for
+<code>multiSelect</code>.
+You can however directly manipulate the selection, but that will update
+the selection asynchronously because the controller cannot change the
+selection while handling a selection change event.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+    <h4 class="name" id="set:selection">
+        set:selection<span class="signature">(a)</span><span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/range-controller.js#L347">source</a></span>
+        
+    </h4>
+    
+
+    
+</dt>
+<dd>
+
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>a</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Collection</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>collection of values to be set as the selection.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+    <h4 class="name" id="shift">
+        shift<span class="signature">()</span><span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/range-controller.js#L468">source</a></span>
+        
+    </h4>
+    
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Proxies shifting content from the underlying collection.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+        
+            <h5>
+                Returns:
+                
+            </h5>
+            
+                <div class="param-desc">
+                    <p>the shifted value</p>
+                </div>
+            
+        
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+    <h4 class="name" id="splice">
+        splice<span class="signature">()</span><span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/range-controller.js#L497">source</a></span>
+        
+    </h4>
+    
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Proxies splicing values into the underlying collection.
+Accounts for * <code>selectAddedContent</code>.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+        
+            <h5>
+                Returns:
+                
+            </h5>
+            
+                <div class="param-desc">
+                    <p>the resulting content</p>
+                </div>
+            
+        
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+    <h4 class="name" id="swap">
+        swap<span class="signature">(index, minusLength, plus)</span><span class="type-signature"> &rarr; {Array}</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/range-controller.js#L516">source</a></span>
+        
+    </h4>
+    
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Proxies swapping values in the underlying collection.
+Accounts for * <code>selectAddedContent</code></p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>index</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the position at which to remove values</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>minusLength</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the number of values to remove</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>plus</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the values to add</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+        
+            <h5>
+                Returns:
+                
+                    <span class="return-type">
+<span class="param-type">Array</span>
+
+</span>
+                
+            </h5>
+            
+                <div class="param-desc">
+                    <p><code>minus</code>, the removed values from the content</p>
+                </div>
+            
+        
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+    <h4 class="name" id="unshift">
+        unshift<span class="signature">()</span><span class="type-signature"> &rarr; {boolean}</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/range-controller.js#L481">source</a></span>
+        
+    </h4>
+    
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Proxies unshifting content to the underlying collection, accounting for
+<code>selectAddedContent</code>.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>...values</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+        
+            <h5>
+                Returns:
+                
+                    <span class="return-type">
+<span class="param-type">boolean</span>
+
+</span>
+                
+            </h5>
+            
+                <div class="param-desc">
+                    <p>whether the value was added</p>
+                </div>
+            
+        
+    
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+
+    
+
+    <p class="generated-from">Generated from <a href="https://github.com/montagejs/montage/tree/a4679af72d90e524500f2860facd486a43311e48">a4679af</a></p>
+</article>
+
+
+
+
+
+    </article>
+    {% include comments.html %}
+</div>
+
+<script>
+(function() {
+    var codeBlocks = document.querySelectorAll("code[class|='lang']");
+
+    // Add "prettyprint" class name to each code block that defines a lang
+    // because it is needed for prettify to find the block.
+    for (var i = 0, block; block = codeBlocks[i]; i++) {
+        block.className += " prettyprint";
+    }
+
+    window.prettyPrint();
+})();
+</script>
