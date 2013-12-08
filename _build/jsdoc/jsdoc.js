@@ -139,7 +139,7 @@ module.exports = function (packageName, tag, outDir) {
 };
 
 if (!module.parent) {
-    if (process.argv.length == 4) {
+    if (process.argv.length == 5) {
         module.exports.apply(null, process.argv.slice(2)).done();
     } else {
         console.log('Usage:\n  ./jsdoc.js <package name> <release | "npm-link"> <output path>');
