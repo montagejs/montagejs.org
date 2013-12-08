@@ -31,6 +31,7 @@ The following components are pre-built MontageJS components.
 
 #### Composers
 * [Press composer](http://montagejs.github.io/mfiddle/#!/7852383)
+* [Translate composer](http://montagejs.github.io/mfiddle/#!/7854041)
 
 #### Pattern
 * [Sorting a Repetition](http://montagejs.github.io/mfiddle/#!/7651480)
