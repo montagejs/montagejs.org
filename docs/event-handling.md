@@ -5,20 +5,22 @@ title: MontageJS Event Handling
 
 prev-page: data-binding
 this-page: event-handling
-next-page: themes
+next-page: draw-cycle
 
 ---
 
-# Event handling
+# Event Handling
+
+>**Note:** We are currently in the process of updating our docs. This document may not be complete or fully up-to-date yet. We apologize for any inconvenience.
 
 Montage includes a custom event manager that transparently wraps the browser’s native event handling mechanism. This enables several features in Montage, including simpler event handling code, property change observing, and results in better performing web applications.
 
-## About event delegation
+## About Event Delegation
 Montage uses _event delegation_ to manage event handling and dispatching. With event delegation, instead of installing event listeners on every element that may dispatch an event, a single event listener is installed on a parent element that listens for and responds to events that target its children. This is made possible by the standard event “flow” defined by the [DOM Level 3 Event Specification](http://www.w3.org/TR/DOM-Level-3-Events/#event-flow).
 
 Event delegation provides several benefits. For instance, application performance is improved since the number of event listeners is reduced. In a Montage application there is only one “native” event listener, which acts as the primary event responder and dispatcher of all events. It also enables Montage applications to observe changes to property values and arrays.
 
-## Creating event handlers
+## Creating Event Handlers
 You use the standard `addEventListener()` method to register an event handler on a target object. In Montage, the `target` object can be any JavaScript object, not just a DOM element.
 
 `target.addEventListener(eventType, listener[, useCapture]);`
@@ -27,7 +29,7 @@ You use the standard `addEventListener()` method to register an event handler on
 * `listener` An object that implements the Montage event listener interface, or a function to call directly.
 * `useCapture` A boolean that, if true, causes all events of the specified type to be dispatched to the registered listener before being dispatched to any other event target beneath it in the DOM tree. By default, this is property is `false`.
 
-### Montage event listener interface
+### Montage Event Listener Interface
 The Montage event listener interface extends the [DOM Level 3 EventListener interface](http://dev.w3.org/2006/webapi/DOM-Level-3-Events/html/DOM3-Events.html#interface-EventListener) specification implemented by all modern web browsers. In the standard interface you specify an object as a “listener” object for an event type. The listener object defines an `handleEvent()` method that is invoked by the browser whenever the specified event occurs:
 
 ```js
@@ -51,7 +53,7 @@ The following pseudo-code shows how the event manager determines what method to 
 ```js
 methodToInvoke = "";
 identifier = eventTarget.identifier;
-if (event.phase == "bubble" ) {  
+if (event.phase == "bubble" ) {
    methodToInvoke = "handle" + 
                      (identifier ? identifier.toCapitalized() : "") +
                      eventType.toCapitalized();
@@ -215,7 +217,7 @@ You can also specify the `identifier` string in the serialization, as shown belo
 </script>
 ```
 
-## Dependent properties
+## Dependent Properties
 A property belonging to an object may declare itself to be dependent on one or more other “independent” properties. If the value of one of the dependencies changes, a `change@dependentProp` event is dispatched, as if the dependent property was modified itself. This is especially useful in [data binding](https://github.com/montagejs/montage/wiki/Data-binding).
 
 ### Basic example
@@ -290,101 +292,4 @@ exports.Employee = Montage.create(Montage, {
         }
     }
 });
-```
-
-### Data binding and dependent properties
-Dependent properties are especially useful when combined with data binding. A data binding in Montage is, essentially, a special purpose property change observer that keeps the observed property in sync with the property of another object. So if you define a data binding on a property that has dependencies, the data binding will execute whenever one of the dependencies has changed.
-
-The following example demonstrates how this works. It consists of two Textfield components (`<input>` text fields) in which the user enters a first and last name, and a DynamicText component (a `<p>` element) that displays the result. The HTML for the application contains the required markup, and a `<link>` element that includes the serialization from an external file named index.json:
-```html
-// index.html
-<!doctype html>
-<html>
-<head>
-    <title>Data binding and dependent properties</title>
-    <script src="../montage/montage.js"></script>
-    <link rel="serialization" type="text/montage-serialization" href="index.json">
-</head>
-<body>
-    <input type="text" id="fname" placeholder="Enter first name...">
-    <input type="text" id="lname" placeholder="Enter last name...">
-    <p id="fullName"></p>
-</body>
-</html>
-```
-
-The controller code is almost identical to the previous example, but the event handling code can be removed since the data binding will handle that for us.
-
-```js
-// controller.js
-var Montage = require("montage/core/core").Montage;
-
-exports.Controller = Montage.create(Montage, {
-    firstName: {
-        value: null
-    },
-    lastName: {
-        value: "Thomas"
-    },
-    fullName: {
-        dependencies: ["firstName", "lastName"],
-        get: function() {
-            return this.firstName + " " + this.lastName;
-        }
-    }
-});
-```
-
-The serialization declares all the components being used. It also binds the values of the `<input>` elements to the `firstName` and `lastName` properties in the controller object. The value of the DynamicText field is bound to the `fullName` property, whose accessor method returns the concatenated values of the two strings.
-
-```json
-// index.json
-{
-    "fullName" : {
-        "name": "DynamicText",
-        "module": "montage/ui/dynamic-text.reel",
-        "properties": {
-            "element": {"#": "fullName"}
-        },
-        "bindings": {
-            "value": {
-                "boundObject": {"@": "controller"},
-                "boundObjectPropertyPath": "fullName"
-            }
-        }
-    },
-
-    "fname_input" : {
-        "name": "Textfield",
-        "module": "montage/ui/textfield.reel",
-        "properties": {
-            "element": {"#": "fname"}
-        },
-        "bindings": {
-            "value": {
-                "boundObject": {"@": "controller"},
-                "boundObjectPropertyPath": "firstName"
-            }
-        }
-    },
-
-    "lname_input" : {
-        "name": "Textfield",
-        "module": "montage/ui/textfield.reel",
-        "properties": {
-            "element": {"#": "lname"}
-        },
-        "bindings": {
-            "value": {
-                "boundObject": {"@": "controller"},
-                "boundObjectPropertyPath": "lastName"
-            }
-        }
-    },
-
-    "controller": {
-        "name": "Controller",
-        "module": "controller-change"
-    }
-}
 ```

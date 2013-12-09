@@ -3,6 +3,10 @@
 layout: docs
 title: Reddit Client with MontageJS - MontageJS Tutorial
 
+prev-page: draw-cycle
+this-page: tutorial-reddit-client-with-montagejs
+next-page: themes
+
 ---
 
 # Build a Simple Reddit Client with MontageJS
@@ -58,7 +62,7 @@ In the binding definition, connect the unordered list to a Repetition component 
 }
 ```
 
-In its current state, the application will display a bulleted list of five items—all with the same text. The `li` element that is nested within the repetition repeats once for each item in the repetition's content array. Imagine the repetition as a `for` loop: every component inside of the repetition spawns a separate instance for each iteration of the loop.
+In its current state, the application will display a bulleted list of five itemsâ€”all with the same text. The `li` element that is nested within the repetition repeats once for each item in the repetition's content array. Imagine the repetition as a `for` loop: every component inside of the repetition spawns a separate instance for each iteration of the loop.
 
 ## Bind to the Current Iteration
 
@@ -78,7 +82,7 @@ To make each item in the list display its number, simply bind the value of the t
 }
 ```
 
-In this example, the repetition is populated with a static array of numbers. In practice, a developer will generally want to use the binding system to connect a repetition to the application data model—typically a data structure that is exposed as a property of your component.
+In this example, the repetition is populated with a static array of numbers. In practice, a developer will generally want to use the binding system to connect a repetition to the application data modelâ€”typically a data structure that is exposed as a property of your component.
 
 It's also worth noting that the content array can contain complex objects, not just simple values like the numbers used in the previous example. The components nested inside the repetition can bind to the properties of the objects within the array. Thanks to the power of FRB, any modification made to the underlying data in the array is automatically reflected in the application's user interface.
 
@@ -132,9 +136,9 @@ After making those changes, the application will have a bulleted list that shows
 
 ## Allow Users to Select a Repetition Item
 
-One of the repetition component's most useful capabilities is built-in support for item selection. When the feature is enabled, the user can click an item in the repetition to mark it as selected. The repetition has a `selection` property that can be used to access the current selection—either programmatically or through bindings. The component will also automatically apply the `selected` CSS class to the selected items, which makes it easy to customize how they are presented.
+One of the repetition component's most useful capabilities is built-in support for item selection. When the feature is enabled, the user can click an item in the repetition to mark it as selected. The repetition has a `selection` property that can be used to access the current selectionâ€”either programmatically or through bindings. The component will also automatically apply the `selected` CSS class to the selected items, which makes it easy to customize how they are presented.
 
-When selection is enabled, the default behavior is single selection—where only one item can be selected at a time. The component will automatically clear the previous selection when setting a new one. To make the repetition support selection, update the binding definition to set the value of the repetition's `isSelectionEnabled` property to `true`:
+When selection is enabled, the default behavior is single selectionâ€”where only one item can be selected at a time. The component will automatically clear the previous selection when setting a new one. To make the repetition support selection, update the binding definition to set the value of the repetition's `isSelectionEnabled` property to `true`:
 
 ```json
 "rep": {
@@ -181,7 +185,9 @@ Next, add a text component to the binding definition and attach it to the `h1` e
 }
 ```
 
-There are a few pieces of unusual syntax in the value binding above. Although the application is only using single selection, the repetition component's selection system is designed to support scenarios where the user can select multiple items at once. To handle those use cases, the selection property returns an array. The `0` in the binding expression tells the binding system to use the first item in the array, which is the selected object. Unlike JavaScript, the FRB syntax doesn't require brackets when accessing an array index.
+There are a few pieces of unusual syntax in the value binding above. Although the application is only using single selection, the repetition component's selection system is designed to support scenarios where the user can select multiple items at once. To handle those use cases, the selection property returns an array.
+
+The `0` in the binding expression tells the binding system to use the first item in the array, which is the selected object. Unlike JavaScript, the FRB syntax doesn't require brackets when accessing an array index. It's worth noting that using an array index to access the first item will only work when the data structure is an array. You could use the FRB `one()` function instead to access the first item in a generic way.
 
 The other interesting bit of syntax in the code above is the `??` operator. When the expression is evaluated, the value on the left-hand side of the operator will be used if it is defined. If the left-hand value is null or undefined, the expression will evaluate to the value on the right-hand side. In the `value` binding, the `??` operator is used to make the `h1` element prompt the user when no list item is selected.
 
@@ -217,9 +223,9 @@ exports.Owner = Component.specialize({
 });
 ```
 
-It's important to understand that the code above passes raw JSON data from a remote API directly into the program. The binding system ensures that the desired values from the JSON data are displayed in the application—and that the application is updated when the data changes. If the application were to poll the API repeatedly, assigning the returned list to the `subs` property each time, the binding system would automatically propagate any changes that appear in the data.
+It's important to understand that the code above passes raw JSON data from a remote API directly into the program. The binding system ensures that the desired values from the JSON data are displayed in the applicationâ€”and that the application is updated when the data changes. If the application were to poll the API repeatedly, assigning the returned list to the `subs` property each time, the binding system would automatically propagate any changes that appear in the data.
 
-Unlike many other JavaScript MVC frameworks, MontageJS doesn't require developers to peel apart the data and wrap values with special functions in order to make them observable—it operates directly on conventional JavaScript data structures. Of course, the data that is consumed from the API looks a little bit different from the dummy data used in previous examples. Each item in the list returned by the reddit API looks a bit like this:
+Unlike many other JavaScript MVC frameworks, MontageJS doesn't require developers to peel apart the data and wrap values with special functions in order to make them observableâ€”it operates directly on conventional JavaScript data structures. Of course, the data that is consumed from the API looks a little bit different from the dummy data used in previous examples. Each item in the list returned by the reddit API looks a bit like this:
 
 ```json
 {
@@ -300,7 +306,7 @@ At this point, the application will show a selectable list of actual subreddits.
 },
 ```
 
-The `-` operator, which appears in front of the property name in the binding expression, tells FRB that the sequence should be sorted in reverse—from highest to lowest. The `-` operator will work as expected in this case, because the values are simple numbers. You could also use FRB's `reverse` method instead. FRB makes it easy to manipulate bound values in all kinds of interesting ways. If more objects were added to the `subs` array or the value of a subreddit object's `subscribers` property was programmatically altered, the binding system would automatically update the sort order to correspond with the changes.
+The `-` operator, which appears in front of the property name in the binding expression, tells FRB that the sequence should be sorted in reverseâ€”from highest to lowest. The `-` operator will work as expected in this case, because the values are simple numbers. You could also use FRB's `reverse` method instead. FRB makes it easy to manipulate bound values in all kinds of interesting ways. If more objects were added to the `subs` array or the value of a subreddit object's `subscribers` property was programmatically altered, the binding system would automatically update the sort order to correspond with the changes.
 
 <a href="http://montagejs.github.io/mfiddle/#!/7747359" target="_blank">View source on MFiddle</a>
 
@@ -372,16 +378,21 @@ The `table` element is where the application attaches the repetition that contai
 }
 ```
 
-The MontageJS component system allows developers to define `get` and `set` methods for properties, making it possible to  mediate programmatically assignment and retrieval. The `set` method is called whenever the associated property is updated with a new value. The `get` method is used to furnish the return value whenever the property is accessed. The `get` and `set` methods are also invoked when the property is accessed by the binding system.
-
-The reddit application will take advantage of that feature to automatically repopulate the list of stories every time the user selects a different subreddit. Put the story-loading code inside the `set` method of a component property that is bound to the selection of a subreddit repetition:
+The application needs to repopulate the list of stories every time the user selects a different subreddit. The best way to accomplish that is with a change listener, a mechansim that automatically calls a function every time the value of a specified property is updated. At the beginning of the `templateDidLoad` function, add a line that configures a change listener for the navigation selection:
 
 ```javascript
-selectedSub: {
-    set: function(path) {
-        if (path) {
+this.addPathChangeListener("templateObjects.rep.selection.0.data",
+                           this, "handleSelection");
+```
+
+The next step is to create the `handleSelection` function, which is responsible for loading the new stories and putting them into the `stories` property: 
+
+```javascript
+handleSelection: {
+    value: function(selected) {
+        if (selected) {
             var script = document.createElement("script");
-            script.src = "http://www.reddit.com/" + path + ".json?sort=top&t=month&jsonp=storyfn";
+            script.src = "http://www.reddit.com/" + selected.url + ".json?sort=top&t=month&jsonp=storyfn";
 
             var component = this;
             window["storyfn"] = function(jsonData) {
@@ -396,24 +407,11 @@ selectedSub: {
 stories: { value: [] }
 ```
 
-The code used in the `set` method is very similar to the code that was used to populate the subreddit list. It calls an API on the reddit servers and assigns data from the returned JSON to a `stories` property on the component. Note that the stories property, which starts out as an empty array like the `subs` property, is also added in the code above.
+The code used in the `handleSelection` function is very similar to the code that was used to populate the subreddit list. It calls an API on the reddit servers and assigns data from the returned JSON to a `stories` property on the component. Note that the stories property, which starts out as an empty array like the `subs` property, is also added in the code above.
 
-The final step is to bind the `selectedSub` property to the `url` property of the selected subreedit. The `selectedSub` property is part of the component itself, so it needs to be added to the `owner` item in the binding definition:
+That completes the functional part of the application. When the user clicks on a subreddit in the list, the desired subreddit is passed to the `handleSelection` function, which loads the stories from that subreddit and puts them in the component's `stories` property. When the stories are placed in the `stories` property, the bound repetition will automatically display the stories in the page.
 
-```json
-"owner": {
-    "properties": {
-        "element": {"#": "component"}
-    },
-    "bindings": {
-        "selectedSub": {"<-": "@rep.selection.0.data.url"}
-    }
-},
-```
-
-That completes the functional part of the application. When the user clicks on a subreddit in the list, the URL path of the desired subreddit is passed to the `selectedSub` property's `set` method, which loads the stories from that subreddit and puts them in the component's `stories` property. When the stories are placed in the `stories` property, the bound repetition will automatically display the stories in the page.
-
-<a href="http://montagejs.github.io/mfiddle/#!/7765862" target="_blank">View source on MFiddle</a>
+<a href="http://montagejs.github.io/mfiddle/#!/7881445" target="_blank">View source on MFiddle</a>
 
 ## Use CSS to Style the Application
 
@@ -446,10 +444,10 @@ MontageJS components are built from standard HTML markup, which means that devel
 
 After modifying the HTML, the next step is writing the CSS. For the sake of brevity, the entire stylesheet isn't included here. It is available on <a href="https://gist.github.com/anonymous/7766077#file-component-css" target="_blank">on GitHub</a>.
 
-<a href="http://montagejs.github.io/mfiddle/#!/7766077" target="_blank">View source on MFiddle</a>
+<a href="http://montagejs.github.io/mfiddle/#!/7881457" target="_blank">View source on MFiddle</a>
 
 ## Conclusion
 
 The powerful MontageJS binding system and flexible component architecture reduce the amount of code that developers need to write when building applications. Developers can use simple, declarative bindings to define relatively complex behaviors.
 
-For more information about developing software with MontageJS, you can refer to the [documentation](http://montagejs.org/docs/). [Getting Started with MontageJS](http://montagejs.org/docs/montagejs-setup.html) steps you through the process of setting up your MontageJS development environment. You can also visit the <a href="http://seg.phault.net/montage/cookbook/" target="_blank">MontageJS Cookbook</a> for a handy assortment of concise examples. The full source code of the application featured in this tutorial is <a href="#" target="_blank">available on GitHub</a>.
+For more information about developing software with MontageJS, you can refer to the [documentation](http://montagejs.org/docs/). [Getting Started with MontageJS](http://montagejs.org/docs/montagejs-setup.html) steps you through the process of setting up your MontageJS development environment. You can also visit the <a href="http://seg.phault.net/montage/cookbook/" target="_blank">MontageJS Cookbook</a> for a handy assortment of concise examples. The full source code of the application featured in this tutorial is <a href="https://github.com/segphault/mjs-reddit-viewer" target="_blank">available on GitHub</a>.

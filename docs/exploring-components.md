@@ -1,10 +1,16 @@
 ---
 layout: docs
-title: Exploring Components
+title: MontageJS Components
+
+prev-page: montagejs-examples
+this-page: exploring-components
+next-page: serialization-format
 
 ---
 
-# Exploring Components
+# MontageJS Components
+
+>**Note:** We are currently in the process of updating our docs. This document may not be complete or fully up-to-date yet. We apologize for any inconvenience.
 
 MontageJS applications consist of a model layer that handles the data and a view layer that reads from the models. Components make up the view portion of a MontageJS application. As a rule, these components are stored in the ui directory of your MontageJS application (which has the benefit that you can use any MontageJS package and easily locate the user interface components it provides).
 
@@ -49,7 +55,7 @@ For more details on the serialization format refer to [MontageJS Serialization F
 
 This means that when you use a FooBar component in a MontageJS application the only portion of its template that will be rendered is the `foo-bar` element.
 
-><div class="note">**Note:** MontageJS components are reusable, that is, you can insert them multiple times in the same document, which is why we use a [custom data-attribute](http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#custom-data-attribute), `data-montage-id`, to identify elements and not the document-unique HTML `id` attribute. This also gives you the freedom to use the `id` attribute for styling, whether for performance or legacy reasons.</div>
+>**Note:** MontageJS components are reusable, that is, you can insert them multiple times in the same document, which is why we use a [custom data-attribute](http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#custom-data-attribute), `data-montage-id`, to identify elements and not the document-unique HTML `id` attribute. This also gives you the freedom to use the `id` attribute for styling, whether for performance or legacy reasons.
 
 Next, the CSS file: By default, we start off with an almost blank style sheet, waiting for you to bring it to life by adding your meticulously crafted rules. The only content we pass along is the class name of the root element.
 
@@ -62,7 +68,6 @@ Next, the CSS file: By default, we start off with an almost blank style sheet, w
 Note also that the class name is a CamelCase version of the .reel directory name. This is part of our internal [CSS naming convention](https://github.com/montagejs/montage/wiki/Naming-Conventions); it allows us to scope each component's CSS so that it doesn't "leak out" and accidentally style other components.
 
 Finally, the JS file:
-
 
 ```javascript
 exports.FooBar = Component.specialize(/** @lends FooBar# */ {
