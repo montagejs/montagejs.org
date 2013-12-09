@@ -31,7 +31,7 @@ There are three options to extend a component’s template:
 var Montage = require("montage").Montage,
     Toggle = require("ui/toggle").Toggle;
 
-exports.MyToggle = Montage.create(Toggle);
+exports.MyToggle = Toggle.specialize();
 ```
 
 ```html
@@ -68,7 +68,7 @@ exports.MyToggle = Montage.create(Toggle);
 var Montage = require("montage").Montage,
     Toggle = require("montage/ui/toggle.reel").Toggle;
 
-exports.MyToggle = Montage.create(Toggle, {
+exports.MyToggle = Toggle.specialize({
     draw: {
         value: function() {
             // my different draw implementation
@@ -87,7 +87,7 @@ exports.MyToggle = Montage.create(Toggle, {
 var Montage = require("montage").Montage,
     Toggle = require("montage/ui/toggle.reel").Toggle;
 
-exports.MyToggle = Montage.create(Toggle, {
+exports.MyToggle = Toggle.specialize({
     draw: {
         value: function() {
             // my different draw implementation
