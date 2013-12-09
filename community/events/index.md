@@ -9,7 +9,7 @@ title: MontageJS Events
 
 ### Upcoming
 
-* TBA
+* [Montage Meetup](http://www.meetup.com/Montage-Developers-of-Silicon-Valley/events/154749222/) Free Training (Getting Started), networking (food), and adv. topic (WebGL) __Wednesday, December 18, 2013__ at Fastmac/TruePower 3030 Olcott St, Santa Clara, CA
 
 
 ### Past
