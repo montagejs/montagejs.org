@@ -14,7 +14,7 @@ In MontageJS applications, lists of items can be displayed with the built-in Rep
 This tutorial demonstrates how to build a very simple reddit client using the Repetition component. The client application includes a navigation sidebar, which uses a repetition to display a list of popular subreddits. When the user clicks an item in the list, the application uses the reddit API to obtain the top stories from the selected subreddit. The application uses a second repetition to display the list of stories, presenting each one with its title, score, and submitter.
 
 <figure>
-	<img src="/images/docs/reddit-client/fig01.png" alt="The final application.">
+	<img src="/images/docs/tutorials/reddit-client/fig01.png" alt="The final application.">
 	<figcaption><strong>Figure 1.</strong> The final reddit client on MontageJS.</figcaption>
 </figure>
 
