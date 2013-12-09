@@ -49,7 +49,8 @@ The following example shows a simple Repetition (`items`) that produces three te
         "element": { "#": "item" }
     },
     "bindings": {
-        "value": { "<-": "@items.objectAtCurrentIteration" }
+        "value": { "<-": "@items.objectAtCurrentIteration.value" },
+        "title": { "<-": "@items.objectAtCurrentIteration.hoverText" }
     }
 }
 ```
@@ -59,7 +60,16 @@ var Component = require("montage/ui/component").Component;
 
 exports.Content = Component.specialize({
     myListProperty: {
-        value: ["Item 1", "Item 2", "Item 3"]
+        value: [{
+            "value": "Item 1",
+            "hoverText": "One"
+        }, {
+            "value": "Item 1",
+            "hoverText": "Two"
+        }, {
+            "value": "Item 1",
+            "hoverText": "Three"
+        }]
     }
 });
 ```
