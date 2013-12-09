@@ -1,0 +1,4292 @@
+---
+
+layout: api
+title: "ModuleBlueprint - MontageJS API"
+
+---
+
+<nav class="subnav js-api-subnav">
+    <input id="index-search" type="search" placeholder="Search"><details open><summary>Types</summary><ul><li><a href="AbstractButton.html">AbstractButton</a></li><li><a href="AbstractCheckbox.html">AbstractCheckbox</a></li><li><a href="AbstractControl.html">AbstractControl</a></li><li><a href="AbstractImage.html">AbstractImage</a></li><li><a href="AbstractLink.html">AbstractLink</a></li><li><a href="AbstractNumberField.html">AbstractNumberField</a></li><li><a href="AbstractRadioButton.html">AbstractRadioButton</a></li><li><a href="AbstractSelect.html">AbstractSelect</a></li><li><a href="AbstractSlider.html">AbstractSlider</a></li><li><a href="AbstractTextArea.html">AbstractTextArea</a></li><li><a href="AbstractTextField.html">AbstractTextField</a></li><li><a href="AbstractToggleButton.html">AbstractToggleButton</a></li><li><a href="AbstractToggleSwitch.html">AbstractToggleSwitch</a></li><li><a href="AbstractVideo.html">AbstractVideo</a></li><li><a href="ActionEventListener.html">ActionEventListener</a></li><li><a href="Alert.html">Alert</a></li><li><a href="Alias.html">Alias</a></li><li><a href="Application.html">Application</a></li><li><a href="AssociationBlueprint.html">AssociationBlueprint</a></li><li><a href="Binder.html">Binder</a></li><li><a href="BinderManager.html">BinderManager</a></li><li><a href="BitField.html">BitField</a></li><li><a href="Blueprint.html">Blueprint</a></li><li><a href="BytesConverter.html">BytesConverter</a></li><li><a href="Component.html">Component</a></li><li><a href="Composer.html">Composer</a></li><li><a href="Condition.html">Condition</a></li><li><a href="Converter.html">Converter</a></li><li><a href="CubicBezier.html">CubicBezier</a></li><li><a href="CurrencyConverter.html">CurrencyConverter</a></li><li><a href="DateConverter.html">DateConverter</a></li><li><a href="DateValidator.html">DateValidator</a></li><li><a href="DefaultLocalizer.html">DefaultLocalizer</a></li><li><a href="DerivedPropertyBlueprint.html">DerivedPropertyBlueprint</a></li><li><a href="ElementReference.html">ElementReference</a></li><li><a href="Enum.html">Enum</a></li><li><a href="EventBlueprint.html">EventBlueprint</a></li><li><a href="EventManager.html">EventManager</a></li><li><a href="Exception.html">Exception</a></li><li><a href="Flow.html">Flow</a></li><li><a href="FlowTranslateComposer.html">FlowTranslateComposer</a></li><li><a href="Gate.html">Gate</a></li><li><a href="InvertConverter.html">InvertConverter</a></li><li><a href="Iteration.html">Iteration</a></li><li><a href="KeyComposer.html">KeyComposer</a></li><li><a href="KeyManager.html">KeyManager</a></li><li><a href="Loader.html">Loader</a></li><li><a href="Localizer.html">Localizer</a></li><li><a href="Logger.html">Logger</a></li><li><a href="LowerCaseConverter.html">LowerCaseConverter</a></li><li><a href="MediaController.html">MediaController</a></li><li><a href="MessageFormat.html">MessageFormat</a></li><li><a href="MessageLocalizer.html">MessageLocalizer</a></li><li><a href="ModalOverlay.html">ModalOverlay</a></li><li><a href="module-Overlay.html">module:Overlay</a></li><li><a href="ModuleBlueprint.html">ModuleBlueprint</a></li><li><a href="ModuleReference.html">ModuleReference</a></li><li><a href="Montage.html">Montage</a></li><li><a href="MontageBuilder.html">MontageBuilder</a></li><li><a href="MontageReviver.html">MontageReviver</a></li><li><a href="MontageWindow.html">MontageWindow</a></li><li><a href="MutableEvent.html">MutableEvent</a></li><li><a href="NewLineToBrConverter.html">NewLineToBrConverter</a></li><li><a href="NumberConverter.html">NumberConverter</a></li><li><a href="NumberValidator.html">NumberValidator</a></li><li><a href="ObjectController.html">ObjectController</a></li><li><a href="ObjectProperty.html">ObjectProperty</a></li><li><a href="Point_.html">Point</a></li><li><a href="PressComposer.html">PressComposer</a></li><li><a href="PressEvent.html">PressEvent</a></li><li><a href="PropertyBlueprint.html">PropertyBlueprint</a></li><li><a href="PropertyValidationRule.html">PropertyValidationRule</a></li><li><a href="PropertyValidationSemantics.html">PropertyValidationSemantics</a></li><li><a href="RadioButtonController.html">RadioButtonController</a></li><li><a href="RangeController.html">RangeController</a></li><li><a href="Repetition.html">Repetition</a></li><li><a href="RootComponent.html">RootComponent</a></li><li><a href="Serialization.html">Serialization</a></li><li><a href="SerializationExtractor.html">SerializationExtractor</a></li><li><a href="SerializationInspector.html">SerializationInspector</a></li><li><a href="SerializationMerger.html">SerializationMerger</a></li><li><a href="Slot.html">Slot</a></li><li><a href="State.html">State</a></li><li><a href="StateChart.html">StateChart</a></li><li><a href="Substitution.html">Substitution</a></li><li><a href="SwipeComposer.html">SwipeComposer</a></li><li><a href="Target.html">Target</a></li><li><a href="Template.html">Template</a></li><li><a href="TemplateResources.html">TemplateResources</a></li><li><a href="Text.html">Text</a></li><li><a href="TranslateComposer.html">TranslateComposer</a></li><li><a href="TreeController.html">TreeController</a></li><li><a href="TreeControllerNode.html">TreeControllerNode</a></li><li><a href="TrimConverter.html">TrimConverter</a></li><li><a href="UpperCaseConverter.html">UpperCaseConverter</a></li><li><a href="Uuid_.html">Uuid</a></li><li><a href="Validator.html">Validator</a></li></ul></details><details><summary>Externals</summary><ul><li><a href="external-Array.html">Array</a></li><li><a href="external-Function.html">Function</a></li><li><a href="external-Object.html">Object</a></li><li><a href="external-RegExp.html">RegExp</a></li><li><a href="external-String.html">String</a></li></ul></details><details><summary>Events</summary><ul><li><a href="AbstractButton.html#event:action">action</a></li><li><a href="AbstractButton.html#event:longAction">longAction</a></li><li><a href="AbstractButton.html#event:longpress">longpress</a></li><li><a href="AbstractCheckbox.html#event:action">action</a></li><li><a href="AbstractLink.html#event:action">action</a></li><li><a href="AbstractRadioButton.html#event:action">action</a></li><li><a href="AbstractSelect.html#event:action">action</a></li><li><a href="AbstractTextField.html#event:action">action</a></li><li><a href="AbstractToggleButton.html#event:action">action</a></li><li><a href="AbstractToggleButton.html#event:longAction">longAction</a></li><li><a href="AbstractToggleSwitch.html#event:action">action</a></li><li><a href="Overlay.html#event:dismiss">dismiss</a></li><li><a href="PressComposer.html#event:longPress">longPress</a></li><li><a href="PressComposer.html#event:press">press</a></li><li><a href="PressComposer.html#event:pressCancel">pressCancel</a></li><li><a href="PressComposer.html#event:pressStart">pressStart</a></li><li><a href="UndoManager.html#event:operationRegistered">operationRegistered</a></li><li><a href="UndoManager.html#event:redo">redo</a></li><li><a href="UndoManager.html#event:undo">undo</a></li></ul></details><details><summary>Global</summary><ul><li><a href="global.html#determinate">determinate</a></li><li><a href="global.html#error">error</a></li><li><a href="global.html#fulfilled">fulfilled</a></li><li><a href="global.html#pending">pending</a></li><li><a href="global.html#progress">progress</a></li><li><a href="global.html#progressState">progressState</a></li><li><a href="global.html#promise">promise</a></li><li><a href="global.html#PromiseController">PromiseController</a></li><li><a href="global.html#rejected">rejected</a></li><li><a href="global.html#state">state</a></li><li><a href="global.html#value">value</a></li></ul></details>
+</nav>
+
+<div class="main">
+    <article class="content">
+    	
+
+
+
+<header>
+    <h2>
+        
+        ModuleBlueprint
+        
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/meta/module-blueprint.js#L10">source</a></span>
+        
+    </h2>
+    
+</header>
+
+<article>
+    
+        <p>Specializes <a href="Blueprint.html">Blueprint</a> </p>
+    
+    <div class="container-overview">
+    
+
+    
+        
+<dt>
+    
+
+    
+</dt>
+<dd>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Properties</h3>
+
+        <dl>
+            
+
+        
+            
+
+        
+            
+<dt>
+    <h4 class="name" id="binder">
+        binder<span class="type-signature"> :Property</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/meta/blueprint.js#L307">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="Blueprint.html#binder">Blueprint#binder</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+	<tr>
+	    <th class="details-header tag-default">Default Value:</th>
+	    <td class="details-content tag-default"><ul class="dummy"><li>null</li></ul></td>
+	</tr>
+	
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="blueprintInstanceModule">
+        blueprintInstanceModule<span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/meta/blueprint.js#L269">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>This is used for references only so that we can reload referenced
+blueprints.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="Blueprint.html#blueprintInstanceModule">Blueprint#blueprintInstanceModule</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="customPrototype">
+        customPrototype<span class="type-signature"> :boolean</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/meta/blueprint.js#L386">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Defines if the blueprint should use custom prototype for new
+instances.</p>
+<p>Returns <code>true</code> if the blueprint needs to require a custom prototype for
+creating new instances, <code>false</code> if new instance are generic prototypes.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="Blueprint.html#customPrototype">Blueprint#customPrototype</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+	<tr>
+	    <th class="details-header tag-default">Default Value:</th>
+	    <td class="details-content tag-default"><ul class="dummy"><li>false</li></ul></td>
+	</tr>
+	
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="eventBlueprints">
+        eventBlueprints<span class="type-signature"> :Property</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/meta/blueprint.js#L720">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="Blueprint.html#eventBlueprints">Blueprint#eventBlueprints</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+	<tr>
+	    <th class="details-header tag-default">Default Value:</th>
+	    <td class="details-content tag-default"><ul class="dummy"><li>{Array} new Array()</li></ul></td>
+	</tr>
+	
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="exportName">
+        exportName<span class="type-signature"> :string</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/meta/module-blueprint.js#L81">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The name of the export this blueprint is for.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="identifier">
+        identifier<span class="type-signature"> :Property</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/meta/blueprint.js#L289">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The identifier is the same as the name and is used to make the
+serialization of a blueprint humane.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="Blueprint.html#identifier">Blueprint#identifier</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+	<tr>
+	    <th class="details-header tag-default">Default Value:</th>
+	    <td class="details-content tag-default"><ul class="dummy"><li>{string} this.name</li></ul></td>
+	</tr>
+	
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="module">
+        module<span class="type-signature"> :<a href="ModuleReference.html">ModuleReference</a></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/meta/module-blueprint.js#L73">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>A reference to the module that this blueprint is for.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="moduleId">
+        moduleId<span class="type-signature"> :Property</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/meta/blueprint.js#L354">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="Blueprint.html#moduleId">Blueprint#moduleId</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+	<tr>
+	    <th class="details-header tag-default">Default Value:</th>
+	    <td class="details-content tag-default"><ul class="dummy"><li>null</li></ul></td>
+	</tr>
+	
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="name">
+        name<span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/jsdoc#Lundefined">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="Blueprint.html#name">Blueprint#name</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="newAssociationBlueprint">
+        newAssociationBlueprint<span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/meta/blueprint.js#L489">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Return a new association blueprint.
+&lt;b&gt;Note: &lt;/b&gt; This is the canonical way of creating new association blueprint in order to enable subclassing.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="Blueprint.html#newAssociationBlueprint">Blueprint#newAssociationBlueprint</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="newDerivedPropertyBlueprint">
+        newDerivedPropertyBlueprint<span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/meta/blueprint.js#L501">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Return a new derived property blueprint.
+&lt;b&gt;Note: &lt;/b&gt; This is the canonical way of creating new derived property blueprint in order to enable subclassing.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="Blueprint.html#newDerivedPropertyBlueprint">Blueprint#newDerivedPropertyBlueprint</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="newEventBlueprint">
+        newEventBlueprint<span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/meta/blueprint.js#L785">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Return a new event blueprint.
+<strong>Note:</strong> This is the canonical way of creating new event blueprint in
+order to enable subclassing.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="Blueprint.html#newEventBlueprint">Blueprint#newEventBlueprint</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="newPropertyBlueprint">
+        newPropertyBlueprint<span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/meta/blueprint.js#L477">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Return a new property blueprint.</p>
+<p><strong>Note:</strong> This is the canonical way of creating new property blueprint
+in order to enable subclassing.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="Blueprint.html#newPropertyBlueprint">Blueprint#newPropertyBlueprint</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="ObjectProperty">
+        ObjectProperty<span class="type-signature"> :Property</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/meta/blueprint.js#L254">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Return the blueprint object property for this blueprint.</p>
+<p>This will return the default if none is declared.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="Blueprint.html#ObjectProperty">Blueprint#ObjectProperty</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="parent">
+        parent<span class="type-signature"> :Property</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/meta/blueprint.js#L334">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Blueprint parent</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="Blueprint.html#parent">Blueprint#parent</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+	<tr>
+	    <th class="details-header tag-default">Default Value:</th>
+	    <td class="details-content tag-default"><ul class="dummy"><li>{Object} null</li></ul></td>
+	</tr>
+	
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="propertyBlueprintGroupForName">
+        propertyBlueprintGroupForName<span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/meta/blueprint.js#L623">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Returns the group associated with that name</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="Blueprint.html#propertyBlueprintGroupForName">Blueprint#propertyBlueprintGroupForName</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="propertyBlueprintGroups">
+        propertyBlueprintGroups<span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/meta/blueprint.js#L605">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>List of properties blueprint groups names</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="Blueprint.html#propertyBlueprintGroups">Blueprint#propertyBlueprintGroups</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="propertyBlueprints">
+        propertyBlueprints<span class="type-signature"> :Property</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/meta/blueprint.js#L403">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="Blueprint.html#propertyBlueprints">Blueprint#propertyBlueprints</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+	<tr>
+	    <th class="details-header tag-default">Default Value:</th>
+	    <td class="details-content tag-default"><ul class="dummy"><li>{Array} new Array()</li></ul></td>
+	</tr>
+	
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="propertyValidationRules">
+        propertyValidationRules<span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/meta/blueprint.js#L843">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Gets the list of properties validation rules</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="Blueprint.html#propertyValidationRules">Blueprint#propertyValidationRules</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        </dl>
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+            
+<dt>
+    
+    <h4 class="name" id="getBlueprintWithModuleId">
+        getBlueprintWithModuleId<span class="signature">(blueprint, require)</span><span class="type-signature"></span> <span class="type-signature">&lt;constructor> </span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/meta/module-blueprint.js#L93">source</a></span>
+        
+    </h4>
+    
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Gets a blueprint from a serialized file at the given module id.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>blueprint</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>module id</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>require</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>function</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+    <h4 class="name" id="addEventBlueprint">
+        addEventBlueprint<span class="signature">(property)</span><span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/meta/blueprint.js#L741">source</a></span>
+        
+    </h4>
+    
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Add a new property blueprint to this blueprint.</p>
+<p>If that property blueprint was associated with another blueprint it will
+be removed first.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>property</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>blueprint The property blueprint to be added.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="Blueprint.html#addEventBlueprint">Blueprint#addEventBlueprint</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+        
+            <h5>
+                Returns:
+                
+            </h5>
+            
+                <div class="param-desc">
+                    <p>property blueprint</p>
+                </div>
+            
+        
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+    <h4 class="name" id="addEventBlueprintNamed">
+        addEventBlueprintNamed<span class="signature">(name)</span><span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/meta/blueprint.js#L798">source</a></span>
+        
+    </h4>
+    
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Convenience to add an event blueprint.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>TODO</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="Blueprint.html#addEventBlueprintNamed">Blueprint#addEventBlueprintNamed</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+        
+            <h5>
+                Returns:
+                
+            </h5>
+            
+                <div class="param-desc">
+                    <p>relationship</p>
+                </div>
+            
+        
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+    <h4 class="name" id="addPropertyBlueprint">
+        addPropertyBlueprint<span class="signature">(property)</span><span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/meta/blueprint.js#L430">source</a></span>
+        
+    </h4>
+    
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Add a new property blueprint to this blueprint.</p>
+<p>If that property blueprint was associated with another blueprint it will
+be removed first.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>property</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>blueprint The property blueprint to be added.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="Blueprint.html#addPropertyBlueprint">Blueprint#addPropertyBlueprint</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+        
+            <h5>
+                Returns:
+                
+            </h5>
+            
+                <div class="param-desc">
+                    <p>property blueprint</p>
+                </div>
+            
+        
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+    <h4 class="name" id="addPropertyBlueprintGroupNamed">
+        addPropertyBlueprintGroupNamed<span class="signature">(name)</span><span class="type-signature"> &rarr; {array}</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/meta/blueprint.js#L639">source</a></span>
+        
+    </h4>
+    
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Add a new property blueprint group.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>of the group</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="Blueprint.html#addPropertyBlueprintGroupNamed">Blueprint#addPropertyBlueprintGroupNamed</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+        
+            <h5>
+                Returns:
+                
+                    <span class="return-type">
+<span class="param-type">array</span>
+
+</span>
+                
+            </h5>
+            
+                <div class="param-desc">
+                    <p>new property blueprint group</p>
+                </div>
+            
+        
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+    <h4 class="name" id="addPropertyBlueprintToGroupNamed">
+        addPropertyBlueprintToGroupNamed<span class="signature">(property, name)</span><span class="type-signature"> &rarr; {array}</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/meta/blueprint.js#L674">source</a></span>
+        
+    </h4>
+    
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Adds a property blueprint to the group name.
+if the group does not exist creates it.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>property</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>to add</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>of the group</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="Blueprint.html#addPropertyBlueprintToGroupNamed">Blueprint#addPropertyBlueprintToGroupNamed</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+        
+            <h5>
+                Returns:
+                
+                    <span class="return-type">
+<span class="param-type">array</span>
+
+</span>
+                
+            </h5>
+            
+                <div class="param-desc">
+                    <p>property blueprint group</p>
+                </div>
+            
+        
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+    <h4 class="name" id="addToManyAssociationBlueprintNamed">
+        addToManyAssociationBlueprintNamed<span class="signature">(name, inverse)</span><span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/meta/blueprint.js#L556">source</a></span>
+        
+    </h4>
+    
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Convenience to add an property blueprint to many relationships.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>TODO</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>inverse</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>TODO</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="Blueprint.html#addToManyAssociationBlueprintNamed">Blueprint#addToManyAssociationBlueprintNamed</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+        
+            <h5>
+                Returns:
+                
+            </h5>
+            
+                <div class="param-desc">
+                    <p>relationship</p>
+                </div>
+            
+        
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+    <h4 class="name" id="addToManyPropertyBlueprintNamed">
+        addToManyPropertyBlueprintNamed<span class="signature">(name)</span><span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/meta/blueprint.js#L525">source</a></span>
+        
+    </h4>
+    
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Convenience to add many property blueprints.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Add to many property blueprints</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="Blueprint.html#addToManyPropertyBlueprintNamed">Blueprint#addToManyPropertyBlueprintNamed</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+        
+            <h5>
+                Returns:
+                
+            </h5>
+            
+                <div class="param-desc">
+                    <p>names</p>
+                </div>
+            
+        
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+    <h4 class="name" id="addToOneAssociationBlueprintNamed">
+        addToOneAssociationBlueprintNamed<span class="signature">(name, inverse)</span><span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/meta/blueprint.js#L538">source</a></span>
+        
+    </h4>
+    
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Convenience to add an property blueprint to one relationship.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>TODO</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>inverse</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>TODO</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="Blueprint.html#addToOneAssociationBlueprintNamed">Blueprint#addToOneAssociationBlueprintNamed</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+        
+            <h5>
+                Returns:
+                
+            </h5>
+            
+                <div class="param-desc">
+                    <p>relationship</p>
+                </div>
+            
+        
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+    <h4 class="name" id="addToOnePropertyBlueprintNamed">
+        addToOnePropertyBlueprintNamed<span class="signature">(name)</span><span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/meta/blueprint.js#L513">source</a></span>
+        
+    </h4>
+    
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Convenience to add one property blueprint.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Add to one property blueprint</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="Blueprint.html#addToOnePropertyBlueprintNamed">Blueprint#addToOnePropertyBlueprintNamed</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+        
+            <h5>
+                Returns:
+                
+            </h5>
+            
+                <div class="param-desc">
+                    <p>name</p>
+                </div>
+            
+        
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+    <h4 class="name" id="create">
+        create<span class="signature">(aPrototype, propertyDescriptor)</span><span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/meta/blueprint.js#L178">source</a></span>
+        
+    </h4>
+    
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>This is the canonical way of creating managed objects prototypes.</p>
+<p>Newly created prototype will be blessed with all the required properties
+to be well behaved.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>aPrototype</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>TODO</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>propertyDescriptor</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>TODO</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="Blueprint.html#create">Blueprint#create</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+        
+            <h5>
+                Returns:
+                
+            </h5>
+            
+                <div class="param-desc">
+                    <p>newPrototype</p>
+                </div>
+            
+        
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+    <h4 class="name" id="eventBlueprintForName">
+        eventBlueprintForName<span class="signature">(name)</span><span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/meta/blueprint.js#L809">source</a></span>
+        
+    </h4>
+    
+
+    
+</dt>
+<dd>
+
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>TODO</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="Blueprint.html#eventBlueprintForName">Blueprint#eventBlueprintForName</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+        
+            <h5>
+                Returns:
+                
+            </h5>
+            
+                <div class="param-desc">
+                    <p>event blueprint</p>
+                </div>
+            
+        
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+    <h4 class="name" id="initWithModuleAndExportName">
+        initWithModuleAndExportName<span class="signature">(name, module)</span><span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/meta/module-blueprint.js#L22">source</a></span>
+        
+    </h4>
+    
+
+    
+</dt>
+<dd>
+
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>TODO</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>module</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A ModuleReference</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+        
+            <h5>
+                Returns:
+                
+            </h5>
+            
+                <div class="param-desc">
+                    <p>this</p>
+                </div>
+            
+        
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+    <h4 class="name" id="initWithName">
+        initWithName<span class="signature">(name)</span><span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/meta/blueprint.js#L51">source</a></span>
+        
+    </h4>
+    
+
+    
+</dt>
+<dd>
+
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The name of the blueprint</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="Blueprint.html#initWithName">Blueprint#initWithName</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+        
+            <h5>
+                Returns:
+                
+            </h5>
+            
+                <div class="param-desc">
+                    <p>this</p>
+                </div>
+            
+        
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+    <h4 class="name" id="newInstance">
+        newInstance<span class="signature">()</span><span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/meta/blueprint.js#L197">source</a></span>
+        
+    </h4>
+    
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Create a new instance of the target prototype for the blueprint.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="Blueprint.html#newInstance">Blueprint#newInstance</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+        
+            <h5>
+                Returns:
+                
+            </h5>
+            
+                <div class="param-desc">
+                    <p>new instance</p>
+                </div>
+            
+        
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+    <h4 class="name" id="newInstancePrototype">
+        newInstancePrototype<span class="signature">()</span><span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/meta/blueprint.js#L213">source</a></span>
+        
+    </h4>
+    
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Returns the target prototype for this blueprint.</p>
+<p><strong>Note:</strong> This method uses the <code>customPrototype</code> property to determine
+if it needs to require a custom prototype or create a default prototype.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="Blueprint.html#newInstancePrototype">Blueprint#newInstancePrototype</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+        
+            <h5>
+                Returns:
+                
+            </h5>
+            
+                <div class="param-desc">
+                    <p>new prototype</p>
+                </div>
+            
+        
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+    <h4 class="name" id="propertyBlueprintForName">
+        propertyBlueprintForName<span class="signature">(name)</span><span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/meta/blueprint.js#L572">source</a></span>
+        
+    </h4>
+    
+
+    
+</dt>
+<dd>
+
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>TODO</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="Blueprint.html#propertyBlueprintForName">Blueprint#propertyBlueprintForName</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+        
+            <h5>
+                Returns:
+                
+            </h5>
+            
+                <div class="param-desc">
+                    <p>property blueprint</p>
+                </div>
+            
+        
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+    <h4 class="name" id="removeEventBlueprint">
+        removeEventBlueprint<span class="signature">(property)</span><span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/meta/blueprint.js#L765">source</a></span>
+        
+    </h4>
+    
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Removes an property blueprint from the property blueprint list of this
+blueprint.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>property</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>blueprint The property blueprint to be removed.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="Blueprint.html#removeEventBlueprint">Blueprint#removeEventBlueprint</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+        
+            <h5>
+                Returns:
+                
+            </h5>
+            
+                <div class="param-desc">
+                    <p>property blueprint</p>
+                </div>
+            
+        
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+    <h4 class="name" id="removePropertyBlueprint">
+        removePropertyBlueprint<span class="signature">(property)</span><span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/meta/blueprint.js#L455">source</a></span>
+        
+    </h4>
+    
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Removes an property blueprint from the property blueprint list of this
+blueprint.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>property</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>blueprint The property blueprint to be removed.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="Blueprint.html#removePropertyBlueprint">Blueprint#removePropertyBlueprint</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+        
+            <h5>
+                Returns:
+                
+            </h5>
+            
+                <div class="param-desc">
+                    <p>property blueprint</p>
+                </div>
+            
+        
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+    <h4 class="name" id="removePropertyBlueprintFromGroupNamed">
+        removePropertyBlueprintFromGroupNamed<span class="signature">(name, name)</span><span class="type-signature"> &rarr; {array}</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/meta/blueprint.js#L695">source</a></span>
+        
+    </h4>
+    
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Removes a property blueprint from the group name.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>of the property</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>of the group</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="Blueprint.html#removePropertyBlueprintFromGroupNamed">Blueprint#removePropertyBlueprintFromGroupNamed</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+        
+            <h5>
+                Returns:
+                
+                    <span class="return-type">
+<span class="param-type">array</span>
+
+</span>
+                
+            </h5>
+            
+                <div class="param-desc">
+                    <p>property blueprint group</p>
+                </div>
+            
+        
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+    <h4 class="name" id="removePropertyBlueprintGroupNamed">
+        removePropertyBlueprintGroupNamed<span class="signature">(name)</span><span class="type-signature"> &rarr; {array}</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/meta/blueprint.js#L656">source</a></span>
+        
+    </h4>
+    
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Remove the property blueprint group.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>of the group to remove</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="Blueprint.html#removePropertyBlueprintGroupNamed">Blueprint#removePropertyBlueprintGroupNamed</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+        
+            <h5>
+                Returns:
+                
+                    <span class="return-type">
+<span class="param-type">array</span>
+
+</span>
+                
+            </h5>
+            
+                <div class="param-desc">
+                    <p>removed property blueprint group</p>
+                </div>
+            
+        
+    
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+
+    
+
+    <p class="generated-from">Generated from <a href="https://github.com/montagejs/montage/tree/a4679af72d90e524500f2860facd486a43311e48">a4679af</a></p>
+</article>
+
+
+
+
+
+    </article>
+    {% include comments.html %}
+</div>
+
+<script>
+(function() {
+    var codeBlocks = document.querySelectorAll("code[class|='lang']");
+
+    // Add "prettyprint" class name to each code block that defines a lang
+    // because it is needed for prettify to find the block.
+    for (var i = 0, block; block = codeBlocks[i]; i++) {
+        block.className += " prettyprint";
+    }
+
+    window.prettyPrint();
+})();
+</script>

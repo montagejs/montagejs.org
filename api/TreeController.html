@@ -1,0 +1,616 @@
+---
+
+layout: api
+title: "TreeController - MontageJS API"
+
+---
+
+<nav class="subnav js-api-subnav">
+    <input id="index-search" type="search" placeholder="Search"><details open><summary>Types</summary><ul><li><a href="AbstractButton.html">AbstractButton</a></li><li><a href="AbstractCheckbox.html">AbstractCheckbox</a></li><li><a href="AbstractControl.html">AbstractControl</a></li><li><a href="AbstractImage.html">AbstractImage</a></li><li><a href="AbstractLink.html">AbstractLink</a></li><li><a href="AbstractNumberField.html">AbstractNumberField</a></li><li><a href="AbstractRadioButton.html">AbstractRadioButton</a></li><li><a href="AbstractSelect.html">AbstractSelect</a></li><li><a href="AbstractSlider.html">AbstractSlider</a></li><li><a href="AbstractTextArea.html">AbstractTextArea</a></li><li><a href="AbstractTextField.html">AbstractTextField</a></li><li><a href="AbstractToggleButton.html">AbstractToggleButton</a></li><li><a href="AbstractToggleSwitch.html">AbstractToggleSwitch</a></li><li><a href="AbstractVideo.html">AbstractVideo</a></li><li><a href="ActionEventListener.html">ActionEventListener</a></li><li><a href="Alert.html">Alert</a></li><li><a href="Alias.html">Alias</a></li><li><a href="Application.html">Application</a></li><li><a href="AssociationBlueprint.html">AssociationBlueprint</a></li><li><a href="Binder.html">Binder</a></li><li><a href="BinderManager.html">BinderManager</a></li><li><a href="BitField.html">BitField</a></li><li><a href="Blueprint.html">Blueprint</a></li><li><a href="BytesConverter.html">BytesConverter</a></li><li><a href="Component.html">Component</a></li><li><a href="Composer.html">Composer</a></li><li><a href="Condition.html">Condition</a></li><li><a href="Converter.html">Converter</a></li><li><a href="CubicBezier.html">CubicBezier</a></li><li><a href="CurrencyConverter.html">CurrencyConverter</a></li><li><a href="DateConverter.html">DateConverter</a></li><li><a href="DateValidator.html">DateValidator</a></li><li><a href="DefaultLocalizer.html">DefaultLocalizer</a></li><li><a href="DerivedPropertyBlueprint.html">DerivedPropertyBlueprint</a></li><li><a href="ElementReference.html">ElementReference</a></li><li><a href="Enum.html">Enum</a></li><li><a href="EventBlueprint.html">EventBlueprint</a></li><li><a href="EventManager.html">EventManager</a></li><li><a href="Exception.html">Exception</a></li><li><a href="Flow.html">Flow</a></li><li><a href="FlowTranslateComposer.html">FlowTranslateComposer</a></li><li><a href="Gate.html">Gate</a></li><li><a href="InvertConverter.html">InvertConverter</a></li><li><a href="Iteration.html">Iteration</a></li><li><a href="KeyComposer.html">KeyComposer</a></li><li><a href="KeyManager.html">KeyManager</a></li><li><a href="Loader.html">Loader</a></li><li><a href="Localizer.html">Localizer</a></li><li><a href="Logger.html">Logger</a></li><li><a href="LowerCaseConverter.html">LowerCaseConverter</a></li><li><a href="MediaController.html">MediaController</a></li><li><a href="MessageFormat.html">MessageFormat</a></li><li><a href="MessageLocalizer.html">MessageLocalizer</a></li><li><a href="ModalOverlay.html">ModalOverlay</a></li><li><a href="module-Overlay.html">module:Overlay</a></li><li><a href="ModuleBlueprint.html">ModuleBlueprint</a></li><li><a href="ModuleReference.html">ModuleReference</a></li><li><a href="Montage.html">Montage</a></li><li><a href="MontageBuilder.html">MontageBuilder</a></li><li><a href="MontageReviver.html">MontageReviver</a></li><li><a href="MontageWindow.html">MontageWindow</a></li><li><a href="MutableEvent.html">MutableEvent</a></li><li><a href="NewLineToBrConverter.html">NewLineToBrConverter</a></li><li><a href="NumberConverter.html">NumberConverter</a></li><li><a href="NumberValidator.html">NumberValidator</a></li><li><a href="ObjectController.html">ObjectController</a></li><li><a href="ObjectProperty.html">ObjectProperty</a></li><li><a href="Point_.html">Point</a></li><li><a href="PressComposer.html">PressComposer</a></li><li><a href="PressEvent.html">PressEvent</a></li><li><a href="PropertyBlueprint.html">PropertyBlueprint</a></li><li><a href="PropertyValidationRule.html">PropertyValidationRule</a></li><li><a href="PropertyValidationSemantics.html">PropertyValidationSemantics</a></li><li><a href="RadioButtonController.html">RadioButtonController</a></li><li><a href="RangeController.html">RangeController</a></li><li><a href="Repetition.html">Repetition</a></li><li><a href="RootComponent.html">RootComponent</a></li><li><a href="Serialization.html">Serialization</a></li><li><a href="SerializationExtractor.html">SerializationExtractor</a></li><li><a href="SerializationInspector.html">SerializationInspector</a></li><li><a href="SerializationMerger.html">SerializationMerger</a></li><li><a href="Slot.html">Slot</a></li><li><a href="State.html">State</a></li><li><a href="StateChart.html">StateChart</a></li><li><a href="Substitution.html">Substitution</a></li><li><a href="SwipeComposer.html">SwipeComposer</a></li><li><a href="Target.html">Target</a></li><li><a href="Template.html">Template</a></li><li><a href="TemplateResources.html">TemplateResources</a></li><li><a href="Text.html">Text</a></li><li><a href="TranslateComposer.html">TranslateComposer</a></li><li><a href="TreeController.html">TreeController</a></li><li><a href="TreeControllerNode.html">TreeControllerNode</a></li><li><a href="TrimConverter.html">TrimConverter</a></li><li><a href="UpperCaseConverter.html">UpperCaseConverter</a></li><li><a href="Uuid_.html">Uuid</a></li><li><a href="Validator.html">Validator</a></li></ul></details><details><summary>Externals</summary><ul><li><a href="external-Array.html">Array</a></li><li><a href="external-Function.html">Function</a></li><li><a href="external-Object.html">Object</a></li><li><a href="external-RegExp.html">RegExp</a></li><li><a href="external-String.html">String</a></li></ul></details><details><summary>Events</summary><ul><li><a href="AbstractButton.html#event:action">action</a></li><li><a href="AbstractButton.html#event:longAction">longAction</a></li><li><a href="AbstractButton.html#event:longpress">longpress</a></li><li><a href="AbstractCheckbox.html#event:action">action</a></li><li><a href="AbstractLink.html#event:action">action</a></li><li><a href="AbstractRadioButton.html#event:action">action</a></li><li><a href="AbstractSelect.html#event:action">action</a></li><li><a href="AbstractTextField.html#event:action">action</a></li><li><a href="AbstractToggleButton.html#event:action">action</a></li><li><a href="AbstractToggleButton.html#event:longAction">longAction</a></li><li><a href="AbstractToggleSwitch.html#event:action">action</a></li><li><a href="Overlay.html#event:dismiss">dismiss</a></li><li><a href="PressComposer.html#event:longPress">longPress</a></li><li><a href="PressComposer.html#event:press">press</a></li><li><a href="PressComposer.html#event:pressCancel">pressCancel</a></li><li><a href="PressComposer.html#event:pressStart">pressStart</a></li><li><a href="UndoManager.html#event:operationRegistered">operationRegistered</a></li><li><a href="UndoManager.html#event:redo">redo</a></li><li><a href="UndoManager.html#event:undo">undo</a></li></ul></details><details><summary>Global</summary><ul><li><a href="global.html#determinate">determinate</a></li><li><a href="global.html#error">error</a></li><li><a href="global.html#fulfilled">fulfilled</a></li><li><a href="global.html#pending">pending</a></li><li><a href="global.html#progress">progress</a></li><li><a href="global.html#progressState">progressState</a></li><li><a href="global.html#promise">promise</a></li><li><a href="global.html#PromiseController">PromiseController</a></li><li><a href="global.html#rejected">rejected</a></li><li><a href="global.html#state">state</a></li><li><a href="global.html#value">value</a></li></ul></details>
+</nav>
+
+<div class="main">
+    <article class="content">
+    	
+
+
+
+<header>
+    <h2>
+        
+        TreeController
+        
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/tree-controller.js#L263">source</a></span>
+        
+    </h2>
+    
+</header>
+
+<article>
+    
+    <div class="container-overview">
+    
+
+    
+        
+<dt>
+    
+
+    
+</dt>
+<dd>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Properties</h3>
+
+        <dl>
+            
+<dt>
+    <h4 class="name" id="allExpanded">
+        allExpanded<span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/tree-controller.js#L306">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Whether every node eligible for expansion is expanded.</p>
+<p>This is a readable and writable property.  Setting to true causes all
+nodes to be expanded.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="childrenPath">
+        childrenPath<span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/tree-controller.js#L286">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>An FRB expression, that evaluated against content or any of its
+children, produces an array of that content's children.  By default,
+this is simply &quot;children&quot;, but for an alternate example, a binary tree
+would have children <code>[left, right]</code>, except that said tree would need to
+have no children if left and right were both null, so <code>(left ??
+[]).concat(right ?? [])</code>, to avoid infinite recursion.</p>
+<p>This property must be set before <code>content</code>.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="constructor">
+        constructor<span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/tree-controller.js#L351">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Creates a tree controller.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="content">
+        content<span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/tree-controller.js#L272">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The input of a tree controller, an object to serve at the root of the
+tree.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="initiallyExpanded">
+        initiallyExpanded<span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/tree-controller.js#L296">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Whether nodes of the tree are initially expanded.</p>
+<p>This property must be set before <code>content</code>.  If <code>content</code> has already
+set, use <code>allExpanded</code>.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="iterations">
+        iterations<span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/tree-controller.js#L325">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The product of a tree controller, an array of tree controller nodes
+corresponding to each branch of the content for which every parent node
+is <code>expanded</code>.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="Node">
+        Node<span class="type-signature"> :<a href="TreeControllerNode.html">TreeControllerNode</a></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/tree-controller.js#L404">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="noneExpanded">
+        noneExpanded<span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/tree-controller.js#L316">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Whether any nodes are collapsed.</p>
+<p>This is a readable and writable property.  Setting to true causes all
+nodes to be collapsed.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="root">
+        root<span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/tree-controller.js#L333">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>A by-product of the tree controller, the root node of the tree for the
+current content.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        </dl>
+    
+
+    
+
+    
+
+    
+
+    <p class="generated-from">Generated from <a href="https://github.com/montagejs/montage/tree/a4679af72d90e524500f2860facd486a43311e48">a4679af</a></p>
+</article>
+
+
+
+
+
+    </article>
+    {% include comments.html %}
+</div>
+
+<script>
+(function() {
+    var codeBlocks = document.querySelectorAll("code[class|='lang']");
+
+    // Add "prettyprint" class name to each code block that defines a lang
+    // because it is needed for prettify to find the block.
+    for (var i = 0, block; block = codeBlocks[i]; i++) {
+        block.className += " prettyprint";
+    }
+
+    window.prettyPrint();
+})();
+</script>

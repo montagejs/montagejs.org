@@ -1,0 +1,3275 @@
+---
+
+layout: api
+title: "FlowTranslateComposer - MontageJS API"
+
+---
+
+<nav class="subnav js-api-subnav">
+    <input id="index-search" type="search" placeholder="Search"><details open><summary>Types</summary><ul><li><a href="AbstractButton.html">AbstractButton</a></li><li><a href="AbstractCheckbox.html">AbstractCheckbox</a></li><li><a href="AbstractControl.html">AbstractControl</a></li><li><a href="AbstractImage.html">AbstractImage</a></li><li><a href="AbstractLink.html">AbstractLink</a></li><li><a href="AbstractNumberField.html">AbstractNumberField</a></li><li><a href="AbstractRadioButton.html">AbstractRadioButton</a></li><li><a href="AbstractSelect.html">AbstractSelect</a></li><li><a href="AbstractSlider.html">AbstractSlider</a></li><li><a href="AbstractTextArea.html">AbstractTextArea</a></li><li><a href="AbstractTextField.html">AbstractTextField</a></li><li><a href="AbstractToggleButton.html">AbstractToggleButton</a></li><li><a href="AbstractToggleSwitch.html">AbstractToggleSwitch</a></li><li><a href="AbstractVideo.html">AbstractVideo</a></li><li><a href="ActionEventListener.html">ActionEventListener</a></li><li><a href="Alert.html">Alert</a></li><li><a href="Alias.html">Alias</a></li><li><a href="Application.html">Application</a></li><li><a href="AssociationBlueprint.html">AssociationBlueprint</a></li><li><a href="Binder.html">Binder</a></li><li><a href="BinderManager.html">BinderManager</a></li><li><a href="BitField.html">BitField</a></li><li><a href="Blueprint.html">Blueprint</a></li><li><a href="BytesConverter.html">BytesConverter</a></li><li><a href="Component.html">Component</a></li><li><a href="Composer.html">Composer</a></li><li><a href="Condition.html">Condition</a></li><li><a href="Converter.html">Converter</a></li><li><a href="CubicBezier.html">CubicBezier</a></li><li><a href="CurrencyConverter.html">CurrencyConverter</a></li><li><a href="DateConverter.html">DateConverter</a></li><li><a href="DateValidator.html">DateValidator</a></li><li><a href="DefaultLocalizer.html">DefaultLocalizer</a></li><li><a href="DerivedPropertyBlueprint.html">DerivedPropertyBlueprint</a></li><li><a href="ElementReference.html">ElementReference</a></li><li><a href="Enum.html">Enum</a></li><li><a href="EventBlueprint.html">EventBlueprint</a></li><li><a href="EventManager.html">EventManager</a></li><li><a href="Exception.html">Exception</a></li><li><a href="Flow.html">Flow</a></li><li><a href="FlowTranslateComposer.html">FlowTranslateComposer</a></li><li><a href="Gate.html">Gate</a></li><li><a href="InvertConverter.html">InvertConverter</a></li><li><a href="Iteration.html">Iteration</a></li><li><a href="KeyComposer.html">KeyComposer</a></li><li><a href="KeyManager.html">KeyManager</a></li><li><a href="Loader.html">Loader</a></li><li><a href="Localizer.html">Localizer</a></li><li><a href="Logger.html">Logger</a></li><li><a href="LowerCaseConverter.html">LowerCaseConverter</a></li><li><a href="MediaController.html">MediaController</a></li><li><a href="MessageFormat.html">MessageFormat</a></li><li><a href="MessageLocalizer.html">MessageLocalizer</a></li><li><a href="ModalOverlay.html">ModalOverlay</a></li><li><a href="module-Overlay.html">module:Overlay</a></li><li><a href="ModuleBlueprint.html">ModuleBlueprint</a></li><li><a href="ModuleReference.html">ModuleReference</a></li><li><a href="Montage.html">Montage</a></li><li><a href="MontageBuilder.html">MontageBuilder</a></li><li><a href="MontageReviver.html">MontageReviver</a></li><li><a href="MontageWindow.html">MontageWindow</a></li><li><a href="MutableEvent.html">MutableEvent</a></li><li><a href="NewLineToBrConverter.html">NewLineToBrConverter</a></li><li><a href="NumberConverter.html">NumberConverter</a></li><li><a href="NumberValidator.html">NumberValidator</a></li><li><a href="ObjectController.html">ObjectController</a></li><li><a href="ObjectProperty.html">ObjectProperty</a></li><li><a href="Point_.html">Point</a></li><li><a href="PressComposer.html">PressComposer</a></li><li><a href="PressEvent.html">PressEvent</a></li><li><a href="PropertyBlueprint.html">PropertyBlueprint</a></li><li><a href="PropertyValidationRule.html">PropertyValidationRule</a></li><li><a href="PropertyValidationSemantics.html">PropertyValidationSemantics</a></li><li><a href="RadioButtonController.html">RadioButtonController</a></li><li><a href="RangeController.html">RangeController</a></li><li><a href="Repetition.html">Repetition</a></li><li><a href="RootComponent.html">RootComponent</a></li><li><a href="Serialization.html">Serialization</a></li><li><a href="SerializationExtractor.html">SerializationExtractor</a></li><li><a href="SerializationInspector.html">SerializationInspector</a></li><li><a href="SerializationMerger.html">SerializationMerger</a></li><li><a href="Slot.html">Slot</a></li><li><a href="State.html">State</a></li><li><a href="StateChart.html">StateChart</a></li><li><a href="Substitution.html">Substitution</a></li><li><a href="SwipeComposer.html">SwipeComposer</a></li><li><a href="Target.html">Target</a></li><li><a href="Template.html">Template</a></li><li><a href="TemplateResources.html">TemplateResources</a></li><li><a href="Text.html">Text</a></li><li><a href="TranslateComposer.html">TranslateComposer</a></li><li><a href="TreeController.html">TreeController</a></li><li><a href="TreeControllerNode.html">TreeControllerNode</a></li><li><a href="TrimConverter.html">TrimConverter</a></li><li><a href="UpperCaseConverter.html">UpperCaseConverter</a></li><li><a href="Uuid_.html">Uuid</a></li><li><a href="Validator.html">Validator</a></li></ul></details><details><summary>Externals</summary><ul><li><a href="external-Array.html">Array</a></li><li><a href="external-Function.html">Function</a></li><li><a href="external-Object.html">Object</a></li><li><a href="external-RegExp.html">RegExp</a></li><li><a href="external-String.html">String</a></li></ul></details><details><summary>Events</summary><ul><li><a href="AbstractButton.html#event:action">action</a></li><li><a href="AbstractButton.html#event:longAction">longAction</a></li><li><a href="AbstractButton.html#event:longpress">longpress</a></li><li><a href="AbstractCheckbox.html#event:action">action</a></li><li><a href="AbstractLink.html#event:action">action</a></li><li><a href="AbstractRadioButton.html#event:action">action</a></li><li><a href="AbstractSelect.html#event:action">action</a></li><li><a href="AbstractTextField.html#event:action">action</a></li><li><a href="AbstractToggleButton.html#event:action">action</a></li><li><a href="AbstractToggleButton.html#event:longAction">longAction</a></li><li><a href="AbstractToggleSwitch.html#event:action">action</a></li><li><a href="Overlay.html#event:dismiss">dismiss</a></li><li><a href="PressComposer.html#event:longPress">longPress</a></li><li><a href="PressComposer.html#event:press">press</a></li><li><a href="PressComposer.html#event:pressCancel">pressCancel</a></li><li><a href="PressComposer.html#event:pressStart">pressStart</a></li><li><a href="UndoManager.html#event:operationRegistered">operationRegistered</a></li><li><a href="UndoManager.html#event:redo">redo</a></li><li><a href="UndoManager.html#event:undo">undo</a></li></ul></details><details><summary>Global</summary><ul><li><a href="global.html#determinate">determinate</a></li><li><a href="global.html#error">error</a></li><li><a href="global.html#fulfilled">fulfilled</a></li><li><a href="global.html#pending">pending</a></li><li><a href="global.html#progress">progress</a></li><li><a href="global.html#progressState">progressState</a></li><li><a href="global.html#promise">promise</a></li><li><a href="global.html#PromiseController">PromiseController</a></li><li><a href="global.html#rejected">rejected</a></li><li><a href="global.html#state">state</a></li><li><a href="global.html#value">value</a></li></ul></details>
+</nav>
+
+<div class="main">
+    <article class="content">
+    	
+
+
+
+<header>
+    <h2>
+        
+        FlowTranslateComposer
+        
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/ui/flow.reel/flow-translate-composer.js#L7">source</a></span>
+        
+    </h2>
+    
+</header>
+
+<article>
+    
+        <p>Specializes <a href="TranslateComposer.html">TranslateComposer</a> </p>
+    
+    <div class="container-overview">
+    
+
+    
+        
+<dt>
+    
+
+    
+</dt>
+<dd>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Properties</h3>
+
+        <dl>
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+<dt>
+    <h4 class="name" id="acceptsActiveTarget">
+        acceptsActiveTarget<span class="type-signature"> :boolean</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/target.js#L32">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Whether or not this target can accept user focus and become the
+activeTarget This matches up with the <code>document.activeElement</code> property
+purpose-wise; Events from components that should be dispatched as
+logically occurring at the point of user focus should be dispatched at
+the activeTarget</p>
+<p>By default a target does not accept this responsibility.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="TranslateComposer.html#acceptsActiveTarget">TranslateComposer#acceptsActiveTarget</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+	<tr>
+	    <th class="details-header tag-default">Default Value:</th>
+	    <td class="details-content tag-default"><ul class="dummy"><li>false</li></ul></td>
+	</tr>
+	
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="allowFloats">
+        allowFloats<span class="type-signature"> :boolean</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/composer/translate-composer.js#L142">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Allow (@link translateX} and translateY to be floats?</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="TranslateComposer.html#allowFloats">TranslateComposer#allowFloats</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+	<tr>
+	    <th class="details-header tag-default">Default Value:</th>
+	    <td class="details-content tag-default"><ul class="dummy"><li>false</li></ul></td>
+	</tr>
+	
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="axis">
+        axis<span class="type-signature"> :string</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/composer/translate-composer.js#L352">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Which axis translation is restricted to.</p>
+<p>Can be &quot;vertical&quot;, &quot;horizontal&quot; or &quot;both&quot;.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="TranslateComposer.html#axis">TranslateComposer#axis</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+	<tr>
+	    <th class="details-header tag-default">Default Value:</th>
+	    <td class="details-content tag-default"><ul class="dummy"><li>"both"</li></ul></td>
+	</tr>
+	
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="component">
+        component<span class="type-signature"> :<a href="Component.html">Component</a></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/composer/composer.js#L38">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The Montage <code>Component</code> this <code>Composer</code> is attached to. Each composer is
+attached to a single component. By default, most composer will listen to
+DOM events on this component's element. This is also the component whose
+draw cycle is affected by <code>needsFrame</code> and <code>frame</code>.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="TranslateComposer.html#component">TranslateComposer#component</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+	<tr>
+	    <th class="details-header tag-default">Default Value:</th>
+	    <td class="details-content tag-default"><ul class="dummy"><li>null</li></ul></td>
+	</tr>
+	
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="convertCssPixelsPropertyStringToNumber">
+        convertCssPixelsPropertyStringToNumber<span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/ui/flow.reel/flow-translate-composer.js#L655">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="element">
+        element<span class="type-signature"> :Element</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/composer/composer.js#L63">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The DOM element where the composer will listen for events. If no element
+is specified then the composer will use the element associated with its
+<code>component</code> property.</p>
+<p>Subclasses may want to set their <code>element</code> to something other than the
+component's element during <code>load</code> for certain event patterns. One common
+pattern is to set element to <code>window</code> to listen for events anywhere on
+the page.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="TranslateComposer.html#element">TranslateComposer#element</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+	<tr>
+	    <th class="details-header tag-default">Default Value:</th>
+	    <td class="details-content tag-default"><ul class="dummy"><li>null</li></ul></td>
+	</tr>
+	
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="flow">
+        flow<span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/ui/flow.reel/flow-translate-composer.js#L421">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="frame">
+        frame<span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/ui/flow.reel/flow-translate-composer.js#L644">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="handleWheel">
+        handleWheel<span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/ui/flow.reel/flow-translate-composer.js#L319">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="hasMomentum">
+        hasMomentum<span class="type-signature"> :boolean</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/composer/translate-composer.js#L456">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Whether to keep translating after the user has releases the cursor.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="TranslateComposer.html#hasMomentum">TranslateComposer#hasMomentum</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+	<tr>
+	    <th class="details-header tag-default">Default Value:</th>
+	    <td class="details-content tag-default"><ul class="dummy"><li>true</li></ul></td>
+	</tr>
+	
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="invertAxis">
+        invertAxis<span class="type-signature"> :boolean</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/composer/translate-composer.js#L382">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Invert direction of translation on both axes.</p>
+<p>This inverts the effect of cursor motion on both axes. For example
+if set to true moving the mouse up will increase the value of
+translateY instead of decreasing it.</p>
+<p>Depends on invertXAxis and invertYAxis.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="TranslateComposer.html#invertAxis">TranslateComposer#invertAxis</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+	<tr>
+	    <th class="details-header tag-default">Default Value:</th>
+	    <td class="details-content tag-default"><ul class="dummy"><li>false</li></ul></td>
+	</tr>
+	
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="invertXAxis">
+        invertXAxis<span class="type-signature"> :boolean</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/composer/translate-composer.js#L404">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Invert direction of translation along the X axis.</p>
+<p>This inverts the effect of left/right cursor motion on translateX.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="TranslateComposer.html#invertXAxis">TranslateComposer#invertXAxis</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+	<tr>
+	    <th class="details-header tag-default">Default Value:</th>
+	    <td class="details-content tag-default"><ul class="dummy"><li>false</li></ul></td>
+	</tr>
+	
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="invertYAxis">
+        invertYAxis<span class="type-signature"> :boolean</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/composer/translate-composer.js#L424">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Invert direction of translation along the Y axis.</p>
+<p>This inverts the effect of up/down cursor motion on translateX.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="TranslateComposer.html#invertYAxis">TranslateComposer#invertYAxis</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+	<tr>
+	    <th class="details-header tag-default">Default Value:</th>
+	    <td class="details-content tag-default"><ul class="dummy"><li>false</li></ul></td>
+	</tr>
+	
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="isActiveTarget">
+        isActiveTarget<span class="type-signature"> :boolean</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/target.js#L45">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Whether or not this is the activeTarget</p>
+<p>This is a getter and is not bindable. Bind to
+<code>defaultEventManager.activeTarget == this</code>.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="TranslateComposer.html#isActiveTarget">TranslateComposer#isActiveTarget</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="lazyLoad">
+        lazyLoad<span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/composer/composer.js#L85">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>This property controls when the component will call this composer's
+<code>load</code> method, which is where the composer adds its event listeners:</p>
+<ul>
+<li>If <code>false</code>, the component will call <code>load</code> during the next draw cycle
+after the composer is added to it.</li>
+<li>If <code>true</code>, the component will call <code>load</code> after its
+<code>prepareForActivationEvents</code>.</li>
+</ul>
+<p>Delaying the creation of event listeners can improve performance.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="TranslateComposer.html#lazyLoad">TranslateComposer#lazyLoad</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+	<tr>
+	    <th class="details-header tag-default">Default Value:</th>
+	    <td class="details-content tag-default"><ul class="dummy"><li>false</li></ul></td>
+	</tr>
+	
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="linearScrollingVector">
+        linearScrollingVector<span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/ui/flow.reel/flow-translate-composer.js#L62">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>A constant 2d vector used to transform a drag vector into a
+scroll vector, applicable only in the &quot;linear&quot;
+<code>scrollingMode</code>.</p>
+<p>Bound to the eponymous property of the Flow that owns it.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="maxScroll">
+        maxScroll<span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/ui/flow.reel/flow-translate-composer.js#L407">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="maxTranslateX">
+        maxTranslateX<span class="type-signature"> :number</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/composer/translate-composer.js#L267">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The maximum value translateX can take. If set to null then
+there is no maximum.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="TranslateComposer.html#maxTranslateX">TranslateComposer#maxTranslateX</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+	<tr>
+	    <th class="details-header tag-default">Default Value:</th>
+	    <td class="details-content tag-default"><ul class="dummy"><li>null</li></ul></td>
+	</tr>
+	
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="maxTranslateY">
+        maxTranslateY<span class="type-signature"> :number</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/composer/translate-composer.js#L323">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The maximum value translateY can take. If set to null then
+there is no maximum.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="TranslateComposer.html#maxTranslateY">TranslateComposer#maxTranslateY</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+	<tr>
+	    <th class="details-header tag-default">Default Value:</th>
+	    <td class="details-content tag-default"><ul class="dummy"><li>null</li></ul></td>
+	</tr>
+	
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="minScroll">
+        minScroll<span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/ui/flow.reel/flow-translate-composer.js#L400">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="minTranslateX">
+        minTranslateX<span class="type-signature"> :number</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/composer/translate-composer.js#L239">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The minimum value translateX can take. If set to null then
+there is no minimum.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="TranslateComposer.html#minTranslateX">TranslateComposer#minTranslateX</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+	<tr>
+	    <th class="details-header tag-default">Default Value:</th>
+	    <td class="details-content tag-default"><ul class="dummy"><li>null</li></ul></td>
+	</tr>
+	
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="minTranslateY">
+        minTranslateY<span class="type-signature"> :number</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/composer/translate-composer.js#L295">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The minimum value translateY can take. If set to null then
+there is no minimum.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="TranslateComposer.html#minTranslateY">TranslateComposer#minTranslateY</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+	<tr>
+	    <th class="details-header tag-default">Default Value:</th>
+	    <td class="details-content tag-default"><ul class="dummy"><li>null</li></ul></td>
+	</tr>
+	
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="needsFrame">
+        needsFrame<span class="type-signature"> :boolean</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/composer/composer.js#L101">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>This property should be set to 'true' when the composer wants to have
+its <code>frame()</code> method executed during the next draw cycle. Setting this
+property to 'true' will cause Montage to schedule a new draw cycle if
+one has not already been scheduled.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="TranslateComposer.html#needsFrame">TranslateComposer#needsFrame</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+	<tr>
+	    <th class="details-header tag-default">Default Value:</th>
+	    <td class="details-content tag-default"><ul class="dummy"><li>false</li></ul></td>
+	</tr>
+	
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="nextTarget">
+        nextTarget<span class="type-signature"> :<a href="Component.html">Component</a></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/target.js#L86">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Which target to distribute an event after this when distributing events
+throughout a graph of targets.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="TranslateComposer.html#nextTarget">TranslateComposer#nextTarget</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="pointerSpeedMultiplier">
+        pointerSpeedMultiplier<span class="type-signature"> :number</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/composer/translate-composer.js#L112">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>How many pixels to translate by for each pixel of cursor movement.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="TranslateComposer.html#pointerSpeedMultiplier">TranslateComposer#pointerSpeedMultiplier</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+	<tr>
+	    <th class="details-header tag-default">Default Value:</th>
+	    <td class="details-content tag-default"><ul class="dummy"><li>1</li></ul></td>
+	</tr>
+	
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="scroll">
+        scroll<span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/ui/flow.reel/flow-translate-composer.js#L382">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="scrollingMode">
+        scrollingMode<span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/ui/flow.reel/flow-translate-composer.js#L37">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>One of &quot;linear&quot; or &quot;drag&quot;.</p>
+<p>Bound to the eponymous property of the Flow that owns it.</p>
+<p>Drag mode is an experiment to preserve the dragged slide's
+position relative to the gesture pointer.  Since this feature is
+not yet ready, &quot;linear&quot; is the default.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="startStrideTime">
+        startStrideTime<span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/ui/flow.reel/flow-translate-composer.js#L1360">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="startTranslateSpeed">
+        startTranslateSpeed<span class="type-signature"> :number</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/composer/translate-composer.js#L439">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>How fast the cursor has to be moving before translating starts. Only
+ applied when another component has claimed the pointer.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="TranslateComposer.html#startTranslateSpeed">TranslateComposer#startTranslateSpeed</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+	<tr>
+	    <th class="details-header tag-default">Default Value:</th>
+	    <td class="details-content tag-default"><ul class="dummy"><li>500</li></ul></td>
+	</tr>
+	
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="stealChildrenPointerThreshold">
+        stealChildrenPointerThreshold<span class="type-signature"> :number</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/composer/translate-composer.js#L90">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Time, in ms, between touchstart and touchmove to consider when stealing
+the pointer from its children.
+The default value is based on the values we got when measuring on different
+devices
+iPad: 127.5
+Nexus 10 (4.2.2): 153.5</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="TranslateComposer.html#stealChildrenPointerThreshold">TranslateComposer#stealChildrenPointerThreshold</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="translateStride">
+        translateStride<span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/ui/flow.reel/flow-translate-composer.js#L1346">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="translateX">
+        translateX<span class="type-signature"> :number</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/composer/translate-composer.js#L166">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Amount of translation in the X (left/right) direction. Can be inverted with
+invertXAxis, and restricted to a range with
+minTranslateX and {@link maxTranslateX}.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="TranslateComposer.html#translateX">TranslateComposer#translateX</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+	<tr>
+	    <th class="details-header tag-default">Default Value:</th>
+	    <td class="details-content tag-default"><ul class="dummy"><li>0</li></ul></td>
+	</tr>
+	
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        
+            
+<dt>
+    <h4 class="name" id="translateY">
+        translateY<span class="type-signature"> :number</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/composer/translate-composer.js#L203">source</a></span>
+        
+    </h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Amount of translation in the Y (up/down) direction. Can be inverted with
+invertYAxis, and restricted to a range with
+minTranslateY and {@link maxTranslateY}.</p>
+    </div>
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="TranslateComposer.html#translateY">TranslateComposer#translateY</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+	<tr>
+	    <th class="details-header tag-default">Default Value:</th>
+	    <td class="details-content tag-default"><ul class="dummy"><li>0</li></ul></td>
+	</tr>
+	
+
+    
+
+    
+
+    
+</table>
+
+
+    
+</dd>
+
+
+        </dl>
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+            
+<dt>
+    
+    <h4 class="name" id="didBecomeActiveTarget">
+        didBecomeActiveTarget<span class="signature">()</span><span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/target.js#L64">source</a></span>
+        
+    </h4>
+    
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Called after to this target became the activeTarget</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="TranslateComposer.html#didBecomeActiveTarget">TranslateComposer#didBecomeActiveTarget</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+    <h4 class="name" id="dispatchEvent">
+        dispatchEvent<span class="signature">(event)</span><span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/target.js#L97">source</a></span>
+        
+    </h4>
+    
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Dispatches the specified event with this target
+as the event's proximal target</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>event</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Event</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The event object to dispatch</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="TranslateComposer.html#dispatchEvent">TranslateComposer#dispatchEvent</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+    <h4 class="name" id="dispatchEventNamed">
+        dispatchEventNamed<span class="signature">(type, canBubble, cancelable, detail)</span><span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/target.js#L121">source</a></span>
+        
+    </h4>
+    
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Creates and dispatches an event with the specified properties with this
+target as the event's proximal target</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The type of the event to dispatch</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>canBubble</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Whether or not the event can bubble</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>cancelable</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Whether or not the event can be cancelled</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>detail</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The optional detail object of the event</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="TranslateComposer.html#dispatchEventNamed">TranslateComposer#dispatchEventNamed</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+    <h4 class="name" id="removeEventListener">
+        removeEventListener<span class="signature">(type, listener, useCapture)</span><span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/target.js#L153">source</a></span>
+        
+    </h4>
+    
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Removes an event listener from the object.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The event type.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>listener</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+|
+
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The listener object or function.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>useCapture</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The phase of the event listener.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="TranslateComposer.html#removeEventListener">TranslateComposer#removeEventListener</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+    <h4 class="name" id="surrendersActiveTarget">
+        surrendersActiveTarget<span class="signature">(newTarget)</span><span class="type-signature"> &rarr; {boolean}</span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/target.js#L75">source</a></span>
+        
+    </h4>
+    
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Ask this target to surrender its activeTarget status.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>newTarget</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Target.html">Target</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the Target that is about to become the
+<code>activeTarget</code></p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="TranslateComposer.html#surrendersActiveTarget">TranslateComposer#surrendersActiveTarget</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+        
+            <h5>
+                Returns:
+                
+                    <span class="return-type">
+<span class="param-type">boolean</span>
+
+</span>
+                
+            </h5>
+            
+                <div class="param-desc">
+                    <p>Whether or not to surrender activeTarget status</p>
+                </div>
+            
+        
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+    <h4 class="name" id="unload">
+        unload<span class="signature">()</span><span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/composer/composer.js#L182">source</a></span>
+        
+    </h4>
+    
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>The <code>component</code> will call <code>unload</code> when the composer is removed from the
+component or the component is removed.</p>
+<p>Subclasses should override <code>unload</code> to do any necessary cleanup, such as
+removing event listeners.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="TranslateComposer.html#unload">TranslateComposer#unload</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+    <h4 class="name" id="willBecomeActiveTarget">
+        willBecomeActiveTarget<span class="signature">(oldTarget)</span><span class="type-signature"></span> <span class="type-signature"></span>
+        
+            <span class="source"><a href="https://github.com/montagejs/montage/blob/a4679af72d90e524500f2860facd486a43311e48/core/target.js#L56">source</a></span>
+        
+    </h4>
+    
+
+    
+</dt>
+<dd>
+
+    
+    <div class="description markdown-body">
+        <p>Called prior to this target becoming the activeTarget</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>oldTarget</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Target.html">Target</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the current activeTarget</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+
+    
+
+
+
+<table class="details">
+    
+
+    
+
+    
+	<tr>
+        <th class="details-header inherited-from">Inherited From:</th>
+	    <td class="details-content inherited-from">
+			<ul class="dummy">
+				<li>
+	                <a href="TranslateComposer.html#willBecomeActiveTarget">TranslateComposer#willBecomeActiveTarget</a>
+	            </li>
+			</ul>
+		</td>
+	</tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</table>
+
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+
+    
+
+    <p class="generated-from">Generated from <a href="https://github.com/montagejs/montage/tree/a4679af72d90e524500f2860facd486a43311e48">a4679af</a></p>
+</article>
+
+
+
+
+
+    </article>
+    {% include comments.html %}
+</div>
+
+<script>
+(function() {
+    var codeBlocks = document.querySelectorAll("code[class|='lang']");
+
+    // Add "prettyprint" class name to each code block that defines a lang
+    // because it is needed for prettify to find the block.
+    for (var i = 0, block; block = codeBlocks[i]; i++) {
+        block.className += " prettyprint";
+    }
+
+    window.prettyPrint();
+})();
+</script>
