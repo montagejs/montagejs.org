@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="120px" height="104px" viewBox="0 0 120 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>home-performance</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs>
+        <path id="path-1" d="M27,54 C41.911689,54 54,41.911689 54,27 C54,12.088311 41.911689,0 27,0 C12.088311,0 0,12.088311 0,27 C0,41.911689 12.088311,54 27,54 Z"></path>
+        <mask id="mask-2" sketch:name="Oval 1 copy" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Features" sketch:type="MSLayerGroup" transform="translate(-129.000000, -355.000000)">
+            <g id="Performance" transform="translate(130.000000, 355.000000)" sketch:type="MSShapeGroup">
+                <g id="Time" transform="translate(32.000000, 23.000000)">
+                    <use id="Oval-1-copy" stroke="#80E8AD" stroke-width="2" xlink:href="#path-1"></use>
+                    <polygon id="Triangle-1" fill="#80E8AD" mask="url(#mask-2)" points="27 27 92 -38 27 -38 "></polygon>
+                </g>
+                <g id="Arrow">
+                    <path d="M9,52 C9,79.6142389 31.3857611,102 59,102 C86.6142389,102 109,79.6142389 109,52 C109,24.3857611 86.6142389,2 59,2" id="Oval-1" stroke="#BFBFBF" stroke-width="4"></path>
+                    <path d="M10.939524,37 L23,60.9838297 L-1.23804405,60.9838297 L10.939524,37 Z" id="Triangle-1" fill="#BFBFBF"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

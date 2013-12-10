@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="240px" height="240px" viewBox="0 0 240 240" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>home-ship</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Workflow" sketch:type="MSLayerGroup" transform="translate(-1029.000000, -325.000000)">
+            <g id="Ship" transform="translate(1032.000000, 328.000000)" sketch:type="MSShapeGroup">
+                <polygon id="Triangle-2-copy" fill="#B4D3F6" points="88 62 121 149 55 149 "></polygon>
+                <polygon id="Triangle-2" fill="#91BBEB" points="128 40.7125 168 149 88 149 "></polygon>
+                <path d="M68,161 L79.6074355,183.688542 C79.6074355,183.688542 92.7091255,177.34707 98.9489729,177.34707 C105.718144,177.34707 105.379922,183.688542 112.149093,183.688542 C116.195203,183.688542 119.644449,179.967513 123.690559,179.967513 C127.427243,179.967513 131.743512,185.233854 142.298582,183.688542 C152.853652,182.143229 183,161 183,161 L68,161 Z" id="Rectangle-23" fill="#C7C7C7"></path>
+                <path d="M117,234 C181.617319,234 234,181.617319 234,117 C234,52.3826811 181.617319,0 117,0 C52.3826811,0 0,52.3826811 0,117 C0,181.617319 52.3826811,234 117,234 Z" id="Oval-3-copy" stroke="#91BBEC" stroke-width="6"></path>
+            </g>
+        </g>
+    </g>
+</svg>

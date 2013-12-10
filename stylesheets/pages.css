@@ -327,8 +327,6 @@ code[data-lang]:after {
 
 .blog-index {
     padding: 0;
-    font-size: 1.2em;
-    line-height: 1.4;
     list-style: none;
 }
 
@@ -371,7 +369,7 @@ code[data-lang]:after {
 
 /* Apps page ----------------------------------------- */
 
-.intro {
+.apps-intro {
     border-bottom: none;
     padding-bottom: 0;
 }
@@ -445,18 +443,6 @@ code[data-lang]:after {
     margin: 50px auto 0 auto;
     font-size: 14px;
     line-height: 1.5;
-}
-
-.gallery a {
-    color: hsl(196,100%,50%);
-}
-
-.gallery a:hover {
-    color: hsl(196,100%,60%);
-}
-
-.gallery a:active {
-    color: hsl(196,100%,40%);
 }
 
 .gallery .gallery-item-source {
