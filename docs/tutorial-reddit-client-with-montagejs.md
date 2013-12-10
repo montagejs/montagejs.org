@@ -314,7 +314,7 @@ Now that the application has a navigation interface, it's time to add support fo
 
 Start by adding the necessary markup to the HTML template. The application will display the reddit stories in a table with two columns. The first column will show the post's current score, while the second column shows the title and author. The following is the component's updated HTML:
 
-```xml
+```html
 <div data-montage-id="component">
     <h1 data-montage-id="currentsub"></h1>
     
@@ -415,7 +415,7 @@ That completes the functional part of the application. When the user clicks on a
 
 MontageJS components are built from standard HTML markup, which means that developers can use the power of CSS to make applications look great. This example uses light text on a dark backround, with a light font weight and purple highlighting for the list item selection. Start by adding a handful of `class` attributes to the HTML in order to accommodate easier styling. A few minor structural changes, like moving the score text into a paragraph tag, might also be helpful.
 
-```xml
+```html`
 <div data-montage-id="component">
     <h1 data-montage-id="currentsub"></h1>
     
