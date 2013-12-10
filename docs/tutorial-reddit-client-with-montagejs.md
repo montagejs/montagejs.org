@@ -304,7 +304,7 @@ At this point, the application will show a selectable list of actual subreddits.
 },
 ```
 
-The `-` operator, which appears in front of the property name in the binding expression, tells FRB that the sequence should be sorted in reverseâ€”from highest to lowest. The `-` operator will work as expected in this case, because the values are simple numbers. You could also use FRB's `reverse` method instead. FRB makes it easy to manipulate bound values in all kinds of interesting ways. If more objects were added to the `subs` array or the value of a subreddit object's `subscribers` property was programmatically altered, the binding system would automatically update the sort order to correspond with the changes.
+The `-` operator, which appears in front of the property name in the binding expression, tells FRB that the sequence should be sorted in reverseâ€”from highest to lowest. The `-` operator will work as expected in this case, because the values are simple numbers. You could also use FRB's `reversed` method instead. FRB makes it easy to manipulate bound values in all kinds of interesting ways. If more objects were added to the `subs` array or the value of a subreddit object's `subscribers` property was programmatically altered, the binding system would automatically update the sort order to correspond with the changes.
 
 <a href="http://montagejs.github.io/mfiddle/#!/7747359" target="_blank">View source on MFiddle</a>
 
