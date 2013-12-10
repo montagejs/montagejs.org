@@ -28,7 +28,7 @@ This tutorial assumes that the reader already has a basic familiarity with the p
 
 Start by creating a repetition that displays a bulleted list of items. In the HTML markup, add an unordered list element to present the repetition. Inside of the unordered list, create a single list item element, which will automatically repeat for every value in the repetition.
 
-```xml
+```html
 <ul data-montage-id="items">
     <li data-montage-id="item"></li>
 </ul>
