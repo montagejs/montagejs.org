@@ -20,9 +20,11 @@ This tutorial demonstrates how to build a very simple reddit client using the Re
 	<figcaption><strong>Figure 1.</strong> The final reddit client on MontageJS.</figcaption>
 </figure>
 
+<a href="http://montagejs.github.io/mfiddle/preview/#!/7881457" target="_blank">View the demo</a>
+
 You can use <a href="http://montagejs.github.io/mfiddle/" target="_blank">MFiddle</a>, the online MontageJS component editor, to follow along. At the end of each major section, there is a link to a saved MFiddle that includes the code so far.
 
-This tutorial assumes that the reader already has a basic familiarity with the principles of MontageJS development. If you are completely new to the framework and would like to start from the beginning, you might want to check out the [Getting Started](http://montagejs.org/docs/montagejs-setup.html) guide.
+This tutorial assumes a basic familiarity with the principles of MontageJS development. If you are completely new to the framework and would like to start from the beginning, you might want to check out the [Getting Started](http://montagejs.org/docs/montagejs-setup.html) guide.
 
 ## Display a Simple Repetition
 
