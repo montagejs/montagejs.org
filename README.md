@@ -25,7 +25,7 @@ After making changes you can close the server with `Ctrl c` and then rebuild the
 If you don't wanna manually rebuild after every change, you can serve with the "watch" command:
 
     jekyll serve --watch
-    
+
 Then the site gets automatically rebuilt once you save a file. __Note__: Because some directories like the /apps are quite big, it is advised to exclude them temporarily while testing locally. It speeds up rebuilding a lot and your CPU thanks you for that. To exclude directories, open the `/_config.yml` file and uncomment this line `exclude: [apps, built-apps, node_modules, packages, ui]` (it might look a bit different by now). Just make sure you don't commit that change to _config.yml.
 
 
@@ -42,4 +42,13 @@ $ _build/build.js
 # wait...
 ```
 
-This will build the apps and the API docs
+This will build the apps and the API docs. To build *just* the API docs use the `_build/jsdoc/jsdoc.js` command. It takes arguments for which project and version docs you want to build.
+
+```bash
+# Locally checked out Montage
+$ _build/jsdoc/jsdoc.js montage npm-link $PWD/api
+# Version of Montage
+$ _build/jsdoc/jsdoc.js montage v0.13.9 $PWD/api
+# Version of Digit
+$ _build/jsdoc/jsdoc.js digit v0.4.0 $PWD/api
+```
