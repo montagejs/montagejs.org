@@ -610,7 +610,7 @@ hr {
 
 .sitemap li {
     display: inline-block;
-    margin: 0 2em;
+    margin: 0 2.5em;
     vertical-align: top;
     text-align: left;
 }
@@ -641,7 +641,7 @@ hr {
     font-size: .8em;
 }
 
-@media all and (max-width: 800px) {
+@media all and (max-width: 920px) {
     .sitemap li {
         margin: 0 1em;
     }
