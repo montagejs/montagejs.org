@@ -60,7 +60,7 @@ In the binding definition, connect the unordered list to a Repetition component 
 }
 ```
 
-In its current state, the application will display a bulleted list of five itemsâ€”all with the same text. The `li` element that is nested within the repetition repeats once for each item in the repetition's content array. Imagine the repetition as a `for` loop: every component inside of the repetition spawns a separate instance for each iteration of the loop.
+In its current state, the application will display a bulleted list of five items@mdashall with the same text. The `li` element that is nested within the repetition repeats once for each item in the repetition's content array. Imagine the repetition as a `for` loop: every component inside of the repetition spawns a separate instance for each iteration of the loop.
 
 ## Bind to the Current Iteration
 
@@ -80,7 +80,7 @@ To make each item in the list display its number, simply bind the value of the t
 }
 ```
 
-In this example, the repetition is populated with a static array of numbers. In practice, a developer will generally want to use the binding system to connect a repetition to the application data modelâ€”typically a data structure that is exposed as a property of your component.
+In this example, the repetition is populated with a static array of numbers. In practice, a developer will generally want to use the binding system to connect a repetition to the application data model&#8212;typically a data structure that is exposed as a property of your component.
 
 It's also worth noting that the content array can contain complex objects, not just simple values like the numbers used in the previous example. The components nested inside the repetition can bind to the properties of the objects within the array. Thanks to the power of FRB, any modification made to the underlying data in the array is automatically reflected in the application's user interface.
 
@@ -134,9 +134,9 @@ After making those changes, the application will have a bulleted list that shows
 
 ## Allow Users to Select a Repetition Item
 
-One of the repetition component's most useful capabilities is built-in support for item selection. When the feature is enabled, the user can click an item in the repetition to mark it as selected. The repetition has a `selection` property that can be used to access the current selectionâ€”either programmatically or through bindings. The component will also automatically apply the `selected` CSS class to the selected items, which makes it easy to customize how they are presented.
+One of the repetition component's most useful capabilities is built-in support for item selection. When the feature is enabled, the user can click an item in the repetition to mark it as selected. The repetition has a `selection` property that can be used to access the current selection&#8212;either programmatically or through bindings. The component will also automatically apply the `selected` CSS class to the selected items, which makes it easy to customize how they are presented.
 
-When selection is enabled, the default behavior is single selectionâ€”where only one item can be selected at a time. The component will automatically clear the previous selection when setting a new one. To make the repetition support selection, update the binding definition to set the value of the repetition's `isSelectionEnabled` property to `true`:
+When selection is enabled, the default behavior is single selection&#8212;where only one item can be selected at a time. The component will automatically clear the previous selection when setting a new one. To make the repetition support selection, update the binding definition to set the value of the repetition's `isSelectionEnabled` property to `true`:
 
 ```json
 "rep": {
@@ -221,9 +221,9 @@ exports.Owner = Component.specialize({
 });
 ```
 
-It's important to understand that the code above passes raw JSON data from a remote API directly into the program. The binding system ensures that the desired values from the JSON data are displayed in the applicationâ€”and that the application is updated when the data changes. If the application were to poll the API repeatedly, assigning the returned list to the `subs` property each time, the binding system would automatically propagate any changes that appear in the data.
+It's important to understand that the code above passes raw JSON data from a remote API directly into the program. The binding system ensures that the desired values from the JSON data are displayed in the application&#8212;and that the application is updated when the data changes. If the application were to poll the API repeatedly, assigning the returned list to the `subs` property each time, the binding system would automatically propagate any changes that appear in the data.
 
-Unlike many other JavaScript MVC frameworks, MontageJS doesn't require developers to peel apart the data and wrap values with special functions in order to make them observableâ€”it operates directly on conventional JavaScript data structures. Of course, the data that is consumed from the API looks a little bit different from the dummy data used in previous examples. Each item in the list returned by the reddit API looks a bit like this:
+Unlike many other JavaScript MVC frameworks, MontageJS doesn't require developers to peel apart the data and wrap values with special functions in order to make them observable&#8212;it operates directly on conventional JavaScript data structures. Of course, the data that is consumed from the API looks a little bit different from the dummy data used in previous examples. Each item in the list returned by the reddit API looks a bit like this:
 
 ```json
 {
@@ -304,7 +304,7 @@ At this point, the application will show a selectable list of actual subreddits.
 },
 ```
 
-The `-` operator, which appears in front of the property name in the binding expression, tells FRB that the sequence should be sorted in reverseâ€”from highest to lowest. The `-` operator will work as expected in this case, because the values are simple numbers. You could also use FRB's `reversed` method instead. FRB makes it easy to manipulate bound values in all kinds of interesting ways. If more objects were added to the `subs` array or the value of a subreddit object's `subscribers` property was programmatically altered, the binding system would automatically update the sort order to correspond with the changes.
+The `-` operator, which appears in front of the property name in the binding expression, tells FRB that the sequence should be sorted in reverse&#8212;from highest to lowest. The `-` operator will work as expected in this case, because the values are simple numbers. You could also use FRB's `reversed` method instead. FRB makes it easy to manipulate bound values in all kinds of interesting ways. If more objects were added to the `subs` array or the value of a subreddit object's `subscribers` property was programmatically altered, the binding system would automatically update the sort order to correspond with the changes.
 
 <a href="http://montagejs.github.io/mfiddle/#!/7747359" target="_blank">View source on MFiddle</a>
 
