@@ -62,7 +62,7 @@ In the binding definition, connect the unordered list to a Repetition component 
 }
 ```
 
-In its current state, the application will display a bulleted list of five items@mdashall with the same text. The `li` element that is nested within the repetition repeats once for each item in the repetition's content array. Imagine the repetition as a `for` loop: every component inside of the repetition spawns a separate instance for each iteration of the loop.
+In its current state, the application will display a bulleted list of five items&#8212;all with the same text. The `li` element that is nested within the repetition repeats once for each item in the repetition's content array. Imagine the repetition as a `for` loop: every component inside of the repetition spawns a separate instance for each iteration of the loop.
 
 ## Bind to the Current Iteration
 
