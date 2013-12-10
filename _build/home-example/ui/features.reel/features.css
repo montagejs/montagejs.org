@@ -46,10 +46,9 @@
 .features .block {
     display: inline-block;
     position: relative;
-    margin: 20px 0 20px 60px;
-    padding: 0 30px;
+    margin: 20px 0 20px 30px;
+    padding: 0 20px;
     border-left: 1px solid hsl(0,0%,80%);
-    border-right: 1px solid hsl(0,0%,80%);
 }
 
 .features .block::before {
@@ -113,21 +112,26 @@
         overflow: auto;
     }
     .features .block pre {
-        /* This could be improved */
-        min-width: 700px;
+        font-size: 12px;
+        padding-bottom: 10px;
+        white-space: pre;
+        overflow: auto;
     }
     
     .features .block::before {
         display: block;
         position: relative;
-        top: 0;
+        top: 8px;
         left: 0px;
-        border-bottom: 1px dashed hsl(0,0%,80%);
         -webkit-transform: none;
            -moz-transform: none;
             -ms-transform: none;
              -o-transform: none;
                 transform: none;
+    }
+    
+    .features .block.serialization{
+        margin-bottom:20px;
     }
 
 }
