@@ -3,9 +3,7 @@
 layout: docs
 title: Reddit Client with MontageJS - MontageJS Tutorial
 
-prev-page: draw-cycle
 this-page: tutorial-reddit-client-with-montagejs
-next-page: themes
 
 ---
 
