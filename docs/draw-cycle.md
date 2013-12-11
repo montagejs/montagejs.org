@@ -5,7 +5,6 @@ title: MontageJS Draw Cycle
 
 prev-page: event-handling
 this-page: draw-cycle
-next-page: themes
 
 ---
 

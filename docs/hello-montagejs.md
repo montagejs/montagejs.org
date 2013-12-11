@@ -5,7 +5,6 @@ title: Hello MontageJS - Getting Started Part 2
 
 prev-page: montagejs-setup
 this-page: hello-montagejs
-next-page: montagejs-examples
 
 ---
 
@@ -24,11 +23,11 @@ To make the most of this tutorial, you should have a basic understanding of HTML
 
 ## Before You Begin
 
-Be sure you have set up MontageJS development as instructed in [Getting Started with MontageJS](http://montagejs.org/docs/montagejs-setup.html). You must have node.js, npm, and Minit (the MontageJS initializer command line tool) installed to complete this tutorial. You also need a text editor and a recent stable release of Google Chrome, Safari, or Firefox.
+Be sure you have set up MontageJS development as instructed in [Getting Started with MontageJS](http://montagejs.org/docs/montagejs-setup.html). You must have node.js, npm, and minit (the MontageJS initializer command line tool) installed to complete this tutorial. You also need a text editor and a recent stable release of Google Chrome, Safari, or Firefox.
 
 ## Create a New Project
 
->**Note:** If you have already created a new project and are using Minit to serve your project, you can skip this section and continue with "MontageJS Basics."
+>**Note:** If you have already created a new project and are using minit to serve your project, you can skip this section and continue with "MontageJS Basics."
 
 1. Open a Terminal window or Command Prompt and type:
     
@@ -36,7 +35,7 @@ Be sure you have set up MontageJS development as instructed in [Getting Started 
     $ minit create:app -n temp-converter
     ```
 
-2. Switch to the temp-converter directory and use Minit to serve your project:
+2. Switch to the temp-converter directory and use minit to serve your project:
 
     ```
     $ cd temp-converter
@@ -464,9 +463,9 @@ You're almost done; just one more thing.
 
 ## Prepare for Deployment
 
-As mentioned earlier, building MontageJS applications is divided into a development phase and a production phase. When your application is finished, you need to get it ready for deployment. This is where Mop, the MontageJS optimizer, comes in.
+As mentioned earlier, building MontageJS applications is divided into a development phase and a production phase. When your application is finished, you need to get it ready for deployment. This is where mop, the MontageJS optimizer, comes in.
 
-Mop is a simple command line tool that transforms a bulky application in development into an optimized application ready for deployment. In the process, Mop also minifies your code to help speed up the loadtime of the application.
+Mop is a simple command line tool that transforms a bulky application in development into an optimized application ready for deployment. In the process, mop also minifies your code to help speed up the loadtime of the application.
 
 Mop is not part of the default MontageJS starter project; you have to install it separately. Follow these steps:
 
@@ -476,7 +475,7 @@ Mop is not part of the default MontageJS starter project; you have to install it
     $ sudo npm install -g mop
     ```
     
-    This installs Mop globally so you can use it in the current and all future projects.
+    This installs mop globally so you can use it in the current and all future projects.
     
     >**Note:** npm uses `sudo` to make command line utilities such as mop available system wide.
     
@@ -488,7 +487,7 @@ Mop is not part of the default MontageJS starter project; you have to install it
  
 4. Open the builds directory, double-click the symlink, and then double-click index.html.
 
-    This opens the temperature converter application in the browser—without Minit doubling as your on-demand web server (note the file URL in the browser's address bar).
+    This opens the temperature converter application in the browser—without minit doubling as your on-demand web server (note the file URL in the browser's address bar).
 
 To deploy the final application, all you have to do is copy the directory pointed to by the builds symlink to a web server.
 
@@ -501,6 +500,5 @@ Yet, you've barely scratched the surface of what you can do with MontageJS.
 * To learn more about using MontageJS, see the guides and demos in the [Documentation](http://montagejs.org/docs/).
 * For an overview of the MontageJS widget sets, check out the [Themes](http://montagejs.org/docs/themes.html) sections.
 * To understand our MontageJS-specific naming patterns, see [Naming Conventions](http://montagejs.org/docs/naming-conventions.html).
-* For more details on using Mop and the contents of the builds directory, see [Developer Tools (coming soon)]
-
+* For more details on using mop and the contents of the builds directory, see [Using mop](http://montagejs.org/docs/tools-mop.html)]
 

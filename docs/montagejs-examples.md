@@ -3,9 +3,7 @@
 layout: docs
 title: MontageJS Examples
 
-prev-page: hello-montagejs
 this-page: montagejs-examples
-next-page: draw-cycle
 
 ---
 

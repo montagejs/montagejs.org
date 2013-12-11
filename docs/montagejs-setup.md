@@ -3,7 +3,6 @@
 layout: docs
 title: Set Up MontageJS Development - Getting Started Part 1
 
-prev-page: index
 this-page: montagejs-setup
 next-page: hello-montagejs
 
@@ -16,7 +15,7 @@ MontageJS is an HTML5 framework for building rich single-page applications (SPAs
 # A Note about MontageJS
 Most framework developers provide you with a download link to code libraries. These code libraries are designed to make a web application developer's life easier. Unfortunately, they typically also include a lot more functionality than is needed for any given project. Consequently, most web applications tend to include massive libraries that have a lot more parts than the application requires.
 
-MontageJS takes a different approach to developing web applications. With MontageJS you do not download or link to a prebuilt, kitchensink-style solution in your application. MontageJS uses the CommonJS module system and is part of the npm package ecosystem. This makes it easy for developers to set up a client-side development environment and organize and manage their code base. In development, you supplement your code with the modules and components that provide just the functionality you need. Then, come production time, you use Mop, the Montage optimizer, to sift through your developer-optimized experience, analyze your project and its dependencies, and then create a minified version of your source code that includes only those modules and components that your application actually uses—nothing more.
+MontageJS takes a different approach to developing web applications. With MontageJS you do not download or link to a prebuilt, kitchensink-style solution in your application. MontageJS uses the CommonJS module system and is part of the npm package ecosystem. This makes it easy for developers to set up a client-side development environment and organize and manage their code base. In development, you supplement your code with the modules and components that provide just the functionality you need. Then, come production time, you use mop, the Montage optimizer, to sift through your developer-optimized experience, analyze your project and its dependencies, and then create a minified version of your source code that includes only those modules and components that your application actually uses—nothing more.
 
 # Setting Up MontageJS Development
 
@@ -31,9 +30,9 @@ You also need a recent stable release of Google Chrome, Safari, or Firefox.
 
 <a href="http://nodejs.org/download/" target="_blank">Download</a> and run the prebuilt Node.js installer for your platform from the Node.js website if you haven't already. MontageJS uses Node.js and npm, which is part of the Node.js installation, for its command line tools and for version and code dependency management in development.
 
-## Step 1: Install Minit
+## Step 1: Install minit
 
-The Minit command line tool provides a convenient way to kickstart your MontageJS projects. With Minit you can quickly generate an application template that includes everything you need to start building a mobile-optimized SPA. Use the following commands to install the latest version of Minit for your platform:
+The minit command line tool provides a convenient way to kickstart your MontageJS projects. With minit you can quickly generate an application template that includes everything you need to start building a mobile-optimized SPA. Use the following commands to install the latest version of minit for your platform:
 
 * **Mac OS X / Linux:** Open a Terminal window and type:
 
@@ -66,7 +65,7 @@ This generates the _app-name_ directory—which includes the MontageJS code depe
 
 To verify your setup:
 
-1. Switch to the _app-name_ directory and use Minit to serve your project:
+1. Switch to the _app-name_ directory and use minit to serve your project:
 
     ```
     $ cd app-name

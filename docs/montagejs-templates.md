@@ -2,7 +2,6 @@
 layout: docs
 title: MontageJS Components
 
-prev-page: montagejs-examples
 this-page: montagejs-templates
 next-page: exploring-components
 
