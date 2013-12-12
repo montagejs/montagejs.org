@@ -500,5 +500,5 @@ Yet, you've barely scratched the surface of what you can do with MontageJS.
 * To learn more about using MontageJS, see the guides and demos in the [Documentation](http://montagejs.org/docs/).
 * For an overview of the MontageJS widget sets, check out the [Themes](http://montagejs.org/docs/themes.html) sections.
 * To understand our MontageJS-specific naming patterns, see [Naming Conventions](http://montagejs.org/docs/naming-conventions.html).
-* For more details on using mop and the contents of the builds directory, see [Using mop](http://montagejs.org/docs/tools-mop.html)]
+* For more details on using mop and the contents of the builds directory, see [Using mop](http://montagejs.org/docs/tools-mop.html).
 
