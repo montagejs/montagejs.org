@@ -240,8 +240,36 @@
 
 /* Code ----------------------------------------- */
 
+/* Inline */
+
 code {
     color: hsl(0, 0%, 50%);
+}
+
+/* Block: highlight = GitHub MD, prettyprint = JSDoc  */
+
+.highlight,
+.prettyprint {
+    display: block;
+    position: relative;
+    margin: 1em 0;
+    padding: 20px;
+    font-size: .9em;
+    line-height: 1.3;
+    border-radius: 6px;
+    border: 1px solid hsl(0, 0%, 88%);
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(0, 0%, 50%);
+    box-shadow: inset 0 1px 3px hsla(0, 0%, 0%, 0.04), 0 1px 0 hsla(0, 0%, 100%, 0.6);
+}
+
+.highlight > pre {
+    margin: 0;
+}
+
+.highlight em {
+    color: #545454;
+    font-weight: bold;
 }
 
 code[data-lang]:after {
@@ -261,35 +289,6 @@ code[data-lang]:after {
     border-left: 1px solid hsla(0, 0%, 0%, 0.05);
     border-bottom: 1px solid hsla(0, 0%, 0%, 0.05);
     background: hsla(0, 0%, 0%, 0.04);
-}
-
-.highlight ::-moz-selection {   background: hsl(50,5%,50%); color: white; text-shadow: none; }
-.prettyprint ::-moz-selection { background: hsl(50,5%,50%); color: white; text-shadow: none; }
-.highlight ::selection {        background: hsl(50,5%,50%); color: white; text-shadow: none; }
-.prettyprint ::selection {      background: hsl(50,5%,50%); color: white; text-shadow: none; }
-
-.highlight pre,
-.prettyprint {
-    display: block;
-    position: relative;
-    margin: 1em 0;
-    padding: 20px;
-    font-size: .9em;
-    line-height: 1.3;
-    border-radius: 6px;
-    border: 1px solid hsl(0, 0%, 88%);
-    background-color: hsl(0, 0%, 98%);
-    color: hsl(0, 0%, 50%);
-    box-shadow: inset 0 1px 3px hsla(0, 0%, 0%, 0.04), 0 1px 0 hsla(0, 0%, 100%, 0.6);
-}
-
-.highlight pre > code,
-.prettyprint > code {
-    display: block;
-    padding: 0;
-    border-radius: 0;
-    border: none;
-    background-color: transparent;
 }
 
 
