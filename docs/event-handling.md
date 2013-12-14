@@ -248,7 +248,7 @@ exports.Employee = Montage.create(Montage, {
             console.log("fullName changed to " + this.fullName);
         }
     },
-    deserializedFromTemplate: {
+    enterDocument: {
         value: function() {
             // Create a change@ event listener, 
             this.addEventListener("change@fullName", this);
@@ -281,7 +281,7 @@ exports.Employee = Montage.create(Montage, {
             console.log("fullName changed to " + this.fullName);
         }
     },
-    deserializedFromTemplate: {
+    enterDocument: {
         value: function() {
             Montage.addDependencyToProperty(this, "firstName", "fullName");
             Montage.addDependencyToProperty(this, "lastName", "fullName");
