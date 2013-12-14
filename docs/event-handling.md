@@ -192,7 +192,6 @@ Next we create the HTML page that declares the Button component and the custom C
 
 You can also specify the `identifier` string in the serialization, as shown below:
 ```json
-<script type="text/montage-serialization">
 {
     "button" : {
         "name": "Button",
@@ -214,82 +213,4 @@ You can also specify the `identifier` string in the serialization, as shown belo
         "module": "controller"
     }
 }
-</script>
-```
-
-## Dependent Properties
-A property belonging to an object may declare itself to be dependent on one or more other “independent” properties. If the value of one of the dependencies changes, a `change@dependentProp` event is dispatched, as if the dependent property was modified itself. This is especially useful in [data binding](https://github.com/montagejs/montage/wiki/Data-binding).
-
-### Basic example
-To declare a property’s dependencies you can use the `dependencies` property attribute when defining the object prototype, or by calling `Montage.addDependencyToProperty()`. The `dependencies` attribute is an array of strings whose values correspond to the name(s) of the property (or properties) that the observed property depends on.
-
-In the following example, the `Employee` object defines a `fullName` property that depends on the object’s `firstName` and `lastName` properties. The `fullName` property is contains an accessor (getter method) that returns a concatenation of the first and last names. An event listener is registered on the Employee object for the `change@fullName` event type. The same object is specified as the listener object (`this` as the second parameter to `addEventListener()`) so its `handleEvent()` is called when the specified event type occurs.
-
-```js
-// employee.js
-var Montage = require("montage/core/core").Montage;
-
-exports.Employee = Montage.create(Montage, {
-
-    firstName: {
-        value: "James"
-    },
-    lastName: {
-        value: "Kirk"
-    },
-    fullName: {
-        dependencies: ["firstName", "lastName"],
-        get: function() {
-            return this.firstName + " " + this.lastName;
-        }
-    },
-    handleEvent: {
-        value: function(event) {
-            console.log("fullName changed to " + this.fullName);
-        }
-    },
-    enterDocument: {
-        value: function() {
-            // Create a change@ event listener, 
-            this.addEventListener("change@fullName", this);
-            // And modify the value of firstName. 
-            this.firstName = "John";
-        }
-    }
-});
-```
-
-To run this example, create an HTML page that includes the Montage framework. Alternatively, you can specify dependencies of a property by calling `Montage.addDependencyToProperty()`, as shown below.
-
-```js
-var Montage = require("montage/core/core").Montage;
-
-exports.Employee = Montage.create(Montage, {
-    firstName: {
-        value: "James"
-    },
-    lastName: {
-        value: "Kirk"
-    },
-    fullName: {
-        get: function() {
-            return this.firstName + " " + this.lastName;
-        }
-    },
-    handleEvent: {
-        value: function(event) {
-            console.log("fullName changed to " + this.fullName);
-        }
-    },
-    enterDocument: {
-        value: function() {
-            Montage.addDependencyToProperty(this, "firstName", "fullName");
-            Montage.addDependencyToProperty(this, "lastName", "fullName");
-            // Create a change@ event listener, 
-            this.addEventListener("change@fullName", this);
-            // And modify the value of firstName. 
-            this.firstName = "John";
-        }
-    }
-});
 ```
