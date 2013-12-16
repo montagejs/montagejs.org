@@ -1,10 +1,10 @@
 #!/usr/bin/env node
+/*jshint node:true */
 
 var FS = require("fs");
 var PATH = require("path");
 var Q = require("q");
 var Writable = require("stream").Writable;
-/*jshint node:true */
 var shell = require('shelljs'); // nicer scripting interface
 var generateJsdoc = require("./jsdoc/jsdoc");
 
@@ -42,11 +42,7 @@ var APPS = {
     "popcorn": {url: "https://github.com/montagejs/popcorn.git", commit: "v0.12"}
 };
 
-var TEMP_DIR;
-
-// start
-
-// var TEMP_DIR = exec("mktemp -d -t montagejs_org_temp.XXXXXX").output;
+var TEMP_DIR = PATH.join(SOURCE_PATH, "tmp");
 
 function cloneAndMopApps(apps) {
     return Q.all(Object.keys(apps).map(function (name) {
@@ -94,19 +90,45 @@ function cloneAndMopApps(apps) {
     }));
 }
 
-// var TEMP_DIR = shell.exec("mktemp -d -t montagejs_org_temp.XXXXXX").output;
-var TEMP_DIR = PATH.join(SOURCE_PATH, "tmp");
-exec("rm", ["-rf", TEMP_DIR])
-.then(function () {
-    return exec("mkdir", [TEMP_DIR]);
-})
-.then(function () {
-    return cloneAndMopApps(APPS);
-})
-.then(function () {
-    return generateJsdoc("montage", "latest", PATH.join(SOURCE_PATH, "api"));
-})
-.then(function () {
-    console.log("done");
-})
-.done();
+function usage() {
+    console.log(process.argv[0], process.argv[1], "<what>");
+    console.log();
+    console.log("Where 'what' is one or more of:");
+    console.log();
+    console.log("    all    Build everything");
+    console.log("    apps   Update and Mop the example apps");
+    console.log("    api    Build the API docs");
+}
+
+if (require.main === module) {
+    var argv = process.argv.slice(2);
+
+    var buildAll = argv.indexOf("all") !== -1;
+    var buildApps = buildAll || argv.indexOf("apps") !== -1;
+    var buildApi = buildAll || argv.indexOf("api") !== -1;
+
+    if (!buildApps && !buildApi) {
+        usage();
+        process.exit(1);
+    }
+
+    exec("rm", ["-rf", TEMP_DIR])
+    .then(function () {
+        return exec("mkdir", [TEMP_DIR]);
+    })
+    .then(function () {
+        if (buildApps) {
+            return cloneAndMopApps(APPS);
+        }
+    })
+    .then(function () {
+        if (buildApi) {
+            return generateJsdoc("montage", "latest", PATH.join(SOURCE_PATH, "api"));
+        }
+    })
+    .then(function () {
+        console.log("done");
+    })
+    .done();
+
+}
