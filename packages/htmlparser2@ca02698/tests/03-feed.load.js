@@ -1,0 +1,1 @@
+montageDefine("ca02698","tests/03-feed",{dependencies:["./test-helper.js","../lib/FeedHandler.js","fs"],factory:function(e,t){var n=e("./test-helper.js"),i=e("../lib/FeedHandler.js"),r=e("fs"),o={xmlMode:!0};t.dir="Feeds",t.test=function(e,t){var a=new i(function(e,n){e?t(e,0):t(null,n)}),s=""+r.readFileSync(__dirname+"/Documents/"+e.file);n.writeToParser(a,o,s)}}});
