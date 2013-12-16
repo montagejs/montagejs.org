@@ -31,18 +31,37 @@ Then the site gets automatically rebuilt once you save a file. __Note__: Because
 
 ## Building and deploying
 
-First install the dependencies, and then run the build script.
+First install the build dependencies:
 
 ```bash
 $ cd _build
 $ npm install
-# wait ...
 $ cd ..
-$ _build/build.js
-# wait...
 ```
 
-This will build the apps and the API docs. To build *just* the API docs use the `_build/jsdoc/jsdoc.js` command. It takes arguments for which project and version docs you want to build.
+The apps, API docs and home example can all be built individually:
+
+```bash
+$ _build/build.js apps
+$ _build/build.js api
+$ _build/build.js home
+```
+
+or several at the same time:
+
+```bash
+$ _build/build.js home apps
+```
+
+or you can shortcut and build all the things:
+
+```bash
+$ _build/build.js all
+```
+
+### API docs
+
+To build *just* a subset of the API docs, or build docs for a specific version, use the `_build/jsdoc/jsdoc.js` command. It takes arguments for which project and version docs you want to build.
 
 ```bash
 # Locally checked out Montage
