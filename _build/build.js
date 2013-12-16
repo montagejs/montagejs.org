@@ -90,6 +90,39 @@ function cloneAndMopApps(apps) {
     }));
 }
 
+function mopHomeExample() {
+    var sourcePath = PATH.join(__dirname, "home-example");
+    var buildPath = PATH.join(sourcePath, "builds", "montagejs.org");
+    var outPath = SOURCE_PATH;
+
+    // Files to copy out of the build
+    var paths = ["packages", "index.html.bundle-0.js"];
+
+    return exec("npm", ["install"], sourcePath)
+    .then(function () {
+        return exec("npm", ["install"], PATH.join(sourcePath, "node_modules", "montage"));
+    })
+    .then(function () {
+        return exec("./node_modules/.bin/mop", [], sourcePath);
+    })
+    .then(function () {
+        // Remove generated files from root
+        return Q.all(paths.map(function (path) {
+            return exec("rm", ["-r", PATH.join(outPath, path)]);
+        }));
+    })
+    .then(function () {
+        // Copy generated files back to root
+        return Q.all(paths.map(function (path) {
+            return exec("cp", ["-r", PATH.join(buildPath, path), PATH.join(outPath, path)]);
+        }));
+    })
+    .then(function () {
+        // Copy home-example include
+        return exec("cp", [PATH.join(buildPath, "index.html"), PATH.join(outPath, "_includes", "home-example.html")]);
+    });
+}
+
 function usage() {
     console.log(process.argv[0], process.argv[1], "<what>");
     console.log();
@@ -98,6 +131,7 @@ function usage() {
     console.log("    all    Build everything");
     console.log("    apps   Update and Mop the example apps");
     console.log("    api    Build the API docs");
+    console.log("    home   Mop the embedded home page example");
 }
 
 if (require.main === module) {
@@ -106,8 +140,9 @@ if (require.main === module) {
     var buildAll = argv.indexOf("all") !== -1;
     var buildApps = buildAll || argv.indexOf("apps") !== -1;
     var buildApi = buildAll || argv.indexOf("api") !== -1;
+    var buildHome = buildAll || argv.indexOf("home") !== -1;
 
-    if (!buildApps && !buildApi) {
+    if (!buildApps && !buildApi && !buildHome) {
         usage();
         process.exit(1);
     }
@@ -124,6 +159,11 @@ if (require.main === module) {
     .then(function () {
         if (buildApi) {
             return generateJsdoc("montage", "latest", PATH.join(SOURCE_PATH, "api"));
+        }
+    })
+    .then(function () {
+        if (buildHome) {
+            return mopHomeExample();
         }
     })
     .then(function () {
