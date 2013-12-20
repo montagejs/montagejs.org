@@ -32,7 +32,7 @@
         "lenient": true,
         "githubOrg": "montagejs",
         "githubRepo": "digit",
-        "commitish": "a217d641380d37f875673e94f180c3def5c75335"
+        "commitish": "v0.4.0"
     },
     "repositoryId": {
         "sha": "d8114c47bdee76b8f750c39dfc95bfee8a6ac341",
