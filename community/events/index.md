@@ -9,12 +9,12 @@ title: MontageJS Events
 
 ### Upcoming
 
-* We currently have no events on our schedule. Check up soon for updates.
+* We currently have no events on our schedule. Check back soon for updates.
 
 
 ### Past
 
-* [Free Training](http://www.meetup.com/Montage-Developers-of-Silicon-Valley/events/154749222/) (Getting Started), networking (food), and advanced topic (WebGL): __Wed, Dec 18, 2013__ at Fastmac/TruePower, 3030 Olcott St, Santa Clara, CA.
+* [Free Training](http://www.meetup.com/Montage-Developers-of-Silicon-Valley/events/154749222/) (Getting Started), networking (food), and advanced topic (WebGL): __Wed, Dec 18, 2013__ at Fastmac/TruePower, 3030 Olcott St, Santa Clara, CA. YouTube: [Using WebGL with MontageJS](http://www.youtube.com/watch?v=RY9qkYvEzuo)
 * [DevCon5](http://www.html5report.com/conference/california/): On __Wed, Dec 11, 2013__, Fabrice Robinet and Ryan Paul will be delivering a show-and-tell presentation on [WebGL from Chips to 3D](http://www.html5report.com/conference/california/agenda.aspx#A-07). 
 * [Birmingham JavaScript Meetup](http://www.meetup.com/bhm-js/events/146862862/): __Nov 11, 2013__ in Birmingham, AL. Kris Kowal on [A Protracted Descent into Madness](http://tale.gg/bhmjs/). YouTube: [Part 1](https://www.youtube.com/watch?v=h442hytxMtU), [Part 2](http://www.youtube.com/watch?v=P2rNoWlB9MI&feature=youtu.be)
 * [October Meetup](http://www.meetup.com/Montage-Developers-of-Silicon-Valley/events/144757442/): __Oct 17, 2013__ at Next Space, 1 Hallidie Plaza, 2nd Floor, San Francisco, CA.
