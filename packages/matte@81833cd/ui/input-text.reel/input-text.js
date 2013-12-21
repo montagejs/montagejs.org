@@ -1,0 +1,1 @@
+var AbstractTextField=require("montage/ui/base/abstract-text-field").AbstractTextField;exports.InputText=AbstractTextField.specialize({hasTemplate:{value:!0},constructor:{value:function(){this.super(),this.classList.add("matte-InputText")}}});

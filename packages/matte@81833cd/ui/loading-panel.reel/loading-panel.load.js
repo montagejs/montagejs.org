@@ -1,0 +1,1 @@
+montageDefine("81833cd","ui/loading-panel.reel/loading-panel",{dependencies:["montage/ui/component"],factory:function(e,t){var n=e("montage/ui/component").Component;t.LoadingPanel=n.specialize({requiredModuleCount:{enumerable:!1,value:0},initializedModuleCount:{enumerable:!1,value:0}})}});

@@ -1,0 +1,1 @@
+var fs=require("fs"),FSReadable=require("../fs.js"),rst=new FSReadable(__filename);rst.on("end",function(){process.stdin.pause()}),process.stdin.setRawMode(!0),process.stdin.on("data",function(){var e=rst.read(3);e&&process.stdout.write(e)}),process.stdin.resume();
