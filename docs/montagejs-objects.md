@@ -13,53 +13,57 @@ next-page: data-binding
 
 MontageJS provides a thin veneer over the JavaScript object model: Types are represented by constructor functions. Constructor functions have a `prototype`. The `prototype` has a `constructor`. `instanceof` and `new` work as you would expect.
 
-For a succinct comparison, the following examples are equivalent:
+For a succinct comparison, the following examples A and B are equivalent:
+
+### Example A: JavaScript (ECMAScript 5)
 
 ```javascript
-function Constructor() {
-    ParentConstructor.call(this);
+function Penguin() {
+    Bird.call(this);
 }
 
-Constructor.prototype = Object.create(ParentConstructor.prototype);
+Penguin.prototype = Object.create(Bird.prototype);
 
-Constructor.prototype.constructor = Constructor;
+Penguin.prototype.constructor = Penguin;
 
-Constructor.prototype.method = function () {
-    return ParentConstructor.prototype.method.call(this);
+Penguin.prototype.fly = function () {
+    return Bird.prototype.fly.call(this);
 };
 
-Object.defineProperty(Constructor.prototype, "property", {
+Object.defineProperty(Penguin.prototype, "habitat", {
     get: function () {
-        return this._property;
+        return this._habitat;
     },
     set: function (value) {
-        this._property = value;
+        this._habitat = value;
     }
 });
 
-Constructor.staticMethod = function () {
+Penguin.staticMethod = function () {
 };
 ```
 
+### Example B: MontageJS
+
 ```javascript
-var Constructor = ParentConstructor.specialize({
+var Penguin = Bird.specialize({
     constructor: {
-        value: function Constructor() {
+        value: function Penguin() {
             this.super();
         }
     },
-    method: {
+    fly: {
         value: function () {
             return this.super();
         },
         enumerable: true
     },
-    property: {
+    habitat: {
         get: function () {
-            return this._property;
+            return this._habitat;
         },
         set: function (value) {
-            this._property = value;
+            this._habitat = value;
         }
     }
 }, {
