@@ -18,37 +18,37 @@ For a succinct comparison, the following examples A and B are equivalent:
 ### Class Declaration Example A
 
 ```javascript
-function Constructor() {
-    ParentConstructor.call(this);
+function Penguin() {
+    Bird.call(this);
 }
 
-Constructor.prototype = Object.create(ParentConstructor.prototype);
+Penguin.prototype = Object.create(Bird.prototype);
 
-Constructor.prototype.constructor = Constructor;
+Penguin.prototype.constructor = Penguin;
 
-Constructor.prototype.method = function () {
-    return ParentConstructor.prototype.method.call(this);
+Penguin.prototype.method = function () {
+    return Bird.prototype.method.call(this);
 };
 
-Object.defineProperty(Constructor.prototype, "property", {
+Object.defineProperty(Penguin.prototype, "habitat", {
     get: function () {
-        return this._property;
+        return this._habitat;
     },
     set: function (value) {
-        this._property = value;
+        this._habitat = value;
     }
 });
 
-Constructor.staticMethod = function () {
+Penguin.staticMethod = function () {
 };
 ```
 
 ### Class Declaration Example B
 
 ```javascript
-var Constructor = ParentConstructor.specialize({
+var Penguin = Bird.specialize({
     constructor: {
-        value: function Constructor() {
+        value: function Penguin() {
             this.super();
         }
     },
@@ -58,12 +58,12 @@ var Constructor = ParentConstructor.specialize({
         },
         enumerable: true
     },
-    property: {
+    habitat: {
         get: function () {
-            return this._property;
+            return this._habitat;
         },
         set: function (value) {
-            this._property = value;
+            this._habitat = value;
         }
     }
 }, {
