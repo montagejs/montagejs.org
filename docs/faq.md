@@ -10,7 +10,7 @@ next-page: troubleshooting
 ---
 
 
-# FAQ
+# MontageJS FAQ
 
 Get answers to frequently asked questions about MontageJS.
 
@@ -22,19 +22,18 @@ Get answers to frequently asked questions about MontageJS.
 ## <a name="general"></a>General Questions
 
 ### What is MontageJS?
-MontageJS is a modern client-side application framework powered by standard web technologies. It was designed from the ground up to help you build scalable and maintainable HTML5 applications optimized for today's and tomorrow's range of connected devices. With MontageJS, developers can create reusable user interface components and modules, bind properties among components and controllers, and synchronize DOM queries and updates to ensure a smooth user experience, especially on resource-constrained devices.
+MontageJS is an open source, client-side MVC application framework powered by standards-based web technologies. With MontageJS, developers can use their existing HMTL, CSS, and JavaScript skills to assemble quickly single-page applications (SPAs) out of modular user interface components that encapsulate a declarative approach to DOM manipulation, logicless templates, and CSS directives.
+
+### Why should I use MontageJS?
+MontageJS was designed from the ground up to help developers build scalable and maintainable HTML5 applications optimized for today's and tomorrow's range of connected devices. The framework provides a simple, structured approach to building and maintaining ambitious single-page web applications or complex user interfaces by following proven software design patterns and promoting a clear separation of concerns. MontageJS provides reusable components, ubiquitous declarative bindings, functional reactive bindings (FRB), a managed draw cycle (to help minimize expensive browser reflow), and a separation of concerns that facilitates sharing and collaboration. This separation of concerns allows designers to use the technologies they are comfortable with, without having to dig into the JavaScript, and it allows developers to isolate and test individual components using familiar techniques.
+
+### Who is using MontageJS?
+MontageJS is still evolving, but it has been used to create the (temporarily suspended) ScratchPad Chrome browser extension app and the Tips and Tricks application you see when you start up a Chrome notebook for the first time. In addition, several businesses and consultants are currently evaluating MontageJS for their projects. However, not having powerful client portfolio yet should not keep you from taking a closer look at what you can do with MontageJS. On the contrary, go check it out, play with it, and let us know what you think. Others already have.
 
 ### Why can't I download MontageJS from your website?
 Most framework developers provide you with a download link to code libraries. These code libraries are designed to make a web application developer's life easier. Unfortunately, they typically also include a lot more functionality than is needed for any given project. Consequently, most web applications tend to include massive libraries that have a lot more parts than the application requires.
 
 MontageJS takes a different approach to developing web applications. With MontageJS, you don't download or link to a prebuilt, kitchensink-style solution in your application. MontageJS uses the CommonJS module system and is part of the npm package ecosystem. This makes it easy for developers to set up their client-side development environment and organize their code. In development, you supplement your code with the modules and components that provide just the functionality you need. Then, come production time, Mop (the MontageJS optimizer) sifts through your developer-optimzied experience and includes only those modules and components that are actually required in your final application.
-
-### Why should I use MontageJS?
-MontageJS provides a simple, structured approach to building and maintaining ambitious single-page web applications or complex user interfaces by following proven software design patterns and promoting a clear separation of concerns. MontageJS provides reusable components, ubiquitous declarative bindings, functional reactive bindings (FRB), a managed draw cycle (to help minimize expensive browser reflow), and a separation of concerns that facilitates sharing and collaboration. This separation of concerns allows designers to use the technologies they are comfortable with, without having to dig into the JavaScript, and it allows developers to isolate and test individual components using familiar techniques.
-
-### Who is using MontageJS?
-MontageJS is still evolving, but it has been used to create the (temporarily suspended) ScratchPad Chrome browser extension app and the Tips and Tricks application you see when you start up a Chrome notebook for the first time. In addition, several businesses and consultants are currently evaluating MontageJS for their projects. However, not having powerful client portfolio yet should not keep you from taking a closer look at what you can do with MontageJS. On the contrary, go check it out, play with it, and let us know what you think. Others already have.
-
 
 ## <a name="gs"></a>Getting Started
 
