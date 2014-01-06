@@ -15,7 +15,7 @@ MontageJS provides a thin veneer over the JavaScript object model: Types are rep
 
 For a succinct comparison, the following examples A and B are equivalent:
 
-### Example A
+### Example A: JavaScript (ECMAScript 5)
 
 ```javascript
 function Penguin() {
@@ -43,7 +43,7 @@ Penguin.staticMethod = function () {
 };
 ```
 
-### Example B
+### Example B: MontageJS
 
 ```javascript
 var Penguin = Bird.specialize({
