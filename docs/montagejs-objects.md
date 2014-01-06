@@ -26,8 +26,8 @@ Penguin.prototype = Object.create(Bird.prototype);
 
 Penguin.prototype.constructor = Penguin;
 
-Penguin.prototype.method = function () {
-    return Bird.prototype.method.call(this);
+Penguin.prototype.fly = function () {
+    return Bird.prototype.fly.call(this);
 };
 
 Object.defineProperty(Penguin.prototype, "habitat", {
@@ -52,7 +52,7 @@ var Penguin = Bird.specialize({
             this.super();
         }
     },
-    method: {
+    fly: {
         value: function () {
             return this.super();
         },
