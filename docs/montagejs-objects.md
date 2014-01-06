@@ -13,7 +13,9 @@ next-page: data-binding
 
 MontageJS provides a thin veneer over the JavaScript object model: Types are represented by constructor functions. Constructor functions have a `prototype`. The `prototype` has a `constructor`. `instanceof` and `new` work as you would expect.
 
-For a succinct comparison, the following examples are equivalent:
+For a succinct comparison, the following examples A and B are equivalent:
+
+### Class Declaration Example A
 
 ```javascript
 function Constructor() {
@@ -40,6 +42,8 @@ Object.defineProperty(Constructor.prototype, "property", {
 Constructor.staticMethod = function () {
 };
 ```
+
+### Class Declaration Example B
 
 ```javascript
 var Constructor = ParentConstructor.specialize({
