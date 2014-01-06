@@ -55,8 +55,7 @@ var Penguin = Bird.specialize({
     fly: {
         value: function () {
             return this.super();
-        },
-        enumerable: true
+        }
     },
     habitat: {
         get: function () {
@@ -69,8 +68,7 @@ var Penguin = Bird.specialize({
 }, {
     staticMethod: {
         value: function () {
-        },
-        enumerable: true
+        }
     }
 });
 ```
@@ -105,7 +103,7 @@ var Subtype = Type.specialize({
 });
 ```
 
-MontageJS also supports a small number of modifications to the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty" target="_blank">ES5 property-descriptor</a>. Montage alters the defaults for `writable` and `configurable`—properties are both writable and configurable unless you specify otherwise. Properties continue to be non-`enumerable` by default.
+MontageJS also supports a small number of modifications to the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty" target="_blank">ES5 property-descriptor</a>. Montage alters the defaults for `writable` and `configurable`—properties are both writable and configurable unless you specify otherwise. In general properties continue are `enumerable` by default. The default is changed for properterties with names that start with `_` or where the value is a function (methods).
 
 ## Extending the JavaScript Object Model
 Perhaps the most subtle and interesting way that `Montage.specialize` extends the JavaScript object model is that it causes constructor functions to inherit from their parent constructor, in parallel the prototype chain. This makes it possible to use or override `Montage.specialize`, `defineProperties`, and `defineProperty` for subtrees of your object model. Montage implements `specialize` and `defineProperties` such that an overridden `defineProperty` is sufficient to specialize the property descriptor protocol for all descendent types. Overriding `specialize` gives you a hook to decorate the constructor for all descendent types.
