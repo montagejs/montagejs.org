@@ -373,3 +373,47 @@ Montage uses the browser's native JSON parsing APIs to parse the serialization b
 * Matching brackets. Obviously, each open bracket must have a matching close bracket.
 
 Montage reports any formatting errors in the console when you run the application.
+
+
+## Loading Declaration JSON in Chrome Apps
+
+Chrome apps and Chrome extensions [forbid inline script tags](http://developer.chrome.com/extensions/contentSecurityPolicy.html#JSExecution). Instead, you can load your component's declaration using a link tag.
+
+`person.html`
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="person.css">
+    <link rel="serialization" type="text/montage-serialization" href="person.json">
+</head>
+<body>
+    <div data-montage-id="person" class="Person">
+        <input data-montage-id="firstName"></input>
+    </div>
+</body>
+</html>
+
+```
+
+`person.json`
+
+```javascript
+{
+    "owner": {
+        "properties": {
+            "element": {"#": "person"}
+        }
+    }
+},
+{
+   "firstName": {
+       "prototype": "digit/ui/text-field.reel",
+       "properties": {
+           "element": {"#": "firstName"}
+       }
+    }
+}
+
+```
