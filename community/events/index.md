@@ -9,8 +9,7 @@ title: MontageJS Events
 
 ### Upcoming
 
-* We currently have no events on our schedule. Check back soon for updates.
-
+* [O’Reilly Fluent](http://fluentconf.com/fluent2014/public/schedule/detail/32640): On __Thursday, March 13, 2014__, Kris Kowal presents “Asynchronous Promises” in San Francisco.
 
 ### Past
 
