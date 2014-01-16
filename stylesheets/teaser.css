@@ -137,6 +137,30 @@
     background-clip: padding-box;
 }
 
+/* Social bar ------------------------------------------- */
+
+.social--teaser iframe {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.social--teaser #___plusone_0 {
+    vertical-align: middle !important;
+}
+
+.social-link {
+    display: inline-block;
+    margin-left: 15px;
+    padding: 0 6px;
+    font-size: 12px;
+    line-height: 20px;
+    border-radius: 3px;
+    border: 1px solid hsl(0, 0%, 80%);
+    vertical-align: middle;
+}
+
+
+
 
 
 /* Responsive ----------------------------------------- */
