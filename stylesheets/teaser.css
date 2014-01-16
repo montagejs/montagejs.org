@@ -1,0 +1,129 @@
+/* These Styles get used on the home and some sub-pages */
+
+
+/* Teaser ------------------------------------------- */
+
+.teaser {
+    background: #222 url(../images/teaser-bg.jpg) no-repeat center center;
+    background-size: 1400px auto;
+    border-top: none;
+}
+
+.teaser .wrapper {
+    position: relative;
+    color: #fff;
+    text-shadow: none;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.teaser p {
+    margin-top: 0;
+}
+
+/* Steps ------------------------------------------- */
+
+.teaser {
+    overflow: hidden;
+    max-height: 340px;
+    min-height: 340px;
+}
+
+.teaser.is-step2 {
+    max-height: none;
+}
+
+.teaser-step1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 38px;
+    text-align: justify;
+}
+
+.teaser.is-step2 .teaser-step1 {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transform: translateY(-40px);
+    transition: opacity .3s cubic-bezier(.47, .05, .96, .55),
+                -webkit-transform .3s cubic-bezier(.47, .05, .96, .55),
+                visibility 0 .3s;
+}
+
+.teaser-step2 {
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transform: translateY(40px);
+}
+
+.teaser-step2 .col  {
+    font-size: 20px;
+    /* text-align: justify; */
+}
+
+
+.teaser.is-step2 .teaser-step2 {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transition: opacity .3s .2s cubic-bezier(0, .30, .20, .96),
+                -webkit-transform .3s .2s cubic-bezier(0, .30, .20, .96);
+}
+
+
+/* Teaser button ------------------------------------------- */
+
+.teaser-button {
+    display: block;
+    margin: 1em auto 0 auto;
+    font-family: inherit;
+    font-size: 38px;
+    font-weight: 300;
+    color: inherit;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+.teaser-button.is-hidden {
+    display: none;
+}
+
+.teaser-button:hover {
+    color: hsl(0,0%,90%);
+}
+
+.teaser-button:active {
+    color: hsl(0,0%,50%);
+}
+
+.teaser-button-icon {
+    display: block;
+    margin: 0 auto;
+    transition: -webkit-transform .4s;
+    width: 30px;
+}
+
+.teaser-button:hover .teaser-button-icon {
+    -webkit-transform: translateY(6px);
+    transition-duration: .2s;
+}
+
+.teaser-button:active .teaser-button-icon {
+    -webkit-transform: translateY(3px);
+    transition-duration: .1s;
+}
+
+
+/* Teaser Form ------------------------------------------- */
+
+.teaser-form {
+    max-width: 500px;
+    margin: 2em auto 0 auto;
+    padding: 1em;
+    border-radius: 1em;
+    border: 6px solid hsla(0, 0%, 0%, 0.2);
+    background-color: #fff;
+    background-clip: padding-box;
+}
