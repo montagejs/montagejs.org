@@ -142,6 +142,7 @@
 .social--teaser iframe {
     vertical-align: middle;
     display: inline-block;
+    margin: 5px 0;
 }
 
 .social--teaser #___plusone_0 {
