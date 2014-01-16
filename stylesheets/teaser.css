@@ -23,23 +23,8 @@
 
 /* Steps ------------------------------------------- */
 
-.teaser--home {
-    overflow: hidden;
-    max-height: 340px;
-    min-height: 340px;
-}
-
-.teaser--home.is-step2 {
-    max-height: none;
-}
-
-.teaser-step1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
 .teaser.is-step2 .teaser-step1 {
+    position: absolute;
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
@@ -50,12 +35,14 @@
 }
 
 .teaser-step2 {
+    position: absolute;
     visibility: hidden;
     opacity: 0;
     -webkit-transform: translateY(40px);
 }
 
 .teaser.is-step2 .teaser-step2 {
+    position: relative;
     visibility: visible;
     opacity: 1;
     -webkit-transform: translateY(0);
@@ -120,6 +107,7 @@
     margin: 0 auto;
     transition: -webkit-transform .4s;
     width: 30px;
+    pointer-events: none;
 }
 
 .teaser-button:hover .teaser-button-icon {
@@ -146,4 +134,38 @@
     border: 6px solid hsla(0, 0%, 0%, 0.2);
     background-color: #fff;
     background-clip: padding-box;
+}
+
+
+
+/* Responsive ----------------------------------------- */
+
+@media all and (max-width: 800px) { 
+    
+    .teaser-intro {
+        font-size: 20px;
+    }
+    
+    .teaser-intro--large {
+        text-align: left;
+    }
+    
+    .teaser-info {
+        font-size: 16px;
+    }
+    
+    .teaser-button {
+        margin-top: 0;
+        font-size: 28px;
+    }
+    
+    .teaser-form {
+        padding: 1em;
+        border: none;
+        border-radius: .5em;
+    }
+    
+    .teaser--home .teaser-form {
+        margin-top: 1em;
+    }
 }
