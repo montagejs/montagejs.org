@@ -66,6 +66,11 @@
 
 /* Teaser copy ------------------------------------------- */
 
+.teaser-thanks {
+    font-size: 48px;
+    text-align: center;
+}
+
 .teaser-intro {
     font-size: 26px;
 }
