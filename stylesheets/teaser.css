@@ -73,6 +73,7 @@
 
 .teaser-info--large {
     font-size: 20px;
+    -webkit-columns: 2;
 }
 
 
@@ -152,6 +153,10 @@
     
     .teaser-info {
         font-size: 16px;
+    }
+    
+    .teaser-info--large {
+        -webkit-columns: 1;
     }
     
     .teaser-button {
