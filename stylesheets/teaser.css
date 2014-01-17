@@ -40,9 +40,12 @@
 
 /* Teaser copy ------------------------------------------- */
 
-.teaser-thanks {
+.teaser-title {
     font-size: 48px;
-    text-align: center;
+}
+
+.teaser-subtitle {
+    font-size: 24px;
 }
 
 .teaser-intro {
@@ -143,27 +146,56 @@
 
 /* Social bar ------------------------------------------- */
 
-.social--teaser iframe {
-    vertical-align: middle;
-    display: inline-block;
-    margin: 5px 0;
+.teaser-social {
+    margin-top: 2em;
 }
 
-.social--teaser #___plusone_0 {
+.teaser-social iframe {
+    vertical-align: middle;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.teaser-social #___plusone_0 {
     vertical-align: middle !important;
+}
+
+.teaser-social .hn-button {
+    margin-right: 30px;
 }
 
 .social-link {
     display: inline-block;
-    margin-left: 15px;
-    padding: 0 6px;
+    padding: 0 8px;
     font-size: 12px;
-    line-height: 20px;
+    line-height: 22px;
     border-radius: 3px;
-    border: 1px solid hsl(0, 0%, 80%);
     vertical-align: middle;
+    background: #fff;
+    color: hsl(0, 0%, 30%);
+    font-weight: 400;
 }
 
+.social-link:hover {
+    color: hsl(0, 0%, 40%);
+}
+
+.social-link:active {
+    color: hsl(0, 0%, 20%);
+}
+
+
+/* Thanks ------------------------------------------- */
+
+.teaser--thanks {
+    text-align: center;
+}
+
+.teaser--thanks .teaser-subtitle {
+    color: #ccc;
+    margin: 3em 0 .5em 0;
+    font-weight: 400;
+}
 
 
 
