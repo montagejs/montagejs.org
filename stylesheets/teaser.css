@@ -21,6 +21,22 @@
     margin-top: 0;
 }
 
+.nav-item--teaser {
+    display: inline-block;
+    padding: 0 16px;
+    height: 64px;
+    width: 64px;
+    vertical-align: top;
+    background-image: url(../images/teaser-button.png);
+    background-position: center 4px;
+    background-repeat: no-repeat;
+    background-size: 60px;
+}
+
+.nav-item--teaser.active {
+    background-color: hsla(0, 0%, 0%, 0.05);
+}
+
 /* Steps ------------------------------------------- */
 
 .teaser.is-step2 .teaser-step1 {

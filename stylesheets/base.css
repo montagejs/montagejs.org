@@ -663,7 +663,7 @@ hr {
 
 /* Responsive Header ----------------------------------------- */
 
-@media all and (max-width: 800px) { /* width needs to be manually adjusted if nav changes */
+@media all and (max-width: 880px) { /* width needs to be manually adjusted if nav changes */
     
     body > section:first-of-type {
         margin-top: 0px;
