@@ -148,11 +148,8 @@
 /* Social bar ------------------------------------------- */
 
 .teaser-social {
-    margin-top: 2em;
-    background: hsla(0, 0%, 15%, 0.8);
     text-align: center;
-    padding: 1.5em;
-    border-radius: 6px;
+    padding: 1.5em 0;
     display: inline-block;
 }
 
