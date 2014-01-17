@@ -49,11 +49,11 @@
 }
 
 .teaser-intro {
-    font-size: 26px;
+    font-size: 28px;
 }
 
 .teaser-intro--large {
-    font-size: 38px;
+    font-size: 35px;
     text-align: justify;
 }
 
@@ -68,7 +68,7 @@
 .teaser-link {
     display: inline-block;
     font-family: inherit;
-    font-size: 38px;
+    font-size: 35px;
     font-weight: 300;
     color: inherit;
     border: none;
@@ -203,7 +203,7 @@
 
 .teaser--banner {
     padding: 16px;
-    font-size: 16px;
+    font-size: 18px;
     text-shadow: none;
     line-height: 1.5;
     color: #fff;
