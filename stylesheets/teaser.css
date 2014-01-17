@@ -37,35 +37,6 @@
     background-color: hsla(0, 0%, 0%, 0.05);
 }
 
-/* Steps ------------------------------------------- */
-
-.teaser.is-step2 .teaser-step1 {
-    position: absolute;
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
-    -webkit-transform: translateY(-40px);
-    transition: opacity .3s cubic-bezier(.47, .05, .96, .55),
-                -webkit-transform .3s cubic-bezier(.47, .05, .96, .55),
-                visibility 0 .3s;
-}
-
-.teaser-step2 {
-    position: absolute;
-    visibility: hidden;
-    opacity: 0;
-    -webkit-transform: translateY(40px);
-}
-
-.teaser.is-step2 .teaser-step2 {
-    position: relative;
-    visibility: visible;
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transition: opacity .3s .2s cubic-bezier(0, .30, .20, .96),
-                -webkit-transform .3s .2s cubic-bezier(0, .30, .20, .96);
-}
-
 
 /* Teaser copy ------------------------------------------- */
 
@@ -87,36 +58,49 @@
     font-size: 18px;
 }
 
-.teaser-info--large {
-    font-size: 20px;
-    -webkit-columns: 2;
-}
 
 
 /* Teaser button ------------------------------------------- */
 
-.teaser-button {
-    display: block;
-    margin: 1em auto 0 auto;
+.teaser-link {
+    display: inline-block;
     font-family: inherit;
     font-size: 38px;
     font-weight: 300;
     color: inherit;
-    outline: none;
     border: none;
     background-color: transparent;
 }
 
-.teaser-button.is-hidden {
-    display: none;
+.teaser-link:hover,
+.teaser-link:active {
+    color: white;
 }
 
-.teaser-button:hover {
-    color: hsl(0,0%,90%);
+.teaser-button {
+    display: inline-block;
+    vertical-align: middle;
+    width: 60px;
+    height: 60px;
+    margin: 0 0 8px 10px;
+    padding: 0;
+    border-radius: 60px;
+    border: 2px solid hsl(200, 100%, 10%);
+    background-color: hsl(200,100%,45%);
+    box-shadow: inset 0px 1px 0px hsla(0,0%,100%,.2),
+                inset 0px -1px 1px hsla(0,0%,0%,.2),
+                0px 1px 0px hsla(0,0%,100%,.1);
+    background-image: -webkit-linear-gradient(top, hsl(210,100%,60%), hsl(210,100%,40%) );
+    background-image:         linear-gradient(top, hsl(210,100%,60%), hsl(210,100%,40%) );
+    outline: none;
 }
 
-.teaser-button:active {
-    color: hsl(0,0%,50%);
+.teaser-link:hover .teaser-button {
+    background-image: -webkit-linear-gradient(top, hsl(210,100%,65%), hsl(210,100%,45%) );
+    background-image:         linear-gradient(top, hsl(210,100%,65%), hsl(210,100%,45%) );
+}
+.teaser-link:active .teaser-button {
+    background: hsl(210,100%,40%);
 }
 
 .teaser-button-icon {
@@ -127,22 +111,18 @@
     pointer-events: none;
 }
 
-.teaser-button:hover .teaser-button-icon {
-    -webkit-transform: translateY(6px);
+.teaser-link:hover .teaser-button-icon {
+    -webkit-transform: translateX(3px);
     transition-duration: .2s;
 }
 
-.teaser-button:active .teaser-button-icon {
-    -webkit-transform: translateY(3px);
+.teaser-link:active .teaser-button-icon {
+    -webkit-transform: translateX(-3px);
     transition-duration: .1s;
 }
 
 
 /* Teaser Form ------------------------------------------- */
-
-.teaser--home .teaser-form {
-    margin: 2em auto 0 auto;
-}
 
 .teaser-form {
     max-width: 500px;
@@ -152,6 +132,14 @@
     background-color: #fff;
     background-clip: padding-box;
 }
+
+
+/* Teaser bar ------------------------------------------- */
+
+.teaser-bar {
+    text-align: center;
+}
+
 
 /* Social bar ------------------------------------------- */
 
@@ -196,10 +184,6 @@
         font-size: 16px;
     }
     
-    .teaser-info--large {
-        -webkit-columns: 1;
-    }
-    
     .teaser-button {
         margin-top: 0;
         font-size: 28px;
@@ -211,7 +195,4 @@
         border-radius: .5em;
     }
     
-    .teaser--home .teaser-form {
-        margin-top: 1em;
-    }
 }
