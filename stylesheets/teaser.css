@@ -7,13 +7,13 @@
     background: #222 url(../images/teaser-bg.jpg) no-repeat center center;
     background-size: 1400px auto;
     border-top: none;
+    font-weight: 300;
 }
 
 .teaser .wrapper {
     position: relative;
     color: #fff;
     text-shadow: none;
-    font-weight: 300;
     line-height: 1.5;
 }
 
@@ -83,11 +83,11 @@
 .teaser-button {
     display: inline-block;
     vertical-align: middle;
-    width: 60px;
-    height: 60px;
-    margin: 0 0 8px 10px;
+    width: 1.5em;
+    height: 1.5em;
+    margin: 0 0 .2em .2em;
     padding: 0;
-    border-radius: 60px;
+    border-radius: 1.5em;
     border: 2px solid hsl(200, 100%, 10%);
     background-color: hsl(200,100%,45%);
     box-shadow: inset 0px 1px 0px hsla(0,0%,100%,.2),
@@ -110,7 +110,7 @@
     display: block;
     margin: 0 auto;
     transition: -webkit-transform .4s;
-    width: 30px;
+    width: .8em;
     pointer-events: none;
 }
 
@@ -198,6 +198,31 @@
 }
 
 
+
+/* Banner ------------------------------------------- */
+
+.teaser--banner {
+    padding: 16px;
+    font-size: 16px;
+    text-shadow: none;
+    line-height: 1.5;
+    color: #fff;
+    border-radius: 6px;
+    display: block;
+}
+
+.teaser--banner:hover {
+    color: hsl(0,0%,90%);
+}
+
+.teaser--banner:active {
+    color: hsl(0,0%,80%);
+}
+
+.teaser--banner .teaser-link {
+    font-size: inherit;
+    margin-left: 8px;
+}
 
 
 /* Responsive ----------------------------------------- */
