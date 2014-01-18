@@ -4,10 +4,14 @@
 /* Teaser ------------------------------------------- */
 
 .teaser {
-    background: #222 url(../images/teaser-bg.jpg) no-repeat center center;
-    background-size: 1400px auto;
+    background: hsl(0, 0%, 13%) url(../images/teaser-bg.jpg) no-repeat center center;
+    background-size: 1500px auto;
     border-top: none;
     font-weight: 300;
+}
+
+.teaser--home {
+   background-position: center 24%;
 }
 
 .teaser .wrapper {
@@ -212,6 +216,7 @@
     color: #fff;
     border-radius: 6px;
     display: block;
+    background-size: 150% auto;
 }
 
 .teaser--banner:hover {
@@ -231,6 +236,11 @@
 /* Responsive ----------------------------------------- */
 
 @media all and (max-width: 880px) { 
+    
+    .teaser {
+       background-position: center top;
+    }
+    
     
     .teaser-intro {
         font-size: 21px;
