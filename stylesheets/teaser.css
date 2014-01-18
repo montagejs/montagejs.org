@@ -233,7 +233,7 @@
 @media all and (max-width: 800px) { 
     
     .teaser-intro {
-        font-size: 20px;
+        font-size: 19px;
     }
     
     .teaser-intro--large {
@@ -246,7 +246,6 @@
     
     .teaser-button {
         margin-top: 0;
-        font-size: 28px;
     }
     
     .teaser-form {
