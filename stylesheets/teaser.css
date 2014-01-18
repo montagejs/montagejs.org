@@ -4,7 +4,7 @@
 /* Teaser ------------------------------------------- */
 
 .teaser {
-    background: hsl(0, 0%, 13%) url(../images/teaser-bg.jpg) no-repeat center center;
+    background: hsl(0, 0%, 13%) url(../images/teaser-bg.jpg) no-repeat center -86px;
     background-size: 1500px auto;
     border-top: none;
     font-weight: 300;
@@ -150,6 +150,7 @@
 
 .teaser-form {
     max-width: 500px;
+    min-height: 480px;
     padding: 2em;
     border-radius: 1em;
     border: 6px solid hsla(0, 0%, 0%, 0.2);
