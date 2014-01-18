@@ -230,7 +230,7 @@
 
 /* Responsive ----------------------------------------- */
 
-@media all and (max-width: 800px) { 
+@media all and (max-width: 880px) { 
     
     .teaser-intro {
         font-size: 21px;
@@ -258,4 +258,15 @@
         margin: 0 0 20px 0;
     }
     
+    .nav-item--teaser {
+        background-size: 40px;
+        background-position: center 2px;
+        height: 44px;
+        width: 44px;
+}
+    
+    .nav-item--teaser.active {
+        background-color: transparent;
+    }
+
 }
