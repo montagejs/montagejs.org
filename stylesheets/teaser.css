@@ -53,23 +53,18 @@
     font-size: 24px;
 }
 
-.teaser-intro {
-    font-size: 27px;
+.teaser-copy {
+    font-size: 32px;
 }
 
-.teaser-intro--large {
-    font-size: 30px;
+.teaser--home .teaser-copy {
     padding: 0 100px;
 }
 
-.teaser-info {
-    font-size: 18px;
+.teaser-cta {
+    font-size: 26px;
 }
 
-.teaser-info--large {
-    font-size: 24px;
-    padding: 0 100px;
-}
 
 
 
@@ -89,7 +84,6 @@
     position: relative;
     display: inline-block;
     font-family: inherit;
-    font-size: 30px;
     font-weight: 300;
     color: inherit;
     border: none;
@@ -259,26 +253,20 @@
        background-position: center top;
     }
     
-    
-    .teaser-intro {
-        font-size: 21px;
-    }
-    
-    .teaser-intro--large,
-    .teaser-info--large {
+    .teaser--home .teaser-copy {
         padding: 0;
     }
     
-    .teaser-info {
-        font-size: 16px;
+    .teaser-copy {
+        font-size: 19px;
+    }
+    
+    .teaser-cta {
+        font-size: 19px;
     }
     
     .teaser-bar {
         margin-top: 1em;
-    }
-    
-    .teaser-link {
-        font-size: 24px;
     }
     
     .teaser-button {
