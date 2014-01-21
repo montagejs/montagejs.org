@@ -21,6 +21,10 @@
     line-height: 1.5;
 }
 
+.teaser--home .wrapper {
+    max-width: 461px;
+}
+
 .teaser p {
     margin-top: 0;
 }
@@ -58,11 +62,10 @@
 }
 
 .teaser--home .teaser-copy {
-    padding: 0 100px;
 }
 
 .teaser-cta {
-    font-size: 26px;
+    font-size: 24px;
 }
 
 
@@ -150,14 +153,6 @@
     border: 6px solid hsla(0, 0%, 0%, 0.2);
     background-color: #fff;
     background-clip: padding-box;
-}
-
-
-/* Teaser bar ------------------------------------------- */
-
-.teaser-bar {
-    text-align: center;
-    margin-top: 2em;
 }
 
 
