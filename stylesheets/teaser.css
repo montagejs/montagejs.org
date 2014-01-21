@@ -58,14 +58,14 @@
 }
 
 .teaser-copy {
-    font-size: 32px;
+    font-size: 28px;
 }
 
 .teaser--home .teaser-copy {
 }
 
 .teaser-cta {
-    font-size: 24px;
+    font-size: 22px;
 }
 
 
@@ -159,7 +159,7 @@
 .teaser-social {
     text-align: center;
     display: inline-block;
-    margin-bottom: 2em;
+    margin-bottom: 1.5em;
 }
 
 .teaser-social iframe {
@@ -271,11 +271,6 @@
         border: none;
         border-radius: .5em;
     }
-    
-    .teaser-social {
-        margin-bottom: 1em;
-    
-}
     
     .nav-item--teaser {
         background-size: 40px;
