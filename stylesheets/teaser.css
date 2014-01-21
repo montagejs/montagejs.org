@@ -142,6 +142,7 @@
     max-width: 500px;
     min-height: 480px;
     padding: 2em;
+    margin-bottom: 1em;
     border-radius: 1em;
     border: 6px solid hsla(0, 0%, 0%, 0.2);
     background-color: #fff;
@@ -153,8 +154,6 @@
 
 .teaser-social {
     text-align: center;
-    display: inline-block;
-    margin-bottom: 1.5em;
 }
 
 .teaser-social iframe {
