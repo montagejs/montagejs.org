@@ -1,0 +1,280 @@
+/* These Styles get used on the home and some sub-pages */
+
+
+/* Teaser ------------------------------------------- */
+
+.teaser {
+    background: hsl(0, 0%, 13%) url(../images/teaser-bg.jpg) no-repeat center -86px;
+    background-size: 1500px auto;
+    border-top: none;
+    font-weight: 300;
+}
+
+.teaser--home {
+   background-position: center 24%;
+}
+
+.teaser .wrapper {
+    position: relative;
+    color: #fff;
+    text-shadow: none;
+    line-height: 1.5;
+}
+
+.teaser--home .wrapper {
+    max-width: 461px;
+}
+
+.teaser p {
+    margin-top: 0;
+}
+
+.nav-item--teaser {
+    display: inline-block;
+    padding: 0 16px;
+    height: 64px;
+    width: 64px;
+    vertical-align: top;
+    background-image: url(../images/teaser-button.png);
+    background-position: center 4px;
+    background-repeat: no-repeat;
+    background-size: 60px;
+}
+
+.nav-item--teaser.active {
+    background-color: hsla(0, 0%, 0%, 0.05);
+}
+
+
+/* Teaser copy ------------------------------------------- */
+
+.teaser-title {
+    font-size: 48px;
+    margin-bottom: 0.8em;
+}
+
+.teaser-subtitle {
+    font-size: 24px;
+}
+
+.teaser-copy {
+    font-size: 28px;
+}
+
+.teaser--home .teaser-copy {
+}
+
+.teaser-cta {
+    font-size: 22px;
+}
+
+
+/* Teaser button ------------------------------------------- */
+
+.teaser-link:before {
+    /* Increase click area */
+    content: "";
+    position: absolute;
+    top: -.5em;
+    left: -1em;
+    right: -1em;
+    bottom: -.5em;
+}
+
+.teaser-link {
+    position: relative;
+    display: inline-block;
+    font-family: inherit;
+    font-weight: 300;
+    color: inherit;
+    border: none;
+    background-color: transparent;
+}
+
+.teaser-link:hover,
+.teaser-link:active {
+    color: white;
+}
+
+.teaser-button {
+    display: inline-block;
+    vertical-align: middle;
+    width: 1.5em;
+    height: 1.5em;
+    margin: 0 0 .2em .2em;
+    padding: 0;
+    border-radius: 1.5em;
+    border: 2px solid hsl(200, 100%, 10%);
+    background-color: hsl(200,100%,45%);
+    box-shadow: inset 0px 1px 0px hsla(0,0%,100%,.2),
+                inset 0px -1px 1px hsla(0,0%,0%,.2),
+                0px 1px 0px hsla(0,0%,100%,.1);
+    background-image: -webkit-linear-gradient(top, hsl(210,100%,60%), hsl(210,100%,40%) );
+    background-image:         linear-gradient(top, hsl(210,100%,60%), hsl(210,100%,40%) );
+    outline: none;
+}
+
+.teaser-link:hover .teaser-button {
+    background-image: -webkit-linear-gradient(top, hsl(210,100%,65%), hsl(210,100%,45%) );
+    background-image:         linear-gradient(top, hsl(210,100%,65%), hsl(210,100%,45%) );
+}
+.teaser-link:active .teaser-button {
+    background: hsl(210,100%,40%);
+}
+
+.teaser-button-icon {
+    display: block;
+    margin: 0 auto;
+    transition: -webkit-transform .4s;
+    width: .8em;
+    pointer-events: none;
+}
+
+.teaser-link:hover .teaser-button-icon {
+    -webkit-transform: translateX(3px);
+    transition-duration: .2s;
+}
+
+
+/* Teaser Form ------------------------------------------- */
+
+.teaser-form {
+    max-width: 500px;
+    min-height: 480px;
+    padding: 2em;
+    margin-bottom: 1em;
+    border-radius: 1em;
+    border: 6px solid hsla(0, 0%, 0%, 0.2);
+    background-color: #fff;
+    background-clip: padding-box;
+}
+
+
+/* Social bar ------------------------------------------- */
+
+.teaser-social {
+    text-align: center;
+}
+
+.teaser-social iframe {
+    vertical-align: middle;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.teaser-social #___plusone_0 {
+    vertical-align: middle !important;
+}
+
+.teaser-social .hn-button {
+    margin-right: 30px;
+}
+
+.social-link {
+    display: inline-block;
+    padding: 0 8px;
+    font-size: 12px;
+    line-height: 22px;
+    border-radius: 3px;
+    vertical-align: middle;
+    background: #fff;
+    color: hsl(0, 0%, 30%);
+    font-weight: 400;
+}
+
+.social-link:hover {
+    color: hsl(0, 0%, 40%);
+}
+
+.social-link:active {
+    color: hsl(0, 0%, 20%);
+}
+
+
+/* Thanks ------------------------------------------- */
+
+.teaser--thanks {
+    text-align: center;
+}
+
+.teaser--thanks .teaser-subtitle {
+    color: #ccc;
+    margin: 0 0 .5em 0;
+    font-weight: 400;
+}
+
+
+
+/* Banner ------------------------------------------- */
+
+.teaser--banner {
+    padding: 16px;
+    font-size: 17px;
+    text-shadow: none;
+    line-height: 1.5;
+    color: #fff;
+    border-radius: 6px;
+    display: block;
+    background-size: 150% auto;
+}
+
+.teaser--banner:hover {
+    color: hsl(0,0%,90%);
+}
+
+.teaser--banner:active {
+    color: hsl(0,0%,80%);
+}
+
+.teaser--banner .teaser-link {
+    font-size: inherit;
+    margin-left: 8px;
+}
+
+
+/* Responsive ----------------------------------------- */
+
+@media all and (max-width: 880px) { 
+    
+    .teaser {
+       background-position: center top;
+    }
+    
+    .teaser--home .teaser-copy {
+        padding: 0;
+    }
+    
+    .teaser-copy {
+        font-size: 19px;
+    }
+    
+    .teaser-cta {
+        font-size: 19px;
+    }
+    
+    .teaser-bar {
+        margin-top: 1em;
+    }
+    
+    .teaser-button {
+        margin-top: 0;
+    }
+    
+    .teaser-form {
+        padding: 1em;
+        border: none;
+        border-radius: .5em;
+    }
+    
+    .nav-item--teaser {
+        background-size: 40px;
+        background-position: center 2px;
+        height: 44px;
+        width: 44px;
+}
+    
+    .nav-item--teaser.active {
+        background-color: transparent;
+    }
+
+}
