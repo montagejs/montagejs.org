@@ -30,12 +30,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
 }
 
-::-moz-selection { background: hsl(60, 86%, 88%); text-shadow: none; }
-::selection { background: hsl(60, 86%, 88%); text-shadow: none; }
-
-.pushed ::-moz-selection { background: hsl(0,0%,10%); text-shadow: none; }
-.pushed ::selection { background: hsl(0,0%,10%); text-shadow: none; }
-
 .hasIframe {
     /* Adds scroll support for iFrames on iOS */
     overflow: auto;
