@@ -135,11 +135,6 @@
     transition-duration: .2s;
 }
 
-.teaser-link:active .teaser-button-icon {
-    -webkit-transform: translateX(-3px);
-    transition-duration: .1s;
-}
-
 
 /* Teaser Form ------------------------------------------- */
 
