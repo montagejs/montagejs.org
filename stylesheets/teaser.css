@@ -69,8 +69,6 @@
 }
 
 
-
-
 /* Teaser button ------------------------------------------- */
 
 .teaser-link:before {
@@ -160,8 +158,8 @@
 
 .teaser-social {
     text-align: center;
-    padding: 1.5em 0;
     display: inline-block;
+    margin-bottom: 2em;
 }
 
 .teaser-social iframe {
@@ -275,8 +273,9 @@
     }
     
     .teaser-social {
-        margin: 0 0 20px 0;
-    }
+        margin-bottom: 1em;
+    
+}
     
     .nav-item--teaser {
         background-size: 40px;
