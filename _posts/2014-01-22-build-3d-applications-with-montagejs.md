@@ -9,9 +9,9 @@ WebGL, the standard that defines JavaScript APIs for performing hardware-acceler
 
 WebGL's low-level APIs are well-suited for graphics programmers, but set a high barrier to entry for conventional frontend web developers. Using WebGL to build interactive 3D experiences for the web currently requires intensive programming and a great deal of specialized expertise. To help simplify WebGL adoption for web designers, the MontageJS team is very excited to share a new WebGL-based component for the MontageJS framework. The component will make it easier for frontend web developers to integrate interactive 3D experiences.
 
-The new 3D view component for MontageJS offers a unique kind of abstraction layer for WebGL, one that truly elevates 3D graphics to the status of a first class citizen on the web. It aims to make the individual elements of a 3D scene just as easy to manipulate as conventional HTML elements in the page DOM.
+The new 3D view component for MontageJS offers a unique kind of abstraction layer for WebGL, one that truly elevates 3D graphics to the status of a first class citizen on the web. It aims to make the individual elements of a 3D scene just as easy to manipulate as conventional HTML elements in the page DOM. If your browser has WebGL enabled, you can see a [full version of the demo here](http://montagejs.github.io/beachplanetblog/).
 
-![Beach Planet](./PlanetBlog.png)
+[![Beach Planet](./PlanetBlog.png)](http://montagejs.github.io/beachplanetblog/)
 
 The component provides a bridge between WebGL and the MontageJS data binding system, extending the model/view/controller paradigm to the world of 3D graphics. The bridge makes it easy to integrate a 3D scene that serves as a view, reacting to changes in an underlying data model. The component  gives developers the ability to manipulate individual parts of a 3D scene in WebGL using CSS, making it exceptionally easy to accomplish with a syntax that is already widely known. The component will even let you animate elements of a 3D scene using the exact same method that you would use to perform CSS transitions.
 
@@ -61,7 +61,7 @@ That's all you have to do to load the scene. The application will now show the 3
 
 ## Expose a 3D node to the binding system
 
-In a glTF file, individual elements of the 3D scene are described in objects called nodes. Each node has an ID value that uniquely identifies it within the scene. To manipulate an individual piece of the 3D scene in a MontageJS application, you need to expose the associated node from the glTF file in a component definition. The `mjs-volume` module includes a Node component that you can use to access a 3D element: 
+In a glTF file, individual elements of the 3D scene are described in objects called nodes. Each node has an ID value that uniquely identifies it within the scene. To manipulate an individual piece of the 3D scene in a MontageJS application, you need to expose the associated node from the glTF file in a component definition. The `mjs-volume` module includes a Node component that you can use to access a 3D element:
 
 ```json
 "node": {
@@ -81,8 +81,8 @@ It's worth noting that you can expose an individual material from the scene to M
 
 ## Manipulate a 3D node with CSS
 
-After creating the Node object in the component definition, you can apply CSS classes that manipulate it in a number of ways. At the present time, the Node component supports the `visibility` property and 3D transforms. The Material component supports the `opacity` property. Additional functionality, including the ability to replace node textures and adjust node opacity, will arrive in the future--keep an eye on the commits to see the latest improvements.  
- 
+After creating the Node object in the component definition, you can apply CSS classes that manipulate it in a number of ways. At the present time, the Node component supports the `visibility` property and 3D transforms. The Material component supports the `opacity` property. Additional functionality, including the ability to replace node textures and adjust node opacity, will arrive in the future--keep an eye on the commits to see the latest improvements.
+
 Both components support the use of CSS transitions to animate property changes. The `active` and `hover` selectors are also supported, making it easy to apply click and rollover effects. A CSS class for a Node can be defined like any other class in your component's CSS file, but it has to be applied through the MontageJS binding system.
 
 ![Duck Wader](./duckwader.png)
