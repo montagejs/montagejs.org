@@ -11,7 +11,7 @@ WebGL's low-level APIs are well-suited for graphics programmers, but set a high 
 
 The new 3D view component for MontageJS offers a unique kind of abstraction layer for WebGL, one that truly elevates 3D graphics to the status of a first class citizen on the web. It aims to make the individual elements of a 3D scene just as easy to manipulate as conventional HTML elements in the page DOM. If your browser has WebGL enabled, you can see a [full version of the demo here](http://montagejs.github.io/beachplanetblog/).
 
-[![Beach Planet](./PlanetBlog.png)](http://montagejs.github.io/beachplanetblog/)
+[![Beach Planet](./PlanetBlog.jpg)](http://montagejs.github.io/beachplanetblog/)
 
 The component provides a bridge between WebGL and the MontageJS data binding system, extending the model/view/controller paradigm to the world of 3D graphics. The bridge makes it easy to integrate a 3D scene that serves as a view, reacting to changes in an underlying data model. The component  gives developers the ability to manipulate individual parts of a 3D scene in WebGL using CSS, making it exceptionally easy to accomplish with a syntax that is already widely known. The component will even let you animate elements of a 3D scene using the exact same method that you would use to perform CSS transitions.
 
@@ -85,7 +85,7 @@ After creating the Node object in the component definition, you can apply CSS cl
 
 Both components support the use of CSS transitions to animate property changes. The `active` and `hover` selectors are also supported, making it easy to apply click and rollover effects. A CSS class for a Node can be defined like any other class in your component's CSS file, but it has to be applied through the MontageJS binding system.
 
-![Duck Wader](./duckwader.png)
+![Duck Wader](./duckwader.jpg)
 
 For this example, we want to make the duck wader grow when the user hovers over it with their cursor. Create a CSS class called `animate` with a hover selector that performs a `scale3d` transformation. Next, use the `classList.has` binding on the Node component to apply the CSS class:
 
@@ -214,7 +214,7 @@ exports.Door = Component.specialize({
 
 The `open` CSS class uses the `rotateZ` property to adjust the angle of the door, causing it to appear open. The `animate` CSS class uses a CSS transition to ensure that the transformation is animated. It's important to note that the transition behavior is defined in a separate CSS class that is applied at all times rather than toggled, guaranteeing that the transition animation will work when the door is both opening and closing.
 
-![Door](./DoorBlog.png)
+![Door](./DoorBlog.jpg)
 
 Another useful feature that comes into play in this example is the `transform-origin` property, which is used to make sure that the left edge of the door will remain fixed in its position. If the origin wasn't set, the door would rotate from the center instead of swinging as though on a hinge. In many cases where transforms are used, setting an origin will ensure that the transformation behaves as expected. The complete [source code](https://github.com/montagejs/beachplanetblog/tree/master/ui/door.reel) of the door example can be found on GitHub.
 
@@ -287,6 +287,6 @@ The example above provides the user with a dropdown menu that they can use to ch
 
 Putting together a complete demo with the features described in this tutorial, we built a simple hidden object game that takes place on the beach planet. The player selects different locations on the planet and then clicks objects in order to find the hidden MontageJS logos. The application will keep track of the user's score and increment it as they find each logo. The demo uses viewpoints, animated 3D transformations, and click event handlers. Be sure to check out the complete code [on GitHub](https://github.com/montagejs/beachplanetblog) to see how it works.
 
-![Game](./PlanetOverview.png)
+![Game](./PlanetOverview.jpg)
 
 Now that we have introduced you to the basic principles of using the MontageJS 3D view component, you can integrate interactive 3D experiences in your own web content. The component already offers enough capabilities to build compelling experiences like the beach planet demo, but we have even more planned for the future. If you'd like to keep up with the latest developments, consider following or starring the `mjs-volume` repository on GitHub. If you have some ideas (or code!) for improving the component, we'd love to hear from you. You can get in touch by [e-mailing us](https://twitter.com/montagejs) or contacting [@MontageJS](https://twitter.com/montagejs) on Twitter.
