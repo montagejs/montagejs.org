@@ -10,7 +10,7 @@ title: MontageJS Events
 ### Upcoming
 
 * [CSSConf Australia](http://2014.cssconf.com.au/): Simon Luthi is speaking at this event in Melbourne, which takes place between __April 8-11__.
-* [Game Developers Conference](http://www.gdconf.com/): Fabrice Robinet will demonstrate the MontageJS 3D component at GDC on __March 20__ in San Francisco.
+* [Game Developers Conference](http://www.gdconf.com/): We will demonstrate the MontageJS 3D component at GDC on __March 20__ in San Francisco.
 * [JSConf.uy](http://jsconf.uy/): The event takes place in Montevideo during __March 14-15__. Benoit Marchant will describe how to take advantage of the MontageJS draw cycle to build apps that offer great user experiences.
 * [O’Reilly Fluent](http://fluentconf.com/fluent2014/public/schedule/detail/32640): On __Thursday, March 13, 2014__, Kris Kowal presents “Asynchronous Promises” in San Francisco.
 
