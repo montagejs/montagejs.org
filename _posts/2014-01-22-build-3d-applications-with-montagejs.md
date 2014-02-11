@@ -9,13 +9,13 @@ WebGL, the standard that defines JavaScript APIs for performing hardware-acceler
 
 WebGL's low-level APIs are well-suited for graphics programmers, but set a high barrier to entry for conventional frontend web developers. Using WebGL to build interactive 3D experiences for the web currently requires intensive programming and a great deal of specialized expertise. To help simplify WebGL adoption for web designers, the MontageJS team is very excited to share a new WebGL-based component for the MontageJS framework. The component will make it easier for frontend web developers to integrate interactive 3D experiences.
 
-The new 3D view component for MontageJS offers a unique kind of abstraction layer for WebGL, one that truly elevates 3D graphics to the status of a first class citizen on the web. It aims to make the individual elements of a 3D scene just as easy to manipulate as conventional HTML elements in the page DOM. If your browser has WebGL enabled, you can see a [full version of the demo here](http://montagejs.github.io/beachplanetblog/).
+The new 3D scene view component for MontageJS offers a unique kind of abstraction layer for WebGL, one that truly elevates 3D graphics to the status of a first class citizen on the web. It aims to make the individual elements of a 3D scene just as easy to manipulate as conventional HTML elements in the page DOM. If your browser has WebGL enabled, you can see a [full version of the demo here](http://montagejs.github.io/beachplanetblog/).
 
 [![Beach Planet](./PlanetBlog.jpg)](http://montagejs.github.io/beachplanetblog/)
 
 The component provides a bridge between WebGL and the MontageJS data binding system, extending the model/view/controller paradigm to the world of 3D graphics. The bridge makes it easy to integrate a 3D scene that serves as a view, reacting to changes in an underlying data model. The component  gives developers the ability to manipulate individual parts of a 3D scene in WebGL using CSS, making it exceptionally easy to accomplish with a syntax that is already widely known. The component will even let you animate elements of a 3D scene using the exact same method that you would use to perform CSS transitions.
 
-This tutorial demonstrates how to use the component to build interactive 3D applications with MontageJS. It will describe how to load a 3D model, expose model nodes to the MontageJS binding system, manipulate model nodes with CSS, and make model nodes respond to user interaction. Just like MontageJS, the new 3D view component is open source software: we publish the source code on GitHub under the BSD license. You can download it yourself and follow along with the steps in this tutorial.
+This tutorial demonstrates how to use the component to build interactive 3D applications with MontageJS. It will describe how to load a 3D model, expose model nodes to the MontageJS binding system, manipulate model nodes with CSS, and make model nodes respond to user interaction. Just like MontageJS, the new 3D scene view component is open source software: we publish the source code on GitHub under the BSD license. You can download it yourself and follow along with the steps in this tutorial.
 
 ## What is MontageJS?
 
@@ -29,11 +29,11 @@ There are standard data formats for conveying audio, video, images, and other ki
 
 Khronos, the organization that maintains the WebGL and OpenGL standards, is also home to a standard called COLLADA that defines a data interchange format for 3D graphics. COLLADA makes it easy for artists to move their 3D content between authoring tools. The COLLADA working group is drafting a specification for a new JSON-based 3D runtime asset format, called the OpenGL Transmission Format (glTF), that is well-suited for rapid delivery and loading of 3D content on the web.
 
-The MontageJS 3D view component is designed to load and display glTF content. To use the component, you will first need to convert your content into the glTF format. The COLLADA working group provides an [open source converter](https://github.com/KhronosGroup/glTF) that can be used at the command line to translate COLLADA files into glTF. You can download the command line converter from he COLLADA website: the Mac binary is [here](http://collada.org/public_files/glTF/77abd641d1fb1105da6172f039e2007999a6c47d/collada2gltf) and the Windows binary is [here](http://collada.org/public_files/glTF/77abd641d1fb1105da6172f039e2007999a6c47d/collada2gltf.exe). The converter works well with COLLADA files exported from [SketchUp](http://www.sketchup.com/) and other mainstream 3D authoring tools. You can also download our 3D assets in the glTF format so that you can follow the examples in this blog post.
+The MontageJS 3D scene view component is designed to load and display glTF content. To use the component, you will first need to convert your content into the glTF format. The COLLADA working group provides an [open source converter](https://github.com/KhronosGroup/glTF) that can be used at the command line to translate COLLADA files into glTF. You can download the command line converter from he COLLADA website: the Mac binary is [here](http://collada.org/public_files/glTF/77abd641d1fb1105da6172f039e2007999a6c47d/collada2gltf) and the Windows binary is [here](http://collada.org/public_files/glTF/77abd641d1fb1105da6172f039e2007999a6c47d/collada2gltf.exe). The converter works well with COLLADA files exported from [SketchUp](http://www.sketchup.com/) and other mainstream 3D authoring tools. You can also download our 3D assets in the glTF format so that you can follow the examples in this blog post.
 
 ## Load a 3D scene
 
-When building a 3D application with Montage, you will use a Scene component to load your glTF file. The Scene is then attached to a View component, which is responsible for displaying the content on the screen. The Scene and View components are available from our [`mjs-volume`](https://github.com/fabrobinet/mjs-volume) module, which you will need to add to your project before you proceed. Add the following to a component definition in your application to add Scene and Viewer components:
+When building a 3D application with Montage, you will use a Scene component to load your glTF file. The Scene is then attached to a SceneView component, which is responsible for displaying the content on the screen. The Scene and SceneView components are available from our [`mjs-volume`](https://github.com/fabrobinet/mjs-volume) module, which you will need to add to your project before you proceed. Add the following to a component definition in your application to add Scene and SceneView components:
 
 ```json
 "scene": {
@@ -42,22 +42,22 @@ When building a 3D application with Montage, you will use a Scene component to l
         "path": "models/beachplanet/beachplanet.json"
     }
 },
-"viewer": {
-    "prototype": "mjs-volume/ui/view.reel",
+"sceneView": {
+    "prototype": "mjs-volume/ui/scene-view.reel",
     "properties": {
-        "element": { "#": "viewer" },
+        "element": { "#": "sceneView" },
         "scene": { "@": "scene" }
     }
 }
 ```
 
-The `path` property of the Scene component points to the relative path of the JSON file with the glTF data. The `scene` property of the View component refers to the Scene instance in the component definition. Now that the Scene and View have entries in the component definition, add an HTML element to represent the View:
+The `path` property of the Scene component points to the relative path of the JSON file with the glTF data. The `scene` property of the SceneView component refers to the Scene instance in the component definition. Now that the Scene and SceneView have entries in the component definition, add an HTML element to represent the SceneView:
 
 ```html
-<div data-montage-id="viewer"></div>
+<div data-montage-id="sceneView"></div>
 ```
 
-That's all you have to do to load the scene. The application will now show the 3D content from the glTF file. For the purposes of this blog post, our 3D scene is a little planet with an ocean, a beach, some foliage, a few animals, and a small shack. The user will be able to click and drag the scene to rotate it on the screen. A scrollwheel (or equivalent trackpad gesture) can be used to zoom in and out. Before continuing, you might want to add a CSS class to the `div` element and use it to set a default width and height for the View. The View component will automatically interpret certain CSS properties applied to its associated HTML element and adjust accordingly. You can use that feature to adjust the dimensions and background color of the View.
+That's all you have to do to load the scene. The application will now show the 3D content from the glTF file. For the purposes of this blog post, our 3D scene is a little planet with an ocean, a beach, some foliage, a few animals, and a small shack. The user will be able to click and drag the scene to rotate it on the screen. A scrollwheel (or equivalent trackpad gesture) can be used to zoom in and out. Before continuing, you might want to add a CSS class to the `div` element and use it to set a default width and height for the SceneView. The SceneView component will automatically interpret certain CSS properties applied to its associated HTML element and adjust accordingly. You can use that feature to adjust the dimensions and background color of the SceneView.
 
 ## Expose a 3D node to the binding system
 
@@ -96,10 +96,10 @@ For this example, we want to make the duck wader grow when the user hovers over 
         "path": "models/beachplanet/beachplanet.json"
     }
 },
-"viewer": {
-    "prototype": "mjs-volume/ui/view.reel",
+"sceneView": {
+    "prototype": "mjs-volume/ui/scene-view.reel",
     "properties": {
-        "element": { "#": "viewer" },
+        "element": { "#": "sceneView" },
         "scene": { "@": "scene" }
     }
 }
@@ -220,7 +220,7 @@ Another useful feature that comes into play in this example is the `transform-or
 
 ## Switch between cameras in a 3D scene
 
-When presenting complex 3D scenes, an application might want to control the user's perspective. The MontageJS 3D view component makes it easy to switch between different cameras that are defined within the 3D scene. Cameras can be accessed in the binding definition just like any other scene node. The Viewer component has a `viewPoint` property that can be given a reference to a camera node:
+When presenting complex 3D scenes, an application might want to control the user's perspective. The MontageJS 3D view component makes it easy to switch between different cameras that are defined within the 3D scene. Cameras can be accessed in the binding definition just like any other scene node. The SceneView component has a `viewPoint` property that can be given a reference to a camera node:
 
 ```json
 "doorViewPoint": {
@@ -230,11 +230,11 @@ When presenting complex 3D scenes, an application might want to control the user
         "scene": { "@": "scene" }
     }
 },
- "viewer": {
-    "prototype": "mjs-volume/ui/view.reel",
+ "sceneView": {
+    "prototype": "mjs-volume/ui/scene-view.reel",
     "properties": {
         "allowsViewPointControl" : false,
-        "element": { "#": "viewer" },
+        "element": { "#": "sceneView" },
         "scene": { "@": "scene" },
         "viewPoint": { "@" : "doorViewPoint" }
     }
@@ -258,11 +258,11 @@ The `allowsViewPointControl` property is used to control whether the user can cl
         "scene": { "@": "scene" }
     }
 },
-"viewer": {
-    "prototype": "mjs-volume/ui/view.reel",
+"sceneView": {
+    "prototype": "mjs-volume/ui/scene-view.reel",
     "properties": {
         "allowsViewPointControl" : false,
-        "element": { "#": "viewer" },
+        "element": { "#": "sceneView" },
         "scene": { "@": "scene" }
     },
     "bindings": {
@@ -289,4 +289,11 @@ Putting together a complete demo with the features described in this tutorial, w
 
 ![Game](./PlanetOverview.jpg)
 
-Now that we have introduced you to the basic principles of using the MontageJS 3D view component, you can integrate interactive 3D experiences in your own web content. The component already offers enough capabilities to build compelling experiences like the beach planet demo, but we have even more planned for the future. If you'd like to keep up with the latest developments, consider following or starring the `mjs-volume` repository on GitHub. If you have some ideas (or code!) for improving the component, we'd love to hear from you. You can get in touch by joining the [MontageJS mailing list](https://groups.google.com/forum/?fromgroups#!forum/montagejs) or contacting [@MontageJS](https://twitter.com/montagejs) on Twitter.
+Now that we have introduced you to the basic principles of using the MontageJS 3D view component, you can integrate interactive 3D experiences in your own web content. The component already offers enough capabilities to build compelling experiences like the beach planet demo, but we have even more planned for the future. If you'd like to keep up with the latest developments, consider following or starring the `mjs-volume` repository on GitHub. If you have some ideas (or code!) for improving the component, we'd love to hear from you. You can get in touch by joining the [MontageJS mailing list](https://groups.google.com/forum/?fromgroups#!forum/montagejs) or contacting [@MontageJS](https://twitter.com/montagejs) on Twitter.  
+
+## Revision History
+
+| Date | Notes          |
+| ------------- | ----------- |
+| 02/11/2014     | renamed View as SceneView |
+
