@@ -36,4 +36,8 @@ Run the following commands from within your project directory:
     
     >**Note:** The ampersand (&) option ensures that you don't have to open a second Terminal window while working on your project.
 
-For a complete list of minit options, refer to the <a href="https://github.com/montagejs/minit#usage" target="_blank">minit repo</a> on Github.
+* For a complete list of minit options:
+
+    <pre>$ minit --help</pre>
+
+See also the <a href="https://github.com/montagejs/minit#usage" target="_blank">minit repo</a> on Github.
