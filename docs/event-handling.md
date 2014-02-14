@@ -214,3 +214,80 @@ You can also specify the `identifier` string in the serialization, as shown belo
     }
 }
 ```
+
+
+
+## Composing events for pointer and touch devices
+PressComposers make it easy to listen to events both on touch screens, and on traditional mouse/trackpad equiped devices. 
+
+To declare a press composer create a PressComposer object in the `enterDocument()` method. Remove the event listeners for `touchstart` and `mousedown.` (TODO: verify if the removeEventListener is actually required, or if its the right ones, and why) In the `prepareForActivationEvents()` add an event listener for press events. Finally, add a method called `handlePress` which will be called on the event's bubble phase, when your component is tapped or clicked. If you want to capture the event see [Event Handler Precedence above](#event-handler-precedence).
+
+
+```js
+var Component = require("montage/ui/component").Component,
+  PressComposer = require("montage/composer/press-composer").PressComposer;
+
+exports.TouchableComponent = Component.specialize( /** @lends TouchableComponent# */ {
+  enterDocument: {
+    value: function(firstTime) {
+      this.super();
+      if (firstTime) {
+        this.element.removeEventListener("touchstart", this, false);
+        this.element.removeEventListener("mousedown", this, false);
+
+        this._pressComposer = PressComposer.create();
+        this._pressComposer.identifier = "touchablecomponent";
+        this.addComposerForElement(this._pressComposer, this.element);
+      }
+    }
+  },
+  prepareForActivationEvents: {
+    value: function() {
+      this._pressComposer.addEventListener("press", this, false);
+    }
+  },
+  handlePress: {
+    value: function(e) {
+      alert("The component has been touched or clicked. ");
+    }
+  }
+});
+
+```
+
+You can also add events for `longPress` and `hover`, handy for bringing up context menus on either touch devices or pointer devices. TODO: verify the actual method for hover, if any
+
+
+```js
+  ...
+  prepareForActivationEvents: {
+    value: function() {
+      this._pressComposer.addEventListener("press", this, false);
+      this._pressComposer.addEventListener("longPress", this, false);
+      this._pressComposer.addEventListener("hover", this, false);
+    }
+  },
+  handlePress: {
+    value: function(evt) {
+      alert("The component has been touched or clicked. ");
+    }
+  },
+  handleLongPress: {
+    value: function(evt) {
+      this.showContextMenu(evt);
+    }
+  },
+  handleHover: {
+    value: function(evt) {
+      this.showContextMenu(evt);
+    }
+  },
+  showContextMenu: {
+    value: function(evt) {
+      alert("Show the user a context menu.");
+    }
+  }
+  ...
+```
+
+TODO is there an easier way to declare a pressComposer in the serialization?
