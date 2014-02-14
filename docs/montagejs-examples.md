@@ -34,6 +34,9 @@ The following components are pre-built MontageJS components.
 #### Pattern
 * [Sorting a Repetition](http://montagejs.github.io/mfiddle/#!/7651480)
 
+#### Controllers
+* [Tree Controller](http://montagejs.github.io/mfiddle/#!/9011775)
+
 ## UI Components (Digit)
 The following components are part of the touch-optimized Digit widget set, which is part of the default MontageJS installation. 
 
