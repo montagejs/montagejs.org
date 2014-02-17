@@ -191,6 +191,7 @@ Next we create the HTML page that declares the Button component and the custom C
 ```
 
 You can also specify the `identifier` string in the serialization, as shown below:
+
 ```json
 {
     "button" : {
