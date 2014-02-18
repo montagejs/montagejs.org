@@ -43,7 +43,6 @@ Conceptually, the reddit client application consists of two user interface compo
 The list of subreddits is, strictly speaking, a group of repeating elements that is declared in your component's HTML file (AKA template). To display this list, you need to edit your template's markup and declaration:
 
 1. To your template's markup, add the following two elements:
-
     * An unordered list element. 
     * A single list item.
 
@@ -54,7 +53,6 @@ The list of subreddits is, strictly speaking, a group of repeating elements that
     ```
 
 2. In your template's declaration, add two objects and then map them to the DOM elements in your template's markup. In this example:
-
     * `rep` uses the Repetition component and maps to the `ul` element; the component's `content` property is used to populate the repetition with a series of values.
     * `item` uses a Text component and maps to the `li` element; its `content` property declares the value of each item listed in the repetition.
 
@@ -396,7 +394,6 @@ To obtain and display the reddit posts you use the same approach you used for th
         </table>
     </div>
     ```
-
     * The `table` element is where the application attaches the repetition that contains the stories.
     * The `tr` element, including its contents, will repeat for each iteration in the repetition.
     * The `score` and `author` elements inside of the table are both attached to Text components. 
