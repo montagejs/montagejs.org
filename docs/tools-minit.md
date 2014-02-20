@@ -36,6 +36,10 @@ Run the following commands from within your project directory:
     
     >**Note:** The ampersand (&) option ensures that you don't have to open a second Terminal window while working on your project.
 
+* To update to the latest version of minit:
+
+    <pre>$ sudo npm install -gq minit@latest</pre>
+
 * For a complete list of minit options:
 
     <pre>$ minit --help</pre>
