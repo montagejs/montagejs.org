@@ -65,6 +65,7 @@ The following components are part of the touch-optimized Digit widget set, which
 #### Select
 * [A simple select](http://montagejs.github.io/mfiddle/#!/5904481)
 * [A select powered by a range controller](http://montagejs.github.io/mfiddle/#!/5904482)
+* [A select synchronized with a repetition](http://montagejs.github.io/mfiddle/#!/9142152)
 
 #### Checkbox
 * [A simple checkbox](http://montagejs.github.io/mfiddle/#!/5904488)
