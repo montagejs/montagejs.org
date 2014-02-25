@@ -9,7 +9,7 @@ this-page: tutorial-3d-applications-with-montagejs
 
 # Building 3D Applications with MontageJS
 
->**Note:** This document is in the process of being finalized and may include some incorrect information. Please check back later.
+>Note: This document is in the process of being finalized and may include some incomplete information. 
 
 Building browser-based 3D applications is no small feat. While <a href="http://www.khronos.org/webgl/" target="_blank">WebGL</a> brings plugin-free hardware-accelerated 3D graphics to the browser, its low-level API&mdash;well-suited for graphics programmers&mdash;sets a high entry bar for conventional front-end web developers.
 
@@ -22,21 +22,17 @@ To get a feel for what you can do with this component (and some minimal coding),
     <figcaption><strong>Figure 1.</strong> Uncover four hidden logos—and experience the MontageJS 3D component in action.</figcaption>
 </figure>
 
-This tutorial introduces the basic principles of building interactive 3D applications on MontageJS. It explains how to use the SceneView component to:
+This tutorial introduces the basic principles of building interactive 3D applications on MontageJS. It explains how to:
 
 * Set up MontageJS 3D project
 * Import a 3D scene in a MontageJS project
-* Expose a 3D node to the MontageJS binding system
-* Manipulate a 3D node with CSS
-* Add a listener to handle events
-* Manipulate a 3D node through bindings
-* Switch between cameras in a 3D scene
+* Manipulate a 3D scene (using CSS and bindings)
 
 # Requirements
 
 To make the most of this tutorial, you should be familiar with the basics of MontageJS development. If you are new to the MontageJS framework, you might want to step through our [Getting Started](http://montagejs.org/docs/montagejs-setup.html) guide first.
 
-Also, the tutorial includes detailed code examples to demonstrate the principles of how to use the SceneView component. To view the examples in context, refer to the Beach Planet <a href="https://github.com/montagejs/beachplanetblog" target="_blank">source code</a> on GitHub; all examples are accompanied by links to the source files of the component in question. Alternatively, you can install and explore the Beach Planet demo locally, following the instructions provided in the demo's <a href="https://github.com/montagejs/beachplanetblog" target="_blank">readme</a> file.
+Also, the tutorial includes detailed code examples to demonstrate the principles of how to use the SceneView component. To view the examples in context, refer to the Beach Planet <a href="https://github.com/montagejs/beachplanetblog" target="_blank">source code</a> on GitHub; all examples are accompanied by links to the source files. Alternatively, you can install and explore the Beach Planet demo locally, following the instructions provided in the demo's <a href="https://github.com/montagejs/beachplanetblog" target="_blank">readme</a> file.
 
 # Introducing the SceneView Component
 
@@ -65,8 +61,8 @@ To convert 3D assets you can use the 3D-Asset-to-glTF toolchain provided by the 
 
 In outline, converting 3D assets to glTF is a two-step process:
 
-1. Export assets from a 3D authoring tool to the COLLADA interchange file format, which results in a DAE file.
-2. Use the open source <a href="http://www.khronos.org/gltf" target="_blank">COLLADA-to-glTF</a> command line tool to convert the DAE file to a glTF model, which results in a JSON file and various associated binary and text files that represent the 3D scene.
+1. Export assets from a 3D authoring tool to the COLLADA interchange file format (which results in a DAE file).
+2. Use the open source <a href="http://www.khronos.org/gltf" target="_blank">COLLADA-to-glTF</a> command line tool to convert the DAE file to a glTF model (which results in a JSON file and various associated binary and text files that represent the 3D scene).
 
 The COLLADA-to-glTF converter works well with COLLADA files exported from <a href="http://www.sketchup.com/" target="_blank">SketchUp</a> and other <a href="http://collada.org/mediawiki/index.php/Portal:Products_directory" target="_blank">mainstream 3D authoring tools</a>.
 
@@ -79,7 +75,7 @@ For more details on the SceneView component, including API documentation, refer 
 
 Building any type of 3D application requires a bit of preparation, and building 3D applications on MontageJS is no different: Not only do you have to convert the original 3D assets so they can be used by the SceneView component, you also have to set up a MontageJS project and add both the prepared assets and the mjs-volume package to your project. (The SceneView component currently is not part of the default dependencies installed when you create a new MontageJS project.)
 
->**Note:** You don't have to set up a project from scratch to follow along with this tutorial. All examples discussed in this tutorial refer to the source code of the finished Beach Planet demo. The following steps are provided to help you set up a project so you can experiment on your own using 3D assets of your choice.
+>**Note:** You don't have to set up a project from scratch to follow along with this tutorial. All examples discussed in this tutorial refer to the source code of the finished Beach Planet demo.
 
 To set up a MontageJS 3D project, you begin as you normally would, using the minit command line tool (for details see the <a href="http://montagejs.org/docs/montagejs-setup.html" target="_blank">Setup guide</a>). Then you add the mjs-volume package and the converted 3D assets to your project.
 
@@ -151,9 +147,7 @@ For this demo:
 * `scene` declares an instance of the scene.js runtime component from the mjs-volume/runtime directory. Its `path` property is set to the path of the glTF asset (here: beachplanet.json).
 * `sceneView` declares an instance of the SceneView user interface component (scene-view.reel) of the mjs-volume module. Its `scene` property refers to the `scene` instance in the declaration (which is where it gets its data from); its `element` proptery maps to the to a div with the `data-montage-id` custom attribute of `sceneView` (which is the "container" if you will that holds the scene for browser display).
 
-That's all that is necessary to load the main Beach Planet 3D scene.
-
-**[Add link to component in demo]**
+That's all that is required to load a 3D scene.
 
 #Manipulating a 3D Scene
 
@@ -192,13 +186,11 @@ As this example demonstrates, designing 3D assets does require some planning. In
 
 Note that you can expose any individual material's properties in a 3D scene to MontageJS in much the same way that you expose a node, using the material.js runtime component.
 
-**[Add link to component in demo]**
-
 ## Manipulating a 3D Node with CSS
 
-After declaring the `buoy` object in the component's template, you can apply CSS classes that manipulate it in a number of ways. 
+After declaring the `buoy` object in the component's template, you can apply CSS classes that manipulate it in various ways. 
 
-The node.js runtime component currently supports the `visibility` property and 3D transforms. The material.js runtime component supports the `opacity` property. Additional functionality, including the ability to replace node textures and adjust node opacity, are planned for a future release (keep an eye on the <a href="https://github.com/fabrobinet/mjs-volume" target="_blank">commits</a> for the latest improvements).
+The node.js runtime component currently supports the `visibility` property and 3D transforms. The material.js runtime component supports the `opacity` property. Additional functionality, including the ability to replace node textures and adjust node opacity, are planned for a future release (keep an eye on the commits for <a href="https://github.com/fabrobinet/mjs-volume" target="_blank">mjs-volume</a> for the latest improvements).
 
 Both runtime components support the use of CSS transitions to animate property changes. The `active` and `hover` selectors are also supported, so you can easily apply click and rollover effects. A CSS class for a node can be defined like any other class in your component's CSS file, but it has to be applied through the MontageJS binding system.
 
@@ -207,7 +199,7 @@ Both runtime components support the use of CSS transitions to animate property c
     <figcaption><strong>Figure 2.</strong> The duck wader grows in size when in focus.</figcaption>
 </figure>
 
-For this demo, the effect of seeing the duck wader grow in size when users leave their cursors over is achieved using the following rules and declaration in the Buoy component (buoy.reel):
+For this demo, the effect of seeing the duck wader grow in size when users leave their cursors over it is achieved using the following rules and declaration in the Buoy component (buoy.reel):
 
 * The component's CSS file contains a CSS class called `animate` with a hover selector that performs a `scale3d` transformation.
 
@@ -225,7 +217,7 @@ For this demo, the effect of seeing the duck wader grow in size when users leave
 
     The `scale3d` transform increases the size of the object. The `transition` property is used to animate the change in appearance and its duration; in this example it takes five seconds for the wader to reach its full size. The animation is reversed when you move the cursor off of the element.
 
-* The component's template uses the `classList.has` binding on the node (here `duck`) to apply the CSS class.
+* The component's template uses the `classList.has` binding on the node (here `buoy`) to apply the CSS class.
 
     ```json
     ...
@@ -243,7 +235,7 @@ For this demo, the effect of seeing the duck wader grow in size when users leave
         }
     }
 
-    "duck": {
+    "buoy": {
         "prototype": "mjs-volume/runtime/node",
         "properties": {
             "id": "node_31",
@@ -255,8 +247,6 @@ For this demo, the effect of seeing the duck wader grow in size when users leave
     }
     ...
     ```
-
-You can explore the complete <a href="https://github.com/montagejs/beachplanetblog/tree/master/ui/buoy.reel" target="_blank">source code</a> for this example on GitHub.
 
 ## Adding a Listener to Handle Events
 
@@ -296,11 +286,9 @@ Note that the `action` listener type works for clicks, but you could optionally 
 
 You can examine the complete code for this component on GitHub 
 
-**[Add link to component in demo]**
-
 ## Manipulating a 3D Node through Bindings
 
-Building on the previous example, you may want to make the scene respond to the user's click event. In the duck wader example, the binding that applies the CSS class to the 3D node is static, that is, the value is always `true`. But the real power of the MontageJS binding system comes into play when you use it to control whether the CSS class is applied.
+Building on the previous example, you may want to make the scene respond to a user's click (or tab) event. In the duck wader example, the binding that applies the CSS class to the 3D node is static, that is, the value is always `true`. But the real power of the MontageJS binding system comes into play when you use it to control whether the CSS class is applied.
 
 The following snippet demonstrates how to make the door of the shack open and close when it is clicked. In the component's template, a `classList.has` expression is bound to a `doorOpen` property on the component that contains a Boolean value.
 
@@ -360,10 +348,6 @@ Note that the transition behavior is defined in a separate CSS class that is app
 
 Another feature that comes into play in this example is the `transform-origin` property. This property ensures that the left edge of the door will remain fixed in its position. If the origin was not set, the door would rotate from the center instead of swinging as though on a hinge. In many cases where transforms are used, setting an origin will ensure that the transformation behaves as expected.
 
-You can examine the complete <a href="https://github.com/montagejs/beachplanetblog/tree/master/ui/door.reel" target="_blank">source code</a> for this component on GitHub.
-
-**[Add link to component in demo]**
-
 ## Switching between View Points
 
 When presenting complex 3D scenes, you may want to control the user's perspective. The SceneView component makes it easy to switch between different view points within a 3D scene. A view point is a node that holds a camera. View points can be accessed in the binding definition just like any other scene node.
@@ -401,7 +385,7 @@ The Beach Planet demo also provides a menu that helps users quickly choose the m
         "scene": { "@": "scene" }
     }
 },
-"gullView": {
+"seaGullVP": {
     "prototype": "mjs-volume/runtime/node",
     "properties": {
         "id": "node-Camera_SeaGull",
@@ -419,17 +403,19 @@ The Beach Planet demo also provides a menu that helps users quickly choose the m
         "viewPoint": { "<-" : "@cameras.value.cam" }
     }
 },
-"cameras": {
-    "prototype": "digit/ui/select.reel",
+"nav": {
+    "prototype": "digit/ui/repetition.reel",
     "properties": {
-        "element": { "#": "cameras" },
+        "element": { "#": "nav" },
         "content": [
-            { "label": "Cabin", "cam": { "@": "doorView" } },
-            { "label": "Seagull", "cam": { "@": "gullView" } },
+            { "label": "Cabin", "value": { "@": "cabinVP" } },
+            { "label": "Seagull", "value": { "@": "seaGullVP" } },
         ]
     }
 }
 ```
+
+You can explore the complete <a href="https://github.com/montagejs/beachplanetblog/tree/master/ui/beachplanet.reel" target="_blank">source code</a> for this example on GitHub.
 
 Now that you know the basic principles of using the SceneView component, you can experiment with integrating interactive 3D experiences in your own web content (or grab some 3D models in the glTF format from <a href="http://sketchup.google.com/3dwarehouse/" target="_blank">3D Warehouse</a>). The component already offers enough features to build compelling experiences as the Beach Planet demo shows, but we have even more planned for the future.
 
