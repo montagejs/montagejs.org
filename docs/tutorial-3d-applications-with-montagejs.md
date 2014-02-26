@@ -209,8 +209,8 @@ The node.js runtime component currently supports the `visibility` property and 3
 Both runtime components support the use of CSS transitions to animate property changes. The `active` and `hover` selectors are also supported, so you can easily apply click and rollover effects. A CSS class for a node can be defined like any other class in the component's CSS file, but it has to be applied through the MontageJS binding system.
 
 <figure>
-    <img src="/images/docs/tutorials/3d-apps/fig02.jpg" alt="Animating the duck in the Beach Planet MontageJS and WebGL demo." style="width: 451px;">
-    <figcaption><strong>Figure 2.</strong> The duck wader grows in size when in focus.</figcaption>
+    <img src="/images/docs/tutorials/3d-apps/fig03.jpg" alt="Animating the duck in the Beach Planet MontageJS and WebGL demo." style="width: 451px;">
+    <figcaption><strong>Figure 3.</strong> The duck wader grows in size when in focus.</figcaption>
 </figure>
 
 For this demo, the effect of seeing the duck wader (buoy) element grow in size when users leave their cursors over it is achieved using the following rules and declaration in the Buoy component (buoy.reel):
@@ -355,8 +355,8 @@ In the component's CSS file, the `open` CSS class uses the `rotateZ` property to
 Note that the transition behavior is defined in a separate CSS class that is applied at all times rather than toggled; this ensures that the transition animation will work when the door is both opening and closing.
 
 <figure>
-    <img src="/images/docs/tutorials/3d-apps/fig03.jpg" alt="Animating the door in the Beach Planet MontageJS and WebGL demo." style="width: 451px;">
-    <figcaption><strong>Figure 3.</strong> Use bindings to control whether CSS is applied on a node.</figcaption>
+    <img src="/images/docs/tutorials/3d-apps/fig04.jpg" alt="Animating the door in the Beach Planet MontageJS and WebGL demo." style="width: 451px;">
+    <figcaption><strong>Figure 4.</strong> Use bindings to control whether CSS is applied on a node.</figcaption>
 </figure>
 
 Another feature that comes into play in this example is the `transform-origin` property. This property ensures that the left edge of the door will remain fixed in its position. If the origin was not set, the door would rotate from the center instead of swinging as though on a hinge. In many cases where transforms are used, setting an origin will ensure that the transformation behaves as expected.
