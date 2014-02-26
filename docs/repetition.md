@@ -13,7 +13,7 @@ next-page: substitution
 
 The Repetition component is used to produce a repeating group of elements based on an array of values. All elements nested inside of the Repetition element will repeat in each iteration. The content inside of a repetition is managed by a controller. You can set the Repetition component's `content` property manually with a standard array for a simple repetition. You can also expand the component's capabilities by assigning a RangeController component to its `contentController` property.
 
-You can use the Repetition component as a building block to repeat any number of user interface components. (The MontageJS List component, for example, uses the Repetition component to support selection management.) All elements nested inside of the Repetition element will repeat in each iteration of the repetition. You can use the bindable `objectAtCurrentIteration` property to point to the current list item.
+You can use the Repetition component as a building block to repeat any number of user interface components. (The MontageJS List component, for example, uses the Repetition component to support selection management.) All elements nested inside of the Repetition element will repeat in each iteration of the repetition. You can use the bindable `iteration.object` property to point to the current list item.
 
 ## A Simple Repetition
 
@@ -48,8 +48,8 @@ The following example shows a simple Repetition (`items`) that produces three te
             "element": { "#": "item" }
         },
         "bindings": {
-            "value": { "<-": "@items.objectAtCurrentIteration.quote" },
-            "classList.has('highlight')": { "<-": "@items.objectAtCurrentIteration.important" }
+            "value": { "<-": "@items.iteration.object.quote" },
+            "classList.has('highlight')": { "<-": "@items.iteration.object.important" }
         }
     }
 ```
@@ -91,7 +91,7 @@ View in Mfiddle: [http://montagejs.github.io/mfiddle/#!/7882151](http://montagej
 In this example:
 
 * The Repetition component's `contentController` property is set to be a `RangeController` for managing some content.
-* The `Text` component is a child of the Repetition and derives its `value` property from its `objectAtcurrentIteration` property.
+* The `Text` component is a child of the Repetition and derives its `value` property from its `iteration.object` property.
 * Clicking the Change Content button replaces the managed content with new random content.
 
 ```html
@@ -125,7 +125,7 @@ In this example:
         "element": {"#": "value"}
     },
     "bindings": {
-        "value": {"<-": "@repetition.objectAtCurrentIteration.quote"}
+        "value": {"<-": "@repetition.iteration.object.quote"}
     }
 },
 "changeButton": {
@@ -228,7 +228,7 @@ You can also use complex expressions inside of sort and filter operations. For e
         "element": {"#": "quote"}
     },
     "bindings": {
-        "value": {"<-": "@repetition.objectAtCurrentIteration.quote"}
+        "value": {"<-": "@repetition.iteration.object.quote"}
     }
 },
 
@@ -355,7 +355,7 @@ Note that users could select multiple items.
         "element": {"#": "value"}
     },
     "bindings": {
-        "value": {"<-": "@repetition.objectAtCurrentIteration.quote"}
+        "value": {"<-": "@repetition.iteration.object.quote"}
     }
 },
 
