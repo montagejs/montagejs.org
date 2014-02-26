@@ -379,7 +379,7 @@ In the following example, the `sceneView` object has a `viewPoint` property that
         "viewPoint": { "@" : "doorViewPoint" }
     }
 },
-"doorViewPoint": {
+"cabinVP": {
     "prototype": "mjs-volume/runtime/node",
     "properties": {
         "id": "node-Camera_cabin",
@@ -388,7 +388,7 @@ In the following example, the `sceneView` object has a `viewPoint` property that
 }
 ```
 
-The `allowsViewPointControl` property is used to control whether the user can click and drag to adjust the view. This feature is  useful in cases where the application needs more control over what the user sees in the scene. A binding can be used with the `viewPoint` property to control the view programmatically.
+The `allowsViewPointControl` property is used to control whether the user can drag to adjust the view. This feature is useful in cases where the application needs more control over what the user sees in the scene. A binding can be used with the `viewPoint` property to control the view programmatically.
 
 The Beach Planet demo also provides a menu that helps users quickly choose the main Beach Planet detail views: planet, seagull, buoy (duck wader), cabin, and dolphins. The following snippet demonstrates how to choose between two different view points that are embedded in the Beach Planet scene. The `viewPoint` property is bound to the camera associated with the selected item in the menu.
 
@@ -419,7 +419,7 @@ The Beach Planet demo also provides a menu that helps users quickly choose the m
     }
 },
 "nav": {
-    "prototype": "digit/ui/repetition.reel",
+    "prototype": "montage/ui/repetition.reel",
     "properties": {
         "element": { "#": "nav" },
         "content": [
