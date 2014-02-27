@@ -84,7 +84,7 @@ At this point, the application displays a bulleted list of five items with the s
 
 ### Binding a List Item to the Current Iteration
 
-Next, modify the `item` object so that each list item element displays the actual value of the underlying array item. The Repetition component has a special property called `objectAtCurrentIteration` that is used to access the value from the array. To make each item in the list display its number, bind the value of the `item` object to the `rep`'s `objectAtCurrentIteration` property.
+Next, modify the `item` object so that each list item element displays the actual value of the underlying array item. The Repetition component has a special template property called `:iteration` that is used to access the current iteration of the content array. The actual value of the object at the current iteration is stored in `:iteration.object`. To make each item in the list display its number, bind the value of the `item` object to the `rep`'s `:iteration.object` property.
 
 >**Note:** MontageJS uses <a href="https://github.com/montagejs/frb/blob/master/README.md" target="_blank">functional reactive bindings</a> (FRB) to help keep user interface and model data in sync. FRB is a declarative language for binding properties and querying collections, to keep them in sync incrementally. 
 
@@ -95,7 +95,7 @@ Next, modify the `item` object so that each list item element displays the actua
         "element": { "#": "item" },
     },
     "bindings": {
-        "value": {"<-": "@rep.objectAtCurrentIteration"}
+        "value": {"<-": "@rep:iteration.object"}
     }
 }
 ```
@@ -149,7 +149,7 @@ Next, you need to update the `bindings` properties in your template's declaratio
         "element": {"#": "item"}
     },
     "bindings": {
-        "value": {"<-": "@rep.objectAtCurrentIteration.display_name"}
+        "value": {"<-": "@rep:iteration.object.display_name"}
     }
 }
 ```
@@ -298,7 +298,7 @@ Unlike many other JavaScript MVC frameworks, MontageJS doesn't require developer
 
 In the JSON emitted by the reddit API, each item in the list of subreddits is wrapped inside of a `data` property. For this data to show in the application, you have to update the value of the `bindings` properties of the `item` and `currentsub` objects in your template's declaration:
 
-* For `item`, change the binding expression `@rep.objectAtCurrentIteration.display_name` to `"@rep.objectAtCurrentIteration.data.display_name"`
+* For `item`, change the binding expression `@rep:iteration.object.display_name` to `"@rep:iteration.object.data.display_name"`
 * For `currentsub`, change `"@rep.selection.0.display_name ?? 'Please Select a Sub'"` to `"@rep.selection.0.data.display_name ?? 'Please Select a Sub'"`
 
 Your template's declaration now looks like this:
@@ -326,7 +326,7 @@ Your template's declaration now looks like this:
             "element": {"#": "item"}
         },
         "bindings": {
-            "value": {"<-": "@rep.objectAtCurrentIteration.data.display_name"}
+            "value": {"<-": "@rep:iteration.object.data.display_name"}
         }
     },
     "currentsub": {
@@ -417,8 +417,8 @@ To obtain and display the reddit posts you use the same approach you used for th
             "element": { "#": "title" }
         },
         "bindings": {
-            "textContent": { "<-": "@stories.objectAtCurrentIteration.data.title" },
-            "href": { "<-": "@stories.objectAtCurrentIteration.data.url" }
+            "textContent": { "<-": "@stories:iteration.object.data.title" },
+            "href": { "<-": "@stories:iteration.object.data.url" }
         }
     },
     "author": {
@@ -427,7 +427,7 @@ To obtain and display the reddit posts you use the same approach you used for th
             "element": { "#": "author" }
         },
         "bindings": {
-            "value": { "<-": "@stories.objectAtCurrentIteration.data.author" }
+            "value": { "<-": "@stories:iteration.object.data.author" }
         }
     },
     "score": {
@@ -436,7 +436,7 @@ To obtain and display the reddit posts you use the same approach you used for th
             "element": { "#": "score" }
         },
         "bindings": {
-            "value": { "<-": "@stories.objectAtCurrentIteration.data.score" }
+            "value": { "<-": "@stories:iteration.object.data.score" }
         }
     }
     ```
@@ -523,3 +523,4 @@ For more information about the reddit client and developing applications with Mo
 * [MontageJS Documentation](http://montagejs.org/docs/)
 * <a href="http://seg.phault.net/montage/cookbook/" target="_blank">MontageJS Cookbook</a>
 * [Getting Started with MontageJS](http://montagejs.org/docs/montagejs-setup.html) steps you through the process of setting up your MontageJS development environment. 
+
