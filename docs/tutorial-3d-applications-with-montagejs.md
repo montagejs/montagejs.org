@@ -436,12 +436,12 @@ The Beach Planet demo also provides a menu that helps users quickly choose the m
 }
 ```
 
+View the full <a href="https://github.com/montagejs/beachplanetblog/tree/master/ui/menu.reel" target="_blank">source code</a> for this example on GitHub.
+
 <figure>
     <img src="/images/docs/tutorials/3d-apps/fig05.jpg" alt="Switching view points in the Beach Planet MontageJS and WebGL demo." style="width: 451px;">
-    <figcaption><strong>Figure 5.</strong> Control the user's perspective with the `viewPoint` property.</figcaption>
+    <figcaption><strong>Figure 5.</strong> Control the user's perspective with the viewPoint property.</figcaption>
 </figure>
-
-View the full <a href="https://github.com/montagejs/beachplanetblog/tree/master/ui/menu.reel" target="_blank">source code</a> for this example on GitHub.
 
 Now that you know the basic principles of using the SceneView component, you can experiment with integrating interactive 3D experiences in your own web content (or grab some 3D models in the glTF format from <a href="http://sketchup.google.com/3dwarehouse/" target="_blank">3D Warehouse</a>). The component already offers enough features to build compelling experiences as the Beach Planet demo shows, but we have even more planned for the future.
 
