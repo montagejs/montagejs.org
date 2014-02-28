@@ -363,11 +363,11 @@ Another feature that comes into play in this example is the `transform-origin` p
 
 View the full <a href="https://github.com/montagejs/beachplanetblog/tree/master/ui/door.reel" target="_blank">source code</a> on GitHub.
 
-## Switching between View Points
+## Switching View Points
 
 When presenting complex 3D scenes, you may want to control the user's perspective. The SceneView component makes it easy to switch between different view points within a 3D scene. A view point is a node that holds a camera. View points can be accessed in the binding definition just like any other scene node.
 
-In the following example, the `sceneView` object has a `viewPoint` property that references the `doorViewPoint` node:
+In the following example, the `sceneView` object has a `viewPoint` property that references the `planetVP` node:
 
 ```json
  "sceneView": {
@@ -376,10 +376,10 @@ In the following example, the `sceneView` object has a `viewPoint` property that
         "allowsViewPointControl" : false,
         "element": { "#": "sceneView" },
         "scene": { "@": "scene" },
-        "viewPoint": { "@" : "doorViewPoint" }
+        "viewPoint": { "@" : "planetVP" }
     }
 },
-"cabinVP": {
+"planetVP": {
     "prototype": "mjs-volume/runtime/node",
     "properties": {
         "id": "node-Camera_cabin",
@@ -393,6 +393,13 @@ The `allowsViewPointControl` property is used to control whether the user can dr
 The Beach Planet demo also provides a menu that helps users quickly choose the main Beach Planet detail views: planet, seagull, buoy (duck wader), cabin, and dolphins. The following snippet demonstrates how to choose between two different view points that are embedded in the Beach Planet scene. The `viewPoint` property is bound to the camera associated with the selected item in the menu.
 
 ```json
+"planetVP": {
+    "prototype": "mjs-volume/runtime/node",
+    "properties": {
+        "id": "node-Camera_cabin",
+        "scene": { "@": "scene" }
+    }
+},
 "cabinVP": {
     "prototype": "mjs-volume/runtime/node",
     "properties": {
@@ -412,10 +419,8 @@ The Beach Planet demo also provides a menu that helps users quickly choose the m
     "properties": {
         "allowsViewPointControl" : false,
         "element": { "#": "sceneView" },
-        "scene": { "@": "scene" }
-    },
-    "bindings": {
-        "viewPoint": { "<-" : "@cameras.value.cam" }
+        "scene": { "@": "scene" },
+        "viewPoint": { "@" : "planetVP" }
     }
 },
 "nav": {
@@ -423,6 +428,7 @@ The Beach Planet demo also provides a menu that helps users quickly choose the m
     "properties": {
         "element": { "#": "nav" },
         "content": [
+            { "label": "Planet", "value": { "@": "planetVP" } },
             { "label": "Cabin", "value": { "@": "cabinVP" } },
             { "label": "Seagull", "value": { "@": "seaGullVP" } }
         ]
@@ -430,13 +436,20 @@ The Beach Planet demo also provides a menu that helps users quickly choose the m
 }
 ```
 
-You can explore the complete <a href="https://github.com/montagejs/beachplanetblog/tree/master/ui/beachplanet.reel" target="_blank">source code</a> for this example on GitHub.
+<figure>
+    <img src="/images/docs/tutorials/3d-apps/fig05.jpg" alt="Switching view points in the Beach Planet MontageJS and WebGL demo." style="width: 451px;">
+    <figcaption><strong>Figure 5.</strong> Control the user's perspective with the `viewPoint` property.</figcaption>
+</figure>
+
+View the full <a href="https://github.com/montagejs/beachplanetblog/tree/master/ui/menu.reel" target="_blank">source code</a> for this example on GitHub.
 
 Now that you know the basic principles of using the SceneView component, you can experiment with integrating interactive 3D experiences in your own web content (or grab some 3D models in the glTF format from <a href="http://sketchup.google.com/3dwarehouse/" target="_blank">3D Warehouse</a>). The component already offers enough features to build compelling experiences as the Beach Planet demo shows, but we have even more planned for the future.
 
 # Next Steps
 
-To keep up with the latest developments of the MontageJS 3D components, follow or star the <a href="https://github.com/fabrobinet/mjs-volume" target="_target">mjs-volume</a> repository on GitHub. 
+Explore the complete <a href="https://github.com/montagejs/beachplanetblog/tree/master/ui/beachplanet.reel" target="_blank">source code</a> for the Beach Planet demo on GitHub.
+
+To keep up with the latest developments of the MontageJS 3D components, follow or star the <a href="https://github.com/fabrobinet/mjs-volume" target="_target">mjs-volume</a> repository on GitHub.
 
 If you have ideas (or code) for improving the components, we'd love to hear from you. Get in touch by joining the <a href="https://groups.google.com/forum/?fromgroups#!forum/montagejs" target=_"blank">MontageJS mailing list</a> or contacting <a href="https://twitter.com/montagejs" target=_"blank">@MontageJS</a> on Twitter.
 
