@@ -48,8 +48,8 @@ The following example shows a simple Repetition (`items`) that produces three te
             "element": { "#": "item" }
         },
         "bindings": {
-            "value": { "<-": "@items.iteration.object.quote" },
-            "classList.has('highlight')": { "<-": "@items.iteration.object.important" }
+            "value": { "<-": "@items:iteration.object.quote" },
+            "classList.has('highlight')": { "<-": "@items:iteration.object.important" }
         }
     }
 ```
@@ -125,7 +125,7 @@ In this example:
         "element": {"#": "value"}
     },
     "bindings": {
-        "value": {"<-": "@repetition.iteration.object.quote"}
+        "value": {"<-": "@repetition:iteration.object.quote"}
     }
 },
 "changeButton": {
@@ -228,7 +228,7 @@ You can also use complex expressions inside of sort and filter operations. For e
         "element": {"#": "quote"}
     },
     "bindings": {
-        "value": {"<-": "@repetition.iteration.object.quote"}
+        "value": {"<-": "@repetition:iteration.object.quote"}
     }
 },
 
@@ -355,7 +355,7 @@ Note that users could select multiple items.
         "element": {"#": "value"}
     },
     "bindings": {
-        "value": {"<-": "@repetition.iteration.object.quote"}
+        "value": {"<-": "@repetition:iteration.object.quote"}
     }
 },
 
