@@ -1,25 +1,81 @@
-<div class="teaser-form">
+<div class="form teaser-form">
+
+    <!--  ----------------------------------------------------------------------  -->
+    <!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
+    <!--  If necessary, please modify the charset parameter to specify the        -->
+    <!--  character set of your HTML page.                                        -->
+    <!--  ----------------------------------------------------------------------  -->
     
-    <iframe height="572" allowTransparency="true" frameborder="0" scrolling="no" style="width:100%;border:none" src="https://montagestudio.wufoo.com/embed/zohp1bu19l31zc/"><a href="https://montagestudio.wufoo.com/forms/zohp1bu19l31zc/">Fill out my Wufoo form!</a></iframe>
+    <!--<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">-->
     
-    <!--<div id="wufoo-zohp1bu19l31zc">
-    Fill out my <a href="https://montagestudio.wufoo.com/forms/zohp1bu19l31zc">online form</a>.
-    </div>
-    <script type="text/javascript">var zohp1bu19l31zc;(function(d, t) {
-    var s = d.createElement(t), options = {
-    'userName':'montagestudio', 
-    'formHash':'zohp1bu19l31zc', 
-    'autoResize':true,
-    'height':'572',
-    'async':true,
-    'host':'wufoo.com',
-    'header':'show', 
-    'ssl':true};
-    s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'wufoo.com/scripts/embed/form.js';
-    s.onload = s.onreadystatechange = function() {
-    var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
-    try { zohp1bu19l31zc = new WufooForm();zohp1bu19l31zc.initialize(options);zohp1bu19l31zc.display(); } catch (e) {}};
-    var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
-    })(document, 'script');</script>-->
     
+    <!-- Form validation -->
+    <!-- https://success.salesforce.com/ideaView?id=087300000006tlB -->
+    
+    <script type='text/javascript'>
+        function validation(form) {
+              
+            if(form.first_name.value == '') {
+                alert('Please enter your first name');
+                form.first_name.focus();
+                return false;
+            }
+            
+            if(form.last_name.value == '') {
+            
+                alert('Please enter your last name');
+                form.last_name.focus();
+                return false;
+            }
+            
+            if(form.email.value == '') {
+            
+                alert('Please enter your email address');
+                form.email.focus();
+                return false;
+            }
+                                
+            return true;
+        }
+    </script>
+    
+    
+    <!--  ----------------------------------------------------------------------  -->
+    <!--  NOTE: Please add the following <FORM> element to your page.             -->
+    <!--  ----------------------------------------------------------------------  -->
+    
+    <form action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" onsubmit="return validation(this);">
+    
+        <input type=hidden name="oid" value="00DG0000000jEdg">
+        <input type=hidden name="retURL" value="http://montagejs.org/reveal/thanks.html">
+        <input type=hidden name="lead_source" value="Web - Beta">        
+        
+        <!--  ----------------------------------------------------------------------  -->
+        <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+        <!--  these lines if you wish to test in debug mode.                          -->
+        <!--  <input type="hidden" name="debug" value=1>                              -->
+        <!--  <input type="hidden" name="debugEmail"                                  -->
+        <!--  value="kristie@montagestudio.com">                                      -->
+        <!--  ----------------------------------------------------------------------  -->    
+                
+        <label for="first_name">First Name*</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" />
+        
+        <label for="last_name">Last Name*</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" />
+        
+        <label for="email">Email*</label><input  id="email" maxlength="80" name="email" size="20" type="email" />
+        
+        <label for="00NG000000DXjMc">GitHub ID</label><input id="00NG000000DXjMc" maxlength="100" name="00NG000000DXjMc" size="20" type="text" />
+        
+        <label for="title">Title</label><input  id="title" maxlength="40" name="title" size="20" type="text" />
+        
+        <label for="company">Company</label><input  id="company" maxlength="40" name="company" size="20" type="text" />
+        
+        <label for="zip">Zip</label><input  id="zip" maxlength="20" name="zip" size="20" type="text" />
+                    
+        <p>Fields marked with * are required.</p>
+                    
+        <input type="submit" name="submit">
+    
+    </form>
+        
 </div>
