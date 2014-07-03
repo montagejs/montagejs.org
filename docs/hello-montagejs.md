@@ -121,7 +121,7 @@ The application you are going to build has four elements—a title, two numeric 
 2. Replace the HTML within the `<body>` tags with the following markup:
 
     ```html
-    <div data-montage-id="converter" class="Converter">
+    <div data-montage-id="owner" class="Converter">
         <div>
             <fieldset>
                 <div>&deg;C
