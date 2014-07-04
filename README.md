@@ -1,3 +1,9 @@
+> Note: This site is no longer online. The MontageJS docs can now be found here: http://docs.montagestudio.com/montagejs/
+
+
+-------------------
+
+
 This is the repo for the [montagejs.org](http://montagejs.org) website.
 
 ## Contributing
