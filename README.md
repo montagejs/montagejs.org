@@ -1,4 +1,4 @@
-> Note: This site is no longer online. The MontageJS docs can now be found here: http://docs.montagestudio.com/montagejs/
+> Note: montagejs.org is no longer online. The MontageJS docs can now be found here: http://docs.montagestudio.com/montagejs/
 
 
 -------------------
