@@ -16,21 +16,25 @@ The site uses Jekyll for templates and includes. You can find more infos on [jek
 You need **Ruby version > 2.0.0**.
 
 ### Install
+
 First you need Ruby and RubyGems, see [details](http://jekyllrb.com/docs/installation/). Once installed run:
 
     gem install jekyll
+    gem install redcarpet
+
+Note: you may `sudo chmod -R o+rw /Library/Ruby/Gems/2.3.0`
 
 Then `cd` into your montagejs.org directory and run:
 
-    jekyll serve
+    jekyll serve --port 8080
 
-Now you should see the site at `http://localhost:4000`.
+Now you should see the site at `http://localhost:8080`.
 
 After making changes you can close the server with `Ctrl c` and then rebuild the site with `jekyll serve` again. Then if you refresh the browser, you should see the changes.
 
 If you don't wanna manually rebuild after every change, you can serve with the "watch" command:
 
-    jekyll serve --watch
+    jekyll serve --watch --port 8080
 
 Then the site gets automatically rebuilt once you save a file. __Note__: Because some directories like the /apps are quite big, it is advised to exclude them temporarily while testing locally. It speeds up rebuilding a lot and your CPU thanks you for that. To exclude directories, open the `/_config.yml` file and uncomment this line `exclude: [apps, built-apps, node_modules, packages, ui]` (it might look a bit different by now). Just make sure you don't commit that change to _config.yml.
 
