@@ -18,7 +18,7 @@ You need **Ruby version > 2.0.0**.
 ### Install
 
 First you need Ruby and RubyGems, see [details](http://jekyllrb.com/docs/installation/). Once installed run:
-
+	
     gem install jekyll
     gem install redcarpet
 
