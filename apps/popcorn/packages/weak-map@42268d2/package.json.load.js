@@ -1,1 +1,0 @@
-montageDefine("42268d2","package.json",{exports:{name:"weak-map",version:"1.0.0",main:"weak-map.js",_id:"weak-map@1.0.0",readme:"ERROR: No README.md file found!",description:"ERROR: No README.md file found!",_from:"weak-map@1.0.0",directories:{lib:"./"},hash:"42268d2",mappings:{},production:!0,useScriptInjection:!0}})
