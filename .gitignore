@@ -1,5 +1,39 @@
+### General ###
 .DS_Store
+Thumbs.db
+report/
+out/
+temp/
+tmp/
+.tmp
+*.tmp
+*.tmp.*
+log.txt
+*.log
+
+## Build
+builds
 _site
 /tmp
-builds
-.idea
+ 
+### SublimeText ###
+*.sublime-project
+*.sublime-workspace
+ 
+### Intellij IDE ###
+.idea/
+atlassian-ide-plugin.xml
+ 
+### VisualStudioCode ###
+.vscode/*
+.vscode-upload.json
+ 
+### TextMate ###
+*.tmproj
+*.tmproject
+tmtags
+ 
+### Node ###
+npm-debug.log*
+.npmignore
+node_modules/
