@@ -1,1 +1,0 @@
-function PassThrough(e){return this instanceof PassThrough?(Transform.call(this,e),void 0):new PassThrough(e)}module.exports=PassThrough;var Transform=require("./_stream_transform"),util=require("util");util.inherits(PassThrough,Transform),PassThrough.prototype._transform=function(e,t,n){n(null,e)};

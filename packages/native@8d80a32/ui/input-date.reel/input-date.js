@@ -1,1 +1,0 @@
-var Montage=require("montage").Montage,Component=require("montage/ui/component").Component,TextInput=require("ui/text-input").TextInput,InputDate=exports.InputDate=TextInput.specialize({});InputDate.addAttributes({max:null,min:null,step:null});

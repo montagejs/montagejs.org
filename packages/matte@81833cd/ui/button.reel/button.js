@@ -1,1 +1,0 @@
-var NativeButton=require("native/ui/button.reel").Button;exports.Button=NativeButton.specialize({hasTemplate:{value:!0},constructor:{value:function(){this.super(),this.classList.add("matte-Button")}}});
