@@ -117,7 +117,7 @@ module.exports = function (packageName, tag, outDir) {
         }
 
         var jsdoc = spawn(
-            path.join(mainPath,'../node_modules/jsdoc/jsdoc'),
+            path.join(mainPath,'../node_modules/jsdoc/jsdoc.js'),
             args,
             {
                 cwd: mainPath,

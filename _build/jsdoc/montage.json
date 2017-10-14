@@ -4,10 +4,10 @@
     },
     "source": {
         "include": [
-            "_build/node_modules/montage/composer/",
-            "_build/node_modules/montage/core/",
-            "_build/node_modules/montage/ui/",
-            "_build/node_modules/montage/window-loader/"
+            "../node_modules/montage/composer/",
+            "../node_modules/montage/core/",
+            "../node_modules/montage/ui/",
+            "../node_modules/montage/window-loader/"
         ],
         "exclude": [],
         "includePattern": ".+\\.js(doc)?$"
@@ -23,11 +23,11 @@
         "monospaceLinks": false
     },
     "opts": {
-        "template": "_build/jsdoc/template",
+        "template": "../jsdoc/template",
         "encoding": "utf8",
-        "destination": "_build/api",
+        "destination": "../api",
         "recurse": true,
-        "tutorials": "_build/jsdoc/template",
+        "tutorials": "../jsdoc/template",
         "query": "value",
         "private": false,
         "lenient": true,
