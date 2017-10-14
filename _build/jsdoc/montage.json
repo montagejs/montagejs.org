@@ -4,14 +4,13 @@
     },
     "source": {
         "include": [
-            "../node_modules/montage/composer/",
-            "../node_modules/montage/core/",
-            "../node_modules/montage/ui/",
-            "../node_modules/montage/window-loader/"
+            "_build/node_modules/montage/composer/",
+            "_build/node_modules/montage/core/",
+            "_build/node_modules/montage/ui/",
+            "_build/node_modules/montage/window-loader/"
         ],
         "exclude": [],
-        "includePattern": ".+\\.js(doc)?$",
-        "excludePattern": "(^|\\/)_"
+        "includePattern": ".+\\.js(doc)?$"
     },
     "plugins": [
         "plugins/markdown"
@@ -24,17 +23,17 @@
         "monospaceLinks": false
     },
     "opts": {
-        "template": "./template",
+        "template": "_build/jsdoc/template",
         "encoding": "utf8",
-        "destination": "../../api",
+        "destination": "_build/api",
         "recurse": true,
-        "tutorials": "./template",
+        "tutorials": "_build/jsdoc/template",
         "query": "value",
         "private": false,
         "lenient": true,
         "githubOrg": "montagejs",
         "githubRepo": "montage",
-        "commitish": "v0.13.8"
+        "commitish": "v17.0.11"
     },
     "repositoryId": {
         "sha": "11ccc5566986d891716837105385daaaf8884980",

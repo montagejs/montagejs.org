@@ -1,12 +1,12 @@
 {
-    "name": "montagejs.org",
-    "version": "0.0.0",
-    "private": true,
-    "dependencies": {
-        "montage": "0.13.9",
-        "digit": "0.4.0"
-    },
-    "devDependencies": {
-        "mop": "~0.13.0"
-    }
+  "name": "montagejs.org",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "digit": "^3.0.0",
+    "montage": "^17.0.11"
+  },
+  "devDependencies": {
+    "mop": "^16.1.3"
+  }
 }

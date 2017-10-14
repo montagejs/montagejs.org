@@ -39,7 +39,7 @@ var exec = function (command, args, cwd, silent) {
 
 var SOURCE_PATH = PATH.join(__dirname, "..");
 var APPS = {
-    "popcorn": {url: "https://github.com/montagejs/popcorn.git", commit: "v0.12"}
+    "popcorn": {url: "https://github.com/montagejs/popcorn.git", commit: "master"}
 };
 
 var TEMP_DIR = PATH.join(SOURCE_PATH, "tmp");
@@ -60,9 +60,8 @@ function cloneAndMopApps(apps) {
             return exec("npm", ["install"], clonePath);
         })
         .then(function () {
-            var montageVersion = JSON.parse(FS.readFileSync(PATH.join(clonePath, "package.json"))).dependencies.montage;
-            montageVersion = montageVersion.match(/\d\.\d+/)[0];
-            return exec("npm", ["install", "mop@" + montageVersion], clonePath);
+            var mopVersion = JSON.parse(FS.readFileSync(PATH.join(clonePath, "package.json"))).devDependencies.mop;
+            return exec("npm", ["install", "mop@" + mopVersion], clonePath);
         })
         .then(function () {
             // need devDeps in Montage (q-io/fs) for Mop to work

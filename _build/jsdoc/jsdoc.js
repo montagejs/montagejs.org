@@ -111,7 +111,7 @@ module.exports = function (packageName, tag, outDir) {
     .then(function () {
         var jsdocGeneration = Q.defer();
 
-        var args = ["-c", path.join(mainPath,packageName+ ".json")];
+        var args = ["-c", path.join(mainPath, packageName+ ".json")];
         if (outDir) {
             args.push("-d", outDir);
         }
@@ -123,7 +123,7 @@ module.exports = function (packageName, tag, outDir) {
                 cwd: mainPath,
                 stdio: "inherit"
             });
-        console.log('executing:',  path.join(mainPath,'../node_modules/jsdoc/jsdoc'), args.join(" "));
+        console.log('executing:',  path.join(mainPath,'../node_modules/jsdoc/jsdoc.js'), args.join(" "));
         jsdoc.on('close', function (code, signal) {
             if (signal) {
                 jsdocGeneration.reject(new Error(signal));

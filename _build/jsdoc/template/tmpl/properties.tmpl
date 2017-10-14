@@ -63,7 +63,7 @@
 	<?js
         var self = this;
 	    props.forEach(function(prop) {
-	        if (!prop || prop.name.indexOf('_') !== -1) { return; }
+	        if (!prop || prop.name && prop.name.indexOf('_') !== -1) { return; }
 	?>
 
         <tr>
