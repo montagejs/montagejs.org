@@ -1,1 +1,0 @@
-var Montage=require("montage/core/core").Montage;AnimationManager=exports.AnimationManager=Montage.create(Montage,{_animationDuration:{enumerable:!1,value:0},animationDuration:{enumerable:!0,get:function(){return this._animationDuration},set:function(e){this._animationDuration=e}}})

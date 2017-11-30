@@ -1,1 +1,0 @@
-var NativeInputNumber=require("native/ui/input-number.reel").InputNumber;exports.InputNumber=NativeInputNumber.specialize({hasTemplate:{value:!0},constructor:{value:function(){this.super(),this.classList.add("matte-InputNumber"),this.classList.add("matte-InputText")}}});

@@ -1,1 +1,0 @@
-montageDefine("fb87e57","package.json",{exports:{name:"paparazzi",version:"0.1.0",hash:"fb87e57",directories:{lib:"./"},mappings:{montage:{name:"montage",hash:"120b0c7",location:"packages/montage@120b0c7/"},shuriken:{name:"shuriken",hash:"2649653",location:"packages/shuriken@2649653/"}},production:!0,useScriptInjection:!0}})

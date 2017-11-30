@@ -1,1 +1,0 @@
-var Montage=require("montage").Montage,EditableText=require("ui/editable-text").EditableText;exports.TextArea=Montage.create(EditableText,{_drawSpecific:{enumerable:!1,value:function(){this.element.classList.add("montage-Textarea")}}})

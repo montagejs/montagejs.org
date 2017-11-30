@@ -1,1 +1,0 @@
-var Montage=require("montage").Montage,Component=require("montage/ui/component").Component;exports.Features=Montage.create(Component,{hasTemplate:{value:!0},convert:{value:function(e){return""+Number(Math.round(e))}},revert:{value:function(e){return""+Number(Math.round(e))}}});

@@ -1,1 +1,0 @@
-montageDefine("1245296","package.json",{exports:{name:"c2j",version:"0.0.0",hash:"1245296",directories:{lib:"."},mappings:{montage:{name:"montage",hash:"120b0c7",location:"../montage@120b0c7/"}},production:!0,useScriptInjection:!0}})

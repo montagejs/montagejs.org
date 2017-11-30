@@ -1,1 +1,0 @@
-var DomUtils=require("../..");exports.name="Get inner HTML",exports.getElements=function(){return" <script>text</script> <!-- comment --> <tag2> text </tag2>"},exports.getByFunction=function(e){return DomUtils.getInnerHTML(DomUtils.getElementById("asdf",e,!0))},exports.expected=" <script>text</script> <!-- comment --> <tag2> text </tag2>";

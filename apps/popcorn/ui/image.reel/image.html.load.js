@@ -1,1 +1,0 @@
-montageDefine("2e4becc","ui/image.reel/image.html",{text:'<!DOCTYPE html>\n\n<html>\n<head>\n    <script type="text/montage-serialization">{"owner":{"prototype":"ui/image.reel","properties":{"element":{"#":"Image"}}}}</script>\n</head>\n<body>\n    <div id=Image class=Image></div>\n</body>\n</html>'})

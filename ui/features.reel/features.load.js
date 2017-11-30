@@ -1,1 +1,0 @@
-montageDefine("d7447cd","ui/features.reel/features",{dependencies:["montage","montage/ui/component"],factory:function(e,n){var t=e("montage").Montage,a=e("montage/ui/component").Component;n.Features=t.create(a,{hasTemplate:{value:!0},convert:{value:function(e){return""+Number(Math.round(e))}},revert:{value:function(e){return""+Number(Math.round(e))}}})}});

@@ -1,1 +1,0 @@
-montageDefine("fb87e57","gallery.reel/gallery",{dependencies:["montage/core/core","montage/ui/component"],factory:function(e,t,n){var r=e("montage/core/core").Montage,i=e("montage/ui/component").Component,s=t.Gallery=r.create(i,{snapshotController:{value:null},list:{value:null},addSnapshot:{value:function(e){this.snapshotController.content.unshift(e)}}})}})

@@ -1,1 +1,0 @@
-var Montage=require("montage").Montage,Converter=require("montage/core/converter/converter").Converter;exports.TridionBodyColorConverter=Montage.create(Converter,{delta:{value:80},convert:{enumerable:!1,value:function(e){return e-this.delta}},revert:{enumerable:!1,value:function(e){return e+this.delta}}})

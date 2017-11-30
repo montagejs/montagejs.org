@@ -1,1 +1,0 @@
-montageDefine("2649653","default-effect-repository/default-effect-repository",{dependencies:["montage/core/core"],factory:function(e,t,n){var r=e("montage/core/core").Montage;DefaultEffectRepository=t.DefaultEffectRepository=r.create(r,{templates:{enumerable:!0,get:function(){var e={};return Object.defineProperty(e,"__builtin_templates",{writable:!0,value:!0}),e}}})}})

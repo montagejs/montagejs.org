@@ -1,1 +1,0 @@
-montageDefine("2e4becc","package.json",{exports:{name:"popcorn",version:"0.0.2",dependencies:{montage:"0.12.4"},bundle:["ui/main.reel"],shard:4,directories:{lib:"./"},hash:"2e4becc",mappings:{montage:{name:"montage",hash:"572fd27",location:"packages/montage@572fd27/"}},production:!0,useScriptInjection:!0}})

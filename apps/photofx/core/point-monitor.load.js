@@ -1,1 +1,0 @@
-montageDefine("a005228","core/point-monitor",{dependencies:["montage"],factory:function(e,t,n){var r=e("montage").Montage;t.PointMonitor=r.create(r,{color:{value:null},x:{value:null},y:{value:null}})}})

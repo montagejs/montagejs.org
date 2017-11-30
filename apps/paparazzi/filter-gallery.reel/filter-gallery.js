@@ -1,1 +1,0 @@
-var Montage=require("montage/core/core").Montage,Component=require("montage/ui/component").Component,FilterGallery=exports.FilterGallery=Montage.create(Component,{filterController:{value:null},list:{value:null},filters:{value:[],distinct:!0},selectedFilter:{value:null},selectedFilterIndex:{value:null}})

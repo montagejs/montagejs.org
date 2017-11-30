@@ -1,1 +1,0 @@
-var Montage=require("montage").Montage,ConfigurationOption=require("core/configuration-option").ConfigurationOption;exports.Interior=Montage.create(ConfigurationOption,{})
