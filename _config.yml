@@ -1,7 +1,9 @@
 permalink: /blog/:year/:month/:day/:title
-markdown: redcarpet
-redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
-
-# Uncomment below for local testing. It will build much faster since it doesn't have to look through all those directories.
-# exclude: [apps, built-apps, node_modules, packages, ui]
+markdown: kramdown
+kramdown:
+    input: GFM
+    auto_ids: true
+    hard_wrap: false
+    syntax_highlighter: rouge
+    syntax_highlighter_opts:
+        css_class: "highlight"
