@@ -91,7 +91,7 @@ The serialization code is the same as in the above example, except the label is 
 ```html
 <form>
      <label for="component">Montage component:</label>
-     <input id="montageComponents" data-montage-id="montageComponents" type="text" placeholder="Component name" />
+     <input id="montageComponents" data-mod-id="montageComponents" type="text" placeholder="Component name" />
 </form>
 ```
 

@@ -1,44 +1,52 @@
 ---
 
 layout: docs
-title: MontageJS Examples
+title: Mod Examples
 
 this-page: montagejs-examples
 
 ---
 
 
-# MontageJS Examples
+# Mod Examples
 
-Follow the links on this page to explore pre-defined demos and source code of MontageJS ui components and features in [Mfiddle](http://montagejs.github.com/mfiddle/).
+Follow the links on this page to explore pre-defined demos and source code of Mod ui components and features in [Mfiddle](http://montagejs.github.com/mfiddle/).
 
-## MontageJS Components
-The following components are pre-built MontageJS components.
+## Mod Components
+
+The following components are pre-built Mod components.
 
 #### Text
+
 * [Hello World](http://montagejs.github.io/mfiddle/#!/5904314)
 * [Set text programmatically](http://montagejs.github.io/mfiddle/#!/5904331)
 * [Set text with a binding](http://montagejs.github.io/mfiddle/#!/6343006)
 
 #### Page Controls
+
 * [Simple repetition](http://montagejs.github.io/mfiddle/#!/5904339)
 * [Simple substitution](http://montagejs.github.io/mfiddle/#!/5906283)
 
 #### Converters
+
 * [Number converters](http://montagejs.github.io/mfiddle/#!/5904344)
 
 #### Composers
+
 * [Press composer](http://montagejs.github.io/mfiddle/#!/7852383)
 * [Translate composer](http://montagejs.github.io/mfiddle/#!/7854041)
 
 #### Pattern
+
 * [Sorting a Repetition](http://montagejs.github.io/mfiddle/#!/7651480)
 
 #### Controllers
+
 * [Tree Controller](http://montagejs.github.io/mfiddle/#!/9011775)
 
 ## UI Components (Digit)
-The following components are part of the touch-optimized Digit widget set, which is part of the default MontageJS installation. 
+
+The following components are part of the touch-optimized Digit widget set, which is part of the default Mod installation.
 
 #### Button
 * [Button with an explicit identifier](http://montagejs.github.io/mfiddle/#!/5906286) (used to link to a handler method)

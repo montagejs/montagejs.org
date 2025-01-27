@@ -7,7 +7,7 @@ title: Naming Conventions
 
 # Naming Conventions
 
-This document summarizes MontageJS-specific naming conventions and recommendations for modules, components, and CSS classes. Please refer to these conventions when creating MontageJS packages or contributing to the MontageJS framework.
+This document summarizes Mod-specific naming conventions and recommendations for modules, components, and CSS classes. Please refer to these conventions when creating Mod packages or contributing to the Mod framework.
 
 
 ## Modules
@@ -17,7 +17,7 @@ All module and package names are written in lowercase letters or numbers and del
 
 ## Components (.mod)
 
-User interface components are stored in the ui directory of your MontageJS project and identified by a .mod extension.
+User interface components are stored in the ui directory of your Mod project and identified by a .mod extension.
 
 The following naming conventions apply for `.mod` directories:
 
@@ -42,7 +42,7 @@ More specifically, the following conventions apply:
 2. Followed by the **Component** name that always starts with an uppercase letter; for example a button component would be: `digit-Button` and used as: 
 
     ```html
-    <button data-montage-id="button" class="digit-Button">
+    <button data-mod-id="button" class="digit-Button">
     ```
 
     If a component name consists of more than one word, each new word also starts with an uppercase letter, a convention commonly  referred to as **upper camel case** ("CamelCaps") formatting; for example, `montage-InputRange`.

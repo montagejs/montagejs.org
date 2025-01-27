@@ -1,7 +1,7 @@
 ---
 
 layout: docs
-title: MontageJS Overlay UI Container
+title: Mod Overlay UI Container
 
 prev-page: substitution
 this-page: overlay
@@ -11,7 +11,7 @@ next-page: faq
 
 # Overlay
 
-The `Overlay` component positions content over your page. You can use any MontageJS prebuilt or custom component in combination with the Overlay component to create different styles of overlay. For example, you can create eye candy (using an image overlay), create an overlay with a text caption, a presentation, interaction, and so on.
+The `Overlay` component positions content over your page. You can use any Mod prebuilt or custom component in combination with the Overlay component to create different styles of overlay. For example, you can create eye candy (using an image overlay), create an overlay with a text caption, a presentation, interaction, and so on.
 
 The `Overlay` positions content over the page.
 
@@ -30,7 +30,7 @@ The following snippet shows how to set up an overlay:
 ```
 
 ```html
-<div data-montage-id="overlayImage">
+<div data-mod-id="overlayImage">
     <img src="http://montagejs.org/images/logo-montage.png">
 </div>
 ```

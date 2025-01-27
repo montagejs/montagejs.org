@@ -1,36 +1,36 @@
 ---
 
 layout: docs
-title: Reddit Client with MontageJS - MontageJS Tutorial
+title: Reddit Client with Mod - Mod Tutorial
 
 this-page: tutorial-reddit-client-with-montagejs
 
 ---
 
-# Building a Simple Reddit Client with MontageJS
+# Building a Simple Reddit Client with Mod
 
 Many data-driven web applications need to display sequences of objects, often with specialized presentation. Consider some common examples: an employee directory that shows a list of names and phone numbers, a photo gallery that shows image thumbnails with captions, or a group chat interface that shows a list of messages accompanied by senders and time stamps. The manner in which the information is presented differs in each of those cases, but they all represent the same underlying pattern: a repeating group of elements.
 
-In MontageJS applications, a repeating group of elements  can be displayed with the prebuilt Repetition component. The component instructs an application to repeat a bit of HTML markup once for each item in the provided sequence. The Repetition component is an important building block in MontageJS development, serving a similar purpose to the loop expressions found in conventional template languages. Typical use cases include dynamic user interface elements, such as dynamically created lists.
+In Mod applications, a repeating group of elements  can be displayed with the prebuilt Repetition component. The component instructs an application to repeat a bit of HTML markup once for each item in the provided sequence. The Repetition component is an important building block in Mod development, serving a similar purpose to the loop expressions found in conventional template languages. Typical use cases include dynamic user interface elements, such as dynamically created lists.
 
 This tutorial shows you how to build a simple reddit client using the Repetition component. The application consists of two lists (see Figure 1):  a list of stories (on the left) and a list of popular subreddits (on the right). When you click a subreddit, the application uses the reddit API to obtain the top stories from the selected category. Stories are displayed with title, submitter, and current score details.
 
 <figure>
  <img src="{{ site.baseurl }}/images/docs/tutorials/reddit-client/fig01.png" alt="The final application.">
-	<figcaption><strong>Figure 1.</strong> A simple reddit client built on MontageJS.</figcaption>
+	<figcaption><strong>Figure 1.</strong> A simple reddit client built on Mod.</figcaption>
 </figure>
 
 <a href="http://montagejs.github.io/mfiddle/preview/#!/7881457" target="_blank">View the demo</a>
 
 # Requirements
 
-To make the most of this tutorial, you should be familiar with the basics of MontageJS concepts and development. If you are new to the MontageJS framework, you might want to step through the MontageJS [Getting Started](http://montagejs.org/docs/montagejs-setup.html) guide first to get a feel for working with MontageJS components.
+To make the most of this tutorial, you should be familiar with the basics of Mod concepts and development. If you are new to the Mod framework, you might want to step through the Mod [Getting Started](http://montagejs.org/docs/montagejs-setup.html) guide first to get a feel for working with Mod components.
 
 # Building the Application
 
-For this tutorial, you do not have to set up a new MontageJS project. Instead, you can follow along using <a href="http://montagejs.github.io/mfiddle/" target="_blank">MFiddle</a>, the online MontageJS component editor: Each top-level section in this tutorial ends with a link to a saved MFiddle that includes the code for the current state of the application for you to explore.
+For this tutorial, you do not have to set up a new Mod project. Instead, you can follow along using <a href="http://montagejs.github.io/mfiddle/" target="_blank">MFiddle</a>, the online Mod component editor: Each top-level section in this tutorial ends with a link to a saved MFiddle that includes the code for the current state of the application for you to explore.
 
->**Note:** If you wanted to follow along building the application from scratch, you would have to set up a new MontageJS project first (for details see the <a href="http://montagejs.org/docs/montagejs-setup.html" target="_blank">Setup guide</a>). Next, to follow best practice, you would create a new RedditClient component, and then link it to the Main component of your project. (Remember: Main is the main user interface component of the application. Think of it as the MontageJS equivalent of a website's index page or the principal screen of your single-page application: it can contain any number of subcomponents for the presentation and behavior of an application.)
+>**Note:** If you wanted to follow along building the application from scratch, you would have to set up a new Mod project first (for details see the <a href="http://montagejs.org/docs/montagejs-setup.html" target="_blank">Setup guide</a>). Next, to follow best practice, you would create a new RedditClient component, and then link it to the Main component of your project. (Remember: Main is the main user interface component of the application. Think of it as the Mod equivalent of a website's index page or the principal screen of your single-page application: it can contain any number of subcomponents for the presentation and behavior of an application.)
 
 This tutorial first explains how to build the subreddit navigation and populate it with live data, and then how to display the top stories in the application.
 
@@ -47,8 +47,8 @@ The list of subreddits is, strictly speaking, a group of repeating elements that
     * A single list item.
 
     ```html
-    <ul data-montage-id="items">
-        <li data-montage-id="item"></li>
+    <ul data-mod-id="items">
+        <li data-mod-id="item"></li>
     </ul>
     ```
 
@@ -86,7 +86,7 @@ At this point, the application displays a bulleted list of five items with the s
 
 Next, modify the `item` object so that each list item element displays the actual value of the underlying array item. The Repetition component has a special property called `objectAtCurrentIteration` that is used to access the value from the array. To make each item in the list display its number, bind the value of the `item` object to the `rep`'s `objectAtCurrentIteration` property.
 
->**Note:** MontageJS uses <a href="https://github.com/montagejs/frb/blob/master/README.md" target="_blank">functional reactive bindings</a> (FRB) to help keep user interface and model data in sync. FRB is a declarative language for binding properties and querying collections, to keep them in sync incrementally. 
+>**Note:** Mod uses <a href="https://github.com/montagejs/frb/blob/master/README.md" target="_blank">functional reactive bindings</a> (FRB) to help keep user interface and model data in sync. FRB is a declarative language for binding properties and querying collections, to keep them in sync incrementally. 
 
 ```json
 "item": {
@@ -196,11 +196,11 @@ Next, add a text header that uses bindings to show the name of the selected item
 1. To your template's markup, add an `h1` element:
 
     ```html
-    <div data-montage-id="component">
-        <h1 data-montage-id="currentsub"></h1>
+    <div data-mod-id="component">
+        <h1 data-mod-id="currentsub"></h1>
         
-        <ul data-montage-id="items">
-            <li data-montage-id="item"></li>
+        <ul data-mod-id="items">
+            <li data-mod-id="item"></li>
         </ul>
     </div>
     ```
@@ -270,7 +270,7 @@ In this example, raw JSON data is passed from a remote API directly into the app
 
 ### Consuming Live Data
 
-Unlike many other JavaScript MVC frameworks, MontageJS doesn't require developers to peel apart the data and wrap values with special functions in order to make them observable; instead it operates directly on conventional JavaScript data structures. Naturally, the data that is consumed from the API looks a bit different from the dummy data used earlier. Each item in the list returned by the reddit API looks a bit like this:
+Unlike many other JavaScript MVC frameworks, Mod doesn't require developers to peel apart the data and wrap values with special functions in order to make them observable; instead it operates directly on conventional JavaScript data structures. Naturally, the data that is consumed from the API looks a bit different from the dummy data used earlier. Each item in the list returned by the reddit API looks a bit like this:
 
 ```json
 {
@@ -376,19 +376,19 @@ To obtain and display the reddit posts you use the same approach you used for th
     For this example, the application will display the reddit stories in a table with two columns: the first column displays a post's current score; the second column shows the title and author.
 
     ```html
-    <div data-montage-id="component">
-        <h1 data-montage-id="currentsub"></h1>
+    <div data-mod-id="component">
+        <h1 data-mod-id="currentsub"></h1>
         
-        <ul data-montage-id="items">
-            <li data-montage-id="item"></li>
+        <ul data-mod-id="items">
+            <li data-mod-id="item"></li>
         </ul>
         
-        <table data-montage-id="stories">
+        <table data-mod-id="stories">
             <tr>
-                <td data-montage-id="score"></td>
+                <td data-mod-id="score"></td>
                 <td>
-                    <p><a data-montage-id="title"></a></p>
-                    <p>Posted by <span data-montage-id="author"></span></p>
+                    <p><a data-mod-id="title"></a></p>
+                    <p>Posted by <span data-mod-id="author"></span></p>
                 </td>
             </tr>
         </table>
@@ -480,29 +480,29 @@ At this point, the functional part of the application is complete. When users cl
 
 # Styling the Application
 
-MontageJS components are built from standard HTML markup, which means that developers can use the power of CSS to prettify applications. This example uses light text on a dark backround, with a light font weight and purple highlighting for the list item selection.
+Mod components are built from standard HTML markup, which means that developers can use the power of CSS to prettify applications. This example uses light text on a dark backround, with a light font weight and purple highlighting for the list item selection.
 
 First, add some `class` attributes to your markup. A few minor structural changes, such as moving the score text into a paragraph tag, might help as well. The following snippet shows the final markup:
 
 ```html
-<div data-montage-id="component">
-    <h1 data-montage-id="currentsub"></h1>
+<div data-mod-id="component">
+    <h1 data-mod-id="currentsub"></h1>
     
     <div class="navigation">
         <div class="header">Navigation</div>
-        <ul data-montage-id="items">
-            <li data-montage-id="item"></li>
+        <ul data-mod-id="items">
+            <li data-mod-id="item"></li>
         </ul>
     </div>
     
-    <table data-montage-id="stories">
+    <table data-mod-id="stories">
         <tbody><tr>
             <td>
-                <p class="score" data-montage-id="score"></p>
+                <p class="score" data-mod-id="score"></p>
             </td>
             <td>
-                <p class="title"><a data-montage-id="title"></a></p>
-                <p class="author">Posted by <span data-montage-id="author"></span></p>
+                <p class="title"><a data-mod-id="title"></a></p>
+                <p class="author">Posted by <span data-mod-id="author"></span></p>
             </td>
         </tr></tbody>
     </table>
@@ -515,11 +515,11 @@ After modifying your markup, you specify the CSS rules in your component's CSS f
 
 ## Next Steps
 
-The flexible component architecture and powerful MontageJS binding system reduce the amount of code that you need to write when building applications. You can use simple, declarative bindings to define relatively complex behaviors.
+The flexible component architecture and powerful Mod binding system reduce the amount of code that you need to write when building applications. You can use simple, declarative bindings to define relatively complex behaviors.
 
-For more information about the reddit client and developing applications with MontageJS, refer to the following resources:
+For more information about the reddit client and developing applications with Mod, refer to the following resources:
 
 * <a href="https://github.com/segphault/mjs-reddit-viewer" target="_blank">Source code of the reddit client application</a>
-* [MontageJS Documentation](http://montagejs.org/docs/)
-* <a href="http://seg.phault.net/montage/cookbook/" target="_blank">MontageJS Cookbook</a>
-* [Getting Started with MontageJS](http://montagejs.org/docs/montagejs-setup.html) steps you through the process of setting up your MontageJS development environment. 
+* [Mod Documentation](http://montagejs.org/docs/)
+* <a href="http://seg.phault.net/montage/cookbook/" target="_blank">Mod Cookbook</a>
+* [Getting Started with Mod](http://montagejs.org/docs/montagejs-setup.html) steps you through the process of setting up your Mod development environment. 

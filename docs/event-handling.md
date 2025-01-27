@@ -1,7 +1,7 @@
 ---
 
 layout: docs
-title: MontageJS Event Handling
+title: Mod Event Handling
 
 prev-page: data-binding
 this-page: event-handling

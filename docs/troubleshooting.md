@@ -11,15 +11,15 @@ this-page: troubleshooting
 # Troubleshooting
 
 
-**My MontageJS application does not appear as expected in the browser.**
+**My Mod application does not appear as expected in the browser.**
 
-If you test a MontageJS application in the browser and don't see what you expect, open the JavaScript console to look for any errors or warnings. Most modern web browsers include a JavaScript debugger, console, and related tools that can help debug problems with MontageJS applications. These tools are built into the latest versions of Chrome and Safari. You use the browser's `console.log()` method to send output to the console.
+If you test a Mod application in the browser and don't see what you expect, open the JavaScript console to look for any errors or warnings. Most modern web browsers include a JavaScript debugger, console, and related tools that can help debug problems with Mod applications. These tools are built into the latest versions of Chrome and Safari. You use the browser's `console.log()` method to send output to the console.
 
 * To open the console in Chrome, select View > Developer > JavaScript console.
 * To open the console in Safari, first enable the Develop menu (Safari Preferences > Advanced > Show Develop menu in menu bar), then select Develop > Show Error Console.
 
 
-**I get a "Warning: Element xxx not found in template" message when I try to run my MontageJS application.**
+**I get a "Warning: Element xxx not found in template" message when I try to run my Mod application.**
 
 Invalid element references are usually the result of mismatched element IDs. For example, in the following abbreviated code, the ID of the <div> element referenced in the serialization (`"loginButton"`) does not match the element's actual ID (`"loginBtn"`).
 
@@ -49,7 +49,7 @@ http://localhost:8081/examples/myapp/mycomponent.mod/mycomponent.html
 
 **I get an "Object "xxx" not found at "yyy"" error message.**
 
-If you provide an invalid value for a serialized object's `"name"` property, MontageJS will generate an error. For example, the following serialization will generate this error, since the symbol name is misspelled `"Buttonn"` instead of `"Button"`.
+If you provide an invalid value for a serialized object's `"name"` property, Mod will generate an error. For example, the following serialization will generate this error, since the symbol name is misspelled `"Buttonn"` instead of `"Button"`.
 
 ```json
 <script type="text/montage-serialization">
@@ -96,7 +96,7 @@ Can't XHR "http://localhost:8081/ui/textfield.mod/textfield.js"
 
 **I get an "unexpected comma" error.**
 
-Trailing "serial" commas are a common JSON formatting concern. The JSON serialization block must be well-formed for MontageJS to parse it successfully. A trailing comma after the last property in a JSON object or array generates runtime errors. In the following example, the comma that trails the `readyState` property would generate a parsing error:
+Trailing "serial" commas are a common JSON formatting concern. The JSON serialization block must be well-formed for Mod to parse it successfully. A trailing comma after the last property in a JSON object or array generates runtime errors. In the following example, the comma that trails the `readyState` property would generate a parsing error:
 
 ```
 "anObject": {
@@ -106,7 +106,7 @@ Trailing "serial" commas are a common JSON formatting concern. The JSON serializ
 }
 ```
 
-Likewise, in the following MontageJS serialization block, the trailing comma after the `"passwordInput"` JSON object would generate an "unexpected comma" error at runtime. 
+Likewise, in the following Mod serialization block, the trailing comma after the `"passwordInput"` JSON object would generate an "unexpected comma" error at runtime.
 
 ```json
 <script type="text/montage-serialization">

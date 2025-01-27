@@ -1,7 +1,7 @@
 ---
 
 layout: docs
-title: MontageJS Repetition UI Container
+title: Mod Repetition UI Container
 
 prev-page: native-components
 this-page: repetition
@@ -13,16 +13,16 @@ next-page: substitution
 
 The Repetition component is used to produce a repeating group of elements based on an array of values. All elements nested inside of the Repetition element will repeat in each iteration. The content inside of a repetition is managed by a controller. You can set the Repetition component's `content` property manually with a standard array for a simple repetition. You can also expand the component's capabilities by assigning a RangeController component to its `contentController` property.
 
-You can use the Repetition component as a building block to repeat any number of user interface components. (The MontageJS List component, for example, uses the Repetition component to support selection management.) All elements nested inside of the Repetition element will repeat in each iteration of the repetition. You can use the bindable `iteration.object` property to point to the current list item.
+You can use the Repetition component as a building block to repeat any number of user interface components. (The Mod List component, for example, uses the Repetition component to support selection management.) All elements nested inside of the Repetition element will repeat in each iteration of the repetition. You can use the bindable `iteration.object` property to point to the current list item.
 
 ## A Simple Repetition
 
 The following example shows a simple Repetition (`items`) that produces three text items. Each iteration is associated with a corresponding item in a source collection, which is populated through the Repetition component's `content` property.
 
 ```html
-<div data-montage-id="content" class="Content">
-    <ul data-montage-id="items">
-        <li data-montage-id="item"></li>
+<div data-mod-id="content" class="Content">
+    <ul data-mod-id="items">
+        <li data-mod-id="item"></li>
     </ul>
 </div>
 ```
@@ -95,10 +95,10 @@ In this example:
 * Clicking the Change Content button replaces the managed content with new random content.
 
 ```html
-<div data-montage-id="component">
-    <button data-montage-id="button"></button>
-    <ul data-montage-id="repetition">
-        <li data-montage-id="value"></li>
+<div data-mod-id="component">
+    <button data-mod-id="button"></button>
+    <ul data-mod-id="repetition">
+        <li data-mod-id="value"></li>
     </ul>
 </div>
 ```
@@ -195,12 +195,12 @@ To sort and filter items in a repetition you can use use FRB expressions on the 
 You can also use complex expressions inside of sort and filter operations. For example, when the repetition's content has an index property that is a sequence of integers, you can filter out the odd numbers like this: `!(index%2)`.
 
 ```html
-<div data-montage-id="component">
-    <button data-montage-id="filterButton"></button>
-    <button data-montage-id="sortButton"></button>
+<div data-mod-id="component">
+    <button data-mod-id="filterButton"></button>
+    <button data-mod-id="sortButton"></button>
 
-    <ul data-montage-id="repetition">
-        <li data-montage-id="quote"></li>
+    <ul data-mod-id="repetition">
+        <li data-mod-id="quote"></li>
     </ul>
 </div>
 ```
@@ -319,12 +319,12 @@ To allow users to select an item in a repetition:
 Note that users could select multiple items.
 
 ```html
-<div data-montage-id="component">
-    <div data-montage-id="repetition">
-        <p data-montage-id="value"></p>
+<div data-mod-id="component">
+    <div data-mod-id="repetition">
+        <p data-mod-id="value"></p>
     </div>
-    <select data-montage-id="select"></select>
-    <p data-montage-id="log"></p>
+    <select data-mod-id="select"></select>
+    <p data-mod-id="log"></p>
 </div>
 ```
 

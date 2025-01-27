@@ -1,7 +1,7 @@
 ---
 
 layout: docs
-title: MontageJS Substitution UI Container
+title: Mod Substitution UI Container
 
 prev-page: repetition
 this-page: substitution
@@ -33,7 +33,7 @@ The elements are set up in the substitution with DOM arguments. The name of each
 ```
 
 ```html
-<div data-montage-id="substitution">
+<div data-mod-id="substitution">
     <div data-arg="profile">
         First Name: Homer
         Last Name: Simpson
@@ -74,9 +74,9 @@ Dom arguments can also be elements of components:
 ```
 
 ```html
-<div data-montage-id="substitution">
-    <div data-arg="profile" data-montage-id="userProfile"></div>
-    <div data-arg="contact" data-montage-id="userContact"></div>
+<div data-mod-id="substitution">
+    <div data-arg="profile" data-mod-id="userProfile"></div>
+    <div data-arg="contact" data-mod-id="userContact"></div>
 </div>
 ```
 

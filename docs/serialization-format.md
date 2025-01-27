@@ -1,7 +1,7 @@
 ---
 
 layout: docs
-title: MontageJS Declaration
+title: Mod Declaration
 
 prev-page: exploring-components
 this-page: serialization-format
@@ -10,13 +10,13 @@ next-page: montagejs-objects
 ---
 
 
-# MontageJS Declaration
+# Mod Declaration
 
 >**Note:** We are currently in the process of updating our docs. This document may not be complete or fully up-to-date yet. We apologize for any inconvenience.
 
 This document explains the serialization format Montage uses to serialize, and later deserialize, an _object graph_ AKA declaration
 
-A declaration describes the objects, components, properties, component data bindings, and DOM relationships involved in a MontageJS application. MontageJS uses JavaScript Object Notation (JSON) as the serialization format. At runtime, Montage parses the JSON structure and deserializes its contents into JavaScript, which is then evaluated and executed in the browser.
+A declaration describes the objects, components, properties, component data bindings, and DOM relationships involved in a Mod application. Mod uses JavaScript Object Notation (JSON) as the serialization format. At runtime, Montage parses the JSON structure and deserializes its contents into JavaScript, which is then evaluated and executed in the browser.
 
 ## JSON Overview
 JSON, a text format designed for serializing structured data, can represent six data types:
@@ -40,10 +40,10 @@ For example, the following JSON content defines an object named `anObject` that 
 }
 ```
 
-In addition to these standard data types, MontageJS supports a few special types to enable serialization of more complex objects. These types include references to other objects in the same serialization, DOM references, functions, and regular expressions.
+In addition to these standard data types, Mod supports a few special types to enable serialization of more complex objects. These types include references to other objects in the same serialization, DOM references, functions, and regular expressions.
 
 ## Declaration Example
-The following simple (yet complete) MontageJS application is defined in a single HTML document. This example gives you an idea of what serialization in MontageJS is about and why it's useful.
+The following simple (yet complete) Mod application is defined in a single HTML document. This example gives you an idea of what serialization in Mod is about and why it's useful.
 
 ```html
 <html>
@@ -59,16 +59,16 @@ The following simple (yet complete) MontageJS application is defined in a single
    }
    </script>
    <body>
-    <input data-montage-id="fName"></input>
+    <input data-mod-id="fName"></input>
    <body>
 </html>
 ```
 
 Important things to note:
 
-* The HTML body section contains a single `<input>` tag, identified with the [custom data-attribute](http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#custom-data-attribute) `data-montage-id` of `fName`. 
-* The head section contains a `<script>` block of type `text/montage-serialization`. This block contains all serialized MontageJS objects used in the document.
-* The serialization block declares a MontageJS TextField component with an object label of `firstName`. The component's module ID ("digit/ui/text.mod") and its name ("textfield") allow MontageJS to recreate the component from its serialized form at runtime.
+* The HTML body section contains a single `<input>` tag, identified with the [custom data-attribute](http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#custom-data-attribute) `data-mod-id` of `fName`.
+* The head section contains a `<script>` block of type `text/montage-serialization`. This block contains all serialized Mod objects used in the document.
+* The serialization block declares a Mod TextField component with an object label of `firstName`. The component's module ID ("digit/ui/text.mod") and its name ("textfield") allow Mod to recreate the component from its serialized form at runtime.
 * The `properties` object assigns initial values to the component's properties. One of the most important properties of a Montage component is its `element` property, which corresponds to the associated HTML body element on which the component operates. In this case, the TextField component's `element` property is set to the `<input>` tag that has the ID `"fName"`. The Montage serialization format provides a special JSON object representation to refer to an element. This special object's name is a hash mark ("#") and its value is the ID of the element.
 * Montage can load components from a directory that has a .mod extension. The module system redirects `require("x.mod")` to `require("x.mod/x")`.
 
@@ -102,7 +102,7 @@ The following sections explain object-dependent declarations.
 ### Serializing a Custom Object
 To serialize custom JavaScript objects, including Montage components, define a JSON object with two properties: `module` and `name`. These properties correspond to the ID of the module that defines (or exports) the object with the specified name.
 
-For example, the following declaration fragment declares a MontageJS Button component:
+For example, the following declaration fragment declares a Mod Button component:
 
 ```html
 <script type="text/montage-serialization">
@@ -136,13 +136,13 @@ You can assign initial values to an object's properties in a declaration by addi
 ```
 
 ### Referencing DOM Elements
-You can reference DOM elements from a MontageJS declaration using a special JSON object representation. This is commonly used to assign an HTML element to a component's `element` property, or anytime you need a reference to a DOM element.
+You can reference DOM elements from a Mod declaration using a special JSON object representation. This is commonly used to assign an HTML element to a component's `element` property, or anytime you need a reference to a DOM element.
 
 To reference an element by ID, use the following JSON syntax, where _elementID_ is the ID of an element in the document that contains the serialization:
 
 `{"#": "elementID"}`
 
-For example, the following block declares a MontageJS Button component whose `element` property is assigned the <div> with the ID of `loginButton`:
+For example, the following block declares a Mod Button component whose `element` property is assigned the <div> with the ID of `loginButton`:
 
 ```html
 // index.html
@@ -160,13 +160,13 @@ For example, the following block declares a MontageJS Button component whose `el
  }
  </script>
  <body>
-      <div data-montage-id="loginButton" class="Text">Click to enter</div>
+      <div data-mod-id="loginButton" class="Text">Click to enter</div>
  <body>
 </html>
 ```
 
 ### Referencing Other Objects
-Often you need to reference one serialized MontageJS object from another object in the same serialization. For instance, the serialization might declare a Montage button that you want to reference from the controller (or owner) object in the serialization.
+Often you need to reference one serialized Mod object from another object in the same serialization. For instance, the serialization might declare a Montage button that you want to reference from the controller (or owner) object in the serialization.
 
 To reference an element by ID, use the following JSON syntax. In this example, _objectLabel_ is the label assigned to the serialized object.
 
@@ -226,7 +226,7 @@ Next, create the main HTML document that declares the Button and Main components
  </script>
 <body>
     <div id="main">
-        <div data-montage-id="buttonDiv" class="Text">Click to enter</div>
+        <div data-mod-id="buttonDiv" class="Text">Click to enter</div>
     </div>
 <body>
 </html>
@@ -291,8 +291,8 @@ The following simple example adds data bindings to a serialization. It consists 
     </script>
 </head>
 <body>
-    <div data-montage-id="slider1"></div>
-    <div data-montage-id="slider2"></div>
+    <div data-mod-id="slider1"></div>
+    <div data-mod-id="slider2"></div>
 </body>
 </html>
 ```
@@ -351,7 +351,7 @@ The following is the HTML document and component serialization. The "loginBtn" o
  </script>
 <body>
     <div id="main">
-        <div data-montage-id="buttonDiv" class="Text">Click to enter</div>
+        <div data-mod-id="buttonDiv" class="Text">Click to enter</div>
     </div>
 <body>
 </html>

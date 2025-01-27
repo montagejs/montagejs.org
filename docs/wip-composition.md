@@ -1,11 +1,11 @@
 ---
 
 layout: docs
-title: Component composition using Montage
+title: Component composition using Mod
 
 ---
 
-# Component composition using Montage.
+# Component composition using Mod
 
 The way to create and compose the ui for your application using montage is primarily by expressing this in the markup of your templates.
 
@@ -33,8 +33,8 @@ The way to create and compose the ui for your application using montage is prima
 }</script>
 ...
 <body>
-    <ul data-montage-id="repetition">
-        <li data-montage-id="text"></li>
+    <ul data-mod-id="repetition">
+        <li data-mod-id="text"></li>
     </ul>
 </body>
 ...
@@ -65,8 +65,8 @@ Via the markup we are passing a parameter to the Repetition (the li element) and
 }</script>
 ...
 <body>
-    <div data-montage-id="condition">
-        <span data-montage-id="text"></span>
+    <div data-mod-id="condition">
+        <span data-mod-id="text"></span>
     </div>
 </body>
 ...
@@ -97,8 +97,8 @@ Given the desired usage for CustomComponent.
 }</script>
 ...
 <body>
-    <div data-montage-id="customComponent">
-        <span data-montage-id="text"></span>         <- innerTemplate
+    <div data-mod-id="customComponent">
+        <span data-mod-id="text"></span>         <- innerTemplate
     </div>
 </body>
 ...
@@ -148,7 +148,7 @@ The Substitution component allows you to branch the component tree based on a ke
 }</script>
 ...
 <body>
-    Customer name: <div data-montage-id="customerNameSubstitution"></div>
+    Customer name: <div data-mod-id="customerNameSubstitution"></div>
 </body>
 ...
 ```
@@ -177,10 +177,10 @@ The Exposition component allows you to specify components that might or might no
 }</script>
 ...
 <body>
-    <div data-montage-id="preferences">
-        <div data-param="display"  data-montage-id="displayPanel"></div>
-        <div data-param="network"  data-montage-id="networkPanel"></div>
-        <div data-param="users"  data-montage-id="usersPanel"></div>
+    <div data-mod-id="preferences">
+        <div data-param="display"  data-mod-id="displayPanel"></div>
+        <div data-param="network"  data-mod-id="networkPanel"></div>
+        <div data-param="users"  data-mod-id="usersPanel"></div>
     </div>
 </body>
 ...

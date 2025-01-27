@@ -95,7 +95,7 @@ The only thing left is to hook the JavaScript up to some HTML using the Montage 
 
 HTML:
 ```html
-<div data-montage-id="pressme" class="press-target">Click or long click me!</div>
+<div data-mod-id="pressme" class="press-target">Click or long click me!</div>
 ```
 
 Serialization:

@@ -1,7 +1,7 @@
 ---
 
 layout: docs
-title: Overview - MontageJS Themes
+title: Overview - Mod Themes
 
 this-page: themes
 next-page: theme-digit-components
@@ -15,4 +15,4 @@ The Montage framework includes three widget sets or themes for user interface co
 * Matte contains desktop-optimized UI components. 
 * Native uses the browser's default styles. 
 
-Digit is part of the default MontageJS distribution. If you want to use the Matte and Native themes you have to install them separately.
+Digit is part of the default Mod distribution. If you want to use the Matte and Native themes you have to install them separately.

@@ -19,10 +19,10 @@ With the pull request workflow, there are now 3 masters to keep in sync, montage
 Without having master checked out run the following command.
 
 ``
-git fetch montage && git branch -f master montage/master && git 	fetch personal && git push personal montage/master:master
+git fetch montage && git branch -f master montage/master && git fetch personal && git push personal montage/master:master
 ``
 **git fetch montage** Gets all the new commits from the main montage remote.
-**git branch -f master montage/master** Move your local master branch’s ref so that is pointing to 	the same ref as montage/master is.
+**git branch -f master montage/master** Move your local master branch’s ref so that is pointing to the same ref as montage/master is.
 **git fetch personal** Gets all the new commits from your personal fork’s remote.
 **git push personal montage/master:master** Pushing the commits that we learnt about from montage into your personal fork.
 What is this git push command with 2 parameters? It is simply a more explicit syntax:

@@ -1,7 +1,7 @@
 ---
 
 layout: docs
-title: minit | MontageJS utility
+title: minit | Mod utility
 
 this-page: tools-minit
 next-page: tools-mop
@@ -10,9 +10,9 @@ next-page: tools-mop
 
 # Using minit
 
-MontageJS includes two commond line utilities: minit and mop. You use minit to ...; you use mop to optimize an application in production.
+Mod includes two commond line utilities: minit and mop. You use minit to ...; you use mop to optimize an application in production.
 
-The MontageJS initializer, <a href="https://github.com/montagejs/minit#minit--the-montage-initializer" target="_blank">minit</a> is a multipurpose command line utility that provides a convenient way to kickstart and serve your MontageJS projects. With minit you can quickly generate default application directories (or projects) or add components to an existing project. Minit also doubles as a single server so you can preview your application locally.
+The Mod initializer, <a href="https://github.com/montagejs/minit#minit--the-montage-initializer" target="_blank">minit</a> is a multipurpose command line utility that provides a convenient way to kickstart and serve your Mod projects. With minit you can quickly generate default application directories (or projects) or add components to an existing project. Minit also doubles as a single server so you can preview your application locally.
 
 ## Basic Examples of Using minit
 
@@ -22,7 +22,7 @@ Run the following commands from within your project directory:
 
     <pre>$ minit create:app -n <em>app-name</em></pre>
 
-    This generates a new directory—*app-name*, which contains the default MontageJS application directories with production dependencies—in the current directory.
+    This generates a new directory—*app-name*, which contains the default Mod application directories with production dependencies—in the current directory.
 
 * To add a component to a project:
 

@@ -1,7 +1,7 @@
 ---
 
 layout: docs
-title: Native - MontageJS Theme
+title: Native - Mod Theme
 
 prev-page: theme-matte-components
 this-page: theme-native-components
@@ -11,12 +11,12 @@ this-page: theme-native-components
 
 # Native Theme
 
-The Native set uses the browser's default styles. Use this set if you want to custom design your user interface components yet still gain access to MontageJS features such as data binding and the MontageJS event handling model.
+The Native set uses the browser's default styles. Use this set if you want to custom design your user interface components yet still gain access to Mod features such as data binding and the Mod event handling model.
 
 ![Native](../images/themes/native.png)
 
 ## Benefits
-MontageJS native components support the same powerful binding and event listener models as the Digit and Matte themes. They also have the following benefits:
+Mod native components support the same powerful binding and event listener models as the Digit and Matte themes. They also have the following benefits:
 
 * **Smaller footprint**: Custom components often include a number of elements to achieve the desired styling. In addition to the extra markup, the additional component CSS also has to be downloaded.
 
@@ -37,7 +37,7 @@ Component | Description
 <a href="https://github.com/montagejs/native/tree/master/ui/input-range.reel" target="_blank">InputRange</a> | Provides slider functionality. It wraps the `input` element with type of `range`.
 <a href="https://github.com/montagejs/native/tree/master/ui/input-text.reel" target="_blank">InputText</a> | Provides functionality for a single-line text field. It wraps the `input` element with a type of `text`.
 <a href="https://github.com/montagejs/native/tree/master/ui/progress.reel" target="_blank">Progress</a> | Provides progress bar functionality. It wraps the `progress` element.
-<a href="https://github.com/montagejs/native/tree/master/ui/select.reel" target="_blank">Select</a> | Provides drop-down list functionality in MontageJS. It wraps the `input` element with type of `select`.
+<a href="https://github.com/montagejs/native/tree/master/ui/select.reel" target="_blank">Select</a> | Provides drop-down list functionality in Mod. It wraps the `input` element with type of `select`.
 <a href="https://github.com/montagejs/native/tree/master/ui/textarea.reel" target="_blank">TextArea</a> | Provides functionality for a multiline text field. It wraps the `textarea` element.
 
 
@@ -68,7 +68,7 @@ For example, here is an HTML button hooked up as a Button component:
 **HTML body**
 
 ```html
-<button data-montage-id="button">I'm a native button</button>
+<button data-mod-id="button">I'm a native button</button>
 ```
 
 **Serialization**
@@ -91,8 +91,8 @@ The following example adds a range slider that is hooked up to an InputRange com
 <h1>Pump up the volume</h1>
 <form>
     <label for="slider1">Volume</label>
-    <input type="range" data-montage-id="slider1" min="0" max="11"/>
-    <output for="slider1" data-montage-id="volume"></output>
+    <input type="range" data-mod-id="slider1" min="0" max="11"/>
+    <output for="slider1" data-mod-id="volume"></output>
 </form>
 ```
 
@@ -121,16 +121,16 @@ The following example adds a range slider that is hooked up to an InputRange com
 ## Native Component State
 In the example above two attributes are set on the slider: `min` and `max`. These attributes map to the `min` and `max` properties of the InputRange component. All nondeprecated standard attributes map in this way to a component property. This includes <a href="http://dev.w3.org/html5/markup/global-attributes.html" target="_blank">global attributes</a> as well as attributes specific to each element. All of these properties can be used in bindings.
 
-As these two attributes were specified in the original HTML (rather than with a script later), they are available at serialization time and thus the values are stored in their equivalent MontageJS properties.
+As these two attributes were specified in the original HTML (rather than with a script later), they are available at serialization time and thus the values are stored in their equivalent Mod properties.
 
-If the attributes are updated later, after serialization takes place, the new values will not be synced with the MontageJS properties and the model and view will get out of sync. To avoid expensive reflow, it is better to update the component properties directly, rather than mutating the DOM, as this will keep things in sync. This potentially also gives you performance gains as DOM manipulation can be performance sensitive, and MontageJS can optimize how it interacts with the DOM.
+If the attributes are updated later, after serialization takes place, the new values will not be synced with the Mod properties and the model and view will get out of sync. To avoid expensive reflow, it is better to update the component properties directly, rather than mutating the DOM, as this will keep things in sync. This potentially also gives you performance gains as DOM manipulation can be performance sensitive, and Mod can optimize how it interacts with the DOM.
 
 The following example shows how to set the `min` and `max` properties in the serialization rather than using attributes in the HTML. In this particular case adding via HTML would be fine as they're added before serialization happens, but it is worth showing how to set it in this manor.
 
 In this example the HTML stays the same, except the range slider:
 
 ```html
-<input type="range" data-montage-id="testSlider"/>
+<input type="range" data-mod-id="testSlider"/>
 ```
 
 Then the properties section of the slider serialization is updated to add the two new min and max properties:

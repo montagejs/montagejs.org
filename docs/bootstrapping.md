@@ -5,7 +5,7 @@ title: Montage Bootstrapping
 
 ---
 
-# Montage Bootstrapping
+# Mod Bootstrapping
 
 This document will describe the bootstrapping process for Montage.
 

@@ -1,7 +1,7 @@
 ---
 
 layout: docs
-title: MontageJS Data Binding
+title: Mod Data Binding
 
 prev-page: montagejs-objects
 this-page: data-binding

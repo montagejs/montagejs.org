@@ -19,12 +19,12 @@ First of all we need to create a toolbar with buttons for each of the options, a
 ```html
 <menu type="toolbar">
     <div class="montage-buttonGroup font-styles">
-        <button data-montage-id="bold">B</button>
-        <button data-montage-id="italic">I</button>
-        <button data-montage-id="underline">U</button>        
+        <button data-mod-id="bold">B</button>
+        <button data-mod-id="italic">I</button>
+        <button data-mod-id="underline">U</button>        
     </div>
 </menu>
-<div data-montage-id="editor" class="montage-textarea">
+<div data-mod-id="editor" class="montage-textarea">
     <h1>Hello RichText world!</h1>
 </div>
 ```
@@ -33,7 +33,7 @@ The `menu` element holds the buttons we will use for styling the text. Montage d
 
 Inside the menu I’ve included a wrapper `div` to group together the three text controls. I’ve applied a class to it so that the stylesheet can visually display the buttons as a group.
 
-Each button and the `div` element below the menu are given their own `data-montage-id` so we can hook them up to the serialization.
+Each button and the `div` element below the menu are given their own `data-mod-id` so we can hook them up to the serialization.
 
 Lets also add a `data-auto-package` attribute to the Montage script element, so that we don’t need to create a package.json file. As this example has no external dependencies, it is ideal for this:
 ```
@@ -94,9 +94,9 @@ I’ll show you how to set this up by creating three buttons to set the text ali
 First of all we need to add the buttons to allow the user to specify the alignment. For this I added an additional button group. I’ve included the [Font Awesome](http://fortawesome.github.com/Font-Awesome/) font that was designed to be used with Twitter Bootstrap to display icons for each button:
 ```html
 <div class="montage-buttonGroup alignment-styles">
-    <button data-montage-id="left"><i class="icon-align-left" title="left align"></i></button>
-    <button data-montage-id="center"><i class="icon-align-center" title="center align"></i></button>
-    <button data-montage-id="right"><i class="icon-align-right" title="right align"></i></button>        
+    <button data-mod-id="left"><i class="icon-align-left" title="left align"></i></button>
+    <button data-mod-id="center"><i class="icon-align-center" title="center align"></i></button>
+    <button data-mod-id="right"><i class="icon-align-right" title="right align"></i></button>        
 </div>
 ```
 
