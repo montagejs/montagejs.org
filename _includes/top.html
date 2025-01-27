@@ -7,14 +7,16 @@
 
     <title>{{ page.title }}</title>
 
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600">
-    <link rel="stylesheet" href="{{ site.baseurl }}/stylesheets/normalize.css">
-    <link rel="stylesheet" href="{{ site.baseurl }}/stylesheets/base.css">
-    <link rel="stylesheet" href="{{ site.baseurl }}/stylesheets/pages.css">
-    <link rel="stylesheet" href="{{ site.baseurl }}/stylesheets/solarized.css">
-    <link rel="stylesheet" href="{{ site.baseurl }}/stylesheets/teaser.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheets/normalize.css">
+    <link rel="stylesheet" href="stylesheets/base.css">
+    <link rel="stylesheet" href="stylesheets/pages.css">
+    <link rel="stylesheet" href="stylesheets/solarized.css">
+    <link rel="stylesheet" href="stylesheets/teaser.css">
     {% if page.home %}
-    <link rel="stylesheet" href="{{ site.baseurl }}/stylesheets/index.css">
+    <link rel="stylesheet" href="stylesheets/index.css">
     {% endif %}
     <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     {% if page.api %}
