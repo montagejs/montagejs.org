@@ -16,7 +16,7 @@ In MontageJS applications, a repeating group of elements  can be displayed with 
 This tutorial shows you how to build a simple reddit client using the Repetition component. The application consists of two lists (see Figure 1):  a list of stories (on the left) and a list of popular subreddits (on the right). When you click a subreddit, the application uses the reddit API to obtain the top stories from the selected category. Stories are displayed with title, submitter, and current score details.
 
 <figure>
-	<img src="/images/docs/tutorials/reddit-client/fig01.png" alt="The final application.">
+ <img src="{{ site.baseurl }}/images/docs/tutorials/reddit-client/fig01.png" alt="The final application.">
 	<figcaption><strong>Figure 1.</strong> A simple reddit client built on MontageJS.</figcaption>
 </figure>
 

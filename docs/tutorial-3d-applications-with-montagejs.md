@@ -16,7 +16,7 @@ To help simplify building interactive 3D experiences in the browser, the Montage
 To get a feel for what you can do with this component (and some minimal coding), open the <a href="http://montagejs.github.io/beachplanetblog/" target="_blank">Beach Planet demo</a> in a WebGL-enabled browser. Beach Planet is a simple hidden-object game that demonstrates the principles described in this tutorial. The objective of the game is to find four MontageJS logos by selecting different locations and clicking objects to reveal the hidden logos. The demo uses viewpoints, animated 3D transformations, and event handlers.
 
 <figure>
-    <img src="/images/docs/tutorials/3d-apps/fig01.jpg" alt="The Beach Planet MontageJS and WebGL demo." style="width: 451px;">
+    <img src="{{ site.baseurl }}/images/docs/tutorials/3d-apps/fig01.jpg" alt="The Beach Planet MontageJS and WebGL demo." style="width: 451px;">
     <figcaption><strong>Figure 1.</strong> Uncover four hidden logos—and experience the MontageJS 3D component in action.</figcaption>
 </figure>
 
@@ -158,7 +158,7 @@ For this demo:
 That's all that is required to load a 3D scene. At this point, the 3D scene when rendered in a browser shows is a little planet with an ocean, a beach, some foliage, a few animals, and a small shack. You can use a mouse or familiar gestures to rotate and zoom in and out of the scene.
 
 <figure>
-    <img src="/images/docs/tutorials/3d-apps/fig02.jpg" alt="A basic 3D scene in the browser." style="width: 451px;">
+    <img src="{{ site.baseurl }}/images/docs/tutorials/3d-apps/fig02.jpg" alt="A basic 3D scene in the browser." style="width: 451px;">
     <figcaption><strong>Figure 2.</strong> Importing a basic 3D scene.</figcaption>
 </figure>
 
@@ -209,7 +209,7 @@ The node.js runtime component currently supports the `visibility` property and 3
 Both runtime components support the use of CSS transitions to animate property changes. The `active` and `hover` selectors are also supported, so you can easily apply click and rollover effects. A CSS class for a node can be defined like any other class in the component's CSS file, but it has to be applied through the MontageJS binding system.
 
 <figure>
-    <img src="/images/docs/tutorials/3d-apps/fig03.jpg" alt="Animating the duck in the Beach Planet MontageJS and WebGL demo." style="width: 451px;">
+    <img src="{{ site.baseurl }}/images/docs/tutorials/3d-apps/fig03.jpg" alt="Animating the duck in the Beach Planet MontageJS and WebGL demo." style="width: 451px;">
     <figcaption><strong>Figure 3.</strong> The duck wader grows in size when in focus.</figcaption>
 </figure>
 
@@ -355,7 +355,7 @@ In the component's CSS file, the `open` CSS class uses the `rotateZ` property to
 Note that the transition behavior is defined in a separate CSS class that is applied at all times rather than toggled; this ensures that the transition animation will work when the door is both opening and closing.
 
 <figure>
-    <img src="/images/docs/tutorials/3d-apps/fig04.jpg" alt="Animating the door in the Beach Planet MontageJS and WebGL demo." style="width: 451px;">
+    <img src="{{ site.baseurl }}/images/docs/tutorials/3d-apps/fig04.jpg" alt="Animating the door in the Beach Planet MontageJS and WebGL demo." style="width: 451px;">
     <figcaption><strong>Figure 4.</strong> Use bindings to control whether CSS is applied on a node.</figcaption>
 </figure>
 
@@ -439,7 +439,7 @@ The Beach Planet demo also provides a menu that helps users quickly choose the m
 View the full <a href="https://github.com/montagejs/beachplanetblog/tree/master/ui/menu.mod" target="_blank">source code</a> for this example on GitHub.
 
 <figure>
-    <img src="/images/docs/tutorials/3d-apps/fig05.jpg" alt="Switching view points in the Beach Planet MontageJS and WebGL demo." style="width: 451px;">
+    <img src="{{ site.baseurl }}/images/docs/tutorials/3d-apps/fig05.jpg" alt="Switching view points in the Beach Planet MontageJS and WebGL demo." style="width: 451px;">
     <figcaption><strong>Figure 5.</strong> Control the user's perspective with the viewPoint property.</figcaption>
 </figure>
 
