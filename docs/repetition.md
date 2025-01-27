@@ -29,25 +29,21 @@ The following example shows a simple Repetition (`items`) that produces three te
 
 ```json
     "owner": {
-        "properties": {
+        "values": {
             "element": { "#": "content" }
         }
     },
     "items": {
-        "prototype": "montage/ui/repetition.mod",
-        "properties": {
-            "element": { "#": "items" }
-        },
-        "bindings": {
+        "prototype": "mod/ui/repetition.mod",
+        "values": {
+            "element": { "#": "items" },
             "content": { "<-": "@owner.myListProperty" }
         }
     },
     "item": {
-        "prototype": "montage/ui/text.mod",
-        "properties": {
-            "element": { "#": "item" }
-        },
-        "bindings": {
+        "prototype": "mod/ui/text.mod",
+        "values": {
+            "element": { "#": "item" },
             "value": { "<-": "@items:iteration.object.quote" },
             "classList.has('highlight')": { "<-": "@items:iteration.object.important" }
         }
@@ -61,7 +57,7 @@ The following example shows a simple Repetition (`items`) that produces three te
 ```
 
 ```javascript
-var Component = require("montage/ui/component").Component;
+var Component = require("mod/ui/component").Component;
 
 exports.Content = Component.specialize({
     myListProperty: {
@@ -105,32 +101,30 @@ In this example:
 
 ```json
 "owner": {
-    "properties": {
+    "values": {
         "element": {"#": "component"}
     }
 },
 "repetition": {
-    "prototype": "montage/ui/repetition.mod",
-    "properties": {
+    "prototype": "mod/ui/repetition.mod",
+    "values": {
         "element": {"#": "repetition"},
         "contentController": {"@": "rangeController"}
     }
 },
 "rangeController": {
-    "prototype": "montage/core/range-controller"
+    "prototype": "mod/core/range-controller"
 },
 "value": {
-    "prototype": "montage/ui/text.mod",
-    "properties": {
-        "element": {"#": "value"}
-    },
-    "bindings": {
+    "prototype": "mod/ui/text.mod",
+    "values": {
+        "element": {"#": "value"},
         "value": {"<-": "@repetition:iteration.object.quote"}
     }
 },
 "changeButton": {
     "prototype": "digit/ui/button.mod",
-    "properties": {
+    "values": {
         "element": {"#": "button"},
         "label": "Change Content"
     },
@@ -144,7 +138,7 @@ In this example:
 ```
 
 ```javascript
-var Component = require("montage/ui/component").Component;
+var Component = require("mod/ui/component").Component;
 
 exports.Owner = Component.specialize({
     constructor: {
@@ -207,34 +201,32 @@ You can also use complex expressions inside of sort and filter operations. For e
 
 ```json
 "owner": {
-    "properties": {
+    "values": {
         "element": {"#": "component"}
     }
 },
 "repetition": {
-    "prototype": "montage/ui/repetition.mod",
-    "properties": {
+    "prototype": "mod/ui/repetition.mod",
+    "values": {
         "element": {"#": "repetition"},
         "contentController": {"@": "rangeController"}
     }
 },
 "rangeController": {
-    "prototype": "montage/core/range-controller"
+    "prototype": "mod/core/range-controller"
 },
 
 "quote": {
-    "prototype": "montage/ui/text.mod",
-    "properties": {
-        "element": {"#": "quote"}
-    },
-    "bindings": {
+    "prototype": "mod/ui/text.mod",
+    "values": {
+        "element": {"#": "quote"},
         "value": {"<-": "@repetition:iteration.object.quote"}
     }
 },
 
 "filterButton": {
     "prototype": "digit/ui/button.mod",
-    "properties": {
+    "values": {
         "element": {"#": "filterButton"},
         "label": "Filter"
     },
@@ -248,7 +240,7 @@ You can also use complex expressions inside of sort and filter operations. For e
 
 "sortButton": {
     "prototype": "digit/ui/button.mod",
-    "properties": {
+    "values": {
         "element": {"#": "sortButton"},
         "label": "Sort"
     },
@@ -262,7 +254,7 @@ You can also use complex expressions inside of sort and filter operations. For e
 ```
 
 ```javascript
-var Component = require("montage/ui/component").Component;
+var Component = require("mod/ui/component").Component;
 
 exports.Owner = Component.specialize({
     constructor: {
@@ -330,49 +322,45 @@ Note that users could select multiple items.
 
 ```json
 "owner": {
-    "properties": {
+    "values": {
         "element": {"#": "component"}
     }
 },
 "repetition": {
-    "prototype": "montage/ui/repetition.mod",
-    "properties": {
+    "prototype": "mod/ui/repetition.mod",
+    "values": {
         "element": {"#": "repetition"},
         "isSelectionEnabled": true,
         "contentController": {"@": "rangeController"}
     }
 },
 "rangeController": {
-    "prototype": "montage/core/range-controller",
-    "properties": {
+    "prototype": "mod/core/range-controller",
+    "values": {
         "selection": []
     }
 },
 
 "value": {
-    "prototype": "montage/ui/text.mod",
-    "properties": {
-        "element": {"#": "value"}
-    },
-    "bindings": {
+    "prototype": "mod/ui/text.mod",
+    "values": {
+        "element": {"#": "value"},
         "value": {"<-": "@repetition:iteration.object.quote"}
     }
 },
 
 "select": {
     "prototype": "digit/ui/select.mod",
-    "properties": {
+    "values": {
         "element": {"#": "select"},
         "contentController": {"@": "rangeController"},
         "labelPropertyName": "quote"
     }
 },
 "log": {
-   "prototype": "montage/ui/text.mod",
-   "properties": {
-       "element": {"#": "log"}
-   },
-   "bindings": {
+   "prototype": "mod/ui/text.mod",
+   "values": {
+       "element": {"#": "log"},
        "value": {"<-": "@owner.message"}
    }
 }
@@ -385,7 +373,7 @@ Note that users could select multiple items.
 ```
 
 ```javascript
-var Component = require("montage/ui/component").Component;
+var Component = require("mod/ui/component").Component;
 
 exports.Owner = Component.specialize({
     constructor: {

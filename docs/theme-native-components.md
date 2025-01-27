@@ -76,7 +76,7 @@ For example, here is an HTML button hooked up as a Button component:
 ```json
 "button": {
     "prototype": "native/ui/button.reel",
-    "properties": {
+    "values": {
         "element": { "#": "button"}
     }
 }
@@ -102,7 +102,7 @@ The following example adds a range slider that is hooked up to an InputRange com
     "slider": {
         "module": "native/ui/input-range.reel",
         "name": "InputRange",
-        "properties": {
+        "values": {
             "element": {"#": "slider1"}
         },
     "bindings": {
@@ -111,7 +111,7 @@ The following example adds a range slider that is hooked up to an InputRange com
     "output": {
         "module": "native/ui/text.reel",
         "name": "Text",
-        "properties": {
+        "values": {
             "element": {"#": "volume"},
             "value": 0
          }
@@ -140,7 +140,7 @@ Then the properties section of the slider serialization is updated to add the tw
 "slider": {
     "module": "native/ui/input-range.reel",
     "name": "InputRange",
-    "properties": {
+    "values": {
         "element": {"#": "testSlider"},
         "min": 5,
         "max": 20

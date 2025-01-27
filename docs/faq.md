@@ -65,7 +65,7 @@ For an example of how we implement unit testing, see the [digit](https://github.
 
 We also test some components by [mocking their dependencies](https://github.com/montagejs/montage/blob/master/test/base/abstract-button-spec.js); note, however, that we don't support proper mock unit testing yet.
 
-### Can I access the device from a Montage app?
+### Can I access the device from a Mod app?
 
 You will be able to access a device when these capabilities are added to a browser. We are actively watching the browser community for such additions.
 

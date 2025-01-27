@@ -7,7 +7,7 @@ title: Rich Text Editor
 
 # Rich Text Editor
 
-The `RichTextEditor` component recently debuted in Montage 0.8. This provides a way for the user to enter text that will be transformed to HTML and can have styles applied to it.
+The `RichTextEditor` component recently debuted in Mod 0.8. This provides a way for the user to enter text that will be transformed to HTML and can have styles applied to it.
 
 At its most basic level, the `RichTextEditor` is a wrapper around a `div` element with the HTML5 `contentEditable` attribute applied. There is no UI by default beyond the `div` for entering text, but an API is provided to allow you to hook up controls to enable the various styling options.
 
@@ -29,13 +29,13 @@ First of all we need to create a toolbar with buttons for each of the options, a
 </div>
 ```
 
-The `menu` element holds the buttons we will use for styling the text. Montage doesn’t do anything special with this element; I’ve just included it for semantic value.
+The `menu` element holds the buttons we will use for styling the text. Mod doesn’t do anything special with this element; I’ve just included it for semantic value.
 
 Inside the menu I’ve included a wrapper `div` to group together the three text controls. I’ve applied a class to it so that the stylesheet can visually display the buttons as a group.
 
 Each button and the `div` element below the menu are given their own `data-mod-id` so we can hook them up to the serialization.
 
-Lets also add a `data-auto-package` attribute to the Montage script element, so that we don’t need to create a package.json file. As this example has no external dependencies, it is ideal for this:
+Lets also add a `data-auto-package` attribute to the Mod script element, so that we don’t need to create a package.json file. As this example has no external dependencies, it is ideal for this:
 ```
 <script src="../montage/montage.js" data-auto-package></script>
 ```
@@ -44,20 +44,20 @@ Lets also add a `data-auto-package` attribute to the Montage script element, so 
 Now to where the magic really happens. Lets hook up the rich text editor to our `div` in our serialization code:
 ```json
 "editor": {
-    "prototype": "montage/ui/rich-text-editor/rich-text-editor.mod",
-    "properties": { "element": {"#": "editor" } }
+    "prototype": "mod/ui/rich-text-editor/rich-text-editor.mod",
+    "values": { "element": {"#": "editor" } }
 }
 ```
 
 Now you have a text area that you can type into, but you can’t apply any commands. For that we have to hook up the buttons. Lets try with the bold button first:
 ```json
 "bold": {
-    "prototype": "montage/ui/toggle-button.mod",
-        "properties": {
+    "prototype": "mod/ui/toggle-button.mod",
+        "values": {
             "element": {"#": "bold"},
-            "pressedClass": "active"
-        },
-        "bindings": { "pressed": { "<->": "@editor.bold" }
+            "pressedClass": "active",
+            "pressed": { "<->": "@editor.bold"
+        }
     }
 }
 ```
@@ -69,25 +69,25 @@ When then set a two way binding between the `pressed` property and the `bold` bo
 That is all there is to it for actions that update a boolean property such as bold, italic, and underline. Lets add the serialization for the other two buttons as well. They work in exactly the same way:
 ```json
 "italic": {
-    "prototype": "montage/ui/toggle-button.mod",
-    "properties": {
+    "prototype": "mod/ui/toggle-button.mod",
+    "values": {
         "element": {"#": "italic"},
-        "pressedClass": "active"
-    },
-    "bindings": { "pressed": { "<->": "@editor.italic" } }
+        "pressedClass": "active",
+        "pressed": { "<->": "@editor.italic" }
+    }
 },
 "underline": {
-    "prototype": "montage/ui/toggle-button.mod",
-    "properties": {
+    "prototype": "mod/ui/toggle-button.mod",
+    "values": {
         "element": {"#": "underline"},
-        "pressedClass": "active"
-    },
-    "bindings": { "pressed": { "<->": "@editor.underline" } }
+        "pressedClass": "active", 
+        "pressed": { "<->": "@editor.underline" } 
+    }
 }
 ```
 
 ## Getting a little more advanced
-As you’ve just seen, setting boolean properties is a trivial affair. For properties that accept one of a number of predefined values, it becomes a little more complex, but wont be alien to those of you who know how Montage works.
+As you’ve just seen, setting boolean properties is a trivial affair. For properties that accept one of a number of predefined values, it becomes a little more complex, but wont be alien to those of you who know how Mod works.
 
 I’ll show you how to set this up by creating three buttons to set the text alignment to either left, right, or center, by updating the `justify` property.
 
@@ -106,7 +106,7 @@ For this example we will need to add a controller object to the serialization, w
 ```json
 "controller": {
         "prototype": "Controller",
-        "properties": {
+        "values": {
             "editor": { "@": "editor"}
         }    
 }
@@ -116,8 +116,8 @@ Now that we have a controller, we need to hook it up to the buttons that will ha
 
 ```json
 "right": {
-    "prototype": "montage/ui/toggle-button.mod",
-        "properties": {
+    "prototype": "mod/ui/toggle-button.mod",
+        "values": {
             "element": {"#": "right"},
             "preventFocus": true
         },
@@ -137,9 +137,9 @@ We also need to include a `preventFocus` property. This stops the button from ta
 ### Handling the action events in JavaScript
 Now all the wiring is complete, when a user clicks the button for right alignment, it will fire the `handleRightAction` event. Lets create a JavaScript file called controller.js. This is the same name as set up in the controller object.
 
-Inside this file we first need to import Montage core, and create and export the `Controller` object. We also need to define the `editor` that we specified in our controller object in the serialization:
+Inside this file we first need to import Mod core, and create and export the `Controller` object. We also need to define the `editor` that we specified in our controller object in the serialization:
 ```js
-var Montage = require("montage/core/core").Montage;
+var Montage = require("mod/core/core").Montage;
 
 exports.Controller = Montage.create(Montage, {
     editor: {
@@ -163,4 +163,4 @@ All of the other handlers can be created in the same way. The valid values for t
 As the active state for the left, right and center buttons should be mutually exclusive, I’ve also created an `setActive` method. This removes focus from the previously active button and adds focus to the currently selected button instead, rather than relying on the button’s inbuilt `pressedClass` property, like we did for the bold, italic and underline buttons.
 
 ## Wrap up
-Armed with this knowledge, you should be able hook up controls for the other `RichTextEditor` properties yourself. Hopefully this post will inspire you to try out the rich text capabilities in Montage for yourself.
+Armed with this knowledge, you should be able hook up controls for the other `RichTextEditor` properties yourself. Hopefully this post will inspire you to try out the rich text capabilities in Mod for yourself.

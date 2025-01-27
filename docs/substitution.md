@@ -24,8 +24,8 @@ The elements are set up in the substitution with DOM arguments. The name of each
 
 ```json
 "substitution": {
-    "prototype": "montage/ui/substitution.mod",
-    "properties": {
+    "prototype": "mod/ui/substitution.mod",
+    "values": {
         "element": {"#": "substitution"},
         "switchValue": "profile"
     }
@@ -51,8 +51,8 @@ Dom arguments can also be elements of components:
 
 ```json
 "substitution": {
-    "prototype": "montage/ui/substitution.mod",
-    "properties": {
+    "prototype": "mod/ui/substitution.mod",
+    "values": {
         "element": {"#": "substitution"},
         "switchValue": "profile"
     }
@@ -60,14 +60,14 @@ Dom arguments can also be elements of components:
 
 "userProfile": {
     "prototype": "ui/user-profile.mod",
-    "properties": {
+    "values": {
         "element": {"#": "userProfile"}
     }
 },
 
 "userContact": {
     "prototype": "ui/user-contact.mod",
-    "properties": {
+    "values": {
         "element": {"#": "userContact"}
     }
 }

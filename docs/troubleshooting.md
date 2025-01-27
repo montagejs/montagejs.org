@@ -28,8 +28,8 @@ Invalid element references are usually the result of mismatched element IDs. For
 {
     "loginButton": {
         "name": "Button",
-        "module": "montage/ui/button.mod",
-        "properties": {
+        "module": "mod/ui/button.mod",
+        "values": {
             "element": {"#": "loginButton"}
         }
     }
@@ -56,8 +56,8 @@ If you provide an invalid value for a serialized object's `"name"` property, Mod
 {
     "loginButton": {
         "name": "Buttonn",
-        "module": "montage/ui/button.mod",
-        "properties": {
+        "module": "mod/ui/button.mod",
+        "values": {
             "element": {"#": "loginButton"}
         }
     }
@@ -68,19 +68,19 @@ If you provide an invalid value for a serialized object's `"name"` property, Mod
 This would result in the following runtime error:
 
 ```
-Object "Buttonn" not found at "montage/ui/button.mod" referenced from http://localhost:8081/examples/buttonerror/.
+Object "Buttonn" not found at "mod/ui/button.mod" referenced from http://localhost:8081/examples/buttonerror/.
 ```
 
 **I get a "Can't XHR "http://localhost: ..."" error message.**
 
-If you provide an invalid module ID in a serialization, then the console will report a 404 error "Can't XHR _module-id_". For example, in the following serialization that defines a Textfield component, the module ID is misspelled as "montage/ui/textfld.mod".
+If you provide an invalid module ID in a serialization, then the console will report a 404 error "Can't XHR _module-id_". For example, in the following serialization that defines a Textfield component, the module ID is misspelled as "mod/ui/textfld.mod".
 
 ```json
 {
 "emailInput": {
     "name": "Textfield",
-    "module": "montage/ui/textfld.mod",
-    "properties": {
+    "module": "mod/ui/textfld.mod",
+    "values": {
         "element": {"#": "email"}
     }
 },
@@ -113,15 +113,15 @@ Likewise, in the following Mod serialization block, the trailing comma after the
 {
     "emailInput": {
         "name": "Textfield",
-        "module": "montage/ui/textfield.mod",
-        "properties": {
+        "module": "mod/ui/textfield.mod",
+        "values": {
             "element": {"#": "email"}
         }
     },
     "passwordInput": {
         "name": "Textfield",
-        "module": "montage/ui/textfield.mod",
-        "properties": {
+        "module": "mod/ui/textfield.mod",
+        "values": {
             "element": {"#": "password"}
         }
     },
@@ -137,15 +137,15 @@ Unexpected comma.
     2 {
     3     "emailInput": {
     4         "name": "Textfield",
-    5         "module": "montage/ui/textfield.mod",
-    6         "properties": {
+    5         "module": "mod/ui/textfield.mod",
+    6         "values": {
     7             "element": {"#": "email"}
     8         }
     9     },
    10     "passwordInput": {
    11         "name": "Textfield",
-   12         "module": "montage/ui/textfield.mod",
-   13         "properties": {
+   12         "module": "mod/ui/textfield.mod",
+   13         "values": {
    14             "element": {"#": "password"}
    15         }
 >>>16     },

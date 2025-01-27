@@ -9,7 +9,7 @@ title: Autocomplete textfield
 
 It is becoming increasingly common for apps to offer predictive suggestions as the user types in a text field. One example of this is a search field suggesting results that match the text that the user has already typed.
 
-This capability is coming soon to Montage with the Autocomplete component. This has just landed in Montage master, and will likely be included in the next stable release.
+This capability is coming soon to Mod with the Autocomplete component. This has just landed in Mod master, and will likely be included in the next stable release.
 
 The Autocomplete component extends the Textfield native control, and inherits all its capabilities, such as data binding support for all writable attributes of the `input` element. It adds the capability to define a list of values that will be contextually displayed as suggestions based on the search term. As the user types the search results are updated to reflect the new term.
 
@@ -43,24 +43,22 @@ To auto-suggest values a data source is needed. To supply a data source you must
 "delegate": {"@": "owner"}
 ```
 
-The `Delegate` object is a Montage object that implements a method that returns the auto-complete suggestion(s). The method name is `ShouldGetSuggestions`, prefixed by the `identifier` of the Autocomplete component (which defaults to the label of the JSON object if it is not defined).
+The `Delegate` object is a Mod object that implements a method that returns the auto-complete suggestion(s). The method name is `ShouldGetSuggestions`, prefixed by the `identifier` of the Autocomplete component (which defaults to the label of the JSON object if it is not defined).
 
 This is probably easier understood with an example. Suppose we have an autocomplete component with the label of `foo`, as defined below:
 ```json
 "foo": {
-    "prototype": "montage/ui/autocomplete/autocomplete.mod",
-    "properties": {
+    "prototype": "mod/ui/autocomplete/autocomplete.mod",
+    "values": {
         "element": {"#": "component"},
         "delay": "300",
-        "delegate": {"@": "owner"}
-    },
-    "bindings": {
+        "delegate": {"@": "owner"},
         "value": {"<->": "@montageComponents"}
     }
 },
 "owner": {
     "prototype": "montage-components",
-    "properties": {
+    "values": {
     "element": {"#": "autocomplete-example"}
 }
 ```
@@ -85,12 +83,12 @@ fooShouldGetSuggestions: {
 ```
 
 ## A quick autocomplete example
-I’ve created a quick example based off the one in the Kitchen Sink. You can start typing the name of a Montage component, and it will return any component names that match after you have typed two or more characters.
+I’ve created a quick example based off the one in the Kitchen Sink. You can start typing the name of a Mod component, and it will return any component names that match after you have typed two or more characters.
 
 The serialization code is the same as in the above example, except the label is `montageComponents` rather than `foo`. The HTML that is required is just a simple form with a label and a text field:
 ```html
 <form>
-     <label for="component">Montage component:</label>
+     <label for="component">Mod component:</label>
      <input id="montageComponents" data-mod-id="montageComponents" type="text" placeholder="Component name" />
 </form>
 ```

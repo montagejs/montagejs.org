@@ -35,7 +35,7 @@ This will merge updates from the other repository while keeping any changes made
 git subtree pull --squash --prefix=$dir$ git@github.com:$repo$.git $commitOrTag$ -m "Update $name$ to $version$"
 ```
 
-#### Mr ↣ Montage
+#### Mr ↣ Mod
 
 ```bash
 git subtree pull --squash --prefix=packages/mr git@github.com:montagejs/mr.git $version -m "Update Mr to $version$"

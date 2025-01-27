@@ -41,7 +41,7 @@ Component | Description
 <a href="https://github.com/montagejs/matte/tree/master/ui/rich-text-editor" target="_blank">RichTextEditor</a> | Provides functioanlity for text entry and styling.
 <a href="https://github.com/montagejs/matte/tree/master/ui/scroll-bars.reel" target="_blank">ScrollBars</a> | Provides scrollbar functionality.
 <a href="https://github.com/montagejs/matte/tree/master/ui/scroller.reel" target="_blank">Scroller</a> | Adds scollbars if there is too much content.
-<a href="https://github.com/montagejs/matte/tree/master/ui/select.reel" target="_blank">Select</a> | Provides drop-down list functionality in Montage.
+<a href="https://github.com/montagejs/matte/tree/master/ui/select.reel" target="_blank">Select</a> | Provides drop-down list functionality in Mod.
 <a href="https://github.com/montagejs/matte/tree/master/ui/textarea.reel" target="_blank">TextArea</a> | Provides functionality for a multiline text field.
 <a href="https://github.com/montagejs/matte/tree/master/ui/text-input.js" target="_blank">TextInput</a> | Provides functionality for a singleline text field.
 <a href="https://github.com/montagejs/matte/tree/master/ui/text-slider.reel" target="_blank">TextSlider</a> | Adds a numeric slider.

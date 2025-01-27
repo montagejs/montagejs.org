@@ -14,9 +14,9 @@ next-page: montagejs-objects
 
 >**Note:** We are currently in the process of updating our docs. This document may not be complete or fully up-to-date yet. We apologize for any inconvenience.
 
-This document explains the serialization format Montage uses to serialize, and later deserialize, an _object graph_ AKA declaration
+This document explains the serialization format Mod uses to serialize, and later deserialize, an _object graph_ AKA declaration
 
-A declaration describes the objects, components, properties, component data bindings, and DOM relationships involved in a Mod application. Mod uses JavaScript Object Notation (JSON) as the serialization format. At runtime, Montage parses the JSON structure and deserializes its contents into JavaScript, which is then evaluated and executed in the browser.
+A declaration describes the objects, components, properties, component data bindings, and DOM relationships involved in a Mod application. Mod uses JavaScript Object Notation (JSON) as the serialization format. At runtime, Mod parses the JSON structure and deserializes its contents into JavaScript, which is then evaluated and executed in the browser.
 
 ## JSON Overview
 JSON, a text format designed for serializing structured data, can represent six data types:
@@ -52,7 +52,7 @@ The following simple (yet complete) Mod application is defined in a single HTML 
    {
        "firstName": {
            "prototype": "digit/ui/text-field.mod",
-           "properties": {
+           "values": {
                "element": {"#": "fName"}
            }
         }
@@ -69,17 +69,17 @@ Important things to note:
 * The HTML body section contains a single `<input>` tag, identified with the [custom data-attribute](http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#custom-data-attribute) `data-mod-id` of `fName`.
 * The head section contains a `<script>` block of type `text/montage-serialization`. This block contains all serialized Mod objects used in the document.
 * The serialization block declares a Mod TextField component with an object label of `firstName`. The component's module ID ("digit/ui/text.mod") and its name ("textfield") allow Mod to recreate the component from its serialized form at runtime.
-* The `properties` object assigns initial values to the component's properties. One of the most important properties of a Montage component is its `element` property, which corresponds to the associated HTML body element on which the component operates. In this case, the TextField component's `element` property is set to the `<input>` tag that has the ID `"fName"`. The Montage serialization format provides a special JSON object representation to refer to an element. This special object's name is a hash mark ("#") and its value is the ID of the element.
-* Montage can load components from a directory that has a .mod extension. The module system redirects `require("x.mod")` to `require("x.mod/x")`.
+* The `properties` object assigns initial values to the component's properties. One of the most important properties of a Mod component is its `element` property, which corresponds to the associated HTML body element on which the component operates. In this case, the TextField component's `element` property is set to the `<input>` tag that has the ID `"fName"`. The Mod serialization format provides a special JSON object representation to refer to an element. This special object's name is a hash mark ("#") and its value is the ID of the element.
+* Mod can load components from a directory that has a .mod extension. The module system redirects `require("x.mod")` to `require("x.mod/x")`.
 
 ## Declaration Owner
-A Montage serialization can declare an optional object named "owner". The specified owner acts as the controller for the document. For example, the following code creates a new module (main.js) that exports a `Main` prototype object.
+A Mod serialization can declare an optional object named "owner". The specified owner acts as the controller for the document. For example, the following code creates a new module (main.js) that exports a `Main` prototype object.
 
 ```js
 // Module: main.js
 // Exported object name: Main
-var Montage = require("montage/core/core").Montage;
-var Component = require("montage/ui/component").Component;
+var Montage = require("mod/core/core").Montage;
+var Component = require("mod/ui/component").Component;
 //
 exports.Main = Montage.create(Component, {
 // Prototype methods and properties
@@ -88,7 +88,7 @@ exports.Main = Montage.create(Component, {
 {
    "owner": {
        "prototype": "main",
-       "properties": {
+       "values": {
            "element": {"#": "main"}
        }
     }
@@ -100,7 +100,7 @@ exports.Main = Montage.create(Component, {
 The following sections explain object-dependent declarations.
 
 ### Serializing a Custom Object
-To serialize custom JavaScript objects, including Montage components, define a JSON object with two properties: `module` and `name`. These properties correspond to the ID of the module that defines (or exports) the object with the specified name.
+To serialize custom JavaScript objects, including Mod components, define a JSON object with two properties: `module` and `name`. These properties correspond to the ID of the module that defines (or exports) the object with the specified name.
 
 For example, the following declaration fragment declares a Mod Button component:
 
@@ -109,27 +109,27 @@ For example, the following declaration fragment declares a Mod Button component:
 {
     "loginButton": {
         "name": "Button",
-        "module": "montage/ui/button"
+        "module": "mod/ui/button"
     }
 }
 </script>
 ```
 
-At runtime Montage parses this declaration and evaluates it as the following JavaScript:
+At runtime Mod parses this declaration and evaluates it as the following JavaScript:
 
 ```js
-var Button = require("montage/ui/button").Button;
+var Button = require("mod/ui/button").Button;
 ```
 
-Note that object labels in a declaration (such as `"loginButton"` in the above example) are only used internally by Montage during the deserialization process. For example, the object label does not translate into a JavaScript variable at runtime. You _can_ reference objects within a declaration using a special JSON representation.
+Note that object labels in a declaration (such as `"loginButton"` in the above example) are only used internally by Mod during the deserialization process. For example, the object label does not translate into a JavaScript variable at runtime. You _can_ reference objects within a declaration using a special JSON representation.
 
-You can assign initial values to an object's properties in a declaration by adding a `properties` object to the declaration. For example, the Montage Button component has a `value` property that contains the string to display as the button's label. The following assigns the value "Click me" to the Button component's `value` property:
+You can assign initial values to an object's properties in a declaration by adding a `properties` object to the declaration. For example, the Mod Button component has a `value` property that contains the string to display as the button's label. The following assigns the value "Click me" to the Button component's `value` property:
 
 ```json
 "loginButton": {
     "name": "Button",
-    "module": "montage/ui/button",
-    "properties": {
+    "module": "mod/ui/button",
+    "values": {
        "value": "Click me"
     }
 }
@@ -152,8 +152,8 @@ For example, the following block declares a Mod Button component whose `element`
  {
       "loginBtn": {
         "name": "Button",
-        "module": "montage/ui/button.mod",
-        "properties": {
+        "module": "mod/ui/button.mod",
+        "values": {
             "element": {"#": "loginButton"}
         }
       }
@@ -166,7 +166,7 @@ For example, the following block declares a Mod Button component whose `element`
 ```
 
 ### Referencing Other Objects
-Often you need to reference one serialized Mod object from another object in the same serialization. For instance, the serialization might declare a Montage button that you want to reference from the controller (or owner) object in the serialization.
+Often you need to reference one serialized Mod object from another object in the same serialization. For instance, the serialization might declare a Mod button that you want to reference from the controller (or owner) object in the serialization.
 
 To reference an element by ID, use the following JSON syntax. In this example, _objectLabel_ is the label assigned to the serialized object.
 
@@ -177,8 +177,8 @@ To demonstrate, first create the owner prototype object that references the butt
 ```js
 // Module: main.js
 // Name: Main
-var Montage = require("montage/core/core").Montage;
-var Component = require("montage/ui/component").Component;
+var Montage = require("mod/core/core").Montage;
+var Component = require("mod/ui/component").Component;
 exports.Main = Montage.create(Component, {
     hasTemplate: {
         value: false
@@ -210,15 +210,15 @@ Next, create the main HTML document that declares the Button and Main components
     "owner": {
         "name": "Main",
         "module": "main",
-        "properties": {
+        "values": {
             "element": {"#": "main"},
             "loginButton": {"@": "loginBtn"}
         }
     },
     "loginBtn": {
         "name": "Button",
-        "module": "montage/ui/button.mod",
-        "properties": {
+        "module": "mod/ui/button.mod",
+        "values": {
             "element": {"#": "buttonDiv"}
         }
     }
@@ -246,10 +246,10 @@ Object.defineBinding(sourceObject, "propertyName", {
 });
 ```
 
-You specify a component's bindings in a serialization with a "bindings" JSON object that, in turn, defines one or more JSON objects.
+You specify a component's bindings in a serialization with a "values" JSON object that, in turn, defines one or more JSON objects.
 
 ```json
-"bindings": {
+"values": {
    "boundValue": {
       "boundObject": {"@": "bound-object-label",
       "boundObjectPropertyPath": "key.path.of.property",
@@ -257,7 +257,7 @@ You specify a component's bindings in a serialization with a "bindings" JSON obj
 }
 ```
 
-The following simple example adds data bindings to a serialization. It consists of two Montage Slider components. The first slider's value is bound to the second slider's value. By default, data bindings are bi-directional, so changes to either bound property are pushed to the corresponding property. In this case, the `"oneway"` parameter is set to false so that changes propagate only from the bound object to the one that defined the binding (the source object).
+The following simple example adds data bindings to a serialization. It consists of two Mod Slider components. The first slider's value is bound to the second slider's value. By default, data bindings are bi-directional, so changes to either bound property are pushed to the corresponding property. In this case, the `"oneway"` parameter is set to false so that changes propagate only from the bound object to the one that defined the binding (the source object).
 
 ```html
 <html>
@@ -268,11 +268,9 @@ The following simple example adds data bindings to a serialization. It consists 
     {
         "slider1": {
             "name": "Slider",
-            "module": "montage/ui/slider.mod",
-            "properties": {
-                "element": {"#": "slider1"}
-            },
-            "bindings": {
+            "module": "mod/ui/slider.mod",
+            "values": {
+                "element": {"#": "slider1"},
                 "value": {
                     "boundObject": {"@": "slider2"},
                     "boundObjectPropertyPath": "value",
@@ -282,8 +280,8 @@ The following simple example adds data bindings to a serialization. It consists 
         },
         "slider2": {
             "name": "Slider",
-            "module": "montage/ui/slider.mod",
-            "properties": {
+            "module": "mod/ui/slider.mod",
+            "values": {
                 "element": {"#": "slider2"}
             }
         }
@@ -300,14 +298,14 @@ The following simple example adds data bindings to a serialization. It consists 
 ## Event Listeners in Declarations
 You can assign event listeners to serialized components in a serialization using a `listeners` property.
 
-This can reduce the amount of code required to establish event handling for your components. The serialization in the following example declares two objects: a custom controller object (Controller) and a Montage Button. The controller object acts as the event listener object to respond to "action" events that the Button emits when clicked or touched.
+This can reduce the amount of code required to establish event handling for your components. The serialization in the following example declares two objects: a custom controller object (Controller) and a Mod Button. The controller object acts as the event listener object to respond to "action" events that the Button emits when clicked or touched.
 
 The following code for the Controller component defines a single function named `handleAction()`, which is invoked when the user clicks the button:
 
 ```js
 // Module: controller.js
 // Name: Controller
-var Montage = require("montage/core/core").Montage;
+var Montage = require("mod/core/core").Montage;
 exports.Controller = Montage.create(Montage, {
     handleAction: {
         value: function(event) {
@@ -328,15 +326,15 @@ The following is the HTML document and component serialization. The "loginBtn" o
     "controller": {
         "name": "Controller",
         "module": "controller",
-        "properties": {
+        "values": {
             "element": {"#": "main"},
             "loginButton": {"@": "loginBtn"}
         }
     },
     "loginBtn": {
         "name": "Button",
-        "module": "montage/ui/button.mod",
-        "properties": {
+        "module": "mod/ui/button.mod",
+        "values": {
             "element": {"#": "buttonDiv"}
         },
         "listeners": [
@@ -358,7 +356,7 @@ The following is the HTML document and component serialization. The "loginBtn" o
 ```
 
 ## JSON Formatting Rules
-Montage uses the browser's native JSON parsing APIs to parse the serialization block. For the browser to parse the JSON object successfully, the JSON syntax must be well-formed. If the JSON serialization contains a formatting error, Montage throws an error and does not attempt to deserialize the JSON object. Two common formatting concerns are:
+Mod uses the browser's native JSON parsing APIs to parse the serialization block. For the browser to parse the JSON object successfully, the JSON syntax must be well-formed. If the JSON serialization contains a formatting error, Mod throws an error and does not attempt to deserialize the JSON object. Two common formatting concerns are:
 
 * Trailing commas. A trailing comma after the last property in a JSON object or array generates runtime errors. In the following example the comma that trails the `readyState` property would generate a JSON parsing error:
 
@@ -372,4 +370,4 @@ Montage uses the browser's native JSON parsing APIs to parse the serialization b
 
 * Matching brackets. Obviously, each open bracket must have a matching close bracket.
 
-Montage reports any formatting errors in the console when you run the application.
+Mod reports any formatting errors in the console when you run the application.

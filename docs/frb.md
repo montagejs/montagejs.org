@@ -63,7 +63,7 @@ aMontageObject.defineBinding("myProperty", {"<->": "foo.bar", source: anotherObj
 ```
 or
 ```javascript
-var Bindings = require("montage/core/bindings").Bindings;
+var Bindings = require("mod/core/bindings").Bindings;
 Bindings.defineBinding(myObject, "myProperty", {"<->": "foo.bar", source: anotherObject});
 ```
 
@@ -84,7 +84,7 @@ aMontageObject.defineBinding("myProperty", {"<-": "foo.bar", source: anotherObje
 ```
 or
 ```javascript
-var Bindings = require("montage/core/bindings").Bindings;
+var Bindings = require("mod/core/bindings").Bindings;
 Bindings.defineBinding(myObject, "myProperty", {"<-": "foo.bar", source: anotherObject});
 ```
 

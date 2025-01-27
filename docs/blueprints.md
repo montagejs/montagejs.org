@@ -10,9 +10,9 @@ next-page: troubleshooting
 
 # Blueprints
 
-Montage blueprints are a mechanism to add metadata about application objects. Currently, blueprints are supported for components and controllers. They will serve a leading role in the data layer (not yet available). A blueprint adds information about the object, its properties, and its associations with other objects.
+Mod blueprints are a mechanism to add metadata about application objects. Currently, blueprints are supported for components and controllers. They will serve a leading role in the data layer (not yet available). A blueprint adds information about the object, its properties, and its associations with other objects.
 
-Blueprints are grouped in binders. For components and controllers Montage creates a default blueprint that ensures uniqueness of the blueprints when deserialized. Blueprints are typically deserialized from a JSON file but can be created by code if necessary.
+Blueprints are grouped in binders. For components and controllers Mod creates a default blueprint that ensures uniqueness of the blueprints when deserialized. Blueprints are typically deserialized from a JSON file but can be created by code if necessary.
 
 ## Component or Controller Blueprints
 

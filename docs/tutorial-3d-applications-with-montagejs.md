@@ -132,13 +132,13 @@ To display a 3D scene, you assign an instance of the Scene component to the Scen
 ...
 "scene": {
     "prototype": "mjs-volume/runtime/scene",
-    "properties": {
+    "values": {
         "path": "models/beachplanet/beachplanet.json"
     }
 },
 "sceneView": {
     "prototype": "mjs-volume/ui/scene-view.mod",
-    "properties": {
+    "values": {
         "element": { "#": "sceneView" },
         "scene": { "@": "scene" }
     }
@@ -179,14 +179,14 @@ For example, to manipulate the duck wader element (`buoy`) in the Beach Planet d
 ```json
 "scene": {
     "prototype": "mjs-volume/runtime/scene",
-    "properties": {
+    "values": {
         "path": "models/beachplanet/beachplanet.json"
     }
 },
 
 "buoy": {
     "prototype": "mjs-volume/runtime/node",
-    "properties": {
+    "values": {
         "id": "node_31",
         "scene": { "@": "scene" }
     }
@@ -236,24 +236,22 @@ For this demo, the effect of seeing the duck wader (buoy) element grow in size w
     ```json
     "scene": {
         "prototype": "mjs-volume/runtime/scene",
-        "properties": {
+        "values": {
             "path": "models/beachplanet/beachplanet.json"
         }
     },
     "sceneView": {
         "prototype": "mjs-volume/ui/scene-view.mod",
-        "properties": {
+        "values": {
             "element": { "#": "sceneView" },
             "scene": { "@": "scene" }
         }
     },
     "buoy": {
         "prototype": "mjs-volume/runtime/node",
-        "properties": {
+        "values": {
             "id": "node_31",
-            "scene": { "@": "scene" }
-        },
-        "bindings": {
+            "scene": { "@": "scene" },
             "classList.has('animate')": { "<-": "true" }
         }
     }
@@ -271,7 +269,7 @@ Adding an event listener to handle, for example, clicks on a 3D node is just as 
 ...
 "door": {
     "prototype": "mjs-volume/runtime/node",
-    "properties": {
+    "values": {
         "id": "node_6",
         "scene": { "@": "scene" }
     },
@@ -284,7 +282,7 @@ Adding an event listener to handle, for example, clicks on a 3D node is just as 
 ```
 
 ```javascript
-var Component = require("montage/ui/component").Component;
+var Component = require("mod/ui/component").Component;
 
 exports.Door = Component.specialize({
   handleDoorAction: {
@@ -306,11 +304,9 @@ The following snippet demonstrates how to make the door of the shack open and cl
 ```json
 "door": {
     "prototype": "mjs-volume/runtime/node",
-    "properties": {
+    "values": {
         "id": "node_6",
-        "scene": { "@": "scene" }
-    },
-    "bindings": {
+        "scene": { "@": "scene" },
         "classList.has('animate')": { "<-": "true" },
         "classList.has('open')": { "<-": "@owner.doorOpen" }
     },
@@ -324,7 +320,7 @@ The following snippet demonstrates how to make the door of the shack open and cl
 In the component's JS file, the event handler for the door inverts the value of the `doorOpen` property, ensuring that it will change between `true` and `false` every time the door is clicked.
 
 ```javascript
-Component = require("montage/ui/component").Component;
+Component = require("mod/ui/component").Component;
 
 exports.Door = Component.specialize({
 
@@ -372,7 +368,7 @@ In the following example, the `sceneView` object has a `viewPoint` property that
 ```json
  "sceneView": {
     "prototype": "mjs-volume/ui/scene-view.mod",
-    "properties": {
+    "values": {
         "allowsViewPointControl" : false,
         "element": { "#": "sceneView" },
         "scene": { "@": "scene" },
@@ -381,7 +377,7 @@ In the following example, the `sceneView` object has a `viewPoint` property that
 },
 "planetVP": {
     "prototype": "mjs-volume/runtime/node",
-    "properties": {
+    "values": {
         "id": "node-Camera_cabin",
         "scene": { "@": "scene" }
     }
@@ -395,28 +391,28 @@ The Beach Planet demo also provides a menu that helps users quickly choose the m
 ```json
 "planetVP": {
     "prototype": "mjs-volume/runtime/node",
-    "properties": {
+    "values": {
         "id": "node-Camera_cabin",
         "scene": { "@": "scene" }
     }
 },
 "cabinVP": {
     "prototype": "mjs-volume/runtime/node",
-    "properties": {
+    "values": {
         "id": "node-Camera_cabin",
         "scene": { "@": "scene" }
     }
 },
 "seaGullVP": {
     "prototype": "mjs-volume/runtime/node",
-    "properties": {
+    "values": {
         "id": "node-Camera_SeaGull",
         "scene": { "@": "scene" }
     }
 },
 "sceneView": {
     "prototype": "mjs-volume/ui/scene-view.mod",
-    "properties": {
+    "values": {
         "allowsViewPointControl" : false,
         "element": { "#": "sceneView" },
         "scene": { "@": "scene" },
@@ -424,8 +420,8 @@ The Beach Planet demo also provides a menu that helps users quickly choose the m
     }
 },
 "nav": {
-    "prototype": "montage/ui/repetition.mod",
-    "properties": {
+    "prototype": "mod/ui/repetition.mod",
+    "values": {
         "element": { "#": "nav" },
         "content": [
             { "label": "Planet", "value": { "@": "planetVP" } },

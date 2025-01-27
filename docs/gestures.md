@@ -8,7 +8,7 @@ next-page: blueprints
 
 # Gestures
 
-Montage provides a composer API for supporting commonly used gestures. Typically DOM events are device specific such as click or touch events. The Composer API abstracts these into higher order events such as press, so that you can focus on handling a specific action rather than the multiple ways that action could be carried out. Montage currently supports press, long press, and swipe gestures. More will be added as Montage matures.
+Mod provides a composer API for supporting commonly used gestures. Typically DOM events are device specific such as click or touch events. The Composer API abstracts these into higher order events such as press, so that you can focus on handling a specific action rather than the multiple ways that action could be carried out. Mod currently supports press, long press, and swipe gestures. More will be added as Mod matures.
 
 ## Press composer
 The Press Composer handles both press and long press gestures. These abstract mouse clicks and touch events into a common event. The events that are handled include:
@@ -29,14 +29,14 @@ The pressCancel event is fired when the press event is cancelled. This can eithe
 * the user cancels the event by moving away from the element when the mouseup event fires due to releasing the mouse button
 
 ### Using press and long press gestures
-If you are familiar with how events are handled using Montage, you will be right at home using gestures. We will create a very simple example that handles a press event, changing the colour and text of the element, and shows a JavaScript alert when a longPress event is fired.
+If you are familiar with how events are handled using Mod, you will be right at home using gestures. We will create a very simple example that handles a press event, changing the colour and text of the element, and shows a JavaScript alert when a longPress event is fired.
 
 ### Setting up your composers
-As with anything in Montage, you first have import the module into your Javascript file. Both press and long press functionality can be found in the press-composer:
+As with anything in Mod, you first have import the module into your Javascript file. Both press and long press functionality can be found in the press-composer:
 ```js
-var Montage = require("montage/core/core").Montage,
-    Component = require("montage/ui/component").Component,
-    PressComposer = require("montage/ui/composer/press-composer").PressComposer;
+var Montage = require("mod/core/core").Montage,
+    Component = require("mod/ui/component").Component,
+    PressComposer = require("mod/ui/composer/press-composer").PressComposer;
 ```
 
 You then have to create and add the PressComposer:
@@ -62,7 +62,7 @@ prepareForActivationEvents: {
     }
 ```
 
-Finally we need to handle this events in the regular Montage way by implementing a method that prefixes the event name with “handle”.
+Finally we need to handle this events in the regular Mod way by implementing a method that prefixes the event name with “handle”.
 
 For the press event, we add an additional class to the element so that we can style it differently after the user presses the button, and change the text using innerHTML:
 ```js
@@ -91,7 +91,7 @@ handleLongPress: {
 In a real world app you may do something like creating a context menu with a number of items for the user to select.
 
 ### Hooking everything up
-The only thing left is to hook the JavaScript up to some HTML using the Montage serialization, and add the styles using CSS:
+The only thing left is to hook the JavaScript up to some HTML using the Mod serialization, and add the styles using CSS:
 
 HTML:
 ```html
@@ -103,7 +103,7 @@ Serialization:
 {
     "pressExample": {
         "prototype": "PressExample",
-        "properties": {
+        "values": {
             "element": {"#": "pressme"},
             "hasTemplate": false
         }
@@ -114,6 +114,6 @@ Serialization:
 If you click or touch the element for a short time the press composer will fire. If you keep the button pressed or your finger down the longPress event will fire.
 
 ## Swipe Composer
-Montage currently supports swipe gestures only for touch screen enabled devices, excluding desktop platforms. The spec and implementation of the Swipe composer is currently being updated for a future release of Montage.
+Mod currently supports swipe gestures only for touch screen enabled devices, excluding desktop platforms. The spec and implementation of the Swipe composer is currently being updated for a future release of Mod.
 
-I hope this served as a useful introduction to composers and gestures in Montage. If you have any questions or comments we’d love to hear from you!
+I hope this served as a useful introduction to composers and gestures in Mod. If you have any questions or comments we’d love to hear from you!

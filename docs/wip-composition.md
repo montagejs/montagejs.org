@@ -17,15 +17,15 @@ The way to create and compose the ui for your application using montage is prima
 ...
 <script type="text/montage-serialization">{
     "repetition": {
-        "prototype": "montage/ui/repetition.mod",
-        "properties": {
+        "prototype": "mod/ui/repetition.mod",
+        "values": {
             "element": {"#": "repetition"},
             "content": [1,2,3]
         }
     }
     "text": {
-        "prototype": "montage/ui/dynamic-text.mod",
-        "properties": {
+        "prototype": "mod/ui/dynamic-text.mod",
+        "values": {
             "element": {"#": "text"},
             "value": "hello"
         }
@@ -49,15 +49,15 @@ Via the markup we are passing a parameter to the Repetition (the li element) and
 ...
 <script type="text/montage-serialization">{
     "condition": {
-        "prototype": "montage/ui/condition.mod",
-        "properties": {
+        "prototype": "mod/ui/condition.mod",
+        "values": {
             "element": {"#": "condition"},
             "condition": false
         }
     }
     "text": {
-        "prototype": "montage/ui/dynamic-text.mod",
-        "properties": {
+        "prototype": "mod/ui/dynamic-text.mod",
+        "values": {
             "element": {"#": "text"},
             "value": "This is the truth"
         }
@@ -83,13 +83,13 @@ Given the desired usage for CustomComponent.
 <script type="text/montage-serialization">{
     "customComponent": {
         "prototype": "my/custom-component.mod",
-        "properties": {
+        "values": {
             "element": {"#": "customComponent"}
         }
     }
     "text": {
-        "prototype": "montage/ui/dynamic-text.mod",
-        "properties": {
+        "prototype": "mod/ui/dynamic-text.mod",
+        "values": {
             "element": {"#": "text"},
             "value": "I'm included."
         }
@@ -130,16 +130,14 @@ The Substitution component allows you to branch the component tree based on a ke
 ...
 <script type="text/montage-serialization">{
     "customerNameSubstitution": {
-        "prototype": "montage/ui/substitution.mod"
-        "properties": {
+        "prototype": "mod/ui/substitution.mod"
+        "values": {
             "element": {"#": "customerNameSubstitution"},
             "switchComponents": {
-                "read" : "montage/ui/dynamic-text.mod"
-                "edit" : "montage/ui/input-text.mod"
+                "read" : "mod/ui/dynamic-text.mod"
+                "edit" : "mod/ui/input-text.mod"
             }
-            "switchValue": "read"
-        },
-        "bindings": {
+            "switchValue": "read",
             "value": {
                 "<-": "@customer.name"
             }
@@ -161,11 +159,9 @@ The Exposition component allows you to specify components that might or might no
 ...
 <script type="text/montage-serialization">{
     "preferences": {
-        "prototype": "montage/ui/exposition.mod"
-        "properties": {
-            "element": {"#": "preferences"}
-        },
-        "bindings": {
+        "prototype": "mod/ui/exposition.mod"
+        "values": {
+            "element": {"#": "preferences"},
             "value": {
                 "<-": "@customer.name"
             }
@@ -185,18 +181,3 @@ The Exposition component allows you to specify components that might or might no
 </body>
 ...
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

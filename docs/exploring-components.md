@@ -30,7 +30,7 @@ Every component's HTML file is a complete and valid HTML document. The head sect
 <script type="text/montage-serialization">
 {
     "owner": {
-        "properties": {
+        "values": {
             "element": {"#": "foo-bar"}
         }
     }

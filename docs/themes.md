@@ -9,7 +9,7 @@ next-page: theme-digit-components
 
 # Overview: Themes
 
-The Montage framework includes three widget sets or themes for user interface components: Digit, Matte, and Native.
+The Mod framework includes three widget sets or themes for user interface components: Digit, Matte, and Native.
 
 * Digit is a touch-friendly theme optimized for use with tablets and mobile devices. 
 * Matte contains desktop-optimized UI components. 

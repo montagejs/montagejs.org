@@ -106,7 +106,7 @@ Follow these steps to add a new component to your project:
 
 5. Save the changes and refresh your browser.
 
-If all went well, you should see the title of the application and the Montage version number (see Figure 4). Since you have not specified any content in the Converter component yet, it remains invisible. (If you only get a blank page, verify that the objects between the `<script>` tags are separated by commas.)
+If all went well, you should see the title of the application and the Mod version number (see Figure 4). Since you have not specified any content in the Converter component yet, it remains invisible. (If you only get a blank page, verify that the objects between the `<script>` tags are separated by commas.)
 
 <figure>
  <img src="{{ site.baseurl }}/images/docs/hello-montagejs/fig04.jpg" alt="The skeleton of the application." style="width: 380px;">
@@ -405,7 +405,7 @@ Next, add some CSS rules to control the appearance of the Main component.
     Things to note:
     * The `<h1>` element has been updated with the  `data-mod-id` attribute of `title`.
     * The string "Temperature Converter" has been removed from the markup; the value of the `<h1>` element is now declared by the title object in the serialization (see the following step).
-    * The Montage version div tags have been replaced with `footer` tags.
+    * The Mod version div tags have been replaced with `footer` tags.
 
 2. Following the tempConverter object within the `<script>` tags, add the following snippet (remember: you need the trailing comma to separate objects from each other):
 

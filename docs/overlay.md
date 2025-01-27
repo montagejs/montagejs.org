@@ -21,8 +21,8 @@ The following snippet shows how to set up an overlay:
 
 ```json
 "overlayImage": {
-    "prototype": "montage/ui/overlay.mod",
-    "properties": {
+    "prototype": "mod/ui/overlay.mod",
+    "values": {
         "element": {"#": "overlayImage"},
         "element": {"#": "overlayImage"}
     }

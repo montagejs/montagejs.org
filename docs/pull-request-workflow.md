@@ -7,12 +7,13 @@ title: Pull Request Workflow
 
 # Pull Request Workflow
 
-The idea is that the way you add code to montage is by creating a branch in your GitHub fork and asking for it to be merged into master, this is a pull request.
+The idea is that the way you add code to mod is by creating a branch in your GitHub fork and asking for it to be merged into master, this is a pull request.
 
 ## Keeping in sync
 
 Assuming your local repository/directory has two remotes
-* **montage** Montage main repo on GitHub
+
+* **mod** Mod main repo on GitHub
 * **personal** Your fork repo on GitHub
 With the pull request workflow, there are now 3 masters to keep in sync, montage/master, personal/master, and master - Montage’s master, your fork’s master and the local one.
 

@@ -59,20 +59,20 @@ The list of subreddits is, strictly speaking, a group of repeating elements that
     ```json
     {
         "owner": {
-            "properties": {
+            "values": {
                 "element": {"#": "component"}
             }
         },
         "rep": {
-            "prototype": "montage/ui/repetition.mod",
-            "properties": {
+            "prototype": "mod/ui/repetition.mod",
+            "values": {
                 "element": { "#": "items" },
                 "content": [ 1, 2, 3, 4, 5 ]
             }
         },
         "item": {
-            "prototype": "montage/ui/text.mod",
-            "properties": {
+            "prototype": "mod/ui/text.mod",
+            "values": {
                 "element": { "#": "item" },
                 "value": "I am a list item."
             }
@@ -90,8 +90,8 @@ Next, modify the `item` object so that each list item element displays the actua
 
 ```json
 "item": {
-    "prototype": "montage/ui/text.mod",
-    "properties": {
+    "prototype": "mod/ui/text.mod",
+    "values": {
         "element": { "#": "item" },
     },
     "bindings": {
@@ -112,7 +112,7 @@ To bind a repetition to a component property, you need to add some JavaScript co
 * `url` contains the path for the individual subreddit:
 
 ```javascript
-var Component = require("montage/ui/component").Component;
+var Component = require("mod/ui/component").Component;
 
 exports.Owner = Component.specialize({
     subs: {
@@ -135,8 +135,8 @@ Next, you need to update the `bindings` properties in your template's declaratio
 
 ```json
 "rep": {
-    "prototype": "montage/ui/repetition.mod",
-    "properties": {
+    "prototype": "mod/ui/repetition.mod",
+    "values": {
         "element": {"#": "items"}
     },
     "bindings": {
@@ -144,8 +144,8 @@ Next, you need to update the `bindings` properties in your template's declaratio
     }
 },
 "item": {
-    "prototype": "montage/ui/text.mod",
-    "properties": {
+    "prototype": "mod/ui/text.mod",
+    "values": {
         "element": {"#": "item"}
     },
     "bindings": {
@@ -170,8 +170,8 @@ When the selection property is enabled, the default behavior is single selection
 
     ```json
     "rep": {
-        "prototype": "montage/ui/repetition.mod",
-        "properties": {
+        "prototype": "mod/ui/repetition.mod",
+        "values": {
             "element": {"#": "items"},
             "isSelectionEnabled": true
         },
@@ -209,11 +209,9 @@ Next, add a text header that uses bindings to show the name of the selected item
 
     ```json
     "currentsub": {
-        "prototype": "montage/ui/text.mod",
-        "properties": {
-            "element": {"#": "currentsub"}
-        },
-        "bindings": {
+        "prototype": "mod/ui/text.mod",
+        "values": {
+            "element": {"#": "currentsub"},
             "value": {"<-": "@rep.selection.0.display_name ?? 'Please Select a Sub'"}
         }
     }
@@ -245,7 +243,7 @@ To pass data from the reddit server into the application, follow these steps:
     Using the `templateDidLoad` method, the application obtains a list of popular subreddits from the reddit server. The JSON data is passed into the callback function, which extracts the list and assigns it to the `subs` property. The binding system observes the change and propagates the data into the repetition.
 
     ```javascript
-    var Component = require("montage/ui/component").Component;
+    var Component = require("mod/ui/component").Component;
     
     exports.Owner = Component.specialize({
         templateDidLoad: {
@@ -306,13 +304,13 @@ Your template's declaration now looks like this:
 ```json
 {
     "owner": {
-        "properties": {
+        "values": {
             "element": {"#": "component"}
         }
     },
     "rep": {
-        "prototype": "montage/ui/repetition.mod",
-        "properties": {
+        "prototype": "mod/ui/repetition.mod",
+        "values": {
             "element": {"#": "items"},
             "isSelectionEnabled": true
         },
@@ -321,20 +319,16 @@ Your template's declaration now looks like this:
         }
     },
     "item": {
-        "prototype": "montage/ui/text.mod",
-        "properties": {
-            "element": {"#": "item"}
-        },
-        "bindings": {
+        "prototype": "mod/ui/text.mod",
+        "values": {
+            "element": {"#": "item"},
             "value": {"<-": "@rep.objectAtCurrentIteration.data.display_name"}
         }
     },
     "currentsub": {
-        "prototype": "montage/ui/text.mod",
-        "properties": {
-            "element": {"#": "currentsub"}
-        },
-        "bindings": {
+        "prototype": "mod/ui/text.mod",
+        "values": {
+            "element": {"#": "currentsub"},
             "value": {"<-": "@rep.selection.0.data.display_name ?? 'Please Select a Sub'"}
         }
     }
@@ -351,8 +345,8 @@ The data returned by the reddit API includes a `subscriber` property for each su
 
 ```json
 "rep": {
-    "prototype": "montage/ui/repetition.mod",
-    "properties": {
+    "prototype": "mod/ui/repetition.mod",
+    "values": {
         "element": {"#": "items"},
         "isSelectionEnabled": true
     },
@@ -403,39 +397,31 @@ To obtain and display the reddit posts you use the same approach you used for th
 
     ```json
     "stories": {
-        "prototype": "montage/ui/repetition.mod",
-        "properties": {
-            "element": { "#": "stories" }
-        },
-        "bindings": {
+        "prototype": "mod/ui/repetition.mod",
+        "values": {
+            "element": { "#": "stories" },
             "content": { "<-": "@owner.stories" }
         }
     },
     "title": {
         "prototype": "matte/ui/anchor.mod",
-        "properties": {
-            "element": { "#": "title" }
-        },
-        "bindings": {
+        "values": {
+            "element": { "#": "title" },
             "textContent": { "<-": "@stories.objectAtCurrentIteration.data.title" },
             "href": { "<-": "@stories.objectAtCurrentIteration.data.url" }
         }
     },
     "author": {
-        "prototype": "montage/ui/text.mod",
-        "properties": {
-            "element": { "#": "author" }
-        },
-        "bindings": {
+        "prototype": "mod/ui/text.mod",
+        "values": {
+            "element": { "#": "author" },
             "value": { "<-": "@stories.objectAtCurrentIteration.data.author" }
         }
     },
     "score": {
-        "prototype": "montage/ui/text.mod",
-        "properties": {
-            "element": { "#": "score" }
-        },
-        "bindings": {
+        "prototype": "mod/ui/text.mod",
+        "values": {
+            "element": { "#": "score" },
             "value": { "<-": "@stories.objectAtCurrentIteration.data.score" }
         }
     }
