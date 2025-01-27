@@ -44,7 +44,7 @@ Lets also add a `data-auto-package` attribute to the Montage script element, so 
 Now to where the magic really happens. Lets hook up the rich text editor to our `div` in our serialization code:
 ```json
 "editor": {
-    "prototype": "montage/ui/rich-text-editor/rich-text-editor.reel",
+    "prototype": "montage/ui/rich-text-editor/rich-text-editor.mod",
     "properties": { "element": {"#": "editor" } }
 }
 ```
@@ -52,7 +52,7 @@ Now to where the magic really happens. Lets hook up the rich text editor to our 
 Now you have a text area that you can type into, but you can’t apply any commands. For that we have to hook up the buttons. Lets try with the bold button first:
 ```json
 "bold": {
-    "prototype": "montage/ui/toggle-button.reel",
+    "prototype": "montage/ui/toggle-button.mod",
         "properties": {
             "element": {"#": "bold"},
             "pressedClass": "active"
@@ -69,7 +69,7 @@ When then set a two way binding between the `pressed` property and the `bold` bo
 That is all there is to it for actions that update a boolean property such as bold, italic, and underline. Lets add the serialization for the other two buttons as well. They work in exactly the same way:
 ```json
 "italic": {
-    "prototype": "montage/ui/toggle-button.reel",
+    "prototype": "montage/ui/toggle-button.mod",
     "properties": {
         "element": {"#": "italic"},
         "pressedClass": "active"
@@ -77,7 +77,7 @@ That is all there is to it for actions that update a boolean property such as bo
     "bindings": { "pressed": { "<->": "@editor.italic" } }
 },
 "underline": {
-    "prototype": "montage/ui/toggle-button.reel",
+    "prototype": "montage/ui/toggle-button.mod",
     "properties": {
         "element": {"#": "underline"},
         "pressedClass": "active"
@@ -116,7 +116,7 @@ Now that we have a controller, we need to hook it up to the buttons that will ha
 
 ```json
 "right": {
-    "prototype": "montage/ui/toggle-button.reel",
+    "prototype": "montage/ui/toggle-button.mod",
         "properties": {
             "element": {"#": "right"},
             "preventFocus": true

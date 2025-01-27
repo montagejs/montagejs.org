@@ -17,14 +17,14 @@ The way to create and compose the ui for your application using montage is prima
 ...
 <script type="text/montage-serialization">{
     "repetition": {
-        "prototype": "montage/ui/repetition.reel",
+        "prototype": "montage/ui/repetition.mod",
         "properties": {
             "element": {"#": "repetition"},
             "content": [1,2,3]
         }
     }
     "text": {
-        "prototype": "montage/ui/dynamic-text.reel",
+        "prototype": "montage/ui/dynamic-text.mod",
         "properties": {
             "element": {"#": "text"},
             "value": "hello"
@@ -49,14 +49,14 @@ Via the markup we are passing a parameter to the Repetition (the li element) and
 ...
 <script type="text/montage-serialization">{
     "condition": {
-        "prototype": "montage/ui/condition.reel",
+        "prototype": "montage/ui/condition.mod",
         "properties": {
             "element": {"#": "condition"},
             "condition": false
         }
     }
     "text": {
-        "prototype": "montage/ui/dynamic-text.reel",
+        "prototype": "montage/ui/dynamic-text.mod",
         "properties": {
             "element": {"#": "text"},
             "value": "This is the truth"
@@ -82,13 +82,13 @@ Given the desired usage for CustomComponent.
 ...
 <script type="text/montage-serialization">{
     "customComponent": {
-        "prototype": "my/custom-component.reel",
+        "prototype": "my/custom-component.mod",
         "properties": {
             "element": {"#": "customComponent"}
         }
     }
     "text": {
-        "prototype": "montage/ui/dynamic-text.reel",
+        "prototype": "montage/ui/dynamic-text.mod",
         "properties": {
             "element": {"#": "text"},
             "value": "I'm included."
@@ -105,12 +105,12 @@ Given the desired usage for CustomComponent.
 ```
 The CustomComponent can make use of a _template argument_ to include all the contents of it's _innerTemplate_. A template argument is an element that has the attribute data-arg. This marks the element as a placeholder that will replaced by the innerTemplate.
 
-**my/custom-component.reel/custom-component.html**
+**my/custom-component.mod/custom-component.html**
 ```html
 ...
 <script type="text/montage-serialization">{
     "owner": {
-        "prototype": "my/custom-component.reel"
+        "prototype": "my/custom-component.mod"
     }
 }</script>
 ...
@@ -130,12 +130,12 @@ The Substitution component allows you to branch the component tree based on a ke
 ...
 <script type="text/montage-serialization">{
     "customerNameSubstitution": {
-        "prototype": "montage/ui/substitution.reel"
+        "prototype": "montage/ui/substitution.mod"
         "properties": {
             "element": {"#": "customerNameSubstitution"},
             "switchComponents": {
-                "read" : "montage/ui/dynamic-text.reel"
-                "edit" : "montage/ui/input-text.reel"
+                "read" : "montage/ui/dynamic-text.mod"
+                "edit" : "montage/ui/input-text.mod"
             }
             "switchValue": "read"
         },
@@ -161,7 +161,7 @@ The Exposition component allows you to specify components that might or might no
 ...
 <script type="text/montage-serialization">{
     "preferences": {
-        "prototype": "montage/ui/exposition.reel"
+        "prototype": "montage/ui/exposition.mod"
         "properties": {
             "element": {"#": "preferences"}
         },

@@ -64,14 +64,14 @@ The list of subreddits is, strictly speaking, a group of repeating elements that
             }
         },
         "rep": {
-            "prototype": "montage/ui/repetition.reel",
+            "prototype": "montage/ui/repetition.mod",
             "properties": {
                 "element": { "#": "items" },
                 "content": [ 1, 2, 3, 4, 5 ]
             }
         },
         "item": {
-            "prototype": "montage/ui/text.reel",
+            "prototype": "montage/ui/text.mod",
             "properties": {
                 "element": { "#": "item" },
                 "value": "I am a list item."
@@ -90,7 +90,7 @@ Next, modify the `item` object so that each list item element displays the actua
 
 ```json
 "item": {
-    "prototype": "montage/ui/text.reel",
+    "prototype": "montage/ui/text.mod",
     "properties": {
         "element": { "#": "item" },
     },
@@ -135,7 +135,7 @@ Next, you need to update the `bindings` properties in your template's declaratio
 
 ```json
 "rep": {
-    "prototype": "montage/ui/repetition.reel",
+    "prototype": "montage/ui/repetition.mod",
     "properties": {
         "element": {"#": "items"}
     },
@@ -144,7 +144,7 @@ Next, you need to update the `bindings` properties in your template's declaratio
     }
 },
 "item": {
-    "prototype": "montage/ui/text.reel",
+    "prototype": "montage/ui/text.mod",
     "properties": {
         "element": {"#": "item"}
     },
@@ -170,7 +170,7 @@ When the selection property is enabled, the default behavior is single selection
 
     ```json
     "rep": {
-        "prototype": "montage/ui/repetition.reel",
+        "prototype": "montage/ui/repetition.mod",
         "properties": {
             "element": {"#": "items"},
             "isSelectionEnabled": true
@@ -209,7 +209,7 @@ Next, add a text header that uses bindings to show the name of the selected item
 
     ```json
     "currentsub": {
-        "prototype": "montage/ui/text.reel",
+        "prototype": "montage/ui/text.mod",
         "properties": {
             "element": {"#": "currentsub"}
         },
@@ -311,7 +311,7 @@ Your template's declaration now looks like this:
         }
     },
     "rep": {
-        "prototype": "montage/ui/repetition.reel",
+        "prototype": "montage/ui/repetition.mod",
         "properties": {
             "element": {"#": "items"},
             "isSelectionEnabled": true
@@ -321,7 +321,7 @@ Your template's declaration now looks like this:
         }
     },
     "item": {
-        "prototype": "montage/ui/text.reel",
+        "prototype": "montage/ui/text.mod",
         "properties": {
             "element": {"#": "item"}
         },
@@ -330,7 +330,7 @@ Your template's declaration now looks like this:
         }
     },
     "currentsub": {
-        "prototype": "montage/ui/text.reel",
+        "prototype": "montage/ui/text.mod",
         "properties": {
             "element": {"#": "currentsub"}
         },
@@ -351,7 +351,7 @@ The data returned by the reddit API includes a `subscriber` property for each su
 
 ```json
 "rep": {
-    "prototype": "montage/ui/repetition.reel",
+    "prototype": "montage/ui/repetition.mod",
     "properties": {
         "element": {"#": "items"},
         "isSelectionEnabled": true
@@ -403,7 +403,7 @@ To obtain and display the reddit posts you use the same approach you used for th
 
     ```json
     "stories": {
-        "prototype": "montage/ui/repetition.reel",
+        "prototype": "montage/ui/repetition.mod",
         "properties": {
             "element": { "#": "stories" }
         },
@@ -412,7 +412,7 @@ To obtain and display the reddit posts you use the same approach you used for th
         }
     },
     "title": {
-        "prototype": "matte/ui/anchor.reel",
+        "prototype": "matte/ui/anchor.mod",
         "properties": {
             "element": { "#": "title" }
         },
@@ -422,7 +422,7 @@ To obtain and display the reddit posts you use the same approach you used for th
         }
     },
     "author": {
-        "prototype": "montage/ui/text.reel",
+        "prototype": "montage/ui/text.mod",
         "properties": {
             "element": { "#": "author" }
         },
@@ -431,7 +431,7 @@ To obtain and display the reddit posts you use the same approach you used for th
         }
     },
     "score": {
-        "prototype": "montage/ui/text.reel",
+        "prototype": "montage/ui/text.mod",
         "properties": {
             "element": { "#": "score" }
         },

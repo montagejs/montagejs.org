@@ -29,7 +29,7 @@ The global `bootstrap` function keeps track of the 3 files and once all three ha
 
 ### callback
 
-First we set up the config object to load the Montage package. This involves setting up the loader that lets the us load ".reel" files directly (e.g. `require("montage/ui/text.reel")`), and compilers that attach Montage metadata to the exports of any loaded module (`SerializationCompiler`) and export the HTML of loaded HTML files as `content` (`TemplateCompiler`).
+First we set up the config object to load the Montage package. This involves setting up the loader that lets the us load ".mod" files directly (e.g. `require("montage/ui/text.mod")`), and compilers that attach Montage metadata to the exports of any loaded module (`SerializationCompiler`) and export the HTML of loaded HTML files as `content` (`TemplateCompiler`).
 
 <a id="un-mopped-load-montage" href="#mopped-callback">If mopped, bundles are loaded at this point.</a>
 

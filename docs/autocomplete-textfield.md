@@ -14,7 +14,7 @@ This capability is coming soon to Montage with the Autocomplete component. This 
 The Autocomplete component extends the Textfield native control, and inherits all its capabilities, such as data binding support for all writable attributes of the `input` element. It adds the capability to define a list of values that will be contextually displayed as suggestions based on the search term. As the user types the search results are updated to reflect the new term.
 
 ## Using a Autocomplete component
-As with any component, you first need to hook up your HTML element to the required component via the JSON serialization. In the case of Autocomplete, the module can be found at montage/ui/autocomplete/autocomplete.reel.
+As with any component, you first need to hook up your HTML element to the required component via the JSON serialization. In the case of Autocomplete, the module can be found at montage/ui/autocomplete/autocomplete.mod.
 
 ### Specifying the options
 The component has a number of options that can be set using the corresponding properties.
@@ -48,7 +48,7 @@ The `Delegate` object is a Montage object that implements a method that returns 
 This is probably easier understood with an example. Suppose we have an autocomplete component with the label of `foo`, as defined below:
 ```json
 "foo": {
-    "prototype": "montage/ui/autocomplete/autocomplete.reel",
+    "prototype": "montage/ui/autocomplete/autocomplete.mod",
     "properties": {
         "element": {"#": "component"},
         "delay": "300",

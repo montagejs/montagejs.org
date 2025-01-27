@@ -34,7 +34,7 @@ The following example shows a simple Repetition (`items`) that produces three te
         }
     },
     "items": {
-        "prototype": "montage/ui/repetition.reel",
+        "prototype": "montage/ui/repetition.mod",
         "properties": {
             "element": { "#": "items" }
         },
@@ -43,7 +43,7 @@ The following example shows a simple Repetition (`items`) that produces three te
         }
     },
     "item": {
-        "prototype": "montage/ui/text.reel",
+        "prototype": "montage/ui/text.mod",
         "properties": {
             "element": { "#": "item" }
         },
@@ -110,7 +110,7 @@ In this example:
     }
 },
 "repetition": {
-    "prototype": "montage/ui/repetition.reel",
+    "prototype": "montage/ui/repetition.mod",
     "properties": {
         "element": {"#": "repetition"},
         "contentController": {"@": "rangeController"}
@@ -120,7 +120,7 @@ In this example:
     "prototype": "montage/core/range-controller"
 },
 "value": {
-    "prototype": "montage/ui/text.reel",
+    "prototype": "montage/ui/text.mod",
     "properties": {
         "element": {"#": "value"}
     },
@@ -129,7 +129,7 @@ In this example:
     }
 },
 "changeButton": {
-    "prototype": "digit/ui/button.reel",
+    "prototype": "digit/ui/button.mod",
     "properties": {
         "element": {"#": "button"},
         "label": "Change Content"
@@ -212,7 +212,7 @@ You can also use complex expressions inside of sort and filter operations. For e
     }
 },
 "repetition": {
-    "prototype": "montage/ui/repetition.reel",
+    "prototype": "montage/ui/repetition.mod",
     "properties": {
         "element": {"#": "repetition"},
         "contentController": {"@": "rangeController"}
@@ -223,7 +223,7 @@ You can also use complex expressions inside of sort and filter operations. For e
 },
 
 "quote": {
-    "prototype": "montage/ui/text.reel",
+    "prototype": "montage/ui/text.mod",
     "properties": {
         "element": {"#": "quote"}
     },
@@ -233,7 +233,7 @@ You can also use complex expressions inside of sort and filter operations. For e
 },
 
 "filterButton": {
-    "prototype": "digit/ui/button.reel",
+    "prototype": "digit/ui/button.mod",
     "properties": {
         "element": {"#": "filterButton"},
         "label": "Filter"
@@ -247,7 +247,7 @@ You can also use complex expressions inside of sort and filter operations. For e
 },
 
 "sortButton": {
-    "prototype": "digit/ui/button.reel",
+    "prototype": "digit/ui/button.mod",
     "properties": {
         "element": {"#": "sortButton"},
         "label": "Sort"
@@ -335,7 +335,7 @@ Note that users could select multiple items.
     }
 },
 "repetition": {
-    "prototype": "montage/ui/repetition.reel",
+    "prototype": "montage/ui/repetition.mod",
     "properties": {
         "element": {"#": "repetition"},
         "isSelectionEnabled": true,
@@ -350,7 +350,7 @@ Note that users could select multiple items.
 },
 
 "value": {
-    "prototype": "montage/ui/text.reel",
+    "prototype": "montage/ui/text.mod",
     "properties": {
         "element": {"#": "value"}
     },
@@ -360,7 +360,7 @@ Note that users could select multiple items.
 },
 
 "select": {
-    "prototype": "digit/ui/select.reel",
+    "prototype": "digit/ui/select.mod",
     "properties": {
         "element": {"#": "select"},
         "contentController": {"@": "rangeController"},
@@ -368,7 +368,7 @@ Note that users could select multiple items.
     }
 },
 "log": {
-   "prototype": "montage/ui/text.reel",
+   "prototype": "montage/ui/text.mod",
    "properties": {
        "element": {"#": "log"}
    },

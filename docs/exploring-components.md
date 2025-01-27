@@ -14,7 +14,7 @@ next-page: serialization-format
 
 MontageJS applications consist of a model layer that handles the data and a view layer that reads from the models. Components make up the view portion of a MontageJS application. As a rule, these components are stored in the ui directory of your MontageJS application (which has the benefit that you can use any MontageJS package and easily locate the user interface components it provides).
 
-MontageJS components are encapsulated; the structure (HTML), appearance (CSS), and behavior (JavaScript) that power a user interface component are all located in the same directory, identified with a .reel suffix. For example, the foo-bar component is located in the ui directory of your MontageJS application at `montageapp/ui/foo-bar.reel` and encapsulates the following files: foo-bar.css, foo-bar.html, and foo-bar.js. Because components are self-contained, it's easy to work on, rename, or even remove an individual component without having to find bits and pieces of it scattered across directories.
+MontageJS components are encapsulated; the structure (HTML), appearance (CSS), and behavior (JavaScript) that power a user interface component are all located in the same directory, identified with a .mod suffix. For example, the foo-bar component is located in the ui directory of your MontageJS application at `montageapp/ui/foo-bar.mod` and encapsulates the following files: foo-bar.css, foo-bar.html, and foo-bar.js. Because components are self-contained, it's easy to work on, rename, or even remove an individual component without having to find bits and pieces of it scattered across directories.
 
 MontageJS components are modular; regardless of where a component is used, the same HTML, CSS, and JavaScript will control how that particular component is structured, looks, and behaves.
 
@@ -65,7 +65,7 @@ Next, the CSS file: By default, we start off with an almost blank style sheet, w
 }
 ```
 
-Note also that the class name is a CamelCase version of the .reel directory name. This is part of our internal [CSS naming convention](https://github.com/montagejs/montage/wiki/Naming-Conventions); it allows us to scope each component's CSS so that it doesn't "leak out" and accidentally style other components.
+Note also that the class name is a CamelCase version of the .mod directory name. This is part of our internal [CSS naming convention](https://github.com/montagejs/montage/wiki/Naming-Conventions); it allows us to scope each component's CSS so that it doesn't "leak out" and accidentally style other components.
 
 Finally, the JS file:
 
@@ -79,7 +79,7 @@ exports.FooBar = Component.specialize(/** @lends FooBar# */ {
 });
 ```
 
-The file exports a single object with a CamelCase version of the .reel directory name which inherits MontageJS methods from `Component`. The first argument provides a way to define the properties (methods and values) that will be available on the instances of the new type being created. The second argument provides a way to define properties of the type itself, they are accessible directly on the type (e.g., `Component.method()`).
+The file exports a single object with a CamelCase version of the .mod directory name which inherits MontageJS methods from `Component`. The first argument provides a way to define the properties (methods and values) that will be available on the instances of the new type being created. The second argument provides a way to define properties of the type itself, they are accessible directly on the type (e.g., `Component.method()`).
 
 `this.super()` is a special function that will call the parent method with the same name. in this case it will call the constructor function that was defined in the Component type. This is useful to extend a behavior and is similar to its Java counterpart.
 

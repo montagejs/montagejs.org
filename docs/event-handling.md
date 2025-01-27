@@ -168,7 +168,7 @@ Next we create the HTML page that declares the Button component and the custom C
 {
     "button" : {
         "name": "Button",
-        "module": "montage/ui/button.reel",
+        "module": "montage/ui/button.mod",
         "properties": {
             "element": {"#": "btn"}
         },
@@ -196,7 +196,7 @@ You can also specify the `identifier` string in the serialization, as shown belo
 {
     "button" : {
         "name": "Button",
-        "module": "montage/ui/button.reel",
+        "module": "montage/ui/button.mod",
         "properties": {
             "element": {"#": "btn"},
             "identifier": "purchase"

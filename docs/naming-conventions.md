@@ -15,13 +15,14 @@ This document summarizes MontageJS-specific naming conventions and recommendatio
 All module and package names are written in lowercase letters or numbers and delimited by dashes (for example, `child-package`).
 
 
-## Components (.reel)
-User interface components are stored in the ui directory of your MontageJS project and identified by a .reel extension. 
+## Components (.mod)
 
-The following naming conventions apply for `.reel` directories:
+User interface components are stored in the ui directory of your MontageJS project and identified by a .mod extension.
+
+The following naming conventions apply for `.mod` directories:
 
 * Component names are always spelled in lowercase letters.
-* If the name uses multiple words, follow a dash-delimited `"word-word"` pattern; for example, `radio-button.reel`, or `text-field.reel`.
+* If the name uses multiple words, follow a dash-delimited `"word-word"` pattern; for example, `radio-button.mod`, or `text-field.mod`.
 
 
 ## CSS Classes

@@ -31,6 +31,7 @@ The following list provides an overview of the existing Digit components.
 [ ![TextArea](https://raw.github.com/montagejs/digit/master/ui/text-area.reel/screenshot.png) ](https://github.com/montagejs/digit/tree/master/ui/text-area.reel)
 
 ## Available Components
+
 The following list summarizes the UI components that are currently part of the Digit widget set:
 
 Component | Description 

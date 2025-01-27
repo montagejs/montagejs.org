@@ -48,7 +48,7 @@ You should see a blank page with a version reference in the upper left corner of
 
 ## MontageJS Basics
 
-MontageJS application development is divided into a development (creating the application) phase and a production (optimizing the application) phase. In development, you assemble an application out of encapsulated components. These components are stored in the ui directory of your project and identified by a .reel suffix (see Figure 2).
+MontageJS application development is divided into a development (creating the application) phase and a production (optimizing the application) phase. In development, you assemble an application out of encapsulated components. These components are stored in the ui directory of your project and identified by a .mod suffix (see Figure 2).
 
 <figure>
 	<img class="img--66" src="/images/docs/hello-montagejs/fig02.jpg" alt="Default application starter template." style="width: 380px;">
@@ -57,7 +57,7 @@ MontageJS application development is divided into a development (creating the ap
 
 When you assemble a MontageJS application, you modify the HTML documents (AKA templates in MontageJS speak) of the components in the ui directory. To change the look and feel of components, you modify the CSS files.
 
-Figure 3 identifies the components that make up the view layer of the application that you are about to build. Main.reel is the main user interface component of the application. Think of it as the MontageJS equivalent of a website's index page or the principal screen of your single-page application: it can contain any number of subcomponents for the presentation and behavior of an application. The Converter component encapsulates the functionality of the application. The sole purpose of the Version component is to inform you of the MontageJS version you are using (it can be easily removed from the application). 
+Figure 3 identifies the components that make up the view layer of the application that you are about to build. Main.mod is the main user interface component of the application. Think of it as the MontageJS equivalent of a website's index page or the principal screen of your single-page application: it can contain any number of subcomponents for the presentation and behavior of an application. The Converter component encapsulates the functionality of the application. The sole purpose of the Version component is to inform you of the MontageJS version you are using (it can be easily removed from the application).
 
 >**Note:** Although you could conceivably build an entire application using only the Main component, we recommend you assemble MontageJS applications out of individual components (just like you build a website out of individual pages)—to make the most of what MontageJS has to offer, including a modular architecture and encapsulated and reusable components. 
 
@@ -78,9 +78,9 @@ Follow these steps to add a new component to your project:
     $ minit create:component -n converter
     ```
 
-    This places a new component, converter.reel, in the ui directory of your project. To incorporate this component in your application, you need to declare it in the Main component.
+    This places a new component, converter.mod, in the ui directory of your project. To incorporate this component in your application, you need to declare it in the Main component.
    
-2. In your project folder, open ui/main.reel/main.html.
+2. In your project folder, open ui/main.mod/main.html.
 
 3. Between the `<body>` tags, before `<div data-montage-id="montageVersion"></div>`, add the following markup:
 
@@ -95,14 +95,14 @@ Follow these steps to add a new component to your project:
 
     ```json
     "tempConverter": {
-        "prototype": "ui/converter.reel",
+        "prototype": "ui/converter.mod",
         "properties": {
             "element": {"#": "tempConverter"}
         }
     },
     ```
     
-    This declares an instance of the Converter component (`"prototype": "ui/converter.reel"`) with an object label of `tempConverter`. Its `element` property corresponds to the associated HTML element, which you added in the previous step (`<div data-montage-id="tempConverter"></div>`).
+    This declares an instance of the Converter component (`"prototype": "ui/converter.mod"`) with an object label of `tempConverter`. Its `element` property corresponds to the associated HTML element, which you added in the previous step (`<div data-montage-id="tempConverter"></div>`).
     
 5. Save the changes and refresh your browser.
 
@@ -117,7 +117,7 @@ If all went well, you should see the title of the application and the Montage ve
 
 The application you are going to build has four elements—a title, two numeric input fields, and a slider—that need to be declared in your markup. You already declared the title of the application in main.html. Next, you declare the input fields and slider in converter.html.
 
-1. Open ui/converter.reel/converter.html.
+1. Open ui/converter.mod/converter.html.
 2. Replace the HTML within the `<body>` tags with the following markup:
 
     ```html
@@ -153,7 +153,7 @@ Next, you will use MontageJS to update the view layer of these HTML elements.
 
 First, update the markup of the HTML elements you want to control with a `data-montage-id` custom attribute.
 
-1. In ui/converter.reel/converter.html, within the `<body>` tags, replace the existing markup with the following update:
+1. In ui/converter.mod/converter.html, within the `<body>` tags, replace the existing markup with the following update:
 
     ```html
     <div data-montage-id="converter" class="Converter">
@@ -186,21 +186,21 @@ First, update the markup of the HTML elements you want to control with a `data-m
         },
         
         "celsiusNumberfield": {
-            "prototype": "digit/ui/number-field.reel",
+            "prototype": "digit/ui/number-field.mod",
             "properties": {
                 "element": {"#": "celsius"}
              }
         },
         
         "fahrenheitNumberfield": {
-            "prototype": "digit/ui/number-field.reel",
+            "prototype": "digit/ui/number-field.mod",
             "properties": {
                 "element": {"#": "fahrenheit"}
             }
         },
         
         "thermometer": {
-            "prototype": "digit/ui/slider.reel",
+            "prototype": "digit/ui/slider.mod",
             "properties": {
                 "element": {"#": "thermometer"},
                 "axis": "vertical"
@@ -242,7 +242,7 @@ MontageJS uses functional reactive bindings (FRB), which you declare in the obje
         },
         
         "celsiusNumberfield": {
-            "prototype": "digit/ui/number-field.reel",
+            "prototype": "digit/ui/number-field.mod",
             "properties": {
                 "element": {"#": "celsius"}
             },
@@ -252,7 +252,7 @@ MontageJS uses functional reactive bindings (FRB), which you declare in the obje
         },
         
         "fahrenheitNumberfield": {
-            "prototype": "digit/ui/number-field.reel",
+            "prototype": "digit/ui/number-field.mod",
             "properties": {
                 "element": {"#": "fahrenheit"},
                 "value": "32"
@@ -260,7 +260,7 @@ MontageJS uses functional reactive bindings (FRB), which you declare in the obje
         },
         
         "thermometer": {
-            "prototype": "digit/ui/slider.reel",
+            "prototype": "digit/ui/slider.mod",
             "properties": {
                 "element": {"#": "thermometer"},
                 "axis": "vertical"
@@ -288,7 +288,7 @@ At this point, the application works as planned but doesn't look as designed (se
 
 First, you need to specify CSS class names in the markup of your component.
 
-1. In ui/converter.reel/converter.html, replace the content within the `<body>` tags with the following updated markup:
+1. In ui/converter.mod/converter.html, replace the content within the `<body>` tags with the following updated markup:
 
     ```html
     <div data-montage-id="converter" class="Converter">
@@ -312,7 +312,7 @@ First, you need to specify CSS class names in the markup of your component.
     
    Next you need to add the CSS rules to the component's style sheet.
 
-2. Open ui/converter.reel/converter.css in your MontageJS project.
+2. Open ui/converter.mod/converter.css in your MontageJS project.
 
 3. Replace the sparse contents of the file with the following rules:
 
@@ -396,7 +396,7 @@ At this point your application should look like Figure 7.
 
 Next, add some CSS rules to control the appearance of the Main component.
 
-1. Switch to ui/main.reel/main.html and replace the content within the `<body>` tags with the following markup:
+1. Switch to ui/main.mod/main.html and replace the content within the `<body>` tags with the following markup:
 
     ```html
     <div data-montage-id="main" data-montage-skin="light" class="Main">
@@ -415,7 +415,7 @@ Next, add some CSS rules to control the appearance of the Main component.
 
     ```json
     "title": {
-        "prototype": "digit/ui/title.reel",
+        "prototype": "digit/ui/title.mod",
         "properties": {
             "element": {"#": "title"},
             "value": "Temperature Converter"
@@ -425,7 +425,7 @@ Next, add some CSS rules to control the appearance of the Main component.
 
     This declares an instance of the Title component and sets the value of the `h1` element to `Temperature Converter`.
 
-3. Open ui/main.reel/main.css and replace the existing content with the following rules:
+3. Open ui/main.mod/main.css and replace the existing content with the following rules:
 
     ```css
     * {

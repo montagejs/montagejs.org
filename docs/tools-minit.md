@@ -28,7 +28,7 @@ Run the following commands from within your project directory:
 
     <pre>$ minit create:component -n <em>comp-name</em></pre>
 
-    This generates a new ui component—*comp-name.reel*, which contains the default HTML, CSS, and JS files—in the ui directory of the current application directory.
+    This generates a new ui component—*comp-name.mod*, which contains the default HTML, CSS, and JS files—in the ui directory of the current application directory.
 
 * To set up a local on-demand server for previewing the current project in the browser:
 

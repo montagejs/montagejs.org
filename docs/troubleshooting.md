@@ -28,7 +28,7 @@ Invalid element references are usually the result of mismatched element IDs. For
 {
     "loginButton": {
         "name": "Button",
-        "module": "montage/ui/button.reel",
+        "module": "montage/ui/button.mod",
         "properties": {
             "element": {"#": "loginButton"}
         }
@@ -44,7 +44,7 @@ At runtime, this would generate the following error message in the JavaScript co
 
 ```
 Warning: Element "#loginButton" not found in template
-http://localhost:8081/examples/myapp/mycomponent.reel/mycomponent.html
+http://localhost:8081/examples/myapp/mycomponent.mod/mycomponent.html
 ```
 
 **I get an "Object "xxx" not found at "yyy"" error message.**
@@ -56,7 +56,7 @@ If you provide an invalid value for a serialized object's `"name"` property, Mon
 {
     "loginButton": {
         "name": "Buttonn",
-        "module": "montage/ui/button.reel",
+        "module": "montage/ui/button.mod",
         "properties": {
             "element": {"#": "loginButton"}
         }
@@ -68,18 +68,18 @@ If you provide an invalid value for a serialized object's `"name"` property, Mon
 This would result in the following runtime error:
 
 ```
-Object "Buttonn" not found at "montage/ui/button.reel" referenced from http://localhost:8081/examples/buttonerror/.
+Object "Buttonn" not found at "montage/ui/button.mod" referenced from http://localhost:8081/examples/buttonerror/.
 ```
 
 **I get a "Can't XHR "http://localhost: ..."" error message.**
 
-If you provide an invalid module ID in a serialization, then the console will report a 404 error "Can't XHR _module-id_". For example, in the following serialization that defines a Textfield component, the module ID is misspelled as "montage/ui/textfld.reel".
+If you provide an invalid module ID in a serialization, then the console will report a 404 error "Can't XHR _module-id_". For example, in the following serialization that defines a Textfield component, the module ID is misspelled as "montage/ui/textfld.mod".
 
 ```json
 {
 "emailInput": {
     "name": "Textfield",
-    "module": "montage/ui/textfld.reel",
+    "module": "montage/ui/textfld.mod",
     "properties": {
         "element": {"#": "email"}
     }
@@ -89,8 +89,8 @@ If you provide an invalid module ID in a serialization, then the console will re
 In Chrome, this results in the following error:
 
 ```
-GET http://localhost:8081/ui/textfeld.reel/textfld.js 404 (Not Found) browser.js:136
-Can't XHR "http://localhost:8081/ui/textfield.reel/textfield.js"
+GET http://localhost:8081/ui/textfeld.mod/textfld.js 404 (Not Found) browser.js:136
+Can't XHR "http://localhost:8081/ui/textfield.mod/textfield.js"
 ```
 
 
@@ -113,14 +113,14 @@ Likewise, in the following MontageJS serialization block, the trailing comma aft
 {
     "emailInput": {
         "name": "Textfield",
-        "module": "montage/ui/textfield.reel",
+        "module": "montage/ui/textfield.mod",
         "properties": {
             "element": {"#": "email"}
         }
     },
     "passwordInput": {
         "name": "Textfield",
-        "module": "montage/ui/textfield.reel",
+        "module": "montage/ui/textfield.mod",
         "properties": {
             "element": {"#": "password"}
         }
@@ -137,14 +137,14 @@ Unexpected comma.
     2 {
     3     "emailInput": {
     4         "name": "Textfield",
-    5         "module": "montage/ui/textfield.reel",
+    5         "module": "montage/ui/textfield.mod",
     6         "properties": {
     7             "element": {"#": "email"}
     8         }
     9     },
    10     "passwordInput": {
    11         "name": "Textfield",
-   12         "module": "montage/ui/textfield.reel",
+   12         "module": "montage/ui/textfield.mod",
    13         "properties": {
    14             "element": {"#": "password"}
    15         }

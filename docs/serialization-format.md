@@ -51,7 +51,7 @@ The following simple (yet complete) MontageJS application is defined in a single
    <script type="text/montage-serialization">
    {
        "firstName": {
-           "prototype": "digit/ui/text-field.reel",
+           "prototype": "digit/ui/text-field.mod",
            "properties": {
                "element": {"#": "fName"}
            }
@@ -68,9 +68,9 @@ Important things to note:
 
 * The HTML body section contains a single `<input>` tag, identified with the [custom data-attribute](http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#custom-data-attribute) `data-montage-id` of `fName`. 
 * The head section contains a `<script>` block of type `text/montage-serialization`. This block contains all serialized MontageJS objects used in the document.
-* The serialization block declares a MontageJS TextField component with an object label of `firstName`. The component's module ID ("digit/ui/text.reel") and its name ("textfield") allow MontageJS to recreate the component from its serialized form at runtime.
+* The serialization block declares a MontageJS TextField component with an object label of `firstName`. The component's module ID ("digit/ui/text.mod") and its name ("textfield") allow MontageJS to recreate the component from its serialized form at runtime.
 * The `properties` object assigns initial values to the component's properties. One of the most important properties of a Montage component is its `element` property, which corresponds to the associated HTML body element on which the component operates. In this case, the TextField component's `element` property is set to the `<input>` tag that has the ID `"fName"`. The Montage serialization format provides a special JSON object representation to refer to an element. This special object's name is a hash mark ("#") and its value is the ID of the element.
-* Montage can load components from a directory that has a .reel extension. The module system redirects `require("x.reel")` to `require("x.reel/x")`.
+* Montage can load components from a directory that has a .mod extension. The module system redirects `require("x.mod")` to `require("x.mod/x")`.
 
 ## Declaration Owner
 A Montage serialization can declare an optional object named "owner". The specified owner acts as the controller for the document. For example, the following code creates a new module (main.js) that exports a `Main` prototype object.
@@ -152,7 +152,7 @@ For example, the following block declares a MontageJS Button component whose `el
  {
       "loginBtn": {
         "name": "Button",
-        "module": "montage/ui/button.reel",
+        "module": "montage/ui/button.mod",
         "properties": {
             "element": {"#": "loginButton"}
         }
@@ -217,7 +217,7 @@ Next, create the main HTML document that declares the Button and Main components
     },
     "loginBtn": {
         "name": "Button",
-        "module": "montage/ui/button.reel",
+        "module": "montage/ui/button.mod",
         "properties": {
             "element": {"#": "buttonDiv"}
         }
@@ -268,7 +268,7 @@ The following simple example adds data bindings to a serialization. It consists 
     {
         "slider1": {
             "name": "Slider",
-            "module": "montage/ui/slider.reel",
+            "module": "montage/ui/slider.mod",
             "properties": {
                 "element": {"#": "slider1"}
             },
@@ -282,7 +282,7 @@ The following simple example adds data bindings to a serialization. It consists 
         },
         "slider2": {
             "name": "Slider",
-            "module": "montage/ui/slider.reel",
+            "module": "montage/ui/slider.mod",
             "properties": {
                 "element": {"#": "slider2"}
             }
@@ -335,7 +335,7 @@ The following is the HTML document and component serialization. The "loginBtn" o
     },
     "loginBtn": {
         "name": "Button",
-        "module": "montage/ui/button.reel",
+        "module": "montage/ui/button.mod",
         "properties": {
             "element": {"#": "buttonDiv"}
         },

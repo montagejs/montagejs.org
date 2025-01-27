@@ -137,7 +137,7 @@ To display a 3D scene, you assign an instance of the Scene component to the Scen
     }
 },
 "sceneView": {
-    "prototype": "mjs-volume/ui/scene-view.reel",
+    "prototype": "mjs-volume/ui/scene-view.mod",
     "properties": {
         "element": { "#": "sceneView" },
         "scene": { "@": "scene" }
@@ -153,7 +153,7 @@ To display a 3D scene, you assign an instance of the Scene component to the Scen
 For this demo:
 
 * `scene` declares an instance of the scene.js runtime component from the mjs-volume/runtime directory. Its `path` property is set to the path of the glTF asset (here: beachplanet.json).
-* `sceneView` declares an instance of the SceneView user interface component (scene-view.reel) of the mjs-volume module. Its `scene` property refers to the `scene` instance in the declaration (which is where it gets its data from). Its `element` propertery controls the HTML element with the `data-montage-id` custom attribute of `sceneView` (which is the "container" if you will that holds the scene for browser display).
+* `sceneView` declares an instance of the SceneView user interface component (scene-view.mod) of the mjs-volume module. Its `scene` property refers to the `scene` instance in the declaration (which is where it gets its data from). Its `element` propertery controls the HTML element with the `data-montage-id` custom attribute of `sceneView` (which is the "container" if you will that holds the scene for browser display).
 
 That's all that is required to load a 3D scene. At this point, the 3D scene when rendered in a browser shows is a little planet with an ocean, a beach, some foliage, a few animals, and a small shack. You can use a mouse or familiar gestures to rotate and zoom in and out of the scene.
 
@@ -164,7 +164,7 @@ That's all that is required to load a 3D scene. At this point, the 3D scene when
 
 >**Note:** By default, the SceneView component does not have any height, which is why you will see some additional classes in the markup of the linked component's source code. The SceneView component will automatically interpret certain CSS properties applied to its associated HTML element and adjust accordingly. You can use that feature to adjust the dimensions and background color of the SceneView.
 
-View the full <a href="https://github.com/montagejs/beachplanetblog/tree/master/ui/planet.reel" target="_blank">source code</a> on GitHub.
+View the full <a href="https://github.com/montagejs/beachplanetblog/tree/master/ui/planet.mod" target="_blank">source code</a> on GitHub.
 
 #Manipulating a 3D Scene
 
@@ -213,7 +213,7 @@ Both runtime components support the use of CSS transitions to animate property c
     <figcaption><strong>Figure 3.</strong> The duck wader grows in size when in focus.</figcaption>
 </figure>
 
-For this demo, the effect of seeing the duck wader (buoy) element grow in size when users leave their cursors over it is achieved using the following rules and declaration in the Buoy component (buoy.reel):
+For this demo, the effect of seeing the duck wader (buoy) element grow in size when users leave their cursors over it is achieved using the following rules and declaration in the Buoy component (buoy.mod):
 
 * The component's CSS file contains a CSS class called `animate` with a hover selector that performs a `scale3d` transformation.
 
@@ -241,7 +241,7 @@ For this demo, the effect of seeing the duck wader (buoy) element grow in size w
         }
     },
     "sceneView": {
-        "prototype": "mjs-volume/ui/scene-view.reel",
+        "prototype": "mjs-volume/ui/scene-view.mod",
         "properties": {
             "element": { "#": "sceneView" },
             "scene": { "@": "scene" }
@@ -259,7 +259,7 @@ For this demo, the effect of seeing the duck wader (buoy) element grow in size w
     }
     ```
     
-View the full <a href="https://github.com/montagejs/beachplanetblog/tree/master/ui/buoy.reel" target="_blank">source code</a> on GitHub.
+View the full <a href="https://github.com/montagejs/beachplanetblog/tree/master/ui/buoy.mod" target="_blank">source code</a> on GitHub.
 
 ## Adding a Listener to Handle Events
 
@@ -361,7 +361,7 @@ Note that the transition behavior is defined in a separate CSS class that is app
 
 Another feature that comes into play in this example is the `transform-origin` property. This property ensures that the left edge of the door will remain fixed in its position. If the origin was not set, the door would rotate from the center instead of swinging as though on a hinge. In many cases where transforms are used, setting an origin will ensure that the transformation behaves as expected.
 
-View the full <a href="https://github.com/montagejs/beachplanetblog/tree/master/ui/door.reel" target="_blank">source code</a> on GitHub.
+View the full <a href="https://github.com/montagejs/beachplanetblog/tree/master/ui/door.mod" target="_blank">source code</a> on GitHub.
 
 ## Switching View Points
 
@@ -371,7 +371,7 @@ In the following example, the `sceneView` object has a `viewPoint` property that
 
 ```json
  "sceneView": {
-    "prototype": "mjs-volume/ui/scene-view.reel",
+    "prototype": "mjs-volume/ui/scene-view.mod",
     "properties": {
         "allowsViewPointControl" : false,
         "element": { "#": "sceneView" },
@@ -415,7 +415,7 @@ The Beach Planet demo also provides a menu that helps users quickly choose the m
     }
 },
 "sceneView": {
-    "prototype": "mjs-volume/ui/scene-view.reel",
+    "prototype": "mjs-volume/ui/scene-view.mod",
     "properties": {
         "allowsViewPointControl" : false,
         "element": { "#": "sceneView" },
@@ -424,7 +424,7 @@ The Beach Planet demo also provides a menu that helps users quickly choose the m
     }
 },
 "nav": {
-    "prototype": "montage/ui/repetition.reel",
+    "prototype": "montage/ui/repetition.mod",
     "properties": {
         "element": { "#": "nav" },
         "content": [
@@ -436,7 +436,7 @@ The Beach Planet demo also provides a menu that helps users quickly choose the m
 }
 ```
 
-View the full <a href="https://github.com/montagejs/beachplanetblog/tree/master/ui/menu.reel" target="_blank">source code</a> for this example on GitHub.
+View the full <a href="https://github.com/montagejs/beachplanetblog/tree/master/ui/menu.mod" target="_blank">source code</a> for this example on GitHub.
 
 <figure>
     <img src="/images/docs/tutorials/3d-apps/fig05.jpg" alt="Switching view points in the Beach Planet MontageJS and WebGL demo." style="width: 451px;">
@@ -447,7 +447,7 @@ Now that you know the basic principles of using the SceneView component, you can
 
 # Next Steps
 
-Explore the complete <a href="https://github.com/montagejs/beachplanetblog/tree/master/ui/beachplanet.reel" target="_blank">source code</a> for the Beach Planet demo on GitHub.
+Explore the complete <a href="https://github.com/montagejs/beachplanetblog/tree/master/ui/beachplanet.mod" target="_blank">source code</a> for the Beach Planet demo on GitHub.
 
 To keep up with the latest developments of the MontageJS 3D components, follow or star the <a href="https://github.com/fabrobinet/mjs-volume" target="_target">mjs-volume</a> repository on GitHub.
 
