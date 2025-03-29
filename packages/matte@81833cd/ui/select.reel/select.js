@@ -1,1 +1,0 @@
-var NativeSelect=require("native/ui/select.reel").Select;exports.Select=NativeSelect.specialize({hasTemplate:{value:!0},constructor:{value:function(){this.super(),this.classList.add("matte-Select")}}});

@@ -1,1 +1,0 @@
-var Montage=require("montage").Montage,Component=require("ui/component").Component,NativeAnchor=require("ui/native/anchor.reel").Anchor;exports.Anchor=Montage.create(NativeAnchor,{hasTemplate:{value:!1},willPrepareForDraw:{value:function(){NativeAnchor.willPrepareForDraw.call(this),this.element.classList.add("montage-anchor")}}})

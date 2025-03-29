@@ -1,1 +1,0 @@
-var Montage=require("montage").Montage,Component=require("ui/component").Component,TextInput=require("ui/text-input").TextInput,InputText=exports.InputText=Montage.create(TextInput,{select:{value:function(){this._element.select()}}})

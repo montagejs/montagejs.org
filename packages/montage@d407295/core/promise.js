@@ -1,1 +1,0 @@
-exports.Promise=require("q");

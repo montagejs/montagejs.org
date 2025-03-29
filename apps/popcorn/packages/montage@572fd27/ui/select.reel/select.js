@@ -1,1 +1,0 @@
-var Montage=require("montage").Montage,Component=require("ui/component").Component,NativeSelect=require("ui/native/select.reel").Select;exports.Select=Montage.create(NativeSelect,{hasTemplate:{value:!0},willPrepareForDraw:{value:function(){NativeSelect.willPrepareForDraw.call(this),this.element.classList.add("montage-Select")}}})

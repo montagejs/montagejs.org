@@ -1,1 +1,0 @@
-var Montage=require("montage").Montage,Component=require("ui/component").Component,NativeInputCheckbox=require("ui/native/input-checkbox.reel").InputCheckbox;exports.InputCheckbox=Montage.create(NativeInputCheckbox,{hasTemplate:{value:!0},willPrepareForDraw:{value:function(){NativeInputCheckbox.willPrepareForDraw.call(this),this.element.classList.add("montage-InputCheckbox")}}})

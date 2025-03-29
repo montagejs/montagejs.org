@@ -1,1 +1,0 @@
-var common=require("../common.js"),stream=require("../../readable"),Buffer=require("buffer").Buffer,r=new stream.Readable;r._read=function(e){r.push(new Buffer(e))};var w=new stream.Writable;w._write=function(e,t,n){n(null)},r.pipe(w),w.end();

@@ -1,1 +1,0 @@
-Array.isArray||Object.defineProperty(Array,"isArray",{value:function(e){return Object.prototype.toString.call(e)==="[object Array]"},writable:!0,configurable:!0})

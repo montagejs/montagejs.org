@@ -1,1 +1,0 @@
-var Montage=require("montage").Montage,Component=require("montage/ui/component").Component,Image=exports.Image=Montage.create(Component,{_src:{value:null},src:{set:function(e){e!==this._src&&(this._src=e,this.needsDraw=!0)}},draw:{value:function(){this._element.style.backgroundImage="url("+this._src+")"}}})

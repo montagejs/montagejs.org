@@ -1,1 +1,0 @@
-var Component=require("montage/ui/component").Component;exports.LoadingPanel=Component.specialize({requiredModuleCount:{enumerable:!1,value:0},initializedModuleCount:{enumerable:!1,value:0}});
